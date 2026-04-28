@@ -1,0 +1,3532 @@
+{
+  "Angry Leaf Boar": {
+    "中文名": "凶猛樹葉野豬",
+    "掉落物": [
+      "金币",
+      "Ruined Leather",
+      "Wild Boar Meat",
+      "Small Treasure Box",
+      "Wild Boar's Tail Hair",
+      "Wooden Shortbow",
+      "Lesser Mana Potion",
+      "Wild Boar Barbeque",
+      "Lesser Healing Potion"
+    ]
+  },
+  "Bulldozer Jr.": {
+    "中文名": "凶猛豬",
+    "掉落物": [
+      "Gold",
+      "Heavy Leather",
+      "Canine Ring",
+      "Small Bag",
+      "Wild Boar's Tail Hair",
+      "Small Treasure Box",
+      "Pet Crystal"
+    ]
+  },
+  "BULLDOZER": {
+    "中文名": "凶猛猪少年",
+    "掉落物": [
+      "Gold",
+      "Heavy Leather",
+      "Bulldozer's Tooth",
+      "Bull Rush 2",
+      "Small Treasure Box",
+      "Cure Poison 2",
+      "Mystic Stone",
+      "Small Bag",
+      "Bulldozer Cloak",
+      "Canine Tooth of Madness",
+      "Pet Crystal",
+      "Armor Enchant Scroll (D Class)"
+    ]
+  },
+  "BULLDOZER'S BROTHER": {
+    "中文名": "凶猛猪大哥",
+    "掉落物": [
+      "Gold",
+      "Heavy Leather",
+      "Bulldozer's Tooth",
+      "Bull Rush 2",
+      "Small Treasure Box",
+      "Cure Poison 2",
+      "Mystic Stone",
+      "Small Bag",
+      "Bulldozer Cloak",
+      "Canine Tooth of Madness",
+      "Pet Crystal",
+      "Armor Enchant Scroll (D Class)"
+    ]
+  },
+  "Swamp Mushroom": {
+    "中文名": "湿地蘑菇",
+    "掉落物": [
+      "Gold",
+      "Mushroom Spore",
+      "Dried Mushroom",
+      "Lesser Healing Potion",
+      "Old Feather",
+      "Flame Shock 3",
+      "Small Treasure Box",
+      "Blunt Shortsword",
+      "Potion Bag",
+      "Wooden Shield",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "Flower Elemental": {
+    "中文名": "花精灵",
+    "掉落物": [
+      "Gold",
+      "Double Shot 3",
+      "Seed",
+      "Mystic Seed",
+      "Potion Bag",
+      "Old Feather",
+      "Weapon Enchant Scroll (D Class)",
+      "Armor Enchant Scroll (D Class)",
+      "Wooden Staff",
+      "Small Treasure Box",
+      "Blunt Shortsword",
+      "Green Powder"
+    ]
+  },
+  "Swamp Boar": {
+    "中文名": "湿地野猪",
+    "掉落物": [
+      "Gold",
+      "Old Feather",
+      "Heavy Leather",
+      "Flame Shock 3",
+      "Apprentice Magician Robe",
+      "Shift 2",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "Swamp Spider": {
+    "中文名": "黑蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Spider Silk",
+      "Old Feather",
+      "Damaged Pamphlet",
+      "Wild Swing 3",
+      "Small Treasure Box",
+      "Sturdy Leather Armor",
+      "Potion Bag",
+      "Blunt Shortsword",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "Poisonous Spider": {
+    "中文名": "剧毒蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Spider Silk",
+      "Old Feather",
+      "Sturdy Leather Armor",
+      "Blunt Shortsword",
+      "Small Treasure Box",
+      "Damaged Pamphlet",
+      "Ice Prison 2",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "White Spider": {
+    "中文名": "剑斗士蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Spider Silk",
+      "Old Feather",
+      "Damaged Pamphlet",
+      "Parry 3",
+      "Small Treasure Box",
+      "Potion Bag",
+      "Spider Silk Bag",
+      "Ice Prison 2",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)",
+      "Pet Crystal"
+    ]
+  },
+  "FUNGUS KING": {
+    "中文名": "巨无霸蘑菇",
+    "掉落物": [
+      "Gold",
+      "Ganoderma Lucidum",
+      "Strange Hat",
+      "Mystic Stone",
+      "Small Treasure Box",
+      "Ensnare 2",
+      "Mushroom Spore",
+      "Sparkling Necklace",
+      "Freezing Trap 3",
+      "Wild Charge 1",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)",
+      "Pet Crystal"
+    ]
+  },
+  "Cave Mushroom": {
+    "中文名": "洞窟蘑菇",
+    "掉落物": [
+      "Mushroom Spore",
+      "Ganoderma Lucidum",
+      "Dried Mushroom",
+      "Cloak of Health"
+    ]
+  },
+  "Poisonous Mushroom": {
+    "中文名": "毒蘑菇",
+    "掉落物": [
+      "Gold",
+      "Lesser Healing Potion",
+      "Lesser Mana Potion",
+      "Mushroom Spore",
+      "Dried Mushroom",
+      "Damaged Pamphlet",
+      "Fungiskin Belt",
+      "Wooden Staff",
+      "Small Treasure Box",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "Mushroom Flower": {
+    "中文名": "湿地花精灵",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (D Class)",
+      "Lesser Mana Potion",
+      "Wild Swing 3",
+      "Cloak of Health",
+      "Sturdy Leather Armor",
+      "Small Treasure Box",
+      "Green Powder"
+    ]
+  },
+  "Cave Bat": {
+    "中文名": "洞窟蝙蝠",
+    "掉落物": [
+      "Gold",
+      "Small Treasure Box",
+      "Damaged Pamphlet",
+      "Taunting Blow 2",
+      "Blunt Shortsword",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)"
+    ]
+  },
+  "White Bat": {
+    "中文名": "白金蝙蝠",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Phantom's Kneecap",
+      "Small Treasure Box",
+      "Cloak of Health",
+      "Freezing Trap 2",
+      "Taunting Blow 2",
+      "Drowsiness 1",
+      "Wild Charge 1",
+      "Pet Crystal"
+    ]
+  },
+  "POISON FUNGUS KING": {
+    "中文名": "巨无霸毒蘑菇",
+    "掉落物": [
+      "Gold",
+      "Ganoderma Lucidum",
+      "Mushroom Spore",
+      "Mystic Stone",
+      "Potion Bag",
+      "Small Bag",
+      "Mushroom Robe",
+      "Sparkling Necklace",
+      "Fungiskin Shield",
+      "Small Treasure Box",
+      "Armor Enchant Scroll (D Class)",
+      "Weapon Enchant Scroll (D Class)",
+      "Pet Crystal"
+    ]
+  },
+  "Bottle": {
+    "中文名": "瓶子",
+    "掉落物": [
+      "Piece of Old Cloth A",
+      "Piece of Old Cloth B",
+      "Piece of Old Cloth C",
+      "Damaged Pamphlet",
+      "Teleport 2"
+    ]
+  },
+  "Red Crab": {
+    "中文名": "红螃蟹",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Lesser Healing Potion",
+      "Damaged Pamphlet",
+      "Woopa Pork Meat",
+      "Hard Scale",
+      "Small Coral",
+      "Pirate Coin",
+      "Mitten",
+      "Round Shield",
+      "Concentrate 3",
+      "Shield 3",
+      "Hemorrhage 3",
+      "Mystic Oil",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)"
+    ]
+  },
+  "Sandman": {
+    "中文名": "梦魔",
+    "掉落物": [
+      "Gold",
+      "Dried Soil",
+      "Unknown Soil",
+      "Small Coral",
+      "Pirate Coin",
+      "Hard Scale",
+      "Round Shield",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Hemorrhage 3",
+      "Oak Tree Staff",
+      "Old Box",
+      "Mystic Stone"
+    ]
+  },
+  "Woopa": {
+    "中文名": "乌波乌波",
+    "掉落物": [
+      "Gold",
+      "Small Coral",
+      "Pirate Coin",
+      "Woopa-Roopa Scale",
+      "Red Coral",
+      "Light Healing 3",
+      "Mystic Oil",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Old Box",
+      "Mystic Stone",
+      "Long Bow",
+      "Green Crystal"
+    ]
+  },
+  "Roopa": {
+    "中文名": "乌波鲁波",
+    "掉落物": [
+      "Gold",
+      "Small Coral",
+      "Pirate Coin",
+      "Woopa-Roopa Scale",
+      "Red Coral",
+      "Flare 1",
+      "Mystic Oil",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Old Box",
+      "Mystic Stone",
+      "Long Bow"
+    ]
+  },
+  "Mutant Woopa": {
+    "中文名": "变种乌波",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Woopa-Roopa Scale",
+      "Red Coral",
+      "Flare 1",
+      "Mystic Oil",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Green Crystal",
+      "Coral Dust",
+      "Firebolt 2",
+      "Longsword",
+      "Composite Bow",
+      "Magician Staff",
+      "Slam 2",
+      "Carnivalize 1",
+      "Pet Crystal"
+    ]
+  },
+  "CHIEF WOOPAROOPA": {
+    "中文名": "乌波鲁波族长",
+    "掉落物": [
+      "Gold",
+      "Small Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Old Box",
+      "Firebolt 2",
+      "Slam 2",
+      "Carnivalize 1",
+      "Pet Crystal",
+      "Longsword",
+      "Composite Bow",
+      "Woopa-Roopa's Staff",
+      "Woopa Bronze Bell",
+      "Woopa Crystal Scale",
+      "Woopa-Roopa Totem"
+    ]
+  },
+  "TURTLE Z": {
+    "中文名": "狂睡乌龟",
+    "掉落物": [
+      "Gold",
+      "Joma's Pendant",
+      "Mystic Oil",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Crown",
+      "Blue Turtle Shell",
+      "Red Turtle Shell"
+    ]
+  },
+  "TURTLE ZZZ": {
+    "中文名": "爱困乌龟",
+    "掉落物": [
+      "Gold",
+      "Joma's Pendant",
+      "Mystic Oil",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Crown",
+      "Blue Turtle Shell",
+      "Red Turtle Shell",
+      "Carnivalize 1",
+      "Pet Crystal",
+      "Adventurer's Bag"
+    ]
+  },
+  "Testing Woopa": {
+    "中文名": "实验用乌波",
+    "掉落物": [
+      "Gold",
+      "Mystic Oil",
+      "Woopa-Roopa Scale",
+      "Red Coral",
+      "Potion Bag",
+      "Magic Extraction Scroll",
+      "Sharp Eye 1",
+      "Armor Enchant Scroll (C Class)",
+      "Sturdy Leather Gloves",
+      "Design: Mid Level Bone",
+      "Old Female Ring",
+      "Old Box"
+    ]
+  },
+  "Marsh Donguri": {
+    "中文名": "湿地圆圆",
+    "掉落物": [
+      "Gold",
+      "Donguri Leaf",
+      "Armor Enchant Scroll (C Class)",
+      "Palm Cocktail",
+      "Expert Magician Robe",
+      "Old Female Ring",
+      "Rage 1"
+    ]
+  },
+  "RECLUSE": {
+    "中文名": "隐士",
+    "掉落物": [
+      "Gold",
+      "Old Female Ring",
+      "Flare 2",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)"
+    ]
+  },
+  "Underground Spider": {
+    "中文名": "地底蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Swift 1",
+      "Toughness 1",
+      "Spider Silk",
+      "Woopa Pork Meat",
+      "Old Box",
+      "Old Female Ring",
+      "Weapon Enchant Scroll (C Class)"
+    ]
+  },
+  "Skeleton": {
+    "中文名": "骸骨",
+    "掉落物": [
+      "Gold",
+      "Piece of Bone",
+      "Toughness 2",
+      "Bandage",
+      "Magic Extraction Scroll",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Blunt Shortsword",
+      "Bone Armor",
+      "Potion Bag",
+      "Old Box",
+      "Design: Mid Level Bone"
+    ]
+  },
+  "MADGAR": {
+    "中文名": "梅德格",
+    "掉落物": [
+      "Gold",
+      "Madgar's Heart",
+      "Madgar's Bone",
+      "Old Box",
+      "Magic Extraction Scroll"
+    ]
+  },
+  "Gray Skeleton": {
+    "中文名": "白色骸骨",
+    "掉落物": [
+      "Gold",
+      "Piece of Bone",
+      "Magic Extraction Scroll",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Blunt Shortsword",
+      "Bone Armor",
+      "Potion Bag",
+      "Old Box",
+      "Longsword",
+      "Swirling Bow",
+      "Pet Crystal",
+      "Design: High Level Bone"
+    ]
+  },
+  "SMALL SKELETON": {
+    "中文名": "小骸骨",
+    "掉落物": [
+      "Gold",
+      "Female Bone",
+      "Armor Enchant Scroll (C Class)"
+    ]
+  },
+  "BLACKSKULL": {
+    "中文名": "黑色骸骨",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Joma's Pendant",
+      "Healing Wave 1",
+      "Blackskull",
+      "Skull Shield",
+      "Sharp Longsword",
+      "Swirling Bow",
+      "Dark Skull",
+      "Design: High Level Bone"
+    ]
+  },
+  "Beholder": {
+    "中文名": "凝视者",
+    "掉落物": [
+      "Gold",
+      "Magic Extraction Scroll",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Eye of Beholder",
+      "Weakness 2",
+      "Mystic Oil",
+      "Dongryu Juice"
+    ]
+  },
+  "Drunken Kooii": {
+    "中文名": "无神的库伊",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Sleepy Kooii Doll",
+      "Master Magician Robe",
+      "Kooii Card J",
+      "Kooii Card K",
+      "Kooii Card Q",
+      "Old Box",
+      "Potion Bag",
+      "Meditation",
+      "Bandage",
+      "Palm Cocktail"
+    ]
+  },
+  "Ghost": {
+    "中文名": "鬼怪",
+    "掉落物": [
+      "Gold",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (B Class)",
+      "Prayer of Protection 1",
+      "Sharp Longsword",
+      "The Dead's Shroud",
+      "Boiled Leather Armor",
+      "Thick Bandage",
+      "Well-Being Herb Bread",
+      "Blunt Shortsword",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Design: Mid Level Bone",
+      "Weakness 2"
+    ]
+  },
+  "Sleepy Kooii": {
+    "中文名": "想睡的库伊",
+    "掉落物": [
+      "Gold",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (B Class)",
+      "Thick Bandage",
+      "Well-Being Herb Bread",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Dongryu Juice",
+      "Sleepy Kooii Doll",
+      "Swirling Bow",
+      "Kooii Card Q",
+      "Kooii Card K",
+      "Meditation",
+      "Pet Crystal"
+    ]
+  },
+  "WHITESKULL": {
+    "中文名": "白色骷髅",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Skull Shield",
+      "Design: Blackskull Armor",
+      "Bone Armor",
+      "Piece of Bone",
+      "Ice Lance 1",
+      "Pet Crystal"
+    ]
+  },
+  "AWAKEN KOOII": {
+    "中文名": "睡醒的库伊",
+    "掉落物": [
+      "Gold",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Sleepy Kooii Doll",
+      "Sharp Longsword",
+      "Swirling Bow",
+      "Power Gloves",
+      "Kooii Card A",
+      "Kooii Card K",
+      "Joma's Pendant"
+    ]
+  },
+  "Snaketail Lizard": {
+    "中文名": "蛇尾蜥蜴",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Mystic Oil",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Lizard Leather Armor",
+      "Flame of Kataru 1",
+      "Sweeping Strikes 1",
+      "Lizard Leather",
+      "Blunt Shortsword"
+    ]
+  },
+  "SNAKEZARD": {
+    "中文名": "蛇尾查德",
+    "掉落物": [
+      "Lizard Leather",
+      "Lizard Leather Armor",
+      "Flame of Kataru 1",
+      "Curse of Doom 2",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Pet Crystal"
+    ]
+  },
+  "Dark Beholder": {
+    "中文名": "暗黑凝视者",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Mystic Oil",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Eye of Beholder",
+      "Stoneskin 1"
+    ]
+  },
+  "Spector": {
+    "中文名": "鬼魂",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Great Bow",
+      "Katana",
+      "Novice Shaman's Wand",
+      "Curse of Doom 2",
+      "Design: High Level Bone",
+      "Pet Crystal"
+    ]
+  },
+  "Imp": {
+    "中文名": "小恶魔",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Prayer of Protection 2",
+      "Charmed Robe",
+      "Armor Piece"
+    ]
+  },
+  "EEHEEHEE": {
+    "中文名": "嘻嘻",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Ancient Treasure",
+      "Joma's Pendant",
+      "Pet Crystal",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Cloak of Death",
+      "Cloak of Half-Death"
+    ]
+  },
+  "OOHEEHEEK": {
+    "中文名": "哈哈",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Ancient Treasure",
+      "Joma's Pendant",
+      "Pet Crystal",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Belt of Regeneration"
+    ]
+  },
+  "OOHEHE": {
+    "中文名": "呵呵",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Ancient Treasure",
+      "Joma's Pendant",
+      "Pet Crystal",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Cloak of Death",
+      "Cloak of Half-Death"
+    ]
+  },
+  "Bloody Flower": {
+    "中文名": "嗜血花",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Mana Potion",
+      "Thick Bandage",
+      "Ancient Blood",
+      "Blood-Flower Stem",
+      "Ion Shield",
+      "Multi Shot 2"
+    ]
+  },
+  "Bloody Mind": {
+    "中文名": "血光执念灵",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Mana Potion",
+      "Healing Potion",
+      "Thick Bandage",
+      "Ancient Blood",
+      "Ancient Feather",
+      "Sweeping Strikes 2",
+      "The Dead's Gloves"
+    ]
+  },
+  "Dan Dan": {
+    "中文名": "丹丹",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Thick Bandage",
+      "Classic Bow",
+      "Viking Sword",
+      "Shaman's Wand",
+      "Pet Crystal"
+    ]
+  },
+  "Ding Ding": {
+    "中文名": "叮叮",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Thick Bandage",
+      "Classic Bow",
+      "Viking Sword",
+      "Shaman's Wand",
+      "Pet Crystal",
+      "Will of Elemental 2"
+    ]
+  },
+  "Dong Dong": {
+    "中文名": "东东",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Thick Bandage",
+      "Classic Bow",
+      "Viking Sword",
+      "Shaman's Wand",
+      "Pet Crystal"
+    ]
+  },
+  "Dung Dung": {
+    "中文名": "咚咚",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Thick Bandage",
+      "Classic Bow",
+      "Viking Sword",
+      "Shaman's Wand",
+      "Pet Crystal"
+    ]
+  },
+  "GUARDIAN IMP": {
+    "中文名": "守护者小恶魔",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Joma's Pendant",
+      "Pet Crystal",
+      "Guardian's Ring",
+      "Shaman's Hat",
+      "Harden Body 1",
+      "Adventurer's Bag",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Mummy": {
+    "中文名": "木乃伊",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Thick Bandage",
+      "Scale Boots",
+      "Design: High Level Bone",
+      "Armor Piece",
+      "Amplify Sense 2",
+      "Will of Elemental 1",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)"
+    ]
+  },
+  "Elite Imp": {
+    "中文名": "精英小恶魔",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Thick Bandage",
+      "Ancient Treasure",
+      "Armor Piece",
+      "Amplify Sense 2",
+      "Will of Elemental 1",
+      "Stun 2",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Oatwill's Leather Gloves"
+    ]
+  },
+  "Mummy Fighter": {
+    "中文名": "战斗木乃伊",
+    "掉落物": [
+      "Gold",
+      "Potion Bag",
+      "Thick Bandage",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Gladius",
+      "Hunter Bow",
+      "Mystic Wand",
+      "Pet Crystal"
+    ]
+  },
+  "DEVILANG": {
+    "中文名": "戴弗龙",
+    "掉落物": [
+      "Gold",
+      "Joma's Pendant",
+      "Pet Crystal",
+      "Adventurer's Bag",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Ancient Experiment Token",
+      "Firestorm 1",
+      "Wingwing Boots"
+    ]
+  },
+  "Crystal Stone": {
+    "中文名": "水晶",
+    "掉落物": [
+      "Crystal Dust",
+      "Crystal",
+      "Ancient Crystal",
+      "Frost Iron Ore"
+    ]
+  },
+  "Yeti": {
+    "中文名": "雪怪",
+    "掉落物": [
+      "Gold",
+      "Yeti's Bone",
+      "Yeti's Leather",
+      "Ancient Treasure",
+      "Ancient Stone - A",
+      "The Way of Two Hands 3p",
+      "Ice Lance 2",
+      "Flame of Kataru 2",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)"
+    ]
+  },
+  "Wing Elemental": {
+    "中文名": "风精灵",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Ancient Stone - B",
+      "About Levitation 1p",
+      "Stoneskin 2",
+      "Flame of Kataru 2",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Spirit Dust"
+    ]
+  },
+  "Crystal Spider": {
+    "中文名": "水晶蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Ancient Stone - C",
+      "The Way of Two Hands 3p",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Crystal Spider Silk",
+      "Berserk 2",
+      "Design: Spirit's Hat"
+    ]
+  },
+  "Guardian Yeti": {
+    "中文名": "守护者雪怪",
+    "掉落物": [
+      "Gold",
+      "Yeti's Bone",
+      "Yeti's Leather",
+      "Ancient Treasure",
+      "Ancient Stone - E",
+      "The Way of Two Hands 3p",
+      "Stun 1",
+      "Healing Wave 2",
+      "Amplify Sense 1",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Crystal Shield"
+    ]
+  },
+  "Young Pengoon": {
+    "中文名": "小企鹅",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Ancient Stone - C",
+      "Bull's-Eye 2p",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Snow-Flower Stem",
+      "Stun 1",
+      "Last Resistance 1"
+    ]
+  },
+  "BLACKJUNO": {
+    "中文名": "黑黑朱诺",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Old Scroll",
+      "The Way of Two Hands 1p",
+      "About Levitation 2p",
+      "Bull's-Eye 3p",
+      "Blackjuno's Horn",
+      "Ancient Leather",
+      "Design: Blackjuno's Helmet",
+      "Frost Iron Ore",
+      "Sturdy Yeti Armor",
+      "Adventurer's Bag",
+      "Pet Crystal"
+    ]
+  },
+  "Crazy Pengoon": {
+    "中文名": "凶残的企鹅",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Ancient Stone - F",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Bull's-Eye 2p",
+      "Sweeping Strikes 3",
+      "Flame of Kataru 2",
+      "Crystal Dust",
+      "Design: Snow-Flower Stem Hat"
+    ]
+  },
+  "Yeti Highguard": {
+    "中文名": "高阶守卫",
+    "掉落物": [
+      "Gold",
+      "Yeti's Bone",
+      "Yeti's Leather",
+      "Ancient Treasure",
+      "The Way of Two Hands 3p",
+      "Healing Wave 2",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Crystal Shield",
+      "Sturdy Yeti Armor",
+      "Highguard Armor",
+      "Cursed Stone"
+    ]
+  },
+  "Enraged Wings": {
+    "中文名": "狂暴的风精灵",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "About Levitation 1p",
+      "Crystal Dust",
+      "Spirit Dust",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Cursed Stone"
+    ]
+  },
+  "BLACKSKY": {
+    "中文名": "黑天",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Old Scroll",
+      "The Way of Two Hands 1p",
+      "About Levitation 2p",
+      "Bull's-Eye 3p",
+      "Ancient Leather",
+      "Design: Crystal Robe",
+      "Frost Iron Ore",
+      "Frost Iron Refining Tool",
+      "Sturdy Yeti Armor",
+      "Pet Crystal",
+      "Instinct Stimulus 1",
+      "Fatal Attack 1"
+    ]
+  },
+  "WADANGKA THE ELDER": {
+    "中文名": "瓦当卡老人",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Ancient Leather",
+      "Frost Iron Ore",
+      "Pet Crystal",
+      "Wadangka's Seal",
+      "Seruang's Heart",
+      "Bull's-Eye 1p",
+      "The Way of Two Hands 2p",
+      "About Levitation 3p"
+    ]
+  },
+  "Broom": {
+    "中文名": "扫帚",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Pirate Gloves",
+      "Carnivalize 2"
+    ]
+  },
+  "SWEEPER": {
+    "中文名": "清洁组艾干净",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Carnivalize 2",
+      "Hallway Key",
+      "Pet Crystal"
+    ]
+  },
+  "Treasure Chest": {
+    "中文名": "海盗宝箱",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Bandage",
+      "Potion Bag",
+      "Palm Cocktail",
+      "Pirate Card 10",
+      "Captain's Cabin Key",
+      "Pirate Ring",
+      "Multi Shot 1"
+    ]
+  },
+  "Pirate Skeleton": {
+    "中文名": "海盗骸骨",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Pirate Gloves",
+      "Pirate Ring",
+      "Sharp Eye 2"
+    ]
+  },
+  "Pirate Ghost": {
+    "中文名": "海盗幽灵",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Ancient Treasure",
+      "Pirate Gloves",
+      "Pirate Ring",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Berserk 1"
+    ]
+  },
+  "BOATSWAIN BRANKA": {
+    "中文名": "甲板长布朗卡",
+    "掉落物": [
+      "Gold",
+      "Pirate Coin",
+      "Ancient Treasure",
+      "Pirate Ring",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Joma's Pendant",
+      "Pirate Card A",
+      "Pirate Hat",
+      "Pirate Necklace",
+      "Pet Crystal"
+    ]
+  },
+  "Continent Bulldozer": {
+    "中文名": "大陆凶猛猪",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Bulldozer's Tail Bone",
+      "Teleport"
+    ]
+  },
+  "Blaster": {
+    "中文名": "布莱斯特",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Wild Charge 2",
+      "Pet Crystal"
+    ]
+  },
+  "Crow": {
+    "中文名": "乌鸦",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Kamakee's Beak",
+      "Nutrition Beverage",
+      "Small Bag",
+      "Savage Boots"
+    ]
+  },
+  "Raven": {
+    "中文名": "渡鸦",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Nutrition Beverage",
+      "Raven Feather",
+      "Kamakee Token",
+      "Impact Shot 2",
+      "Pet Crystal"
+    ]
+  },
+  "Redeye Gosumi": {
+    "中文名": "红眼刺猬",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Carnivalize 3"
+    ]
+  },
+  "Bloody Gosumi": {
+    "中文名": "血古",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Toughness 3",
+      "Pet Crystal"
+    ]
+  },
+  "WHITE CROW": {
+    "中文名": "白魔鬼",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Nutrition Beverage",
+      "Pet Crystal",
+      "Impact Shot 3",
+      "Sharp Eye 3",
+      "Slam 3",
+      "Flare 3"
+    ]
+  },
+  "Fox": {
+    "中文名": "狐狸",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Young Fox's Tail",
+      "Savage Boots"
+    ]
+  },
+  "Mature Fox": {
+    "中文名": "成年狐狸",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Teleport"
+    ]
+  },
+  "Red Fox": {
+    "中文名": "火狐",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Wild Charge 2",
+      "Pet Crystal"
+    ]
+  },
+  "7tailfox": {
+    "中文名": "七尾狐",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Impact Shot 2",
+      "Pet Crystal"
+    ]
+  },
+  "Sunset Flower": {
+    "中文名": "彩霞之花",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Potion Bag",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Carnivalize 3"
+    ]
+  },
+  "Sunrise Flower": {
+    "中文名": "彩霞枯花",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Toughness 3",
+      "Pet Crystal"
+    ]
+  },
+  "777TAILFOX": {
+    "中文名": "777尾狐",
+    "掉落物": [
+      "Gold",
+      "Old Box",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)",
+      "Pet Crystal",
+      "Impact Shot 3",
+      "Sharp Eye 3",
+      "Slam 3",
+      "Flare 3"
+    ]
+  },
+  "Mutant Gosumi": {
+    "中文名": "变种刺猬",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag"
+    ]
+  },
+  "Berserk Gosumi": {
+    "中文名": "暴走刺猬",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Last Resistance 2",
+      "Pet Crystal"
+    ]
+  },
+  "Large Spider": {
+    "中文名": "巨无霸蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Spider Silk"
+    ]
+  },
+  "Spidey": {
+    "中文名": "小蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Stoneskin 3",
+      "Pet Crystal"
+    ]
+  },
+  "Big Boar": {
+    "中文名": "大野猪",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Wild Boar's Tail Hair"
+    ]
+  },
+  "Wildboar": {
+    "中文名": "山猪",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Flame of Kataru 3",
+      "Pet Crystal"
+    ]
+  },
+  "GHOSTSNAKE": {
+    "中文名": "鬼蛇",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Pet Crystal",
+      "Heavy Iron Boots",
+      "Tower Shield",
+      "Shield 4"
+    ]
+  },
+  "Magma": {
+    "中文名": "熔岩",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag"
+    ]
+  },
+  "Burning Stone": {
+    "中文名": "火燃石",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Last Resistance 2",
+      "Pet Crystal"
+    ]
+  },
+  "Fire Bird": {
+    "中文名": "火鸟",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure"
+    ]
+  },
+  "Bbinikjoe": {
+    "中文名": "不死鸟",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Phoenix's Eye",
+      "Stoneskin 3",
+      "Pet Crystal"
+    ]
+  },
+  "Magma Thief": {
+    "中文名": "熔岩扒手",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag"
+    ]
+  },
+  "Magma Senior Thief": {
+    "中文名": "熔岩扒手班长",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Flame of Kataru 3",
+      "Pet Crystal"
+    ]
+  },
+  "CHIEF MAGIEF": {
+    "中文名": "熔岩扒手头目",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Pet Crystal",
+      "Heavy Iron Boots",
+      "Tower Shield",
+      "Shield 4"
+    ]
+  },
+  "Enraged Tree": {
+    "中文名": "愤怒的树",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Sweeping Strikes 2",
+      "Well-Being Herb Bread",
+      "Contaminated Matter",
+      "Dongryu Juice"
+    ]
+  },
+  "Smack": {
+    "中文名": "阿打",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Berserk 2",
+      "Well-Being Herb Bread",
+      "Contaminated Matter",
+      "Charmed Robe"
+    ]
+  },
+  "Man-eating Mushroom": {
+    "中文名": "石菇",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Dongryu Juice",
+      "Contaminated Matter",
+      "Flame of Kataru 2",
+      "Ion Shield"
+    ]
+  },
+  "Mutated Bee": {
+    "中文名": "变异工蜂",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Multi Shot 2",
+      "Poisonous Bee Sting"
+    ]
+  },
+  "Smaaack": {
+    "中文名": "阿打打",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Thick Bandage",
+      "Soul Powder",
+      "Pet Crystal",
+      "Will of Elemental 2",
+      "Helm of the Grey Boulder"
+    ]
+  },
+  "Poison Root Flower": {
+    "中文名": "毒液花",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Thick Bandage",
+      "Soul Powder",
+      "Pet Crystal",
+      "Sweeping Strikes 3",
+      "Cap of the Blue Forest"
+    ]
+  },
+  "Contaminated Queen Bee": {
+    "中文名": "被感染的女王蜂",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Thick Bandage",
+      "Soul Powder",
+      "Pet Crystal",
+      "Amplify Sense 2",
+      "Bandana of the Blue Waterfall"
+    ]
+  },
+  "Corrupt Forest Keeper": {
+    "中文名": "堕落的森林守护者",
+    "掉落物": [
+      "Gold",
+      "Seal of the Forest Keeper",
+      "Armor of the Grey Boulder",
+      "Robe of the Blue Waterfall",
+      "Light Armor of the Blue Forest",
+      "Instinct Stimulus 1",
+      "Pet Crystal",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Cactus Bee": {
+    "中文名": "仙人掌蜂",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Cotton Cloth",
+      "Abrasive",
+      "Bee Sting",
+      "Soul Drain Shot 1",
+      "Silence 1"
+    ]
+  },
+  "Sand Donguri": {
+    "中文名": "沙子圆圆",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Abrasive",
+      "Iron Ore",
+      "Divine Thread",
+      "Donguri Leaf",
+      "Heavy Iron Gauntlet",
+      "Desert Mercenary Gloves"
+    ]
+  },
+  "Bizizi": {
+    "中文名": "毕吉吉",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Bee Sting",
+      "Iron Ore",
+      "Rapier",
+      "Horn Bow",
+      "Spiritual Wand",
+      "Soul Drain Shot 2"
+    ]
+  },
+  "Doley": {
+    "中文名": "多利",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Cotton Cloth",
+      "Thick Leather",
+      "Enhancer",
+      "Shout of Calmness 1",
+      "Clarity 1",
+      "Sara's Blessing 1"
+    ]
+  },
+  "Buzss": {
+    "中文名": "布兹兹",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Bee Sting",
+      "Iron Ore",
+      "Wand of Chaos",
+      "Iron Covered Shield",
+      "Shout of Calmness 2",
+      "Sara's Blessing 2"
+    ]
+  },
+  "Desert Ambush": {
+    "中文名": "沙漠佣兵",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Iron Ore",
+      "Thick Leather",
+      "Enhancer",
+      "Stampede 1"
+    ]
+  },
+  "Stealth": {
+    "中文名": "史戴斯",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Thick Leather",
+      "Wand of Chaos",
+      "Battle Bow",
+      "Rune Blade",
+      "Stampede 2"
+    ]
+  },
+  "Desert Assasain": {
+    "中文名": "沙漠刺客",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Thick Leather",
+      "Thread of Magic",
+      "Darksteel Sword",
+      "Dezoruba's Bow",
+      "Wand of Tranquility",
+      "Dezoruba's Design",
+      "Hellfire 1",
+      "Neutralize 1"
+    ]
+  },
+  "BSSSZSSS": {
+    "中文名": "普斯斯兹斯",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Bee Sting",
+      "HQ Abrasive",
+      "Darksteel Shield",
+      "Heavy Strike 2",
+      "Neutralize 2"
+    ]
+  },
+  "Desert Gosumi": {
+    "中文名": "沙漠刺猬",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Iron Ore",
+      "Abrasive",
+      "Gosumi's Spine",
+      "Soul Drain Shot 1",
+      "Silence 1"
+    ]
+  },
+  "Sandgrave": {
+    "中文名": "沙墓",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Iron Ore",
+      "Rapier",
+      "Horn Bow",
+      "Spiritual Wand",
+      "Soul Drain Shot 2",
+      "Silence 2"
+    ]
+  },
+  "Desert Beholder": {
+    "中文名": "沙漠凝视者",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Abrasive",
+      "Cotton Cloth",
+      "Divine Thread",
+      "Sand-Tree Leaf",
+      "Heavy Iron Gauntlet",
+      "Desert Mercenary Gloves"
+    ]
+  },
+  "Elder Beholder": {
+    "中文名": "上古眼怪",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Iron Ore",
+      "Wand of Chaos",
+      "Iron Covered Shield",
+      "Shout of Calmness 2",
+      "Sara's Blessing 2"
+    ]
+  },
+  "Wild Sandman": {
+    "中文名": "粗犷梦魇",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Iron Ore",
+      "Thick Leather",
+      "Enhancer",
+      "Divine Thread",
+      "Shout of Calmness 1",
+      "Clarity 1",
+      "Sara's Blessing 1"
+    ]
+  },
+  "3eyelizard": {
+    "中文名": "三眼龙",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Iron Ore",
+      "Thick Leather",
+      "Cotton Cloth",
+      "Stampede 1"
+    ]
+  },
+  "Sususuk": {
+    "中文名": "嘶嘶嘶",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Thick Leather",
+      "Wand of Chaos",
+      "Battle Bow",
+      "Rune Blade",
+      "Stampede 2",
+      "Clarity 2"
+    ]
+  },
+  "Suuk": {
+    "中文名": "嘶呃呃",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Thick Leather",
+      "Thread of Magic",
+      "Darksteel Sword",
+      "Dezoruba's Bow",
+      "Wand of Tranquility",
+      "Jode's Design",
+      "Hellfire 1",
+      "Neutralize 1"
+    ]
+  },
+  "SHAAACK": {
+    "中文名": "沙沙沙",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Thick Leather",
+      "HQ Abrasive",
+      "Darksteel Shield",
+      "Heavy Strike 2",
+      "Neutralize 2",
+      "Hellfire 2"
+    ]
+  },
+  "Shadow": {
+    "中文名": "暗影",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Special Cotton Cloth",
+      "Black Iron Ore",
+      "Power Shot 1"
+    ]
+  },
+  "Mind Scream": {
+    "中文名": "心声",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Special Cotton Cloth",
+      "Black Iron Ore",
+      "Power Shot 2",
+      "Hole of Silence"
+    ]
+  },
+  "Wanderer": {
+    "中文名": "流浪者",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Special Cotton Cloth",
+      "Black Iron Ore",
+      "Heavy Strike 1",
+      "Hole of Silence"
+    ]
+  },
+  "Lesser Madman": {
+    "中文名": "轻微神经病",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Hole of Silence",
+      "War Sword",
+      "War Bow"
+    ]
+  },
+  "Sandeater": {
+    "中文名": "沙上食神",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Special Cotton Cloth",
+      "Black Iron Ore"
+    ]
+  },
+  "Bigmouse": {
+    "中文名": "大老鼠",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Shadow Bow",
+      "Staff Struck by Lightning",
+      "Kaisor Sword"
+    ]
+  },
+  "BIGMAMA": {
+    "中文名": "白发魔女",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Pet Crystal",
+      "Mother Nature",
+      "Power Shot 2"
+    ]
+  },
+  "Young Froggy Swarm": {
+    "中文名": "小青蛙",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Thick Leather",
+      "Froggy Blood",
+      "Monk's Gloves",
+      "Shout of Calmness 1"
+    ]
+  },
+  "Poisonous Man-eating Mushroom": {
+    "中文名": "剧毒石菇",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Dongryu Juice",
+      "Thick Leather",
+      "Poison Pouch",
+      "Monk's Gloves",
+      "Stampede 1",
+      "Super Mana Potion",
+      "Super Healing Potion"
+    ]
+  },
+  "Zombie": {
+    "中文名": "僵尸",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Well-Being Herb Bread",
+      "Enhancer",
+      "Poison Pouch",
+      "Heavy Iron Gauntlet",
+      "Clarity 1",
+      "Super Healing Potion"
+    ]
+  },
+  "Mutated Lobster": {
+    "中文名": "变异小龙虾",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Enhancer",
+      "Poison Pouch",
+      "Desert Mercenary Gloves",
+      "Sara's Blessing 1",
+      "Potion Bag"
+    ]
+  },
+  "Froggy": {
+    "中文名": "呱呱",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Special Cotton Cloth",
+      "Froggy Blood",
+      "Hole of Silence"
+    ]
+  },
+  "Rotten Pudding": {
+    "中文名": "腐烂的布丁",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Special Cotton Cloth",
+      "Poison Pouch",
+      "War Bow",
+      "Neutralize 1"
+    ]
+  },
+  "Swamp Flower Monster": {
+    "中文名": "湿地花怪",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Poison Pouch",
+      "War Sword",
+      "Clarity 2"
+    ]
+  },
+  "Ukpana": {
+    "中文名": "乌克波那",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Pet Crystal",
+      "Swamp Treasure",
+      "Passionate Cloak",
+      "Neutralize 2",
+      "Harden Body 2"
+    ]
+  },
+  "Plague Zombie": {
+    "中文名": "瘟疫僵尸",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Healing Potion",
+      "Black Ooze",
+      "Power Shot 1"
+    ]
+  },
+  "Egg Monster": {
+    "中文名": "蛋怪物",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Black Ooze"
+    ]
+  },
+  "Banshee": {
+    "中文名": "女妖",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Healing Potion",
+      "Magical Robe",
+      "Heavy Strike 1"
+    ]
+  },
+  "Masked Magician": {
+    "中文名": "面具魔法师",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Mana Potion",
+      "Magical Robe",
+      "Shattered Mask Piece"
+    ]
+  },
+  "Hellhound": {
+    "中文名": "坚硬的宝箱怪",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Essence of Corruption",
+      "Special Magical Robe",
+      "Staff Struck by Lightning"
+    ]
+  },
+  "Death Stalker": {
+    "中文名": "缉命者",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Essence of Corruption",
+      "Special Magical Robe",
+      "Shadow Bow"
+    ]
+  },
+  "Dark Golem": {
+    "中文名": "暗黑魔像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Essence of Corruption",
+      "Special Magical Robe",
+      "Kaisor Sword"
+    ]
+  },
+  "Darlene the Witch": {
+    "中文名": "魔女迪尔林",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Pet Crystal",
+      "Maze Treasure",
+      "Faded Ring",
+      "Essence of Corruption",
+      "Special Magical Robe",
+      "Hellfire 2"
+    ]
+  },
+  "Snowball": {
+    "中文名": "雪球",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Hopeful Magic Essence",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Snowy Field's Cursed Boots"
+    ]
+  },
+  "Uru": {
+    "中文名": "乌勒",
+    "掉落物": [
+      "Gold",
+      "Strange Treasure",
+      "Hopeful Magic Essence",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Toxic Boots"
+    ]
+  },
+  "Sharkun": {
+    "中文名": "夏库",
+    "掉落物": [
+      "Gold",
+      "Strange Treasure",
+      "Hopeful Magic Essence",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Sharkun Greaves"
+    ]
+  },
+  "Snoowy": {
+    "中文名": "雪宝",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Strange Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Snowy Field's Cursed Boots"
+    ]
+  },
+  "Urpus": {
+    "中文名": "乌勒布斯",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Strange Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Toxic Boots",
+      "Curse of Doom 2"
+    ]
+  },
+  "Mutated Sharkun": {
+    "中文名": "突变的夏库",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Strange Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Sharkun Greaves",
+      "Stoneskin 3"
+    ]
+  },
+  "Urun": {
+    "中文名": "乌勒",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Old Scroll",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Healing Potion"
+    ]
+  },
+  "Strong Sharkun": {
+    "中文名": "大力士夏库",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Old Scroll",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Healing Potion",
+      "Super Mana Potion"
+    ]
+  },
+  "Shurun": {
+    "中文名": "修轮",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Old Scroll",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Super Healing Potion"
+    ]
+  },
+  "Sharkurus": {
+    "中文名": "夏库鲁斯",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Wingfril's Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Ancient Magic Powder"
+    ]
+  },
+  "Urtus": {
+    "中文名": "乌勒图斯",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Wingfril's Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Ancient Magic Powder"
+    ]
+  },
+  "Mutated Shurun": {
+    "中文名": "突变的修轮",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Wingfril's Treasure",
+      "Ancient Magic Powder",
+      "Soul Drain Shot 2"
+    ]
+  },
+  "Sharkutus": {
+    "中文名": "夏库图斯",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Wingfril's Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Ancient Magic Powder",
+      "Stampede 2"
+    ]
+  },
+  "Barslaf": {
+    "中文名": "巴瑟拉夫",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Pet Crystal",
+      "Wingfril's Treasure",
+      "Hopeful Magic Essence",
+      "Crown Rock Experiment Bottle",
+      "Ancient Magic Powder",
+      "Star Piece",
+      "Star Powder",
+      "Snowfield Altar Treasure",
+      "Broken Necklace"
+    ]
+  },
+  "Sky Bat": {
+    "中文名": "东方蝠",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Broken Magic Stone",
+      "Sky Bat Wing",
+      "Alloy Ring"
+    ]
+  },
+  "Silver Bat": {
+    "中文名": "银蝙蝠",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Broken Magic Stone",
+      "Sky Bat Wing",
+      "Gemstone",
+      "Pet Crystal"
+    ]
+  },
+  "IPot": {
+    "中文名": "艾普",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Broken Magic Stone",
+      "Alloy Ring",
+      "Nut",
+      "Healing Potion"
+    ]
+  },
+  "Puppet": {
+    "中文名": "木偶",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Broken Magic Stone",
+      "Nut",
+      "Bolt",
+      "Gemstone",
+      "Pet Crystal"
+    ]
+  },
+  "Tornado": {
+    "中文名": "龙卷风",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Broken Magic Stone",
+      "Magic Marble"
+    ]
+  },
+  "Dark Tornado": {
+    "中文名": "暗黑风暴",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Wingfril's Treasure",
+      "Broken Magic Stone",
+      "Gemstone",
+      "Pet Crystal",
+      "Magic Marble"
+    ]
+  },
+  "Goblin": {
+    "中文名": "小妖精",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Broken Magic Stone",
+      "Belt of Belief",
+      "Gunpowder"
+    ]
+  },
+  "Couatl": {
+    "中文名": "羽蛇",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Dongryu Juice",
+      "Healing Potion",
+      "Broken Magic Stone",
+      "Pocket of Poison"
+    ]
+  },
+  "Kobold": {
+    "中文名": "狗头人",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Broken Magic Stone",
+      "Gunpowder"
+    ]
+  },
+  "Goblin Warrior": {
+    "中文名": "小妖精勇士",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Gunpowder",
+      "Shinning Metal"
+    ]
+  },
+  "Zealot": {
+    "中文名": "盲从者",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Shinning Metal"
+    ]
+  },
+  "Gnome": {
+    "中文名": "地精",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Magic Rune",
+      "Magic Marble"
+    ]
+  },
+  "Tyrant": {
+    "中文名": "暴君",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Shinning Metal",
+      "Gunpowder",
+      "Fatal Attack 2"
+    ]
+  },
+  "Orb": {
+    "中文名": "球怪",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Broken Magic Stone",
+      "Element Crystal"
+    ]
+  },
+  "Storm": {
+    "中文名": "旋风",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Broken Magic Stone",
+      "Magic Marble",
+      "Monk's Boots"
+    ]
+  },
+  "Bulette": {
+    "中文名": "布雷特",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Ancient Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Broken Magic Stone",
+      "Stone Powder"
+    ]
+  },
+  "Tank": {
+    "中文名": "坦克",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Stone Powder",
+      "Prayer of Protection 3"
+    ]
+  },
+  "Maelstrom": {
+    "中文名": "漩涡",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Magic Marble",
+      "Element Crystal"
+    ]
+  },
+  "Swirl Flame": {
+    "中文名": "风暴",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Magic Marble",
+      "Element Crystal",
+      "Firestorm 2"
+    ]
+  },
+  "Twister": {
+    "中文名": "旋风",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Magic Marble",
+      "Element Crystal",
+      "Ancient Wood"
+    ]
+  },
+  "Elemental Queen": {
+    "中文名": "精灵女王",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Broken Magic Stone",
+      "Magic Marble",
+      "Element Crystal",
+      "Pure Element",
+      "Firestorm 2"
+    ]
+  },
+  "Solid Rock": {
+    "中文名": "石像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Magic Rune",
+      "Stone Powder",
+      "Shinning Magic Stone",
+      "Iron Golem's Gloves"
+    ]
+  },
+  "Gargoyle": {
+    "中文名": "滴水嘴兽",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Shinning Magic Stone",
+      "Gargoyle Wing",
+      "Scout Gloves"
+    ]
+  },
+  "Golem": {
+    "中文名": "魔像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Magic Rune",
+      "Stone Powder",
+      "Shinning Magic Stone",
+      "Sage's Gloves"
+    ]
+  },
+  "Black Gargoyle": {
+    "中文名": "暗黑滴水嘴兽",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Shinning Magic Stone",
+      "Gargoyle Wing"
+    ]
+  },
+  "Ominous Bird": {
+    "中文名": "怪鸟",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Shinning Magic Stone",
+      "Gargoyle Wing",
+      "Shoes of Tranquility"
+    ]
+  },
+  "Stonestatue": {
+    "中文名": "雕像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Magic Rune",
+      "Stone Powder",
+      "Shinning Magic Stone"
+    ]
+  },
+  "Aroid": {
+    "中文名": "法杖机器人",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Shinning Magic Stone",
+      "Nut",
+      "Sage's Gloves"
+    ]
+  },
+  "Iron Golem": {
+    "中文名": "钢铁魔像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Shinning Magic Stone",
+      "Nut",
+      "Bolt",
+      "Titanium Ingot",
+      "Iron Golem's Gloves"
+    ]
+  },
+  "Robot": {
+    "中文名": "机器人",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Shinning Magic Stone",
+      "Bolt",
+      "Scout Gloves"
+    ]
+  },
+  "Humanoid": {
+    "中文名": "类人类",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Shinning Magic Stone",
+      "Bolt"
+    ]
+  },
+  "Landmine": {
+    "中文名": "地雷",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Magic Rune",
+      "Shinning Magic Stone",
+      "Magic Marble"
+    ]
+  },
+  "Titanium Golem": {
+    "中文名": "钛合金魔像",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Shinning Magic Stone",
+      "Nut",
+      "Bolt",
+      "Titanium Ingot",
+      "Titanium Boots"
+    ]
+  },
+  "Steampunk": {
+    "中文名": "蒸汽朋克",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Shinning Magic Stone",
+      "Nut",
+      "Bolt",
+      "Harden Body 2"
+    ]
+  },
+  "Darkness": {
+    "中文名": "暗黑",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Dark Piece",
+      "Fallen Magic Stone"
+    ]
+  },
+  "Protector": {
+    "中文名": "庇护者",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Dark Piece",
+      "Fallen Magic Stone"
+    ]
+  },
+  "Guardian": {
+    "中文名": "守护者",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Soul Stone",
+      "Fallen Magic Stone"
+    ]
+  },
+  "Inspector": {
+    "中文名": "监督官",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Dark Piece",
+      "Fallen Magic Stone",
+      "The Perfect Darkness"
+    ]
+  },
+  "Fear of the Darkness": {
+    "中文名": "暗黑恐惧",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Dark Piece",
+      "Fallen Magic Stone",
+      "The Perfect Darkness",
+      "Boots of Darkness"
+    ]
+  },
+  "Gatekeeper": {
+    "中文名": "守门人",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Wingfril's Treasure",
+      "Potion Bag",
+      "Gemstone",
+      "Pet Crystal",
+      "Soul Stone",
+      "Fallen Magic Stone",
+      "The Perfect Darkness"
+    ]
+  },
+  "CALIGO": {
+    "中文名": "克里高",
+    "掉落物": [
+      "Gold",
+      "Pet Crystal",
+      "Fallen Magic Stone",
+      "The Perfect Darkness",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Caligo's Scale",
+      "Caligo's Bone",
+      "Caligo's Hands",
+      "Caligo Boots",
+      "Caligo Gloves",
+      "Otherworld Belt"
+    ]
+  },
+  "Avenger": {
+    "中文名": "复仇者",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Abyss Guard Token",
+      "Seed Extraction Liquid",
+      "Grudgeful Parchment",
+      "Mana Regeneration Potion"
+    ]
+  },
+  "Pain": {
+    "中文名": "沛恩",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Abyss Guard Token",
+      "Grudgeful Parchment",
+      "Barbeque",
+      "Health Regeneration Potion"
+    ]
+  },
+  "Abyss Eater": {
+    "中文名": "噬影者",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Abyss Guard Token",
+      "Grudgeful Parchment",
+      "Greater Restoration Potion",
+      "Mana Core"
+    ]
+  },
+  "Apapa": {
+    "中文名": "阿波波",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Abyss Guard Token",
+      "Grudgeful Parchment",
+      "Mana Core",
+      "Magic Power Breath"
+    ]
+  },
+  "Faith": {
+    "中文名": "培伊斯",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Abyss Guard Token",
+      "Grudgeful Parchment",
+      "Stained Experiment Journal",
+      "Mana Core",
+      "Magic Power Scroll",
+      "Magic Power Breath",
+      "Mercy Rune",
+      "Penitence Rune",
+      "Resurrection Rune"
+    ]
+  },
+  "Illust": {
+    "中文名": "伊鲁斯特",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Grudgeful Parchment",
+      "Mana Core",
+      "Magic Power Scroll",
+      "Magic Power Breath",
+      "Mercy Rune",
+      "Penitence Rune",
+      "Resurrection Rune"
+    ]
+  },
+  "Sasquatch": {
+    "中文名": "大脚野人",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Barbeque",
+      "Seed Extraction Liquid",
+      "Greater Healing Potion",
+      "Enchanted Bone",
+      "Enchanted Leather"
+    ]
+  },
+  "Crystal Cichlid": {
+    "中文名": "水晶鱼",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Wingfril's Treasure",
+      "Barbeque",
+      "Greater Mana Potion",
+      "Enchanted Bone",
+      "Transparent Scale"
+    ]
+  },
+  "Chaser": {
+    "中文名": "追击者",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Wingfril's Treasure",
+      "Barbeque",
+      "Velvet Cloth"
+    ]
+  },
+  "Big Foot": {
+    "中文名": "大脚怪",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Enchanted Bone",
+      "Enchanted Leather",
+      "Broken Molar",
+      "Discolored Heart",
+      "Prohibited Experiment Journal"
+    ]
+  },
+  "Billiard": {
+    "中文名": "毕尔里欧德",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Broken Molar",
+      "Discolored Heart",
+      "Prohibited Experiment Journal",
+      "Spartan Shield",
+      "Execution Rune",
+      "Torture Rune",
+      "Bio Magic Power Rune"
+    ]
+  },
+  "Sephia": {
+    "中文名": "赛斐亚",
+    "掉落物": [
+      "Gold",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Execution Rune",
+      "Torture Rune",
+      "Bio Magic Power Rune",
+      "Five-Colored Leather",
+      "Enchanted Bone",
+      "Enchanted Leather"
+    ]
+  },
+  "Shiny Crystal": {
+    "中文名": "闪亮水晶",
+    "掉落物": [
+      "Soft Light Ore"
+    ]
+  },
+  "Papillio": {
+    "中文名": "帕毕里欧",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Crude Magic Crystal",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Butterfly Wings"
+    ]
+  },
+  "Raphie": {
+    "中文名": "拉皮埃",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Strange Treasure",
+      "Crude Magic Crystal",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Elongated Ears"
+    ]
+  },
+  "Mosboar": {
+    "中文名": "摩斯波尔",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Crude Magic Crystal",
+      "Well-Being Herb Bread",
+      "Dongryu Juice",
+      "Moss Leather"
+    ]
+  },
+  "Areuke": {
+    "中文名": "亚勒凯",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Butterfly Wings",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Inherited Book of Knowledge",
+      "Areuke's Antenna"
+    ]
+  },
+  "Morty": {
+    "中文名": "莫提",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Elongated Ears",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Inherited Book of Knowledge",
+      "Morty's Ear"
+    ]
+  },
+  "Mushroom Bulldozer": {
+    "中文名": "花花普多尔",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Moss Leather",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Inherited Book of Knowledge",
+      "Enchanted Leather (Morphosis)"
+    ]
+  },
+  "Flower Bulldozer": {
+    "中文名": "花花普多尔",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Moss Leather",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Inherited Book of Knowledge",
+      "Enchanted Leather (Morphosis)"
+    ]
+  },
+  "Actaemon": {
+    "中文名": "阿克泰萌",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Wingfril's Treasure",
+      "Pink Magic Crystal",
+      "Dry Magic Crystal",
+      "Actaemon's Horn"
+    ]
+  },
+  "Aiyo's Protector": {
+    "中文名": "艾伊尤的护卫兵",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Wingfril's Treasure",
+      "Pure Magic Orb",
+      "Protector's Hand Skin",
+      "Chainstrike Gloves",
+      "Illusionist's Gloves"
+    ]
+  },
+  "Crown Duck": {
+    "中文名": "皇冠鸭",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Surge Cycle",
+      "Crown Duck Egg",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Leafsoul": {
+    "中文名": "叶形精",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Frozen Crystal",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Leafrog": {
+    "中文名": "叶形蛙",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Leafrog Tail",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Circuit Golem": {
+    "中文名": "回路傀儡",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Circuit Heart",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Sikenel": {
+    "中文名": "西格诺",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Sikinel Horn",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Charge Stone": {
+    "中文名": "电子石怪",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Magic Stem",
+      "Charge Core",
+      "Circuit Heart",
+      "Surge Cycle",
+      "Greater Mana Potion",
+      "Greater Healing Potion"
+    ]
+  },
+  "Glucose": {
+    "中文名": "格鲁柯斯",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Charge Core",
+      "Surge Cycle",
+      "Belt of Rough Roots"
+    ]
+  },
+  "Overload": {
+    "中文名": "奥伯洛德",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Charge Core",
+      "Surge Cycle",
+      "Pledger's Belt",
+      "Belt of Dry Magic"
+    ]
+  },
+  "Soul Lich": {
+    "中文名": "索尔里奇",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Charge Core",
+      "Surge Cycle",
+      "Soul Lich Mask",
+      "World Tree Bark Armor",
+      "World Tree Branch Armor",
+      "World Tree Leaf Robe"
+    ]
+  },
+  "Platanista": {
+    "中文名": "恒河豚",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Charge Core",
+      "Surge Cycle",
+      "Box Flowing with Mana"
+    ]
+  },
+  "Justified Knowledge": {
+    "中文名": "正当知识怪",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Super Healing Potion",
+      "Super Mana Potion",
+      "Worn Book Cover",
+      "Shabby Bookmark"
+    ]
+  },
+  "Parchment of Oblivion": {
+    "中文名": "遗忘之书怪",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Super Healing Potion",
+      "Super Mana Potion",
+      "Horn of Oblivion",
+      "Torn Parchment Piece"
+    ]
+  },
+  "Corrupted Pledger": {
+    "中文名": "被侵蚀的立约者",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Super Healing Potion",
+      "Super Mana Potion",
+      "Pledger's Horn",
+      "Corrupted Memory"
+    ]
+  },
+  "Lapis": {
+    "中文名": "拉菲斯",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Super Healing Potion",
+      "Super Mana Potion",
+      "Dagger Fragment",
+      "Dissolved Memory"
+    ]
+  },
+  "Justified Principle": {
+    "中文名": "正当信念怪",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Worn Book Cover",
+      "Shabby Bookmark"
+    ]
+  },
+  "Lazuli": {
+    "中文名": "拉茱利",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Dagger Fragment",
+      "Dissolved Memory"
+    ]
+  },
+  "Booksha": {
+    "中文名": "书夜叉",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Rune Piece",
+      "Broken Oath"
+    ]
+  },
+  "Shelf": {
+    "中文名": "书架怪",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Rune Piece",
+      "Pure Knowledge"
+    ]
+  },
+  "Primal Knowledge": {
+    "中文名": "远古知识",
+    "掉落物": [
+      "Gold",
+      "Destroyed Paper",
+      "Seawater of Oblivion",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Broken Oath",
+      "Pure Knowledge"
+    ]
+  }
+}

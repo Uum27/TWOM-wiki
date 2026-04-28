@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>TWOM Wiki</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}
+body{padding:8px;background:#f9f9f9}
+
+.top-bar{
+  display:flex;gap:6px;margin-bottom:8px;
+  position:sticky;top:0;background:#fff;padding:6px 0;z-index:10
+}
+.search-box{
+  flex:1;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:14px
+}
+.lang-btn,.page-btn{
+  padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:14px
+}
+.page-btn{margin:0 4px}
+
+.zone-bar {
+  display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px;
+}
+.zone-btn {
+  flex:1 1 auto;min-width:90px;padding:6px 4px;text-align:center;
+  white-space:nowrap;border:1px solid #ccc;background:#fff;border-radius:6px;font-size:12px;
+}
+.zone-btn.active {background:#007aff;color:#fff;border-color:#007aff}
+
+.pagination{text-align:center;margin:8px 0}
+
+.grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:6px;
+  max-width:480px;margin:0 auto;
+}
+
+.card {
+   background:#fff;border:1px solid #ddd;border-radius:10px;
+   display:grid;
+   grid-template-columns:70px 1fr;
+   grid-template-rows:repeat(3, 1fr);
+   grid-template-areas:
+   "avatar drops"
+   "info drops"
+   "revive desc";
+   overflow: hidden;
+   /* 取消固定正方形，改为高度自适应内容，避免内容被截断 */
+   aspect-ratio: unset;
+   min-height: 130px;
+ }
+
+.avatar{
+  grid-area:avatar;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+  padding:4px;
+}
+.avatar img{
+  width:36px;height:36px;object-fit:contain;
+}
+.hp{font-size:11px;text-align:center;margin-top:2px}
+
+.info{
+  grid-area:info;display:flex;flex-direction:column;
+  justify-content:center;gap:2px;
+  padding:4px;
+  border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+  text-align:center;
+}
+.name{font-size:12px;font-weight:bold}
+.level{font-size:10px}
+/* 区域浅绿色 */
+.zone{font-size:9px;color:#52b960;}
+
+.drops{
+  grid-area:drops;
+  padding:4px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
+  align-content:center;
+  font-size:10px;
+  text-align:center;
+  word-break:break-word;
+  overflow:hidden;
+}
+.drops img {
+  width: 12px;
+  height: 12px;
+  vertical-align: middle;
+  margin-right: 2px;
+  object-fit: contain;
+}
+
+/* 左边蓝色格子排版 */
+.revive{
+  grid-area:revive;
+  display:flex;flex-direction:column;
+  justify-content:space-between;
+  padding:6px 4px;
+  border-right:1px solid #ddd;
+  background:#eef7ff;
+  font-size:10px;
+  text-align:center;
+}
+.badge{
+  font-size:9px;
+  font-weight:bold;
+  color:#c0392b;
+  text-align:center;
+}
+
+/* 掉落两排 + 字体和EXP一样大 */
+.drops{
+  grid-area:drops;
+  padding:6px 4px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:2px;align-content:center;
+  font-size:10px;
+  text-align:center;
+}
+
+/* 右边描述栏 */
+.desc{
+  grid-area:desc;
+  background:#eef7ff;
+  display:grid;place-items:center;
+  font-size:9px;
+  border-left:1px solid #ddd;
+  padding:0 4px;
+}
+</style>
+
+<div class="top-bar">
+  <input class="search-box" placeholder="搜索名字/等级/地图/物品">
+  <button class="lang-btn">中文/English</button>
+</div>
+
+<div class="zone-bar" id="zoneBar"></div>
+
+<div class="pagination">
+  <button class="page-btn" id="prev">上一页</button>
+  <span id="pageInfo">第 1 页</span>
+  <button class="page-btn" id="next">下一页</button>
+</div>
+
+<div class="grid" id="cardBox"></div>
+
+<script>
+let isCN = true
+let allMonsters = []
+let filtered = []
+let lang = {}
+let drops = {}
+let page = 1
+const perPage = 10
+let currentGroup = "all"
+
+const zoneGroups = {
+  "木木森/木木林": ["Woody-Weedy Forest,Woody-Wordy Forest"],
+  "蘑菇林": ["Mushroom Marshland","Mushroom Spore"],
+  "海滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
+  "灯塔": ["Lighthouse 1F","Lighthouse 1F,2F","Lighthouse 2F","Lighthouse 2F,3F","Lighthouse 3F","Lighthouse 3F,4F","Lighthouse 4F","Lighthouse 4F,5F","Lighthouse 5F"],
+  "海盗船": ["Pirate Ship 1F","Pirate Ship 1F,2F","Pirate Ship 2F"],
+  "拉诺斯平原/坟墓森林": ["Lanos Plains","Forest of Grave"],
+  "废墟森林/卡塔勒山脉": ["Forest with Ruins","Kataru Mountains"],
+  "天空城": ["Sky Castle"],
+  "光绝神殿": ["Temple of Wingfril"],
+  "干旱草原/沙漠峡谷": ["Arid Grassland","Desert Valley"],
+  "热砂平原": ["Hot Sand Plains"],
+  "死亡沼泽": ["Marsh of Death"],
+  "森林迷宫": ["Maze Forest"],
+  "伊斯洛实验室": ["Islot's Lab","Syphnel Road"],
+  "伊斯洛神殿": ["Islot's Temple"],
+  "悲叹祭坛": ["Anguish Altar"],
+  "鲁纳夫": ["Lunarf"],
+  "莫勒波西兹": ["Morphosis Root","Morphosis Garden"],
+  "图书库": ["Morphosis Forbidden Library"]
+}
+
+Promise.all([
+  fetch('monsters_data.json').then(r=>r.json()),
+  fetch('lang.json').then(r=>r.json()),
+  fetch('monster_drops.json').then(r=>r.json())
+]).then(([m,l,d])=>{
+  allMonsters = m
+  lang = l
+  drops = d
+  buildGroupButtons()
+  doSearch()
+}).catch(err=>console.error("加载失败",err))
+
+function tr(map, key){
+  return isCN ? (map[key] || key) : key
+}
+
+function buildGroupButtons(){
+  const bar = document.getElementById('zoneBar')
+  bar.innerHTML = `<button class="zone-btn active" id="resetAll">全部</button>`
+  document.getElementById('resetAll').onclick = () => {
+    currentGroup = "all"
+    page = 1
+    doSearch()
+    setActiveBtn("all")
+  }
+  Object.keys(zoneGroups).forEach(name => {
+    const btn = document.createElement('button')
+    btn.className = 'zone-btn'
+    btn.textContent = name
+    btn.onclick = () => {
+      currentGroup = name
+      page = 1
+      doSearch()
+      setActiveBtn(name)
+    }
+    bar.appendChild(btn)
+  })
+}
+
+function setActiveBtn(name){
+  document.querySelectorAll('.zone-btn').forEach(b=>b.classList.remove('active'))
+  if(name === "all"){
+    document.getElementById('resetAll').classList.add('active')
+  }else{
+    document.querySelectorAll('.zone-btn').forEach(b=>{
+      if(b.textContent === name) b.classList.add('active')
+    })
+  }
+}
+
+function doSearch(){
+  const kw = document.querySelector('.search-box').value.toLowerCase().trim()
+  filtered = (allMonsters||[]).filter(m => {
+    if(!m) return false
+    const nameCN = tr(lang.nameMap, m.name)
+    const zoneCN = tr(lang.zoneMap, m.zone)
+    const lv = String(m.level||'').toLowerCase()
+    const items = (drops[m.name]?.掉落物||[]).map(i=>tr(lang.dropMap,i)).join(' ')
+    const txt = [nameCN, m.name, zoneCN, m.zone, lv, items].join(' ').toLowerCase()
+    let ok = true
+    if(currentGroup !== "all"){
+      const zs = zoneGroups[currentGroup]||[]
+      ok = zs.some(z=>m.zone==z||m.zone.includes(z)||z.includes(m.zone))
+    }
+    return txt.includes(kw) && ok
+  })
+  render()
+}
+
+function render(){
+  const box = document.getElementById('cardBox')
+  box.innerHTML = ''
+  const total = Math.ceil((filtered||[]).length/perPage)
+  document.getElementById('pageInfo').innerText = `第 ${page}/${total} 页`
+  const list = (filtered||[]).slice((page-1)*perPage, page*perPage)
+
+  list.forEach(m => {
+    if(!m) return
+    const name = tr(lang.nameMap, m.name)
+    const zone = tr(lang.zoneMap, m.zone)
+    const dropHtml = (drops[m.name]?.掉落物||[]).map(i => {
+  const iconName = `${i}.png`; // 图标文件名和掉落名一致
+  return `<div><img src="drop_icons/${iconName}" onerror="this.style.display='none'">${tr(lang.dropMap,i)}</div>`;
+}).join('');
+
+    let reviveText = ""
+    if(m.revive && m.revive.trim()!==""){
+      let txt = m.revive
+      if(!isCN){
+        txt = txt.replace(/小时/g,"h ").replace(/分/g,"m ").replace(/秒/g,"s ").trim()
+      }
+      reviveText = txt
+    }
+
+    const img = `monsters_images/${m.name}.png`
+    let badge = ""
+    const note = (m.notes||"").trim()
+    if(note.includes("Mini-Boss")) badge = `<div class="badge">Mini Boss</div>`
+    else if(note.includes("Boss")) badge = `<div class="badge">Boss</div>`
+
+    box.innerHTML += `
+    <div class="card">
+      <div class="avatar">
+        <img src="${img}" onerror="this.src='https://picsum.photos/64'">
+        <div class="hp">HP: ${m.hp||'?'}</div>
+      </div>
+      <div class="info">
+        <div class="name">${name}</div>
+        <div class="level">Lv.${m.level||'?'}</div>
+        <div class="zone">${zone}</div>
+      </div>
+      <div class="revive">
+        <div>EXP: ${m.exp||'?'}</div>
+        ${badge}
+        <div>${reviveText}</div>
+      </div>
+      <div class="drops">${dropHtml}</div>
+      <div class="desc">${m.desc||''}</div>
+    </div>`
+  })
+}
+
+document.querySelector('.search-box').addEventListener('input', doSearch)
+document.querySelector('.lang-btn').onclick = ()=>{
+  isCN = !isCN
+  document.querySelector('.lang-btn').textContent = isCN ? "中文/English" : "English/中文"
+  render()
+}
+
+document.getElementById('prev').onclick = ()=>{
+  if(page>1){page--;render()}
+}
+document.getElementById('next').onclick = ()=>{
+  const total = Math.ceil(filtered.length/perPage)
+  if(page<total){page++;render()}
+}
+</script>
