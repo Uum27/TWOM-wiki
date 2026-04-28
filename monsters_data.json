@@ -1,19 +1,7 @@
 [
   {
-    "zone": "Kooii Training Ground",
-    "image": "",
-    "name": "Young Kooii",
-    "level": "1",
-    "notes": "-",
-    "image local": "monsters images/Young Kooii.png",
-    "hp": "5",
-    "exp": "0",
-    "中文名": "幼年库伊",
-    "revive": "-"
-  },
-  {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "欢迎来到魔法世界,我是可爱库伊",
     "name": "Kooii",
     "level": "2",
     "notes": "-",
@@ -25,7 +13,7 @@
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "Bramble Donguri",
     "level": "3",
     "notes": "-",
@@ -37,7 +25,7 @@
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "Leaf Boar",
     "level": "4",
     "notes": "-",
@@ -49,7 +37,7 @@
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "Angry Leaf Boar",
     "level": "4",
     "notes": "-",
@@ -61,7 +49,7 @@
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "Bulldozer Jr.",
     "level": "5",
     "notes": "Mini-Boss",
@@ -73,7 +61,7 @@
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "BULLDOZER",
     "level": "7",
     "notes": "Boss",
@@ -81,11 +69,11 @@
     "hp": "212",
     "exp": "?",
     "中文名": "凶猛猪少年",
-    "revive": "12分钟"
+    "revive": "12分"
   },
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "image": "",
+    "desc": "",
     "name": "BULLDOZER'S BROTHER",
     "level": "8",
     "notes": "Boss",
@@ -93,11 +81,11 @@
     "hp": "262",
     "exp": "60",
     "中文名": "凶猛猪大哥",
-    "revive": "15分钟"
+    "revive": "15分"
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "Swamp Mushroom",
     "level": "5",
     "notes": "-",
@@ -109,7 +97,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "Flower Elemental",
     "level": "6",
     "notes": "-",
@@ -121,7 +109,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "Swamp Boar",
     "level": "7",
     "notes": "-",
@@ -133,7 +121,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "Swamp Spider",
     "level": "8",
     "notes": "-",
@@ -145,7 +133,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "Poisonous Spider",
     "level": "9",
     "notes": "-",
@@ -157,7 +145,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "White Spider",
     "level": "10",
     "notes": "Mini-Boss",
@@ -169,7 +157,7 @@
   },
   {
     "zone": "Mushroom Marshland",
-    "image": "",
+    "desc": "",
     "name": "FUNGUS KING",
     "level": "12",
     "notes": "Boss",
@@ -177,11 +165,11 @@
     "hp": "670",
     "exp": "?",
     "中文名": "巨无霸蘑菇",
-    "revive": "18分钟"
+    "revive": "18分"
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "Cave Mushroom",
     "level": "-",
     "notes": "-",
@@ -189,11 +177,11 @@
     "hp": "1",
     "exp": "0",
     "中文名": "洞窟蘑菇",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "Poisonous Mushroom",
     "level": "8",
     "notes": "-",
@@ -205,7 +193,7 @@
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "Mushroom Flower",
     "level": "9",
     "notes": "-",
@@ -217,7 +205,7 @@
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "Cave Bat",
     "level": "9",
     "notes": "-",
@@ -229,7 +217,7 @@
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "White Bat",
     "level": "10",
     "notes": "Mini-Boss",
@@ -237,11 +225,11 @@
     "hp": "556",
     "exp": "?",
     "中文名": "白金蝙蝠",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Mushroom Spore",
-    "image": "",
+    "desc": "",
     "name": "POISON FUNGUS KING",
     "level": "12",
     "notes": "Boss",
@@ -249,11 +237,11 @@
     "hp": "810",
     "exp": "?",
     "中文名": "巨无霸毒蘑菇",
-    "revive": "48分钟"
+    "revive": "48分"
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "Bottle",
     "level": "-",
     "notes": "-",
@@ -265,7 +253,7 @@
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "Red Crab",
     "level": "10",
     "notes": "-",
@@ -277,7 +265,7 @@
   },
   {
     "zone": "Wingfril Island Beach",
-    "image": "",
+    "desc": "",
     "name": "Sandman",
     "level": "11",
     "notes": "-",
@@ -289,7 +277,7 @@
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "Woopa",
     "level": "12",
     "notes": "-",
@@ -301,7 +289,7 @@
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "Roopa",
     "level": "13",
     "notes": "-",
@@ -313,7 +301,7 @@
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "Mutant Woopa",
     "level": "13",
     "notes": "Mini-Boss",
@@ -321,11 +309,11 @@
     "hp": "316",
     "exp": "?",
     "中文名": "变种乌波",
-    "revive": "10分钟"
+    "revive": "10分"
   },
   {
     "zone": "Wingfril Island Beach,Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "CHIEF WOOPAROOPA",
     "level": "14",
     "notes": "Boss",
@@ -333,11 +321,11 @@
     "hp": "1024",
     "exp": "?",
     "中文名": "乌波鲁波族长",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Wingfril Island Beach",
-    "image": "",
+    "desc": "",
     "name": "TURTLE Z",
     "level": "18",
     "notes": "Boss",
@@ -345,11 +333,11 @@
     "hp": "20000",
     "exp": "?",
     "中文名": "狂睡乌龟",
-    "revive": "5小时33分钟"
+    "revive": "5小时33分"
   },
   {
     "zone": "Island with the Lighthouse",
-    "image": "",
+    "desc": "",
     "name": "TURTLE ZZZ",
     "level": "33",
     "notes": "Boss",
@@ -361,7 +349,7 @@
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "Testing Woopa",
     "level": "15",
     "notes": "-",
@@ -369,11 +357,11 @@
     "hp": "239",
     "exp": "50",
     "中文名": "实验用乌波",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "Marsh Donguri",
     "level": "15",
     "notes": "-",
@@ -381,11 +369,11 @@
     "hp": "279",
     "exp": "?",
     "中文名": "湿地圆圆",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "RECLUSE",
     "level": "15",
     "notes": "Boss",
@@ -393,11 +381,11 @@
     "hp": "1000",
     "exp": "200",
     "中文名": "隐士",
-    "revive": "11小时23分钟"
+    "revive": "11小时23分"
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "Underground Spider",
     "level": "16",
     "notes": "-",
@@ -409,7 +397,7 @@
   },
   {
     "zone": "Lighthouse 1F,2F",
-    "image": "",
+    "desc": "",
     "name": "Skeleton",
     "level": "17",
     "notes": "-",
@@ -421,7 +409,7 @@
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "MADGAR",
     "level": "17",
     "notes": "Quest Monster",
@@ -429,11 +417,11 @@
     "hp": "488",
     "exp": "?",
     "中文名": "梅德格",
-    "revive": "50分钟"
+    "revive": "50分"
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "Gray Skeleton",
     "level": "18",
     "notes": "Mini-Boss",
@@ -441,11 +429,11 @@
     "hp": "556",
     "exp": "130",
     "中文名": "白色骸骨",
-    "revive": "15分钟"
+    "revive": "15分"
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "SMALL SKELETON",
     "level": "18",
     "notes": "Quest Monster",
@@ -457,7 +445,7 @@
   },
   {
     "zone": "Lighthouse 1F",
-    "image": "",
+    "desc": "",
     "name": "BLACKSKULL",
     "level": "23",
     "notes": "Boss",
@@ -465,11 +453,11 @@
     "hp": "2048",
     "exp": "256",
     "中文名": "黑色骸骨",
-    "revive": "56分钟50秒"
+    "revive": "56分50秒"
   },
   {
     "zone": "Lighthouse 2F",
-    "image": "",
+    "desc": "",
     "name": "Beholder",
     "level": "18",
     "notes": "-",
@@ -481,7 +469,7 @@
   },
   {
     "zone": "Lighthouse 2F",
-    "image": "",
+    "desc": "",
     "name": "Drunken Kooii",
     "level": "19",
     "notes": "-",
@@ -493,7 +481,7 @@
   },
   {
     "zone": "Lighthouse 2F,3F",
-    "image": "",
+    "desc": "",
     "name": "Ghost",
     "level": "20",
     "notes": "-",
@@ -505,7 +493,7 @@
   },
   {
     "zone": "Lighthouse 2F",
-    "image": "",
+    "desc": "",
     "name": "Sleepy Kooii",
     "level": "20",
     "notes": "Mini-Boss",
@@ -513,11 +501,11 @@
     "hp": "713",
     "exp": "140",
     "中文名": "想睡的库伊",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Lighthouse 2F",
-    "image": "",
+    "desc": "",
     "name": "WHITESKULL",
     "level": "20",
     "notes": "Boss",
@@ -529,7 +517,7 @@
   },
   {
     "zone": "Lighthouse 2F",
-    "image": "",
+    "desc": "",
     "name": "AWAKEN KOOII",
     "level": "26",
     "notes": "Boss",
@@ -537,11 +525,11 @@
     "hp": "3072",
     "exp": "300",
     "中文名": "睡醒的库伊",
-    "revive": "1小时3分钟"
+    "revive": "1小时3分"
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "Snaketail Lizard",
     "level": "21",
     "notes": "-",
@@ -553,7 +541,7 @@
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "SNAKEZARD",
     "level": "21",
     "notes": "Boss",
@@ -561,11 +549,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "蛇尾查德",
-    "revive": "8小时43分钟20秒"
+    "revive": "8小时43分20秒"
   },
   {
     "zone": "Lighthouse 3F,4F",
-    "image": "",
+    "desc": "",
     "name": "Dark Beholder",
     "level": "22",
     "notes": "-",
@@ -577,7 +565,7 @@
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "Spector",
     "level": "22",
     "notes": "Mini-Boss",
@@ -585,11 +573,11 @@
     "hp": "812",
     "exp": "149",
     "中文名": "鬼魂",
-    "revive": "10分钟"
+    "revive": "10分"
   },
   {
     "zone": "Lighthouse 3F,4F",
-    "image": "",
+    "desc": "",
     "name": "Imp",
     "level": "23",
     "notes": "-",
@@ -601,7 +589,7 @@
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "EEHEEHEE",
     "level": "29",
     "notes": "Boss",
@@ -609,11 +597,11 @@
     "hp": "4048",
     "exp": "350",
     "中文名": "嘻嘻",
-    "revive": "1小时7分钟"
+    "revive": "1小时7分"
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "OOHEEHEEK",
     "level": "29",
     "notes": "Boss",
@@ -621,11 +609,11 @@
     "hp": "4048",
     "exp": "350",
     "中文名": "哈哈",
-    "revive": "1小时8分钟"
+    "revive": "1小时8分"
   },
   {
     "zone": "Lighthouse 3F",
-    "image": "",
+    "desc": "",
     "name": "OOHEHE",
     "level": "29",
     "notes": "Boss",
@@ -633,11 +621,11 @@
     "hp": "4048",
     "exp": "350",
     "中文名": "呵呵",
-    "revive": "1小时5分钟"
+    "revive": "1小时5分"
   },
   {
     "zone": "Lighthouse 4F,5F",
-    "image": "",
+    "desc": "",
     "name": "Bloody Flower",
     "level": "24",
     "notes": "-",
@@ -649,7 +637,7 @@
   },
   {
     "zone": "Lighthouse 4F,5F",
-    "image": "",
+    "desc": "",
     "name": "Bloody Mind",
     "level": "25",
     "notes": "-",
@@ -661,7 +649,7 @@
   },
   {
     "zone": "Lighthouse 4F",
-    "image": "",
+    "desc": "",
     "name": "Dan Dan",
     "level": "25",
     "notes": "Mini-Boss",
@@ -673,7 +661,7 @@
   },
   {
     "zone": "Lighthouse 4F",
-    "image": "",
+    "desc": "",
     "name": "Ding Ding",
     "level": "25",
     "notes": "Mini-Boss",
@@ -685,7 +673,7 @@
   },
   {
     "zone": "Lighthouse 4F",
-    "image": "",
+    "desc": "",
     "name": "Dong Dong",
     "level": "25",
     "notes": "Mini-Boss",
@@ -697,7 +685,7 @@
   },
   {
     "zone": "Lighthouse 4F",
-    "image": "",
+    "desc": "",
     "name": "Dung Dung",
     "level": "25",
     "notes": "Mini-Boss",
@@ -709,7 +697,7 @@
   },
   {
     "zone": "Lighthouse 4F",
-    "image": "",
+    "desc": "",
     "name": "GUARDIAN IMP",
     "level": "32",
     "notes": "Boss",
@@ -717,11 +705,11 @@
     "hp": "5012",
     "exp": "400",
     "中文名": "守护者小恶魔",
-    "revive": "1小时3分钟"
+    "revive": "1小时3分"
   },
   {
     "zone": "Lighthouse 5F",
-    "image": "",
+    "desc": "",
     "name": "Mummy",
     "level": "26",
     "notes": "-",
@@ -729,11 +717,11 @@
     "hp": "990",
     "exp": "83",
     "中文名": "木乃伊",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Lighthouse 5F",
-    "image": "",
+    "desc": "",
     "name": "Elite Imp",
     "level": "27",
     "notes": "-",
@@ -741,11 +729,11 @@
     "hp": "1030",
     "exp": "85",
     "中文名": "精英小恶魔",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Lighthouse 5F",
-    "image": "",
+    "desc": "",
     "name": "Mummy Fighter",
     "level": "28",
     "notes": "Mini-Boss",
@@ -753,11 +741,11 @@
     "hp": "1200",
     "exp": "?",
     "中文名": "战斗木乃伊",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Lighthouse 5F",
-    "image": "",
+    "desc": "",
     "name": "DEVILANG",
     "level": "34",
     "notes": "Boss",
@@ -765,11 +753,11 @@
     "hp": "19,999",
     "exp": "?",
     "中文名": "戴弗龙",
-    "revive": "5小时33分钟"
+    "revive": "5小时33分"
   },
   {
     "zone": "Pirate Ship 1F",
-    "image": "",
+    "desc": "",
     "name": "Broom",
     "level": "18",
     "notes": "-",
@@ -777,11 +765,11 @@
     "hp": "400",
     "exp": "60",
     "中文名": "扫帚",
-    "revive": "1分钟"
+    "revive": "1分"
   },
   {
     "zone": "Pirate Ship 1F",
-    "image": "",
+    "desc": "",
     "name": "SWEEPER",
     "level": "18",
     "notes": "Mini-Boss, DropsHallway Key",
@@ -789,11 +777,11 @@
     "hp": "500",
     "exp": "81",
     "中文名": "清洁组艾干净",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Pirate Ship 1F,2F",
-    "image": "",
+    "desc": "",
     "name": "Treasure Chest",
     "level": "19",
     "notes": "DropsCaptain's Cabin Key",
@@ -801,11 +789,11 @@
     "hp": "700",
     "exp": "97",
     "中文名": "海盗宝箱",
-    "revive": "4分钟"
+    "revive": "4分"
   },
   {
     "zone": "Pirate Ship 1F,2F",
-    "image": "",
+    "desc": "",
     "name": "Pirate Skeleton",
     "level": "19",
     "notes": "-",
@@ -813,11 +801,11 @@
     "hp": "?",
     "exp": "62",
     "中文名": "海盗骸骨",
-    "revive": "3分钟"
+    "revive": "3分"
   },
   {
     "zone": "Pirate Ship 2F",
-    "image": "",
+    "desc": "",
     "name": "Pirate Ghost",
     "level": "20",
     "notes": "-",
@@ -825,11 +813,11 @@
     "hp": "?",
     "exp": "96",
     "中文名": "海盗幽灵",
-    "revive": "3分钟30秒"
+    "revive": "3分30秒"
   },
   {
     "zone": "Storage Room",
-    "image": "",
+    "desc": "",
     "name": "BOATSWAIN BRANKA",
     "level": "24",
     "notes": "Boss",
@@ -837,11 +825,11 @@
     "hp": "1800",
     "exp": "?",
     "中文名": "甲板长布朗卡",
-    "revive": "25分钟"
+    "revive": "25分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Continent Bulldozer",
     "level": "12",
     "notes": "-",
@@ -849,11 +837,11 @@
     "hp": "178",
     "exp": "?",
     "中文名": "大陆凶猛猪",
-    "revive": "3分钟"
+    "revive": "3分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Blaster",
     "level": "14",
     "notes": "Mini-Boss",
@@ -861,11 +849,11 @@
     "hp": "309",
     "exp": "?",
     "中文名": "布莱斯特",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Crow",
     "level": "14",
     "notes": "-",
@@ -873,11 +861,11 @@
     "hp": "209",
     "exp": "55",
     "中文名": "乌鸦",
-    "revive": "3分钟15秒"
+    "revive": "3分15秒"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Raven",
     "level": "16",
     "notes": "Mini-Boss",
@@ -885,11 +873,11 @@
     "hp": "450",
     "exp": "?",
     "中文名": "渡鸦",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Redeye Gosumi",
     "level": "16",
     "notes": "-",
@@ -901,7 +889,7 @@
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Bloody Gosumi",
     "level": "18",
     "notes": "Mini-Boss",
@@ -909,11 +897,11 @@
     "hp": "420",
     "exp": "93",
     "中文名": "血古",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "WHITE CROW",
     "level": "19",
     "notes": "Boss",
@@ -921,11 +909,11 @@
     "hp": "700",
     "exp": "?",
     "中文名": "白魔鬼",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Lanos Plains",
-    "image": "",
+    "desc": "",
     "name": "Sheep",
     "level": "0",
     "notes": "-",
@@ -937,7 +925,7 @@
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Mutant Gosumi",
     "level": "20",
     "notes": "-",
@@ -949,7 +937,7 @@
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Berserk Gosumi",
     "level": "22",
     "notes": "Mini-Boss",
@@ -957,11 +945,11 @@
     "hp": "790",
     "exp": "119",
     "中文名": "暴走刺猬",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Large Spider",
     "level": "22",
     "notes": "-",
@@ -973,7 +961,7 @@
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Spidey",
     "level": "24",
     "notes": "Mini-Boss",
@@ -981,11 +969,11 @@
     "hp": "850",
     "exp": "?",
     "中文名": "小蜘蛛",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Big Boar",
     "level": "23",
     "notes": "-",
@@ -997,7 +985,7 @@
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "Wildboar",
     "level": "24",
     "notes": "Mini-Boss",
@@ -1005,11 +993,11 @@
     "hp": "880",
     "exp": "?",
     "中文名": "山猪",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest with Ruins",
-    "image": "",
+    "desc": "",
     "name": "GHOSTSNAKE",
     "level": "27",
     "notes": "Boss",
@@ -1017,11 +1005,11 @@
     "hp": "3000",
     "exp": "?",
     "中文名": "鬼蛇",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Cactus Bee",
     "level": "30",
     "notes": "-",
@@ -1029,11 +1017,11 @@
     "hp": "1492",
     "exp": "86",
     "中文名": "仙人掌蜂",
-    "revive": "1分钟"
+    "revive": "1分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Sand Donguri",
     "level": "32",
     "notes": "-",
@@ -1041,11 +1029,11 @@
     "hp": "1752",
     "exp": "92",
     "中文名": "沙子圆圆",
-    "revive": "1分钟"
+    "revive": "1分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Bizizi",
     "level": "32",
     "notes": "Mini-Boss",
@@ -1053,11 +1041,11 @@
     "hp": "1808",
     "exp": "84",
     "中文名": "毕吉吉",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Doley",
     "level": "34",
     "notes": "-",
@@ -1069,7 +1057,7 @@
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Buzss",
     "level": "34",
     "notes": "Mini-Boss",
@@ -1077,11 +1065,11 @@
     "hp": "2088",
     "exp": "?",
     "中文名": "布兹兹",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Desert Ambush",
     "level": "36",
     "notes": "-",
@@ -1093,7 +1081,7 @@
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Stealth",
     "level": "36",
     "notes": "Mini-Boss",
@@ -1101,11 +1089,11 @@
     "hp": "?",
     "exp": "247",
     "中文名": "史戴斯",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "Desert Assasain",
     "level": "38",
     "notes": "Mini-Boss",
@@ -1113,11 +1101,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "沙漠刺客",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Arid Grassland",
-    "image": "",
+    "desc": "",
     "name": "BSSSZSSS",
     "level": "40",
     "notes": "Boss",
@@ -1125,11 +1113,11 @@
     "hp": "20000",
     "exp": "510",
     "中文名": "普斯斯兹斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "Fox",
     "level": "12",
     "notes": "-",
@@ -1141,7 +1129,7 @@
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "Mature Fox",
     "level": "14",
     "notes": "-",
@@ -1153,7 +1141,7 @@
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "Red Fox",
     "level": "15",
     "notes": "Mini-Boss",
@@ -1161,11 +1149,11 @@
     "hp": "309",
     "exp": "?",
     "中文名": "火狐",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "7tailfox",
     "level": "16",
     "notes": "Mini-Boss",
@@ -1173,11 +1161,11 @@
     "hp": "500",
     "exp": "?",
     "中文名": "七尾狐",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "Sunset Flower",
     "level": "16",
     "notes": "-",
@@ -1189,7 +1177,7 @@
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "Sunrise Flower",
     "level": "18",
     "notes": "Mini-Boss",
@@ -1197,11 +1185,11 @@
     "hp": "420",
     "exp": "?",
     "中文名": "彩霞枯花",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Forest of Grave",
-    "image": "",
+    "desc": "",
     "name": "777TAILFOX",
     "level": "20",
     "notes": "Boss",
@@ -1209,11 +1197,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "777尾狐",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Magma",
     "level": "20",
     "notes": "-",
@@ -1225,7 +1213,7 @@
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Burning Stone",
     "level": "22",
     "notes": "Mini-Boss",
@@ -1233,11 +1221,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "火燃石",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Fire Bird",
     "level": "22",
     "notes": "-",
@@ -1249,7 +1237,7 @@
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Bbinikjoe",
     "level": "24",
     "notes": "Mini-Boss",
@@ -1257,11 +1245,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "不死鸟",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Magma Thief",
     "level": "24",
     "notes": "-",
@@ -1273,7 +1261,7 @@
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "Magma Senior Thief",
     "level": "26",
     "notes": "Mini-Boss",
@@ -1281,11 +1269,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "熔岩扒手班长",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Kataru Mountains",
-    "image": "",
+    "desc": "",
     "name": "CHIEF MAGIEF",
     "level": "28",
     "notes": "Boss",
@@ -1293,11 +1281,11 @@
     "hp": "2000",
     "exp": "300",
     "中文名": "熔岩扒手头目",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Desert Gosumi",
     "level": "30",
     "notes": "-",
@@ -1309,7 +1297,7 @@
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Sandgrave",
     "level": "32",
     "notes": "Mini-Boss",
@@ -1317,11 +1305,11 @@
     "hp": "1808",
     "exp": "185",
     "中文名": "沙墓",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Desert Beholder",
     "level": "32",
     "notes": "-",
@@ -1333,7 +1321,7 @@
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Elder Beholder",
     "level": "34",
     "notes": "Mini-Boss",
@@ -1341,11 +1329,11 @@
     "hp": "2088",
     "exp": "?",
     "中文名": "上古眼怪",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Wild Sandman",
     "level": "34",
     "notes": "-",
@@ -1353,11 +1341,11 @@
     "hp": "2012",
     "exp": "99",
     "中文名": "粗犷梦魇",
-    "revive": "3分钟"
+    "revive": "3分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "3eyelizard",
     "level": "36",
     "notes": "-",
@@ -1369,7 +1357,7 @@
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Sususuk",
     "level": "36",
     "notes": "Mini-Boss",
@@ -1377,11 +1365,11 @@
     "hp": "2368",
     "exp": "?",
     "中文名": "嘶嘶嘶",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "Suuk",
     "level": "38",
     "notes": "Mini-Boss",
@@ -1389,11 +1377,11 @@
     "hp": "2648",
     "exp": "?",
     "中文名": "嘶呃呃",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Desert Valley",
-    "image": "",
+    "desc": "",
     "name": "SHAAACK",
     "level": "40",
     "notes": "Boss",
@@ -1401,11 +1389,11 @@
     "hp": "7845",
     "exp": "900",
     "中文名": "沙沙沙",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Shadow",
     "level": "38",
     "notes": "-",
@@ -1417,7 +1405,7 @@
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Mind Scream",
     "level": "40",
     "notes": "Mini-Boss",
@@ -1425,11 +1413,11 @@
     "hp": "2928",
     "exp": "224",
     "中文名": "心声",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Wanderer",
     "level": "40",
     "notes": "-",
@@ -1441,7 +1429,7 @@
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Lesser Madman",
     "level": "42",
     "notes": "Mini-Boss",
@@ -1449,11 +1437,11 @@
     "hp": "3208",
     "exp": "?",
     "中文名": "轻微神经病",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Sandeater",
     "level": "42",
     "notes": "-",
@@ -1465,7 +1453,7 @@
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "Bigmouse",
     "level": "44",
     "notes": "Mini-Boss",
@@ -1473,11 +1461,11 @@
     "hp": "5000",
     "exp": "?",
     "中文名": "大老鼠",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Hot Sand Plains",
-    "image": "",
+    "desc": "",
     "name": "BIGMAMA",
     "level": "50",
     "notes": "Raid Boss",
@@ -1489,7 +1477,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Sky Bat",
     "level": "26",
     "notes": "-",
@@ -1497,11 +1485,11 @@
     "hp": "867",
     "exp": "85",
     "中文名": "东方蝠",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Silver Bat",
     "level": "29",
     "notes": "Mini-Boss",
@@ -1513,7 +1501,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "iPot",
     "level": "27",
     "notes": "-",
@@ -1521,11 +1509,11 @@
     "hp": "969",
     "exp": "86",
     "中文名": "艾普",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Puppet",
     "level": "35",
     "notes": "Mini-Boss",
@@ -1537,7 +1525,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Tornado",
     "level": "28",
     "notes": "-",
@@ -1545,11 +1533,11 @@
     "hp": "1071",
     "exp": "85",
     "中文名": "龙卷风",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Dark Tornado",
     "level": "32",
     "notes": "Mini-Boss",
@@ -1561,7 +1549,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Goblin",
     "level": "28",
     "notes": "-",
@@ -1569,11 +1557,11 @@
     "hp": "1105",
     "exp": "87",
     "中文名": "小妖精",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Couatl",
     "level": "29",
     "notes": "-",
@@ -1581,11 +1569,11 @@
     "hp": "1173",
     "exp": "118",
     "中文名": "羽蛇",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Kobold",
     "level": "30",
     "notes": "-",
@@ -1593,11 +1581,11 @@
     "hp": "1190",
     "exp": "107",
     "中文名": "狗头人",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Goblin Warrior",
     "level": "32",
     "notes": "Mini-Boss",
@@ -1605,11 +1593,11 @@
     "hp": "3800",
     "exp": "?",
     "中文名": "小妖精勇士",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Zealot",
     "level": "34",
     "notes": "Mini-Boss",
@@ -1617,11 +1605,11 @@
     "hp": "4200",
     "exp": "230",
     "中文名": "盲从者",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Gnome",
     "level": "36",
     "notes": "Mini-Boss",
@@ -1629,11 +1617,11 @@
     "hp": "3000",
     "exp": "240",
     "中文名": "地精",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Tyrant",
     "level": "38",
     "notes": "Mini-Boss",
@@ -1641,11 +1629,11 @@
     "hp": "10000",
     "exp": "?",
     "中文名": "暴君",
-    "revive": "2小时33分钟"
+    "revive": "2小时33分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Orb",
     "level": "28",
     "notes": "-",
@@ -1653,11 +1641,11 @@
     "hp": "1130",
     "exp": "87",
     "中文名": "球怪",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Storm",
     "level": "29",
     "notes": "-",
@@ -1665,11 +1653,11 @@
     "hp": "1190",
     "exp": "88",
     "中文名": "旋风",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Bulette",
     "level": "30",
     "notes": "-",
@@ -1677,11 +1665,11 @@
     "hp": "1275",
     "exp": "?",
     "中文名": "布雷特",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Tank",
     "level": "33",
     "notes": "Mini-Boss",
@@ -1689,11 +1677,11 @@
     "hp": "4600",
     "exp": "220",
     "中文名": "坦克",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Maelstrom",
     "level": "35",
     "notes": "Mini-Boss",
@@ -1701,11 +1689,11 @@
     "hp": "3120",
     "exp": "?",
     "中文名": "漩涡",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Swirl Flame",
     "level": "35",
     "notes": "Mini-Boss",
@@ -1713,11 +1701,11 @@
     "hp": "2000",
     "exp": "?",
     "中文名": "风暴",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Twister",
     "level": "36",
     "notes": "Mini-Boss",
@@ -1725,11 +1713,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "旋风",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Elemental Queen",
     "level": "38",
     "notes": "Mini-Boss",
@@ -1737,11 +1725,11 @@
     "hp": "8000",
     "exp": "?",
     "中文名": "精灵女王",
-    "revive": "2小时30分钟"
+    "revive": "2小时30分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Solid Rock",
     "level": "34",
     "notes": "-",
@@ -1749,11 +1737,11 @@
     "hp": "1904",
     "exp": "73",
     "中文名": "石像",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Gargoyle",
     "level": "35",
     "notes": "-",
@@ -1761,11 +1749,11 @@
     "hp": "1938",
     "exp": "103",
     "中文名": "滴水嘴兽",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Golem",
     "level": "36",
     "notes": "-",
@@ -1773,11 +1761,11 @@
     "hp": "2210",
     "exp": "102",
     "中文名": "魔像",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Black Gargoyle",
     "level": "37",
     "notes": "-",
@@ -1785,11 +1773,11 @@
     "hp": "2108",
     "exp": "108",
     "中文名": "暗黑滴水嘴兽",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Ominous Bird",
     "level": "35",
     "notes": "Mini-Boss",
@@ -1797,11 +1785,11 @@
     "hp": "4200",
     "exp": "?",
     "中文名": "怪鸟",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Stonestatue",
     "level": "38",
     "notes": "Mini-Boss",
@@ -1809,11 +1797,11 @@
     "hp": "4000",
     "exp": "280",
     "中文名": "雕像",
-    "revive": "58分钟20秒"
+    "revive": "58分20秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Aroid",
     "level": "35",
     "notes": "-",
@@ -1821,11 +1809,11 @@
     "hp": "1955",
     "exp": "?",
     "中文名": "法杖机器人",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Iron Golem",
     "level": "36",
     "notes": "-",
@@ -1837,7 +1825,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Robot",
     "level": "37",
     "notes": "-",
@@ -1849,7 +1837,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Humanoid",
     "level": "38",
     "notes": "-",
@@ -1861,7 +1849,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Landmine",
     "level": "39",
     "notes": "Mini-Boss",
@@ -1869,11 +1857,11 @@
     "hp": "3200",
     "exp": "?",
     "中文名": "地雷",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Titanium Golem",
     "level": "44",
     "notes": "Mini-Boss",
@@ -1881,11 +1869,11 @@
     "hp": "5000",
     "exp": "?",
     "中文名": "钛合金魔像",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Steampunk",
     "level": "44",
     "notes": "Mini-Boss",
@@ -1893,11 +1881,11 @@
     "hp": "15,000",
     "exp": "?",
     "中文名": "蒸汽朋克",
-    "revive": "2小时30分钟"
+    "revive": "2小时30分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Darkness",
     "level": "42",
     "notes": "-",
@@ -1909,7 +1897,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Protector",
     "level": "43",
     "notes": "-",
@@ -1921,7 +1909,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Guardian",
     "level": "44",
     "notes": "-",
@@ -1933,7 +1921,7 @@
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Inspector",
     "level": "45",
     "notes": "Mini-Boss",
@@ -1941,11 +1929,11 @@
     "hp": "5500",
     "exp": "?",
     "中文名": "监督官",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Fear of the Darkness",
     "level": "44",
     "notes": "Mini-Boss",
@@ -1953,11 +1941,11 @@
     "hp": "3500",
     "exp": "?",
     "中文名": "暗黑恐惧",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "Gatekeeper",
     "level": "46",
     "notes": "Mini-Boss",
@@ -1965,11 +1953,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "守门人",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Sky Castle",
-    "image": "",
+    "desc": "",
     "name": "CALIGO",
     "level": "50",
     "notes": "Raid Boss",
@@ -1981,7 +1969,7 @@
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Crystal Stone",
     "level": "20",
     "notes": "-",
@@ -1993,7 +1981,7 @@
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Yeti",
     "level": "20",
     "notes": "-",
@@ -2001,11 +1989,11 @@
     "hp": "912",
     "exp": "?",
     "中文名": "雪怪",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Wing Elemental",
     "level": "21",
     "notes": "-",
@@ -2013,11 +2001,11 @@
     "hp": "767",
     "exp": "?",
     "中文名": "风精灵",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Crystal Spider",
     "level": "23",
     "notes": "-",
@@ -2025,11 +2013,11 @@
     "hp": "",
     "exp": "94",
     "中文名": "水晶蜘蛛",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Guardian Yeti",
     "level": "25",
     "notes": "-",
@@ -2037,11 +2025,11 @@
     "hp": "1490",
     "exp": "?",
     "中文名": "守护者雪怪",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Young Pengoon",
     "level": "24",
     "notes": "-",
@@ -2049,11 +2037,11 @@
     "hp": "1032",
     "exp": "?",
     "中文名": "小企鹅",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "BLACKJUNO",
     "level": "25",
     "notes": "Boss",
@@ -2061,11 +2049,11 @@
     "hp": "9999",
     "exp": "?",
     "中文名": "黑黑朱诺",
-    "revive": "35分钟"
+    "revive": "35分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Crazy Pengoon",
     "level": "26",
     "notes": "-",
@@ -2073,11 +2061,11 @@
     "hp": "1330",
     "exp": "106",
     "中文名": "凶残的企鹅",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Yeti Highguard",
     "level": "27",
     "notes": "-",
@@ -2085,11 +2073,11 @@
     "hp": "1650",
     "exp": "?",
     "中文名": "高阶守卫",
-    "revive": "5分钟"
+    "revive": "5分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "Enraged Wings",
     "level": "28",
     "notes": "-",
@@ -2101,7 +2089,7 @@
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "BLACKSKY",
     "level": "30",
     "notes": "Boss",
@@ -2109,11 +2097,11 @@
     "hp": "14000",
     "exp": "166",
     "中文名": "黑天",
-    "revive": "33分钟"
+    "revive": "33分"
   },
   {
     "zone": "Temple of Wingfril",
-    "image": "",
+    "desc": "",
     "name": "WADANGKA THE ELDER",
     "level": "35",
     "notes": "Boss",
@@ -2121,11 +2109,11 @@
     "hp": "149,999",
     "exp": "?",
     "中文名": "瓦当卡老人",
-    "revive": "+-2小时30分钟"
+    "revive": "+-2小时30分"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Enraged Tree",
     "level": "22",
     "notes": "-",
@@ -2133,11 +2121,11 @@
     "hp": "657",
     "exp": "77",
     "中文名": "愤怒的树",
-    "revive": "1分钟50秒"
+    "revive": "1分50秒"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Smack",
     "level": "24",
     "notes": "-",
@@ -2149,7 +2137,7 @@
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Man eating Mushroom",
     "level": "26",
     "notes": "-",
@@ -2157,11 +2145,11 @@
     "hp": "850",
     "exp": "100",
     "中文名": "石菇",
-    "revive": "2分钟15秒"
+    "revive": "2分15秒"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Mutated Bee",
     "level": "28",
     "notes": "-",
@@ -2169,11 +2157,11 @@
     "hp": "800",
     "exp": "88",
     "中文名": "变异工蜂",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Smaaack",
     "level": "28",
     "notes": "Mini-Boss",
@@ -2181,11 +2169,11 @@
     "hp": "1200",
     "exp": "204",
     "中文名": "阿打打",
-    "revive": "28分钟"
+    "revive": "28分"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Poison Root Flower",
     "level": "29",
     "notes": "Mini-Boss",
@@ -2193,11 +2181,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "毒液花",
-    "revive": "28分钟"
+    "revive": "28分"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Contaminated Queen Bee",
     "level": "30",
     "notes": "Mini-Boss",
@@ -2205,11 +2193,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "被感染的女王蜂",
-    "revive": "28分钟"
+    "revive": "28分"
   },
   {
     "zone": "Polluted Forest",
-    "image": "",
+    "desc": "",
     "name": "Corrupt Forest Keeper",
     "level": "32",
     "notes": "Boss",
@@ -2217,11 +2205,11 @@
     "hp": "4200",
     "exp": "?",
     "中文名": "堕落的森林守护者",
-    "revive": "58分钟"
+    "revive": "58分"
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Young Froggy Swarm",
     "level": "34",
     "notes": "-",
@@ -2233,7 +2221,7 @@
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Poisonous Man eating Mushroom",
     "level": "37",
     "notes": "-",
@@ -2245,7 +2233,7 @@
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Zombie",
     "level": "38",
     "notes": "-",
@@ -2257,7 +2245,7 @@
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Mutated Lobster",
     "level": "40",
     "notes": "-",
@@ -2265,11 +2253,11 @@
     "hp": "2600",
     "exp": "122",
     "中文名": "变异小龙虾",
-    "revive": "3分钟"
+    "revive": "3分"
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Froggy",
     "level": "38",
     "notes": "Mini-Boss",
@@ -2277,11 +2265,11 @@
     "hp": "3690",
     "exp": "?",
     "中文名": "呱呱",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Rotten Pudding",
     "level": "40",
     "notes": "Mini-Boss",
@@ -2289,11 +2277,11 @@
     "hp": "2800",
     "exp": "?",
     "中文名": "腐烂的布丁",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Swamp Flower Monster",
     "level": "40",
     "notes": "Mini-Boss",
@@ -2301,11 +2289,11 @@
     "hp": "4500",
     "exp": "?",
     "中文名": "湿地花怪",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Marsh of Death",
-    "image": "",
+    "desc": "",
     "name": "Ukpana",
     "level": "50",
     "notes": "Raid Boss",
@@ -2317,7 +2305,7 @@
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Ancient Elf Crystal",
     "level": "?",
     "notes": "Gives a Random Boost",
@@ -2329,7 +2317,7 @@
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Plague Zombie",
     "level": "42",
     "notes": "-",
@@ -2337,11 +2325,11 @@
     "hp": "3100",
     "exp": "?",
     "中文名": "瘟疫僵尸",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Egg Monster",
     "level": "43",
     "notes": "-",
@@ -2349,11 +2337,11 @@
     "hp": "3250",
     "exp": "125",
     "中文名": "蛋怪物",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Banshee",
     "level": "44",
     "notes": "-",
@@ -2361,11 +2349,11 @@
     "hp": "3400",
     "exp": "104",
     "中文名": "女妖",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Masked Magician",
     "level": "45",
     "notes": "-",
@@ -2373,11 +2361,11 @@
     "hp": "3700",
     "exp": "131",
     "中文名": "面具魔法师",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Hellhound",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2385,11 +2373,11 @@
     "hp": "55,000",
     "exp": "254",
     "中文名": "坚硬的宝箱怪",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Death Stalker",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2397,11 +2385,11 @@
     "hp": "50,000",
     "exp": "254",
     "中文名": "缉命者",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Dark Golem",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2409,11 +2397,11 @@
     "hp": "60,000",
     "exp": "201",
     "中文名": "暗黑魔像",
-    "revive": "20分钟"
+    "revive": "20分"
   },
   {
     "zone": "Maze Forest",
-    "image": "",
+    "desc": "",
     "name": "Darlene the Witch",
     "level": "50",
     "notes": "Raid Boss",
@@ -2425,7 +2413,7 @@
   },
   {
     "zone": "Syphnel Road",
-    "image": "",
+    "desc": "",
     "name": "Snowball",
     "level": "28",
     "notes": "-",
@@ -2437,7 +2425,7 @@
   },
   {
     "zone": "Syphnel Road",
-    "image": "",
+    "desc": "",
     "name": "Uru",
     "level": "30",
     "notes": "-",
@@ -2449,7 +2437,7 @@
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Snowball",
     "level": "28",
     "notes": "-",
@@ -2461,7 +2449,7 @@
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Uru",
     "level": "30",
     "notes": "-",
@@ -2473,7 +2461,7 @@
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Sharkun",
     "level": "31-32",
     "notes": "-",
@@ -2485,7 +2473,7 @@
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Snoowy",
     "level": "34",
     "notes": "Mini-Boss",
@@ -2493,11 +2481,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "雪宝",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Urpus",
     "level": "34-35",
     "notes": "Mini-Boss",
@@ -2505,11 +2493,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "乌勒布斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Lab",
-    "image": "",
+    "desc": "",
     "name": "Mutated Sharkun",
     "level": "34-35",
     "notes": "Mini-Boss",
@@ -2517,22 +2505,22 @@
     "hp": "?",
     "exp": "?",
     "中文名": "突变的夏库",
-    "revive": "35分钟"
+    "revive": "35分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Urun",
     "level": "41",
     "image local": "monsters images/Urun.png",
     "hp": "2500",
     "exp": "143",
     "中文名": "乌勒",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Strong Sharkun",
     "level": "43",
     "notes": "-",
@@ -2540,23 +2528,23 @@
     "hp": "2500",
     "exp": "125",
     "中文名": "大力士夏库",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Shurun",
     "level": "45",
     "notes": "-",
     "image local": "monsters images/Shurun.png",
     "hp": "3534",
-    "exp": "111 (no XP buff)",
+    "exp": "111",
     "中文名": "修轮",
-    "revive": "2分钟"
+    "revive": "2分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Sharkurus",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2564,11 +2552,11 @@
     "hp": "7000",
     "exp": "?",
     "中文名": "夏库鲁斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Urtus",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2576,11 +2564,11 @@
     "hp": "6000",
     "exp": "?",
     "中文名": "乌勒图斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Mutated Shurun",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2588,11 +2576,11 @@
     "hp": "5500",
     "exp": "?",
     "中文名": "突变的修轮",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Sharkutus",
     "level": "46",
     "notes": "Mini-Boss",
@@ -2600,11 +2588,11 @@
     "hp": "6300",
     "exp": "?",
     "中文名": "夏库图斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Islot's Temple",
-    "image": "",
+    "desc": "",
     "name": "Barslaf",
     "level": "50",
     "notes": "Raid Boss",
@@ -2616,7 +2604,7 @@
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Avenger",
     "level": "45",
     "notes": "-",
@@ -2628,7 +2616,7 @@
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Pain",
     "level": "46",
     "notes": "-",
@@ -2640,7 +2628,7 @@
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Abyss Eater",
     "level": "47",
     "notes": "-",
@@ -2652,7 +2640,7 @@
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Apapa",
     "level": "48",
     "notes": "Mini-Boss",
@@ -2660,11 +2648,11 @@
     "hp": "6000",
     "exp": "?",
     "中文名": "阿波波",
-    "revive": "15分钟"
+    "revive": "15分"
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Faith",
     "level": "49",
     "notes": "Mini-Boss",
@@ -2672,11 +2660,11 @@
     "hp": "55000",
     "exp": "?",
     "中文名": "培伊斯",
-    "revive": "5小时53分钟"
+    "revive": "5小时53分"
   },
   {
     "zone": "Anguish Altar",
-    "image": "",
+    "desc": "",
     "name": "Illust",
     "level": "50",
     "notes": "Raid Boss",
@@ -2688,7 +2676,7 @@
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Sasquatch",
     "level": "45",
     "notes": "-",
@@ -2696,11 +2684,11 @@
     "hp": "3425",
     "exp": "131",
     "中文名": "大脚野人",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Crystal Cichlid",
     "level": "46",
     "notes": "-",
@@ -2708,11 +2696,11 @@
     "hp": "3300",
     "exp": "135",
     "中文名": "水晶鱼",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Chaser",
     "level": "47",
     "notes": "-",
@@ -2720,11 +2708,11 @@
     "hp": "3720",
     "exp": "144",
     "中文名": "追击者",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Big Foot",
     "level": "48",
     "notes": "Mini-Boss",
@@ -2732,11 +2720,11 @@
     "hp": "7500",
     "exp": "260",
     "中文名": "大脚怪",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Billiard",
     "level": "49",
     "notes": "Mini-Boss",
@@ -2744,11 +2732,11 @@
     "hp": "50,000",
     "exp": "500-700",
     "中文名": "毕尔里欧德",
-    "revive": "7小时55分钟"
+    "revive": "7小时55分"
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Sephia",
     "level": "50",
     "notes": "Raid Boss",
@@ -2760,7 +2748,7 @@
   },
   {
     "zone": "Lunarf",
-    "image": "",
+    "desc": "",
     "name": "Shiny Crystal",
     "level": "20",
     "notes": "-",
@@ -2772,7 +2760,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Papillio",
     "level": "38",
     "notes": "-",
@@ -2784,7 +2772,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Raphie",
     "level": "39",
     "notes": "-",
@@ -2796,7 +2784,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Mosboar",
     "level": "40",
     "notes": "-",
@@ -2808,7 +2796,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Areuke",
     "level": "42",
     "notes": "Mini-Boss",
@@ -2820,7 +2808,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Morty",
     "level": "42",
     "notes": "Mini-Boss",
@@ -2832,7 +2820,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Mushroom Bulldozer",
     "level": "42",
     "notes": "Mini-Boss",
@@ -2844,7 +2832,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Flower Bulldozer",
     "level": "42",
     "notes": "Mini-Boss",
@@ -2856,7 +2844,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Actaemon",
     "level": "44",
     "notes": "Boss",
@@ -2868,7 +2856,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "image": "",
+    "desc": "",
     "name": "Aiyo's Protector",
     "level": "52",
     "notes": "Raid Boss",
@@ -2880,7 +2868,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Crown Duck",
     "level": "48",
     "notes": "-",
@@ -2888,11 +2876,11 @@
     "hp": "5000",
     "exp": "144",
     "中文名": "皇冠鸭",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Leafsoul",
     "level": "48",
     "notes": "-",
@@ -2900,11 +2888,11 @@
     "hp": "5200",
     "exp": "144",
     "中文名": "叶形精",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Leafrog",
     "level": "48",
     "notes": "-",
@@ -2912,11 +2900,11 @@
     "hp": "5700",
     "exp": "144",
     "中文名": "叶形蛙",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Circuit Golem",
     "level": "49",
     "notes": "-",
@@ -2924,11 +2912,11 @@
     "hp": "6700",
     "exp": "147",
     "中文名": "回路傀儡",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Sikenel",
     "level": "49",
     "notes": "-",
@@ -2936,11 +2924,11 @@
     "hp": "6200",
     "exp": "147",
     "中文名": "西格诺",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Charge Stone",
     "level": "49",
     "notes": "-",
@@ -2948,11 +2936,11 @@
     "hp": "7200",
     "exp": "151",
     "中文名": "电子石怪",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Glucose",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2960,11 +2948,11 @@
     "hp": "9000",
     "exp": "?",
     "中文名": "格鲁柯斯",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Overload",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2972,11 +2960,11 @@
     "hp": "10000",
     "exp": "?",
     "中文名": "奥伯洛德",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Soul Lich",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2984,11 +2972,11 @@
     "hp": "?",
     "exp": "?",
     "中文名": "索尔里奇",
-    "revive": "24小时15分钟"
+    "revive": "24小时15分"
   },
   {
     "zone": "Morphosis Garden",
-    "image": "",
+    "desc": "",
     "name": "Platanista",
     "level": "52",
     "notes": "Raid Boss",
@@ -3000,7 +2988,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Justified Knowledge",
     "level": "49",
     "notes": "",
@@ -3008,11 +2996,11 @@
     "hp": "7,500",
     "exp": "?",
     "中文名": "正当知识怪",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Parchment of Oblivion",
     "level": "49",
     "notes": "",
@@ -3020,11 +3008,11 @@
     "hp": "7,800",
     "exp": "?",
     "中文名": "遗忘之书怪",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Corrupted Pledger",
     "level": "50",
     "notes": "",
@@ -3032,11 +3020,11 @@
     "hp": "14,000",
     "exp": "?",
     "中文名": "被侵蚀的立约者",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Lapis",
     "level": "50",
     "notes": "",
@@ -3044,11 +3032,11 @@
     "hp": "8,500",
     "exp": "?",
     "中文名": "拉菲斯",
-    "revive": "2分钟30秒"
+    "revive": "2分30秒"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Justified Principle",
     "level": "50",
     "notes": "Mini Boss",
@@ -3056,11 +3044,11 @@
     "hp": "12,000",
     "exp": "???",
     "中文名": "正当信念怪",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Lazuli",
     "level": "50",
     "notes": "Mini Boss",
@@ -3068,11 +3056,11 @@
     "hp": "12,000",
     "exp": "???",
     "中文名": "拉茱利",
-    "revive": "30分钟"
+    "revive": "30分"
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Booksha",
     "level": "51",
     "notes": "Boss",
@@ -3084,7 +3072,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Shelf",
     "level": "51",
     "notes": "Boss",
@@ -3096,7 +3084,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "image": "",
+    "desc": "",
     "name": "Primal Knowledge",
     "level": "51",
     "notes": "Boss",
@@ -3108,7 +3096,7 @@
   },
   {
     "zone": "Ancient Dungeonfor levels 8-14",
-    "image": "",
+    "desc": "",
     "name": "DEATHBONE",
     "level": "18",
     "notes": "Boatswain Branka with a BlackPirate Hat",
@@ -3120,7 +3108,7 @@
   },
   {
     "zone": "Ancient Dungeon for levels 15-24",
-    "image": "",
+    "desc": "",
     "name": "BREMEN",
     "level": "24",
     "notes": "BrownDEVILANG",
@@ -3132,7 +3120,7 @@
   },
   {
     "zone": "Ancient Dungeon for levels 25 and up",
-    "image": "",
+    "desc": "",
     "name": "MEDUSA",
     "level": "40",
     "notes": "Similar toBIGMAMA",
@@ -3144,7 +3132,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Blood Bat",
     "level": "21",
     "rank": "-",
@@ -3157,7 +3145,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Tough Mimic",
     "level": "21",
     "rank": "-",
@@ -3170,7 +3158,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Violent Crew",
     "level": "22",
     "rank": "-",
@@ -3183,7 +3171,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "White Ghost",
     "level": "23",
     "rank": "-",
@@ -3196,7 +3184,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Weary Crew",
     "level": "24",
     "rank": "-",
@@ -3209,7 +3197,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Bomb Wing",
     "level": "25",
     "rank": "Summoned Mob",
@@ -3222,7 +3210,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Jack in the Box",
     "level": "26",
     "rank": "Mini-Boss",
@@ -3235,7 +3223,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "Ghost Witch",
     "level": "27",
     "rank": "Mini-Boss",
@@ -3248,7 +3236,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "CAPTAIN TWIN",
     "level": "28",
     "rank": "Boss",
@@ -3261,7 +3249,7 @@
   },
   {
     "zone": "Ghost Ship",
-    "image": "",
+    "desc": "",
     "name": "CAPTAIN TWIN",
     "level": "28",
     "rank": "Boss",
@@ -3274,7 +3262,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Poison Lizard",
     "level": "25",
     "notes": "-",
@@ -3286,7 +3274,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Big Eyed Soul",
     "level": "26",
     "notes": "-",
@@ -3298,7 +3286,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Dark Imp",
     "level": "28",
     "notes": "-",
@@ -3310,7 +3298,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Poison Mummy",
     "level": "27",
     "notes": "-",
@@ -3322,7 +3310,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Magic Imp",
     "level": "29",
     "notes": "-",
@@ -3334,7 +3322,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Evil Spirit",
     "level": "30",
     "notes": "Mini-Boss",
@@ -3346,7 +3334,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "Walking Dead",
     "level": "32",
     "notes": "Mini-Boss",
@@ -3358,7 +3346,7 @@
   },
   {
     "zone": "Forgotten Cave",
-    "image": "",
+    "desc": "",
     "name": "MUTANTHYDRA",
     "level": "32",
     "notes": "Boss",
@@ -3370,7 +3358,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Altar Cleaner",
     "level": "?",
     "rank": "-",
@@ -3383,7 +3371,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Silent Ghost",
     "level": "?",
     "rank": "-",
@@ -3396,7 +3384,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Rock Golem",
     "level": "?",
     "rank": "-",
@@ -3409,7 +3397,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Fluid Form",
     "level": "?",
     "rank": "-",
@@ -3422,7 +3410,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Morphing",
     "level": "?",
     "rank": "Mini-Boss",
@@ -3435,7 +3423,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "Mystery",
     "level": "?",
     "rank": "Mini-Boss",
@@ -3448,7 +3436,7 @@
   },
   {
     "zone": "Silent Altar",
-    "image": "",
+    "desc": "",
     "name": "MALTARGUARDIAN",
     "level": "?",
     "rank": "Boss",
@@ -3461,7 +3449,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "Cave Spider",
     "level": "?",
     "rank": "-",
@@ -3474,7 +3462,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "Hairy",
     "level": "?",
     "rank": "-",
@@ -3487,7 +3475,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "Cave Keeper",
     "level": "?",
     "rank": "-",
@@ -3500,7 +3488,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "Light Wing",
     "level": "?",
     "rank": "-",
@@ -3513,7 +3501,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "DARKJUNO",
     "level": "38",
     "rank": "Mini-Boss",
@@ -3526,7 +3514,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "GRAYSKY",
     "level": "39",
     "rank": "Mini-Boss",
@@ -3539,7 +3527,7 @@
   },
   {
     "zone": "Impassable Cave",
-    "image": "",
+    "desc": "",
     "name": "WHITEWADANGKA",
     "level": "40",
     "rank": "Boss",
@@ -3552,7 +3540,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "Silhouette",
     "level": "41",
     "rank": "-",
@@ -3565,7 +3553,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "Underground Eater",
     "level": "42",
     "rank": "-",
@@ -3578,7 +3566,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "Bandageman",
     "level": "42",
     "rank": "-",
@@ -3591,7 +3579,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "Reason Scream",
     "level": "44",
     "rank": "Mini-Boss",
@@ -3604,7 +3592,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "Gluttony",
     "level": "45",
     "rank": "Mini-Boss",
@@ -3617,7 +3605,7 @@
   },
   {
     "zone": "Desert Dungeon",
-    "image": "",
+    "desc": "",
     "name": "THEMAMA",
     "level": "46",
     "rank": "Boss",
@@ -3630,7 +3618,7 @@
   },
   {
     "zone": "Endless Darkness",
-    "image": "",
+    "desc": "",
     "name": "Deep Darkness",
     "level": "42",
     "rank": "Boss",
@@ -3643,7 +3631,7 @@
   },
   {
     "zone": "Endless Darkness",
-    "image": "",
+    "desc": "",
     "name": "Burning Darkness",
     "level": "44",
     "rank": "Boss",
@@ -3656,7 +3644,7 @@
   },
   {
     "zone": "Endless Darkness",
-    "image": "",
+    "desc": "",
     "name": "Sorrowful Darkness",
     "level": "46",
     "rank": "Boss",
@@ -3669,7 +3657,7 @@
   },
   {
     "zone": "Endless Darkness",
-    "image": "",
+    "desc": "",
     "name": "Harsh Darkness",
     "level": "48",
     "rank": "Boss",
@@ -3682,7 +3670,7 @@
   },
   {
     "zone": "Endless Darkness",
-    "image": "",
+    "desc": "",
     "name": "Endless Darkness (Boss)",
     "level": "50",
     "rank": "Boss",
@@ -3695,7 +3683,7 @@
   },
   {
     "zone": "Woody-Weedy Village&Woody-Wordy Village",
-    "image": "",
+    "desc": "",
     "name": "Sandbag",
     "level": "1",
     "notes": "-",

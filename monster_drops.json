@@ -2,7 +2,7 @@
   "Angry Leaf Boar": {
     "中文名": "凶猛樹葉野豬",
     "掉落物": [
-      "金币",
+      "Gold",
       "Ruined Leather",
       "Wild Boar Meat",
       "Small Treasure Box",
@@ -373,10 +373,10 @@
       "Pet Crystal",
       "Longsword",
       "Composite Bow",
-      "Woopa-Roopa's Staff",
+      "Woopa Roopa's Staff",
       "Woopa Bronze Bell",
       "Woopa Crystal Scale",
-      "Woopa-Roopa Totem"
+      "Woopa Roopa Totem"
     ]
   },
   "TURTLE Z": {
@@ -574,7 +574,7 @@
       "The Dead's Shroud",
       "Boiled Leather Armor",
       "Thick Bandage",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Blunt Shortsword",
       "Ancient Treasure",
       "Potion Bag",
@@ -589,7 +589,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Armor Enchant Scroll (B Class)",
       "Thick Bandage",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Ancient Treasure",
       "Potion Bag",
       "Dongryu Juice",
@@ -640,7 +640,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Mystic Oil",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Lizard Leather Armor",
       "Flame of Kataru 1",
@@ -668,7 +668,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Mystic Oil",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Eye of Beholder",
@@ -681,7 +681,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Great Bow",
@@ -698,7 +698,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Prayer of Protection 2",
@@ -753,7 +753,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Mana Potion",
@@ -770,7 +770,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Mana Potion",
@@ -788,7 +788,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Potion Bag",
@@ -805,7 +805,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Potion Bag",
@@ -823,7 +823,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Potion Bag",
@@ -840,7 +840,7 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Ancient Treasure",
       "Potion Bag",
@@ -1522,7 +1522,7 @@
       "Ancient Treasure",
       "Potion Bag",
       "Sweeping Strikes 2",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Contaminated Matter",
       "Dongryu Juice"
     ]
@@ -1536,12 +1536,12 @@
       "Ancient Treasure",
       "Potion Bag",
       "Berserk 2",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Contaminated Matter",
       "Charmed Robe"
     ]
   },
-  "Man-eating Mushroom": {
+  "Man eating Mushroom": {
     "中文名": "石菇",
     "掉落物": [
       "Gold",
@@ -1563,7 +1563,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Multi Shot 2",
       "Poisonous Bee Sting"
     ]
@@ -1997,7 +1997,7 @@
       "Gold",
       "Old Scroll",
       "Strange Treasure",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Thick Leather",
       "Froggy Blood",
@@ -2005,7 +2005,7 @@
       "Shout of Calmness 1"
     ]
   },
-  "Poisonous Man-eating Mushroom": {
+  "Poisonous Man eating Mushroom": {
     "中文名": "剧毒石菇",
     "掉落物": [
       "Gold",
@@ -2026,7 +2026,7 @@
       "Gold",
       "Old Scroll",
       "Strange Treasure",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Enhancer",
       "Poison Pouch",
       "Heavy Iron Gauntlet",
@@ -2040,7 +2040,7 @@
       "Gold",
       "Old Scroll",
       "Strange Treasure",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Enhancer",
       "Poison Pouch",
@@ -2112,7 +2112,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Healing Potion",
       "Black Ooze",
@@ -2126,7 +2126,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Black Ooze"
     ]
@@ -2138,7 +2138,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Healing Potion",
       "Magical Robe",
@@ -2152,7 +2152,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Mana Potion",
       "Magical Robe",
@@ -2225,7 +2225,7 @@
       "Hopeful Magic Essence",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Snowy Field's Cursed Boots"
     ]
@@ -2238,7 +2238,7 @@
       "Hopeful Magic Essence",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Toxic Boots"
     ]
@@ -2251,7 +2251,7 @@
       "Hopeful Magic Essence",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Sharkun Greaves"
     ]
@@ -2305,7 +2305,7 @@
       "Old Scroll",
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Healing Potion"
     ]
@@ -2318,7 +2318,7 @@
       "Old Scroll",
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Healing Potion",
       "Super Mana Potion"
@@ -2332,7 +2332,7 @@
       "Old Scroll",
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Super Healing Potion"
     ]
@@ -2414,7 +2414,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
       "Sky Bat Wing",
@@ -2470,7 +2470,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
       "Magic Marble"
@@ -2497,7 +2497,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
       "Belt of Belief",
@@ -2524,7 +2524,7 @@
       "Old Scroll",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
       "Gunpowder"
@@ -2597,7 +2597,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Broken Magic Stone",
       "Element Crystal"
     ]
@@ -2610,7 +2610,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Broken Magic Stone",
       "Magic Marble",
       "Monk's Boots"
@@ -2623,7 +2623,7 @@
       "Old Scroll",
       "Ancient Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
       "Stone Powder"
@@ -2715,7 +2715,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Magic Rune",
       "Stone Powder",
@@ -2730,7 +2730,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
       "Gargoyle Wing",
@@ -2744,7 +2744,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Magic Rune",
       "Stone Powder",
@@ -2759,7 +2759,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
       "Gargoyle Wing"
@@ -2804,7 +2804,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Shinning Magic Stone",
       "Nut",
       "Sage's Gloves"
@@ -2817,7 +2817,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
       "Nut",
@@ -2833,7 +2833,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
       "Bolt",
@@ -2847,7 +2847,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
       "Bolt"
@@ -2911,7 +2911,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Dark Piece",
       "Fallen Magic Stone"
@@ -2924,7 +2924,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Dark Piece",
       "Fallen Magic Stone"
@@ -2937,7 +2937,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Potion Bag",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Soul Stone",
       "Fallen Magic Stone"
@@ -3183,7 +3183,7 @@
       "Old Scroll",
       "Strange Treasure",
       "Crude Magic Crystal",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Butterfly Wings"
     ]
@@ -3195,7 +3195,7 @@
       "Old Scroll",
       "Strange Treasure",
       "Crude Magic Crystal",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Elongated Ears"
     ]
@@ -3207,7 +3207,7 @@
       "Old Scroll",
       "Wingfril's Treasure",
       "Crude Magic Crystal",
-      "Well-Being Herb Bread",
+      "Well Being Herb Bread",
       "Dongryu Juice",
       "Moss Leather"
     ]
