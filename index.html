@@ -209,6 +209,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   .drops{font-size:17px;}
   .drops img{width:24px;height:24px;}
 }
+
 </style>
 
 <!-- 顶部 -->
@@ -256,16 +257,16 @@ let currentGroup = "all"
 const zoneGroups = {
   "木木森/木木林": ["Woody-Weedy Forest,Woody-Wordy Forest"],
   "蘑菇林": ["Mushroom Marshland","Mushroom Spore"],
-  "海滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse"],
+  "海滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
   "灯塔": ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],
-  "海盗船": ["Pirate Ship 1F","Pirate Ship 2F"],
-  "拉诺斯平原/坟墓森林": ["Lanos Plains","Forest of Grave"],
+  "海盗船": ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"],
+  "兰诺斯平原/晚霞森林": ["Lanos Plains","Forest of Grave"],
   "废墟森林/卡塔勒山脉": ["Forest with Ruins","Kataru Mountains"],
   "污染森林": ["Polluted Forest"],
   "天空城": ["Sky Castle"],
   "光绝神殿": ["Temple of Wingfril"],
-  "干旱草原/沙漠峡谷": ["Arid Grassland","Desert Valley"],
-  "热砂平原": ["Hot Sand Plains"],
+  "枯原/沙墓峡谷": ["Arid Grassland","Desert Valley"],
+  "热沙平原": ["Hot Sand Plains"],
   "死亡沼泽": ["Marsh of Death"],
   "森林迷宫": ["Maze Forest"],
   "伊斯洛实验室": ["Islot's Lab","Syphnel Road"],
@@ -324,24 +325,53 @@ function setActiveBtn(name){
 }
 
 function doSearch(){
-  const kw = document.querySelector('.search-box').value.toLowerCase().trim()
-  filtered = (allMonsters||[]).filter(m => {
-    if(!m) return false
-    const nameCN = tr(lang.nameMap, m.name)
-    const zoneCN = tr(lang.zoneMap, m.zone)
-    const lv = String(m.level||'').toLowerCase()
-    const items = (drops[m.name]?.掉落物||[]).map(i=>tr(lang.dropMap,i)).join(' ')
-    // 新增：加入怪物类型搜索
-    const monsterType = (m.notes||"").toLowerCase()
-    const txt = [nameCN, m.name, zoneCN, m.zone, lv, items, monsterType].join(' ').toLowerCase()
-    let ok = true
-    if(currentGroup !== "all"){
-      const zs = zoneGroups[currentGroup]||[]
-      ok = zs.some(z=>m.zone==z||m.zone.includes(z)||z.includes(m.zone))
+  const kw = document.querySelector('.search-box').value.toLowerCase().trim();
+  filtered = (allMonsters || []).filter(m => {
+    if (!m) return false;
+
+    // 怪物名称（中文 + 英文）
+    const nameCN = tr(lang.nameMap, m.name) || '';
+    const nameEN = m.name || '';
+
+    // 地区（中文 + 英文）
+    const zoneCN = tr(lang.zoneMap, m.zone) || '';
+    const zoneEN = m.zone || '';
+
+    // 等级
+    const level = String(m.level || '');
+
+    // 掉落物（支持多语言）
+    const dropList = drops[m.name]?.掉落物 || [];
+    const dropCN = dropList.map(i => tr(lang.dropMap, i) || '').join(' ');
+    const dropEN = dropList.join(' ');
+
+    // 怪物类型（BOSS / Mini Boss）
+    const notes = m.notes || '';
+
+    // 把所有内容 全部转小写
+    const allText = [
+      nameCN, nameEN,
+      zoneCN, zoneEN,
+      level,
+      dropCN, dropEN,
+      notes
+    ].join(' ').toLowerCase();
+
+    // 地区筛选不变
+    let ok = true;
+    if (currentGroup !== "all") {
+      const zs = zoneGroups[currentGroup] || [];
+      ok = zs.some(z => 
+        m.zone == z || 
+        m.zone.includes(z) || 
+        z.includes(m.zone)
+      );
     }
-    return txt.includes(kw) && ok
-  })
-  render()
+
+    // 模糊匹配（包含关键词就出来，绝不空白）
+    return allText.includes(kw) && ok;
+  });
+  render();
 }
 
 function updatePageInfo(){
@@ -359,10 +389,7 @@ function goNext(){
     page++;
     render();
     // 点击下一页跳转到顶部
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // 平滑滚动
-    });
+    window.scrollTo(0, 0);
   }
 }
 
@@ -407,11 +434,11 @@ function render(){
     let descHtml = m.desc || ''
     if(isBossType && descHtml) {
       // 将描述内容拆分为两列（简单按逗号分割，可根据实际需求调整）
-      const descParts = descHtml.split('，').filter(part => part.trim())
+      const descParts = descHtml.split(',').filter(part => part.trim())
       if(descParts.length > 1) {
         descHtml = `
           <div>${descParts[0].trim()}</div>
-          <div>${descParts.slice(1).join('，').trim()}</div>
+          <div>${descParts.slice(1).join(',').trim()}</div>
         `
       } else {
         // 如果只有一列，也保持两列结构
@@ -464,4 +491,159 @@ document.getElementById('nextTop').onclick = goNext
 // 底部翻页（新增）
 document.getElementById('prevBot').onclick = goPrev
 document.getElementById('nextBot').onclick = goNext
+</script>
+
+<script>
+// 格式：[ "英文", "中文" ], "颜色"
+const dropColorPairs = [
+  [ "Blunt Shortsword", "钝短剑" ], "#6ece34",   //绿色
+  [ "Longsword", "长剑" ], "#6ece34",   //绿色 
+  [ "Sharp Longsword", "锐利的长剑" ], "#6ece34",   //绿色
+  [ "Katana", "武士刀" ], "#6ece34",   //绿色
+  [ "Viking Sword", "维京剑" ], "#6ece34",   //绿色
+  [ "Gladius", "罗马短剑" ], "#6ece34",   //绿色
+  [ "Rune Blade", "符文刃" ], "#6ece34",   //绿色
+  [ "Darksteel Sword", "玄铁剑" ], "#6ece34",   //绿色
+  [ "War Sword", "战争之剑" ], "#6ece34",   //绿色
+  [ "Kaisor Sword", "凯萨剑" ], "#6ece34",   //绿色
+  [ "Rapier", "细剑" ], "#6ece34",   //绿色
+  [ "Wooden Shortbow", "木质短弓" ], "#6ece34",   //绿色
+  [ "Composite Bow", "复合弓" ], "#6ece34",   //绿色
+  [ "Swirling Bow", "漩涡弓" ], "#39acf4",   //蓝色
+  [ "Great Bow", "巨弓" ], "#6ece34",   //绿色
+  [ "Classic Bow", "角弓" ], "#6ece34",   //绿色
+  [ "Hunter Bow", "猎弓" ], "#6ece34",   //绿色
+  [ "Horn Bow", "怒弓" ], "#6ece34",   //绿色
+  [ "Battle Bow", "斗弓" ], "#6ece34",   //绿色
+  [ "War Bow", "战弓" ], "#6ece34",   //绿色
+  [ "Dezoruba's Bow", "戴楚拜伊的弓" ], "#39acf4",   //蓝色
+  [ "Shadow Bow", "暗影弓" ], "#6ece34",   //绿色
+  [ "Wooden Staff", "木杖" ], "#6ece34",   //绿色
+  [ "Oak Tree Staff", "桦树杖" ], "#6ece34",   //绿色
+  [ "Magician Staff", "魔法师法杖" ], "#6ece34",   //绿色
+  [ "Woopa-Roopa's Staff", "族长法杖" ], "#39acf4",   //蓝色
+  [ "Novice Shaman's Wand", "新手巫师法杖" ], "#6ece34",   //绿色
+  [ "Shaman's Wand", "巫师法杖" ], "#6ece34",   //绿色
+  [ "Mystic Wand", "神秘巫师法杖" ], "#6ece34",   //绿色
+  [ "Spiritual Wand", "神力法杖" ], "#6ece34",   //绿色
+  [ "Wand of Chaos", "混沌法杖" ], "#6ece34",   //绿色
+  [ "Wand of Tranquility", "宁静法杖" ], "#6ece34",   //绿色
+  [ "Hole of Silence", "沉默之穴" ], "#6ece34",   //绿色
+  [ "Staff Struck by Lightning", "雷击木杖" ], "#39acf4",   //蓝色
+  [ "Wooden Shield", "木盾" ], "#6ece34",   //绿色
+  [ "Fungiskin Shield", "蘑菇盾牌" ], "#6ece34",   //绿色
+  [ "Round Shield", "圆盾" ], "#6ece34",   //绿色
+  [ "Skull Shield", "骷髅盾" ], "#39acf4",   //蓝色
+  [ "Ion Shield", "铁盾" ], "#6ece34",   //绿色
+  [ "Crystal Shield", "水晶盾" ], "#6ece34",   //绿色
+  [ "Tower Shield", "塔盾" ], "#6ece34",   //绿色
+  [ "Iron Covered Shield", "铁甲盾" ], "#6ece34",   //绿色
+  [ "Darksteel Shield", "玄铁盾" ], "#6ece34",   //绿色
+  [ "Spartan Shield", "斯巴达盾牌" ], "#39acf4",   //蓝色
+  [ "Bulldozer Cloak", "凶猛猪披风" ], "#6ece34",   //绿色
+  [ "Cloak of Health", "体力披风" ], "#6ece34",   //绿色
+  [ "Cloak of Half-Death", "濒死披风" ], "#39acf4",   //蓝色
+  [ "Cloak of Death", "死亡披风" ], "#bc71fc",   //紫色
+  [ "Passionate Cloak", "狂热披风" ], "#bc71fc",   //紫色
+  [ "Sparkling Necklace", "预言项链" ], "#39acf4",   //蓝色
+  [ "Dark Skull", "黑骷髅项链" ], "#39acf4",   //蓝色
+  [ "Pirate Necklace", "海盗项链" ], "#6ece34",   //绿色
+  [ "Mother Nature", "大地之母项链", ], "#bc71fc",   //紫色
+  [ "Pirate Ring", "海盗戒指" ], "#6ece34",   //绿色
+  [ "Alloy Ring", "合金戒指" ], "#6ece34",   //绿色
+  [ "Guardian's Ring", "守护者戒指" ], "#39acf4",   //蓝色
+  [ "Fungiskin Belt", "蘑菇腰带" ], "#6ece34",   //绿色
+  [ "Belt of Belief", "信念皮带" ], "#6ece34",   //绿色
+  [ "Belt of Regeneration", "再生皮带" ], "#bc71fc",   //紫色
+  [ "Otherworld Belt", "异界皮带" ], "#bc71fc",   //紫色
+  [ "Belt of Rough Roots", "粗糙根蔓皮带" ], "#6ece34",   //绿色
+  [ "Pledger's Belt", "契约者的皮带" ], "#6ece34",   //绿色
+  [ "Belt of Dry Magic", "契约者的皮带" ], "#6ece34",   //绿色
+  [ "Strange Hat", "奇特帽子" ], "#6ece34",   //绿色
+  [ "Pirate Hat", "海盗帽" ], "#6ece34",   //绿色
+  [ "Shaman's Hat", "巫师帽" ], "#6ece34",   //绿色
+  [ "Eye of Beholder", "凝视者之眼" ], "#6ece34",   //绿色
+  [ "Bandana of the Blue Waterfall", "靛蓝瀑布头巾" ], "#39acf4",  //蓝色
+  [ "Helm of the Grey Boulder", "白岩头盔" ], "#39acf4",   //蓝色
+  [ "Cap of the Blue Forest", "丛林帽" ], "#39acf4",    //
+  [ "Sturdy Leather Armor", "强化皮革盔甲" ], "#6ece34",   //绿色
+  [ "Bone Armor", "骨制盔甲" ], "#6ece34",   //绿色
+  [ "Boiled Leather Armor", "加工皮革盔甲" ], "#6ece34",   //绿色
+  [ "Mushroom Robe", "蘑菇长袍" ], "#39acf4",   //蓝色
+  [ "The Dead's Shroud", "亡者寿衣" ], "#6ece34",   //绿色
+  [ "Lizard Leather Armor", "蜥蜴皮衣" ], "#6ece34",   //绿色
+  [ "Charmed Robe", "咒术袍" ], "#6ece34",   //绿色
+  [ "Sturdy Yeti Armor", "雪人皮衣" ], "#6ece34",   //绿色
+  [ "Highguard Armor", "高阶护卫盔甲" ], "#6ece34",   //绿色
+  [ "Expert Magician Robe", "专业魔法师袍" ], "#6ece34",   //绿色
+  [ "Lizard Leather Armor", "蜥蜴皮衣" ], "#6ee129",    //
+  [ "Armor of the Grey Boulder", "白岩盔甲" ], "#39acf4",   //蓝色
+  [ "Robe of the Blue Waterfall", "靛蓝瀑布长袍" ], "#39acf4",   //蓝色
+  [ "Light Armor of the Blue Forest", "丛林轻甲" ], "#39acf4",   //蓝色
+  [ "World Tree Bark Armor", "世界树树皮盔甲" ], "#6ece34",   //绿色
+  [ "World Tree Branch Armor", "世界树树根盔甲" ], "#6ece34",   //绿色
+  [ "World Tree Leaf Robe", "世界树树叶长袍" ], "#6ece34",   //绿色
+  [ "Sturdy Leather Gloves", "强化皮革手套" ], "#6ece34",   //绿色
+  [ "Power Gloves", "能量手套" ], "#bc71fc",   //紫色
+  [ "The Dead's Gloves", "亡者手套" ], "#6ece34",   //绿色
+  [ "Oatwill's Leather Gloves", "欧特威尔的皮革手套" ], "#6ece34",   //绿色
+  [ "Pirate Gloves", "海盗手套" ], "#6ece34",   //绿色
+  [ "Seruang's Heart", "赛乐亚之心" ], "#39acf4",   //蓝色
+  [ "Desert Mercenary Gloves", "沙漠佣兵手套" ], "#6ece34",   //绿色
+  [ "Monk's Gloves", "修道士手套" ], "#6ece34",   //绿色
+  [ "Iron Golem's Gloves", "钢铁魔像手套" ], "#6ece34",   //绿色
+  [ "Scout Gloves", "童军手套" ], "#6ece34",   //绿色
+  [ "Sage's Gloves", "贤者手套" ], "#6ece34",   //绿色
+  [ "Chainstrike Gloves", "链击手套" ], "#39acf4",   //蓝色
+  [ "Protector's Hand Skin", "护卫兵的手部护具" ], "#39acf4",   //蓝色
+  [ "Illusionist's Gloves", "幻术师的手套" ], "#39acf4",   //蓝色
+  [ "Scale Boots", "鳞片靴" ], "#6ece34",   //绿色
+  [ "Wingwing Boots", "飞天靴" ], "#bc71fc",   //紫色
+  [ "Savage Boots", "野蛮靴" ], "#6ece34",   //绿色
+  [ "Heavy Iron Boots", "钢铁靴" ], "#6ece34",   //绿色
+  [ "Snowy Field's Cursed Boots", "雪原诅咒长靴" ], "#6ece34",   //绿色
+  [ "Toxic Boots", "剧毒长靴" ], "#6ece34",   //绿色
+  [ "Sharkun Greaves", "夏库胫甲" ], "#6ece34",   //绿色
+  [ "Monk's Boots", "修道士长靴" ], "#6ece34",   //绿色
+  [ "Shoes of Tranquility", "宁静鞋" ], "#6ece34",   //绿色
+  [ "Titanium Boots", "钛合金靴" ], "#6ece34",   //绿色
+  [ "Boots of Darkness", "暗黑鞋" ], "#6ece34",   //绿色
+  [ "Design: Blackskull Armor", "设计图:黑骸盔甲" ], "#39acf4",   //蓝色
+  [ "Design: Spirit's Hat", "设计图:精灵帽" ], "#6ece34",   //绿色
+  [ "Design: Blackjuno's Helmet", "设计图:黑黑朱诺头盔" ], "#39acf4",   //蓝色
+  [ "Design: Snow-Flower Stem Hat", "设计图:雪花藤蔓帽" ], "#6ece34",   //绿色
+  [ "Design: Crystal Robe", "设计图:水晶长袍" ], "#6ece34",   //绿色
+  [ "Dezoruba's Design", "戴楚拜伊的设计图" ], "#39acf4",   //蓝色
+  [ "Jode's Design", "佐德的设计图" ], "#6ece34",   //绿色
+];
+
+const dropColorMap = {};
+for (let i = 0; i < dropColorPairs.length; i += 2) {
+  const [en, cn] = dropColorPairs[i];
+  const color = dropColorPairs[i + 1];
+  dropColorMap[en] = color;
+  dropColorMap[cn] = color;
+}
+
+function colorizeDrops() {
+  document.querySelectorAll('.drops div').forEach(el => {
+    const txt = el.textContent.trim();
+    el.style.color = '';
+    el.style.fontWeight = 'normal';
+    for (const name in dropColorMap) {
+      if (txt.includes(name)) {
+        el.style.color = dropColorMap[name];
+        el.style.fontWeight = 'bold';
+        break;
+      }
+    }
+  });
+}
+
+const _render = render;
+render = () => {
+  _render();
+  setTimeout(colorizeDrops, 0);
+};
+colorizeDrops();
 </script>
