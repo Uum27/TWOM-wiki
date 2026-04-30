@@ -435,7 +435,8 @@
       "Palm Cocktail",
       "Expert Magician Robe",
       "Old Female Ring",
-      "Rage 1"
+      "Rage 1",
+      "Elemental Cycle 2"
     ]
   },
   "RECLUSE": {
@@ -504,7 +505,8 @@
       "Longsword",
       "Swirling Bow",
       "Pet Crystal",
-      "Design High Level Bone"
+      "Design High Level Bone",
+      "Electric Imbue 3"
     ]
   },
   "SMALL SKELETON": {
@@ -529,7 +531,8 @@
       "Sharp Longsword",
       "Swirling Bow",
       "Dark Skull",
-      "Design High Level Bone"
+      "Design High Level Bone",
+      "Electric Imbue 3"
     ]
   },
   "Beholder": {
@@ -672,7 +675,8 @@
       "Dongryu Juice",
       "Ancient Treasure",
       "Eye of Beholder",
-      "Stoneskin 1"
+      "Stoneskin 1",
+      "Baekha's Strike 2"
     ]
   },
   "Spector": {
@@ -1093,7 +1097,8 @@
       "Sturdy Yeti Armor",
       "Pet Crystal",
       "Instinct Stimulus 1",
-      "Fatal Attack 1"
+      "Fatal Attack 1",
+      "Elemental Cycle 3"
     ]
   },
   "WADANGKA THE ELDER": {
@@ -1148,7 +1153,8 @@
       "Pirate Card 10",
       "Captain's Cabin Key",
       "Pirate Ring",
-      "Multi Shot 1"
+      "Multi Shot 1",
+      "Breaker's Strike 2"
     ]
   },
   "Pirate Skeleton": {
@@ -1174,7 +1180,8 @@
       "Pirate Ring",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Berserk 1"
+      "Berserk 1",
+      "Elemental Release 2"
     ]
   },
   "BOATSWAIN BRANKA": {
@@ -1190,7 +1197,8 @@
       "Pirate Card A",
       "Pirate Hat",
       "Pirate Necklace",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Breaker's Strike 3"
     ]
   },
   "Continent Bulldozer": {
@@ -1202,7 +1210,8 @@
       "Armor Enchant Scroll (C Class)",
       "Weapon Enchant Scroll (C Class)",
       "Bulldozer's Tail Bone",
-      "Teleport 3"
+      "Teleport 3",
+      "Electric Imbue 2"
     ]
   },
   "Blaster": {
@@ -1619,6 +1628,7 @@
       "Robe of the Blue Waterfall",
       "Light Armor of the Blue Forest",
       "Instinct Stimulus 1",
+      "Cold Imbue 4",
       "Pet Crystal",
       "Old Scroll",
       "Armor Enchant Scroll (A Class)",
@@ -2074,7 +2084,8 @@
       "Special Cotton Cloth",
       "Poison Pouch",
       "War Bow",
-      "Neutralize 1"
+      "Neutralize 1",
+      "Baekha's Strike 3"
     ]
   },
   "Swamp Flower Monster": {
@@ -2102,7 +2113,8 @@
       "Swamp Treasure",
       "Passionate Cloak",
       "Neutralize 2",
-      "Harden Body 2"
+      "Harden Body 2",
+      "Chainstrike 4"
     ]
   },
   "Plague Zombie": {
@@ -2170,7 +2182,8 @@
       "Pet Crystal",
       "Essence of Corruption",
       "Special Magical Robe",
-      "Staff Struck by Lightning"
+      "Staff Struck by Lightning",
+      "Impact Training 3"
     ]
   },
   "Death Stalker": {
@@ -2184,7 +2197,8 @@
       "Pet Crystal",
       "Essence of Corruption",
       "Special Magical Robe",
-      "Shadow Bow"
+      "Shadow Bow",
+      "Impact Training 3"
     ]
   },
   "Dark Golem": {
@@ -2198,7 +2212,8 @@
       "Pet Crystal",
       "Essence of Corruption",
       "Special Magical Robe",
-      "Kaisor Sword"
+      "Kaisor Sword",
+      "Impact Training 3"
     ]
   },
   "Darlene the Witch": {
@@ -2231,7 +2246,7 @@
     ]
   },
   "Uru": {
-    "中文名": "乌勒",
+    "中文名": "乌勒1",
     "掉落物": [
       "Gold",
       "Strange Treasure",
@@ -2240,7 +2255,8 @@
       "Weapon Enchant Scroll (B Class)",
       "Well Being Herb Bread",
       "Dongryu Juice",
-      "Toxic Boots"
+      "Toxic Boots",
+      "Impact Training 2"
     ]
   },
   "Sharkun": {
@@ -2266,7 +2282,8 @@
       "Strange Treasure",
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
-      "Snowy Field's Cursed Boots"
+      "Snowy Field's Cursed Boots",
+      "Critical Insight 2"
     ]
   },
   "Urpus": {
@@ -2459,7 +2476,8 @@
       "Nut",
       "Bolt",
       "Gemstone",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Critical Insight 3"
     ]
   },
   "Tornado": {
@@ -2486,7 +2504,8 @@
       "Broken Magic Stone",
       "Gemstone",
       "Pet Crystal",
-      "Magic Marble"
+      "Magic Marble",
+      "Critical Insight 2"
     ]
   },
   "Goblin": {
@@ -2541,7 +2560,8 @@
       "Pet Crystal",
       "Broken Magic Stone",
       "Gunpowder",
-      "Shinning Metal"
+      "Shinning Metal",
+      "Leap 4"
     ]
   },
   "Zealot": {
@@ -2940,7 +2960,8 @@
       "Well Being Herb Bread",
       "Dongryu Juice",
       "Soul Stone",
-      "Fallen Magic Stone"
+      "Fallen Magic Stone",
+      "Elemental Cycle 3"
     ]
   },
   "Inspector": {
@@ -3197,7 +3218,8 @@
       "Crude Magic Crystal",
       "Well Being Herb Bread",
       "Dongryu Juice",
-      "Elongated Ears"
+      "Elongated Ears",
+      "Sixth Sense 2"
     ]
   },
   "Mosboar": {

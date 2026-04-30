@@ -2412,7 +2412,7 @@
     "revive": "72小时"
   },
   {
-    "zone": "Syphnel Road",
+    "zone": "Syphnel Road,Islot's Lab",
     "desc": "",
     "name": "Snowball",
     "level": "28",
@@ -2424,7 +2424,7 @@
     "revive": "-"
   },
   {
-    "zone": "Syphnel Road",
+    "zone": "Syphnel Road,Islot's Lab",
     "desc": "",
     "name": "Uru",
     "level": "30",
@@ -2432,7 +2432,7 @@
     "image local": "monsters images/Uru.png",
     "hp": "1,190",
     "exp": "149",
-    "中文名": "乌勒",
+    "中文名": "乌勒1",
     "revive": "-"
   },
   {
