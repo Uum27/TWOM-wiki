@@ -421,7 +421,7 @@
       "Sharp Eye 1",
       "Armor Enchant Scroll (C Class)",
       "Sturdy Leather Gloves",
-      "Design: Mid Level Bone",
+      "Design Mid Level Bone",
       "Old Female Ring",
       "Old Box"
     ]
@@ -476,7 +476,7 @@
       "Bone Armor",
       "Potion Bag",
       "Old Box",
-      "Design: Mid Level Bone"
+      "Design Mid Level Bone"
     ]
   },
   "MADGAR": {
@@ -504,7 +504,7 @@
       "Longsword",
       "Swirling Bow",
       "Pet Crystal",
-      "Design: High Level Bone"
+      "Design High Level Bone"
     ]
   },
   "SMALL SKELETON": {
@@ -529,7 +529,7 @@
       "Sharp Longsword",
       "Swirling Bow",
       "Dark Skull",
-      "Design: High Level Bone"
+      "Design High Level Bone"
     ]
   },
   "Beholder": {
@@ -578,7 +578,7 @@
       "Blunt Shortsword",
       "Ancient Treasure",
       "Potion Bag",
-      "Design: Mid Level Bone",
+      "Design Mid Level Bone",
       "Weakness 2"
     ]
   },
@@ -609,7 +609,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Skull Shield",
-      "Design: Blackskull Armor",
+      "Design Blackskull Armor",
       "Bone Armor",
       "Piece of Bone",
       "Ice Lance 1",
@@ -688,7 +688,7 @@
       "Katana",
       "Novice Shaman's Wand",
       "Curse of Doom 2",
-      "Design: High Level Bone",
+      "Design High Level Bone",
       "Pet Crystal"
     ]
   },
@@ -874,7 +874,7 @@
       "Potion Bag",
       "Thick Bandage",
       "Scale Boots",
-      "Design: High Level Bone",
+      "Design High Level Bone",
       "Armor Piece",
       "Amplify Sense 2",
       "Will of Elemental 1",
@@ -977,7 +977,7 @@
       "Weapon Enchant Scroll (B Class)",
       "Crystal Spider Silk",
       "Berserk 2",
-      "Design: Spirit's Hat"
+      "Design Spirit's Hat"
     ]
   },
   "Guardian Yeti": {
@@ -1024,7 +1024,7 @@
       "Bull's-Eye 3p",
       "Blackjuno's Horn",
       "Ancient Leather",
-      "Design: Blackjuno's Helmet",
+      "Design Blackjuno's Helmet",
       "Frost Iron Ore",
       "Sturdy Yeti Armor",
       "Adventurer's Bag",
@@ -1043,7 +1043,7 @@
       "Sweeping Strikes 3",
       "Flame of Kataru 2",
       "Crystal Dust",
-      "Design: Snow-Flower Stem Hat"
+      "Design Snow-Flower Stem Hat"
     ]
   },
   "Yeti Highguard": {
@@ -1087,7 +1087,7 @@
       "About Levitation 2p",
       "Bull's-Eye 3p",
       "Ancient Leather",
-      "Design: Crystal Robe",
+      "Design Crystal Robe",
       "Frost Iron Ore",
       "Frost Iron Refining Tool",
       "Sturdy Yeti Armor",
@@ -1202,7 +1202,7 @@
       "Armor Enchant Scroll (C Class)",
       "Weapon Enchant Scroll (C Class)",
       "Bulldozer's Tail Bone",
-      "Teleport"
+      "Teleport 3"
     ]
   },
   "Blaster": {
@@ -1301,7 +1301,7 @@
       "Potion Bag",
       "Armor Enchant Scroll (C Class)",
       "Weapon Enchant Scroll (C Class)",
-      "Teleport"
+      "Teleport 3"
     ]
   },
   "Red Fox": {
@@ -2434,7 +2434,7 @@
       "Pet Crystal"
     ]
   },
-  "IPot": {
+  "iPot": {
     "中文名": "艾普",
     "掉落物": [
       "Gold",
