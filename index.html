@@ -70,17 +70,23 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 
 /* 单张怪物卡片 */
 .card {
-   background:#fff;border:1px solid #ddd;border-radius:10px;
-   display:grid;
-   grid-template-columns:80px 1fr;
-   grid-template-rows:repeat(3, 1fr);
-   grid-template-areas:
-   "avatar drops"
-   "info drops"
-   "revive desc";
-   overflow: hidden;
-   min-height: 160px; /* 底部区域 */
- }
+  background:#f5f3f3;        /* 背景：白色 */
+  border:1px solid #ddd;  /* 边框：1像素 实线 浅灰色 */
+  border-radius:10px;    /* 圆角：让卡片四角变圆 */
+
+  display:grid;                     /* 布局：网格排版（把卡片分成几块） */
+  grid-template-columns:80px 1fr;    /* 左边80px，右边占满 */
+  grid-template-rows:repeat(3, 1fr);/* 高度分成三等份 */
+
+  /* 下面是布局区域分配：头像放哪、信息放哪、掉落放哪 */
+  grid-template-areas:
+  "avatar drops"
+  "info drops"
+  "revive desc";
+
+  overflow: hidden;  /* 超出部分隐藏（防止图片跑出去） */
+  min-height: 160px; /* 卡片最小高度 */
+}
 
 /* 平板/PC左边加宽 */
 @media (min-width:768px) {
@@ -108,7 +114,8 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   grid-area:info;display:flex;flex-direction:column;
   justify-content:center;gap:3px;
   padding:4px;
-  border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+  border-right:1px solid #ddd;
+  border-bottom:1px solid #ddd;
   text-align:center;
 }
 .name{font-size:16px;font-weight:bold}
@@ -148,10 +155,11 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   flex-direction:column;
   justify-content:space-between; /* 上下分布 */
   padding:3px 4px; /* 上下3px内边距 */
-  border-right:1px solid #ddd;
   background:#eef7ff;
   font-size:13px;
   text-align:center;
+  height:100%; /* 强制高度占满 */
+  box-sizing: border-box;
 }
 /* EXP 顶部间距 */
 .revive .exp {
@@ -173,8 +181,13 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   display:grid;
   place-items:center;
   font-size:13px;
+  border-top: 1px solid #ddd;
   border-left:1px solid #ddd;
   padding:0 4px;
+  margin-top: -1px;
+  margin-left: -1px;
+  height: 100%;         /* 和左边等高 */
+  box-sizing: border-box; /* 防止偏移 */
 }
 /* Boss类怪物描述区域两列平分 */
 .card.boss-type .desc {
@@ -185,18 +198,26 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   gap:4px;
   padding:8px;
 }
-/* Boss + Mini Boss 淡红色样式 */
+
+/*  普通怪物卡片默认基础边框（所有怪物都生效） */
+.card {
+  border: 2px solid #c5c5c5 !important;      /* 边框 */
+  box-shadow: 0 0 4px rgba(153, 150, 150, 0.1) !important; /* 阴影 */
+  background: #f8f5f5 !important;            /* 背景 */
+}
+
+/* Boss + Mini Boss 淡黄色样式 */
 .card.boss-type {
-  border: 2px solid #d87a7a !important;
-  box-shadow: 0 0 8px rgba(216, 122, 122, 0.4) !important;
-  background: #fff5f5 !important;
+  border: 2px solid #dfc984 !important;  /* 边框 */
+  box-shadow: 0 0 8px rgba(151, 140, 44, 0.4) !important;  /* 阴影 */
+  background: #fffef5 !important;    /* 背景 */
 }
 
 /* Raid Boss 深红色样式 */
 .card.boss-type.raid-boss {
-  border: 2px solid #992626 !important;
-  box-shadow: 0 0 8px rgba(153, 38, 38, 0.6) !important;
-  background: #fff0f0 !important;
+  border: 2px solid #e25454 !important;     /* 边框 */
+  box-shadow: 0 0 8px rgba(153, 38, 38, 0.6) !important;    /* 阴影 */
+  background: #fff0f0 !important;     /* 背景 */
 }
 
 /* 平板适配 */
