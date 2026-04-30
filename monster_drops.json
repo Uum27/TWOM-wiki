@@ -1,4 +1,49 @@
 {
+  
+  "Kooii": {
+    "中文名": "库伊",
+    "掉落物": [
+      "Gold",
+      "Kooii Doll" ,
+      "Kooii Voucher",
+      "Lesser Mana Potion",
+      "Lesser Healing Potion",
+      "Clover",
+      "Lollipop",
+      "Cotton Robe",
+      "Kooii Card 10",
+      "Small Treasure Box",
+      "Armor Enchant Scroll (D Class)"
+    ]
+  },
+  "Bramble Donguri": {
+    "中文名": "树木圆圆",
+    "掉落物": [
+      "Gold",
+      "Donguryu",
+      "Frayed Robe",
+      "Wooden Tonfa",
+      "Lesser Mana Potion",
+      "Lesser Healing Potion",
+      "Small Treasure Box",
+      "Armor Enchant Scroll (D Class)"
+    ]
+  },
+  "Leaf Boar": {
+    "中文名": "樹葉野豬",
+    "掉落物": [
+      "Gold",
+      "Ruined Leather",
+      "Wild Boar Meat",
+      "Small Treasure Box",
+      "Wild Boar's Tail Hair",
+      "Practice Sword",
+      "Lesser Mana Potion",
+      "Wild Boar Barbeque",
+      "Lesser Healing Potion",
+      "Sparkling Berry"
+    ]
+  },
   "Angry Leaf Boar": {
     "中文名": "凶猛樹葉野豬",
     "掉落物": [
@@ -22,7 +67,8 @@
       "Small Bag",
       "Wild Boar's Tail Hair",
       "Small Treasure Box",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Bulldozer Tonfa"
     ]
   },
   "BULLDOZER": {
@@ -56,7 +102,8 @@
       "Bulldozer Cloak",
       "Canine Tooth of Madness",
       "Pet Crystal",
-      "Armor Enchant Scroll (D Class)"
+      "Armor Enchant Scroll (D Class)",
+      "Bulldozer Tonfa"
     ]
   },
   "Swamp Mushroom": {
@@ -89,7 +136,8 @@
       "Wooden Staff",
       "Small Treasure Box",
       "Blunt Shortsword",
-      "Green Powder"
+      "Green Powder",
+      "Wooden Guard"
     ]
   },
   "Swamp Boar": {
@@ -101,6 +149,7 @@
       "Flame Shock 3",
       "Apprentice Magician Robe",
       "Shift 2",
+      "Dull Knuckles",
       "Armor Enchant Scroll (D Class)",
       "Weapon Enchant Scroll (D Class)"
     ]
@@ -118,7 +167,8 @@
       "Potion Bag",
       "Blunt Shortsword",
       "Armor Enchant Scroll (D Class)",
-      "Weapon Enchant Scroll (D Class)"
+      "Weapon Enchant Scroll (D Class)",
+      "Leather Robe"
     ]
   },
   "Poisonous Spider": {
@@ -299,7 +349,8 @@
       "Hemorrhage 3",
       "Oak Tree Staff",
       "Old Box",
-      "Mystic Stone"
+      "Mystic Stone",
+      "Coral Guard"
     ]
   },
   "Woopa": {
@@ -354,6 +405,7 @@
       "Longsword",
       "Composite Bow",
       "Magician Staff",
+      "Breaker's Knuckles",
       "Slam 2",
       "Carnivalize 1",
       "Pet Crystal"
@@ -376,7 +428,8 @@
       "Woopa Roopa's Staff",
       "Woopa Bronze Bell",
       "Woopa Crystal Scale",
-      "Woopa Roopa Totem"
+      "Woopa Roopa Totem",
+      "Woopa Roopa's Guard"
     ]
   },
   "TURTLE Z": {
@@ -545,7 +598,8 @@
       "Eye of Beholder",
       "Weakness 2",
       "Mystic Oil",
-      "Dongryu Juice"
+      "Dongryu Juice",
+      "Coral Robe"
     ]
   },
   "Drunken Kooii": {
@@ -563,7 +617,8 @@
       "Potion Bag",
       "Meditation 2",
       "Bandage",
-      "Palm Cocktail"
+      "Palm Cocktail",
+      "Shiny Knuckle"
     ]
   },
   "Ghost": {
@@ -601,7 +656,8 @@
       "Kooii Card Q",
       "Kooii Card K",
       "Meditation 2",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Shiny Knuckle"
     ]
   },
   "WHITESKULL": {
@@ -616,7 +672,8 @@
       "Bone Armor",
       "Piece of Bone",
       "Ice Lance 1",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Coral Robe"
     ]
   },
   "AWAKEN KOOII": {
@@ -693,7 +750,8 @@
       "Novice Shaman's Wand",
       "Curse of Doom 2",
       "Design High Level Bone",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Bone Tonfa"
     ]
   },
   "Imp": {
@@ -721,7 +779,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Cloak of Death",
-      "Cloak of Half-Death"
+      "Cloak of Half Death"
     ]
   },
   "OOHEEHEEK": {
@@ -748,7 +806,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Cloak of Death",
-      "Cloak of Half-Death"
+      "Cloak of Half Death"
     ]
   },
   "Bloody Flower": {
@@ -765,7 +823,8 @@
       "Ancient Blood",
       "Blood-Flower Stem",
       "Ion Shield",
-      "Multi Shot 2"
+      "Multi Shot 2",
+      "Elemental Gloves"
     ]
   },
   "Bloody Mind": {
@@ -800,6 +859,7 @@
       "Classic Bow",
       "Viking Sword",
       "Shaman's Wand",
+      "Storm Whip",
       "Pet Crystal"
     ]
   },
@@ -817,6 +877,7 @@
       "Classic Bow",
       "Viking Sword",
       "Shaman's Wand",
+      "Storm Whip",
       "Pet Crystal",
       "Will of Elemental 2"
     ]
@@ -835,6 +896,7 @@
       "Classic Bow",
       "Viking Sword",
       "Shaman's Wand",
+      "Storm Whip",
       "Pet Crystal"
     ]
   },
@@ -852,6 +914,7 @@
       "Classic Bow",
       "Viking Sword",
       "Shaman's Wand",
+      "Storm Whip",
       "Pet Crystal"
     ]
   },
@@ -914,6 +977,7 @@
       "Gladius",
       "Hunter Bow",
       "Mystic Wand",
+      "Iron Fist",
       "Pet Crystal"
     ]
   },
@@ -967,7 +1031,8 @@
       "Flame of Kataru 2",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Spirit Dust"
+      "Spirit Dust",
+      "Frost Guard"
     ]
   },
   "Crystal Spider": {
@@ -1012,7 +1077,8 @@
       "Weapon Enchant Scroll (B Class)",
       "Snow-Flower Stem",
       "Stun 1",
-      "Last Resistance 1"
+      "Last Resistance 1",
+      "Combat Robe"
     ]
   },
   "BLACKJUNO": {
@@ -1287,7 +1353,8 @@
       "Impact Shot 3",
       "Sharp Eye 3",
       "Slam 3",
-      "Flare 3"
+      "Flare 3",
+      "Purifying Guard"
     ]
   },
   "Fox": {
@@ -1368,7 +1435,8 @@
       "Impact Shot 3",
       "Sharp Eye 3",
       "Slam 3",
-      "Flare 3"
+      "Flare 3",
+      "Purifying Guard"
     ]
   },
   "Mutant Gosumi": {
@@ -1411,7 +1479,8 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Stoneskin 3",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Cloud Boots"
     ]
   },
   "Big Boar": {
@@ -1432,7 +1501,8 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Flame of Kataru 3",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Red Guard"
     ]
   },
   "GHOSTSNAKE": {
@@ -1486,7 +1556,8 @@
       "Ancient Treasure",
       "Phoenix's Eye",
       "Stoneskin 3",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Cloud Boots"
     ]
   },
   "Magma Thief": {
@@ -1507,7 +1578,8 @@
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
       "Flame of Kataru 3",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Red Guard"
     ]
   },
   "CHIEF MAGIEF": {
@@ -1547,7 +1619,8 @@
       "Berserk 2",
       "Well Being Herb Bread",
       "Contaminated Matter",
-      "Charmed Robe"
+      "Charmed Robe",
+      "Frost Guard"
     ]
   },
   "Man eating Mushroom": {
@@ -1588,7 +1661,8 @@
       "Soul Powder",
       "Pet Crystal",
       "Will of Elemental 2",
-      "Helm of the Grey Boulder"
+      "Helm of the Grey Boulder",
+      "Yellow Canola Hat"
     ]
   },
   "Poison Root Flower": {
@@ -1627,6 +1701,7 @@
       "Armor of the Grey Boulder",
       "Robe of the Blue Waterfall",
       "Light Armor of the Blue Forest",
+      "Yellow Canola Robe",
       "Instinct Stimulus 1",
       "Cold Imbue 4",
       "Pet Crystal",
@@ -1645,7 +1720,8 @@
       "Abrasive",
       "Bee Sting",
       "Soul Drain Shot 1",
-      "Silence 1"
+      "Silence 1",
+      "Cloud Gloves"
     ]
   },
   "Sand Donguri": {
@@ -1735,6 +1811,7 @@
       "Wand of Chaos",
       "Battle Bow",
       "Rune Blade",
+      "Fang of Dusk",
       "Stampede 2"
     ]
   },
@@ -1752,6 +1829,7 @@
       "Darksteel Sword",
       "Dezoruba's Bow",
       "Wand of Tranquility",
+      "Thundersteel",
       "Dezoruba's Design",
       "Hellfire 1",
       "Neutralize 1"
@@ -1783,7 +1861,8 @@
       "Abrasive",
       "Gosumi's Spine",
       "Soul Drain Shot 1",
-      "Silence 1"
+      "Silence 1",
+      "Cloud Gloves"
     ]
   },
   "Sandgrave": {
@@ -1873,6 +1952,7 @@
       "Wand of Chaos",
       "Battle Bow",
       "Rune Blade",
+      "Fang of Dusk",
       "Stampede 2",
       "Clarity 2"
     ]
@@ -1891,6 +1971,7 @@
       "Darksteel Sword",
       "Dezoruba's Bow",
       "Wand of Tranquility",
+      "Thundersteel",
       "Jode's Design",
       "Hellfire 1",
       "Neutralize 1"
@@ -1936,7 +2017,8 @@
       "Special Cotton Cloth",
       "Black Iron Ore",
       "Power Shot 2",
-      "Hole of Silence"
+      "Hole of Silence",
+      "War Knuckle"
     ]
   },
   "Wanderer": {
@@ -1986,7 +2068,8 @@
       "Pet Crystal",
       "Shadow Bow",
       "Staff Struck by Lightning",
-      "Kaisor Sword"
+      "Kaisor Sword",
+      "Shatter Fist"
     ]
   },
   "BIGMAMA": {
@@ -2213,6 +2296,7 @@
       "Essence of Corruption",
       "Special Magical Robe",
       "Kaisor Sword",
+      "Shatter Fist",
       "Impact Training 3"
     ]
   },
@@ -2256,7 +2340,8 @@
       "Well Being Herb Bread",
       "Dongryu Juice",
       "Toxic Boots",
-      "Impact Training 2"
+      "Impact Training 2",
+      "Bitter Cold Boots"
     ]
   },
   "Sharkun": {
@@ -2297,7 +2382,8 @@
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
       "Toxic Boots",
-      "Curse of Doom 2"
+      "Curse of Doom 2",
+      "Bitter Cold Boots"
     ]
   },
   "Mutated Sharkun": {
@@ -2364,7 +2450,8 @@
       "Wingfril's Treasure",
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
-      "Ancient Magic Powder"
+      "Ancient Magic Powder",
+      "Crown Rock Guard"
     ]
   },
   "Urtus": {
@@ -2403,7 +2490,8 @@
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
       "Ancient Magic Powder",
-      "Stampede 2"
+      "Stampede 2",
+      "Crown Rock Guard"
     ]
   },
   "Barslaf": {
@@ -2491,7 +2579,8 @@
       "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
-      "Magic Marble"
+      "Magic Marble",
+      "Storm Guard"
     ]
   },
   "Dark Tornado": {
@@ -2505,7 +2594,8 @@
       "Gemstone",
       "Pet Crystal",
       "Magic Marble",
-      "Critical Insight 2"
+      "Critical Insight 2",
+      "Storm Guard"
     ]
   },
   "Goblin": {
@@ -2619,7 +2709,8 @@
       "Potion Bag",
       "Well Being Herb Bread",
       "Broken Magic Stone",
-      "Element Crystal"
+      "Element Crystal",
+      "Lightning Gloves"
     ]
   },
   "Storm": {
@@ -2782,7 +2873,8 @@
       "Well Being Herb Bread",
       "Dongryu Juice",
       "Shinning Magic Stone",
-      "Gargoyle Wing"
+      "Gargoyle Wing",
+      "Bitter Cold Gloves"
     ]
   },
   "Ominous Bird": {
@@ -2886,7 +2978,8 @@
       "Pet Crystal",
       "Magic Rune",
       "Shinning Magic Stone",
-      "Magic Marble"
+      "Magic Marble",
+      "Thule's Boots"
     ]
   },
   "Titanium Golem": {
@@ -3095,7 +3188,8 @@
       "Magic Power Breath",
       "Mercy Rune",
       "Penitence Rune",
-      "Resurrection Rune"
+      "Resurrection Rune",
+      "Atonement Rune"
     ]
   },
   "Illust": {
@@ -3110,7 +3204,8 @@
       "Magic Power Breath",
       "Mercy Rune",
       "Penitence Rune",
-      "Resurrection Rune"
+      "Resurrection Rune",
+      "Atonement Rune"
     ]
   },
   "Sasquatch": {
@@ -3174,7 +3269,8 @@
       "Spartan Shield",
       "Execution Rune",
       "Torture Rune",
-      "Bio Magic Power Rune"
+      "Bio Magic Power Rune",
+      "Corruption Rune"
     ]
   },
   "Sephia": {
@@ -3186,6 +3282,7 @@
       "Execution Rune",
       "Torture Rune",
       "Bio Magic Power Rune",
+      "Corruption Rune",
       "Five-Colored Leather",
       "Enchanted Bone",
       "Enchanted Leather"
@@ -3243,7 +3340,8 @@
       "Armor Enchant Scroll (S Class)",
       "Weapon Enchant Scroll (S Class)",
       "Inherited Book of Knowledge",
-      "Areuke's Antenna"
+      "Areuke's Antenna",
+      "Butterfly Guard"
     ]
   },
   "Morty": {
@@ -3292,7 +3390,8 @@
       "Wingfril's Treasure",
       "Pink Magic Crystal",
       "Dry Magic Crystal",
-      "Actaemon's Horn"
+      "Actaemon's Horn",
+      "Relic of Infinity"
     ]
   },
   "Aiyo's Protector": {
@@ -3306,7 +3405,8 @@
       "Pure Magic Orb",
       "Protector's Hand Skin",
       "Chainstrike Gloves",
-      "Illusionist's Gloves"
+      "Illusionist's Gloves",
+      "Chainstrike Gloves b"
     ]
   },
   "Crown Duck": {
@@ -3398,7 +3498,8 @@
       "Weapon Enchant Scroll (S Class)",
       "Charge Core",
       "Surge Cycle",
-      "Belt of Rough Roots"
+      "Belt of Rough Roots",
+      "Teal Fragment Belt"
     ]
   },
   "Overload": {
@@ -3427,7 +3528,8 @@
       "Soul Lich Mask",
       "World Tree Bark Armor",
       "World Tree Branch Armor",
-      "World Tree Leaf Robe"
+      "World Tree Leaf Robe",
+      "World Tree Robe"
     ]
   },
   "Platanista": {

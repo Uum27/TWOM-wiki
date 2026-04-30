@@ -79,14 +79,14 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
    "info drops"
    "revive desc";
    overflow: hidden;
-   min-height: 160px; /* 加高卡片底部区域 */
+   min-height: 160px; /* 底部区域 */
  }
 
 /* 平板/PC左边加宽 */
 @media (min-width:768px) {
   .card {
     grid-template-columns:90px 1fr;
-    min-height: 170px; /* 平板/PC端进一步加高 */
+    min-height: 170px; /* 平板/PC端加高 */
   }
 }
 
@@ -185,11 +185,18 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   gap:4px;
   padding:8px;
 }
-/* BOSS 卡片：暗金色高级边框 */
+/* Boss + Mini Boss 淡红色样式 */
 .card.boss-type {
-  border: 2px solid #992626; /* 主边框 */
-  box-shadow: 0 0 6px rgba(153, 38, 38, 0.3); /* 发光 */
-  background: #fffbfb; /* 背景 */
+  border: 2px solid #d87a7a !important;
+  box-shadow: 0 0 8px rgba(216, 122, 122, 0.4) !important;
+  background: #fff5f5 !important;
+}
+
+/* Raid Boss 深红色样式 */
+.card.boss-type.raid-boss {
+  border: 2px solid #992626 !important;
+  box-shadow: 0 0 8px rgba(153, 38, 38, 0.6) !important;
+  background: #fff0f0 !important;
 }
 
 /* 平板适配 */
@@ -231,7 +238,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 <!-- 卡片列表 -->
 <div class="grid" id="cardBox"></div>
 
-<!-- 底部翻页（新增） -->
+<!-- 底部翻页 -->
 <div class="pagination" id="bottomPagination">
   <button class="page-btn" id="prevBot">上一页</button>
   <span id="pageInfoBot">第 1 页</span>
@@ -257,13 +264,13 @@ let currentGroup = "all"
 const zoneGroups = {
   "木木森/木木林": ["Woody-Weedy Forest,Woody-Wordy Forest"],
   "蘑菇林": ["Mushroom Marshland","Mushroom Spore"],
-  "海滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
+  "沙滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
   "灯塔": ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],
   "海盗船": ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"],
   "兰诺斯平原/晚霞森林": ["Lanos Plains","Forest of Grave"],
   "废墟森林/卡塔勒山脉": ["Forest with Ruins","Kataru Mountains"],
   "污染森林": ["Polluted Forest"],
-  "天空城": ["Sky Castle"],
+  "天空城": ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"],
   "光绝神殿": ["Temple of Wingfril"],
   "枯原/沙墓峡谷": ["Arid Grassland","Desert Valley"],
   "热沙平原": ["Hot Sand Plains"],
@@ -345,10 +352,10 @@ function doSearch(){
     const dropCN = dropList.map(i => tr(lang.dropMap, i) || '').join(' ');
     const dropEN = dropList.join(' ');
 
-    // 怪物类型（BOSS / Mini Boss）
+    // 怪物类型
     const notes = m.notes || '';
 
-    // 把所有内容 全部转小写
+    // 把所有内容全部转小写
     const allText = [
       nameCN, nameEN,
       zoneCN, zoneEN,
@@ -368,7 +375,7 @@ function doSearch(){
       );
     }
 
-    // 模糊匹配（包含关键词就出来，绝不空白）
+    // 模糊匹配
     return allText.includes(kw) && ok;
   });
   render();
@@ -388,6 +395,7 @@ function goNext(){
   if(page<total){
     page++;
     render();
+
     // 点击下一页跳转到顶部
     window.scrollTo(0, 0);
   }
@@ -418,22 +426,26 @@ function render(){
     let badge = ""
     let isBossType = false
     const note = (m.notes||"").trim()
-    // 检测所有Boss类型
-    if(note.includes("Mini-Boss")) {
-      badge = `<div class="badge">Mini Boss</div>`
-      isBossType = true
+    let cardClass = 'card'; 
+
+
+    if(note.includes("Raid Boss")) {
+      badge = `<div class="badge">Raid Boss</div>`;
+      isBossType = true;
+      cardClass += " boss-type raid-boss"; 
+    } else if(note.includes("Mini-Boss")) {
+      badge = `<div class="badge">Mini Boss</div>`;
+      isBossType = true;
+      cardClass += " boss-type";
     } else if(note.includes("Boss")) {
-      badge = `<div class="badge">Boss</div>`
-      isBossType = true
-    } else if(note.includes("Raid Boss")) {
-      badge = `<div class="badge">Raid Boss</div>`
-      isBossType = true
+      badge = `<div class="badge">Boss</div>`;
+      isBossType = true;
+      cardClass += " boss-type";
     }
 
     // 处理Boss类型描述内容的两列显示
     let descHtml = m.desc || ''
     if(isBossType && descHtml) {
-      // 将描述内容拆分为两列（简单按逗号分割，可根据实际需求调整）
       const descParts = descHtml.split(',').filter(part => part.trim())
       if(descParts.length > 1) {
         descHtml = `
@@ -441,16 +453,12 @@ function render(){
           <div>${descParts.slice(1).join(',').trim()}</div>
         `
       } else {
-        // 如果只有一列，也保持两列结构
         descHtml = `
           <div>${descHtml}</div>
           <div></div>
         `
       }
     }
-
-    // 卡片类名：Boss类型添加特殊类名
-    const cardClass = isBossType ? 'card boss-type' : 'card'
 
     box.innerHTML += `
     <div class="${cardClass}">
@@ -488,7 +496,7 @@ document.querySelector('.lang-btn').onclick = ()=>{
 document.getElementById('prevTop').onclick = goPrev
 document.getElementById('nextTop').onclick = goNext
 
-// 底部翻页（新增）
+// 底部翻页
 document.getElementById('prevBot').onclick = goPrev
 document.getElementById('nextBot').onclick = goNext
 </script>
@@ -496,6 +504,7 @@ document.getElementById('nextBot').onclick = goNext
 <script>
 // 格式：[ "英文", "中文" ], "颜色"
 const dropColorPairs = [
+  [ "Practice Sword", "练习用剑" ], "#6ece34",   //绿色
   [ "Blunt Shortsword", "钝短剑" ], "#6ece34",   //绿色
   [ "Longsword", "长剑" ], "#6ece34",   //绿色 
   [ "Sharp Longsword", "锐利的长剑" ], "#6ece34",   //绿色
@@ -566,6 +575,7 @@ const dropColorPairs = [
   [ "Bandana of the Blue Waterfall", "靛蓝瀑布头巾" ], "#39acf4",  //蓝色
   [ "Helm of the Grey Boulder", "白岩头盔" ], "#39acf4",   //蓝色
   [ "Cap of the Blue Forest", "丛林帽" ], "#39acf4",    //
+  [ "Cotton Robe", "棉制长袍" ], "#6ece34",   //绿色
   [ "Sturdy Leather Armor", "强化皮革盔甲" ], "#6ece34",   //绿色
   [ "Bone Armor", "骨制盔甲" ], "#6ece34",   //绿色
   [ "Boiled Leather Armor", "加工皮革盔甲" ], "#6ece34",   //绿色
@@ -583,6 +593,7 @@ const dropColorPairs = [
   [ "World Tree Bark Armor", "世界树树皮盔甲" ], "#6ece34",   //绿色
   [ "World Tree Branch Armor", "世界树树根盔甲" ], "#6ece34",   //绿色
   [ "World Tree Leaf Robe", "世界树树叶长袍" ], "#6ece34",   //绿色
+  [ "World Tree Robe", "世界树道服" ], "#6ece34",   //绿色
   [ "Sturdy Leather Gloves", "强化皮革手套" ], "#6ece34",   //绿色
   [ "Power Gloves", "能量手套" ], "#bc71fc",   //紫色
   [ "The Dead's Gloves", "亡者手套" ], "#6ece34",   //绿色
@@ -596,7 +607,7 @@ const dropColorPairs = [
   [ "Sage's Gloves", "贤者手套" ], "#6ece34",   //绿色
   [ "Chainstrike Gloves", "链击手套" ], "#39acf4",   //蓝色
   [ "Protector's Hand Skin", "护卫兵的手部护具" ], "#39acf4",   //蓝色
-  [ "Illusionist's Gloves", "幻术师的手套" ], "#39acf4",   //蓝色
+  [ "Illusionist's Gloves", "幻术师的手部护具" ], "#39acf4",   //蓝色
   [ "Scale Boots", "鳞片靴" ], "#6ece34",   //绿色
   [ "Wingwing Boots", "飞天靴" ], "#bc71fc",   //紫色
   [ "Savage Boots", "野蛮靴" ], "#6ece34",   //绿色
@@ -615,6 +626,175 @@ const dropColorPairs = [
   [ "Design: Crystal Robe", "设计图:水晶长袍" ], "#6ece34",   //绿色
   [ "Dezoruba's Design", "戴楚拜伊的设计图" ], "#39acf4",   //蓝色
   [ "Jode's Design", "佐德的设计图" ], "#6ece34",   //绿色
+  [ "Cold Imbue 4", "赋予寒气4" ], "#ff9329",  //橙色
+  [ "Chainstrike 4", "连击4" ], "#ff9329",  //橙色
+[ "Leap 4", "跳跃4" ], "#ff9329",  //橙色
+[ "Electric Imbue 2", "赋予闪电2" ], "#ff9329",  //橙色
+[ "Electric Imbue 3", "赋予闪电3" ], "#ff9329",  //橙色
+[ "Breaker's Strike 2", "武术一击2" ], "#ff9329",  //橙色   
+[ "Breaker's Strike 3", "武术一击3" ], "#ff9329",  //橙色   
+[ "Elemental Cycle 2", "元素循环2" ], "#ff9329",  //橙色   
+[ "Elemental Cycle 3", "元素循环3" ], "#ff9329",  //橙色   
+[ "Baekha's Strike 2", "白荷之拳2" ], "#ff9329",  //橙色   
+[ "Baekha's Strike 3", "白荷之拳3" ], "#ff9329",  //橙色   
+[ "Elemental Release 2", "元素释放2" ], "#ff9329",  //橙色   
+[ "Impact Training 2", "冲击锻炼2" ], "#ff9329",  //橙色   
+[ "Impact Training 3", "冲击锻炼3" ], "#ff9329",  //橙色   
+[ "Critical Insight 2", "要害洞察2" ], "#ff9329",  //橙色   
+[ "Critical Insight 3", "要害洞察3" ], "#ff9329",  //橙色   
+[ "Sixth Sense 2", "预感2" ], "#ff9329",  //橙色   
+[ "Bull Rush 2", "急速冲刺2" ], "#ff9329",  //橙色
+[ "Cure Poison 2", "治愈2" ], "#ff9329",  //橙色
+[ "Flame Shock 3", "火花冲击3" ], "#ff9329",  //橙色
+[ "Double Shot 3", "双发射击3" ], "#ff9329",  //橙色
+[ "Shift 2", "切换方位2" ], "#ff9329",  //橙色
+[ "Wild Swing 3", "疯狂剑舞3" ], "#ff9329",  //橙色
+[ "Ice Prison 2", "冰牢2" ], "#ff9329",  //橙色
+[ "Parry 3", "阻挡攻击3" ], "#ff9329",  //橙色
+[ "Ensnare 2", "圈套2" ], "#ff9329",  //橙色
+[ "Freezing Trap 3", "冰冻3" ], "#ff9329",  //橙色
+[ "Wild Charge 1", "疯狂冲刺1" ], "#ff9329",  //橙色
+[ "Taunting Blow 2", "挑衅2" ], "#ff9329",  //橙色
+[ "Freezing Trap 2", "冰冻2" ], "#ff9329",  //橙色
+[ "Drowsiness 1", "疲乏无力1" ], "#ff9329",  //橙色
+[ "Teleport 2", "瞬间移动2" ], "#ff9329",  //橙色
+[ "Concentrate 3", "全神贯注3" ], "#ff9329",  //橙色
+[ "Shield 3", "护身盾牌3" ], "#ff9329",  //橙色
+[ "Hemorrhage 3", "出血3" ], "#ff9329",  //橙色
+[ "Light Healing 3", "光明疗愈3" ], "#ff9329",  //橙色
+[ "Flare 1", "爆燃1" ], "#ff9329",  //橙色
+[ "Firebolt 2", "火球2" ], "#ff9329",  //橙色
+[ "Slam 2", "强力肘击2" ], "#ff9329",  //橙色
+[ "Carnivalize 1", "魔力转换1" ], "#ff9329",  //橙色
+[ "Sharp Eye 1", "迅速反应1" ], "#ff9329",  //橙色
+[ "Rage 1", "暴怒1" ], "#ff9329",  //橙色
+[ "Flare 2", "爆燃2" ], "#ff9329",  //橙色
+[ "Swift 1", "伶落身手1" ], "#ff9329",  //橙色
+[ "Toughness 1", "强韧1" ], "#ff9329",  //橙色
+[ "Toughness 2", "强韧2" ], "#ff9329",  //橙色
+[ "Healing Wave 1", "治愈波1" ], "#ff9329",  //橙色
+[ "Weakness 2", "弱化防御2" ], "#ff9329",  //橙色
+[ "Meditation 2", "冥想2" ], "#ff9329",  //橙色
+[ "Prayer of Protection 1", "守护祷告1" ], "#ff9329",  //橙色
+[ "Ice Lance 1", "冰矛1" ], "#ff9329",  //橙色
+[ "Flame of Kataru 1", "卡塔勒的火焰1" ], "#ff9329",  //橙色
+[ "Sweeping Strikes 1", "强力横扫1" ], "#ff9329",  //橙色
+[ "Curse of Doom 2", "破坏之咒2" ], "#ff9329",  //橙色
+[ "Stoneskin 1", "坚石皮肤1" ], "#ff9329",  //橙色
+[ "Prayer of Protection 2", "守护祷告2" ], "#ff9329",  //橙色
+[ "Multi Shot 2", "多重射击2" ], "#ff9329",  //橙色
+[ "Sweeping Strikes 2", "强力横扫2" ], "#ff9329",  //橙色
+[ "Will of Elemental 2", "强烈意志2" ], "#ff9329",  //橙色
+[ "Harden Body 1", "锻炼体力1" ], "#ff9329",  //橙色
+[ "Amplify Sense 2", "强化反应2" ], "#ff9329",  //橙色
+[ "Will of Elemental 1", "强烈意志1" ], "#ff9329",  //橙色
+[ "Stun 2", "麻痹2" ], "#ff9329",  //橙色
+[ "Firestorm 1", "火焰风暴1" ], "#ff9329",  //橙色
+[ "Ice Lance 2", "冰矛2" ], "#ff9329",  //橙色
+[ "Flame of Kataru 2", "卡塔勒的火焰2" ], "#ff9329",  //橙色
+[ "Stoneskin 2", "坚石皮肤2" ], "#ff9329",  //橙色
+[ "Berserk 2", "狂暴2" ], "#ff9329",  //橙色
+[ "Stun 1", "麻痹1" ], "#ff9329",  //橙色
+[ "Healing Wave 2", "治愈波2" ], "#ff9329",  //橙色
+[ "Amplify Sense 1", "强化反应1" ], "#ff9329",  //橙色
+[ "Last Resistance 1", "最后抵抗1" ], "#ff9329",  //橙色
+[ "Sweeping Strikes 3", "强力横扫3" ], "#ff9329",  //橙色
+[ "Instinct Stimulus 1", "刺激本能1" ], "#ff9329",  //橙色
+[ "Fatal Attack 1", "致命一击1" ], "#ff9329",  //橙色
+[ "Bull's-Eye 1p", "百发百中1p" ], "#ff9329",  //橙色
+[ "The Way of Two Hands 2p", "双手活用武器秘籍2p" ], "#ff9329",  //橙色
+[ "About Levitation 3p", "空中悬浮秘籍3p" ], "#ff9329",  //橙色
+[ "Carnivalize 2", "魔力转换2" ], "#ff9329",  //橙色
+[ "Multi Shot 1", "多重射击1" ], "#ff9329",  //橙色
+[ "Sharp Eye 2", "迅速反应2" ], "#ff9329",  //橙色
+[ "Berserk 1", "狂暴1" ], "#ff9329",  //橙色
+[ "Teleport 3", "瞬间移动3" ], "#ff9329",  //橙色
+[ "Wild Charge 2", "疯狂冲刺2" ], "#ff9329",  //橙色
+[ "Impact Shot 2", "强烈一击2" ], "#ff9329",  //橙色
+[ "Carnivalize 3", "魔力转换3" ], "#ff9329",  //橙色
+[ "Toughness 3", "强韧3" ], "#ff9329",  //橙色
+[ "Impact Shot 3", "强烈一击3" ], "#ff9329",  //橙色
+[ "Sharp Eye 3", "迅速反应3" ], "#ff9329",  //橙色
+[ "Slam 3", "强力肘击3" ], "#ff9329",  //橙色
+[ "Flare 3", "爆燃3" ], "#ff9329",  //橙色
+[ "Last Resistance 2", "最后抵抗2" ], "#ff9329",  //橙色
+[ "Stoneskin 3", "坚石皮肤3" ], "#ff9329",  //橙色
+[ "Flame of Kataru 3", "卡塔勒的火焰3" ], "#ff9329",  //橙色
+[ "Shield 4", "护身盾牌4" ], "#ff9329",  //橙色
+[ "Soul Drain Shot 1", "灵魂射击1" ], "#ff9329",  //橙色
+[ "Silence 1", "沉默1" ], "#ff9329",  //橙色
+[ "Soul Drain Shot 2", "灵魂射击2" ], "#ff9329",  //橙色
+[ "Shout of Calmness 1", "平静呐喊1" ], "#ff9329",  //橙色
+[ "Clarity 1", "补充气力 1" ], "#ff9329",  //橙色
+[ "Sara's Blessing 1", "塞拉的祝福1" ], "#ff9329",  //橙色
+[ "Shout of Calmness 2", "平静呐喊2" ], "#ff9329",  //橙色
+[ "Sara's Blessing 2", "塞拉的祝福2" ], "#ff9329",  //橙色
+[ "Stampede 1", "惊逃1" ], "#ff9329",  //橙色
+[ "Stampede 2", "惊逃2" ], "#ff9329",  //橙色
+[ "Hellfire 1", "炼狱火道1" ], "#ff9329",  //橙色
+[ "Neutralize 1", "无效化1" ], "#ff9329",  //橙色
+[ "Heavy Strike 2", "强击2" ], "#ff9329",  //橙色
+[ "Neutralize 2", "无效化2" ], "#ff9329",  //橙色
+[ "Silence 2", "沉默2" ], "#ff9329",  //橙色
+[ "Clarity 2", "补充气力2" ], "#ff9329",  //橙色
+[ "Hellfire 2", "炼狱火道2" ], "#ff9329",  //橙色
+[ "Power Shot 1", "强力射击1" ], "#ff9329",  //橙色
+[ "Power Shot 2", "强力射击2" ], "#ff9329",  //橙色
+[ "Heavy Strike 1", "强击1" ], "#ff9329",  //橙色
+[ "Harden Body 2", "锻炼体力2" ], "#ff9329",  //橙色
+[ "Fatal Attack 2", "致命一击2" ], "#ff9329",  //橙色
+[ "Prayer of Protection 3", "守护祷告3" ], "#ff9329",  //橙色
+[ "Firestorm 2", "火焰风暴2" ], "#ff9329",  //橙色
+[ "Execution Rune", "酷刑符文" ], "#ff9329", //橙色
+[ "Torture Rune", "审问符文" ], "#ff9329", //橙色
+[ "Bio Magic Power Rune", "生物魔力符文" ], "#ff9329", //橙色
+[ "Atonement Rune", "赎罪符文" ], "#ff9329", //橙色
+[ "Corruption Rune", "堕落符文" ], "#ff9329", //橙色
+[ "Mercy Rune", "慈悲符文" ], "#ff9329", //橙色
+[ "Penitence Rune", "忏悔符文" ], "#ff9329", //橙色
+[ "Resurrection Rune", "复活符文" ], "#ff9329", //橙色
+[ "Box Flowing with Mana", "充满魔力的箱子" ], "#ff9329", //橙色
+[ "Pure Magic Orb", "纯净的魔力球" ], "#ff9329", //橙色
+[ "Surge Cycle", "高压电车" ], "#ff9329", //橙色
+[ "Leather Robe", "皮革道服" ], "#6ece34",   //绿色
+[ "Coral Robe", "珊瑚道服" ], "#6ece34",   //绿色
+[ "Combat Robe", "格斗道服" ], "#6ece34",   //绿色
+[ "Yellow Canola Robe", "油菜花道服" ], "#39acf4",  //蓝色
+[ "Yellow Canola Hat", "油菜花帽" ], "#39acf4",  //蓝色
+[ "Wooden Guard", "木制护身符" ], "#6ece34",   //绿色
+[ "Coral Guard", "珊瑚护身符" ], "#6ece34",   //绿色
+[ "Woopa Roopa's Guard", "族长护身符" ], "#6ece34",   //绿色
+[ "Purifying Guard", "净化护身符" ], "#39acf4",  //蓝色
+[ "Frost Guard", "霜之护身符" ], "#6ece34",   //绿色
+[ "Storm Guard", "暴风护身符" ], "#6ece34",   //绿色
+[ "Red Guard", "赤红护身符" ], "#6ece34",   //绿色
+[ "Butterfly Guard", "蝴蝶护身符" ], "#6ece34",   //绿色
+[ "Crown Rock Guard", "皇冠岩护身符" ], "#6ece34",   //绿色
+[ "Relic of Infinity", "无极文物" ], "#39acf4",  //蓝色
+[ "Elemental Gloves", "元素手套" ], "#6ece34",   //绿色
+[ "Cloud Gloves", "云之手套" ], "#6ece34",   //绿色
+[ "Lightning Gloves", "雷电手套" ], "#6ece34",   //绿色
+[ "Bitter Cold Gloves", "严寒手套" ], "#6ece34",   //绿色
+[ "Chainstrike Gloves b", "连续攻击手套" ], "#39acf4",  //蓝色
+[ "Yellow Canola Boots", "油菜花长靴" ], "#39acf4",  //蓝色
+[ "Cloud Boots", "云之长靴" ], "#6ece34",   //绿色
+[ "Bitter Cold Boots", "严寒长靴" ], "#6ece34",   //绿色
+[ "Thule's Boots", "图勒长靴" ], "#6ece34",   //绿色
+[ "Teal Fragment Belt", "青绿碎片腰带" ], "#6ece34",   //绿色
+[ "Wooden Tonfa", "木制拐棍" ], "#6ece34",   //绿色
+[ "Dull Knuckles", "钝指虎" ], "#6ece34",   //绿色
+[ "Bulldozer Tonfa", "凶猛猪拐棍" ], "#6ece34",   //绿色
+[ "Breaker's Knuckles", "武术家指虎" ], "#6ece34",   //绿色
+[ "Shiny Knuckles", "闪耀指虎" ], "#6ece34",   //绿色
+[ "Bone Tonfa", "骨拐棍" ], "#6ece34",   //绿色
+[ "Storm Whip", "暴风鞭" ], "#6ece34",   //绿色
+[ "Iron Fist", "铁之拳" ], "#6ece34",   //绿色
+[ "Fang of Dusk", "黄昏之牙" ], "#6ece34",   //绿色
+[ "Thundersteel Knuckles", "雷钢" ], "#6ece34",   //绿色
+[ "War Knuckle", "战斗指虎" ], "#6ece34",   //绿色
+[ "Shatter Fist", "粉碎之拳" ], "#6ece34",   //绿色
+
+
 ];
 
 const dropColorMap = {};
