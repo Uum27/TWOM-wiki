@@ -30,7 +30,10 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   white-space:nowrap;border:1px solid #ccc;background:#fff;border-radius:6px;font-size:14px;
 }
 /* 选中的分类按钮高亮 */
-.zone-btn.active {background:#007aff;color:#fff;border-color:#007aff}
+.zone-btn.active {
+  background:#408cdd;
+  color:#fff;
+  border-color:#007aff}
 
 /* 分页按钮区域 */
 .pagination{text-align:center;margin:8px 0}
@@ -208,7 +211,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 .card.boss-type {
   border: 2px solid #dfc984 !important;  /* 边框 */
   box-shadow: 0 0 8px rgba(151, 140, 44, 0.4) !important;  /* 阴影 */
-  background: #fffef5 !important;    /* 背景 */
+  background: #fffded !important;    /* 背景 */
 }
 
 /* Raid Boss 深红色样式 */
@@ -281,7 +284,7 @@ const perPage = isPC ? 20 : 10  // PC20个 手机10个
 let currentGroup = "all"
 
 const zoneGroups = {
-  "木木森/木木林": ["Woody-Weedy Forest,Woody-Wordy Forest"],
+  "木木森/木林森": ["Woody-Weedy Forest,Woody-Wordy Forest"],
   "蘑菇林": ["Mushroom Marshland","Mushroom Spore"],
   "沙滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
   "灯塔": ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],
@@ -300,7 +303,8 @@ const zoneGroups = {
   "悲叹祭坛": ["Anguish Altar"],
   "鲁纳夫": ["Lunarf"],
   "莫勒波西兹": ["Morphosis Root","Morphosis Garden"],
-  "图书库": ["Morphosis Forbidden Library"]
+  "图书库": ["Morphosis Forbidden Library"],
+  "副本": ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"]
 }
 
 Promise.all([
@@ -594,6 +598,7 @@ const dropColorPairs = [
   [ "Bandana of the Blue Waterfall", "靛蓝瀑布头巾" ], "#39acf4",  //蓝色
   [ "Helm of the Grey Boulder", "白岩头盔" ], "#39acf4",   //蓝色
   [ "Cap of the Blue Forest", "丛林帽" ], "#39acf4",    //
+  [ "Frayed Robe", "粗布衣" ], "#6ece34",   //绿色
   [ "Cotton Robe", "棉制长袍" ], "#6ece34",   //绿色
   [ "Sturdy Leather Armor", "强化皮革盔甲" ], "#6ece34",   //绿色
   [ "Bone Armor", "骨制盔甲" ], "#6ece34",   //绿色
@@ -641,7 +646,7 @@ const dropColorPairs = [
   [ "Design: Blackskull Armor", "设计图:黑骸盔甲" ], "#39acf4",   //蓝色
   [ "Design: Spirit's Hat", "设计图:精灵帽" ], "#6ece34",   //绿色
   [ "Design: Blackjuno's Helmet", "设计图:黑黑朱诺头盔" ], "#39acf4",   //蓝色
-  [ "Design: Snow-Flower Stem Hat", "设计图:雪花藤蔓帽" ], "#6ece34",   //绿色
+  [ "Design Snow-Flower Stem Hat", "设计图:雪花藤蔓帽" ], "#6ece34",   //绿色
   [ "Design: Crystal Robe", "设计图:水晶长袍" ], "#6ece34",   //绿色
   [ "Dezoruba's Design", "戴楚拜伊的设计图" ], "#39acf4",   //蓝色
   [ "Jode's Design", "佐德的设计图" ], "#6ece34",   //绿色
@@ -775,6 +780,7 @@ const dropColorPairs = [
 [ "Box Flowing with Mana", "充满魔力的箱子" ], "#ff9329", //橙色
 [ "Pure Magic Orb", "纯净的魔力球" ], "#ff9329", //橙色
 [ "Surge Cycle", "高压电车" ], "#ff9329", //橙色
+[ "Frost Iron Refining Tool", "冻铁提炼道具" ], "#6ece34",   //绿色
 [ "Leather Robe", "皮革道服" ], "#6ece34",   //绿色
 [ "Coral Robe", "珊瑚道服" ], "#6ece34",   //绿色
 [ "Combat Robe", "格斗道服" ], "#6ece34",   //绿色
@@ -804,7 +810,7 @@ const dropColorPairs = [
 [ "Dull Knuckles", "钝指虎" ], "#6ece34",   //绿色
 [ "Bulldozer Tonfa", "凶猛猪拐棍" ], "#6ece34",   //绿色
 [ "Breaker's Knuckles", "武术家指虎" ], "#6ece34",   //绿色
-[ "Shiny Knuckles", "闪耀指虎" ], "#6ece34",   //绿色
+[ "Shiny Knuckle", "闪耀指虎" ], "#6ece34",   //绿色
 [ "Bone Tonfa", "骨拐棍" ], "#6ece34",   //绿色
 [ "Storm Whip", "暴风鞭" ], "#6ece34",   //绿色
 [ "Iron Fist", "铁之拳" ], "#6ece34",   //绿色
@@ -812,6 +818,17 @@ const dropColorPairs = [
 [ "Thundersteel Knuckles", "雷钢" ], "#6ece34",   //绿色
 [ "War Knuckle", "战斗指虎" ], "#6ece34",   //绿色
 [ "Shatter Fist", "粉碎之拳" ], "#6ece34",   //绿色
+[ "Swamp Treasure", "湿地宝物" ], "#ff9329", //橙色
+[ "Maze Treasure", "迷宫宝物" ], "#ff9329", //橙色
+[ "Faded Ring", "褪色戒指" ], "#39acf4",   //蓝色
+[ "Snowfield Altar Treasure", "雪原祭坛宝物" ], "#ff9329", //橙色
+[ "Broken Necklace", "毁坏的项链" ], "#bc71fc",   //紫色
+[ "Caligo's Hands", "克里高的手" ], "#e60f10", //暗红色
+[ "Magic Power Breath", "魔力之息" ], "#bc71fc",   //紫色
+[ "Rune Piece", "符文碎片" ], "#39acf4",   //蓝色
+[ "Broken Oath", "裂开的立约书" ], "#39acf4",   //蓝色
+[ "Pure Knowledge", "纯净的知识" ], "#39acf4",   //蓝色
+[ "Five-Colored Leather", "五色皮革" ], "#bc71fc",   //紫色
 
 
 ];

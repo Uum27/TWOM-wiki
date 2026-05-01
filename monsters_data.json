@@ -1957,7 +1957,7 @@
   },
   {
     "zone": "Fallen Temple",
-    "desc": "随机6个大平台复活",
+    "desc": "随机6个大平台复活,20个手材料制作1个龙手",
     "name": "CALIGO",
     "level": "50",
     "notes": "Raid Boss",
@@ -2401,7 +2401,7 @@
   },
   {
     "zone": "Maze Forest",
-    "desc": "",
+    "desc": "2个戒指制作一个",
     "name": "Darlene the Witch",
     "level": "50",
     "notes": "Raid Boss",
@@ -2592,7 +2592,7 @@
   },
   {
     "zone": "Islot's Temple",
-    "desc": "随机4角落或中间复活",
+    "desc": "随机4角落或中间复活,2个项链制作紫项链",
     "name": "Barslaf",
     "level": "50",
     "notes": "Raid Boss",
@@ -2664,7 +2664,7 @@
   },
   {
     "zone": "Anguish Altar",
-    "desc": "",
+    "desc": "魔力之息必掉一个 50%概率出第2个",
     "name": "Illust",
     "level": "50",
     "notes": "Raid Boss",
@@ -2856,7 +2856,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "desc": "",
+    "desc": "3个魔力球制作一个任意手套",
     "name": "Aiyo's Protector",
     "level": "52",
     "notes": "Raid Boss",
@@ -2976,7 +2976,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "箱子随机开4职业技能符文一个",
     "name": "Platanista",
     "level": "52",
     "notes": "Raid Boss",
@@ -3104,7 +3104,7 @@
     "image local": "monsters images/Blood Bat.png",
     "hp": "3000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "嗜血蝙蝠",
     "revive": "-"
   },
   {
@@ -3117,7 +3117,7 @@
     "image local": "monsters images/Tough Mimic.png",
     "hp": "3000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "坚固的宝箱怪",
     "revive": "-"
   },
   {
@@ -3130,7 +3130,7 @@
     "image local": "monsters images/Violent Crew.png",
     "hp": "4000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "凶残的船员",
     "revive": "-"
   },
   {
@@ -3143,7 +3143,7 @@
     "image local": "monsters images/White Ghost.png",
     "hp": "5000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "白色幽灵",
     "revive": "-"
   },
   {
@@ -3156,7 +3156,7 @@
     "image local": "monsters images/Weary Crew.png",
     "hp": "6000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "疲惫的船员",
     "revive": "-"
   },
   {
@@ -3169,7 +3169,7 @@
     "image local": "monsters images/Bomb Wing.png",
     "hp": "4000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "炸弹翼",
     "revive": "-"
   },
   {
@@ -3178,11 +3178,11 @@
     "name": "Jack in the Box",
     "level": "26",
     "rank": "Mini-Boss",
-    "skill": "Expel",
+    "notes": "Mini-Boss",
     "image local": "monsters images/Jack in the Box.png",
     "hp": "7000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "惊喜宝箱",
     "revive": "-"
   },
   {
@@ -3191,11 +3191,11 @@
     "name": "Ghost Witch",
     "level": "27",
     "rank": "Mini-Boss",
-    "skill": "Silence&Summon",
+    "notes": "Mini-Boss",
     "image local": "monsters images/Ghost Witch.png",
     "hp": "8000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "幽灵魔法师",
     "revive": "-"
   },
   {
@@ -3208,7 +3208,7 @@
     "image local": "monsters images/CAPTAIN TWIN.png",
     "hp": "",
     "exp": "",
-    "中文名": "",
+    "中文名": "双胞胎船长",
     "revive": "-"
   },
   {
@@ -3221,7 +3221,7 @@
     "image local": "monsters images/CAPTAIN TWIN.png",
     "hp": "",
     "exp": "",
-    "中文名": "",
+    "中文名": "双胞胎船长",
     "revive": "-"
   },
   {
@@ -3231,9 +3231,9 @@
     "level": "25",
     "notes": "-",
     "image local": "monsters images/Poison Lizard.png",
-    "hp": "About 7,000",
+    "hp": "7,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "毒蜥",
     "revive": "-"
   },
   {
@@ -3243,9 +3243,9 @@
     "level": "26",
     "notes": "-",
     "image local": "monsters images/Big Eyed Soul.png",
-    "hp": "About 10,000",
+    "hp": "10,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "巨无霸凝视者",
     "revive": "-"
   },
   {
@@ -3255,9 +3255,9 @@
     "level": "28",
     "notes": "-",
     "image local": "monsters images/Dark Imp.png",
-    "hp": "About 13,000",
+    "hp": "13,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "暗黑小恶魔",
     "revive": "-"
   },
   {
@@ -3267,9 +3267,9 @@
     "level": "27",
     "notes": "-",
     "image local": "monsters images/Poison Mummy.png",
-    "hp": "About 13,000",
+    "hp": "13,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "巨毒木乃伊",
     "revive": "-"
   },
   {
@@ -3281,7 +3281,7 @@
     "image local": "monsters images/Magic Imp.png",
     "hp": "4100",
     "exp": "?",
-    "中文名": "",
+    "中文名": "魔法小恶魔",
     "revive": "-"
   },
   {
@@ -3291,9 +3291,9 @@
     "level": "30",
     "notes": "Mini-Boss",
     "image local": "monsters images/Evil Spirit.png",
-    "hp": "About 23400",
+    "hp": "23400",
     "exp": "?",
-    "中文名": "",
+    "中文名": "恶灵",
     "revive": "-"
   },
   {
@@ -3305,7 +3305,7 @@
     "image local": "monsters images/Walking Dead.png",
     "hp": "50,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "丧尸",
     "revive": "-"
   },
   {
@@ -3317,150 +3317,150 @@
     "image local": "monsters images/MUTANTHYDRA.png",
     "hp": "30000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "突变九头蛇",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Altar Cleaner",
-    "level": "?",
+    "level": "31",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Altar Cleaner.png",
-    "hp": "About 10,000",
-    "exp": "0.01",
-    "中文名": "",
+    "hp": "10,000",
+    "exp": "?",
+    "中文名": "祭坛清洁队",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Silent Ghost",
-    "level": "?",
+    "level": "32",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Silent Ghost.png",
     "hp": "4650",
-    "exp": "0.01",
-    "中文名": "",
+    "exp": "?",
+    "中文名": "沉默幽灵",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Rock Golem",
-    "level": "?",
+    "level": "33",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Rock Golem.png",
     "hp": "14,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "石魔像",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Fluid Form",
-    "level": "?",
+    "level": "34",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Fluid Form.png",
-    "hp": "About 16,000",
+    "hp": "16,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "液态怪",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Morphing",
-    "level": "?",
-    "rank": "Mini-Boss",
+    "level": "36",
+    "notes": "Mini-Boss",
     "skill": "CP Drain",
     "image local": "monsters images/Morphing.png",
-    "hp": "About 75,000",
+    "hp": "75,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "莫宝",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "Mystery",
-    "level": "?",
-    "rank": "Mini-Boss",
+    "level": "37",
+    "notes": "Mini-Boss",
     "skill": "Armor",
     "image local": "monsters images/Mystery.png",
     "hp": "25,555",
     "exp": "0",
-    "中文名": "",
+    "中文名": "不可思议",
     "revive": "-"
   },
   {
     "zone": "Silent Altar",
     "desc": "",
     "name": "MALTARGUARDIAN",
-    "level": "?",
-    "rank": "Boss",
+    "level": "38",
+    "notes": "Boss",
     "skill": "Reflect & Cure",
     "image local": "monsters images/MALTARGUARDIAN.png",
-    "hp": "About 150,000",
+    "hp": "150,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "祭坛守护者",
     "revive": "-"
   },
   {
     "zone": "Impassable Cave",
     "desc": "",
     "name": "Cave Spider",
-    "level": "?",
+    "level": "35",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Cave Spider.png",
     "hp": "5,678",
     "exp": "?",
-    "中文名": "",
+    "中文名": "洞窟蜘蛛",
     "revive": "-"
   },
   {
     "zone": "Impassable Cave",
     "desc": "",
     "name": "Hairy",
-    "level": "?",
+    "level": "35",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Hairy.png",
     "hp": "6,543",
     "exp": "?",
-    "中文名": "",
+    "中文名": "大胡子",
     "revive": "-"
   },
   {
     "zone": "Impassable Cave",
     "desc": "",
     "name": "Cave Keeper",
-    "level": "?",
+    "level": "36",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Cave Keeper.png",
     "hp": "6,789",
     "exp": "?",
-    "中文名": "",
+    "中文名": "洞窟守护者",
     "revive": "-"
   },
   {
     "zone": "Impassable Cave",
     "desc": "",
     "name": "Light Wing",
-    "level": "?",
+    "level": "37",
     "rank": "-",
     "skill": "-",
     "image local": "monsters images/Light Wing.png",
     "hp": "6,123",
     "exp": "?",
-    "中文名": "",
+    "中文名": "轻风",
     "revive": "-"
   },
   {
@@ -3468,12 +3468,12 @@
     "desc": "",
     "name": "DARKJUNO",
     "level": "38",
-    "rank": "Mini-Boss",
+    "notes": "Mini-Boss",
     "skill": "Frenzy",
     "image local": "monsters images/DARKJUNO.png",
     "hp": "34,500",
     "exp": "?",
-    "中文名": "",
+    "中文名": "暗黑朱诺",
     "revive": "-"
   },
   {
@@ -3481,12 +3481,12 @@
     "desc": "",
     "name": "GRAYSKY",
     "level": "39",
-    "rank": "Mini-Boss",
+    "notes": "Mini-Boss",
     "skill": "Bleed",
     "image local": "monsters images/GRAYSKY.png",
     "hp": "?",
     "exp": "?",
-    "中文名": "",
+    "中文名": "灰天",
     "revive": "-"
   },
   {
@@ -3494,12 +3494,12 @@
     "desc": "",
     "name": "WHITEWADANGKA",
     "level": "40",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "Frenzy&Blow",
     "image local": "monsters images/WHITEWADANGKA.png",
     "hp": "45,000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "白色瓦当卡",
     "revive": "-"
   },
   {
@@ -3512,7 +3512,7 @@
     "image local": "monsters images/Silhouette.png",
     "hp": "?",
     "exp": "?",
-    "中文名": "",
+    "中文名": "影客",
     "revive": "-"
   },
   {
@@ -3525,7 +3525,7 @@
     "image local": "monsters images/Underground Eater.png",
     "hp": "8500",
     "exp": "?",
-    "中文名": "",
+    "中文名": "地底食怪",
     "revive": "-"
   },
   {
@@ -3538,7 +3538,7 @@
     "image local": "monsters images/Bandageman.png",
     "hp": "7777",
     "exp": "?",
-    "中文名": "",
+    "中文名": "绷带人",
     "revive": "-"
   },
   {
@@ -3546,12 +3546,12 @@
     "desc": "",
     "name": "Reason Scream",
     "level": "44",
-    "rank": "Mini-Boss",
+    "notes": "Mini-Boss",
     "skill": "Cure",
     "image local": "monsters images/Reason Scream.png",
     "hp": "?",
     "exp": "?",
-    "中文名": "",
+    "中文名": "理智之声",
     "revive": "-"
   },
   {
@@ -3559,12 +3559,12 @@
     "desc": "",
     "name": "Gluttony",
     "level": "45",
-    "rank": "Mini-Boss",
+    "notes": "Mini-Boss",
     "skill": "Earthquake",
     "image local": "monsters images/Gluttony.png",
     "hp": "?",
     "exp": "?",
-    "中文名": "",
+    "中文名": "暴食者",
     "revive": "-"
   },
   {
@@ -3572,12 +3572,12 @@
     "desc": "",
     "name": "THEMAMA",
     "level": "46",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "Poison,Terrify&Rage",
     "image local": "monsters images/THEMAMA.png",
     "hp": "50000",
     "exp": "?",
-    "中文名": "",
+    "中文名": "魔女",
     "revive": "-"
   },
   {
@@ -3585,7 +3585,7 @@
     "desc": "",
     "name": "Deep Darkness",
     "level": "42",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "-",
     "image local": "monsters images/Deep Darkness.png",
     "hp": "200,000",
@@ -3598,7 +3598,7 @@
     "desc": "",
     "name": "Burning Darkness",
     "level": "44",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "-",
     "image local": "monsters images/Burning Darkness.png",
     "hp": "240,000",
@@ -3611,7 +3611,7 @@
     "desc": "",
     "name": "Sorrowful Darkness",
     "level": "46",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "-",
     "image local": "monsters images/Sorrowful Darkness.png",
     "hp": "280,000",
@@ -3624,7 +3624,7 @@
     "desc": "",
     "name": "Harsh Darkness",
     "level": "48",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "-",
     "image local": "monsters images/Harsh Darkness.png",
     "hp": "360,000",
@@ -3635,11 +3635,11 @@
   {
     "zone": "Endless Darkness",
     "desc": "",
-    "name": "Endless Darkness (Boss)",
+    "name": "Endless Darkness",
     "level": "50",
-    "rank": "Boss",
+    "notes": "Boss",
     "skill": "-",
-    "image local": "monsters images/Endless Darkness (Boss).png",
+    "image local": "monsters images/Endless Darkness.png",
     "hp": "500,000",
     "exp": "?",
     "中文名": "",
