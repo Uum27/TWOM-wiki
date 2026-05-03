@@ -244,7 +244,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 <!-- 顶部 -->
 <div class="top-bar">
   <input class="search-box" placeholder="搜索名字/等级/地图/物品">
-  <button class="lang-btn">中文/English</button>
+  <button class="lang-btn" id="langBtn"></button>
 </div>
 
 <!-- 地区 -->
@@ -279,33 +279,117 @@ let page = 1
 const isMobile = window.innerWidth < 768
 const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024
 const isPC = window.innerWidth >= 1024
-const perPage = isPC ? 20 : 10  // PC20个 手机10个
+const perPage = isPC ? 21 : 10  // PC21个 手机10个
 
 let currentGroup = "all"
 
 const zoneGroups = {
-  "木木森/木林森": ["Woody-Weedy Forest,Woody-Wordy Forest"],
-  "蘑菇林": ["Mushroom Marshland","Mushroom Spore"],
-  "沙滩/灯塔岛": ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],
-  "灯塔": ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],
-  "海盗船": ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"],
-  "兰诺斯平原/晚霞森林": ["Lanos Plains","Forest of Grave"],
-  "废墟森林/卡塔勒山脉": ["Forest with Ruins","Kataru Mountains"],
-  "污染森林": ["Polluted Forest"],
-  "天空城": ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"],
-  "光绝神殿": ["Temple of Wingfril"],
-  "枯原/沙墓峡谷": ["Arid Grassland","Desert Valley"],
-  "热沙平原": ["Hot Sand Plains"],
-  "死亡沼泽": ["Marsh of Death"],
-  "森林迷宫": ["Maze Forest"],
-  "伊斯洛实验室": ["Islot's Lab","Syphnel Road"],
-  "伊斯洛神殿": ["Islot's Temple"],
-  "悲叹祭坛": ["Anguish Altar"],
-  "鲁纳夫": ["Lunarf"],
-  "莫勒波西兹": ["Morphosis Root","Morphosis Garden"],
-  "图书库": ["Morphosis Forbidden Library"],
-  "副本": ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"]
-}
+  "木木森/木林森": {
+    en: "Woody-Wordy Forest",
+    kr: "우디워디마을/우디위디마을",
+    zones: ["Woody-Weedy Forest,Woody-Wordy Forest"]
+  },
+  "蘑菇林": {
+    en: "Mushroom Marshland",
+    kr: "버섯늪지",
+    zones: ["Mushroom Marshland","Mushroom Spore"]
+  },
+  "沙滩/灯塔岛": {
+    en: "Beach",
+    kr: "윙프릴 섬해변/등대 섬",
+    zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"]
+  },
+  "灯塔": {
+    en: "LHD",
+    kr: "등대",
+    zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"]
+  },
+  "海盗船": {
+    en: "Pirate Ship",
+    kr: "해적선",
+    zones: ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"]
+  },
+  "兰诺斯平原/晚霞森林": {
+    en: "Lanos777",
+    kr: "라노스 평원/폐허가 있는 숲",
+    zones: ["Lanos Plains","Forest of Grave"]
+  },
+  "废墟森林/卡塔勒山脉": {
+    en: "Siras777",
+    kr: "해지는 노을숲/카타르 산맥",
+    zones: ["Forest with Ruins","Kataru Mountains"]
+  },
+  "污染森林": {
+    en: "Polluted Forest",
+    kr: "오염된 숲",
+    zones: ["Polluted Forest"]
+  },
+  "天空城": {
+    en: "sky castle",
+    kr: "하늘성채",
+    zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"]
+  },
+  "光绝神殿": {
+    en: "Temple of Wingfril",
+    kr: "빛이 들지않는 신전",
+    zones: ["Temple of Wingfril"]
+  },
+  "枯原/沙墓峡谷": {
+    en: "Arid/Des",
+    kr: "건조한 초원/모래무덤 골짜기",
+    zones: ["Arid Grassland","Desert Valley"]
+  },
+  "热沙平原": {
+    en: "HSP",
+    kr: "뜨거운 모래사막",
+    zones: ["Hot Sand Plains"]
+  },
+  "死亡沼泽": {
+    en: "Marsh of Death",
+    kr: "죽음의 늪",
+    zones: ["Marsh of Death"]
+  },
+  "森林迷宫": {
+    en: "Maze Forest",
+    kr: "숲의 미궁",
+    zones: ["Maze Forest"]
+  },
+  "伊斯洛实验室": {
+    en: "Islot's Lab",
+    kr: "이슬롯의 실험실",
+    zones: ["Islot's Lab","Syphnel Road"]
+  },
+  "伊斯洛神殿": {
+    en: "Islot's Temple",
+    kr: "이슬롯의 신전",
+    zones: ["Islot's Temple"]
+  },
+  "悲叹祭坛": {
+    en: "AA",
+    kr: "비탄의제단",
+    zones: ["Anguish Altar"]
+  },
+  "鲁纳夫": {
+    en: "Lunarf",
+    kr: "루나프",
+    zones: ["Lunarf"]
+  },
+  "莫勒波西兹": {
+    en: "Morphosis",
+    kr: "모르포시즈",
+    zones: ["Morphosis Root","Morphosis Garden"]
+  },
+  "图书库": {
+    en: "Forbidden Library",
+    kr: "금서고",
+    zones: ["Morphosis Forbidden Library"]
+  },
+  "副本": {
+    en: "Dungeon",
+    kr: "인스턴스 던전",
+    zones: ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"]
+  }
+};
 
 Promise.all([
   fetch('monsters_data.json').then(r=>r.json()),
@@ -317,41 +401,141 @@ Promise.all([
   drops = d
   buildGroupButtons()
   doSearch()
+  updateLangBtnText()
+  updateSearchPlaceholder()
+  updatePrevNextBtn()
 }).catch(err=>console.error("加载失败",err))
 
+// 全局语言变量，默认中文
+let currentLang = "cn";
+
+// 三语言翻译函数
 function tr(map, key){
-  return isCN ? (map[key] || key) : key
+  if (!map[key]) return key;
+  return map[key][currentLang] || map[key]["en"] || key;
+}
+
+// 搜索框 + 分页 三语
+const searchPlaceholderMap = {
+  cn: "搜索名称/等级/掉落物/地区...",
+  en: "Search name/zone/drops/level...",
+  kr: "이름/지역/드랍/레벨 검색..."
+};
+const pageTextMap = {
+  cn: "第 {now}/{total} 页",
+  en: "Page {now}/{total}",
+  kr: "페이지 {now}/{total}"
+};
+
+// 翻页按钮 三语
+const btnTextMap = {
+  prev: {
+    cn: "上一页",
+    en: "Prev",
+    kr: "이전"
+  },
+  next: {
+    cn: "下一页",
+    en: "Next",
+    kr: "다음"
+  }
+};
+
+// 更新上一页 / 下一页 按钮文字
+function updatePrevNextBtn() {
+  document.getElementById('prevTop').innerText = btnTextMap.prev[currentLang];
+  document.getElementById('prevBot').innerText = btnTextMap.prev[currentLang];
+  document.getElementById('nextTop').innerText = btnTextMap.next[currentLang];
+  document.getElementById('nextBot').innerText = btnTextMap.next[currentLang];
+}
+
+function updateSearchPlaceholder(){
+  const input = document.querySelector('.search-box');
+  input.placeholder = searchPlaceholderMap[currentLang];
+}
+
+function updatePageLangText(now, total){
+  let txt = pageTextMap[currentLang] || pageTextMap.cn;
+  return txt.replace("{now}", now).replace("{total}", total);
+}
+
+// 更新按钮顺位文字
+function updateLangBtnText(){
+  const btn = document.getElementById("langBtn");
+  const list = [
+    {code:"cn", txt:"中文"},
+    {code:"en", txt:"EN"},
+    {code:"kr", txt:"한국어"}
+  ];
+  let idx = list.findIndex(x=>x.code === currentLang);
+  let order = [
+    list[idx],
+    list[(idx+1)%3],
+    list[(idx+2)%3]
+  ];
+  btn.innerText = order.map(x=>x.txt).join(" / ");
+}
+
+// 单按钮循环切换 cn → en → kr → cn
+function toggleLang() {
+  if (currentLang === "cn") currentLang = "en";
+  else if (currentLang === "en") currentLang = "kr";
+  else currentLang = "cn";
+
+  updateLangBtnText();
+  buildGroupButtons();
+  updateSearchPlaceholder();
+  updatePrevNextBtn();
+  render();
 }
 
 function buildGroupButtons(){
-  const bar = document.getElementById('zoneBar')
-  bar.innerHTML = `<button class="zone-btn active" id="resetAll">全部</button>`
+  const bar = document.getElementById('zoneBar');
+  bar.innerHTML = `<button class="zone-btn active" id="resetAll">全部</button>`;
+
+  const allText = {
+    cn: "全部",
+    en: "All",
+    kr: "전체"
+  };
+  document.getElementById('resetAll').innerText = allText[currentLang] || allText.cn;
+
   document.getElementById('resetAll').onclick = () => {
-    currentGroup = "all"
-    page = 1
-    doSearch()
-    setActiveBtn("all")
-  }
-  Object.keys(zoneGroups).forEach(name => {
-    const btn = document.createElement('button')
-    btn.className = 'zone-btn'
-    btn.textContent = name
+    currentGroup = "all";
+    page = 1;
+    doSearch();
+    setActiveBtn("all");
+  };
+
+  Object.keys(zoneGroups).forEach(key => {
+    const data = zoneGroups[key];
+    const btn = document.createElement('button');
+    btn.className = 'zone-btn';
+    btn.dataset.groupKey = key;
+
+    if (currentLang === 'en') btn.textContent = data.en;
+    else if (currentLang === 'kr') btn.textContent = data.kr;
+    else btn.textContent = key;
+
     btn.onclick = () => {
-      currentGroup = name
-      page = 1
-      doSearch()
-      setActiveBtn(name)
-    }
-    bar.appendChild(btn)
-  })
+      currentGroup = key;
+      page = 1;
+      doSearch();
+      setActiveBtn(key);
+    };
+    bar.appendChild(btn);
+  });
 }
 
-function setActiveBtn(name){
-  document.querySelectorAll('.zone-btn').forEach(b=>b.classList.remove('active'))
-  if(name === "all") document.getElementById('resetAll').classList.add('active')
-  else document.querySelectorAll('.zone-btn').forEach(b=>{
-    if(b.textContent === name) b.classList.add('active')
-  })
+function setActiveBtn(key){
+  document.querySelectorAll('.zone-btn').forEach(b=>b.classList.remove('active'));
+  if(key === "all"){
+    document.getElementById('resetAll').classList.add('active');
+  } else {
+    document.querySelectorAll('.zone-btn').forEach(b=>{
+      if(b.dataset.groupKey === key) b.classList.add('active');
+    });
+  }
 }
 
 function doSearch(){
@@ -359,46 +543,36 @@ function doSearch(){
   filtered = (allMonsters || []).filter(m => {
     if (!m) return false;
 
-    // 怪物名称（中文 + 英文）
-    const nameCN = tr(lang.nameMap, m.name) || '';
+    const nameCN = lang.nameMap[m.name]?.cn || '';
     const nameEN = m.name || '';
-
-    // 地区（中文 + 英文）
-    const zoneCN = tr(lang.zoneMap, m.zone) || '';
+    const nameKR = lang.nameMap[m.name]?.kr || '';
+    const zoneCN = lang.zoneMap[m.zone]?.cn || '';
     const zoneEN = m.zone || '';
-
-    // 等级
+    const zoneKR = lang.zoneMap[m.zone]?.kr || '';
     const level = String(m.level || '');
-
-    // 掉落物（支持多语言）
     const dropList = drops[m.name]?.掉落物 || [];
-    const dropCN = dropList.map(i => tr(lang.dropMap, i) || '').join(' ');
+    const dropCN = dropList.map(i => lang.dropMap[i]?.cn || '').join(' ');
     const dropEN = dropList.join(' ');
-
-    // 怪物类型
+    const dropKR = dropList.map(i => lang.dropMap[i]?.kr || '').join(' ');
     const notes = m.notes || '';
 
-    // 把所有内容全部转小写
     const allText = [
-      nameCN, nameEN,
-      zoneCN, zoneEN,
+      nameCN, nameEN, nameKR,
+      zoneCN, zoneEN, zoneKR,
       level,
-      dropCN, dropEN,
+      dropCN, dropEN, dropKR,
       notes
     ].join(' ').toLowerCase();
 
-    // 地区筛选不变
     let ok = true;
     if (currentGroup !== "all") {
-      const zs = zoneGroups[currentGroup] || [];
+      const zs = zoneGroups[currentGroup]?.zones || [];
       ok = zs.some(z => 
         m.zone == z || 
         m.zone.includes(z) || 
         z.includes(m.zone)
       );
     }
-
-    // 模糊匹配
     return allText.includes(kw) && ok;
   });
   render();
@@ -406,8 +580,9 @@ function doSearch(){
 
 function updatePageInfo(){
   const total = Math.ceil((filtered.length||0)/perPage)
-  document.getElementById('pageInfo').innerText = `第 ${page}/${total} 页`
-  document.getElementById('pageInfoBot').innerText = `第 ${page}/${total} 页`
+  const pageStr = updatePageLangText(page, total);
+  document.getElementById('pageInfo').innerText = pageStr
+  document.getElementById('pageInfoBot').innerText = pageStr
 }
 
 function goPrev(){
@@ -418,8 +593,6 @@ function goNext(){
   if(page<total){
     page++;
     render();
-
-    // 点击下一页跳转到顶部
     window.scrollTo(0, 0);
   }
 }
@@ -441,7 +614,6 @@ function render(){
     let reviveText = ""
     if(m.revive?.trim()){
       let txt = m.revive
-      if(!isCN) txt = txt.replace(/小时/g,"h").replace(/分/g,"m").replace(/秒/g,"s").trim()
       reviveText = txt
     }
 
@@ -450,7 +622,6 @@ function render(){
     let isBossType = false
     const note = (m.notes||"").trim()
     let cardClass = 'card'; 
-
 
     if(note.includes("Raid Boss")) {
       badge = `<div class="badge">Raid Boss</div>`;
@@ -466,7 +637,6 @@ function render(){
       cardClass += " boss-type";
     }
 
-    // 处理Boss类型描述内容的两列显示
     let descHtml = m.desc || ''
     if(isBossType && descHtml) {
       const descParts = descHtml.split(',').filter(part => part.trim())
@@ -505,342 +675,34 @@ function render(){
   })
 }
 
-// 搜索
+// 绑定点击
+document.getElementById('langBtn').onclick = toggleLang;
 document.querySelector('.search-box').addEventListener('input', doSearch)
-
-// 语言切换
-document.querySelector('.lang-btn').onclick = ()=>{
-  isCN = !isCN
-  document.querySelector('.lang-btn').textContent = isCN ? "中文/English" : "English/中文"
-  render()
-}
-
-// 顶部翻页
 document.getElementById('prevTop').onclick = goPrev
 document.getElementById('nextTop').onclick = goNext
-
-// 底部翻页
 document.getElementById('prevBot').onclick = goPrev
 document.getElementById('nextBot').onclick = goNext
 </script>
 
 <script>
-// 格式：[ "英文", "中文" ], "颜色"
-const dropColorPairs = [
-  [ "Practice Sword", "练习用剑" ], "#6ece34",   //绿色
-  [ "Blunt Shortsword", "钝短剑" ], "#6ece34",   //绿色
-  [ "Longsword", "长剑" ], "#6ece34",   //绿色 
-  [ "Sharp Longsword", "锐利的长剑" ], "#6ece34",   //绿色
-  [ "Katana", "武士刀" ], "#6ece34",   //绿色
-  [ "Viking Sword", "维京剑" ], "#6ece34",   //绿色
-  [ "Gladius", "罗马短剑" ], "#6ece34",   //绿色
-  [ "Rune Blade", "符文刃" ], "#6ece34",   //绿色
-  [ "Darksteel Sword", "玄铁剑" ], "#6ece34",   //绿色
-  [ "War Sword", "战争之剑" ], "#6ece34",   //绿色
-  [ "Kaisor Sword", "凯萨剑" ], "#6ece34",   //绿色
-  [ "Rapier", "细剑" ], "#6ece34",   //绿色
-  [ "Wooden Shortbow", "木质短弓" ], "#6ece34",   //绿色
-  [ "Composite Bow", "复合弓" ], "#6ece34",   //绿色
-  [ "Swirling Bow", "漩涡弓" ], "#39acf4",   //蓝色
-  [ "Great Bow", "巨弓" ], "#6ece34",   //绿色
-  [ "Classic Bow", "角弓" ], "#6ece34",   //绿色
-  [ "Hunter Bow", "猎弓" ], "#6ece34",   //绿色
-  [ "Horn Bow", "怒弓" ], "#6ece34",   //绿色
-  [ "Battle Bow", "斗弓" ], "#6ece34",   //绿色
-  [ "War Bow", "战弓" ], "#6ece34",   //绿色
-  [ "Dezoruba's Bow", "戴楚拜伊的弓" ], "#39acf4",   //蓝色
-  [ "Shadow Bow", "暗影弓" ], "#6ece34",   //绿色
-  [ "Wooden Staff", "木杖" ], "#6ece34",   //绿色
-  [ "Oak Tree Staff", "桦树杖" ], "#6ece34",   //绿色
-  [ "Magician Staff", "魔法师法杖" ], "#6ece34",   //绿色
-  [ "Woopa-Roopa's Staff", "族长法杖" ], "#39acf4",   //蓝色
-  [ "Novice Shaman's Wand", "新手巫师法杖" ], "#6ece34",   //绿色
-  [ "Shaman's Wand", "巫师法杖" ], "#6ece34",   //绿色
-  [ "Mystic Wand", "神秘巫师法杖" ], "#6ece34",   //绿色
-  [ "Spiritual Wand", "神力法杖" ], "#6ece34",   //绿色
-  [ "Wand of Chaos", "混沌法杖" ], "#6ece34",   //绿色
-  [ "Wand of Tranquility", "宁静法杖" ], "#6ece34",   //绿色
-  [ "Hole of Silence", "沉默之穴" ], "#6ece34",   //绿色
-  [ "Staff Struck by Lightning", "雷击木杖" ], "#39acf4",   //蓝色
-  [ "Wooden Shield", "木盾" ], "#6ece34",   //绿色
-  [ "Fungiskin Shield", "蘑菇盾牌" ], "#6ece34",   //绿色
-  [ "Round Shield", "圆盾" ], "#6ece34",   //绿色
-  [ "Skull Shield", "骷髅盾" ], "#39acf4",   //蓝色
-  [ "Ion Shield", "铁盾" ], "#6ece34",   //绿色
-  [ "Crystal Shield", "水晶盾" ], "#6ece34",   //绿色
-  [ "Tower Shield", "塔盾" ], "#6ece34",   //绿色
-  [ "Iron Covered Shield", "铁甲盾" ], "#6ece34",   //绿色
-  [ "Darksteel Shield", "玄铁盾" ], "#6ece34",   //绿色
-  [ "Spartan Shield", "斯巴达盾牌" ], "#39acf4",   //蓝色
-  [ "Bulldozer Cloak", "凶猛猪披风" ], "#6ece34",   //绿色
-  [ "Cloak of Health", "体力披风" ], "#6ece34",   //绿色
-  [ "Cloak of Half-Death", "濒死披风" ], "#39acf4",   //蓝色
-  [ "Cloak of Death", "死亡披风" ], "#bc71fc",   //紫色
-  [ "Passionate Cloak", "狂热披风" ], "#bc71fc",   //紫色
-  [ "Sparkling Necklace", "预言项链" ], "#39acf4",   //蓝色
-  [ "Dark Skull", "黑骷髅项链" ], "#39acf4",   //蓝色
-  [ "Pirate Necklace", "海盗项链" ], "#6ece34",   //绿色
-  [ "Mother Nature", "大地之母项链", ], "#bc71fc",   //紫色
-  [ "Pirate Ring", "海盗戒指" ], "#6ece34",   //绿色
-  [ "Alloy Ring", "合金戒指" ], "#6ece34",   //绿色
-  [ "Guardian's Ring", "守护者戒指" ], "#39acf4",   //蓝色
-  [ "Fungiskin Belt", "蘑菇腰带" ], "#6ece34",   //绿色
-  [ "Belt of Belief", "信念皮带" ], "#6ece34",   //绿色
-  [ "Belt of Regeneration", "再生皮带" ], "#bc71fc",   //紫色
-  [ "Otherworld Belt", "异界皮带" ], "#bc71fc",   //紫色
-  [ "Belt of Rough Roots", "粗糙根蔓皮带" ], "#6ece34",   //绿色
-  [ "Pledger's Belt", "契约者的皮带" ], "#6ece34",   //绿色
-  [ "Belt of Dry Magic", "契约者的皮带" ], "#6ece34",   //绿色
-  [ "Strange Hat", "奇特帽子" ], "#6ece34",   //绿色
-  [ "Pirate Hat", "海盗帽" ], "#6ece34",   //绿色
-  [ "Shaman's Hat", "巫师帽" ], "#6ece34",   //绿色
-  [ "Eye of Beholder", "凝视者之眼" ], "#6ece34",   //绿色
-  [ "Bandana of the Blue Waterfall", "靛蓝瀑布头巾" ], "#39acf4",  //蓝色
-  [ "Helm of the Grey Boulder", "白岩头盔" ], "#39acf4",   //蓝色
-  [ "Cap of the Blue Forest", "丛林帽" ], "#39acf4",    //
-  [ "Frayed Robe", "粗布衣" ], "#6ece34",   //绿色
-  [ "Cotton Robe", "棉制长袍" ], "#6ece34",   //绿色
-  [ "Sturdy Leather Armor", "强化皮革盔甲" ], "#6ece34",   //绿色
-  [ "Bone Armor", "骨制盔甲" ], "#6ece34",   //绿色
-  [ "Boiled Leather Armor", "加工皮革盔甲" ], "#6ece34",   //绿色
-  [ "Mushroom Robe", "蘑菇长袍" ], "#39acf4",   //蓝色
-  [ "The Dead's Shroud", "亡者寿衣" ], "#6ece34",   //绿色
-  [ "Lizard Leather Armor", "蜥蜴皮衣" ], "#6ece34",   //绿色
-  [ "Charmed Robe", "咒术袍" ], "#6ece34",   //绿色
-  [ "Sturdy Yeti Armor", "雪人皮衣" ], "#6ece34",   //绿色
-  [ "Highguard Armor", "高阶护卫盔甲" ], "#6ece34",   //绿色
-  [ "Expert Magician Robe", "专业魔法师袍" ], "#6ece34",   //绿色
-  [ "Lizard Leather Armor", "蜥蜴皮衣" ], "#6ee129",    //
-  [ "Armor of the Grey Boulder", "白岩盔甲" ], "#39acf4",   //蓝色
-  [ "Robe of the Blue Waterfall", "靛蓝瀑布长袍" ], "#39acf4",   //蓝色
-  [ "Light Armor of the Blue Forest", "丛林轻甲" ], "#39acf4",   //蓝色
-  [ "World Tree Bark Armor", "世界树树皮盔甲" ], "#6ece34",   //绿色
-  [ "World Tree Branch Armor", "世界树树根盔甲" ], "#6ece34",   //绿色
-  [ "World Tree Leaf Robe", "世界树树叶长袍" ], "#6ece34",   //绿色
-  [ "World Tree Robe", "世界树道服" ], "#6ece34",   //绿色
-  [ "Sturdy Leather Gloves", "强化皮革手套" ], "#6ece34",   //绿色
-  [ "Power Gloves", "能量手套" ], "#bc71fc",   //紫色
-  [ "The Dead's Gloves", "亡者手套" ], "#6ece34",   //绿色
-  [ "Oatwill's Leather Gloves", "欧特威尔的皮革手套" ], "#6ece34",   //绿色
-  [ "Pirate Gloves", "海盗手套" ], "#6ece34",   //绿色
-  [ "Seruang's Heart", "赛乐亚之心" ], "#39acf4",   //蓝色
-  [ "Desert Mercenary Gloves", "沙漠佣兵手套" ], "#6ece34",   //绿色
-  [ "Monk's Gloves", "修道士手套" ], "#6ece34",   //绿色
-  [ "Iron Golem's Gloves", "钢铁魔像手套" ], "#6ece34",   //绿色
-  [ "Scout Gloves", "童军手套" ], "#6ece34",   //绿色
-  [ "Sage's Gloves", "贤者手套" ], "#6ece34",   //绿色
-  [ "Chainstrike Gloves", "链击手套" ], "#39acf4",   //蓝色
-  [ "Protector's Hand Skin", "护卫兵的手部护具" ], "#39acf4",   //蓝色
-  [ "Illusionist's Gloves", "幻术师的手部护具" ], "#39acf4",   //蓝色
-  [ "Scale Boots", "鳞片靴" ], "#6ece34",   //绿色
-  [ "Wingwing Boots", "飞天靴" ], "#bc71fc",   //紫色
-  [ "Savage Boots", "野蛮靴" ], "#6ece34",   //绿色
-  [ "Heavy Iron Boots", "钢铁靴" ], "#6ece34",   //绿色
-  [ "Snowy Field's Cursed Boots", "雪原诅咒长靴" ], "#6ece34",   //绿色
-  [ "Toxic Boots", "剧毒长靴" ], "#6ece34",   //绿色
-  [ "Sharkun Greaves", "夏库胫甲" ], "#6ece34",   //绿色
-  [ "Monk's Boots", "修道士长靴" ], "#6ece34",   //绿色
-  [ "Shoes of Tranquility", "宁静鞋" ], "#6ece34",   //绿色
-  [ "Titanium Boots", "钛合金靴" ], "#6ece34",   //绿色
-  [ "Boots of Darkness", "暗黑鞋" ], "#6ece34",   //绿色
-  [ "Design: Blackskull Armor", "设计图:黑骸盔甲" ], "#39acf4",   //蓝色
-  [ "Design: Spirit's Hat", "设计图:精灵帽" ], "#6ece34",   //绿色
-  [ "Design: Blackjuno's Helmet", "设计图:黑黑朱诺头盔" ], "#39acf4",   //蓝色
-  [ "Design Snow-Flower Stem Hat", "设计图:雪花藤蔓帽" ], "#6ece34",   //绿色
-  [ "Design: Crystal Robe", "设计图:水晶长袍" ], "#6ece34",   //绿色
-  [ "Dezoruba's Design", "戴楚拜伊的设计图" ], "#39acf4",   //蓝色
-  [ "Jode's Design", "佐德的设计图" ], "#6ece34",   //绿色
-  [ "Cold Imbue 4", "赋予寒气4" ], "#ff9329",  //橙色
-  [ "Chainstrike 4", "连击4" ], "#ff9329",  //橙色
-[ "Leap 4", "跳跃4" ], "#ff9329",  //橙色
-[ "Electric Imbue 2", "赋予闪电2" ], "#ff9329",  //橙色
-[ "Electric Imbue 3", "赋予闪电3" ], "#ff9329",  //橙色
-[ "Breaker's Strike 2", "武术一击2" ], "#ff9329",  //橙色   
-[ "Breaker's Strike 3", "武术一击3" ], "#ff9329",  //橙色   
-[ "Elemental Cycle 2", "元素循环2" ], "#ff9329",  //橙色   
-[ "Elemental Cycle 3", "元素循环3" ], "#ff9329",  //橙色   
-[ "Baekha's Strike 2", "白荷之拳2" ], "#ff9329",  //橙色   
-[ "Baekha's Strike 3", "白荷之拳3" ], "#ff9329",  //橙色   
-[ "Elemental Release 2", "元素释放2" ], "#ff9329",  //橙色   
-[ "Impact Training 2", "冲击锻炼2" ], "#ff9329",  //橙色   
-[ "Impact Training 3", "冲击锻炼3" ], "#ff9329",  //橙色   
-[ "Critical Insight 2", "要害洞察2" ], "#ff9329",  //橙色   
-[ "Critical Insight 3", "要害洞察3" ], "#ff9329",  //橙色   
-[ "Sixth Sense 2", "预感2" ], "#ff9329",  //橙色   
-[ "Bull Rush 2", "急速冲刺2" ], "#ff9329",  //橙色
-[ "Cure Poison 2", "治愈2" ], "#ff9329",  //橙色
-[ "Flame Shock 3", "火花冲击3" ], "#ff9329",  //橙色
-[ "Double Shot 3", "双发射击3" ], "#ff9329",  //橙色
-[ "Shift 2", "切换方位2" ], "#ff9329",  //橙色
-[ "Wild Swing 3", "疯狂剑舞3" ], "#ff9329",  //橙色
-[ "Ice Prison 2", "冰牢2" ], "#ff9329",  //橙色
-[ "Parry 3", "阻挡攻击3" ], "#ff9329",  //橙色
-[ "Ensnare 2", "圈套2" ], "#ff9329",  //橙色
-[ "Freezing Trap 3", "冰冻3" ], "#ff9329",  //橙色
-[ "Wild Charge 1", "疯狂冲刺1" ], "#ff9329",  //橙色
-[ "Taunting Blow 2", "挑衅2" ], "#ff9329",  //橙色
-[ "Freezing Trap 2", "冰冻2" ], "#ff9329",  //橙色
-[ "Drowsiness 1", "疲乏无力1" ], "#ff9329",  //橙色
-[ "Teleport 2", "瞬间移动2" ], "#ff9329",  //橙色
-[ "Concentrate 3", "全神贯注3" ], "#ff9329",  //橙色
-[ "Shield 3", "护身盾牌3" ], "#ff9329",  //橙色
-[ "Hemorrhage 3", "出血3" ], "#ff9329",  //橙色
-[ "Light Healing 3", "光明疗愈3" ], "#ff9329",  //橙色
-[ "Flare 1", "爆燃1" ], "#ff9329",  //橙色
-[ "Firebolt 2", "火球2" ], "#ff9329",  //橙色
-[ "Slam 2", "强力肘击2" ], "#ff9329",  //橙色
-[ "Carnivalize 1", "魔力转换1" ], "#ff9329",  //橙色
-[ "Sharp Eye 1", "迅速反应1" ], "#ff9329",  //橙色
-[ "Rage 1", "暴怒1" ], "#ff9329",  //橙色
-[ "Flare 2", "爆燃2" ], "#ff9329",  //橙色
-[ "Swift 1", "伶落身手1" ], "#ff9329",  //橙色
-[ "Toughness 1", "强韧1" ], "#ff9329",  //橙色
-[ "Toughness 2", "强韧2" ], "#ff9329",  //橙色
-[ "Healing Wave 1", "治愈波1" ], "#ff9329",  //橙色
-[ "Weakness 2", "弱化防御2" ], "#ff9329",  //橙色
-[ "Meditation 2", "冥想2" ], "#ff9329",  //橙色
-[ "Prayer of Protection 1", "守护祷告1" ], "#ff9329",  //橙色
-[ "Ice Lance 1", "冰矛1" ], "#ff9329",  //橙色
-[ "Flame of Kataru 1", "卡塔勒的火焰1" ], "#ff9329",  //橙色
-[ "Sweeping Strikes 1", "强力横扫1" ], "#ff9329",  //橙色
-[ "Curse of Doom 2", "破坏之咒2" ], "#ff9329",  //橙色
-[ "Stoneskin 1", "坚石皮肤1" ], "#ff9329",  //橙色
-[ "Prayer of Protection 2", "守护祷告2" ], "#ff9329",  //橙色
-[ "Multi Shot 2", "多重射击2" ], "#ff9329",  //橙色
-[ "Sweeping Strikes 2", "强力横扫2" ], "#ff9329",  //橙色
-[ "Will of Elemental 2", "强烈意志2" ], "#ff9329",  //橙色
-[ "Harden Body 1", "锻炼体力1" ], "#ff9329",  //橙色
-[ "Amplify Sense 2", "强化反应2" ], "#ff9329",  //橙色
-[ "Will of Elemental 1", "强烈意志1" ], "#ff9329",  //橙色
-[ "Stun 2", "麻痹2" ], "#ff9329",  //橙色
-[ "Firestorm 1", "火焰风暴1" ], "#ff9329",  //橙色
-[ "Ice Lance 2", "冰矛2" ], "#ff9329",  //橙色
-[ "Flame of Kataru 2", "卡塔勒的火焰2" ], "#ff9329",  //橙色
-[ "Stoneskin 2", "坚石皮肤2" ], "#ff9329",  //橙色
-[ "Berserk 2", "狂暴2" ], "#ff9329",  //橙色
-[ "Stun 1", "麻痹1" ], "#ff9329",  //橙色
-[ "Healing Wave 2", "治愈波2" ], "#ff9329",  //橙色
-[ "Amplify Sense 1", "强化反应1" ], "#ff9329",  //橙色
-[ "Last Resistance 1", "最后抵抗1" ], "#ff9329",  //橙色
-[ "Sweeping Strikes 3", "强力横扫3" ], "#ff9329",  //橙色
-[ "Instinct Stimulus 1", "刺激本能1" ], "#ff9329",  //橙色
-[ "Fatal Attack 1", "致命一击1" ], "#ff9329",  //橙色
-[ "Bull's-Eye 1p", "百发百中1p" ], "#ff9329",  //橙色
-[ "The Way of Two Hands 2p", "双手活用武器秘籍2p" ], "#ff9329",  //橙色
-[ "About Levitation 3p", "空中悬浮秘籍3p" ], "#ff9329",  //橙色
-[ "Carnivalize 2", "魔力转换2" ], "#ff9329",  //橙色
-[ "Multi Shot 1", "多重射击1" ], "#ff9329",  //橙色
-[ "Sharp Eye 2", "迅速反应2" ], "#ff9329",  //橙色
-[ "Berserk 1", "狂暴1" ], "#ff9329",  //橙色
-[ "Teleport 3", "瞬间移动3" ], "#ff9329",  //橙色
-[ "Wild Charge 2", "疯狂冲刺2" ], "#ff9329",  //橙色
-[ "Impact Shot 2", "强烈一击2" ], "#ff9329",  //橙色
-[ "Carnivalize 3", "魔力转换3" ], "#ff9329",  //橙色
-[ "Toughness 3", "强韧3" ], "#ff9329",  //橙色
-[ "Impact Shot 3", "强烈一击3" ], "#ff9329",  //橙色
-[ "Sharp Eye 3", "迅速反应3" ], "#ff9329",  //橙色
-[ "Slam 3", "强力肘击3" ], "#ff9329",  //橙色
-[ "Flare 3", "爆燃3" ], "#ff9329",  //橙色
-[ "Last Resistance 2", "最后抵抗2" ], "#ff9329",  //橙色
-[ "Stoneskin 3", "坚石皮肤3" ], "#ff9329",  //橙色
-[ "Flame of Kataru 3", "卡塔勒的火焰3" ], "#ff9329",  //橙色
-[ "Shield 4", "护身盾牌4" ], "#ff9329",  //橙色
-[ "Soul Drain Shot 1", "灵魂射击1" ], "#ff9329",  //橙色
-[ "Silence 1", "沉默1" ], "#ff9329",  //橙色
-[ "Soul Drain Shot 2", "灵魂射击2" ], "#ff9329",  //橙色
-[ "Shout of Calmness 1", "平静呐喊1" ], "#ff9329",  //橙色
-[ "Clarity 1", "补充气力 1" ], "#ff9329",  //橙色
-[ "Sara's Blessing 1", "塞拉的祝福1" ], "#ff9329",  //橙色
-[ "Shout of Calmness 2", "平静呐喊2" ], "#ff9329",  //橙色
-[ "Sara's Blessing 2", "塞拉的祝福2" ], "#ff9329",  //橙色
-[ "Stampede 1", "惊逃1" ], "#ff9329",  //橙色
-[ "Stampede 2", "惊逃2" ], "#ff9329",  //橙色
-[ "Hellfire 1", "炼狱火道1" ], "#ff9329",  //橙色
-[ "Neutralize 1", "无效化1" ], "#ff9329",  //橙色
-[ "Heavy Strike 2", "强击2" ], "#ff9329",  //橙色
-[ "Neutralize 2", "无效化2" ], "#ff9329",  //橙色
-[ "Silence 2", "沉默2" ], "#ff9329",  //橙色
-[ "Clarity 2", "补充气力2" ], "#ff9329",  //橙色
-[ "Hellfire 2", "炼狱火道2" ], "#ff9329",  //橙色
-[ "Power Shot 1", "强力射击1" ], "#ff9329",  //橙色
-[ "Power Shot 2", "强力射击2" ], "#ff9329",  //橙色
-[ "Heavy Strike 1", "强击1" ], "#ff9329",  //橙色
-[ "Harden Body 2", "锻炼体力2" ], "#ff9329",  //橙色
-[ "Fatal Attack 2", "致命一击2" ], "#ff9329",  //橙色
-[ "Prayer of Protection 3", "守护祷告3" ], "#ff9329",  //橙色
-[ "Firestorm 2", "火焰风暴2" ], "#ff9329",  //橙色
-[ "Execution Rune", "酷刑符文" ], "#ff9329", //橙色
-[ "Torture Rune", "审问符文" ], "#ff9329", //橙色
-[ "Bio Magic Power Rune", "生物魔力符文" ], "#ff9329", //橙色
-[ "Atonement Rune", "赎罪符文" ], "#ff9329", //橙色
-[ "Corruption Rune", "堕落符文" ], "#ff9329", //橙色
-[ "Mercy Rune", "慈悲符文" ], "#ff9329", //橙色
-[ "Penitence Rune", "忏悔符文" ], "#ff9329", //橙色
-[ "Resurrection Rune", "复活符文" ], "#ff9329", //橙色
-[ "Box Flowing with Mana", "充满魔力的箱子" ], "#ff9329", //橙色
-[ "Pure Magic Orb", "纯净的魔力球" ], "#ff9329", //橙色
-[ "Surge Cycle", "高压电车" ], "#ff9329", //橙色
-[ "Frost Iron Refining Tool", "冻铁提炼道具" ], "#6ece34",   //绿色
-[ "Leather Robe", "皮革道服" ], "#6ece34",   //绿色
-[ "Coral Robe", "珊瑚道服" ], "#6ece34",   //绿色
-[ "Combat Robe", "格斗道服" ], "#6ece34",   //绿色
-[ "Yellow Canola Robe", "油菜花道服" ], "#39acf4",  //蓝色
-[ "Yellow Canola Hat", "油菜花帽" ], "#39acf4",  //蓝色
-[ "Wooden Guard", "木制护身符" ], "#6ece34",   //绿色
-[ "Coral Guard", "珊瑚护身符" ], "#6ece34",   //绿色
-[ "Woopa Roopa's Guard", "族长护身符" ], "#6ece34",   //绿色
-[ "Purifying Guard", "净化护身符" ], "#39acf4",  //蓝色
-[ "Frost Guard", "霜之护身符" ], "#6ece34",   //绿色
-[ "Storm Guard", "暴风护身符" ], "#6ece34",   //绿色
-[ "Red Guard", "赤红护身符" ], "#6ece34",   //绿色
-[ "Butterfly Guard", "蝴蝶护身符" ], "#6ece34",   //绿色
-[ "Crown Rock Guard", "皇冠岩护身符" ], "#6ece34",   //绿色
-[ "Relic of Infinity", "无极文物" ], "#39acf4",  //蓝色
-[ "Elemental Gloves", "元素手套" ], "#6ece34",   //绿色
-[ "Cloud Gloves", "云之手套" ], "#6ece34",   //绿色
-[ "Lightning Gloves", "雷电手套" ], "#6ece34",   //绿色
-[ "Bitter Cold Gloves", "严寒手套" ], "#6ece34",   //绿色
-[ "Chainstrike Gloves b", "连续攻击手套" ], "#39acf4",  //蓝色
-[ "Yellow Canola Boots", "油菜花长靴" ], "#39acf4",  //蓝色
-[ "Cloud Boots", "云之长靴" ], "#6ece34",   //绿色
-[ "Bitter Cold Boots", "严寒长靴" ], "#6ece34",   //绿色
-[ "Thule's Boots", "图勒长靴" ], "#6ece34",   //绿色
-[ "Teal Fragment Belt", "青绿碎片腰带" ], "#6ece34",   //绿色
-[ "Wooden Tonfa", "木制拐棍" ], "#6ece34",   //绿色
-[ "Dull Knuckles", "钝指虎" ], "#6ece34",   //绿色
-[ "Bulldozer Tonfa", "凶猛猪拐棍" ], "#6ece34",   //绿色
-[ "Breaker's Knuckles", "武术家指虎" ], "#6ece34",   //绿色
-[ "Shiny Knuckle", "闪耀指虎" ], "#6ece34",   //绿色
-[ "Bone Tonfa", "骨拐棍" ], "#6ece34",   //绿色
-[ "Storm Whip", "暴风鞭" ], "#6ece34",   //绿色
-[ "Iron Fist", "铁之拳" ], "#6ece34",   //绿色
-[ "Fang of Dusk", "黄昏之牙" ], "#6ece34",   //绿色
-[ "Thundersteel Knuckles", "雷钢" ], "#6ece34",   //绿色
-[ "War Knuckle", "战斗指虎" ], "#6ece34",   //绿色
-[ "Shatter Fist", "粉碎之拳" ], "#6ece34",   //绿色
-[ "Swamp Treasure", "湿地宝物" ], "#ff9329", //橙色
-[ "Maze Treasure", "迷宫宝物" ], "#ff9329", //橙色
-[ "Faded Ring", "褪色戒指" ], "#39acf4",   //蓝色
-[ "Snowfield Altar Treasure", "雪原祭坛宝物" ], "#ff9329", //橙色
-[ "Broken Necklace", "毁坏的项链" ], "#bc71fc",   //紫色
-[ "Caligo's Hands", "克里高的手" ], "#e60f10", //暗红色
-[ "Magic Power Breath", "魔力之息" ], "#bc71fc",   //紫色
-[ "Rune Piece", "符文碎片" ], "#39acf4",   //蓝色
-[ "Broken Oath", "裂开的立约书" ], "#39acf4",   //蓝色
-[ "Pure Knowledge", "纯净的知识" ], "#39acf4",   //蓝色
-[ "Five-Colored Leather", "五色皮革" ], "#bc71fc",   //紫色
-[ "Ancient Crystal", "古代水晶" ], "#ff9329",  //橙色
-[ "Ancient Wood", "古代树木" ], "#ff9329",  //橙色
-[ "Heavy Iron Gauntlet", "钢铁手套" ], "#6ece34",   //绿色
+let dropColorMap = {};
 
-];
-
-const dropColorMap = {};
-for (let i = 0; i < dropColorPairs.length; i += 2) {
-  const [en, cn] = dropColorPairs[i];
-  const color = dropColorPairs[i + 1];
-  dropColorMap[en] = color;
-  dropColorMap[cn] = color;
+// 从 JSON 文件加载三语颜色配置
+async function loadColorConfig() {
+  try {
+    const res = await fetch('dropColors.json');
+    const data = await res.json();
+    
+    dropColorMap = {};
+    data.forEach(item => {
+      if (item.en) dropColorMap[item.en] = item.color;
+      if (item.cn) dropColorMap[item.cn] = item.color;
+      if (item.kr) dropColorMap[item.kr] = item.color;
+    });
+    colorizeDrops();
+  } catch (e) {
+    console.error('颜色配置加载失败', e);
+  }
 }
 
 function colorizeDrops() {
@@ -848,6 +710,7 @@ function colorizeDrops() {
     const txt = el.textContent.trim();
     el.style.color = '';
     el.style.fontWeight = 'normal';
+    
     for (const name in dropColorMap) {
       if (txt.includes(name)) {
         el.style.color = dropColorMap[name];
@@ -858,10 +721,13 @@ function colorizeDrops() {
   });
 }
 
+// 覆盖渲染函数
 const _render = render;
 render = () => {
   _render();
   setTimeout(colorizeDrops, 0);
 };
-colorizeDrops();
+
+// 启动加载
+loadColorConfig();
 </script>

@@ -1253,6 +1253,21 @@
       "Elemental Release 2"
     ]
   },
+  "Mimic": {
+    "中文名": "宝箱怪",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "Bandage",
+      "Potion Bag",
+      "Palm Cocktail",
+      "Pirate Card 10",
+      "Captain's Cabin Key",
+      "Pirate Ring",
+      "Multi Shot 1",
+      "Red Beeswax"
+    ]
+  },
   "BOATSWAIN BRANKA": {
     "中文名": "甲板长布朗卡",
     "掉落物": [
@@ -3247,6 +3262,12 @@
       "Velvet Cloth"
     ]
   },
+  "Shiny Crystal": {
+    "中文名": "闪亮水晶",
+    "掉落物": [
+      "Soft Light Ore"
+    ]
+  },
   "Big Foot": {
     "中文名": "大脚怪",
     "掉落物": [
@@ -3289,12 +3310,6 @@
       "Five-Colored Leather",
       "Enchanted Bone",
       "Enchanted Leather"
-    ]
-  },
-  "Shiny Crystal": {
-    "中文名": "闪亮水晶",
-    "掉落物": [
-      "Soft Light Ore"
     ]
   },
   "Papillio": {

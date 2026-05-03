@@ -816,6 +816,18 @@
     "revive": "3分30秒"
   },
   {
+    "zone": "Pirate Ship 2F",
+    "desc": "",
+    "name": "Mimic",
+    "level": "19",
+    "notes": "DropsCaptain's Cabin Key",
+    "image local": "monsters images/Mimic.png",
+    "hp": "700",
+    "exp": "97",
+    "中文名": "宝箱怪",
+    "revive": "4分"
+  },
+  {
     "zone": "Storage Room",
     "desc": "",
     "name": "BOATSWAIN BRANKA",
@@ -910,18 +922,6 @@
     "exp": "?",
     "中文名": "白魔鬼",
     "revive": "30分"
-  },
-  {
-    "zone": "Lanos Plains",
-    "desc": "",
-    "name": "Sheep",
-    "level": "0",
-    "notes": "-",
-    "image local": "monsters images/Sheep.png",
-    "hp": "50",
-    "exp": "0",
-    "中文名": "绵羊",
-    "revive": "-"
   },
   {
     "zone": "Forest with Ruins",

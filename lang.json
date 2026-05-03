@@ -1,928 +1,4599 @@
 {
-  "nameMap": {
-    "Young Kooii": "幼年库伊",
-    "Kooii": "库伊",
-    "Bramble Donguri": "树木圆圆",
-    "Leaf Boar": "树叶野猪",
-    "Angry Leaf Boar": "凶猛树叶野猪",
-    "Bulldozer Jr.": "凶猛猪",
-    "BULLDOZER": "凶猛猪少年",
-    "BULLDOZER'S BROTHER": "凶猛猪大哥",
-    "Swamp Mushroom": "湿地蘑菇",
-    "Flower Elemental": "花精灵",
-    "Swamp Boar": "湿地野猪",
-    "Swamp Spider": "黑蜘蛛",
-    "Poisonous Spider": "剧毒蜘蛛",
-    "White Spider": "剑斗士蜘蛛",
-    "FUNGUS KING": "巨无霸蘑菇",
-    "Cave Mushroom": "洞窟蘑菇",
-    "Poisonous Mushroom": "毒蘑菇",
-    "Mushroom Flower": "湿地花精灵",
-    "Cave Bat": "洞窟蝙蝠",
-    "White Bat": "白金蝙蝠",
-    "POISON FUNGUS KING": "巨无霸毒蘑菇",
-    "Bottle": "瓶子",
-    "Red Crab": "红螃蟹",
-    "Sandman": "梦魔",
-    "Woopa": "乌波乌波",
-    "Roopa": "乌波鲁波",
-    "Mutant Woopa": "变种乌波",
-    "CHIEF WOOPAROOPA": "乌波鲁波族长",
-    "TURTLE Z": "狂睡乌龟",
-    "TURTLE ZZZ": "爱困乌龟",
-    "Testing Woopa": "实验用乌波",
-    "Marsh Donguri": "湿地圆圆",
-    "RECLUSE": "隐士",
-    "Underground Spider": "地底蜘蛛",
-    "Skeleton": "骸骨",
-    "MADGAR": "梅德格",
-    "Gray Skeleton": "白色骸骨",
-    "SMALL SKELETON": "小骸骨",
-    "BLACKSKULL": "黑色骸骨",
-    "Beholder": "凝视者",
-    "Drunken Kooii": "无神的库伊",
-    "Ghost": "鬼怪",
-    "Sleepy Kooii": "想睡的库伊",
-    "WHITESKULL": "白色骷髅",
-    "AWAKEN KOOII": "睡醒的库伊",
-    "Snaketail Lizard": "蛇尾蜥蜴",
-    "SNAKEZARD": "蛇尾查德",
-    "Dark Beholder": "暗黑凝视者",
-    "Spector": "鬼魂",
-    "Imp": "小恶魔",
-    "EEHEEHEE": "嘻嘻",
-    "OOHEEHEEK": "哈哈",
-    "OOHEHE": "呵呵",
-    "Bloody Flower": "嗜血花",
-    "Bloody Mind": "血光执念灵",
-    "Dan Dan": "丹丹",
-    "Ding Ding": "叮叮",
-    "Dong Dong": "东东",
-    "Dung Dung": "咚咚",
-    "GUARDIAN IMP": "守护者小恶魔",
-    "Mummy": "木乃伊",
-    "Elite Imp": "精英小恶魔",
-    "Mummy Fighter": "战斗木乃伊",
-    "DEVILANG": "戴弗龙",
-    "Broom": "扫帚",
-    "SWEEPER": "清洁组艾干净",
-    "Treasure Chest": "海盗宝箱",
-    "Pirate Skeleton": "海盗骸骨",
-    "Pirate Ghost": "海盗幽灵",
-    "BOATSWAIN BRANKA": "甲板长布朗卡",
-    "Continent Bulldozer": "大陆凶猛猪",
-    "Blaster": "布莱斯特",
-    "Crow": "乌鸦",
-    "Raven": "渡鸦",
-    "Redeye Gosumi": "红眼刺猬",
-    "Bloody Gosumi": "血古",
-    "WHITE CROW": "白魔鬼",
-    "Sheep": "绵羊",
-    "Mutant Gosumi": "变种刺猬",
-    "Berserk Gosumi": "暴走刺猬",
-    "Large Spider": "巨无霸蜘蛛",
-    "Spidey": "小蜘蛛",
-    "Big Boar": "大野猪",
-    "Wildboar": "山猪",
-    "GHOSTSNAKE": "鬼蛇",
-    "Cactus Bee": "仙人掌蜂",
-    "Sand Donguri": "沙子圆圆",
-    "Bizizi": "毕吉吉",
-    "Doley": "多利",
-    "Buzss": "布兹兹",
-    "Desert Ambush": "沙漠佣兵",
-    "Stealth": "史戴斯",
-    "Desert Assasain": "沙漠刺客",
-    "BSSSZSSS": "普斯斯兹斯",
-    "Fox": "狐狸",
-    "Mature Fox": "成年狐狸",
-    "Red Fox": "火狐",
-    "7tailfox": "七尾狐",
-    "Sunset Flower": "彩霞之花",
-    "Sunrise Flower": "彩霞枯花",
-    "777TAILFOX": "777尾狐",
-    "Magma": "熔岩",
-    "Burning Stone": "火燃石",
-    "Fire Bird": "火鸟",
-    "Bbinikjoe": "不死鸟",
-    "Magma Thief": "熔岩扒手",
-    "Magma Senior Thief": "熔岩扒手班长",
-    "CHIEF MAGIEF": "熔岩扒手头目",
-    "Desert Gosumi": "沙漠刺猬",
-    "Sandgrave": "沙墓",
-    "Desert Beholder": "沙漠凝视者",
-    "Elder Beholder": "上古眼怪",
-    "Wild Sandman": "粗犷梦魇",
-    "3eyelizard": "三眼龙",
-    "Sususuk": "嘶嘶嘶",
-    "Suuk": "嘶呃呃",
-    "SHAAACK": "沙沙沙",
-    "Shadow": "暗影",
-    "Mind Scream": "心声",
-    "Wanderer": "流浪者",
-    "Lesser Madman": "轻微神经病",
-    "Sandeater": "沙上食神",
-    "Bigmouse": "大老鼠",
-    "BIGMAMA": "白发魔女",
-    "Sky Bat": "东方蝠",
-    "Silver Bat": "银蝙蝠",
-    "iPot": "艾普",
-    "Puppet": "木偶",
-    "Tornado": "龙卷风",
-    "Dark Tornado": "暗黑风暴",
-    "Goblin": "小妖精",
-    "Couatl": "羽蛇",
-    "Kobold": "狗头人",
-    "Goblin Warrior": "小妖精勇士",
-    "Zealot": "盲从者",
-    "Gnome": "地精",
-    "Tyrant": "暴君",
-    "Orb": "球怪",
-    "Storm": "旋风",
-    "Bulette": "布雷特",
-    "Tank": "坦克",
-    "Maelstrom": "漩涡",
-    "Swirl Flame": "风暴",
-    "Twister": "旋风",
-    "Elemental Queen": "精灵女王",
-    "Solid Rock": "石像",
-    "Gargoyle": "滴水嘴兽",
-    "Golem": "魔像",
-    "Black Gargoyle": "暗黑滴水嘴兽",
-    "Ominous Bird": "怪鸟",
-    "Stonestatue": "雕像",
-    "Aroid": "法杖机器人",
-    "Iron Golem": "钢铁魔像",
-    "Robot": "机器人",
-    "Humanoid": "类人类",
-    "Landmine": "地雷",
-    "Titanium Golem": "钛合金魔像",
-    "Steampunk": "蒸汽朋克",
-    "Darkness": "暗黑",
-    "Protector": "庇护者",
-    "Guardian": "守护者",
-    "Inspector": "监督官",
-    "Fear of the Darkness": "暗黑恐惧",
-    "Gatekeeper": "守门人",
-    "CALIGO": "克里高",
-    "Crystal Stone": "水晶",
-    "Yeti": "雪怪",
-    "Wing Elemental": "风精灵",
-    "Crystal Spider": "水晶蜘蛛",
-    "Guardian Yeti": "守护者雪怪",
-    "Young Pengoon": "小企鹅",
-    "BLACKJUNO": "黑黑朱诺",
-    "Crazy Pengoon": "凶残的企鹅",
-    "Yeti Highguard": "高阶守卫",
-    "Enraged Wings": "狂暴的风精灵",
-    "BLACKSKY": "黑天",
-    "WADANGKA THE ELDER": "瓦当卡老人",
-    "Enraged Tree": "愤怒的树",
-    "Smack": "阿打",
-    "Man eating Mushroom": "石菇",
-    "Mutated Bee": "变异工蜂",
-    "Smaaack": "阿打打",
-    "Poison Root Flower": "毒液花",
-    "Contaminated Queen Bee": "被感染的女王蜂",
-    "Corrupt Forest Keeper": "堕落的森林守护者",
-    "Young Froggy Swarm": "小青蛙",
-    "Poisonous Man eating Mushroom": "剧毒石菇",
-    "Zombie": "僵尸",
-    "Mutated Lobster": "变异小龙虾",
-    "Froggy": "呱呱",
-    "Rotten Pudding": "腐烂的布丁",
-    "Swamp Flower Monster": "湿地花怪",
-    "Ukpana": "乌克波那",
-    "Ancient Elf Crystal": "古代精灵水晶",
-    "Plague Zombie": "瘟疫僵尸",
-    "Egg Monster": "蛋怪物",
-    "Banshee": "女妖",
-    "Masked Magician": "面具魔法师",
-    "Hellhound": "坚硬的宝箱怪",
-    "Death Stalker": "缉命者",
-    "Dark Golem": "暗黑魔像",
-    "Darlene the Witch": "魔女迪尔林",
-    "Snowball": "雪球",
-    "Uru": "乌勒1",
-    "Sharkun": "夏库",
-    "Snoowy": "雪宝",
-    "Urpus": "乌勒布斯",
-    "Mutated Sharkun": "突变的夏库",
-    "Urun": "乌勒",
-    "Strong Sharkun": "大力士夏库",
-    "Shurun": "修轮",
-    "Sharkurus": "夏库鲁斯",
-    "Urtus": "乌勒图斯",
-    "Mutated Shurun": "突变的修轮",
-    "Sharkutus": "夏库图斯",
-    "Barslaf": "巴瑟拉夫",
-    "Avenger": "复仇者",
-    "Pain": "沛恩",
-    "Abyss Eater": "噬影者",
-    "Apapa": "阿波波",
-    "Faith": "培伊斯",
-    "Illust": "伊鲁斯特",
-    "Sasquatch": "大脚野人",
-    "Crystal Cichlid": "水晶鱼",
-    "Chaser": "追击者",
-    "Big Foot": "大脚怪",
-    "Billiard": "毕尔里欧德",
-    "Sephia": "赛斐亚",
-    "Shiny Crystal": "闪亮水晶",
-    "Papillio": "帕毕里欧",
-    "Raphie": "拉皮埃",
-    "Mosboar": "摩斯波尔",
-    "Areuke": "亚勒凯",
-    "Morty": "莫提",
-    "Mushroom Bulldozer": "花花普多尔",
-    "Flower Bulldozer": "花花普多尔",
-    "Actaemon": "阿克泰萌",
-    "Aiyo's Protector": "艾伊尤的护卫兵",
-    "Crown Duck": "皇冠鸭",
-    "Leafsoul": "叶形精",
-    "Leafrog": "叶形蛙",
-    "Circuit Golem": "回路傀儡",
-    "Sikenel": "西格诺",
-    "Charge Stone": "电子石怪",
-    "Glucose": "格鲁柯斯",
-    "Overload": "奥伯洛德",
-    "Soul Lich": "索尔里奇",
-    "Platanista": "恒河豚",
-    "Justified Knowledge": "正当知识怪",
-    "Parchment of Oblivion": "遗忘之书怪",
-    "Corrupted Pledger": "被侵蚀的立约者",
-    "Lapis": "拉菲斯",
-    "Justified Principle": "正当信念怪",
-    "Lazuli": "拉茱利",
-    "Booksha": "书夜叉",
-    "Shelf": "书架怪",
-    "Primal Knowledge": "远古知识",
-    "Sandbag": "沙德拜",
-    "Blood Bat": "嗜血蝙蝠",
-    "Tough Mimic": "坚固的宝箱怪",
-    "Violent Crew": "凶残的船员",
-    "White Ghost": "白色幽灵",
-    "Weary Crew": "疲惫的船员",
-    "Bomb Wing": "炸弹翼",
-    "Jack in the Box": "惊喜宝箱",
-    "Ghost Witch": "幽灵魔法师",
-    "CAPTAIN TWIN": "双胞胎船长",
-    "Poison Lizard": "毒蜥",
-    "Big Eyed Soul": "巨无霸凝视者",
-    "Dark Imp": "暗黑小恶魔",
-    "Poison Mummy": "巨毒木乃伊",
-    "Magic Imp": "魔法小恶魔",
-    "Evil Spirit": "恶灵",
-    "Walking Dead": "丧尸",
-    "MUTANTHYDRA": "突变九头蛇",
-    "Altar Cleaner": "祭坛清洁队",
-    "Silent Ghost": "沉默幽灵",
-    "Rock Golem": "石魔像",
-    "Fluid Form": "液态怪",
-    "Morphing": "莫宝",
-    "Mystery": "不可思议",
-    "MALTARGUARDIAN": "祭坛守护者",
-    "Cave Spider": "洞窟蜘蛛",
-    "Hairy": "大胡子",
-    "Cave Keeper": "洞窟守护者",
-    "Light Wing": "轻风",
-    "DARKJUNO": "暗黑朱诺",
-    "GRAYSKY": "灰天",
-    "WHITEWADANGKA": "白色瓦当卡",
-    "Silhouette": "影客",
-    "Underground Eater": "地底食怪",
-    "Bandageman": "绷带人",
-    "Reason Scream": "理智之声",
-    "Gluttony": "暴食者",
-    "THEMAMA": "魔女"
-
+  
+    "nameMap": {
+    "Kooii": {
+      "cn": "库伊",
+      "en": "Kooii",
+      "kr": "쿠이"
+    },
+    "Bramble Donguri": {
+      "cn": "树木圆圆",
+      "en": "Bramble Donguri",
+      "kr": "나무동그리"
+    },
+    "Leaf Boar": {
+      "cn": "树叶野猪",
+      "en": "Leaf Boar",
+      "kr": "성난잎맷돼지"
+    },
+    "Angry Leaf Boar": {
+      "cn": "凶猛树叶野猪",
+      "en": "Angry Leaf Boar",
+      "kr": "나뭇잎맷돼지"
+    },
+    "Bulldozer Jr.": {
+      "cn": "凶猛猪",
+      "en": "Bulldozer Jr.",
+      "kr": "불도저주니어"
+    },
+    "BULLDOZER": {
+      "cn": "凶猛猪少年",
+      "en": "BULLDOZER",
+      "kr": "불도저"
+    },
+    "BULLDOZER'S BROTHER": {
+      "cn": "凶猛猪大哥",
+      "en": "BULLDOZER'S BROTHER",
+      "kr": "불도저형님"
+    },
+    "Swamp Mushroom": {
+      "cn": "湿地蘑菇",
+      "en": "Swamp Mushroom",
+      "kr": "늪지버섯돌이"
+    },
+    "Flower Elemental": {
+      "cn": "花精灵",
+      "en": "Flower Elemental",
+      "kr": "꽃정령"
+    },
+    "Swamp Boar": {
+      "cn": "湿地野猪",
+      "en": "Swamp Boar",
+      "kr": "늪지멧돼지"
+    },
+    "Swamp Spider": {
+      "cn": "黑蜘蛛",
+      "en": "Swamp Spider",
+      "kr": "검은거미"
+    },
+    "Poisonous Spider": {
+      "cn": "剧毒蜘蛛",
+      "en": "Poisonous Spider",
+      "kr": "맹독거미"
+    },
+    "White Spider": {
+      "cn": "剑斗士蜘蛛",
+      "en": "White Spider",
+      "kr": "검투사거미"
+    },
+    "FUNGUS KING": {
+      "cn": "巨无霸蘑菇",
+      "en": "FUNGUS KING",
+      "kr": "대왕버섯돌이"
+    },
+    "Cave Mushroom": {
+      "cn": "洞窟蘑菇",
+      "en": "Cave Mushroom",
+      "kr": "늪지버섯"
+    },
+    "Poisonous Mushroom": {
+      "cn": "毒蘑菇",
+      "en": "Poisonous Mushroom",
+      "kr": "독버섯돌이"
+    },
+    "Mushroom Flower": {
+      "cn": "湿地花精灵",
+      "en": "Mushroom Flower",
+      "kr": "슾지꽃정령"
+    },
+    "Cave Bat": {
+      "cn": "洞窟蝙蝠",
+      "en": "Cave Bat",
+      "kr": "동굴박쥐"
+    },
+    "White Bat": {
+      "cn": "白金蝙蝠",
+      "en": "White Bat",
+      "kr": "백금박쥐"
+    },
+    "POISON FUNGUS KING": {
+      "cn": "巨无霸毒蘑菇",
+      "en": "POISON FUNGUS KING",
+      "kr": "독왕버섯돌이"
+    },
+    "Bottle": {
+      "cn": "瓶子",
+      "en": "Bottle",
+      "kr": "유리병"
+    },
+    "Red Crab": {
+      "cn": "红螃蟹",
+      "en": "Red Crab",
+      "kr": "레드크랩"
+    },
+    "Sandman": {
+      "cn": "梦魔",
+      "en": "Sandman",
+      "kr": "샌드맨"
+    },
+    "Woopa": {
+      "cn": "乌波乌波",
+      "en": "Woopa",
+      "kr": "우파우파"
+    },
+    "Roopa": {
+      "cn": "乌波鲁波",
+      "en": "Roopa",
+      "kr": "우파루파"
+    },
+    "Mutant Woopa": {
+      "cn": "变种乌波",
+      "en": "Mutant Woopa",
+      "kr": "변종우파"
+    },
+    "CHIEF WOOPAROOPA": {
+      "cn": "乌波鲁波族长",
+      "en": "CHIEF WOOPAROOPA",
+      "kr": "우파루파족장"
+    },
+    "TURTLE Z": {
+      "cn": "狂睡乌龟",
+      "en": "TURTLE Z",
+      "kr": "안졸려도자라"
+    },
+    "TURTLE ZZZ": {
+      "cn": "爱困乌龟",
+      "en": "TURTLE ZZZ",
+      "kr": "졸리면자라"
+    },
+    "Testing Woopa": {
+      "cn": "实验用乌波",
+      "en": "Testing Woopa",
+      "kr": "실험용우파"
+    },
+    "Marsh Donguri": {
+      "cn": "湿地圆圆",
+      "en": "Marsh Donguri",
+      "kr": "슾지동그리"
+    },
+    "RECLUSE": {
+      "cn": "隐士",
+      "en": "RECLUSE",
+      "kr": "은둔자"
+    },
+    "Underground Spider": {
+      "cn": "地底蜘蛛",
+      "en": "Underground Spider",
+      "kr": "지하거미"
+    },
+    "Skeleton": {
+      "cn": "骸骨",
+      "en": "Skeleton",
+      "kr": "해골"
+    },
+    "MADGAR": {
+      "cn": "梅德格",
+      "en": "MADGAR",
+      "kr": "매드가"
+    },
+    "Gray Skeleton": {
+      "cn": "白色骸骨",
+      "en": "Gray Skeleton",
+      "kr": "회색회골"
+    },
+    "SMALL SKELETON": {
+      "cn": "小骸骨",
+      "en": "SMALL SKELETON",
+      "kr": "왜소한해골"
+    },
+    "BLACKSKULL": {
+      "cn": "黑色骸骨",
+      "en": "BLACKSKULL",
+      "kr": "블랙스컬"
+    },
+    "Beholder": {
+      "cn": "凝视者",
+      "en": "Beholder",
+      "kr": "주시자"
+    },
+    "Drunken Kooii": {
+      "cn": "无神的库伊",
+      "en": "Drunken Kooii",
+      "kr": "눈풀린쿠이"
+    },
+    "Ghost": {
+      "cn": "鬼怪",
+      "en": "Ghost",
+      "kr": "고스트"
+    },
+    "Sleepy Kooii": {
+      "cn": "想睡的库伊",
+      "en": "Sleepy Kooii",
+      "kr": "졸린쿠이"
+    },
+    "WHITESKULL": {
+      "cn": "白色骷髅",
+      "en": "WHITESKULL",
+      "kr": "화이트스컬"
+    },
+    "AWAKEN KOOII": {
+      "cn": "睡醒的库伊",
+      "en": "AWAKEN KOOII",
+      "kr": "잠깬쿠이"
+    },
+    "Snaketail Lizard": {
+      "cn": "蛇尾蜥蜴",
+      "en": "Snaketail Lizard",
+      "kr": "뱀꼬리도마뱀"
+    },
+    "SNAKEZARD": {
+      "cn": "蛇尾查德",
+      "en": "SNAKEZARD",
+      "kr": "스네이크자드"
+    },
+    "Dark Beholder": {
+      "cn": "暗黑凝视者",
+      "en": "Dark Beholder",
+      "kr": "어둠의주시자"
+    },
+    "Spector": {
+      "cn": "鬼魂",
+      "en": "Spector",
+      "kr": "스팩터"
+    },
+    "Imp": {
+      "cn": "小恶魔",
+      "en": "Imp",
+      "kr": "임프"
+    },
+    "EEHEEHEE": {
+      "cn": "嘻嘻",
+      "en": "EEHEEHEE",
+      "kr": "이히히"
+    },
+    "OOHEEHEEK": {
+      "cn": "哈哈",
+      "en": "OOHEEHEEK",
+      "kr": "우히힉"
+    },
+    "OOHEHE": {
+      "cn": "呵呵",
+      "en": "OOHEHE",
+      "kr": "우헤헤"
+    },
+    "Bloody Flower": {
+      "cn": "嗜血花",
+      "en": "Bloody Flower",
+      "kr": "흡혈꽃"
+    },
+    "Bloody Mind": {
+      "cn": "血光执念灵",
+      "en": "Bloody Mind",
+      "kr": "핏빛사념체"
+    },
+    "Dan Dan": {
+      "cn": "丹丹",
+      "en": "Dan Dan",
+      "kr": "단단"
+    },
+    "Ding Ding": {
+      "cn": "叮叮",
+      "en": "Ding Ding",
+      "kr": "딩딩"
+    },
+    "Dong Dong": {
+      "cn": "东东",
+      "en": "Dong Dong",
+      "kr": "동동"
+    },
+    "Dung Dung": {
+      "cn": "咚咚",
+      "en": "Dung Dung",
+      "kr": "동동"
+    },
+    "GUARDIAN IMP": {
+      "cn": "守护者小恶魔",
+      "en": "GUARDIAN IMP",
+      "kr": "가디언임프"
+    },
+    "Mummy": {
+      "cn": "木乃伊",
+      "en": "Mummy",
+      "kr": "미이라"
+    },
+    "Elite Imp": {
+      "cn": "精英小恶魔",
+      "en": "Elite Imp",
+      "kr": "엘리트임프"
+    },
+    "Mummy Fighter": {
+      "cn": "战斗木乃伊",
+      "en": "Mummy Fighter",
+      "kr": "전투미이라"
+    },
+    "DEVILANG": {
+      "cn": "戴弗龙",
+      "en": "DEVILANG",
+      "kr": "데블랑"
+    },
+    "Broom": {
+      "cn": "扫帚",
+      "en": "Broom",
+      "kr": "빗자루"
+    },
+    "SWEEPER": {
+      "cn": "清洁组艾干净",
+      "en": "SWEEPER",
+      "kr": "청소부깔끄미"
+    },
+    "Treasure Chest": {
+      "cn": "海盗宝箱",
+      "en": "Treasure Chest",
+      "kr": "미믹주니어"
+    },
+    "Pirate Skeleton": {
+      "cn": "海盗骸骨",
+      "en": "Pirate Skeleton",
+      "kr": "해적해골"
+    },
+    "Pirate Ghost": {
+      "cn": "海盗幽灵",
+      "en": "Pirate Ghost",
+      "kr": "해적유령"
+    },
+    "Mimic": {
+      "cn": "宝箱怪",
+      "en": "Mimic",
+      "kr": "미믹"
+    },
+    "BOATSWAIN BRANKA": {
+      "cn": "甲板长布朗卡",
+      "en": "BOATSWAIN BRANKA",
+      "kr": "갑판장블랑카"
+    },
+    "Continent Bulldozer": {
+      "cn": "大陆凶猛猪",
+      "en": "Continent Bulldozer",
+      "kr": "대륙불도저"
+    },
+    "Blaster": {
+      "cn": "布莱斯特",
+      "en": "Blaster",
+      "kr": "블래스터"
+    },
+    "Crow": {
+      "cn": "乌鸦",
+      "en": "Crow",
+      "kr": "까막이"
+    },
+    "Raven": {
+      "cn": "渡鸦",
+      "en": "Raven",
+      "kr": "레이븐"
+    },
+    "Redeye Gosumi": {
+      "cn": "红眼刺猬",
+      "en": "Redeye Gosumi",
+      "kr": "빨간눈고슴이"
+    },
+    "Bloody Gosumi": {
+      "cn": "血古",
+      "en": "Bloody Gosumi",
+      "kr": "혈고"
+    },
+    "WHITE CROW": {
+      "cn": "白魔鬼",
+      "en": "WHITE CROW",
+      "kr": "백마귀"
+    },
+    "Mutant Gosumi": {
+      "cn": "变种刺猬",
+      "en": "Mutant Gosumi",
+      "kr": "변종고슴이"
+    },
+    "Berserk Gosumi": {
+      "cn": "暴走刺猬",
+      "en": "Berserk Gosumi",
+      "kr": "폭주고슴이"
+    },
+    "Large Spider": {
+      "cn": "巨无霸蜘蛛",
+      "en": "Large Spider",
+      "kr": "거대거미"
+    },
+    "Spidey": {
+      "cn": "小蜘蛛",
+      "en": "Spidey",
+      "kr": "스파이디"
+    },
+    "Big Boar": {
+      "cn": "大野猪",
+      "en": "Big Boar",
+      "kr": "덩치큰멧돼지"
+    },
+    "Wildboar": {
+      "cn": "山猪",
+      "en": "Wildboar",
+      "kr": "와일드보어"
+    },
+    "GHOSTSNAKE": {
+      "cn": "鬼蛇",
+      "en": "GHOSTSNAKE",
+      "kr": "귀모사"
+    },
+    "Cactus Bee": {
+      "cn": "仙人掌蜂",
+      "en": "Cactus Bee",
+      "kr": "선인장벌"
+    },
+    "Sand Donguri": {
+      "cn": "沙子圆圆",
+      "en": "Sand Donguri",
+      "kr": "모래동그리"
+    },
+    "Bizizi": {
+      "cn": "毕吉吉",
+      "en": "Bizizi",
+      "kr": "비지지"
+    },
+    "Doley": {
+      "cn": "多利",
+      "en": "Doley",
+      "kr": "돌리"
+    },
+    "Buzss": {
+      "cn": "布兹兹",
+      "en": "Buzss",
+      "kr": "부즈즈"
+    },
+    "Desert Ambush": {
+      "cn": "沙漠佣兵",
+      "en": "Desert Ambush",
+      "kr": "사막의용병"
+    },
+    "Stealth": {
+      "cn": "史戴斯",
+      "en": "Stealth",
+      "kr": "스텔스"
+    },
+    "Desert Assasain": {
+      "cn": "沙漠刺客",
+      "en": "Desert Assasain",
+      "kr": "사막의암살자"
+    },
+    "BSSSZSSS": {
+      "cn": "普斯斯兹斯",
+      "en": "BSSSZSSS",
+      "kr": "브스스즈스"
+    },
+    "Fox": {
+      "cn": "狐狸",
+      "en": "Fox",
+      "kr": "여우"
+    },
+    "Mature Fox": {
+      "cn": "成年狐狸",
+      "en": "Mature Fox",
+      "kr": "성숙한여우"
+    },
+    "Red Fox": {
+      "cn": "火狐",
+      "en": "Red Fox",
+      "kr": "불여우"
+    },
+    "7tailfox": {
+      "cn": "七尾狐",
+      "en": "7tailfox",
+      "kr": "칠미호"
+    },
+    "Sunset Flower": {
+      "cn": "彩霞之花",
+      "en": "Sunset Flower",
+      "kr": "노을에피는꽃"
+    },
+    "Sunrise Flower": {
+      "cn": "彩霞枯花",
+      "en": "Sunrise Flower",
+      "kr": "노을에지는꽃"
+    },
+    "777TAILFOX": {
+      "cn": "777尾狐",
+      "en": "777TAILFOX",
+      "kr": "칠칠칠미호"
+    },
+    "Magma": {
+      "cn": "熔岩",
+      "en": "Magma",
+      "kr": "마그마"
+    },
+    "Burning Stone": {
+      "cn": "火燃石",
+      "en": "Burning Stone",
+      "kr": "불타는돌"
+    },
+    "Fire Bird": {
+      "cn": "火鸟",
+      "en": "Fire Bird",
+      "kr": "화조"
+    },
+    "Bbinikjoe": {
+      "cn": "不死鸟",
+      "en": "Bbinikjoe",
+      "kr": "삐닉죠"
+    },
+    "Magma Thief": {
+      "cn": "熔岩扒手",
+      "en": "Magma Thief",
+      "kr": "용암도적"
+    },
+    "Magma Senior Thief": {
+      "cn": "熔岩扒手班长",
+      "en": "Magma Senior Thief",
+      "kr": "용암도적반장"
+    },
+    "CHIEF MAGIEF": {
+      "cn": "熔岩扒手头目",
+      "en": "CHIEF MAGIEF",
+      "kr": "용암도적두목"
+    },
+    "Desert Gosumi": {
+      "cn": "沙漠刺猬",
+      "en": "Desert Gosumi",
+      "kr": "사막고슴이"
+    },
+    "Sandgrave": {
+      "cn": "沙墓",
+      "en": "Sandgrave",
+      "kr": "모래무덤"
+    },
+    "Desert Beholder": {
+      "cn": "沙漠凝视者",
+      "en": "Desert Beholder",
+      "kr": "사막의주시자"
+    },
+    "Elder Beholder": {
+      "cn": "上古眼怪",
+      "en": "Elder Beholder",
+      "kr": "엘더비홀더"
+    },
+    "Wild Sandman": {
+      "cn": "粗犷梦魇",
+      "en": "Wild Sandman",
+      "kr": "거친샌드맨"
+    },
+    "3eyelizard": {
+      "cn": "三眼龙",
+      "en": "3eyelizard",
+      "kr": "삼안룡"
+    },
+    "Sususuk": {
+      "cn": "嘶嘶嘶",
+      "en": "Sususuk",
+      "kr": "스스슥"
+    },
+    "Suuk": {
+      "cn": "嘶呃呃",
+      "en": "Suuk",
+      "kr": "스으윽"
+    },
+    "SHAAACK": {
+      "cn": "沙沙沙",
+      "en": "SHAAACK",
+      "kr": "샤아악"
+    },
+    "Shadow": {
+      "cn": "暗影",
+      "en": "Shadow",
+      "kr": "그림자"
+    },
+    "Mind Scream": {
+      "cn": "心声",
+      "en": "Mind Scream",
+      "kr": "마음의소리"
+    },
+    "Wanderer": {
+      "cn": "流浪者",
+      "en": "Wanderer",
+      "kr": "방랑자"
+    },
+    "Lesser Madman": {
+      "cn": "轻微神经病",
+      "en": "Lesser Madman",
+      "kr": "약간미치광이"
+    },
+    "Sandeater": {
+      "cn": "沙上食神",
+      "en": "Sandeater",
+      "kr": "모래먹보"
+    },
+    "Bigmouse": {
+      "cn": "大老鼠",
+      "en": "Bigmouse",
+      "kr": "빅마우스"
+    },
+    "BIGMAMA": {
+      "cn": "白发魔女",
+      "en": "BIGMAMA",
+      "kr": "빅마마"
+    },
+    "Sky Bat": {
+      "cn": "东方蝠",
+      "en": "Sky Bat",
+      "kr": "하늘박쥐"
+    },
+    "Silver Bat": {
+      "cn": "银蝙蝠",
+      "en": "Silver Bat",
+      "kr": "은박쥐"
+    },
+    "iPot": {
+      "cn": "艾普",
+      "en": "iPot",
+      "kr": "아이폿"
+    },
+    "Puppet": {
+      "cn": "木偶",
+      "en": "Puppet",
+      "kr": "꼭두각시"
+    },
+    "Tornado": {
+      "cn": "龙卷风",
+      "en": "Tornado",
+      "kr": "토네이도"
+    },
+    "Dark Tornado": {
+      "cn": "暗黑风暴",
+      "en": "Dark Tornado",
+      "kr": "검은폭풍"
+    },
+    "Goblin": {
+      "cn": "小妖精",
+      "en": "Goblin",
+      "kr": "고블린"
+    },
+    "Couatl": {
+      "cn": "羽蛇",
+      "en": "Couatl",
+      "kr": "코아틀"
+    },
+    "Kobold": {
+      "cn": "狗头人",
+      "en": "Kobold",
+      "kr": "코볼트"
+    },
+    "Goblin Warrior": {
+      "cn": "小妖精勇士",
+      "en": "Goblin Warrior",
+      "kr": "고블린용사"
+    },
+    "Zealot": {
+      "cn": "盲从者",
+      "en": "Zealot",
+      "kr": "맹신자"
+    },
+    "Gnome": {
+      "cn": "地精",
+      "en": "Gnome",
+      "kr": "노움"
+    },
+    "Tyrant": {
+      "cn": "暴君",
+      "en": "Tyrant",
+      "kr": "폭군"
+    },
+    "Orb": {
+      "cn": "球怪",
+      "en": "Orb",
+      "kr": "오브"
+    },
+    "Storm": {
+      "cn": "旋风",
+      "en": "Storm",
+      "kr": "스톰"
+    },
+    "Bulette": {
+      "cn": "布雷特",
+      "en": "Bulette",
+      "kr": "뷸렛"
+    },
+    "Tank": {
+      "cn": "坦克",
+      "en": "Tank",
+      "kr": "탱크"
+    },
+    "Maelstrom": {
+      "cn": "漩涡",
+      "en": "Maelstrom",
+      "kr": "소용돌이"
+    },
+    "Swirl Flame": {
+      "cn": "风暴",
+      "en": "Swirl Flame",
+      "kr": "화염선회"
+    },
+    "Twister": {
+      "cn": "旋风",
+      "en": "Twister",
+      "kr": "회오리"
+    },
+    "Elemental Queen": {
+      "cn": "精灵女王",
+      "en": "Elemental Queen",
+      "kr": "정령여왕"
+    },
+    "Solid Rock": {
+      "cn": "石像",
+      "en": "Solid Rock",
+      "kr": "석인"
+    },
+    "Gargoyle": {
+      "cn": "滴水嘴兽",
+      "en": "Gargoyle",
+      "kr": "가고일"
+    },
+    "Golem": {
+      "cn": "魔像",
+      "en": "Golem",
+      "kr": "골렘"
+    },
+    "Black Gargoyle": {
+      "cn": "暗黑滴水嘴兽",
+      "en": "Black Gargoyle",
+      "kr": "검은가고일"
+    },
+    "Ominous Bird": {
+      "cn": "怪鸟",
+      "en": "Ominous Bird",
+      "kr": "괴조"
+    },
+    "Stonestatue": {
+      "cn": "雕像",
+      "en": "Stonestatue",
+      "kr": "조각상"
+    },
+    "Aroid": {
+      "cn": "法杖机器人",
+      "en": "Aroid",
+      "kr": "에이로이드"
+    },
+    "Iron Golem": {
+      "cn": "钢铁魔像",
+      "en": "Iron Golem",
+      "kr": "강철골렘"
+    },
+    "Robot": {
+      "cn": "机器人",
+      "en": "Robot",
+      "kr": "로봇"
+    },
+    "Humanoid": {
+      "cn": "类人类",
+      "en": "Humanoid",
+      "kr": "휴머노이드"
+    },
+    "Landmine": {
+      "cn": "地雷",
+      "en": "Landmine",
+      "kr": "지뢰"
+    },
+    "Titanium Golem": {
+      "cn": "钛合金魔像",
+      "en": "Titanium Golem",
+      "kr": "티타늄골렘"
+    },
+    "Steampunk": {
+      "cn": "蒸汽朋克",
+      "en": "Steampunk",
+      "kr": "스팀펑크"
+    },
+    "Darkness": {
+      "cn": "暗黑",
+      "en": "Darkness",
+      "kr": "어둠"
+    },
+    "Protector": {
+      "cn": "庇护者",
+      "en": "Protector",
+      "kr": "보호자"
+    },
+    "Guardian": {
+      "cn": "守护者",
+      "en": "Guardian",
+      "kr": "수호자"
+    },
+    "Inspector": {
+      "cn": "监督官",
+      "en": "Inspector",
+      "kr": "감독관"
+    },
+    "Fear of the Darkness": {
+      "cn": "暗黑恐惧",
+      "en": "Fear of the Darkness",
+      "kr": "어둠의공포"
+    },
+    "Gatekeeper": {
+      "cn": "守门人",
+      "en": "Gatekeeper",
+      "kr": "수문장"
+    },
+    "CALIGO": {
+      "cn": "克里高",
+      "en": "CALIGO",
+      "kr": "칼리고"
+    },
+    "Crystal Stone": {
+      "cn": "水晶",
+      "en": "Crystal Stone",
+      "kr": "윙정령"
+    },
+    "Yeti": {
+      "cn": "雪怪",
+      "en": "Yeti",
+      "kr": "예티"
+    },
+    "Wing Elemental": {
+      "cn": "风精灵",
+      "en": "Wing Elemental",
+      "kr": "윙정령"
+    },
+    "Crystal Spider": {
+      "cn": "水晶蜘蛛",
+      "en": "Crystal Spider",
+      "kr": "수정거미"
+    },
+    "Guardian Yeti": {
+      "cn": "守护者雪怪",
+      "en": "Guardian Yeti",
+      "kr": "가디언예티"
+    },
+    "Young Pengoon": {
+      "cn": "小企鹅",
+      "en": "Young Pengoon",
+      "kr": "미숙한펭군"
+    },
+    "BLACKJUNO": {
+      "cn": "黑黑朱诺",
+      "en": "BLACKJUNO",
+      "kr": "블랙주노"
+    },
+    "Crazy Pengoon": {
+      "cn": "凶残的企鹅",
+      "en": "Crazy Pengoon",
+      "kr": "난폭한펭군"
+    },
+    "Yeti Highguard": {
+      "cn": "高阶守卫",
+      "en": "Yeti Highguard",
+      "kr": "예티하이가드"
+    },
+    "Enraged Wings": {
+      "cn": "狂暴的风精灵",
+      "en": "Enraged Wings",
+      "kr": "격노한윙정령"
+    },
+    "BLACKSKY": {
+      "cn": "黑天",
+      "en": "BLACKSKY",
+      "kr": "블랙스카이"
+    },
+    "WADANGKA THE ELDER": {
+      "cn": "瓦当卡老人",
+      "en": "WADANGKA THE ELDER",
+      "kr": "와당카더엘더"
+    },
+    "Enraged Tree": {
+      "cn": "愤怒的树",
+      "en": "Enraged Tree",
+      "kr": "분노한나무"
+    },
+    "Smack": {
+      "cn": "阿打",
+      "en": "Smack",
+      "kr": "쩌억"
+    },
+    "Man eating Mushroom": {
+      "cn": "石菇",
+      "en": "Man eating Mushroom",
+      "kr": "식인버섯"
+    },
+    "Mutated Bee": {
+      "cn": "变异工蜂",
+      "en": "Mutated Bee",
+      "kr": "변종일벌"
+    },
+    "Smaaack": {
+      "cn": "阿打打",
+      "en": "Smaaack",
+      "kr": "쩌어억"
+    },
+    "Poison Root Flower": {
+      "cn": "毒液花",
+      "en": "Poison Root Flower",
+      "kr": "독부리꽃"
+    },
+    "Contaminated Queen Bee": {
+      "cn": "被感染的女王蜂",
+      "en": "Contaminated Queen Bee",
+      "kr": "감연된여왕벌"
+    },
+    "Corrupt Forest Keeper": {
+      "cn": "堕落的森林守护者",
+      "en": "Corrupt Forest Keeper",
+      "kr": "타락한숲지킴이"
+    },
+    "Young Froggy Swarm": {
+      "cn": "小青蛙",
+      "en": "Young Froggy Swarm",
+      "kr": "어린개구르떼"
+    },
+    "Poisonous Man eating Mushroom": {
+      "cn": "剧毒石菇",
+      "en": "Poisonous Man eating Mushroom",
+      "kr": "맹독식인버섯"
+    },
+    "Zombie": {
+      "cn": "僵尸",
+      "en": "Zombie",
+      "kr": "좀비"
+    },
+    "Mutated Lobster": {
+      "cn": "变异小龙虾",
+      "en": "Mutated Lobster",
+      "kr": "변종가재"
+    },
+    "Froggy": {
+      "cn": "呱呱",
+      "en": "Froggy",
+      "kr": "개구르르"
+    },
+    "Rotten Pudding": {
+      "cn": "腐烂的布丁",
+      "en": "Rotten Pudding",
+      "kr": "썪은푸딩"
+    },
+    "Swamp Flower Monster": {
+      "cn": "湿地花怪",
+      "en": "Swamp Flower Monster",
+      "kr": "늪지꽃괴수"
+    },
+    "Ukpana": {
+      "cn": "乌克波那",
+      "en": "Ukpana",
+      "kr": "우크파나"
+    },
+    "Ancient Elf Crystal": {
+      "cn": "古代精灵水晶",
+      "en": "Ancient Elf Crystal",
+      "kr": "옛 앨프의 수정"
+    },
+    "Plague Zombie": {
+      "cn": "瘟疫僵尸",
+      "en": "Plague Zombie",
+      "kr": "역병좀비"
+    },
+    "Egg Monster": {
+      "cn": "蛋怪物",
+      "en": "Egg Monster",
+      "kr": "알괴물"
+    },
+    "Banshee": {
+      "cn": "女妖",
+      "en": "Banshee",
+      "kr": "밴쉬"
+    },
+    "Masked Magician": {
+      "cn": "面具魔法师",
+      "en": "Masked Magician",
+      "kr": "가면마법사"
+    },
+    "Hellhound": {
+      "cn": "坚硬的宝箱怪",
+      "en": "Hellhound",
+      "kr": "헬하운드"
+    },
+    "Death Stalker": {
+      "cn": "缉命者",
+      "en": "Death Stalker",
+      "kr": "데스스토커"
+    },
+    "Dark Golem": {
+      "cn": "暗黑魔像",
+      "en": "Dark Golem",
+      "kr": "암흑골렘"
+    },
+    "Darlene the Witch": {
+      "cn": "魔女迪尔林",
+      "en": "Darlene the Witch",
+      "kr": "마녀딜린"
+    },
+    "Snowball": {
+      "cn": "雪球",
+      "en": "Snowball",
+      "kr": "눈덩이"
+    },
+    "Uru": {
+      "cn": "乌勒1",
+      "en": "Uru",
+      "kr": "우르"
+    },
+    "Sharkun": {
+      "cn": "夏库",
+      "en": "Sharkun",
+      "kr": "샤쿤"
+    },
+    "Snoowy": {
+      "cn": "雪宝",
+      "en": "Snoowy",
+      "kr": "스누위"
+    },
+    "Urpus": {
+      "cn": "乌勒布斯",
+      "en": "Urpus",
+      "kr": "우르푸스"
+    },
+    "Mutated Sharkun": {
+      "cn": "突变的夏库",
+      "en": "Mutated Sharkun",
+      "kr": "돌연변이 샤쿤"
+    },
+    "Urun": {
+      "cn": "乌勒",
+      "en": "Urun",
+      "kr": "우룬"
+    },
+    "Strong Sharkun": {
+      "cn": "大力士夏库",
+      "en": "Strong Sharkun",
+      "kr": "힘센 샤쿤"
+    },
+    "Shurun": {
+      "cn": "修轮",
+      "en": "Shurun",
+      "kr": "슈룬"
+    },
+    "Sharkurus": {
+      "cn": "夏库鲁斯",
+      "en": "Sharkurus",
+      "kr": "샤쿠루스"
+    },
+    "Urtus": {
+      "cn": "乌勒图斯",
+      "en": "Urtus",
+      "kr": "우르투스"
+    },
+    "Mutated Shurun": {
+      "cn": "突变的修轮",
+      "en": "Mutated Shurun",
+      "kr": "돌연변이 슈룬"
+    },
+    "Sharkutus": {
+      "cn": "夏库图斯",
+      "en": "Sharkutus",
+      "kr": "샤쿠투스"
+    },
+    "Barslaf": {
+      "cn": "巴瑟拉夫",
+      "en": "Barslaf",
+      "kr": "바슬라프"
+    },
+    "Avenger": {
+      "cn": "复仇者",
+      "en": "Avenger",
+      "kr": "어벤저"
+    },
+    "Pain": {
+      "cn": "沛恩",
+      "en": "Pain",
+      "kr": "패인"
+    },
+    "Abyss Eater": {
+      "cn": "噬影者",
+      "en": "Abyss Eater",
+      "kr": "어비스이터"
+    },
+    "Apapa": {
+      "cn": "阿波波",
+      "en": "Apapa",
+      "kr": "아파파"
+    },
+    "Faith": {
+      "cn": "培伊斯",
+      "en": "Faith",
+      "kr": "페이쓰"
+    },
+    "Illust": {
+      "cn": "伊鲁斯特",
+      "en": "Illust",
+      "kr": "일루스트"
+    },
+    "Sasquatch": {
+      "cn": "大脚野人",
+      "en": "Sasquatch",
+      "kr": "사스콰치"
+    },
+    "Crystal Cichlid": {
+      "cn": "水晶鱼",
+      "en": "Crystal Cichlid",
+      "kr": "수정시클리드"
+    },
+    "Chaser": {
+      "cn": "追击者",
+      "en": "Chaser",
+      "kr": "추격자"
+    },
+    "Big Foot": {
+      "cn": "大脚怪",
+      "en": "Big Foot",
+      "kr": "빅풋"
+    },
+    "Billiard": {
+      "cn": "毕尔里欧德",
+      "en": "Billiard",
+      "kr": "빌리어드"
+    },
+    "Sephia": {
+      "cn": "赛斐亚",
+      "en": "Sephia",
+      "kr": "세피아"
+    },
+    "Shiny Crystal": {
+      "cn": "闪亮水晶",
+      "en": "Shiny Crystal",
+      "kr": "수정"
+    },
+    "Papillio": {
+      "cn": "帕毕里欧",
+      "en": "Papillio",
+      "kr": "파필리오"
+    },
+    "Raphie": {
+      "cn": "拉皮埃",
+      "en": "Raphie",
+      "kr": "라피에"
+    },
+    "Mosboar": {
+      "cn": "摩斯波尔",
+      "en": "Mosboar",
+      "kr": "모스보어"
+    },
+    "Areuke": {
+      "cn": "亚勒凯",
+      "en": "Areuke",
+      "kr": "아르케"
+    },
+    "Morty": {
+      "cn": "莫提",
+      "en": "Morty",
+      "kr": "모티"
+    },
+    "Mushroom Bulldozer": {
+      "cn": "花花普多尔",
+      "en": "Mushroom Bulldozer",
+      "kr": "머쉬룸불도저"
+    },
+    "Flower Bulldozer": {
+      "cn": "花花普多尔",
+      "en": "Flower Bulldozer",
+      "kr": "플라워불도저"
+    },
+    "Actaemon": {
+      "cn": "阿克泰萌",
+      "en": "Actaemon",
+      "kr": "악타이몬"
+    },
+    "Aiyo's Protector": {
+      "cn": "艾伊尤的护卫兵",
+      "en": "Aiyo's Protector",
+      "kr": "아이요의수호병"
+    },
+    "Crown Duck": {
+      "cn": "皇冠鸭",
+      "en": "Crown Duck",
+      "kr": "크라운덕"
+    },
+    "Leafsoul": {
+      "cn": "叶形精",
+      "en": "Leafsoul",
+      "kr": "리프소울"
+    },
+    "Leafrog": {
+      "cn": "叶形蛙",
+      "en": "Leafrog",
+      "kr": "리프소울"
+    },
+    "Circuit Golem": {
+      "cn": "回路傀儡",
+      "en": "Circuit Golem",
+      "kr": "써킷골렘"
+    },
+    "Sikenel": {
+      "cn": "西格诺",
+      "en": "Sikenel",
+      "kr": "시거널"
+    },
+    "Charge Stone": {
+      "cn": "电子石怪",
+      "en": "Charge Stone",
+      "kr": "차지스톤"
+    },
+    "Glucose": {
+      "cn": "格鲁柯斯",
+      "en": "Glucose",
+      "kr": "글루코스"
+    },
+    "Overload": {
+      "cn": "奥伯洛德",
+      "en": "Overload",
+      "kr": "오버로드"
+    },
+    "Soul Lich": {
+      "cn": "索尔里奇",
+      "en": "Soul Lich",
+      "kr": "소울리치"
+    },
+    "Platanista": {
+      "cn": "恒河豚",
+      "en": "Platanista",
+      "kr": "플라타니스타"
+    },
+    "Justified Knowledge": {
+      "cn": "正当知识怪",
+      "en": "Justified Knowledge",
+      "kr": "정당화된 지식"
+    },
+    "Parchment of Oblivion": {
+      "cn": "遗忘之书怪",
+      "en": "Parchment of Oblivion",
+      "kr": "망각의 서"
+    },
+    "Corrupted Pledger": {
+      "cn": "被侵蚀的立约者",
+      "en": "Corrupted Pledger",
+      "kr": "침식된 서약자"
+    },
+    "Lapis": {
+      "cn": "拉菲斯",
+      "en": "Lapis",
+      "kr": "라피스"
+    },
+    "Justified Principle": {
+      "cn": "正当信念怪",
+      "en": "Justified Principle",
+      "kr": "정당화된 신념"
+    },
+    "Lazuli": {
+      "cn": "拉茱利",
+      "en": "Lazuli",
+      "kr": "라줄리"
+    },
+    "Booksha": {
+      "cn": "书夜叉",
+      "en": "Booksha",
+      "kr": "부크샤"
+    },
+    "Shelf": {
+      "cn": "书架怪",
+      "en": "Shelf",
+      "kr": "셸"
+    },
+    "Primal Knowledge": {
+      "cn": "远古知识",
+      "en": "Primal Knowledge",
+      "kr": "태초의 지식"
+    },
+    "Sandbag": {
+      "cn": "沙德拜",
+      "en": "Sandbag",
+      "kr": ""
+    },
+    "Blood Bat": {
+      "cn": "嗜血蝙蝠",
+      "en": "Blood Bat",
+      "kr": "흡혈박쥐"
+    },
+    "Tough Mimic": {
+      "cn": "坚固的宝箱怪",
+      "en": "Tough Mimic",
+      "kr": "단단한미믹"
+    },
+    "Violent Crew": {
+      "cn": "凶残的船员",
+      "en": "Violent Crew",
+      "kr": "난폭한선원"
+    },
+    "White Ghost": {
+      "cn": "白色幽灵",
+      "en": "White Ghost",
+      "kr": "하얀유령"
+    },
+    "Weary Crew": {
+      "cn": "疲惫的船员",
+      "en": "Weary Crew",
+      "kr": "피곤한선원"
+    },
+    "Bomb Wing": {
+      "cn": "炸弹翼",
+      "en": "Bomb Wing",
+      "kr": "붐윙"
+    },
+    "Jack in the Box": {
+      "cn": "惊喜宝箱",
+      "en": "Jack in the Box",
+      "kr": "깜짝상자"
+    },
+    "Ghost Witch": {
+      "cn": "幽灵魔法师",
+      "en": "Ghost Witch",
+      "kr": "유령마법사"
+    },
+    "CAPTAIN TWIN": {
+      "cn": "双胞胎船长",
+      "en": "CAPTAIN TWIN",
+      "kr": "캡틴트윈"
+    },
+    "Poison Lizard": {
+      "cn": "毒蜥",
+      "en": "Poison Lizard",
+      "kr": "독도마뱀"
+    },
+    "Big Eyed Soul": {
+      "cn": "巨无霸凝视者",
+      "en": "Big Eyed Soul",
+      "kr": "거대한주시자"
+    },
+    "Dark Imp": {
+      "cn": "暗黑小恶魔",
+      "en": "Dark Imp",
+      "kr": "다크임프"
+    },
+    "Poison Mummy": {
+      "cn": "巨毒木乃伊",
+      "en": "Poison Mummy",
+      "kr": "맹독미이라"
+    },
+    "Magic Imp": {
+      "cn": "魔法小恶魔",
+      "en": "Magic Imp",
+      "kr": "매직임프"
+    },
+    "Evil Spirit": {
+      "cn": "恶灵",
+      "en": "Evil Spirit",
+      "kr": "악령"
+    },
+    "Walking Dead": {
+      "cn": "丧尸",
+      "en": "Walking Dead",
+      "kr": "워킹데드"
+    },
+    "MUTANTHYDRA": {
+      "cn": "突变九头蛇",
+      "en": "MUTANTHYDRA",
+      "kr": "뮤턴트히드라"
+    },
+    "Altar Cleaner": {
+      "cn": "祭坛清洁队",
+      "en": "Altar Cleaner",
+      "kr": "제단청소부"
+    },
+    "Silent Ghost": {
+      "cn": "沉默幽灵",
+      "en": "Silent Ghost",
+      "kr": "침묵의유령"
+    },
+    "Rock Golem": {
+      "cn": "石魔像",
+      "en": "Rock Golem",
+      "kr": "단단한골렘"
+    },
+    "Fluid Form": {
+      "cn": "液态怪",
+      "en": "Fluid Form",
+      "kr": "유동체"
+    },
+    "Morphing": {
+      "cn": "莫宝",
+      "en": "Morphing",
+      "kr": "모핑"
+    },
+    "Mystery": {
+      "cn": "不可思议",
+      "en": "Mystery",
+      "kr": "불가사의"
+    },
+    "MALTARGUARDIAN": {
+      "cn": "祭坛守护者",
+      "en": "MALTARGUARDIAN",
+      "kr": "제단수호자"
+    },
+    "Cave Spider": {
+      "cn": "洞窟蜘蛛",
+      "en": "Cave Spider",
+      "kr": ""
+    },
+    "Hairy": {
+      "cn": "大胡子",
+      "en": "Hairy",
+      "kr": ""
+    },
+    "Cave Keeper": {
+      "cn": "洞窟守护者",
+      "en": "Cave Keeper",
+      "kr": ""
+    },
+    "Light Wing": {
+      "cn": "轻风",
+      "en": "Light Wing",
+      "kr": ""
+    },
+    "DARKJUNO": {
+      "cn": "暗黑朱诺",
+      "en": "DARKJUNO",
+      "kr": ""
+    },
+    "GRAYSKY": {
+      "cn": "灰天",
+      "en": "GRAYSKY",
+      "kr": ""
+    },
+    "WHITEWADANGKA": {
+      "cn": "白色瓦当卡",
+      "en": "WHITEWADANGKA",
+      "kr": ""
+    },
+    "Silhouette": {
+      "cn": "影客",
+      "en": "Silhouette",
+      "kr": "실루엣"
+    },
+    "Underground Eater": {
+      "cn": "地底食怪",
+      "en": "Underground Eater",
+      "kr": "지하먹보"
+    },
+    "Bandageman": {
+      "cn": "绷带人",
+      "en": "Bandageman",
+      "kr": "붕대인간"
+    },
+    "Reason Scream": {
+      "cn": "理智之声",
+      "en": "Reason Scream",
+      "kr": "야성의소리"
+    },
+    "Gluttony": {
+      "cn": "暴食者",
+      "en": "Gluttony",
+      "kr": "폭식자"
+    },
+    "THEMAMA": {
+      "cn": "魔女",
+      "en": "THEMAMA",
+      "kr": "더마마"
+    },
+    "Deep Darkness": {
+      "cn": "깊은어둠",
+      "en": "Deep Darkness",
+      "kr": ""
+    },
+    "Burning Darkness": {
+      "cn": "",
+      "en": "Burning Darkness",
+      "kr": "뜨거운어둠"
+    },
+    "Sorrowful Darkness": {
+      "cn": "",
+      "en": "Sorrowful Darkness",
+      "kr": "슬픈어둠"
+    },
+    "Harsh Darkness": {
+      "cn": "",
+      "en": "Harsh Darkness",
+      "kr": "냉혹한어둠"
+    },
+    "Endless Darkness": {
+      "cn": "",
+      "en": "Endless Darkness",
+      "kr": "끝없는어둠"
+    }
   },
-  "zoneMap": {
-    "Ghost Ship": "废弃幽灵船",
-    "Forgotten Cave": "遗忘洞穴",
-    "Silent Altar": "沉默祭坛",
-    "Impassable Cave": "废弃洞穴",
-    "Desert Dungeon": "沙漠地底洞穴",
-    "Endless Darkness": "无尽黑暗",
-    "Woody Weedy Village,Woody Wordy Village": "木木村/木林村",
-    "Woody-Weedy Forest,Woody-Wordy Forest": "木木森/木林森",
-    "Mushroom Marshland": "蘑菇湿地",
-    "Mushroom Spore": "蘑菇养殖场",
-    "Wingfril Island Beach,Island with the Lighthouse": "沙滩",
-    "Wingfril Island Beach": "沙滩",
-    "Island with the Lighthouse": "灯塔岛",
-    "Lighthouse 1F": "灯塔1层",
-    "Lighthouse 1F,2F": "灯塔1,2层",
-    "Lighthouse 2F": "灯塔2层",
-    "Lighthouse 2F,3F": "灯塔2,3层",
-    "Lighthouse 3F": "灯塔3层",
-    "Lighthouse 4F": "灯塔4层",
-    "Lighthouse 5F": "灯塔5层",
-    "Lighthouse 3F,4F": "灯塔3,4层",
-    "Lighthouse 4F,5F": "灯塔4,5层",
-    "Pirate Ship 1F": "海盗船1层",
-    "Pirate Ship 1F,2F": "海盗船1,2层",
-    "Pirate Ship 2F": "海盗船2层",
-    "Storage Room": "储藏室",
-    "Lanos Plains": "兰诺斯平原",
-    "Forest with Ruins": "废墟森林",
-    "Arid Grassland": "枯原",
-    "Forest of Grave": "晚霞森林",
-    "Kataru Mountains": "卡塔勒山脉",
-    "Desert Valley": "沙墓峡谷",
-    "Hot Sand Plains": "热沙平原",
-    "Ancient Palace": "古代阁楼",
-    "Western Sky Castle": "天空西部",
-    "Eastern Sky Castle": "天空东部",
-    "Stone Fortress": "石塔要塞",
-    "Unknown Maze": "未知迷宫",
-    "Fallen Temple": "堕落神殿",
-    "Temple of Wingfril": "光绝神殿",
-    "Polluted Forest": "污染森林",
-    "Marsh of Death": "死亡沼泽",
-    "Maze Forest": "森林迷宫",
-    "Syphnel Road,Islot's Lab": "石冠路/实验室",
-    "Islot's Lab": "实验室",
-    "Islot's Temple": "实验室2楼",
-    "Anguish Altar": "悲叹祭坛",
-    "Lunarf": "鲁纳夫",
-    "Morphosis Root": "花园",
-    "Morphosis Garden": "庭院",
-    "Morphosis Forbidden Library": "图书库"
+  "zoneMap": 
+  {
+    "Ghost Ship": {
+      "cn": "废弃幽灵船",
+      "en": "Ghost Ship",
+      "kr": "버려진 유령선"
+    },
+    "Forgotten Cave": {
+      "cn": "遗忘洞穴",
+      "en": "Forgotten Cave",
+      "kr": "잊혀진 동굴"
+    },
+    "Silent Altar": {
+      "cn": "沉默祭坛",
+      "en": "Silent Altar",
+      "kr": "인스턴스 던전"
+    },
+    "Impassable Cave": {
+      "cn": "废弃洞穴",
+      "en": "Impassable Cave",
+      "kr": "폐쇄된동굴"
+    },
+    "Desert Dungeon": {
+      "cn": "沙漠地底洞穴",
+      "en": "Desert Dungeon",
+      "kr": "사막지하 동굴"
+    },
+    "Endless Darkness": {
+      "cn": "无尽黑暗",
+      "en": "Endless Darkness",
+      "kr": "끝없는 어둠"
+    },
+    "Woody Weedy Village,Woody Wordy Village": {
+      "cn": "木木村/木林村",
+      "en": "Woody Weedy Village,Woody Wordy Village",
+      "kr": "우디워디마을/우디위디마을"
+    },
+    "Woody-Weedy Forest,Woody-Wordy Forest": {
+      "cn": "木木森/木林森",
+      "en": "Woody-Weedy Forest,Woody-Wordy Forest",
+      "kr": "우디워디/위디 숲"
+    },
+    "Mushroom Marshland": {
+      "cn": "蘑菇湿地",
+      "en": "Mushroom Marshland",
+      "kr": "버섯늪지"
+    },
+    "Mushroom Spore": {
+      "cn": "蘑菇养殖场",
+      "en": "Mushroom Spore",
+      "kr": "머쉬룸스포어"
+    },
+    "Wingfril Island Beach,Island with the Lighthouse": {
+      "cn": "沙滩",
+      "en": "Wingfril Island Beach,Island with the Lighthouse",
+      "kr": "윙프릴 섬해변"
+    },
+    "Wingfril Island Beach": {
+      "cn": "沙滩",
+      "en": "Wingfril Island Beach",
+      "kr": "윙프릴 섬해변"
+    },
+    "Island with the Lighthouse": {
+      "cn": "灯塔岛",
+      "en": "Island with the Lighthouse",
+      "kr": "등대 섬"
+    },
+    "Lighthouse 1F": {
+      "cn": "灯塔1层",
+      "en": "Lighthouse 1F",
+      "kr": "등대던전 1F"
+    },
+    "Lighthouse 1F,2F": {
+      "cn": "灯塔1,2层",
+      "en": "Lighthouse 1F,2F",
+      "kr": "등대던전 1F,2F"
+    },
+    "Lighthouse 2F": {
+      "cn": "灯塔2层",
+      "en": "Lighthouse 2F",
+      "kr": "등대던전 2F"
+    },
+    "Lighthouse 2F,3F": {
+      "cn": "灯塔2,3层",
+      "en": "Lighthouse 2F,3F",
+      "kr": "등대던전 2F,3F"
+    },
+    "Lighthouse 3F": {
+      "cn": "灯塔3层",
+      "en": "Lighthouse 3F",
+      "kr": "등대던전 3F"
+    },
+    "Lighthouse 4F": {
+      "cn": "灯塔4层",
+      "en": "Lighthouse 4F",
+      "kr": "등대던전 4F"
+    },
+    "Lighthouse 5F": {
+      "cn": "灯塔5层",
+      "en": "Lighthouse 5F",
+      "kr": "등대던전 5F"
+    },
+    "Lighthouse 3F,4F": {
+      "cn": "灯塔3,4层",
+      "en": "Lighthouse 3F,4F",
+      "kr": "등대던전 3F,4F"
+    },
+    "Lighthouse 4F,5F": {
+      "cn": "灯塔4,5层",
+      "en": "Lighthouse 4F,5F",
+      "kr": "등대던전 4F,5F"
+    },
+    "Pirate Ship 1F": {
+      "cn": "海盗船1层",
+      "en": "Pirate Ship 1F",
+      "kr": "해적선 1F"
+    },
+    "Pirate Ship 1F,2F": {
+      "cn": "海盗船1,2层",
+      "en": "Pirate Ship 1F,2F",
+      "kr": "해적선 1F,2F"
+    },
+    "Pirate Ship 2F": {
+      "cn": "海盗船2层",
+      "en": "Pirate Ship 2F",
+      "kr": "해적선 2F"
+    },
+    "Storage Room": {
+      "cn": "储藏室",
+      "en": "Storage Room",
+      "kr": "저장소"
+    },
+    "Lanos Plains": {
+      "cn": "兰诺斯平原",
+      "en": "Lanos Plains",
+      "kr": "라노스 평원"
+    },
+    "Forest with Ruins": {
+      "cn": "废墟森林",
+      "en": "Forest with Ruins",
+      "kr": "해지는 노을숲"
+    },
+    "Arid Grassland": {
+      "cn": "枯原",
+      "en": "Arid Grassland",
+      "kr": "건조한 초원"
+    },
+    "Forest of Grave": {
+      "cn": "晚霞森林",
+      "en": "Forest of Grave",
+      "kr": "폐허가 있는 숲"
+    },
+    "Kataru Mountains": {
+      "cn": "卡塔勒山脉",
+      "en": "Kataru Mountains",
+      "kr": "카타르 산맥"
+    },
+    "Desert Valley": {
+      "cn": "沙墓峡谷",
+      "en": "Desert Valley",
+      "kr": "모래무덤 골짜기"
+    },
+    "Hot Sand Plains": {
+      "cn": "热沙平原",
+      "en": "Hot Sand Plains",
+      "kr": "뜨거운 모래사막"
+    },
+    "Ancient Palace": {
+      "cn": "古代阁楼",
+      "en": "Ancient Palace",
+      "kr": "고대의누각"
+    },
+    "Western Sky Castle": {
+      "cn": "天空西部",
+      "en": "Western Sky Castle",
+      "kr": "하늘성채-서부"
+    },
+    "Eastern Sky Castle": {
+      "cn": "天空东部",
+      "en": "Eastern Sky Castle",
+      "kr": "하늘성채-동부"
+    },
+    "Stone Fortress": {
+      "cn": "石塔要塞",
+      "en": "Stone Fortress",
+      "kr": "돌무더기 요새"
+    },
+    "Unknown Maze": {
+      "cn": "未知迷宫",
+      "en": "Unknown Maze",
+      "kr": "알수없는 미로"
+    },
+    "Fallen Temple": {
+      "cn": "堕落神殿",
+      "en": "Fallen Temple",
+      "kr": "타락한 신전"
+    },
+    "Temple of Wingfril": {
+      "cn": "光绝神殿",
+      "en": "Temple of Wingfril",
+      "kr": "빛이 들지않는 신전"
+    },
+    "Polluted Forest": {
+      "cn": "污染森林",
+      "en": "Polluted Forest",
+      "kr": "오염된 숲"
+    },
+    "Marsh of Death": {
+      "cn": "死亡沼泽",
+      "en": "Marsh of Death",
+      "kr": "죽음의 늪"
+    },
+    "Maze Forest": {
+      "cn": "森林迷宫",
+      "en": "Maze Forest",
+      "kr": "숲의 미궁"
+    },
+    "Syphnel Road,Islot's Lab": {
+      "cn": "石冠路/实验室",
+      "en": "Syphnel Road,Islot's Lab",
+      "kr": "크라운락길/이슬롯의 실험실"
+    },
+    "Islot's Lab": {
+      "cn": "实验室",
+      "en": "Islot's Lab",
+      "kr": "이슬롯의 실험실"
+    },
+    "Islot's Temple": {
+      "cn": "实验室2楼",
+      "en": "Islot's Temple",
+      "kr": "이슬롯의 신전"
+    },
+    "Anguish Altar": {
+      "cn": "悲叹祭坛",
+      "en": "Anguish Altar",
+      "kr": "비탄의제단"
+    },
+    "Lunarf": {
+      "cn": "鲁纳夫",
+      "en": "Lunarf",
+      "kr": "루나프"
+    },
+    "Morphosis Root": {
+      "cn": "花园",
+      "en": "Morphosis Root",
+      "kr": "뿌리"
+    },
+    "Morphosis Garden": {
+      "cn": "庭院",
+      "en": "Morphosis Garden",
+      "kr": "정원"
+    },
+    "Morphosis Forbidden Library": {
+      "cn": "图书库",
+      "en": "Morphosis Forbidden Library",
+      "kr": "금서고"
+    }
   },
-  "dropMap": {
-    "-": "无",
-    "Gold": "金币",
-    "Kooii Doll" : "库伊娃娃",
-    "Kooii Voucher": "库伊币",
-    "Clover": "幸运草",
-    "Lollipop": "棒棒糖",
-    "Cotton Robe": "棉制长袍",
-    "Kooii Card 10": "库伊卡10",
-    "Donguryu": "圆圆果",
-    "Frayed Robe": "粗布衣",
-    "Ruined Leather": "粗糙皮革",
-    "Wild Boar Meat": "野猪肉",
-    "Small Treasure Box": "小宝箱",
-    "Wild Boar's Tail Hair": "野猪尾巴毛",
-    "Practice Sword": "练习用剑",
-    "Sparkling Berry": "闪亮果实",
-    "Wooden Shortbow": "木质短弓",
-    "Lesser Mana Potion": "低级魔力药水",
-    "Wild Boar Barbeque": "野猪烤肉串",
-    "Lesser Healing Potion": "低级体力药水",
-    "Heavy Leather": "坚韧皮革",
-    "Canine Ring": "臼齿戒指",
-    "Small Bag": "小包包",
-    "Pet Crystal": "宠物水晶",
-    "Bulldozer's Tooth": "凶猛猪獠牙",
-    "Bull Rush 2": "急速冲刺2",
-    "Cure Poison 2": "治愈2",
-    "Mystic Stone": "神秘石",
-    "Bulldozer Cloak": "凶猛猪披风",
-    "Canine Tooth of Madness": "疯狂獠牙",
-    "Armor Enchant Scroll (D Class)": "盔甲卷轴(D级)",
-    "Mushroom Spore": "蘑菇孢子",
-    "Dried Mushroom": "干燥蘑菇",
-    "Old Feather": "古老羽毛",
-    "Flame Shock 3": "火花冲击3",
-    "Blunt Shortsword": "钝短剑",
-    "Potion Bag": "药水包包",
-    "Wooden Shield": "木盾",
-    "Weapon Enchant Scroll (D Class)": "武器卷轴(D级)",
-    "Double Shot 3": "双发射击3",
-    "Seed": "种子",
-    "Mystic Seed": "神秘种子",
-    "Wooden Staff": "木杖",
-    "Green Powder": "绿色粉末",
-    "Apprentice Magician Robe": "进阶魔法师袍",
-    "Shift 2": "切换方位2",
-    "Spider Silk": "蜘蛛丝",
-    "Damaged Pamphlet": "撕裂的书本",
-    "Wild Swing 3": "疯狂剑舞3",
-    "Sturdy Leather Armor": "强化皮革盔甲",
-    "Ice Prison 2": "冰牢2",
-    "Parry 3": "阻挡攻击3",
-    "Spider Silk Bag": "蜘蛛丝包包",
-    "Ganoderma Lucidum": "灵芝",
-    "Strange Hat": "奇特帽子",
-    "Ensnare 2": "圈套2",
-    "Sparkling Necklace": "预言项链",
-    "Freezing Trap 3": "冰冻3",
-    "Wild Charge 1": "疯狂冲刺1",
-    "Cloak of Health": "体力披风",
-    "Fungiskin Belt": "蘑菇腰带",
-    "Taunting Blow 2": "挑衅2",
-    "Phantom's Kneecap": "幽灵的膝盖骨",
-    "Freezing Trap 2": "冰冻2",
-    "Drowsiness 1": "疲乏无力1",
-    "Mushroom Robe": "蘑菇长袍",
-    "Fungiskin Shield": "蘑菇盾牌",
-    "Piece of Old Cloth A": "旧布碎片A",
-    "Piece of Old Cloth B": "旧布碎片B",
-    "Piece of Old Cloth C": "旧布碎片C",
-    "Teleport 2": "瞬间移动2",
-    "Old Box": "破旧宝箱",
-    "Woopa Pork Meat": "乌波猪脚",
-    "Hard Scale": "坚硬的壳",
-    "Small Coral": "小珊瑚",
-    "Pirate Coin": "海盗铸币",
-    "Mitten": "连指手套",
-    "Round Shield": "圆盾",
-    "Concentrate 3": "全神贯注3",
-    "Shield 3": "护身盾牌3",
-    "Hemorrhage 3": "出血3",
-    "Mystic Oil": "神秘的油",
-    "Armor Enchant Scroll (C Class)": "盔甲卷轴(C级)",
-    "Weapon Enchant Scroll (C Class)": "武器卷轴(C级)",
-    "Dried Soil": "干燥土壤",
-    "Unknown Soil": "未知土壤",
-    "Oak Tree Staff": "桦树杖",
-    "Woopa-Roopa Scale": "乌波鲁波鳞片",
-    "Red Coral": "火红珊瑚",
-    "Light Healing 3": "光明疗愈3",
-    "Long Bow": "长弓",
-    "Green Crystal": "绿色结晶",
-    "Flare 1": "爆燃1",
-    "Coral Dust": "珊瑚粉末",
-    "Firebolt 2": "火球2",
-    "Longsword": "长剑",
-    "Composite Bow": "复合弓",
-    "Magician Staff": "魔法师法杖",
-    "Slam 2": "强力肘击2",
-    "Carnivalize 1": "魔力转换1",
-    "Woopa Roopa's Staff": "族长法杖",
-    "Woopa Bronze Bell": "乌波青铜铃铛",
-    "Woopa Crystal Scale": "乌波水晶鳞片",
-    "Woopa Roopa Totem": "乌波鲁波图腾",
-    "Joma's Pendant": "裘玛的项链",
-    "Old Scroll": "老旧卷轴",
-    "Armor Enchant Scroll (A Class)": "盔甲卷轴(A级)",
-    "Crown": "乌龟王冠",
-    "Blue Turtle Shell": "蓝色龟壳",
-    "Red Turtle Shell": "红色龟壳",
-    "Weapon Enchant Scroll (A Class)": "武器卷轴(A级)",
-    "Adventurer's Bag": "探险家包包",
-    "Magic Extraction Scroll": "魔力萃取卷轴",
-    "Sharp Eye 1": "迅速反应1",
-    "Sturdy Leather Gloves": "强化皮革手套",
-    "Design Mid Level Bone": "中级骨头设计图",
-    "Old Female Ring": "老旧女用戒指(绑定)",
-    "Donguri Leaf": "圆圆叶",
-    "Palm Cocktail": "棕榈树调酒",
-    "Expert Magician Robe": "专业魔法师袍",
-    "Rage 1": "暴怒1",
-    "Flare 2": "爆燃2",
-    "Swift 1": "伶落身手1",
-    "Toughness 1": "强韧1",
-    "Piece of Bone": "骨头碎片",
-    "Toughness 2": "强韧2",
-    "Bandage": "绷带",
-    "Bone Armor": "骨制盔甲",
-    "Madgar's Heart": "梅德格的心脏(绑定)",
-    "Madgar's Bone": "梅德格的骨头(绑定)",
-    "Swirling Bow": "漩涡弓",
-    "Design High Level Bone": "高级骨头设计图",
-    "Female Bone": "女性骨头(绑定)",
-    "Armor Enchant Scroll (B Class)": "盔甲卷轴(B级)",
-    "Weapon Enchant Scroll (B Class)": "武器卷轴(B级)",
-    "Ancient Treasure": "古代宝藏",
-    "Healing Wave 1": "治愈波1",
-    "Blackskull": "黑色骸骨",
-    "Skull Shield": "骷髅盾",
-    "Sharp Longsword": "锐利的长剑",
-    "Dark Skull": "黑骷髅项链",
-    "Eye of Beholder": "凝视者之眼",
-    "Weakness 2": "弱化防御2",
-    "Dongryu Juice": "圆圆果汁",
-    "Sleepy Kooii Doll": "想睡的库伊娃娃",
-    "Master Magician Robe": "高级魔法师袍",
-    "Kooii Card J": "库伊卡J",
-    "Kooii Card K": "库伊卡K",
-    "Kooii Card Q": "库伊卡Q",
-    "Meditation 2": "冥想2",
-    "Prayer of Protection 1": "守护祷告1",
-    "The Dead's Shroud": "亡者寿衣",
-    "Boiled Leather Armor": "加工皮革盔甲",
-    "Thick Bandage": "厚实绷带",
-    "Well Being Herb Bread": "健康面包",
-    "Design Blackskull Armor": "设计图:黑骸盔甲",
-    "Ice Lance 1": "冰矛1",
-    "Power Gloves": "能量手套",
-    "Kooii Card A": "库伊卡A",
-    "Lizard Leather Armor": "蜥蜴皮衣",
-    "Flame of Kataru 1": "卡塔勒的火焰1",
-    "Sweeping Strikes 1": "强力横扫1",
-    "Lizard Leather": "蜥蜴皮革",
-    "Curse of Doom 2": "破坏之咒2",
-    "Stoneskin 1": "坚石皮肤1",
-    "Great Bow": "巨弓",
-    "Katana": "武士刀",
-    "Novice Shaman's Wand": "新手巫师法杖",
-    "Prayer of Protection 2": "守护祷告2",
-    "Charmed Robe": "咒术袍",
-    "Armor Piece": "盔甲碎片",
-    "Cloak of Death": "死亡披风",
-    "Cloak of Half Death": "濒死披风",
-    "Belt of Regeneration": "再生皮带",
-    "Mana Potion": "中级魔力药水",
-    "Ancient Blood": "古代血液",
-    "Blood-Flower Stem": "血花藤蔓",
-    "Ion Shield": "铁盾",
-    "Multi Shot 2": "多重射击2",
-    "Healing Potion": "中级体力药水",
-    "Ancient Feather": "古代羽毛",
-    "Sweeping Strikes 2": "强力横扫2",
-    "The Dead's Gloves": "亡者手套",
-    "Classic Bow": "角弓",
-    "Viking Sword": "维京剑",
-    "Shaman's Wand": "巫师法杖",
-    "Will of Elemental 2": "强烈意志2",
-    "Guardian's Ring": "守护者戒指",
-    "Shaman's Hat": "巫师帽",
-    "Harden Body 1": "锻炼体力1",
-    "Scale Boots": "鳞片靴",
-    "Amplify Sense 2": "强化反应2",
-    "Will of Elemental 1": "强烈意志1",
-    "Stun 2": "麻痹2",
-    "Oatwill's Leather Gloves": "欧特威尔的皮革手套",
-    "Gladius": "罗马短剑",
-    "Hunter Bow": "猎弓",
-    "Mystic Wand": "神秘巫师法杖",
-    "Ancient Experiment Token": "古代实验日志",
-    "Firestorm 1": "火焰风暴1",
-    "Wingwing Boots": "飞天靴",
-    "Crystal Dust": "水晶粉末",
-    "Crystal": "水晶碎片",
-    "Ancient Crystal": "古代水晶",
-    "Frost Iron Ore": "冻铁矿石",
-    "Yeti's Bone": "雪人骨",
-    "Yeti's Leather": "雪人皮",
-    "Ancient Stone A": "古代石-A",
-    "The Way of Two Hands 3p": "双手活用武器秘籍3p",
-    "Ice Lance 2": "冰矛2",
-    "Flame of Kataru 2": "卡塔勒的火焰2",
-    "Ancient Stone B": "古代石-B",
-    "About Levitation 1p": "空中悬浮秘籍1p",
-    "Stoneskin 2": "坚石皮肤2",
-    "Spirit Dust": "精灵之尘",
-    "Ancient Stone C": "古代石-C",
-    "Crystal Spider Silk": "水晶蜘蛛丝",
-    "Berserk 2": "狂暴2",
-    "Ancient Stone D": "古代石-D",
-    "Design Spirit's Hat": "设计图:精灵帽",
-    "Ancient Stone E": "古代石-E",
-    "Stun 1": "麻痹1",
-    "Healing Wave 2": "治愈波2",
-    "Amplify Sense 1": "强化反应1",
-    "Crystal Shield": "水晶盾",
-    "Bull's-Eye 2p": "百发百中2p",
-    "Snow-Flower Stem": "雪花藤蔓",
-    "Last Resistance 1": "最后抵抗1",
-    "The Way of Two Hands 1p": "双手活用武器秘籍1p",
-    "About Levitation 2p": "空中悬浮秘籍2p",
-    "Bull's-Eye 3p": "百发百中3p",
-    "Blackjuno's Horn": "黑黑朱诺利角",
-    "Ancient Leather": "古代皮革",
-    "Design Blackjuno's Helmet": "设计图:黑黑朱诺头盔",
-    "Sturdy Yeti Armor": "雪人皮衣",
-    "Ancient Stone F": "古代石-F",
-    "Sweeping Strikes 3": "强力横扫3",
-    "Design Snow-Flower Stem Hat": "设计图:雪花藤蔓帽",
-    "Highguard Armor": "高阶护卫盔甲",
-    "Cursed Stone": "被诅咒的石头",
-    "Design Crystal Robe": "设计图:水晶长袍",
-    "Frost Iron Refining Tool": "冻铁提炼道具",
-    "Instinct Stimulus 1": "刺激本能1",
-    "Fatal Attack 1": "致命一击1",
-    "Wadangka's Seal": "瓦当卡之印",
-    "Seruang's Heart": "赛乐亚之心",
-    "Bull's-Eye 1p": "百发百中1p",
-    "The Way of Two Hands 2p": "双手活用武器秘籍2p",
-    "About Levitation 3p": "空中悬浮秘籍3p",
-    "Pirate Gloves": "海盗手套",
-    "Carnivalize 2": "魔力转换2",
-    "Hallway Key": "走廊钥匙",
-    "Pirate Card 10": "海盗卡10",
-    "Captain's Cabin Key": "船长室钥匙",
-    "Pirate Ring": "海盗戒指",
-    "Multi Shot 1": "多重射击1",
-    "Sharp Eye 2": "迅速反应2",
-    "Berserk 1": "狂暴1",
-    "Pirate Card A": "海盗卡A",
-    "Pirate Hat": "海盗帽",
-    "Pirate Necklace": "海盗项链",
-    "Bulldozer's Tail Bone": "凶猛猪尾骨",
-    "Teleport 3": "瞬间移动3",
-    "Wild Charge 2": "疯狂冲刺2",
-    "Kamakee's Beak": "乌鸦喙",
-    "Nutrition Beverage": "营养饮料",
-    "Savage Boots": "野蛮靴",
-    "Raven Feather": "渡鸦羽毛",
-    "Kamakee Token": "乌鸦币",
-    "Impact Shot 2": "强烈一击2",
-    "Carnivalize 3": "魔力转换3",
-    "Toughness 3": "强韧3",
-    "Impact Shot 3": "强烈一击3",
-    "Sharp Eye 3": "迅速反应3",
-    "Slam 3": "强力肘击3",
-    "Flare 3": "爆燃3",
-    "Young Fox's Tail": "小狐狸尾巴",
-    "Last Resistance 2": "最后抵抗2",
-    "Stoneskin 3": "坚石皮肤3",
-    "Flame of Kataru 3": "卡塔勒的火焰3",
-    "Heavy Iron Boots": "钢铁靴",
-    "Tower Shield": "塔盾",
-    "Shield 4": "护身盾牌4",
-    "Phoenix's Eye": "凤凰之眼",
-    "Contaminated Matter": "被污染物资",
-    "Poisonous Bee Sting": "猛毒蜂针",
-    "Soul Powder": "灵魂粉末",
-    "Helm of the Grey Boulder": "白岩头盔",
-    "Cap of the Blue Forest": "丛林帽",
-    "Bandana of the Blue Waterfall": "靛蓝瀑布头巾",
-    "Seal of the Forest Keeper": "森林守护者的印章",
-    "Armor of the Grey Boulder": "白岩盔甲",
-    "Robe of the Blue Waterfall": "靛蓝瀑布长袍",
-    "Light Armor of the Blue Forest": "丛林轻甲",
-    "Strange Treasure": "可疑的宝物",
-    "Cotton Cloth": "棉布料",
-    "Abrasive": "研磨剂",
-    "Bee Sting": "蜜蜂毒刺",
-    "Soul Drain Shot 1": "灵魂射击1",
-    "Silence 1": "沉默1",
-    "Iron Ore": "铁矿石",
-    "Divine Thread": "神圣线圈",
-    "Heavy Iron Gauntlet": "钢铁手套",
-    "Desert Mercenary Gloves": "沙漠佣兵手套",
-    "Rapier": "细剑",
-    "Horn Bow": "怒弓",
-    "Spiritual Wand": "神力法杖",
-    "Soul Drain Shot 2": "灵魂射击2",
-    "Thick Leather": "厚实的皮革",
-    "Enhancer": "强化剂",
-    "Shout of Calmness 1": "平静呐喊1",
-    "Clarity 1": "补充气力 1",
-    "Sara's Blessing 1": "塞拉的祝福1",
-    "Wand of Chaos": "混沌法杖",
-    "Iron Covered Shield": "铁甲盾",
-    "Shout of Calmness 2": "平静呐喊2",
-    "Sara's Blessing 2": "塞拉的祝福2",
-    "Stampede 1": "惊逃1",
-    "Battle Bow": "斗弓",
-    "Rune Blade": "符文刃",
-    "Stampede 2": "惊逃2",
-    "Thread of Magic": "魔法线团",
-    "Darksteel Sword": "玄铁剑",
-    "Dezoruba's Bow": "戴楚拜伊的弓",
-    "Wand of Tranquility": "宁静法杖",
-    "Dezoruba's Design": "戴楚拜伊的设计图",
-    "Hellfire 1": "炼狱火道1",
-    "Neutralize 1": "无效化1",
-    "Wingfril's Treasure": "羽妖的宝物",
-    "HQ Abrasive": "高级研磨剂",
-    "Darksteel Shield": "玄铁盾",
-    "Heavy Strike 2": "强击2",
-    "Neutralize 2": "无效化2",
-    "Gosumi's Spine": "刺猬的刺",
-    "Silence 2": "沉默2",
-    "Sand-Tree Leaf": "沙树叶",
-    "Clarity 2": "补充气力2",
-    "Jode's Design": "佐德的设计图",
-    "Hellfire 2": "炼狱火道2",
-    "Special Cotton Cloth": "特殊棉布料",
-    "Black Iron Ore": "黑铁矿石",
-    "Power Shot 1": "强力射击1",
-    "Power Shot 2": "强力射击2",
-    "Hole of Silence": "沉默之穴",
-    "Heavy Strike 1": "强击1",
-    "War Sword": "战争之剑",
-    "War Bow": "战弓",
-    "Shadow Bow": "暗影弓",
-    "Staff Struck by Lightning": "雷击木杖",
-    "Kaisor Sword": "凯萨剑",
-    "Armor Enchant Scroll (S Class)": "盔甲卷轴(S级)",
-    "Weapon Enchant Scroll (S Class)": "武器卷轴(S级)",
-    "Mother Nature": "大地之母项链",
-    "Froggy Blood": "呱呱蛙的血",
-    "Monk's Gloves": "修道士手套",
-    "Poison Pouch": "剧毒囊",
-    "Super Mana Potion": "超级魔力药水",
-    "Super Healing Potion": "超级体力药水",
-    "Swamp Treasure": "湿地宝物",
-    "Passionate Cloak": "狂热披风",
-    "Harden Body 2": "锻炼体力2",
-    "Black Ooze": "黑色汁液",
-    "Magical Robe": "魔法布料",
-    "Shattered Mask Piece": "破碎的面具碎片",
-    "Essence of Corruption": "堕落精髓",
-    "Special Magical Robe": "特殊魔法布料",
-    "Maze Treasure": "迷宫宝物",
-    "Faded Ring": "褪色戒指",
-    "Hopeful Magic Essence": "希望魔力精髓",
-    "Snowy Field's Cursed Boots": "雪原诅咒长靴",
-    "Toxic Boots": "剧毒长靴",
-    "Sharkun Greaves": "夏库胫甲",
-    "Crown Rock Experiment Bottle": "石冠实验药瓶",
-    "Ancient Magic Powder": "古代魔法粉末",
-    "Star Piece": "星星碎片",
-    "Star Powder": "星星粉末",
-    "Snowfield Altar Treasure": "雪原祭坛宝物",
-    "Broken Necklace": "毁坏的项链",
-    "Broken Magic Stone": "破碎的魔法石",
-    "Sky Bat Wing": "东方蝠翅膀",
-    "Alloy Ring": "合金戒指",
-    "Gemstone": "原石",
-    "Nut": "螺帽",
-    "Bolt": "螺栓",
-    "Magic Marble": "魔力珠",
-    "Belt of Belief": "信念皮带",
-    "Gunpowder": "火药粉末",
-    "Pocket of Poison": "毒袋",
-    "Shinning Metal": "闪耀金属",
-    "Magic Rune": "魔力符文",
-    "Fatal Attack 2": "致命一击2",
-    "Element Crystal": "元素结晶",
-    "Monk's Boots": "修道士长靴",
-    "Stone Powder": "石粉",
-    "Prayer of Protection 3": "守护祷告3",
-    "Firestorm 2": "火焰风暴2",
-    "Ancient Wood": "古代树木",
-    "Pure Element": "纯洁元素",
-    "Shinning Magic Stone": "闪耀的魔法石",
-    "Iron Golem's Gloves": "钢铁魔像手套",
-    "Gargoyle Wing": "滴水嘴兽翅膀",
-    "Scout Gloves": "童军手套",
-    "Sage's Gloves": "贤者手套",
-    "Shoes of Tranquility": "宁静鞋",
-    "Titanium Ingot": "钛合金铸块",
-    "Titanium Boots": "钛合金靴",
-    "Dark Piece": "黑暗碎片",
-    "Fallen Magic Stone": "堕落的魔法石",
-    "Soul Stone": "灵魂石",
-    "The Perfect Darkness": "完美黑暗",
-    "Boots of Darkness": "暗黑鞋",
-    "Caligo's Scale": "克里高的鳞片",
-    "Caligo's Bone": "克里高的骨头",
-    "Caligo's Hands": "克里高的手",
-    "Caligo Boots": "克里高长靴",
-    "Caligo Gloves": "克里高手套",
-    "Otherworld Belt": "异界皮带",
-    "Abyss Guard Token": "深渊保卫团币",
-    "Seed Extraction Liquid": "种子萃取液",
-    "Grudgeful Parchment": "怨气浓厚的羊皮纸",
-    "Mana Regeneration Potion": "魔力再生药水",
-    "Barbeque": "烤肉串",
-    "Health Regeneration Potion": "体力再生药水",
-    "Greater Restoration Potion": "高级恢复药水",
-    "Mana Core": "魔核",
-    "Magic Power Breath": "魔力之息",
-    "Stained Experiment Journal": "肮脏的实验日志",
-    "Magic Power Scroll": "魔力卷轴",
-    "Mercy Rune": "慈悲符文",
-    "Penitence Rune": "忏悔符文",
-    "Resurrection Rune": "复活符文",
-    "Greater Healing Potion": "高级体力药水",
-    "Enchanted Bone": "蕴含魔力的骨头",
-    "Enchanted Leather": "蕴含魔力的皮革",
-    "Greater Mana Potion": "高级魔力药水",
-    "Transparent Scale": "透明鳞片",
-    "Velvet Cloth": "羽绒布料",
-    "Broken Molar": "破碎的臼齿",
-    "Discolored Heart": "变色心脏",
-    "Prohibited Experiment Journal": "禁止阅览的实验日志",
-    "Spartan Shield": "斯巴达盾牌",
-    "Execution Rune": "酷刑符文",
-    "Torture Rune": "审问符文",
-    "Bio Magic Power Rune": "生物魔力符文",
-    "Five-Colored Leather": "五色皮革",
-    "Soft Light Ore": "弱光矿石",
-    "Crude Magic Crystal": "劣质的魔力水晶",
-    "Butterfly Wings": "蝴蝶翅膀",
-    "Elongated Ears": "细长耳朵",
-    "Moss Leather": "苔藓皮革",
-    "Inherited Book of Knowledge": "传承的知识书",
-    "Areuke's Antenna": "亚勒凯的触须",
-    "Morty's Ear": "莫提的耳朵",
-    "Enchanted Leather (Morphosis)": "魔力苔藓皮革",
-    "Pink Magic Crystal": "粉红魔力水晶",
-    "Dry Magic Crystal": "干燥魔力水晶",
-    "Actaemon's Horn": "阿克泰萌的角",
-    "Pure Magic Orb": "纯净的魔力球",
-    "Protector's Hand Skin": "护卫兵的手部护具",
-    "Chainstrike Gloves": "链击手套",
-    "Illusionist's Gloves": "幻术师的手部护具",
-    "Magic Stem": "魔力根茎",
-    "Charge Core": "电子核心",
-    "Surge Cycle": "高压电车",
-    "Crown Duck Egg": "皇冠鸭蛋",
-    "Frozen Crystal": "冷却的结晶碎片",
-    "Leafrog Tail": "叶形蛙的尾巴",
-    "Circuit Heart": "回路心脏",
-    "Sikinel Horn": "西格诺的角",
-    "Belt of Rough Roots": "粗糙根蔓皮带",
-    "Pledger's Belt": "契约者的皮带",
-    "Belt of Dry Magic": "契约者的皮带",
-    "Soul Lich Mask": "索尔里奇的假面",
-    "World Tree Bark Armor": "世界树树皮盔甲",
-    "World Tree Branch Armor": "世界树树根盔甲",
-    "World Tree Leaf Robe": "世界树树叶长袍",
-    "Box Flowing with Mana": "充满魔力的箱子",
-    "Destroyed Paper": "破碎的纸张",
-    "Seawater of Oblivion": "遗忘海水",
-    "Worn Book Cover": "破旧书皮",
-    "Shabby Bookmark": "旧书签",
-    "Horn of Oblivion": "遗忘之角",
-    "Torn Parchment Piece": "撕裂的羊皮纸碎片",
-    "Pledger's Horn": "立约者之角",
-    "Corrupted Memory": "被污染的记忆",
-    "Dagger Fragment": "破碎的短刀碎片",
-    "Dissolved Memory": "遗失的记忆",
-    "Rune Piece": "符文碎片",
-    "Broken Oath": "裂开的立约书",
-    "Pure Knowledge": "纯净的知识",
-    "Cold Imbue 4": "赋予寒气4",
-    "Chainstrike 4": "连击4",
-    "Leap 4": "跳跃4",
-    "Electric Imbue 2": "赋予闪电2",
-    "Electric Imbue 3": "赋予闪电3",
-    "Breaker's Strike 2": "武术一击2", 
-    "Breaker's Strike 3": "武术一击3",
-    "Elemental Cycle 2": "元素循环2",
-    "Elemental Cycle 3": "元素循环3",
-    "Baekha's Strike 2": "白荷之拳2",
-    "Baekha's Strike 3": "白荷之拳3",
-    "Elemental Release 2": "元素释放2",
-    "Impact Training 2": "冲击锻炼2",
-    "Impact Training 3": "冲击锻炼3",
-    "Critical Insight 2": "要害洞察2", 
-    "Critical Insight 3": "要害洞察3",
-    "Sixth Sense 2": "预感2",
-    "Atonement Rune": "赎罪符文",
-    "Corruption Rune": "堕落符文",
-    "Supremacy Rune": "霸道符文",
-    "Leather Robe": "皮革道服",
-    "Coral Robe": "珊瑚道服",
-    "Combat Robe": "格斗道服",
-    "Yellow Canola Robe": "油菜花道服",
-    "World Tree Robe": "世界树道服",
-    "Yellow Canola Hat": "油菜花帽",
-    "Wooden Guard": "木制护身符",
-    "Coral Guard": "珊瑚护身符",
-    "Woopa Roopa's Guard": "族长护身符",
-    "Purifying Guard": "净化护身符",
-    "Frost Guard": "霜之护身符",
-    "Storm Guard": "暴风护身符",
-    "Red Guard": "赤红护身符",
-    "Butterfly Guard": "蝴蝶护身符",
-    "Crown Rock Guard": "皇冠岩护身符",
-    "Relic of Infinity": "无极文物",
-    "Elemental Gloves": "元素手套",
-    "Cloud Gloves": "云之手套",
-    "Lightning Gloves": "雷电手套",
-    "Bitter Cold Gloves": "严寒手套",
-    "Chainstrike Gloves b": "连续攻击手套",
-    "Yellow Canola Boots": "油菜花长靴",
-    "Cloud Boots" : "云之长靴",
-    "Bitter Cold Boots": "严寒长靴",
-    "Thule's Boots": "图勒长靴",
-    "Teal Fragment Belt": "青绿碎片腰带",
-    "Wooden Tonfa": "木制拐棍",
-    "Dull Knuckles": "钝指虎",
-    "Bulldozer Tonfa": "凶猛猪拐棍",
-    "Breaker's Knuckles": "武术家指虎",
-    "Shiny Knuckle": "闪耀指虎",
-    "Bone Tonfa": "骨拐棍",
-    "Storm Whip": "暴风鞭",
-    "Iron Fist": "铁之拳",
-    "Fang of Dusk": "黄昏之牙",
-    "Thundersteel": "雷钢",
-    "War Knuckle": "战斗指虎",
-    "Shatter Fist": "粉碎之拳"
-    
-
+  "dropMap": 
+  {
+    "-": {
+      "cn": "无",
+      "en": "-",
+      "kr": ""
+    },
+    "Gold": {
+      "cn": "金币",
+      "en": "Gold",
+      "kr": ""
+    },
+    "Kooii Doll": {
+      "cn": "库伊娃娃",
+      "en": "Kooii Doll",
+      "kr": ""
+    },
+    "Kooii Voucher": {
+      "cn": "库伊币",
+      "en": "Kooii Voucher",
+      "kr": ""
+    },
+    "Clover": {
+      "cn": "幸运草",
+      "en": "Clover",
+      "kr": ""
+    },
+    "Lollipop": {
+      "cn": "棒棒糖",
+      "en": "Lollipop",
+      "kr": ""
+    },
+    "Cotton Robe": {
+      "cn": "棉制长袍",
+      "en": "Cotton Robe",
+      "kr": ""
+    },
+    "Kooii Card 10": {
+      "cn": "库伊卡10",
+      "en": "Kooii Card 10",
+      "kr": ""
+    },
+    "Donguryu": {
+      "cn": "圆圆果",
+      "en": "Donguryu",
+      "kr": ""
+    },
+    "Frayed Robe": {
+      "cn": "粗布衣",
+      "en": "Frayed Robe",
+      "kr": ""
+    },
+    "Ruined Leather": {
+      "cn": "粗糙皮革",
+      "en": "Ruined Leather",
+      "kr": ""
+    },
+    "Wild Boar Meat": {
+      "cn": "野猪肉",
+      "en": "Wild Boar Meat",
+      "kr": ""
+    },
+    "Small Treasure Box": {
+      "cn": "小宝箱",
+      "en": "Small Treasure Box",
+      "kr": ""
+    },
+    "Wild Boar's Tail Hair": {
+      "cn": "野猪尾巴毛",
+      "en": "Wild Boar's Tail Hair",
+      "kr": ""
+    },
+    "Practice Sword": {
+      "cn": "练习用剑",
+      "en": "Practice Sword",
+      "kr": ""
+    },
+    "Sparkling Berry": {
+      "cn": "闪亮果实",
+      "en": "Sparkling Berry",
+      "kr": ""
+    },
+    "Wooden Shortbow": {
+      "cn": "木质短弓",
+      "en": "Wooden Shortbow",
+      "kr": ""
+    },
+    "Lesser Mana Potion": {
+      "cn": "低级魔力药水",
+      "en": "Lesser Mana Potion",
+      "kr": ""
+    },
+    "Wild Boar Barbeque": {
+      "cn": "野猪烤肉串",
+      "en": "Wild Boar Barbeque",
+      "kr": ""
+    },
+    "Lesser Healing Potion": {
+      "cn": "低级体力药水",
+      "en": "Lesser Healing Potion",
+      "kr": ""
+    },
+    "Heavy Leather": {
+      "cn": "坚韧皮革",
+      "en": "Heavy Leather",
+      "kr": ""
+    },
+    "Canine Ring": {
+      "cn": "臼齿戒指",
+      "en": "Canine Ring",
+      "kr": ""
+    },
+    "Small Bag": {
+      "cn": "小包包",
+      "en": "Small Bag",
+      "kr": ""
+    },
+    "Pet Crystal": {
+      "cn": "宠物水晶",
+      "en": "Pet Crystal",
+      "kr": ""
+    },
+    "Bulldozer's Tooth": {
+      "cn": "凶猛猪獠牙",
+      "en": "Bulldozer's Tooth",
+      "kr": ""
+    },
+    "Bull Rush 2": {
+      "cn": "急速冲刺2",
+      "en": "Bull Rush 2",
+      "kr": ""
+    },
+    "Cure Poison 2": {
+      "cn": "治愈2",
+      "en": "Cure Poison 2",
+      "kr": ""
+    },
+    "Mystic Stone": {
+      "cn": "神秘石",
+      "en": "Mystic Stone",
+      "kr": ""
+    },
+    "Bulldozer Cloak": {
+      "cn": "凶猛猪披风",
+      "en": "Bulldozer Cloak",
+      "kr": ""
+    },
+    "Canine Tooth of Madness": {
+      "cn": "疯狂獠牙",
+      "en": "Canine Tooth of Madness",
+      "kr": ""
+    },
+    "Armor Enchant Scroll (D Class)": {
+      "cn": "盔甲卷轴(D级)",
+      "en": "Armor Enchant Scroll (D Class)",
+      "kr": ""
+    },
+    "Mushroom Spore": {
+      "cn": "蘑菇孢子",
+      "en": "Mushroom Spore",
+      "kr": ""
+    },
+    "Dried Mushroom": {
+      "cn": "干燥蘑菇",
+      "en": "Dried Mushroom",
+      "kr": ""
+    },
+    "Old Feather": {
+      "cn": "古老羽毛",
+      "en": "Old Feather",
+      "kr": ""
+    },
+    "Flame Shock 3": {
+      "cn": "火花冲击3",
+      "en": "Flame Shock 3",
+      "kr": ""
+    },
+    "Blunt Shortsword": {
+      "cn": "钝短剑",
+      "en": "Blunt Shortsword",
+      "kr": ""
+    },
+    "Potion Bag": {
+      "cn": "药水包包",
+      "en": "Potion Bag",
+      "kr": ""
+    },
+    "Wooden Shield": {
+      "cn": "木盾",
+      "en": "Wooden Shield",
+      "kr": ""
+    },
+    "Weapon Enchant Scroll (D Class)": {
+      "cn": "武器卷轴(D级)",
+      "en": "Weapon Enchant Scroll (D Class)",
+      "kr": ""
+    },
+    "Double Shot 3": {
+      "cn": "双发射击3",
+      "en": "Double Shot 3",
+      "kr": ""
+    },
+    "Seed": {
+      "cn": "种子",
+      "en": "Seed",
+      "kr": ""
+    },
+    "Mystic Seed": {
+      "cn": "神秘种子",
+      "en": "Mystic Seed",
+      "kr": ""
+    },
+    "Wooden Staff": {
+      "cn": "木杖",
+      "en": "Wooden Staff",
+      "kr": ""
+    },
+    "Green Powder": {
+      "cn": "绿色粉末",
+      "en": "Green Powder",
+      "kr": ""
+    },
+    "Apprentice Magician Robe": {
+      "cn": "进阶魔法师袍",
+      "en": "Apprentice Magician Robe",
+      "kr": ""
+    },
+    "Shift 2": {
+      "cn": "切换方位2",
+      "en": "Shift 2",
+      "kr": ""
+    },
+    "Spider Silk": {
+      "cn": "蜘蛛丝",
+      "en": "Spider Silk",
+      "kr": ""
+    },
+    "Damaged Pamphlet": {
+      "cn": "撕裂的书本",
+      "en": "Damaged Pamphlet",
+      "kr": ""
+    },
+    "Wild Swing 3": {
+      "cn": "疯狂剑舞3",
+      "en": "Wild Swing 3",
+      "kr": ""
+    },
+    "Sturdy Leather Armor": {
+      "cn": "强化皮革盔甲",
+      "en": "Sturdy Leather Armor",
+      "kr": ""
+    },
+    "Ice Prison 2": {
+      "cn": "冰牢2",
+      "en": "Ice Prison 2",
+      "kr": ""
+    },
+    "Parry 3": {
+      "cn": "阻挡攻击3",
+      "en": "Parry 3",
+      "kr": ""
+    },
+    "Spider Silk Bag": {
+      "cn": "蜘蛛丝包包",
+      "en": "Spider Silk Bag",
+      "kr": ""
+    },
+    "Ganoderma Lucidum": {
+      "cn": "灵芝",
+      "en": "Ganoderma Lucidum",
+      "kr": ""
+    },
+    "Strange Hat": {
+      "cn": "奇特帽子",
+      "en": "Strange Hat",
+      "kr": ""
+    },
+    "Ensnare 2": {
+      "cn": "圈套2",
+      "en": "Ensnare 2",
+      "kr": ""
+    },
+    "Sparkling Necklace": {
+      "cn": "预言项链",
+      "en": "Sparkling Necklace",
+      "kr": ""
+    },
+    "Freezing Trap 3": {
+      "cn": "冰冻3",
+      "en": "Freezing Trap 3",
+      "kr": ""
+    },
+    "Wild Charge 1": {
+      "cn": "疯狂冲刺1",
+      "en": "Wild Charge 1",
+      "kr": ""
+    },
+    "Cloak of Health": {
+      "cn": "体力披风",
+      "en": "Cloak of Health",
+      "kr": ""
+    },
+    "Fungiskin Belt": {
+      "cn": "蘑菇腰带",
+      "en": "Fungiskin Belt",
+      "kr": ""
+    },
+    "Taunting Blow 2": {
+      "cn": "挑衅2",
+      "en": "Taunting Blow 2",
+      "kr": ""
+    },
+    "Phantom's Kneecap": {
+      "cn": "幽灵的膝盖骨",
+      "en": "Phantom's Kneecap",
+      "kr": ""
+    },
+    "Freezing Trap 2": {
+      "cn": "冰冻2",
+      "en": "Freezing Trap 2",
+      "kr": ""
+    },
+    "Drowsiness 1": {
+      "cn": "疲乏无力1",
+      "en": "Drowsiness 1",
+      "kr": ""
+    },
+    "Mushroom Robe": {
+      "cn": "蘑菇长袍",
+      "en": "Mushroom Robe",
+      "kr": ""
+    },
+    "Fungiskin Shield": {
+      "cn": "蘑菇盾牌",
+      "en": "Fungiskin Shield",
+      "kr": ""
+    },
+    "Piece of Old Cloth A": {
+      "cn": "旧布碎片A",
+      "en": "Piece of Old Cloth A",
+      "kr": ""
+    },
+    "Piece of Old Cloth B": {
+      "cn": "旧布碎片B",
+      "en": "Piece of Old Cloth B",
+      "kr": ""
+    },
+    "Piece of Old Cloth C": {
+      "cn": "旧布碎片C",
+      "en": "Piece of Old Cloth C",
+      "kr": ""
+    },
+    "Teleport 2": {
+      "cn": "瞬间移动2",
+      "en": "Teleport 2",
+      "kr": ""
+    },
+    "Old Box": {
+      "cn": "破旧宝箱",
+      "en": "Old Box",
+      "kr": ""
+    },
+    "Woopa Pork Meat": {
+      "cn": "乌波猪脚",
+      "en": "Woopa Pork Meat",
+      "kr": ""
+    },
+    "Hard Scale": {
+      "cn": "坚硬的壳",
+      "en": "Hard Scale",
+      "kr": ""
+    },
+    "Small Coral": {
+      "cn": "小珊瑚",
+      "en": "Small Coral",
+      "kr": ""
+    },
+    "Pirate Coin": {
+      "cn": "海盗铸币",
+      "en": "Pirate Coin",
+      "kr": ""
+    },
+    "Mitten": {
+      "cn": "连指手套",
+      "en": "Mitten",
+      "kr": ""
+    },
+    "Round Shield": {
+      "cn": "圆盾",
+      "en": "Round Shield",
+      "kr": ""
+    },
+    "Concentrate 3": {
+      "cn": "全神贯注3",
+      "en": "Concentrate 3",
+      "kr": ""
+    },
+    "Shield 3": {
+      "cn": "护身盾牌3",
+      "en": "Shield 3",
+      "kr": ""
+    },
+    "Hemorrhage 3": {
+      "cn": "出血3",
+      "en": "Hemorrhage 3",
+      "kr": ""
+    },
+    "Mystic Oil": {
+      "cn": "神秘的油",
+      "en": "Mystic Oil",
+      "kr": ""
+    },
+    "Armor Enchant Scroll (C Class)": {
+      "cn": "盔甲卷轴(C级)",
+      "en": "Armor Enchant Scroll (C Class)",
+      "kr": ""
+    },
+    "Weapon Enchant Scroll (C Class)": {
+      "cn": "武器卷轴(C级)",
+      "en": "Weapon Enchant Scroll (C Class)",
+      "kr": ""
+    },
+    "Dried Soil": {
+        "cn": "干燥土壤",
+        "en": "Dried Soil",
+        "kr": ""
+    },
+    "Unknown Soil": {
+        "cn": "未知土壤",
+        "en": "Unknown Soil",
+        "kr": ""
+    },
+    "Oak Tree Staff": {
+        "cn": "桦树杖",
+        "en": "Oak Tree Staff",
+        "kr": ""
+    },
+    "Woopa-Roopa Scale": {
+        "cn": "乌波鲁波鳞片",
+        "en": "Woopa-Roopa Scale",
+        "kr": ""
+    },
+    "Red Coral": {
+        "cn": "火红珊瑚",
+        "en": "Red Coral",
+        "kr": ""
+    },
+    "Light Healing 3": {
+        "cn": "光明疗愈3",
+        "en": "Light Healing 3",
+        "kr": ""
+    },
+    "Long Bow": {
+        "cn": "长弓",
+        "en": "Long Bow",
+        "kr": ""
+    },
+    "Green Crystal": {
+        "cn": "绿色结晶",
+        "en": "Green Crystal",
+        "kr": ""
+    },
+    "Flare 1": {
+        "cn": "爆燃1",
+        "en": "Flare 1",
+        "kr": ""
+    },
+    "Coral Dust": {
+        "cn": "珊瑚粉末",
+        "en": "Coral Dust",
+        "kr": ""
+    },
+    "Firebolt 2": {
+        "cn": "火球2",
+        "en": "Firebolt 2",
+        "kr": ""
+    },
+    "Longsword": {
+        "cn": "长剑",
+        "en": "Longsword",
+        "kr": ""
+    },
+    "Composite Bow": {
+        "cn": "复合弓",
+        "en": "Composite Bow",
+        "kr": ""
+    },
+    "Magician Staff": {
+        "cn": "魔法师法杖",
+        "en": "Magician Staff",
+        "kr": ""
+    },
+    "Slam 2": {
+        "cn": "强力肘击2",
+        "en": "Slam 2",
+        "kr": ""
+    },
+    "Carnivalize 1": {
+        "cn": "魔力转换1",
+        "en": "Carnivalize 1",
+        "kr": ""
+    },
+    "Woopa Roopa's Staff": {
+        "cn": "族长法杖",
+        "en": "Woopa Roopa's Staff",
+        "kr": ""
+    },
+    "Woopa Bronze Bell": {
+        "cn": "乌波青铜铃铛",
+        "en": "Woopa Bronze Bell",
+        "kr": ""
+    },
+    "Woopa Crystal Scale": {
+        "cn": "乌波水晶鳞片",
+        "en": "Woopa Crystal Scale",
+        "kr": ""
+    },
+    "Woopa Roopa Totem": {
+        "cn": "乌波鲁波图腾",
+        "en": "Woopa Roopa Totem",
+        "kr": ""
+    },
+    "Joma's Pendant": {
+        "cn": "裘玛的项链",
+        "en": "Joma's Pendant",
+        "kr": ""
+    },
+    "Old Scroll": {
+        "cn": "老旧卷轴",
+        "en": "Old Scroll",
+        "kr": ""
+    },
+    "Armor Enchant Scroll (A Class)": {
+        "cn": "盔甲卷轴(A级)",
+        "en": "Armor Enchant Scroll (A Class)",
+        "kr": ""
+    },
+    "Crown": {
+        "cn": "乌龟王冠",
+        "en": "Crown",
+        "kr": ""
+    },
+    "Blue Turtle Shell": {
+        "cn": "蓝色龟壳",
+        "en": "Blue Turtle Shell",
+        "kr": ""
+    },
+    "Red Turtle Shell": {
+        "cn": "红色龟壳",
+        "en": "Red Turtle Shell",
+        "kr": ""
+    },
+    "Weapon Enchant Scroll (A Class)": {
+        "cn": "武器卷轴(A级)",
+        "en": "Weapon Enchant Scroll (A Class)",
+        "kr": ""
+    },
+    "Adventurer's Bag": {
+        "cn": "探险家包包",
+        "en": "Adventurer's Bag",
+        "kr": ""
+    },
+    "Magic Extraction Scroll": {
+        "cn": "魔力萃取卷轴",
+        "en": "Magic Extraction Scroll",
+        "kr": ""
+    },
+    "Sharp Eye 1": {
+        "cn": "迅速反应1",
+        "en": "Sharp Eye 1",
+        "kr": ""
+    },
+    "Sturdy Leather Gloves": {
+        "cn": "强化皮革手套",
+        "en": "Sturdy Leather Gloves",
+        "kr": ""
+    },
+    "Design Mid Level Bone": {
+        "cn": "中级骨头设计图",
+        "en": "Design Mid Level Bone",
+        "kr": ""
+    },
+    "Old Female Ring": {
+        "cn": "老旧女用戒指(绑定)",
+        "en": "Old Female Ring",
+        "kr": ""
+    },
+    "Donguri Leaf": {
+        "cn": "圆圆叶",
+        "en": "Donguri Leaf",
+        "kr": ""
+    },
+    "Palm Cocktail": {
+        "cn": "棕榈树调酒",
+        "en": "Palm Cocktail",
+        "kr": ""
+    },
+    "Expert Magician Robe": {
+        "cn": "专业魔法师袍",
+        "en": "Expert Magician Robe",
+        "kr": ""
+    },
+    "Rage 1": {
+        "cn": "暴怒1",
+        "en": "Rage 1",
+        "kr": ""
+    },
+    "Flare 2": {
+        "cn": "爆燃2",
+        "en": "Flare 2",
+        "kr": ""
+    },
+    "Swift 1": {
+        "cn": "伶落身手1",
+        "en": "Swift 1",
+        "kr": ""
+    },
+    "Toughness 1": {
+        "cn": "强韧1",
+        "en": "Toughness 1",
+        "kr": ""
+    },
+    "Piece of Bone": {
+        "cn": "骨头碎片",
+        "en": "Piece of Bone",
+        "kr": ""
+    },
+    "Toughness 2": {
+        "cn": "强韧2",
+        "en": "Toughness 2",
+        "kr": ""
+    },
+    "Bandage": {
+        "cn": "绷带",
+        "en": "Bandage",
+        "kr": ""
+    },
+    "Bone Armor": {
+        "cn": "骨制盔甲",
+        "en": "Bone Armor",
+        "kr": ""
+    },
+    "Madgar's Heart": {
+        "cn": "梅德格的心脏(绑定)",
+        "en": "Madgar's Heart",
+        "kr": ""
+    },
+    "Madgar's Bone": {
+        "cn": "梅德格的骨头(绑定)",
+        "en": "Madgar's Bone",
+        "kr": ""
+    },
+    "Swirling Bow": {
+        "cn": "漩涡弓",
+        "en": "Swirling Bow",
+        "kr": ""
+    },
+    "Design High Level Bone": {
+        "cn": "高级骨头设计图",
+        "en": "Design High Level Bone",
+        "kr": ""
+    },
+    "Female Bone": {
+        "cn": "女性骨头(绑定)",
+        "en": "Female Bone",
+        "kr": ""
+    },
+    "Armor Enchant Scroll (B Class)": {
+        "cn": "盔甲卷轴(B级)",
+        "en": "Armor Enchant Scroll (B Class)",
+        "kr": ""
+    },
+    "Weapon Enchant Scroll (B Class)": {
+        "cn": "武器卷轴(B级)",
+        "en": "Weapon Enchant Scroll (B Class)",
+        "kr": ""
+    },
+    "Ancient Treasure": {
+        "cn": "古代宝藏",
+        "en": "Ancient Treasure",
+        "kr": ""
+    },
+    "Healing Wave 1": {
+        "cn": "治愈波1",
+        "en": "Healing Wave 1",
+        "kr": ""
+    },
+    "Blackskull": {
+        "cn": "黑色骸骨",
+        "en": "Blackskull",
+        "kr": ""
+    },
+    "Skull Shield": {
+        "cn": "骷髅盾",
+        "en": "Skull Shield",
+        "kr": ""
+    },
+    "Sharp Longsword": {
+        "cn": "锐利的长剑",
+        "en": "Sharp Longsword",
+        "kr": ""
+    },
+    "Dark Skull": {
+        "cn": "黑骷髅项链",
+        "en": "Dark Skull",
+        "kr": ""
+    },
+    "Eye of Beholder": {
+        "cn": "凝视者之眼",
+        "en": "Eye of Beholder",
+        "kr": ""
+    },
+    "Weakness 2": {
+        "cn": "弱化防御2",
+        "en": "Weakness 2",
+        "kr": ""
+    },
+    "Dongryu Juice": {
+        "cn": "圆圆果汁",
+        "en": "Dongryu Juice",
+        "kr": ""
+    },
+    "Sleepy Kooii Doll": {
+        "cn": "想睡的库伊娃娃",
+        "en": "Sleepy Kooii Doll",
+        "kr": ""
+    },
+    "Master Magician Robe": {
+        "cn": "高级魔法师袍",
+        "en": "Master Magician Robe",
+        "kr": ""
+    },
+    "Kooii Card J": {
+        "cn": "库伊卡J",
+        "en": "Kooii Card J",
+        "kr": ""
+    },
+    "Kooii Card K": {
+        "cn": "库伊卡K",
+        "en": "Kooii Card K",
+        "kr": ""
+    },
+    "Kooii Card Q": {
+        "cn": "库伊卡Q",
+        "en": "Kooii Card Q",
+        "kr": ""
+    },
+    "Meditation 2": {
+        "cn": "冥想2",
+        "en": "Meditation 2",
+        "kr": ""
+    },
+    "Prayer of Protection 1": {
+        "cn": "守护祷告1",
+        "en": "Prayer of Protection 1",
+        "kr": ""
+    },
+    "The Dead's Shroud": {
+        "cn": "亡者寿衣",
+        "en": "The Dead's Shroud",
+        "kr": ""
+    },
+    "Boiled Leather Armor": {
+        "cn": "加工皮革盔甲",
+        "en": "Boiled Leather Armor",
+        "kr": ""
+    },
+    "Thick Bandage": {
+        "cn": "厚实绷带",
+        "en": "Thick Bandage",
+        "kr": ""
+    },
+    "Well Being Herb Bread": {
+        "cn": "健康面包",
+        "en": "Well Being Herb Bread",
+        "kr": ""
+    },
+    "Design Blackskull Armor": {
+        "cn": "设计图:黑骸盔甲",
+        "en": "Design Blackskull Armor",
+        "kr": ""
+    },
+    "Ice Lance 1": {
+        "cn": "冰矛1",
+        "en": "Ice Lance 1",
+        "kr": ""
+    },
+    "Power Gloves": {
+        "cn": "能量手套",
+        "en": "Power Gloves",
+        "kr": ""
+    },
+    "Kooii Card A": {
+        "cn": "库伊卡A",
+        "en": "Kooii Card A",
+        "kr": ""
+    },
+    "Lizard Leather Armor": {
+        "cn": "蜥蜴皮衣",
+        "en": "Lizard Leather Armor",
+        "kr": ""
+    },
+    "Flame of Kataru 1": {
+        "cn": "卡塔勒的火焰1",
+        "en": "Flame of Kataru 1",
+        "kr": ""
+    },
+    "Sweeping Strikes 1": {
+        "cn": "强力横扫1",
+        "en": "Sweeping Strikes 1",
+        "kr": ""
+    },
+    "Lizard Leather": {
+        "cn": "蜥蜴皮革",
+        "en": "Lizard Leather",
+        "kr": ""
+    },
+    "Curse of Doom 2": {
+        "cn": "破坏之咒2",
+        "en": "Curse of Doom 2",
+        "kr": ""
+    },
+    "Stoneskin 1": {
+        "cn": "坚石皮肤1",
+        "en": "Stoneskin 1",
+        "kr": ""
+    },
+    "Great Bow": {
+        "cn": "巨弓",
+        "en": "Great Bow",
+        "kr": ""
+    },
+    "Katana": {
+        "cn": "武士刀",
+        "en": "Katana",
+        "kr": ""
+    },
+    "Novice Shaman's Wand": {
+        "cn": "新手巫师法杖",
+        "en": "Novice Shaman's Wand",
+        "kr": ""
+    },
+    "Prayer of Protection 2": {
+        "cn": "守护祷告2",
+        "en": "Prayer of Protection 2",
+        "kr": ""
+    },
+    "Charmed Robe": {
+        "cn": "咒术袍",
+        "en": "Charmed Robe",
+        "kr": ""
+    },
+    "Armor Piece": {
+        "cn": "盔甲碎片",
+        "en": "Armor Piece",
+        "kr": ""
+    },
+    "Cloak of Death": {
+        "cn": "死亡披风",
+        "en": "Cloak of Death",
+        "kr": ""
+    },
+    "Cloak of Half Death": {
+        "cn": "濒死披风",
+        "en": "Cloak of Half Death",
+        "kr": ""
+    },
+    "Belt of Regeneration": {
+        "cn": "再生皮带",
+        "en": "Belt of Regeneration",
+        "kr": ""
+    },
+    "Mana Potion": {
+        "cn": "中级魔力药水",
+        "en": "Mana Potion",
+        "kr": ""
+    },
+    "Ancient Blood": {
+        "cn": "古代血液",
+        "en": "Ancient Blood",
+        "kr": ""
+    },
+    "Blood-Flower Stem": {
+        "cn": "血花藤蔓",
+        "en": "Blood-Flower Stem",
+        "kr": ""
+    },
+    "Ion Shield": {
+        "cn": "铁盾",
+        "en": "Ion Shield",
+        "kr": ""
+    },
+    "Multi Shot 2": {
+        "cn": "多重射击2",
+        "en": "Multi Shot 2",
+        "kr": ""
+    },
+    "Healing Potion": {
+        "cn": "中级体力药水",
+        "en": "Healing Potion",
+        "kr": ""
+    },
+    "Ancient Feather": {
+        "cn": "古代羽毛",
+        "en": "Ancient Feather",
+        "kr": ""
+    },
+    "Sweeping Strikes 2": {
+        "cn": "强力横扫2",
+        "en": "Sweeping Strikes 2",
+        "kr": ""
+    },
+    "The Dead's Gloves": {
+        "cn": "亡者手套",
+        "en": "The Dead's Gloves",
+        "kr": ""
+    },
+    "Classic Bow": {
+        "cn": "角弓",
+        "en": "Classic Bow",
+        "kr": ""
+    },
+    "Viking Sword": {
+        "cn": "维京剑",
+        "en": "Viking Sword",
+        "kr": ""
+    },
+    "Shaman's Wand": {
+        "cn": "巫师法杖",
+        "en": "Shaman's Wand",
+        "kr": ""
+    },
+    "Will of Elemental 2": {
+        "cn": "强烈意志2",
+        "en": "Will of Elemental 2",
+        "kr": ""
+    },
+    "Guardian's Ring": {
+        "cn": "守护者戒指",
+        "en": "Guardian's Ring",
+        "kr": ""
+    },
+    "Shaman's Hat": {
+        "cn": "巫师帽",
+        "en": "Shaman's Hat",
+        "kr": ""
+    },
+    "Harden Body 1": {
+        "cn": "锻炼体力1",
+        "en": "Harden Body 1",
+        "kr": ""
+    },
+    "Scale Boots": {
+        "cn": "鳞片靴",
+        "en": "Scale Boots",
+        "kr": ""
+    },
+    "Amplify Sense 2": {
+        "cn": "强化反应2",
+        "en": "Amplify Sense 2",
+        "kr": ""
+    },
+    "Will of Elemental 1": {
+        "cn": "强烈意志1",
+        "en": "Will of Elemental 1",
+        "kr": ""
+    },
+    "Stun 2": {
+        "cn": "麻痹2",
+        "en": "Stun 2",
+        "kr": ""
+    },
+    "Oatwill's Leather Gloves": {
+        "cn": "欧特威尔的皮革手套",
+        "en": "Oatwill's Leather Gloves",
+        "kr": ""
+    },
+    "Gladius": {
+        "cn": "罗马短剑",
+        "en": "Gladius",
+        "kr": ""
+    },
+    "Hunter Bow": {
+        "cn": "猎弓",
+        "en": "Hunter Bow",
+        "kr": ""
+    },
+    "Mystic Wand": {
+        "cn": "神秘巫师法杖",
+        "en": "Mystic Wand",
+        "kr": ""
+    },
+    "Ancient Experiment Token": {
+        "cn": "古代实验日志",
+        "en": "Ancient Experiment Token",
+        "kr": ""
+    },
+    "Firestorm 1": {
+        "cn": "火焰风暴1",
+        "en": "Firestorm 1",
+        "kr": ""
+    },
+    "Wingwing Boots": {
+        "cn": "飞天靴",
+        "en": "Wingwing Boots",
+        "kr": ""
+    },
+    "Crystal Dust": {
+        "cn": "水晶粉末",
+        "en": "Crystal Dust",
+        "kr": ""
+    },
+    "Crystal": {
+        "cn": "水晶碎片",
+        "en": "Crystal",
+        "kr": ""
+    },
+    "Ancient Crystal": {
+        "cn": "古代水晶",
+        "en": "Ancient Crystal",
+        "kr": ""
+    },
+    "Frost Iron Ore": {
+        "cn": "冻铁矿石",
+        "en": "Frost Iron Ore",
+        "kr": ""
+    },
+    "Yeti's Bone": {
+        "cn": "雪人骨",
+        "en": "Yeti's Bone",
+        "kr": ""
+    },
+    "Yeti's Leather": {
+        "cn": "雪人皮",
+        "en": "Yeti's Leather",
+        "kr": ""
+    },
+    "Ancient Stone A": {
+        "cn": "古代石-A",
+        "en": "Ancient Stone A",
+        "kr": ""
+    },
+    "The Way of Two Hands 3p": {
+        "cn": "双手活用武器秘籍3p",
+        "en": "The Way of Two Hands 3p",
+        "kr": ""
+    },
+    "Ice Lance 2": {
+        "cn": "冰矛2",
+        "en": "Ice Lance 2",
+        "kr": ""
+    },
+    "Flame of Kataru 2": {
+        "cn": "卡塔勒的火焰2",
+        "en": "Flame of Kataru 2",
+        "kr": ""
+    },
+    "Ancient Stone B": {
+        "cn": "古代石-B",
+        "en": "Ancient Stone B",
+        "kr": ""
+    },
+    "About Levitation 1p": {
+        "cn": "空中悬浮秘籍1p",
+        "en": "About Levitation 1p",
+        "kr": ""
+    },
+    "Stoneskin 2": {
+        "cn": "坚石皮肤2",
+        "en": "Stoneskin 2",
+        "kr": ""
+    },
+    "Spirit Dust": {
+        "cn": "精灵之尘",
+        "en": "Spirit Dust",
+        "kr": ""
+    },
+    "Ancient Stone C": {
+        "cn": "古代石-C",
+        "en": "Ancient Stone C",
+        "kr": ""
+    },
+    "Crystal Spider Silk": {
+        "cn": "水晶蜘蛛丝",
+        "en": "Crystal Spider Silk",
+        "kr": ""
+    },
+    "Berserk 2": {
+        "cn": "狂暴2",
+        "en": "Berserk 2",
+        "kr": ""
+    },
+    "Ancient Stone D": {
+        "cn": "古代石-D",
+        "en": "Ancient Stone D",
+        "kr": ""
+    },
+    "Design Spirit's Hat": {
+        "cn": "设计图:精灵帽",
+        "en": "Design Spirit's Hat",
+        "kr": ""
+    },
+    "Ancient Stone E": {
+        "cn": "古代石-E",
+        "en": "Ancient Stone E",
+        "kr": ""
+    },
+    "Stun 1": {
+        "cn": "麻痹1",
+        "en": "Stun 1",
+        "kr": ""
+    },
+    "Healing Wave 2": {
+        "cn": "治愈波2",
+        "en": "Healing Wave 2",
+        "kr": ""
+    },
+    "Amplify Sense 1": {
+        "cn": "强化反应1",
+        "en": "Amplify Sense 1",
+        "kr": ""
+    },
+    "Crystal Shield": {
+        "cn": "水晶盾",
+        "en": "Crystal Shield",
+        "kr": ""
+    },
+    "Bull's-Eye 2p": {
+        "cn": "百发百中2p",
+        "en": "Bull's-Eye 2p",
+        "kr": ""
+    },
+    "Snow-Flower Stem": {
+        "cn": "雪花藤蔓",
+        "en": "Snow-Flower Stem",
+        "kr": ""
+    },
+    "Last Resistance 1": {
+        "cn": "最后抵抗1",
+        "en": "Last Resistance 1",
+        "kr": ""
+    },
+    "The Way of Two Hands 1p": {
+        "cn": "双手活用武器秘籍1p",
+        "en": "The Way of Two Hands 1p",
+        "kr": ""
+    },
+    "About Levitation 2p": {
+        "cn": "空中悬浮秘籍2p",
+        "en": "About Levitation 2p",
+        "kr": ""
+    },
+    "Bull's-Eye 3p": {
+        "cn": "百发百中3p",
+        "en": "Bull's-Eye 3p",
+        "kr": ""
+    },
+    "Blackjuno's Horn": {
+        "cn": "黑黑朱诺利角",
+        "en": "Blackjuno's Horn",
+        "kr": ""
+    },
+    "Ancient Leather": {
+        "cn": "古代皮革",
+        "en": "Ancient Leather",
+        "kr": ""
+    },
+    "Design Blackjuno's Helmet": {
+        "cn": "设计图:黑黑朱诺头盔",
+        "en": "Design Blackjuno's Helmet",
+        "kr": ""
+    },
+    "Sturdy Yeti Armor": {
+        "cn": "雪人皮衣",
+        "en": "Sturdy Yeti Armor",
+        "kr": ""
+    },
+    "Ancient Stone F": {
+        "cn": "古代石-F",
+        "en": "Ancient Stone F",
+        "kr": ""
+    },
+    "Sweeping Strikes 3": {
+        "cn": "强力横扫3",
+        "en": "Sweeping Strikes 3",
+        "kr": ""
+    },
+    "Design Snow-Flower Stem Hat": {
+        "cn": "设计图:雪花藤蔓帽",
+        "en": "Design Snow-Flower Stem Hat",
+        "kr": ""
+    },
+    "Highguard Armor": {
+        "cn": "高阶护卫盔甲",
+        "en": "Highguard Armor",
+        "kr": ""
+    },
+    "Cursed Stone": {
+        "cn": "被诅咒的石头",
+        "en": "Cursed Stone",
+        "kr": ""
+    },
+    "Design Crystal Robe": {
+        "cn": "设计图:水晶长袍",
+        "en": "Design Crystal Robe",
+        "kr": ""
+    },
+    "Frost Iron Refining Tool": {
+        "cn": "冻铁提炼道具",
+        "en": "Frost Iron Refining Tool",
+        "kr": ""
+    },
+    "Instinct Stimulus 1": {
+        "cn": "刺激本能1",
+        "en": "Instinct Stimulus 1",
+        "kr": ""
+    },
+    "Fatal Attack 1": {
+        "cn": "致命一击1",
+        "en": "Fatal Attack 1",
+        "kr": ""
+    },
+    "Wadangka's Seal": {
+        "cn": "瓦当卡之印",
+        "en": "Wadangka's Seal",
+        "kr": ""
+    },
+    "Seruang's Heart": {
+        "cn": "赛乐亚之心",
+        "en": "Seruang's Heart",
+        "kr": ""
+    },
+    "Bull's-Eye 1p": {
+        "cn": "百发百中1p",
+        "en": "Bull's-Eye 1p",
+        "kr": ""
+    },
+    "The Way of Two Hands 2p": {
+        "cn": "双手活用武器秘籍2p",
+        "en": "The Way of Two Hands 2p",
+        "kr": ""
+    },
+    "About Levitation 3p": {
+        "cn": "空中悬浮秘籍3p",
+        "en": "About Levitation 3p",
+        "kr": ""
+    },
+    "Pirate Gloves": {
+        "cn": "海盗手套",
+        "en": "Pirate Gloves",
+        "kr": ""
+    },
+    "Carnivalize 2": {
+        "cn": "魔力转换2",
+        "en": "Carnivalize 2",
+        "kr": ""
+    },
+    "Hallway Key": {
+        "cn": "走廊钥匙",
+        "en": "Hallway Key",
+        "kr": ""
+    },
+    "Pirate Card 10": {
+        "cn": "海盗卡10",
+        "en": "Pirate Card 10",
+        "kr": ""
+    },
+    "Captain's Cabin Key": {
+        "cn": "船长室钥匙",
+        "en": "Captain's Cabin Key",
+        "kr": ""
+    },
+    "Pirate Ring": {
+        "cn": "海盗戒指",
+        "en": "Pirate Ring",
+        "kr": ""
+    },
+    "Multi Shot 1": {
+        "cn": "多重射击1",
+        "en": "Multi Shot 1",
+        "kr": ""
+        },
+    "Red Beeswax": {
+        "cn": "红色蜜蜡",
+        "en": "Red Beeswax",
+        "kr": ""
+    },
+    "Sharp Eye 2": {
+        "cn": "迅速反应2",
+        "en": "Sharp Eye 2",
+        "kr": ""
+    },
+    "Berserk 1": {
+        "cn": "狂暴1",
+        "en": "Berserk 1",
+        "kr": ""
+    },
+    "Pirate Card A": {
+        "cn": "海盗卡A",
+        "en": "Pirate Card A",
+        "kr": ""
+    },
+    "Pirate Hat": {
+        "cn": "海盗帽",
+        "en": "Pirate Hat",
+        "kr": ""
+    },
+    "Pirate Necklace": {
+        "cn": "海盗项链",
+        "en": "Pirate Necklace",
+        "kr": ""
+    },
+    "Bulldozer's Tail Bone": {
+        "cn": "凶猛猪尾骨",
+        "en": "Bulldozer's Tail Bone",
+        "kr": ""
+    },
+    "Teleport 3": {
+        "cn": "瞬间移动3",
+        "en": "Teleport 3",
+        "kr": ""
+    },
+    "Wild Charge 2": {
+        "cn": "疯狂冲刺2",
+        "en": "Wild Charge 2",
+        "kr": ""
+    },
+    "Kamakee's Beak": {
+        "cn": "乌鸦喙",
+        "en": "Kamakee's Beak",
+        "kr": ""
+    },
+    "Nutrition Beverage": {
+        "cn": "营养饮料",
+        "en": "Nutrition Beverage",
+        "kr": ""
+    },
+    "Savage Boots": {
+        "cn": "野蛮靴",
+        "en": "Savage Boots",
+        "kr": ""
+    },
+    "Raven Feather": {
+        "cn": "渡鸦羽毛",
+        "en": "Raven Feather",
+        "kr": ""
+    },
+    "Kamakee Token": {
+        "cn": "乌鸦币",
+        "en": "Kamakee Token",
+        "kr": ""
+    },
+    "Impact Shot 2": {
+        "cn": "强烈一击2",
+        "en": "Impact Shot 2",
+        "kr": ""
+    },
+    "Carnivalize 3": {
+        "cn": "魔力转换3",
+        "en": "Carnivalize 3",
+        "kr": ""
+    },
+    "Toughness 3": {
+        "cn": "强韧3",
+        "en": "Toughness 3",
+        "kr": ""
+    },
+    "Impact Shot 3": {
+        "cn": "强烈一击3",
+        "en": "Impact Shot 3",
+        "kr": ""
+    },
+    "Sharp Eye 3": {
+        "cn": "迅速反应3",
+        "en": "Sharp Eye 3",
+        "kr": ""
+    },
+    "Slam 3": {
+        "cn": "强力肘击3",
+        "en": "Slam 3",
+        "kr": ""
+    },
+    "Flare 3": {
+        "cn": "爆燃3",
+        "en": "Flare 3",
+        "kr": ""
+    },
+    "Young Fox's Tail": {
+        "cn": "小狐狸尾巴",
+        "en": "Young Fox's Tail",
+        "kr": ""
+    },
+    "Last Resistance 2": {
+        "cn": "最后抵抗2",
+        "en": "Last Resistance 2",
+        "kr": ""
+    },
+    "Stoneskin 3": {
+        "cn": "坚石皮肤3",
+        "en": "Stoneskin 3",
+        "kr": ""
+    },
+    "Flame of Kataru 3": {
+        "cn": "卡塔勒的火焰3",
+        "en": "Flame of Kataru 3",
+        "kr": ""
+    },
+    "Heavy Iron Boots": {
+        "cn": "钢铁靴",
+        "en": "Heavy Iron Boots",
+        "kr": ""
+    },
+    "Tower Shield": {
+        "cn": "塔盾",
+        "en": "Tower Shield",
+        "kr": ""
+    },
+    "Shield 4": {
+        "cn": "护身盾牌4",
+        "en": "Shield 4",
+        "kr": ""
+    },
+    "Phoenix's Eye": {
+        "cn": "凤凰之眼",
+        "en": "Phoenix's Eye",
+        "kr": ""
+    },
+    "Contaminated Matter": {
+        "cn": "被污染物资",
+        "en": "Contaminated Matter",
+        "kr": ""
+    },
+    "Poisonous Bee Sting": {
+        "cn": "猛毒蜂针",
+        "en": "Poisonous Bee Sting",
+        "kr": ""
+    },
+    "Soul Powder": {
+        "cn": "灵魂粉末",
+        "en": "Soul Powder",
+        "kr": ""
+    },
+    "Helm of the Grey Boulder": {
+        "cn": "白岩头盔",
+        "en": "Helm of the Grey Boulder",
+        "kr": ""
+    },
+    "Cap of the Blue Forest": {
+        "cn": "丛林帽",
+        "en": "Cap of the Blue Forest",
+        "kr": ""
+    },
+    "Bandana of the Blue Waterfall": {
+        "cn": "靛蓝瀑布头巾",
+        "en": "Bandana of the Blue Waterfall",
+        "kr": ""
+    },
+    "Seal of the Forest Keeper": {
+        "cn": "森林守护者的印章",
+        "en": "Seal of the Forest Keeper",
+        "kr": ""
+    },
+    "Armor of the Grey Boulder": {
+        "cn": "白岩盔甲",
+        "en": "Armor of the Grey Boulder",
+        "kr": ""
+    },
+    "Robe of the Blue Waterfall": {
+        "cn": "靛蓝瀑布长袍",
+        "en": "Robe of the Blue Waterfall",
+        "kr": ""
+    },
+    "Light Armor of the Blue Forest": {
+        "cn": "丛林轻甲",
+        "en": "Light Armor of the Blue Forest",
+        "kr": ""
+    },
+    "Strange Treasure": {
+        "cn": "可疑的宝物",
+        "en": "Strange Treasure",
+        "kr": ""
+    },
+    "Cotton Cloth": {
+        "cn": "棉布料",
+        "en": "Cotton Cloth",
+        "kr": ""
+    },
+    "Abrasive": {
+        "cn": "研磨剂",
+        "en": "Abrasive",
+        "kr": ""
+    },
+    "Bee Sting": {
+        "cn": "蜜蜂毒刺",
+        "en": "Bee Sting",
+        "kr": ""
+    },
+    "Soul Drain Shot 1": {
+        "cn": "灵魂射击1",
+        "en": "Soul Drain Shot 1",
+        "kr": ""
+    },
+    "Silence 1": {
+        "cn": "沉默1",
+        "en": "Silence 1",
+        "kr": ""
+    },
+    "Iron Ore": {
+        "cn": "铁矿石",
+        "en": "Iron Ore",
+        "kr": ""
+    },
+    "Divine Thread": {
+        "cn": "神圣线圈",
+        "en": "Divine Thread",
+        "kr": ""
+    },
+    "Heavy Iron Gauntlet": {
+        "cn": "钢铁手套",
+        "en": "Heavy Iron Gauntlet",
+        "kr": ""
+    },
+    "Desert Mercenary Gloves": {
+        "cn": "沙漠佣兵手套",
+        "en": "Desert Mercenary Gloves",
+        "kr": ""
+    },
+    "Rapier": {
+        "cn": "细剑",
+        "en": "Rapier",
+        "kr": ""
+    },
+    "Horn Bow": {
+        "cn": "怒弓",
+        "en": "Horn Bow",
+        "kr": ""
+    },
+    "Spiritual Wand": {
+        "cn": "神力法杖",
+        "en": "Spiritual Wand",
+        "kr": ""
+    },
+    "Soul Drain Shot 2": {
+        "cn": "灵魂射击2",
+        "en": "Soul Drain Shot 2",
+        "kr": ""
+    },
+    "Thick Leather": {
+        "cn": "厚实的皮革",
+        "en": "Thick Leather",
+        "kr": ""
+    },
+    "Enhancer": {
+        "cn": "强化剂",
+        "en": "Enhancer",
+        "kr": ""
+    },
+    "Shout of Calmness 1": {
+        "cn": "平静呐喊1",
+        "en": "Shout of Calmness 1",
+        "kr": ""
+    },
+    "Clarity 1": {
+        "cn": "补充气力 1",
+        "en": "Clarity 1",
+        "kr": ""
+    },
+    "Sara's Blessing 1": {
+        "cn": "塞拉的祝福1",
+        "en": "Sara's Blessing 1",
+        "kr": ""
+    },
+    "Wand of Chaos": {
+        "cn": "混沌法杖",
+        "en": "Wand of Chaos",
+        "kr": ""
+    },
+    "Iron Covered Shield": {
+        "cn": "铁甲盾",
+        "en": "Iron Covered Shield",
+        "kr": ""
+    },
+    "Shout of Calmness 2": {
+        "cn": "平静呐喊2",
+        "en": "Shout of Calmness 2",
+        "kr": ""
+    },
+    "Sara's Blessing 2": {
+        "cn": "塞拉的祝福2",
+        "en": "Sara's Blessing 2",
+        "kr": ""
+    },
+    "Stampede 1": {
+        "cn": "惊逃1",
+        "en": "Stampede 1",
+        "kr": ""
+    },
+    "Battle Bow": {
+        "cn": "斗弓",
+        "en": "Battle Bow",
+        "kr": ""
+    },
+    "Rune Blade": {
+        "cn": "符文刃",
+        "en": "Rune Blade",
+        "kr": ""
+    },
+    "Stampede 2": {
+        "cn": "惊逃2",
+        "en": "Stampede 2",
+        "kr": ""
+    },
+    "Thread of Magic": {
+        "cn": "魔法线团",
+        "en": "Thread of Magic",
+        "kr": ""
+    },
+    "Darksteel Sword": {
+        "cn": "玄铁剑",
+        "en": "Darksteel Sword",
+        "kr": ""
+    },
+    "Dezoruba's Bow": {
+        "cn": "戴楚拜伊的弓",
+        "en": "Dezoruba's Bow",
+        "kr": ""
+    },
+    "Wand of Tranquility": {
+        "cn": "宁静法杖",
+        "en": "Wand of Tranquility",
+        "kr": ""
+    },
+    "Dezoruba's Design": {
+        "cn": "戴楚拜伊的设计图",
+        "en": "Dezoruba's Design",
+        "kr": ""
+    },
+    "Hellfire 1": {
+        "cn": "炼狱火道1",
+        "en": "Hellfire 1",
+        "kr": ""
+    },
+    "Neutralize 1": {
+        "cn": "无效化1",
+        "en": "Neutralize 1",
+        "kr": ""
+    },
+    "Wingfril's Treasure": {
+        "cn": "羽妖的宝物",
+        "en": "Wingfril's Treasure",
+        "kr": ""
+    },
+    "HQ Abrasive": {
+        "cn": "高级研磨剂",
+        "en": "HQ Abrasive",
+        "kr": ""
+    },
+    "Darksteel Shield": {
+        "cn": "玄铁盾",
+        "en": "Darksteel Shield",
+        "kr": ""
+    },
+    "Heavy Strike 2": {
+        "cn": "强击2",
+        "en": "Heavy Strike 2",
+        "kr": ""
+    },
+    "Neutralize 2": {
+        "cn": "无效化2",
+        "en": "Neutralize 2",
+        "kr": ""
+    },
+    "Gosumi's Spine": {
+        "cn": "刺猬的刺",
+        "en": "Gosumi's Spine",
+        "kr": ""
+    },
+    "Silence 2": {
+        "cn": "沉默2",
+        "en": "Silence 2",
+        "kr": ""
+    },
+    "Sand-Tree Leaf": {
+        "cn": "沙树叶",
+        "en": "Sand-Tree Leaf",
+        "kr": ""
+    },
+    "Clarity 2": {
+        "cn": "补充气力2",
+        "en": "Clarity 2",
+        "kr": ""
+    },
+    "Jode's Design": {
+        "cn": "佐德的设计图",
+        "en": "Jode's Design",
+        "kr": ""
+    },
+    "Hellfire 2": {
+        "cn": "炼狱火道2",
+        "en": "Hellfire 2",
+        "kr": ""
+    },
+    "Special Cotton Cloth": {
+        "cn": "特殊棉布料",
+        "en": "Special Cotton Cloth",
+        "kr": ""
+    },
+    "Black Iron Ore": {
+        "cn": "黑铁矿石",
+        "en": "Black Iron Ore",
+        "kr": ""
+    },
+    "Power Shot 1": {
+        "cn": "强力射击1",
+        "en": "Power Shot 1",
+        "kr": ""
+    },
+    "Power Shot 2": {
+        "cn": "强力射击2",
+        "en": "Power Shot 2",
+        "kr": ""
+    },
+    "Hole of Silence": {
+        "cn": "沉默之穴",
+        "en": "Hole of Silence",
+        "kr": ""
+    },
+    "Heavy Strike 1": {
+        "cn": "强击1",
+        "en": "Heavy Strike 1",
+        "kr": ""
+    },
+    "War Sword": {
+        "cn": "战争之剑",
+        "en": "War Sword",
+        "kr": ""
+    },
+    "War Bow": {
+        "cn": "战弓",
+        "en": "War Bow",
+        "kr": ""
+    },
+    "Shadow Bow": {
+        "cn": "暗影弓",
+        "en": "Shadow Bow",
+        "kr": ""
+    },
+    "Staff Struck by Lightning": {
+        "cn": "雷击木杖",
+        "en": "Staff Struck by Lightning",
+        "kr": ""
+    },
+    "Kaisor Sword": {
+        "cn": "凯萨剑",
+        "en": "Kaisor Sword",
+        "kr": ""
+    },
+    "Armor Enchant Scroll (S Class)": {
+        "cn": "盔甲卷轴(S级)",
+        "en": "Armor Enchant Scroll (S Class)",
+        "kr": ""
+    },
+    "Weapon Enchant Scroll (S Class)": {
+        "cn": "武器卷轴(S级)",
+        "en": "Weapon Enchant Scroll (S Class)",
+        "kr": ""
+    },
+    "Mother Nature": {
+        "cn": "大地之母项链",
+        "en": "Mother Nature",
+        "kr": ""
+    },
+    "Froggy Blood": {
+        "cn": "呱呱蛙的血",
+        "en": "Froggy Blood",
+        "kr": ""
+    },
+    "Monk's Gloves": {
+        "cn": "修道士手套",
+        "en": "Monk's Gloves",
+        "kr": ""
+    },
+    "Poison Pouch": {
+        "cn": "剧毒囊",
+        "en": "Poison Pouch",
+        "kr": ""
+    },
+    "Super Mana Potion": {
+        "cn": "超级魔力药水",
+        "en": "Super Mana Potion",
+        "kr": ""
+    },
+    "Super Healing Potion": {
+        "cn": "超级体力药水",
+        "en": "Super Healing Potion",
+        "kr": ""
+    },
+    "Swamp Treasure": {
+        "cn": "湿地宝物",
+        "en": "Swamp Treasure",
+        "kr": ""
+    },
+    "Passionate Cloak": {
+        "cn": "狂热披风",
+        "en": "Passionate Cloak",
+        "kr": ""
+    },
+    "Harden Body 2": {
+        "cn": "锻炼体力2",
+        "en": "Harden Body 2",
+        "kr": ""
+    },
+    "Black Ooze": {
+        "cn": "黑色汁液",
+        "en": "Black Ooze",
+        "kr": ""
+    },
+    "Magical Robe": {
+        "cn": "魔法布料",
+        "en": "Magical Robe",
+        "kr": ""
+    },
+    "Shattered Mask Piece": {
+        "cn": "破碎的面具碎片",
+        "en": "Shattered Mask Piece",
+        "kr": ""
+    },
+    "Essence of Corruption": {
+        "cn": "堕落精髓",
+        "en": "Essence of Corruption",
+        "kr": ""
+    },
+    "Special Magical Robe": {
+        "cn": "特殊魔法布料",
+        "en": "Special Magical Robe",
+        "kr": ""
+    },
+    "Maze Treasure": {
+        "cn": "迷宫宝物",
+        "en": "Maze Treasure",
+        "kr": ""
+    },
+    "Faded Ring": {
+        "cn": "褪色戒指",
+        "en": "Faded Ring",
+        "kr": ""
+    },
+    "Hopeful Magic Essence": {
+        "cn": "希望魔力精髓",
+        "en": "Hopeful Magic Essence",
+        "kr": ""
+    },
+    "Snowy Field's Cursed Boots": {
+        "cn": "雪原诅咒长靴",
+        "en": "Snowy Field's Cursed Boots",
+        "kr": ""
+    },
+    "Toxic Boots": {
+        "cn": "剧毒长靴",
+        "en": "Toxic Boots",
+        "kr": ""
+    },
+    "Sharkun Greaves": {
+        "cn": "夏库胫甲",
+        "en": "Sharkun Greaves",
+        "kr": ""
+    },
+    "Crown Rock Experiment Bottle": {
+        "cn": "石冠实验药瓶",
+        "en": "Crown Rock Experiment Bottle",
+        "kr": ""
+    },
+    "Ancient Magic Powder": {
+        "cn": "古代魔法粉末",
+        "en": "Ancient Magic Powder",
+        "kr": ""
+    },
+    "Star Piece": {
+        "cn": "星星碎片",
+        "en": "Star Piece",
+        "kr": ""
+    },
+    "Star Powder": {
+        "cn": "星星粉末",
+        "en": "Star Powder",
+        "kr": ""
+    },
+    "Snowfield Altar Treasure": {
+        "cn": "雪原祭坛宝物",
+        "en": "Snowfield Altar Treasure",
+        "kr": ""
+    },
+    "Broken Necklace": {
+        "cn": "毁坏的项链",
+        "en": "Broken Necklace",
+        "kr": ""
+    },
+    "Broken Magic Stone": {
+        "cn": "破碎的魔法石",
+        "en": "Broken Magic Stone",
+        "kr": ""
+    },
+    "Sky Bat Wing": {
+        "cn": "东方蝠翅膀",
+        "en": "Sky Bat Wing",
+        "kr": ""
+    },
+    "Alloy Ring": {
+        "cn": "合金戒指",
+        "en": "Alloy Ring",
+        "kr": ""
+    },
+    "Gemstone": {
+        "cn": "原石",
+        "en": "Gemstone",
+        "kr": ""
+    },
+    "Nut": {
+        "cn": "螺帽",
+        "en": "Nut",
+        "kr": ""
+    },
+    "Bolt": {
+        "cn": "螺栓",
+        "en": "Bolt",
+        "kr": ""
+    },
+    "Magic Marble": {
+        "cn": "魔力珠",
+        "en": "Magic Marble",
+        "kr": ""
+    },
+    "Belt of Belief": {
+        "cn": "信念皮带",
+        "en": "Belt of Belief",
+        "kr": ""
+    },
+    "Gunpowder": {
+        "cn": "火药粉末",
+        "en": "Gunpowder",
+        "kr": ""
+    },
+    "Pocket of Poison": {
+        "cn": "毒袋",
+        "en": "Pocket of Poison",
+        "kr": ""
+    },
+    "Shinning Metal": {
+        "cn": "闪耀金属",
+        "en": "Shinning Metal",
+        "kr": ""
+    },
+    "Magic Rune": {
+        "cn": "魔力符文",
+        "en": "Magic Rune",
+        "kr": ""
+    },
+    "Fatal Attack 2": {
+        "cn": "致命一击2",
+        "en": "Fatal Attack 2",
+        "kr": ""
+    },
+    "Element Crystal": {
+        "cn": "元素结晶",
+        "en": "Element Crystal",
+        "kr": ""
+    },
+    "Monk's Boots": {
+        "cn": "修道士长靴",
+        "en": "Monk's Boots",
+        "kr": ""
+    },
+    "Stone Powder": {
+        "cn": "石粉",
+        "en": "Stone Powder",
+        "kr": ""
+    },
+    "Prayer of Protection 3": {
+        "cn": "守护祷告3",
+        "en": "Prayer of Protection 3",
+        "kr": ""
+    },
+    "Firestorm 2": {
+        "cn": "火焰风暴2",
+        "en": "Firestorm 2",
+        "kr": ""
+    },
+    "Ancient Wood": {
+        "cn": "古代树木",
+        "en": "Ancient Wood",
+        "kr": ""
+    },
+    "Pure Element": {
+        "cn": "纯洁元素",
+        "en": "Pure Element",
+        "kr": ""
+    },
+    "Shinning Magic Stone": {
+        "cn": "闪耀的魔法石",
+        "en": "Shinning Magic Stone",
+        "kr": ""
+    },
+    "Iron Golem's Gloves": {
+        "cn": "钢铁魔像手套",
+        "en": "Iron Golem's Gloves",
+        "kr": ""
+    },
+    "Gargoyle Wing": {
+        "cn": "滴水嘴兽翅膀",
+        "en": "Gargoyle Wing",
+        "kr": ""
+    },
+    "Scout Gloves": {
+        "cn": "童军手套",
+        "en": "Scout Gloves",
+        "kr": ""
+    },
+    "Sage's Gloves": {
+        "cn": "贤者手套",
+        "en": "Sage's Gloves",
+        "kr": ""
+    },
+    "Shoes of Tranquility": {
+        "cn": "宁静鞋",
+        "en": "Shoes of Tranquility",
+        "kr": ""
+    },
+    "Titanium Ingot": {
+        "cn": "钛合金铸块",
+        "en": "Titanium Ingot",
+        "kr": ""
+    },
+    "Titanium Boots": {
+        "cn": "钛合金靴",
+        "en": "Titanium Boots",
+        "kr": ""
+    },
+    "Dark Piece": {
+        "cn": "黑暗碎片",
+        "en": "Dark Piece",
+        "kr": ""
+    },
+    "Fallen Magic Stone": {
+        "cn": "堕落的魔法石",
+        "en": "Fallen Magic Stone",
+        "kr": ""
+    },
+    "Soul Stone": {
+        "cn": "灵魂石",
+        "en": "Soul Stone",
+        "kr": ""
+    },
+    "The Perfect Darkness": {
+        "cn": "完美黑暗",
+        "en": "The Perfect Darkness",
+        "kr": ""
+    },
+    "Boots of Darkness": {
+        "cn": "暗黑鞋",
+        "en": "Boots of Darkness",
+        "kr": ""
+    },
+    "Caligo's Scale": {
+        "cn": "克里高的鳞片",
+        "en": "Caligo's Scale",
+        "kr": ""
+    },
+    "Caligo's Bone": {
+        "cn": "克里高的骨头",
+        "en": "Caligo's Bone",
+        "kr": ""
+    },
+    "Caligo's Hands": {
+        "cn": "克里高的手",
+        "en": "Caligo's Hands",
+        "kr": ""
+    },
+    "Caligo Boots": {
+        "cn": "克里高长靴",
+        "en": "Caligo Boots",
+        "kr": ""
+    },
+    "Caligo Gloves": {
+        "cn": "克里高手套",
+        "en": "Caligo Gloves",
+        "kr": ""
+    },
+    "Otherworld Belt": {
+        "cn": "异界皮带",
+        "en": "Otherworld Belt",
+        "kr": ""
+    },
+    "Abyss Guard Token": {
+        "cn": "深渊保卫团币",
+        "en": "Abyss Guard Token",
+        "kr": ""
+    },
+    "Seed Extraction Liquid": {
+        "cn": "种子萃取液",
+        "en": "Seed Extraction Liquid",
+        "kr": ""
+    },
+    "Grudgeful Parchment": {
+        "cn": "怨气浓厚的羊皮纸",
+        "en": "Grudgeful Parchment",
+        "kr": ""
+    },
+    "Mana Regeneration Potion": {
+        "cn": "魔力再生药水",
+        "en": "Mana Regeneration Potion",
+        "kr": ""
+    },
+    "Barbeque": {
+        "cn": "烤肉串",
+        "en": "Barbeque",
+        "kr": ""
+    },
+    "Health Regeneration Potion": {
+        "cn": "体力再生药水",
+        "en": "Health Regeneration Potion",
+        "kr": ""
+    },
+    "Greater Restoration Potion": {
+        "cn": "高级恢复药水",
+        "en": "Greater Restoration Potion",
+        "kr": ""
+    },
+    "Mana Core": {
+        "cn": "魔核",
+        "en": "Mana Core",
+        "kr": ""
+    },
+    "Magic Power Breath": {
+        "cn": "魔力之息",
+        "en": "Magic Power Breath",
+        "kr": ""
+    },
+    "Stained Experiment Journal": {
+        "cn": "肮脏的实验日志",
+        "en": "Stained Experiment Journal",
+        "kr": ""
+    },
+    "Magic Power Scroll": {
+        "cn": "魔力卷轴",
+        "en": "Magic Power Scroll",
+        "kr": ""
+    },
+    "Mercy Rune": {
+        "cn": "慈悲符文",
+        "en": "Mercy Rune",
+        "kr": ""
+    },
+    "Penitence Rune": {
+        "cn": "忏悔符文",
+        "en": "Penitence Rune",
+        "kr": ""
+    },
+    "Resurrection Rune": {
+        "cn": "复活符文",
+        "en": "Resurrection Rune",
+        "kr": ""
+    },
+    "Greater Healing Potion": {
+        "cn": "高级体力药水",
+        "en": "Greater Healing Potion",
+        "kr": ""
+    },
+    "Enchanted Bone": {
+        "cn": "蕴含魔力的骨头",
+        "en": "Enchanted Bone",
+        "kr": ""
+    },
+    "Enchanted Leather": {
+        "cn": "蕴含魔力的皮革",
+        "en": "Enchanted Leather",
+        "kr": ""
+    },
+    "Greater Mana Potion": {
+        "cn": "高级魔力药水",
+        "en": "Greater Mana Potion",
+        "kr": ""
+    },
+    "Transparent Scale": {
+        "cn": "透明鳞片",
+        "en": "Transparent Scale",
+        "kr": ""
+    },
+    "Velvet Cloth": {
+        "cn": "羽绒布料",
+        "en": "Velvet Cloth",
+        "kr": ""
+    },
+    "Broken Molar": {
+        "cn": "破碎的臼齿",
+        "en": "Broken Molar",
+        "kr": ""
+    },
+    "Discolored Heart": {
+        "cn": "变色心脏",
+        "en": "Discolored Heart",
+        "kr": ""
+    },
+    "Prohibited Experiment Journal": {
+        "cn": "禁止阅览的实验日志",
+        "en": "Prohibited Experiment Journal",
+        "kr": ""
+    },
+    "Spartan Shield": {
+        "cn": "斯巴达盾牌",
+        "en": "Spartan Shield",
+        "kr": ""
+    },
+    "Execution Rune": {
+        "cn": "酷刑符文",
+        "en": "Execution Rune",
+        "kr": ""
+    },
+    "Torture Rune": {
+        "cn": "审问符文",
+        "en": "Torture Rune",
+        "kr": ""
+    },
+    "Bio Magic Power Rune": {
+        "cn": "生物魔力符文",
+        "en": "Bio Magic Power Rune",
+        "kr": ""
+    },
+    "Five-Colored Leather": {
+        "cn": "五色皮革",
+        "en": "Five-Colored Leather",
+        "kr": ""
+    },
+    "Soft Light Ore": {
+        "cn": "弱光矿石",
+        "en": "Soft Light Ore",
+        "kr": ""
+    },
+    "Crude Magic Crystal": {
+        "cn": "劣质的魔力水晶",
+        "en": "Crude Magic Crystal",
+        "kr": ""
+    },
+    "Butterfly Wings": {
+        "cn": "蝴蝶翅膀",
+        "en": "Butterfly Wings",
+        "kr": ""
+    },
+    "Elongated Ears": {
+        "cn": "细长耳朵",
+        "en": "Elongated Ears",
+        "kr": ""
+    },
+    "Moss Leather": {
+        "cn": "苔藓皮革",
+        "en": "Moss Leather",
+        "kr": ""
+    },
+    "Inherited Book of Knowledge": {
+        "cn": "传承的知识书",
+        "en": "Inherited Book of Knowledge",
+        "kr": ""
+    },
+    "Areuke's Antenna": {
+        "cn": "亚勒凯的触须",
+        "en": "Areuke's Antenna",
+        "kr": ""
+    },
+    "Morty's Ear": {
+        "cn": "莫提的耳朵",
+        "en": "Morty's Ear",
+        "kr": ""
+    },
+    "Enchanted Leather (Morphosis)": {
+        "cn": "魔力苔藓皮革",
+        "en": "Enchanted Leather (Morphosis)",
+        "kr": ""
+    },
+    "Pink Magic Crystal": {
+        "cn": "粉红魔力水晶",
+        "en": "Pink Magic Crystal",
+        "kr": ""
+    },
+    "Dry Magic Crystal": {
+        "cn": "干燥魔力水晶",
+        "en": "Dry Magic Crystal",
+        "kr": ""
+    },
+    "Actaemon's Horn": {
+        "cn": "阿克泰萌的角",
+        "en": "Actaemon's Horn",
+        "kr": ""
+    },
+    "Pure Magic Orb": {
+        "cn": "纯净的魔力球",
+        "en": "Pure Magic Orb",
+        "kr": ""
+    },
+    "Protector's Hand Skin": {
+        "cn": "护卫兵的手部护具",
+        "en": "Protector's Hand Skin",
+        "kr": ""
+    },
+    "Chainstrike Gloves": {
+        "cn": "链击手套",
+        "en": "Chainstrike Gloves",
+        "kr": ""
+    },
+    "Illusionist's Gloves": {
+        "cn": "幻术师的手部护具",
+        "en": "Illusionist's Gloves",
+        "kr": ""
+    },
+    "Magic Stem": {
+        "cn": "魔力根茎",
+        "en": "Magic Stem",
+        "kr": ""
+    },
+    "Charge Core": {
+        "cn": "电子核心",
+        "en": "Charge Core",
+        "kr": ""
+    },
+    "Surge Cycle": {
+        "cn": "高压电车",
+        "en": "Surge Cycle",
+        "kr": ""
+    },
+    "Crown Duck Egg": {
+        "cn": "皇冠鸭蛋",
+        "en": "Crown Duck Egg",
+        "kr": ""
+    },
+    "Frozen Crystal": {
+        "cn": "冷却的结晶碎片",
+        "en": "Frozen Crystal",
+        "kr": ""
+    },
+    "Leafrog Tail": {
+        "cn": "叶形蛙的尾巴",
+        "en": "Leafrog Tail",
+        "kr": ""
+    },
+    "Circuit Heart": {
+        "cn": "回路心脏",
+        "en": "Circuit Heart",
+        "kr": ""
+    },
+    "Sikinel Horn": {
+        "cn": "西格诺的角",
+        "en": "Sikinel Horn",
+        "kr": ""
+    },
+    "Belt of Rough Roots": {
+        "cn": "粗糙根蔓皮带",
+        "en": "Belt of Rough Roots",
+        "kr": ""
+    },
+    "Pledger's Belt": {
+        "cn": "契约者的皮带",
+        "en": "Pledger's Belt",
+        "kr": ""
+    },
+    "Belt of Dry Magic": {
+        "cn": "契约者的皮带",
+        "en": "Belt of Dry Magic",
+        "kr": ""
+    },
+    "Soul Lich Mask": {
+        "cn": "索尔里奇的假面",
+        "en": "Soul Lich Mask",
+        "kr": ""
+    },
+    "World Tree Bark Armor": {
+        "cn": "世界树树皮盔甲",
+        "en": "World Tree Bark Armor",
+        "kr": ""
+    },
+    "World Tree Branch Armor": {
+        "cn": "世界树树根盔甲",
+        "en": "World Tree Branch Armor",
+        "kr": ""
+    },
+    "World Tree Leaf Robe": {
+        "cn": "世界树树叶长袍",
+        "en": "World Tree Leaf Robe",
+        "kr": ""
+    },
+    "Box Flowing with Mana": {
+        "cn": "充满魔力的箱子",
+        "en": "Box Flowing with Mana",
+        "kr": ""
+    },
+    "Destroyed Paper": {
+        "cn": "破碎的纸张",
+        "en": "Destroyed Paper",
+        "kr": ""
+    },
+    "Seawater of Oblivion": {
+        "cn": "遗忘海水",
+        "en": "Seawater of Oblivion",
+        "kr": ""
+    },
+    "Worn Book Cover": {
+        "cn": "破旧书皮",
+        "en": "Worn Book Cover",
+        "kr": ""
+    },
+    "Shabby Bookmark": {
+        "cn": "旧书签",
+        "en": "Shabby Bookmark",
+        "kr": ""
+    },
+    "Horn of Oblivion": {
+        "cn": "遗忘之角",
+        "en": "Horn of Oblivion",
+        "kr": ""
+    },
+    "Torn Parchment Piece": {
+        "cn": "撕裂的羊皮纸碎片",
+        "en": "Torn Parchment Piece",
+        "kr": ""
+    },
+    "Pledger's Horn": {
+        "cn": "立约者之角",
+        "en": "Pledger's Horn",
+        "kr": ""
+    },
+    "Corrupted Memory": {
+        "cn": "被污染的记忆",
+        "en": "Corrupted Memory",
+        "kr": ""
+    },
+    "Dagger Fragment": {
+        "cn": "破碎的短刀碎片",
+        "en": "Dagger Fragment",
+        "kr": ""
+    },
+    "Dissolved Memory": {
+        "cn": "遗失的记忆",
+        "en": "Dissolved Memory",
+        "kr": ""
+    },
+    "Rune Piece": {
+        "cn": "符文碎片",
+        "en": "Rune Piece",
+        "kr": ""
+    },
+    "Broken Oath": {
+        "cn": "裂开的立约书",
+        "en": "Broken Oath",
+        "kr": ""
+    },
+    "Pure Knowledge": {
+        "cn": "纯净的知识",
+        "en": "Pure Knowledge",
+        "kr": ""
+    },
+    "Cold Imbue 4": {
+        "cn": "赋予寒气4",
+        "en": "Cold Imbue 4",
+        "kr": ""
+    },
+    "Chainstrike 4": {
+        "cn": "连击4",
+        "en": "Chainstrike 4",
+        "kr": ""
+    },
+    "Leap 4": {
+        "cn": "跳跃4",
+        "en": "Leap 4",
+        "kr": ""
+    },
+    "Electric Imbue 2": {
+        "cn": "赋予闪电2",
+        "en": "Electric Imbue 2",
+        "kr": ""
+    },
+    "Electric Imbue 3": {
+        "cn": "赋予闪电3",
+        "en": "Electric Imbue 3",
+        "kr": ""
+    },
+    "Breaker's Strike 2": {
+        "cn": "武术一击2",
+        "en": "Breaker's Strike 2",
+        "kr": ""
+    },
+    "Breaker's Strike 3": {
+        "cn": "武术一击3",
+        "en": "Breaker's Strike 3",
+        "kr": ""
+    },
+    "Elemental Cycle 2": {
+        "cn": "元素循环2",
+        "en": "Elemental Cycle 2",
+        "kr": ""
+    },
+    "Elemental Cycle 3": {
+        "cn": "元素循环3",
+        "en": "Elemental Cycle 3",
+        "kr": ""
+    },
+    "Baekha's Strike 2": {
+        "cn": "白荷之拳2",
+        "en": "Baekha's Strike 2",
+        "kr": ""
+    },
+    "Baekha's Strike 3": {
+        "cn": "白荷之拳3",
+        "en": "Baekha's Strike 3",
+        "kr": ""
+    },
+    "Elemental Release 2": {
+        "cn": "元素释放2",
+        "en": "Elemental Release 2",
+        "kr": ""
+    },
+    "Impact Training 2": {
+        "cn": "冲击锻炼2",
+        "en": "Impact Training 2",
+        "kr": ""
+    },
+    "Impact Training 3": {
+        "cn": "冲击锻炼3",
+        "en": "Impact Training 3",
+        "kr": ""
+    },
+    "Critical Insight 2": {
+        "cn": "要害洞察2",
+        "en": "Critical Insight 2",
+        "kr": ""
+    },
+    "Critical Insight 3": {
+        "cn": "要害洞察3",
+        "en": "Critical Insight 3",
+        "kr": ""
+    },
+    "Sixth Sense 2": {
+        "cn": "预感2",
+        "en": "Sixth Sense 2",
+        "kr": ""
+    },
+    "Atonement Rune": {
+        "cn": "赎罪符文",
+        "en": "Atonement Rune",
+        "kr": ""
+    },
+    "Corruption Rune": {
+        "cn": "堕落符文",
+        "en": "Corruption Rune",
+        "kr": ""
+    },
+    "Supremacy Rune": {
+        "cn": "霸道符文",
+        "en": "Supremacy Rune",
+        "kr": ""
+    },
+    "Leather Robe": {
+        "cn": "皮革道服",
+        "en": "Leather Robe",
+        "kr": ""
+    },
+    "Coral Robe": {
+        "cn": "珊瑚道服",
+        "en": "Coral Robe",
+        "kr": ""
+    },
+    "Combat Robe": {
+        "cn": "格斗道服",
+        "en": "Combat Robe",
+        "kr": ""
+    },
+    "Yellow Canola Robe": {
+        "cn": "油菜花道服",
+        "en": "Yellow Canola Robe",
+        "kr": ""
+    },
+    "World Tree Robe": {
+        "cn": "世界树道服",
+        "en": "World Tree Robe",
+        "kr": ""
+    },
+    "Yellow Canola Hat": {
+        "cn": "油菜花帽",
+        "en": "Yellow Canola Hat",
+        "kr": ""
+    },
+    "Wooden Guard": {
+        "cn": "木制护身符",
+        "en": "Wooden Guard",
+        "kr": ""
+    },
+    "Coral Guard": {
+        "cn": "珊瑚护身符",
+        "en": "Coral Guard",
+        "kr": ""
+    },
+    "Woopa Roopa's Guard": {
+        "cn": "族长护身符",
+        "en": "Woopa Roopa's Guard",
+        "kr": ""
+    },
+    "Purifying Guard": {
+        "cn": "净化护身符",
+        "en": "Purifying Guard",
+        "kr": ""
+    },
+    "Frost Guard": {
+        "cn": "霜之护身符",
+        "en": "Frost Guard",
+        "kr": ""
+    },
+    "Storm Guard": {
+        "cn": "暴风护身符",
+        "en": "Storm Guard",
+        "kr": ""
+    },
+    "Red Guard": {
+        "cn": "赤红护身符",
+        "en": "Red Guard",
+        "kr": ""
+    },
+    "Butterfly Guard": {
+        "cn": "蝴蝶护身符",
+        "en": "Butterfly Guard",
+        "kr": ""
+    },
+    "Crown Rock Guard": {
+        "cn": "皇冠岩护身符",
+        "en": "Crown Rock Guard",
+        "kr": ""
+    },
+    "Relic of Infinity": {
+        "cn": "无极文物",
+        "en": "Relic of Infinity",
+        "kr": ""
+    },
+    "Elemental Gloves": {
+        "cn": "元素手套",
+        "en": "Elemental Gloves",
+        "kr": ""
+    },
+    "Cloud Gloves": {
+        "cn": "云之手套",
+        "en": "Cloud Gloves",
+        "kr": ""
+    },
+    "Lightning Gloves": {
+        "cn": "雷电手套",
+        "en": "Lightning Gloves",
+        "kr": ""
+    },
+    "Bitter Cold Gloves": {
+        "cn": "严寒手套",
+        "en": "Bitter Cold Gloves",
+        "kr": ""
+    },
+    "Chainstrike Gloves b": {
+        "cn": "连续攻击手套",
+        "en": "Chainstrike Gloves b",
+        "kr": ""
+    },
+    "Yellow Canola Boots": {
+        "cn": "油菜花长靴",
+        "en": "Yellow Canola Boots",
+        "kr": ""
+    },
+    "Cloud Boots": {
+        "cn": "云之长靴",
+        "en": "Cloud Boots",
+        "kr": ""
+    },
+    "Bitter Cold Boots": {
+        "cn": "严寒长靴",
+        "en": "Bitter Cold Boots",
+        "kr": ""
+    },
+    "Thule's Boots": {
+        "cn": "图勒长靴",
+        "en": "Thule's Boots",
+        "kr": ""
+    },
+    "Teal Fragment Belt": {
+        "cn": "青绿碎片腰带",
+        "en": "Teal Fragment Belt",
+        "kr": ""
+    },
+    "Wooden Tonfa": {
+        "cn": "木制拐棍",
+        "en": "Wooden Tonfa",
+        "kr": ""
+    },
+    "Dull Knuckles": {
+        "cn": "钝指虎",
+        "en": "Dull Knuckles",
+        "kr": ""
+    },
+    "Bulldozer Tonfa": {
+        "cn": "凶猛猪拐棍",
+        "en": "Bulldozer Tonfa",
+        "kr": ""
+    },
+    "Breaker's Knuckles": {
+        "cn": "武术家指虎",
+        "en": "Breaker's Knuckles",
+        "kr": ""
+    },
+    "Shiny Knuckle": {
+        "cn": "闪耀指虎",
+        "en": "Shiny Knuckle",
+        "kr": ""
+    },
+    "Bone Tonfa": {
+        "cn": "骨拐棍",
+        "en": "Bone Tonfa",
+        "kr": ""
+    },
+    "Storm Whip": {
+        "cn": "暴风鞭",
+        "en": "Storm Whip",
+        "kr": ""
+    },
+    "Iron Fist": {
+        "cn": "铁之拳",
+        "en": "Iron Fist",
+        "kr": ""
+    },
+    "Fang of Dusk": {
+        "cn": "黄昏之牙",
+        "en": "Fang of Dusk",
+        "kr": ""
+    },
+    "Thundersteel": {
+        "cn": "雷钢",
+        "en": "Thundersteel",
+        "kr": ""
+    },
+    "War Knuckle": {
+        "cn": "战斗指虎",
+        "en": "War Knuckle",
+        "kr": ""
+    },
+    "Shatter Fist": {
+        "cn": "粉碎之拳",
+        "en": "Shatter Fist",
+        "kr": ""
+    }
   },
-  "revive": {
-    "h": "时",
-    "min": "分",
-    "sec": "秒"
-  },
-  "idb": {
-    "Ghost Ship": "废弃幽灵船",
-    "Forgotten Cave": "遗忘洞穴",
-    "Silent Altar": "沉默祭坛",
-    "Impassable Cave": "废弃洞穴",
-    "Desert Dungeon": "沙漠地底洞穴",
-    "Endless Darkness": "无尽黑暗"
-  },
-  "npc": {
-    "Mercenary": "佣兵",
-    "Knight": "骑士",
-    "Elite Mercenary": "精英佣兵",
-    "Elite Knight": "精英骑士",
-    "Skilled Mercenary": "熟练佣兵",
-    "Imperial Knight": "皇家骑士",
-    "Guard": "守卫",
-    "Master Ramu": "拉穆大师"
+    "revive":
+    {
+        "h": {
+            "cn": "时",
+            "en": "h",
+            "kr": ""
+        },
+        "min": {
+            "cn": "分",
+            "en": "min",
+            "kr": ""
+        },
+        "sec": {
+            "cn": "秒",
+            "en": "sec",
+            "kr": ""
+        }
+    },
+    "idb": {
+        "Ghost Ship": {
+            "cn": "废弃幽灵船",
+            "en": "Ghost Ship",
+            "kr": ""
+        },
+        "Forgotten Cave": {
+            "cn": "遗忘洞穴",
+            "en": "Forgotten Cave",
+            "kr": ""
+        },
+        "Silent Altar": {
+            "cn": "沉默祭坛",
+            "en": "Silent Altar",
+            "kr": ""
+        },
+        "Impassable Cave": {
+            "cn": "废弃洞穴",
+            "en": "Impassable Cave",
+            "kr": ""
+        },
+        "Desert Dungeon": {
+            "cn": "沙漠地底洞穴",
+            "en": "Desert Dungeon",
+            "kr": ""
+        },
+        "Endless Darkness": {
+            "cn": "无尽黑暗",
+            "en": "Endless Darkness",
+            "kr": ""
+        }
+    },
+    "npc": 
+    {
+        "Mercenary": {
+            "cn": "佣兵",
+            "en": "Mercenary",
+            "kr": ""
+        },
+        "Knight": {
+            "cn": "骑士",
+            "en": "Knight",
+            "kr": ""
+        },
+        "Elite Mercenary": {
+            "cn": "精英佣兵",
+            "en": "Elite Mercenary",
+            "kr": ""
+        },
+        "Elite Knight": {
+            "cn": "精英骑士",
+            "en": "Elite Knight",
+            "kr": ""
+        },
+        "Skilled Mercenary": {
+            "cn": "熟练佣兵",
+            "en": "Skilled Mercenary",
+            "kr": ""
+        },
+        "Imperial Knight": {
+            "cn": "皇家骑士",
+            "en": "Imperial Knight",
+            "kr": ""
+        },
+        "Guard": {
+            "cn": "守卫",
+            "en": "Guard",
+            "kr": ""
+        },
+        "Master Ramu": {
+            "cn": "拉穆大师",
+            "en": "Master Ramu",
+            "kr": ""
+        }
+      }
   }
-}
