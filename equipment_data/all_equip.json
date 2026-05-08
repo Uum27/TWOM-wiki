@@ -1,7 +1,7 @@
 [
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Rusty Sword",
     "hide": true,
     "name_cn": " ",
@@ -19,7 +19,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Shiny Short Sword",
     "hide": true,
     "name_cn": " ",
@@ -37,7 +37,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Practice Sword",
     "name_cn": "练习用剑",
     "name_kr": "",
@@ -53,7 +53,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Blunt Shortsword",
     "name_cn": "钝短剑",
     "name_kr": "",
@@ -69,7 +69,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Patrol's Sword",
     "hide": true,
     "name_cn": " ",
@@ -87,7 +87,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Adventurer Sword",
     "hide": true,
     "name_cn": " ",
@@ -104,7 +104,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Canine Tooth of Madness",
     "name_cn": "疯狂獠牙",
     "name_kr": "",
@@ -122,7 +122,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Woody Sword",
     "hide": true,
     "name_cn": " ",
@@ -139,7 +139,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Shiny Long Sword",
     "hide": true,
     "name_cn": " ",
@@ -157,7 +157,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Coral Sword",
     "hide": true,
     "name_cn": " ",
@@ -174,7 +174,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Dull Longsword",
     "hide": true,
     "name_cn": " ",
@@ -191,7 +191,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Longsword",
     "name_cn": "长剑",
     "name_kr": "",
@@ -207,7 +207,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Rusty Longsword",
     "hide": true,
     "name_cn": " ",
@@ -224,7 +224,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sharp Longsword",
     "name_cn": "锐利的长剑",
     "name_kr": "",
@@ -240,7 +240,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Scimitar",
     "hide": true,
     "name_cn": " ",
@@ -257,7 +257,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Katana",
     "name_cn": "武士刀",
     "name_kr": "",
@@ -273,7 +273,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Iron Sword",
     "hide": true,
     "name_cn": " ",
@@ -290,7 +290,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Viking Sword",
     "name_cn": "维京剑",
     "name_kr": "",
@@ -306,7 +306,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Broadsword",
     "hide": true,
     "name_cn": " ",
@@ -323,7 +323,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Gladius",
     "name_cn": "罗马短剑",
     "name_kr": "",
@@ -339,7 +339,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Platinum Rapier",
     "name_cn": "银白细剑",
     "name_kr": "",
@@ -356,7 +356,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Gray Rapier",
     "hide": true,
     "name_cn": " ",
@@ -373,7 +373,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Rapier",
     "name_cn": "细剑",
     "name_kr": "",
@@ -389,7 +389,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Short Blade",
     "hide": true,
     "name_cn": " ",
@@ -406,7 +406,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Rune Blade",
     "name_cn": "符文刃",
     "name_kr": "",
@@ -423,7 +423,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Steel Sword",
     "hide": true,
     "name_cn": " ",
@@ -440,7 +440,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Darksteel Sword",
     "name_cn": "玄铁剑",
     "name_kr": "",
@@ -456,7 +456,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Battle Sword",
     "hide": true,
     "name_cn": " ",
@@ -473,7 +473,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "War Sword",
     "name_cn": "战争之剑",
     "name_kr": "",
@@ -489,7 +489,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sabre",
     "hide": true,
     "name_cn": " ",
@@ -506,7 +506,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Kaisor Sword",
     "name_cn": "凯萨剑",
     "name_kr": "",
@@ -522,7 +522,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Burning Blade",
     "name_cn": "烈焰刃",
     "name_kr": "",
@@ -539,7 +539,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Guillotine",
     "name_cn": "斩首剑",
     "name_kr": "",
@@ -556,7 +556,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Blade",
     "hide": true,
     "name_cn": " ",
@@ -573,7 +573,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Edge of Oblivion",
     "name_cn": "遗忘边缘",
     "name_kr": "",
@@ -590,7 +590,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Inquisition",
     "name_cn": "审判剑",
     "name_kr": "",
@@ -607,7 +607,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Cutlass",
     "hide": true,
     "name_cn": " ",
@@ -624,7 +624,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sword of Fantasy (1~20LV)",
     "name_cn": "梦幻武器(1~20LV)",
     "name_kr": "",
@@ -640,7 +640,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sword of Fantasy (21~30LV)",
     "name_cn": "梦幻武器(21~30LV)",
     "name_kr": "",
@@ -656,7 +656,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sword of Fantasy (31~40LV)",
     "name_cn": "梦幻武器(31~40LV)",
     "name_kr": "",
@@ -672,7 +672,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sword of Fantasy (41~50LV)",
     "name_cn": "梦幻武器(41~50LV)",
     "name_kr": "",
@@ -688,7 +688,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Locke's Sword (20~29 LV)",
     "name_cn": "洛克剑(20~29 LV)",
     "name_kr": "",
@@ -704,7 +704,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Locke's Sword (30~39 LV)",
     "name_cn": "洛克剑(30~39 LV)",
     "name_kr": "",
@@ -720,7 +720,7 @@
   },
   {
     "type": "weapon",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Locke's Sword (40~49 LV)",
     "name_cn": "洛克剑(40~49 LV)",
     "name_kr": "",
@@ -736,7 +736,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Worn Shortbow",
     "hide": true,
     "name_cn": " ",
@@ -753,7 +753,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Shiny Short Bow",
     "hide": true,
     "name_cn": " ",
@@ -771,7 +771,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Old Shortbow",
     "hide": true,
     "name_cn": " ",
@@ -788,7 +788,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Wooden Shortbow",
     "name_cn": "木质短弓",
     "name_kr": "",
@@ -804,7 +804,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Patrol's Bow",
     "hide": true,
     "name_cn": " ",
@@ -823,7 +823,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Adventurer Bow",
     "hide": true,
     "name_cn": " ",
@@ -840,7 +840,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Woody Shortbow",
     "hide": true,
     "name_cn": " ",
@@ -857,7 +857,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Long Bow",
     "name_cn": "长弓",
     "name_kr": "",
@@ -873,7 +873,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Coral Bow",
     "hide": true,
     "name_cn": " ",
@@ -890,7 +890,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Worn Shortbow",
     "name_cn": "复合弓",
     "name_kr": "",
@@ -906,7 +906,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Composite Bow",
     "hide": true,
     "name_cn": " ",
@@ -924,7 +924,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Light Bow",
     "hide": true,
     "name_cn": " ",
@@ -941,7 +941,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Swirling Bow",
     "name_cn": "漩涡弓",
     "name_kr": "",
@@ -959,7 +959,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Heavy Bow",
     "hide": true,
     "name_cn": " ",
@@ -976,7 +976,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Great Bow",
     "name_cn": "巨弓",
     "name_kr": "",
@@ -993,7 +993,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Bone Bow",
     "hide": true,
     "name_cn": " ",
@@ -1010,7 +1010,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Classic Bow",
     "name_cn": "角弓",
     "name_kr": "",
@@ -1027,7 +1027,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Flat Bow",
     "hide": true,
     "name_cn": " ",
@@ -1044,7 +1044,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Hunter Bow",
     "name_cn": "猎弓",
     "name_kr": "",
@@ -1061,7 +1061,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Heavy Flat Bow",
     "hide": true,
     "name_cn": " ",
@@ -1078,7 +1078,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Wing's Wing",
     "name_cn": "王者羽翼",
     "name_kr": "",
@@ -1096,7 +1096,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Horn Bow",
     "name_cn": "怒弓",
     "name_kr": "",
@@ -1113,7 +1113,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Light Hunting Bow",
     "hide": true,
     "name_cn": " ",
@@ -1130,7 +1130,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Battle Bow",
     "name_cn": "斗弓",
     "name_kr": "",
@@ -1148,7 +1148,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Recurve Bow",
     "hide": true,
     "name_cn": " ",
@@ -1165,7 +1165,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Dezoruba's Bow",
     "name_cn": "戴楚拜伊的弓",
     "name_kr": "",
@@ -1184,7 +1184,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "War Bow",
     "name_cn": "战弓",
     "name_kr": "",
@@ -1201,7 +1201,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Ashwood Bow",
     "hide": true,
     "name_cn": " ",
@@ -1218,7 +1218,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Worn War Bow",
     "hide": true,
     "name_cn": " ",
@@ -1235,7 +1235,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Shadow Bow",
     "name_cn": "暗影弓",
     "name_kr": "",
@@ -1253,7 +1253,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Imperial Bow",
     "name_cn": "帝国弓",
     "name_kr": "",
@@ -1272,7 +1272,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Crow's Cry",
     "name_cn": "乌鸦之泣弓",
     "name_kr": "",
@@ -1290,7 +1290,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Maple Bow",
     "hide": true,
     "name_cn": " ",
@@ -1307,7 +1307,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Corrupted Purity",
     "name_cn": "被污染的纯真",
     "name_kr": "",
@@ -1326,7 +1326,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Fail-Not",
     "name_cn": "命中之弓",
     "name_kr": "",
@@ -1345,7 +1345,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Long Battle Bow",
     "hide": true,
     "name_cn": " ",
@@ -1362,7 +1362,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Locke's Bow (20~29 LV)",
     "name_cn": "洛克弓(20~29 LV)",
     "name_kr": "",
@@ -1379,7 +1379,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Locke's Bow (30~39 LV)",
     "name_cn": "洛克弓(30~39 LV)",
     "name_kr": "",
@@ -1396,7 +1396,7 @@
   },
   {
     "type": "weapon",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Locke's Bow (40~49 LV)",
     "name_cn": "洛克弓(40~49 LV)",
     "name_kr": "",
@@ -1413,7 +1413,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Apprentice Staff",
     "hide": true,
     "name_cn": " ",
@@ -1430,7 +1430,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Shiny Wooden Staff",
     "hide": true,
     "name_cn": " ",
@@ -1449,7 +1449,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Wooden Staff",
     "name_cn": "木杖",
     "name_kr": "",
@@ -1465,7 +1465,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Patrol's Staff",
     "hide": true,
     "name_cn": " ",
@@ -1484,7 +1484,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Adventurer Staff",
     "hide": true,
     "name_cn": " ",
@@ -1501,7 +1501,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Short Staff",
     "hide": true,
     "name_cn": " ",
@@ -1518,7 +1518,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Oak Tree Staff",
     "name_cn": "桦树杖",
     "name_kr": "",
@@ -1535,7 +1535,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Coral Cane",
     "hide": true,
     "name_cn": " ",
@@ -1554,7 +1554,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Cedar Staff",
     "hide": true,
     "name_cn": " ",
@@ -1571,8 +1571,8 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
-    "name": "Magician Staff",
+    "job": "magician",
+    "name": "magician Staff",
     "name_cn": "魔法师法杖",
     "name_kr": "",
     "level": "14",
@@ -1583,12 +1583,12 @@
     "int": "0~7",
     "hit": "",
     "mana": "0~8",
-    "icon": "Magician Staff.png",
+    "icon": "magician Staff.png",
     "desc": ""
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Woopa-Roopa's Staff",
     "name_cn": "族长法杖",
     "name_kr": "",
@@ -1607,7 +1607,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Practice Staff",
     "hide": true,
     "name_cn": " ",
@@ -1624,7 +1624,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Chipped Staff",
     "hide": true,
     "name_cn": " ",
@@ -1641,7 +1641,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Novice Shaman's Wand",
     "name_cn": "新手巫师法杖",
     "name_kr": "",
@@ -1657,7 +1657,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Stone Staff",
     "hide": true,
     "name_cn": " ",
@@ -1674,7 +1674,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Shaman's Wand",
     "name_cn": "巫师法杖",
     "name_kr": "",
@@ -1691,7 +1691,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Smooth Staff",
     "hide": true,
     "name_cn": " ",
@@ -1708,7 +1708,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Mystic Wand",
     "name_cn": "神秘巫师法杖",
     "name_kr": "",
@@ -1725,7 +1725,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Farmer Staff",
     "hide": true,
     "name_cn": " ",
@@ -1742,7 +1742,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Ancient Wand",
     "name_cn": "古代法杖",
     "name_kr": "",
@@ -1761,7 +1761,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Spiritual Wand",
     "name_cn": "神力法杖",
     "name_kr": "",
@@ -1778,7 +1778,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Ironhead Staff",
     "hide": true,
     "name_cn": " ",
@@ -1795,7 +1795,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Wand of Chaos",
     "name_cn": "混沌法杖",
     "name_kr": "",
@@ -1813,7 +1813,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Battle Staff",
     "hide": true,
     "name_cn": " ",
@@ -1830,7 +1830,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Wand of Tranquility",
     "name_cn": "宁静法杖",
     "name_kr": "",
@@ -1847,7 +1847,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Fisherman Staff",
     "hide": true,
     "name_cn": " ",
@@ -1864,7 +1864,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Hole of Silence",
     "name_cn": "沉默之穴",
     "name_kr": "",
@@ -1881,7 +1881,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Iron Staff",
     "hide": true,
     "name_cn": " ",
@@ -1898,7 +1898,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Staff Struck by Lightning",
     "name_cn": "雷击木杖",
     "name_kr": "",
@@ -1917,7 +1917,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Hole of Destruction",
     "name_cn": "破坏之穴",
     "name_kr": "",
@@ -1936,7 +1936,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Ritual Hall",
     "name_cn": "仪式法杖",
     "name_kr": "",
@@ -1954,7 +1954,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Handcrafted Staff",
     "hide": true,
     "name_cn": " ",
@@ -1971,7 +1971,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Efflorescence of Purity",
     "name_cn": "纯真绽放",
     "name_kr": "",
@@ -1990,7 +1990,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Soul Eater",
     "name_cn": "噬魂法杖",
     "name_kr": "",
@@ -2009,7 +2009,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Quarterstaff",
     "hide": true,
     "name_cn": " ",
@@ -2026,7 +2026,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Staff of Fantasy (1~20LV)",
     "name_cn": "梦幻武器(1~20LV)",
     "name_kr": "",
@@ -2043,7 +2043,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Staff of Fantasy (21~30LV)",
     "name_cn": "梦幻武器(21~30LV)",
     "name_kr": "",
@@ -2060,7 +2060,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Staff of Fantasy (31~40LV)",
     "name_cn": "梦幻武器(31~40LV)",
     "name_kr": "",
@@ -2077,7 +2077,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Staff of Fantasy (41~50LV)",
     "name_cn": "梦幻武器(41~50LV)",
     "name_kr": "",
@@ -2094,7 +2094,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Locke's Staff (20~29 LV)",
     "name_cn": "洛克法杖(20~29 LV)",
     "name_kr": "",
@@ -2111,7 +2111,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Locke's Staff (30~39 LV)",
     "name_cn": "洛克法杖(30~39 LV)",
     "name_kr": "",
@@ -2128,7 +2128,7 @@
   },
   {
     "type": "weapon",
-    "job": "Magician",
+    "job": "magician",
     "name": "Locke's Staff (40~49 LV)",
     "name_cn": "洛克法杖(40~49 LV)",
     "name_kr": "",
@@ -2145,7 +2145,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Rusty Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2162,7 +2162,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Knight Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2179,7 +2179,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Wooden Tonfa",
     "name_cn": "木制拐棍",
     "name_kr": "",
@@ -2195,7 +2195,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Scout Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2212,7 +2212,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Dull Knuckle",
     "name_cn": "钝指虎",
     "name_kr": "",
@@ -2228,7 +2228,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bulldozer Tonfa",
     "name_cn": "凶猛猪拐棍",
     "name_kr": "",
@@ -2245,7 +2245,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Training Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2262,7 +2262,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Coral Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2279,7 +2279,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Shadow Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2296,8 +2296,8 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
-    "name": "Breaker's Knuckle",
+    "job": "breaker",
+    "name": "breaker's Knuckle",
     "name_cn": "武术家指虎",
     "name_kr": "",
     "level": "14",
@@ -2307,12 +2307,12 @@
     "str": "0",
     "int": "0",
     "hit": "0~6",
-    "icon": "Breaker's Knuckle.png",
+    "icon": "breaker's Knuckle.png",
     "desc": ""
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Shiny Knuckle",
     "name_cn": "闪耀指虎",
     "name_kr": "",
@@ -2328,7 +2328,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Worn-out Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2345,7 +2345,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Stone Tonfa",
     "hide": true,
     "name_cn": " ",
@@ -2362,7 +2362,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bone Tonfa",
     "name_cn": "骨拐棍",
     "name_kr": "",
@@ -2378,7 +2378,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Iron Tonfa",
     "hide": true,
     "name_cn": " ",
@@ -2395,7 +2395,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Storm Whip",
     "name_cn": "暴风鞭",
     "name_kr": "",
@@ -2411,7 +2411,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Battle Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2428,7 +2428,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Iron Fist",
     "name_cn": "铁之拳",
     "name_kr": "",
@@ -2444,7 +2444,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Gray Tonfa",
     "hide": true,
     "name_cn": " ",
@@ -2461,7 +2461,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Glacia",
     "name_cn": "冰霜",
     "name_kr": "",
@@ -2478,7 +2478,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Stormbreaker",
     "name_cn": "风暴破坏者",
     "name_kr": "",
@@ -2494,7 +2494,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Rough Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2511,7 +2511,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Fang of Dusk",
     "name_cn": "黄昏之牙",
     "name_kr": "",
@@ -2527,7 +2527,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Steel Tonfa",
     "hide": true,
     "name_cn": " ",
@@ -2544,7 +2544,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Thundersteel",
     "name_cn": "雷钢",
     "name_kr": "",
@@ -2560,7 +2560,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Steel Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2577,7 +2577,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "War Knuckle",
     "name_cn": "战斗指虎",
     "name_kr": "",
@@ -2593,7 +2593,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Chain Knuckle",
     "hide": true,
     "name_cn": " ",
@@ -2610,7 +2610,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Shatter Fist",
     "name_cn": "粉碎之拳",
     "name_kr": "",
@@ -2626,7 +2626,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Frost Claw",
     "name_cn": "霜之爪",
     "name_kr": "",
@@ -2642,7 +2642,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Unyielding",
     "name_cn": "不屈",
     "name_kr": "",
@@ -2659,7 +2659,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Rune Tonfa",
     "hide": true,
     "name_cn": " ",
@@ -2676,7 +2676,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Abyssal Fragment",
     "name_cn": "深渊碎片",
     "name_kr": "",
@@ -2693,7 +2693,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Eternity",
     "name_cn": "永恒",
     "name_kr": "",
@@ -2710,7 +2710,7 @@
   },
   {
     "type": "weapon",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Tiger Fist",
     "hide": true,
     "name_cn": " ",
@@ -2726,7 +2726,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Frog Suit",
     "hide": true,
     "name_cn": " ",
@@ -2751,7 +2751,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Rudolf Costume",
     "hide": true,
     "name_cn": " ",
@@ -2776,7 +2776,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Santa Costume",
     "hide": true,
     "name_cn": " ",
@@ -2801,7 +2801,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Frayed Robe",
     "name_cn": "粗布衣",
     "name_kr": "",
@@ -2825,7 +2825,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Leather Jacket",
     "name_cn": "皮衣",
     "name_kr": "",
@@ -2849,7 +2849,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Leather Armor",
     "name_cn": "皮革盔甲",
     "name_kr": "",
@@ -2873,7 +2873,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Sturdy Leather Armor",
     "name_cn": "强化皮革盔甲",
     "name_kr": "",
@@ -2897,7 +2897,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Woopa Scale Armor",
     "name_cn": "乌波鳞片盔甲",
     "name_kr": "",
@@ -2921,7 +2921,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Spider Silk Bone Armor",
     "name_cn": "蜘蛛丝骨制盔甲",
     "name_kr": "",
@@ -2945,7 +2945,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sturdy Woopa Armor",
     "name_cn": "强化乌波盔甲",
     "name_kr": "",
@@ -2969,7 +2969,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Bone Armor",
     "name_cn": "骨制盔甲",
     "name_kr": "",
@@ -2993,7 +2993,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Lizard Leather Armor",
     "name_cn": "蜥蜴皮衣",
     "name_kr": "",
@@ -3017,7 +3017,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Armor of the Grey Boulder",
     "name_cn": "白岩盔甲",
     "name_kr": "",
@@ -3042,7 +3042,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Blackskull Armor",
     "name_cn": "黑骸盔甲",
     "name_kr": "",
@@ -3067,7 +3067,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Sturdy Yeti Armor",
     "name_cn": "雪人皮衣",
     "name_kr": "",
@@ -3091,7 +3091,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Highguard Armor",
     "name_cn": "高阶护卫盔甲",
     "name_kr": "",
@@ -3115,7 +3115,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Scale Armor",
     "name_cn": "铁鳞甲",
     "name_kr": "",
@@ -3139,7 +3139,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Scout Jerkin",
     "name_cn": "童军背心",
     "name_kr": "",
@@ -3163,7 +3163,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Steel Armor",
     "name_cn": "钢铁甲",
     "name_kr": "",
@@ -3187,7 +3187,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Dezoruba's Tunic",
     "name_cn": "戴楚拜伊的宽袍",
     "name_kr": "",
@@ -3211,7 +3211,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Darksteel Armor",
     "name_cn": "玄铁盔甲",
     "name_kr": "",
@@ -3235,7 +3235,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Warlord Armor",
     "name_cn": "瓦洛德盔甲",
     "name_kr": "",
@@ -3260,7 +3260,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "World Tree Bark Armor",
     "name_cn": "世界树树皮盔甲",
     "name_kr": "",
@@ -3284,7 +3284,7 @@
   },
   {
     "type": "armor",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Arbitrator's Armor",
     "name_cn": "裁判盔甲",
     "name_kr": "",
@@ -3309,7 +3309,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Boiled Leather Armor",
     "name_cn": "加工皮革盔甲",
     "name_kr": "",
@@ -3333,7 +3333,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Light Armor of the Blue Forest",
     "name_cn": "丛林轻甲",
     "name_kr": "",
@@ -3358,7 +3358,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Oatwill's Light Armor",
     "name_cn": "欧特威尔的轻甲",
     "name_kr": "",
@@ -3382,7 +3382,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Wyvern Tunic",
     "name_cn": "飞龙宽袍",
     "name_kr": "",
@@ -3407,7 +3407,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "World Tree Branch Armor",
     "name_cn": "世界树树根盔甲",
     "name_kr": "",
@@ -3431,7 +3431,7 @@
   },
   {
     "type": "armor",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Catcher's Light Armor",
     "name_cn": "哨兵轻甲",
     "name_kr": "",
@@ -3455,7 +3455,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Cotton Robe",
     "name_cn": "棉制长袍",
     "name_kr": "",
@@ -3479,8 +3479,8 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
-    "name": "Novice Magician Robe",
+    "job": "magician",
+    "name": "Novice magician Robe",
     "name_cn": "实习魔法师袍",
     "name_kr": "",
     "level": "5",
@@ -3498,13 +3498,13 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Novice Magician Robe.png",
+    "icon": "Novice magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
-    "job": "Magician",
-    "name": "Apprentice Magician Robe",
+    "job": "magician",
+    "name": "Apprentice magician Robe",
     "name_cn": "进阶魔法师袍",
     "name_kr": "",
     "level": "7",
@@ -3522,12 +3522,12 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Apprentice Magician Robe.png",
+    "icon": "Apprentice magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Mushroom Robe",
     "name_cn": "蘑菇长袍",
     "name_kr": "",
@@ -3552,8 +3552,8 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
-    "name": "Expert Magician Robe",
+    "job": "magician",
+    "name": "Expert magician Robe",
     "name_cn": "专业魔法师袍",
     "name_kr": "",
     "level": "13",
@@ -3571,13 +3571,13 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Expert Magician Robe.png",
+    "icon": "Expert magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
-    "job": "Magician",
-    "name": "Master Magician Robe",
+    "job": "magician",
+    "name": "Master magician Robe",
     "name_cn": "高级魔法师袍",
     "name_kr": "",
     "level": "17",
@@ -3595,12 +3595,12 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Master Magician Robe.png",
+    "icon": "Master magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "The Dead's Shroud",
     "name_cn": "亡者寿衣",
     "name_kr": "",
@@ -3624,7 +3624,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Charmed Robe",
     "hide": true,
     "name_cn": " ",
@@ -3649,7 +3649,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Robe of the Blue Waterfall",
     "name_cn": "靛蓝瀑布长袍",
     "name_kr": "",
@@ -3672,7 +3672,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Crystal Robe",
     "name_cn": "水晶长袍",
     "name_kr": "",
@@ -3696,7 +3696,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Monk's Robe",
     "name_cn": "修道士长袍",
     "name_kr": "",
@@ -3720,7 +3720,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Sage's Robe",
     "name_cn": "贤者长袍",
     "name_kr": "",
@@ -3744,7 +3744,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Robe of Silence",
     "name_cn": "佐德长袍",
     "name_kr": "",
@@ -3768,7 +3768,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Scholar's Gown",
     "name_cn": "学者长袍",
     "name_kr": "",
@@ -3792,7 +3792,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "World Tree Leaf Robe",
     "name_cn": "世界树树叶长袍",
     "name_kr": "",
@@ -3816,7 +3816,7 @@
   },
   {
     "type": "armor",
-    "job": "Magician",
+    "job": "magician",
     "name": "Historian's Shroud",
     "name_cn": "记录家的寿衣",
     "name_kr": "",
@@ -3841,8 +3841,8 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
-    "name": "Apprentice Breaker Robe",
+    "job": "breaker",
+    "name": "Apprentice breaker Robe",
     "name_cn": "见习武术家道服",
     "name_kr": "",
     "level": "5",
@@ -3860,12 +3860,12 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Apprentice Breaker Robe.png",
+    "icon": "Apprentice breaker Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Leather Robe",
     "name_cn": "皮革道服",
     "name_kr": "",
@@ -3889,7 +3889,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Woopa Scale Robe",
     "name_cn": "乌帕鳞片道服",
     "name_kr": "",
@@ -3913,7 +3913,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Sturdy Woopa Robe",
     "name_cn": "强化乌帕道服",
     "name_kr": "",
@@ -3937,7 +3937,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Coral Robe",
     "name_cn": "珊瑚道服",
     "name_kr": "",
@@ -3961,7 +3961,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Lighthouse Robe",
     "name_cn": "灯塔道服",
     "name_kr": "",
@@ -3986,7 +3986,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Yellow Canola Robe",
     "name_cn": "油菜花道服",
     "name_kr": "",
@@ -4009,7 +4009,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Combat Robe",
     "name_cn": "格斗道服",
     "name_kr": "",
@@ -4033,7 +4033,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Lightning Robe",
     "name_cn": "雷电道服",
     "name_kr": "",
@@ -4057,7 +4057,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bitter Cold Robe",
     "name_cn": "严寒道服",
     "name_kr": "",
@@ -4081,7 +4081,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Thule's Robe",
     "name_cn": "图勒道服",
     "name_kr": "",
@@ -4105,7 +4105,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Oblivion Robe",
     "name_cn": "忘却道服",
     "name_kr": "",
@@ -4130,7 +4130,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "World Tree Robe",
     "name_cn": "世界树道服",
     "name_kr": "",
@@ -4154,7 +4154,7 @@
   },
   {
     "type": "armor",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Apex Road",
     "name_cn": "巅峰之路",
     "name_kr": "",
@@ -4178,7 +4178,7 @@
 
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Bunny Rabbit",
     "hide": true,
     "name_cn": " ",
@@ -4202,7 +4202,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Donguri Hat",
     "name_cn": "圆圆帽",
     "name_kr": "",
@@ -4225,7 +4225,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Kitty Cat",
     "hide": true,
     "name_cn": " ",
@@ -4249,7 +4249,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Kooii Hat",
     "name_cn": "库伊帽",
     "name_kr": "",
@@ -4272,7 +4272,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Looking for a pervert",
     "hide": true,
     "name_cn": " ",
@@ -4296,7 +4296,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Mask",
     "name_cn": "兔子面具",
     "name_kr": "",
@@ -4319,7 +4319,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Poo",
     "hide": true,
     "name_cn": " ",
@@ -4343,7 +4343,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Raider Cap",
     "hide": true,
     "name_cn": " ",
@@ -4367,7 +4367,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Sunglasses",
     "hide": true,
     "name_cn": " ",
@@ -4391,7 +4391,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Wings",
     "hide": true,
     "name_cn": " ",
@@ -4415,7 +4415,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Santa's Hat",
     "name_cn": "圣诞老人帽",
     "name_kr": "",
@@ -4438,7 +4438,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Santa's Cool Hat",
     "hide": true,
     "name_cn": " ",
@@ -4462,7 +4462,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Hard Hat",
     "hide": true,
     "name_cn": " ",
@@ -4486,7 +4486,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Old Hat",
     "name_cn": "老旧帽子",
     "name_kr": "",
@@ -4509,7 +4509,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Pirate Hat",
     "name_cn": "海盗帽",
     "name_kr": "",
@@ -4532,7 +4532,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Crown",
     "name_cn": "乌龟王冠",
     "name_kr": "",
@@ -4555,7 +4555,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Frog Hat",
     "name_cn": "青蛙帽",
     "name_kr": "",
@@ -4578,7 +4578,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Frog Hat (Basic)",
     "hide": true,
     "name_cn": " ",
@@ -4602,7 +4602,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Frog Hat (Special)",
     "hide": true,
     "name_cn": " ",
@@ -4626,7 +4626,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Brown Hat",
     "hide": true,
     "name_cn": " ",
@@ -4650,7 +4650,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Raindeer Hat",
     "name_cn": "麋鹿帽",
     "name_kr": "",
@@ -4673,7 +4673,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Rudolph's Hat",
     "hide": true,
     "name_cn": " ",
@@ -4697,7 +4697,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Woopa Scale Helmet",
     "name_cn": "乌波鳞片头盔",
     "name_kr": "",
@@ -4720,7 +4720,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Donguri Leaf Hat",
     "name_cn": "圆圆叶帽",
     "name_kr": "",
@@ -4743,7 +4743,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Intensified Woopa Helmet",
     "name_cn": "强化乌波头盔",
     "name_kr": "",
@@ -4766,7 +4766,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Blood-Flower Stem Hat",
     "name_cn": "血花藤曼帽",
     "name_kr": "",
@@ -4789,7 +4789,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Bone Helmet",
     "name_cn": "骨制头盔",
     "name_kr": "",
@@ -4812,7 +4812,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Helm of the Grey Boulder",
     "name_cn": "白岩头盔",
     "name_kr": "",
@@ -4837,7 +4837,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Snow-Flower Stem Hat",
     "name_cn": "雪花藤曼帽",
     "name_kr": "",
@@ -4860,7 +4860,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Blackjuno's Helmet",
     "name_cn": "黑黑朱诺头盔",
     "name_kr": "",
@@ -4882,7 +4882,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Hat of the Wind",
     "name_cn": "风之帽",
     "name_kr": "",
@@ -4904,7 +4904,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Heavy Iron Helmet",
     "name_cn": "钢铁头盔",
     "name_kr": "",
@@ -4927,7 +4927,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Hat of Blitzkrieg",
     "name_cn": "速战速决帽",
     "name_kr": "",
@@ -4950,7 +4950,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Helmet of Bravery",
     "name_cn": "勇猛头盔",
     "name_kr": "",
@@ -4972,7 +4972,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Darksteel Helmet",
     "name_cn": "玄铁头盔",
     "name_kr": "",
@@ -4994,7 +4994,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Dezoruba's Hat",
     "name_cn": "戴楚拜伊的帽子",
     "name_kr": "",
@@ -5016,7 +5016,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Warlord Helmet",
     "name_cn": "瓦洛德头盔",
     "name_kr": "",
@@ -5038,7 +5038,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Slaughterer Helm",
     "name_cn": "杀戮头盔",
     "name_kr": "",
@@ -5060,7 +5060,7 @@
   },
   {
     "type": "hats",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Authority Helm",
     "name_cn": "权威头盔",
     "name_kr": "",
@@ -5083,7 +5083,7 @@
   },
   {
     "type": "hats",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Hair Feather",
     "name_cn": "羽毛发饰",
     "name_kr": "",
@@ -5106,7 +5106,7 @@
   },
   {
     "type": "hats",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Cap of the Blue Forest",
     "name_cn": "丛林帽",
     "name_kr": "",
@@ -5131,7 +5131,7 @@
   },
   {
     "type": "hats",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Wanderer's Hat",
     "name_cn": "流浪者帽",
     "name_kr": "",
@@ -5154,7 +5154,7 @@
   },
   {
     "type": "hats",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Blind Faith Helm",
     "name_cn": "迷信头盔",
     "name_kr": "",
@@ -5177,7 +5177,7 @@
   },
   {
     "type": "hats",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Chasing Helm",
     "name_cn": "追击头盔",
     "name_kr": "",
@@ -5201,8 +5201,8 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
-    "name": "Magician Hat",
+    "job": "magician",
+    "name": "magician Hat",
     "name_cn": "魔法师帽",
     "name_kr": "",
     "level": "10",
@@ -5219,12 +5219,12 @@
     "int": "0~3",
     "dex": "",
     "spell_resist": "",
-    "icon": "Magician Hat.png",
+    "icon": "magician Hat.png",
     "desc": ""
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Eye of Beholder",
     "name_cn": "凝视者之眼",
     "name_kr": "",
@@ -5247,7 +5247,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Hat of Spirit",
     "name_cn": "精灵帽",
     "name_kr": "",
@@ -5270,7 +5270,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Bandana of the Blue Waterfall",
     "name_cn": "靛蓝瀑布头巾",
     "name_kr": "",
@@ -5293,7 +5293,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Shaman's Hat",
     "name_cn": "巫师帽",
     "name_kr": "",
@@ -5316,7 +5316,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Monk's Hat",
     "name_cn": "修道士帽",
     "name_kr": "",
@@ -5339,7 +5339,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Sage's Eye",
     "name_cn": "贤者之眼",
     "name_kr": "",
@@ -5362,7 +5362,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Hat of Tranquility",
     "name_cn": "宁静帽",
     "name_kr": "",
@@ -5385,7 +5385,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Scholar Hat",
     "name_cn": "学者帽",
     "name_kr": "",
@@ -5408,7 +5408,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Judge's Helm",
     "name_cn": "审判头盔",
     "name_kr": "",
@@ -5431,7 +5431,7 @@
   },
   {
     "type": "hats",
-    "job": "Magician",
+    "job": "magician",
     "name": "Eyes of Mind",
     "name_cn": "洞察头盔",
     "name_kr": "",
@@ -5454,8 +5454,8 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
-    "name": "Breaker Hat",
+    "job": "breaker",
+    "name": "breaker Hat",
     "name_cn": "武术家帽",
     "name_kr": "",
     "level": "10",
@@ -5472,12 +5472,12 @@
     "int": "",
     "dex": "",
     "spell_resist": "",
-    "icon": "Breaker Hat.png",
+    "icon": "breaker Hat.png",
     "desc": ""
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Sturdy Woopa Hat",
     "name_cn": "强化乌帕帽",
     "name_kr": "",
@@ -5500,7 +5500,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bone Hat",
     "name_cn": "骨制帽",
     "name_kr": "",
@@ -5523,7 +5523,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Yellow Canola Hat",
     "name_cn": "油菜花帽",
     "name_kr": "",
@@ -5547,7 +5547,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Frostlight Bandana",
     "name_cn": "冰光头巾",
     "name_kr": "",
@@ -5571,7 +5571,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Cloud Bandana",
     "name_cn": "云之头巾",
     "name_kr": "",
@@ -5594,7 +5594,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Training Hat",
     "name_cn": "修炼帽",
     "name_kr": "",
@@ -5617,7 +5617,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Thule's Hat",
     "name_cn": "图勒帽",
     "name_kr": "",
@@ -5640,7 +5640,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Belt of Strength",
     "name_cn": "力量腰带",
     "name_kr": "",
@@ -5663,7 +5663,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Speed of Thought",
     "name_cn": "思考的速度",
     "name_kr": "",
@@ -5686,7 +5686,7 @@
   },
   {
     "type": "hats",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Realm of Void",
     "name_cn": "无之领域",
     "name_kr": "",
@@ -5709,7 +5709,7 @@
 
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Gloves",
     "hide": true,
     "name_cn": " ",
@@ -5732,7 +5732,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Old Leather Gloves",
     "hide": true,
     "name_cn": " ",
@@ -5755,7 +5755,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Old Woolen Gloves",
     "name_cn": "老旧皮革手套",
     "name_kr": "",
@@ -5777,7 +5777,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Leather Gloves",
     "name_cn": "皮革手套",
     "name_kr": "",
@@ -5799,7 +5799,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Mitten",
     "name_cn": "连指手套",
     "name_kr": "",
@@ -5821,7 +5821,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Sturdy Leather Gloves",
     "name_cn": "强化皮革手套",
     "name_kr": "",
@@ -5844,7 +5844,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Pirate Gloves",
     "name_cn": "海盗手套",
     "name_kr": "",
@@ -5866,7 +5866,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Power Gloves",
     "name_cn": "能量手套",
     "name_kr": "",
@@ -5889,7 +5889,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Snake Leather Gloves",
     "name_cn": "蛇皮手套",
     "name_kr": "",
@@ -5911,8 +5911,8 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
-    "name": "Imp Warrior's Gauntlet",
+    "job": "warrior",
+    "name": "Imp warrior's Gauntlet",
     "name_cn": "小恶魔的金属手套",
     "name_kr": "",
     "level": "24",
@@ -5929,12 +5929,12 @@
     "int": "",
     "dex": "",
     "hit": "0~3",
-    "icon": "Imp Warrior's Gauntlet.png",
+    "icon": "Imp warrior's Gauntlet.png",
     "desc": ""
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "The Dead's Gloves",
     "name_cn": "亡者手套",
     "name_kr": "",
@@ -5956,7 +5956,7 @@
   },
   {
     "type": "gloves",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Elemental Gloves",
     "name_cn": "元素手套",
     "name_kr": "",
@@ -5978,7 +5978,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Seruang's Heart",
     "name_cn": "赛乐亚之心",
     "name_kr": "",
@@ -6000,7 +6000,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Scale Gloves",
     "name_cn": "鳞甲手套",
     "name_kr": "",
@@ -6023,7 +6023,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Cloud Gloves",
     "name_cn": "云之手套",
     "name_kr": "",
@@ -6045,7 +6045,7 @@
   },
   {
     "type": "gloves",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Oatwill's Leather Gloves",
     "name_cn": "欧特威尔的皮革手套",
     "name_kr": "",
@@ -6068,7 +6068,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Heavy Iron Gauntlet",
     "name_cn": "钢铁手套",
     "name_kr": "",
@@ -6091,7 +6091,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Lightning Gloves",
     "name_cn": "雷电手套",
     "name_kr": "",
@@ -6113,7 +6113,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Desert Mercenary Gloves",
     "name_cn": "沙漠佣兵手套",
     "name_kr": "",
@@ -6135,7 +6135,7 @@
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "Monk's Gloves",
     "name_cn": "修道士手套",
     "name_kr": "",
@@ -6157,7 +6157,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Iron Golem's Gloves",
     "name_cn": "钢铁魔像手套",
     "name_kr": "",
@@ -6180,7 +6180,7 @@
   },
   {
     "type": "gloves",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Scout Gloves",
     "name_cn": "童军手套",
     "name_kr": "",
@@ -6202,7 +6202,7 @@
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "Sage's Gloves",
     "name_cn": "贤者手套",
     "name_kr": "",
@@ -6224,7 +6224,7 @@
   },
   {
     "type": "gloves",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bitter Cold Gloves",
     "name_cn": "严寒手套",
     "name_kr": "",
@@ -6246,7 +6246,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Gloves of Darkness",
     "name_cn": "暗黑手套",
     "name_kr": "",
@@ -6268,7 +6268,7 @@
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "Gloves of Tranquility",
     "name_cn": "宁静手套",
     "name_kr": "",
@@ -6290,7 +6290,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Titanium Gauntlet",
     "name_cn": "钛合金手套",
     "name_kr": "",
@@ -6313,7 +6313,7 @@
   },
   {
     "type": "gloves",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Thule's Gloves",
     "name_cn": "图勒手套",
     "name_kr": "",
@@ -6335,7 +6335,7 @@
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "Gloves of Purification",
     "name_cn": "净化手套",
     "name_kr": "",
@@ -6357,7 +6357,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Gloves of the Forest Elf",
     "name_cn": "森林妖精手套",
     "name_kr": "",
@@ -6379,7 +6379,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Gauntlets of Victory",
     "name_cn": "胜利金属手套",
     "name_kr": "",
@@ -6402,7 +6402,7 @@
   },
   {
     "type": "gloves",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Sea Gloves",
     "name_cn": "海洋手套",
     "name_kr": "",
@@ -6424,7 +6424,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Protector's Hand Skin",
     "name_cn": "护卫兵的手部护具",
     "name_kr": "",
@@ -6448,7 +6448,7 @@
   },
   {
     "type": "gloves",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Chainstrike Gloves",
     "name_cn": "链击手套",
     "name_kr": "",
@@ -6472,7 +6472,7 @@
   },
   {
     "type": "gloves",
-    "job": "Magician",
+    "job": "magician",
     "name": "lllusionist's Gloves",
     "name_cn": "幻术师的手部护具",
     "name_kr": "",
@@ -6495,7 +6495,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Chainstrike Gloves",
     "name_cn": "连续攻击手套",
     "name_kr": "",
@@ -6518,7 +6518,7 @@
   },
   {
     "type": "gloves",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Joma's Hands",
     "name_cn": "裘玛的手掌",
     "name_kr": "",
@@ -6544,7 +6544,7 @@
 
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Wingwing Boots",
     "name_cn": "飞天鞋",
     "name_kr": "",
@@ -6568,7 +6568,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Shoes",
     "name_cn": "冒险家鞋",
     "name_kr": "",
@@ -6591,7 +6591,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Old Leather Shoes",
     "name_cn": "老旧皮革长鞋",
     "name_kr": "",
@@ -6614,7 +6614,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Old Woolen Shoes",
     "name_cn": "老旧毛毛鞋",
     "name_kr": "",
@@ -6637,7 +6637,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Leather Shoes",
     "name_cn": "皮革长鞋",
     "name_kr": "",
@@ -6660,7 +6660,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Boots of Speed",
     "name_cn": "迅速长鞋",
     "name_kr": "",
@@ -6683,7 +6683,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Savage Boots",
     "hide": true,
     "name_cn": " ",
@@ -6707,7 +6707,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Shoes (ShukShuk)",
     "name_cn": "鞋子[咻咻]",
     "name_kr": "",
@@ -6730,7 +6730,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Charmed Shoes",
     "name_cn": "咒术鞋",
     "name_kr": "",
@@ -6753,7 +6753,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Snake Leather Boots",
     "name_cn": "蛇皮鞋",
     "name_kr": "",
@@ -6776,7 +6776,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Greaves of the Grey Boulder",
     "name_cn": "白岩长鞋",
     "name_kr": "",
@@ -6800,7 +6800,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Scale Boots",
     "name_cn": "鳞片鞋",
     "name_kr": "",
@@ -6823,7 +6823,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Kataru Shoes",
     "name_cn": "卡塔勒鞋",
     "name_kr": "",
@@ -6846,7 +6846,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Desert Mercenary Boots",
     "name_cn": "沙漠佣兵鞋",
     "name_kr": "",
@@ -6869,7 +6869,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Heavy Iron Boots",
     "name_cn": "钢铁鞋",
     "name_kr": "",
@@ -6892,7 +6892,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Sharkun Greaves",
     "name_cn": "夏库胫甲",
     "name_kr": "",
@@ -6915,7 +6915,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Titanium Boots",
     "name_cn": "钛合金鞋",
     "name_kr": "",
@@ -6938,7 +6938,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Boots of Darkness",
     "name_cn": "暗黑鞋",
     "name_kr": "",
@@ -6961,7 +6961,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Berserker Boots",
     "name_cn": "狂战士鞋",
     "name_kr": "",
@@ -6985,7 +6985,7 @@
   },
   {
     "type": "shoes",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Forbidden Library Tracks",
     "name_cn": "禁书库的足迹",
     "name_kr": "",
@@ -7008,7 +7008,7 @@
   },
   {
     "type": "shoes",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Boots of the Blue Forest",
     "name_cn": "丛林长靴",
     "name_kr": "",
@@ -7033,7 +7033,7 @@
   },
   {
     "type": "shoes",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Toxic Boots",
     "name_cn": "剧毒长靴",
     "name_kr": "",
@@ -7056,7 +7056,7 @@
   },
   {
     "type": "shoes",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Snowfield Tracer Boots",
     "name_cn": "雪原追踪者长靴",
     "name_kr": "",
@@ -7080,7 +7080,7 @@
   },
   {
     "type": "shoes",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Elven Overshoes",
     "name_cn": "精灵的包鞋",
     "name_kr": "",
@@ -7103,7 +7103,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Boots of the Blue Waterfall",
     "name_cn": "靛蓝瀑布长靴",
     "name_kr": "",
@@ -7127,7 +7127,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Monk's Boots",
     "name_cn": "修道士长靴",
     "name_kr": "",
@@ -7150,7 +7150,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Snowy Field's Cursed Boots",
     "name_cn": "雪原诅咒长靴",
     "name_kr": "",
@@ -7173,7 +7173,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Shoes of Tranquility",
     "name_cn": "宁静鞋",
     "name_kr": "",
@@ -7196,7 +7196,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Light Engraving Shoes",
     "name_cn": "光雕鞋",
     "name_kr": "",
@@ -7220,7 +7220,7 @@
   },
   {
     "type": "shoes",
-    "job": "Magician",
+    "job": "magician",
     "name": "Determined Memory Boots",
     "name_cn": "坚韧的记忆短靴",
     "name_kr": "",
@@ -7243,7 +7243,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Yellow Canola Boots",
     "name_cn": "油菜花长靴",
     "name_kr": "",
@@ -7267,7 +7267,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Cloud Boots",
     "name_cn": "云之长靴",
     "name_kr": "",
@@ -7291,7 +7291,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Bitter Cold Boots",
     "name_cn": "严寒长靴",
     "name_kr": "",
@@ -7315,7 +7315,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Thule's Boots",
     "name_cn": "图勒长靴",
     "name_kr": "",
@@ -7339,7 +7339,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Sea Boots",
     "name_cn": "海洋长靴",
     "name_kr": "",
@@ -7364,7 +7364,7 @@
   },
   {
     "type": "shoes",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Steps of Extremity",
     "name_cn": "极限步伐",
     "name_kr": "",
@@ -7387,7 +7387,7 @@
   
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Wooden Shield",
     "name_cn": "木盾",
     "name_kr": "",
@@ -7410,7 +7410,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Round Shield",
     "name_cn": "圆盾",
     "name_kr": "",
@@ -7433,7 +7433,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Fungiskin Shield",
     "name_cn": "蘑菇盾牌",
     "name_kr": "",
@@ -7457,7 +7457,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Skull Shield",
     "name_cn": "骷髅盾",
     "name_kr": "",
@@ -7481,7 +7481,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Ion Shield",
     "name_cn": "铁盾",
     "name_kr": "",
@@ -7504,7 +7504,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Crystal Shield",
     "name_cn": "水晶盾",
     "name_kr": "",
@@ -7527,7 +7527,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Tower Shield",
     "name_cn": "塔盾",
     "name_kr": "",
@@ -7550,7 +7550,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Iron Covered Shield",
     "name_cn": "铁甲盾",
     "name_kr": "",
@@ -7573,7 +7573,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Darksteel Shield",
     "name_cn": "玄铁盾",
     "name_kr": "",
@@ -7596,7 +7596,7 @@
   },
   {
     "type": "shields",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Spartan Shield",
     "name_cn": "斯巴达盾牌",
     "name_kr": "",
@@ -7620,7 +7620,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Leather Belt",
     "name_cn": "皮带",
     "name_kr": "",
@@ -7631,7 +7631,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Fungiskin Belt",
     "name_cn": "蘑菇腰带",
     "name_kr": "",
@@ -7654,7 +7654,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Madgar's Belt",
     "name_cn": "梅德格的腰带",
     "name_kr": "",
@@ -7677,7 +7677,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Heavy Leather Belt",
     "name_cn": "强化皮带",
     "name_kr": "",
@@ -7700,7 +7700,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Belt of Mana Regeneration",
     "name_cn": "魔力再生腰带",
     "name_kr": "",
@@ -7724,7 +7724,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Belt of Regeneration",
     "name_cn": "再生皮带",
     "name_kr": "",
@@ -7748,7 +7748,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Belt of Belief",
     "name_cn": "信念皮带",
     "name_kr": "",
@@ -7771,7 +7771,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Titanium Belt",
     "name_cn": "钛合金腰带",
     "name_kr": "",
@@ -7795,7 +7795,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Belt of Rough Roots",
     "name_cn": "粗糙根蔓皮带",
     "name_kr": "",
@@ -7818,7 +7818,7 @@
   },
   {
     "type": "belts",
-    "job": "Magician",
+    "job": "magician",
     "name": "Belt of Dry Magic",
     "name_cn": "契约者的皮带",
     "name_kr": "",
@@ -7841,7 +7841,7 @@
   },
   {
     "type": "belts",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Pledger's Belt",
     "name_cn": "契约者的皮带",
     "name_kr": "",
@@ -7864,7 +7864,7 @@
   },
   {
     "type": "belts",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Teal Fragment Belt",
     "name_cn": "青绿碎片腰带",
     "name_kr": "",
@@ -7887,7 +7887,7 @@
   },
   {
     "type": "belts",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Otherworld Belt",
     "name_cn": "异界皮带",
     "name_kr": "",
@@ -7911,7 +7911,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Health",
     "name_cn": "体力披风",
     "name_kr": "",
@@ -7934,7 +7934,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Bulldozer Cloak",
     "name_cn": "凶猛猪披风",
     "name_kr": "",
@@ -7957,7 +7957,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Cloak",
     "name_cn": "冒险家披风",
     "name_kr": "",
@@ -7980,7 +7980,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Will",
     "name_cn": "意志披风",
     "name_kr": "",
@@ -8004,7 +8004,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Shaman Cloak",
     "name_cn": "巫师披风",
     "name_kr": "",
@@ -8027,8 +8027,8 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
-    "name": "Warrior's Cloak",
+    "job": "warrior,ranger,magician,breaker",
+    "name": "warrior's Cloak",
     "name_cn": "斗士的披风",
     "name_kr": "",
     "level": "20",
@@ -8045,12 +8045,12 @@
     "int": "",
     "dex": "",
     "block": "",
-    "icon": "Warrior's Cloak.png",
+    "icon": "warrior's Cloak.png",
     "desc": ""
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Half Death",
     "name_cn": "濒死披风",
     "name_kr": "",
@@ -8075,7 +8075,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Death",
     "name_cn": "死亡披风",
     "name_kr": "",
@@ -8100,7 +8100,7 @@
   },
   {
     "type": "cloaks",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Passionate Cloak",
     "name_cn": "狂热披风",
     "name_kr": "",
@@ -8125,7 +8125,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Mother Nature",
     "name_cn": "大地之母项链",
     "name_kr": "",
@@ -8146,7 +8146,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Sparkling Necklace",
     "name_cn": "预言项链",
     "name_kr": "",
@@ -8167,7 +8167,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Necklace of Will",
     "name_cn": "意志项链(1~4)",
     "name_kr": "",
@@ -8187,7 +8187,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Necklace",
     "name_cn": "冒险家项链",
     "name_kr": "",
@@ -8207,7 +8207,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Coral Necklace",
     "name_cn": "珊瑚项链",
     "name_kr": "",
@@ -8227,7 +8227,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Dark Skull",
     "name_cn": "黑骷髅项链",
     "name_kr": "",
@@ -8248,7 +8248,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Bone Necklace",
     "name_cn": "骨制项链",
     "name_kr": "",
@@ -8268,7 +8268,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Raven Necklace",
     "name_cn": "渡鸦项链",
     "name_kr": "",
@@ -8288,7 +8288,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Pirate Necklace",
     "name_cn": "海盗项链",
     "name_kr": "",
@@ -8308,7 +8308,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Necklace of Will V",
     "name_cn": "意志项链5",
     "name_kr": "",
@@ -8329,7 +8329,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Golden Necklace",
     "name_cn": "黄金项链",
     "name_kr": "",
@@ -8350,7 +8350,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Warrior",
+    "job": "warrior",
     "name": "Ouroboros",
     "name_cn": "衔尾蛇项链",
     "name_kr": "",
@@ -8371,7 +8371,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Magician",
+    "job": "magician",
     "name": "Rosario",
     "name_cn": "十字架项链",
     "name_kr": "",
@@ -8392,7 +8392,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Ranger",
+    "job": "ranger",
     "name": "Intruder",
     "name_cn": "入侵者项链",
     "name_kr": "",
@@ -8413,7 +8413,7 @@
   },
   {
     "type": "necklaces",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Equinox",
     "name_cn": "昼夜平衡",
     "name_kr": "",
@@ -8434,7 +8434,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Canine Ring",
     "name_cn": "臼齿戒指",
     "name_kr": "",
@@ -8455,7 +8455,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Ring of Ancient",
     "name_cn": "古代戒指",
     "name_kr": "",
@@ -8476,7 +8476,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Coral Ring",
     "name_cn": "珊瑚戒指",
     "name_kr": "",
@@ -8497,7 +8497,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Guardian's Ring",
     "name_cn": "守护者的戒指",
     "name_kr": "",
@@ -8518,7 +8518,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Bone Ring",
     "name_cn": "骨制戒指",
     "name_kr": "",
@@ -8539,7 +8539,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Ring of Soul",
     "name_cn": "灵魂戒指",
     "name_kr": "",
@@ -8560,7 +8560,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Ring of Virgin",
     "name_cn": "纯净戒指",
     "name_kr": "",
@@ -8581,7 +8581,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Ring",
     "name_cn": "冒险家戒指",
     "name_kr": "",
@@ -8602,7 +8602,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Kamakee Ring",
     "name_cn": "乌鸦戒指",
     "name_kr": "",
@@ -8623,7 +8623,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Pirate Ring",
     "name_cn": "海盗戒指",
     "name_kr": "",
@@ -8644,7 +8644,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Critical Ring of Will",
     "name_cn": "意志之暴击戒指",
     "name_kr": "",
@@ -8665,7 +8665,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "HP Ring of Will",
     "name_cn": "意志之体力戒指",
     "name_kr": "",
@@ -8686,7 +8686,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Magic Power Ring of Will",
     "name_cn": "意志之魔力戒指",
     "name_kr": "",
@@ -8707,7 +8707,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Ring of Promise",
     "name_cn": "约定戒指",
     "name_kr": "",
@@ -8728,7 +8728,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Alloy Ring",
     "name_cn": "合金戒指",
     "name_kr": "",
@@ -8749,7 +8749,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Radiant Paradox of Omnipotence",
     "name_cn": "闪亮的全能悖论",
     "name_kr": "",
@@ -8770,7 +8770,7 @@
   },
   {
     "type": "rings",
-    "job": "Magician",
+    "job": "magician",
     "name": "Endless Arrogance of Omniscience",
     "name_cn": "无尽的万能傲慢",
     "name_kr": "",
@@ -8791,7 +8791,7 @@
   },
   {
     "type": "rings",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Eternal Paradox of Immortality",
     "name_cn": "永生的不死矛盾",
     "name_kr": "",
@@ -8812,7 +8812,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Archangel",
     "name_cn": "大天使",
     "name_kr": "",
@@ -8833,7 +8833,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Purified Ring of Strength",
     "name_cn": "净化之力戒指",
     "name_kr": "",
@@ -8854,7 +8854,7 @@
   },
   {
     "type": "rings",
-    "job": "Magician",
+    "job": "magician",
     "name": "Ring of Life Revival",
     "name_cn": "复活戒指",
     "name_kr": "",
@@ -8875,7 +8875,7 @@
   },
   {
     "type": "rings",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Pioneer's Ring",
     "name_cn": "开拓命运之戒",
     "name_kr": "",
@@ -8896,7 +8896,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger",
+    "job": "warrior,ranger",
     "name": "Paradox of Omnipotence",
     "name_cn": "全能悖论",
     "name_kr": "",
@@ -8917,7 +8917,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Arrogance of Omniscience",
     "name_cn": "万能傲慢",
     "name_kr": "",
@@ -8938,7 +8938,7 @@
   },
   {
     "type": "rings",
-    "job": "Warrior,Ranger,Magician,Breaker",
+    "job": "warrior,ranger,magician,breaker",
     "name": "Paradox of Immortality",
     "name_cn": "不死矛盾",
     "name_kr": "",
@@ -8959,7 +8959,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Wooden Guard",
     "name_cn": "木制护身符",
     "name_kr": "",
@@ -8978,7 +8978,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Coral Guard",
     "name_cn": "珊瑚护身符",
     "name_kr": "",
@@ -8997,7 +8997,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Woopa Roopa's Guard",
     "name_cn": "族长护身符",
     "name_kr": "",
@@ -9016,7 +9016,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Purifying Guard",
     "name_cn": "净化护身符",
     "name_kr": "",
@@ -9035,7 +9035,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Frost Guard",
     "name_cn": "霜之护身符",
     "name_kr": "",
@@ -9054,7 +9054,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Storm Guard",
     "name_cn": "暴风护身符",
     "name_kr": "",
@@ -9073,7 +9073,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Red Guard",
     "name_cn": "赤红护身符",
     "name_kr": "",
@@ -9092,7 +9092,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Butterfly Guard",
     "name_cn": "蝴蝶护身符",
     "name_kr": "",
@@ -9111,7 +9111,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Crown Rock Guard",
     "name_cn": "皇冠岩护身符",
     "name_kr": "",
@@ -9130,7 +9130,7 @@
   },
   {
     "type": "charms",
-    "job": "Breaker",
+    "job": "breaker",
     "name": "Relic of Infinity",
     "name_cn": "无极文物",
     "name_kr": "",

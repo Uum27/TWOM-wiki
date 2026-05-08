@@ -241,7 +241,7 @@ const langConfig = {
     set2:{cn:"2件套",en:"2SET",kr:""}, set3:{cn:"3件套",en:"3SET",kr:""}
   },
   rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"}, "高级":{cn:"高级",en:"Advanced",kr:"고급"}, "稀有":{cn:"稀有",en:"Rare",kr:"희귀"}, "英雄":{cn:"英雄",en:"Heroic",kr:"영웅"}, "传说":{cn:"传说",en:"Legendary",kr:"전설"} },
-  job:{ "Warrior":{cn:"战士",en:"Warrior",kr:""}, "Magician":{cn:"法师",en:"Magician",kr:""}, "Ranger":{cn:"游侠",en:"Ranger",kr:""}, "Breaker":{cn:"武术家",en:"Breaker",kr:""}, "all":{cn:"通用",en:"All",kr:""} }
+  job:{ "warrior":{cn:"战士",en:"warrior",kr:""}, "magician":{cn:"法师",en:"magician",kr:""}, "ranger":{cn:"游侠",en:"ranger",kr:""}, "breaker":{cn:"武术家",en:"breaker",kr:""}, "all":{cn:"通用",en:"All",kr:""} }
 };
 
 let page = 1;
@@ -453,7 +453,7 @@ function renderCards(){
     const rarityKey = item.rarity || "高级";
     const rarity = tr(rarityKey,'rarity');
     const rc = rarityConfig[rarityKey] || rarityConfig["高级"];
-    const jobIconMap = { "Warrior":"job/warrior.png","Magician":"job/magician.png","Ranger":"job/Ranger.png","Breaker":"job/Breaker.png","all":"job/all.png" };
+    const jobIconMap = { "warrior":"job/warrior.png","magician":"job/magician.png","ranger":"job/ranger.png","breaker":"job/breaker.png"};
     let jobIconsHtml = "";
     let jobs = Array.isArray(item.job) ? item.job : (typeof item.job=="string"&&item.job.includes(",") ? item.job.split(",").map(x=>x.trim()) : item.job ? [item.job] : []);
     if(!jobs.length) jobs = ["all"];
