@@ -1472,9 +1472,9 @@
       "kr": "더마마"
     },
     "Deep Darkness": {
-      "cn": "깊은어둠",
+      "cn": "",
       "en": "Deep Darkness",
-      "kr": ""
+      "kr": "깊은어둠"
     },
     "Burning Darkness": {
       "cn": "",
@@ -4457,9 +4457,9 @@
         "en": "Bulldozer Tonfa",
         "kr": ""
     },
-    "Breaker's Knuckles": {
+    "Breaker's Knuckle": {
         "cn": "武术家指虎",
-        "en": "Breaker's Knuckles",
+        "en": "Breaker's Knuckle",
         "kr": ""
     },
     "Shiny Knuckle": {
@@ -4521,6 +4521,110 @@
             "kr": ""
         }
     },
+  "equipStat": {
+    "attack": {
+      "cn": "攻击力",
+      "en": "Attack",
+      "kr": ""
+    },
+    "armor": {
+      "cn": "防御力",
+      "en": "Armor",
+      "kr": ""
+    },
+    "speed": {
+      "cn": "攻击速度",
+      "en": "Speed",
+      "kr": ""
+    },
+    "hp": {
+      "cn": "体力",
+      "en": "HP",
+      "kr": ""
+    },
+    "mana": {
+      "cn": "魔力",
+      "en": "Mana",
+      "kr": ""
+    },
+    "hp regen": {
+      "cn": "体力回复",
+      "en": "HP Regen",
+      "kr": ""
+    },
+    "mana regen": {
+      "cn": "魔力回复",
+      "en": "Mana Regen",
+      "kr": ""
+    },
+    "str": {
+      "cn": "力量",
+      "en": "STR",
+      "kr": ""
+    },
+    "dex": {
+      "cn": "敏捷",
+      "en": "DEX",
+      "kr": ""
+    },
+    "int": {
+      "cn": "智力",
+      "en": "INT",
+      "kr": ""
+    },
+    "hit": {
+      "cn": "命中",
+      "en": "HR",
+      "kr": ""
+    },
+    "cri": {
+      "cn": "暴击",
+      "en": "Cri",
+      "kr": ""
+    },
+    "move": {
+      "cn": "移动速度",
+      "en": "Move",
+      "kr": ""
+    },
+    "fire resist": {
+      "cn": "火抗",
+      "en": "fire resist",
+      "kr": ""
+    },
+    "magic_resist": {
+      "cn": "魔法抗性",
+      "en": "magic resist",
+      "kr": ""
+    }
+  },
+  "rarityLang": {
+    "一般": {
+      "cn": "一般",
+      "en": "Normal",
+      "kr": ""
+    },
+    "高级": {
+      "cn": "高级",
+      "en": "Advanced",
+      "kr": ""
+    },
+    "稀有": {
+      "cn": "稀有",
+      "en": "Epic",
+      "kr": ""
+    },
+    "英雄": {
+      "cn": "英雄",
+      "en": "Heroic",
+      "kr": ""
+    },
+    "传说": {
+      "cn": "传说",
+      "en": "Legendary",
+      "kr": ""
+    }
+  },
     "idb": {
         "Ghost Ship": {
             "cn": "废弃幽灵船",
