@@ -457,7 +457,21 @@ function renderCards(){
     let jobIconsHtml = "";
     let jobs = Array.isArray(item.job) ? item.job : (typeof item.job=="string"&&item.job.includes(",") ? item.job.split(",").map(x=>x.trim()) : item.job ? [item.job] : []);
     if(!jobs.length) jobs = ["all"];
-    jobs.forEach(j=>{ const src = jobIconMap[j] || jobIconMap["all"]; jobIconsHtml += `<img src="${src}" style="width:24px;height:24px;object-fit:contain;margin:2px" alt="${tr(j,'job')}">`; });
+    jobs.forEach(j=>{
+
+  j = j.toLowerCase();
+
+  const src = jobIconMap[j] || "job/all.png";
+
+  jobIconsHtml += `
+    <img
+      src="${src}"
+      style="width:24px;height:24px;object-fit:contain;margin:2px"
+      alt="${tr(j,'job')}"
+    >
+  `;
+
+});
 
     const icon = item.icon || "default.png";
     let statsHtml = "";
