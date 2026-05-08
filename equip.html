@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>装备图鉴</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+body{background:#f0f2f5;padding:12px}
+
+.top-bar{
+  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;
+  position:sticky;top:0;background:#fff;padding:6px 0;z-index:10
+}
+
+#typeBar.top-bar {
+  position: static;
+  background: transparent;
+  margin-bottom: 0;
+}
+
+.search-box{
+  flex:1;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px
+}
+.lang-btn,.page-btn,.type-btn{
+  padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px
+}
+.type-btn.active{ background:#718ACC;color:#fff;border-color:#718ACC }
+.page-btn{margin:0 4px}
+
+.pagination{text-align:center;margin:8px 0}
+
+.equip-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+/* 平板 */
+@media(min-width:768px) and (max-width:1023px){
+  .equip-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+}
+
+/* PC */
+@media(min-width:1024px){
+  .equip-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+}
+
+.equip-card{
+  background:#D9E3EC;border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;
+  display:flex;flex-direction:column;padding:4px;gap:4px;border: 1px solid #94A6BE;
+}
+.equip-name{
+  text-align:center;font-weight:bold;font-size:18px;
+  padding:4px 4px;
+  border-top: 2px solid #b9cad6; border-bottom: 2px solid #b9cad6;
+  background: linear-gradient(100deg, #c1ceda, #E7F7FF, #c1ceda);
+  border-radius: 4px 4px 4px 4px;
+  line-height:1.2;
+}
+@media(min-width:1024px){ .equip-name{ font-size:20px; padding:6px 4px; } }
+
+.equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.equip-icon-col{ width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px }
+.equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px}
+
+.hex-icon{ width:50px;height:50px;display:flex;align-items:center;justify-content:center; clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%); background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden; }
+.hex-icon::before{ content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%); }
+.hex-icon::after{ content:"";position:absolute;inset:0;box-shadow:inset 0 0 15px rgba(255,255,255,0.35),inset 0 0 25px rgba(255,255,255,0.15); }
+.hex-icon .star{ position:absolute;width:8px;height:8px;z-index:1; }
+.hex-icon .star::before{ content:"";position:absolute;width:100%;height:2px;top:50%;left:0;transform:translateY(-50%);background:linear-gradient(to right,transparent,rgba(255,255,255,0.95),transparent); }
+.hex-icon .star::after{ content:"";position:absolute;width:2px;height:100%;left:50%;top:0;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.95),transparent); }
+.hex-icon .star1{ top:18%;left:15%; }
+.hex-icon .star2{ bottom:18%;right:15%; }
+.hex-icon img{width:30px;height:30px;object-fit:contain}
+@media(min-width:1024px){ .hex-icon{width:60px;height:60px} .hex-icon img{width:38px;height:38px} }
+
+.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
+.item-level{ font-size:17px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:5px }
+@media(min-width:1024px){.item-level{font-size:19px}}
+.tag-job{ background:#D9E3EC;border-radius:6px;width:fit-content;padding:3px;display:flex;align-items:center;gap:1px;flex-wrap:wrap }
+.equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
+.stat-item{ font-size:15px;font-weight:bold;text-align:left;padding:2px 0 }
+@media(min-width:1024px){.stat-item{font-size:17px}}
+.btn-source{ width:60%;margin:0 auto;padding:8px;margin-top:auto;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block }
+@media(min-width:1024px){.btn-source{padding:10px;font-size:16px}}
+
+.modal-backdrop{ position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999 }
+.modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
+.modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+.modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
+.modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; }
+.modal-desc div:hover{ background:#e0e7ff; }
+.modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+</style>
+</head>
+
+<body>
+<div class="top-bar">
+  <input class="search-box" placeholder="搜索名称/属性..." id="searchBox">
+  <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
+</div>
+<button class="type-btn" onclick="location.href='index.html'">怪物图鉴</button>
+<div class="top-bar" id="typeBar">
+  <button class="type-btn active" data-type="all">全部</button>
+  <button class="type-btn" data-type="weapon">武器</button>
+  <button class="type-btn" data-type="armor">盔甲</button>
+  <button class="type-btn" data-type="hats">帽子</button>
+  <button class="type-btn" data-type="belts">腰带</button>
+  <button class="type-btn" data-type="gloves">手套</button>
+  <button class="type-btn" data-type="shoes">鞋子</button>
+  <button class="type-btn" data-type="cloaks">披风</button>
+  <button class="type-btn" data-type="necklaces">项链</button>
+  <button class="type-btn" data-type="rings">戒指</button>
+  <button class="type-btn" data-type="shields">盾牌</button>
+  <button class="type-btn" data-type="charms">护身符</button>
+</div>
+<div class="pagination" id="topPagination">
+  <button class="page-btn" id="prevTop">上一页</button>
+  <span id="pageInfo">第 1 页</span>
+  <button class="page-btn" id="nextTop">下一页</button>
+</div>
+<div class="equip-grid" id="equipGrid">加载中...</div>
+<div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="prevBot">上一页</button>
+  <span id="pageInfoBot">第 1 页</span>
+  <button class="page-btn" id="nextBot">下一页</button>
+</div>
+<div class="modal-backdrop" id="modal">
+  <div class="modal-content">
+    <div class="modal-title" id="modalTitle">获取途径</div>
+    <div class="modal-desc" id="modalText"></div>
+    <button class="modal-close" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<script>
+let currentLang = "cn";
+const typeLangMap = {
+  all: {
+    cn: "全部",
+    en: "All",
+    kr: "전체"
+  },
+  weapon: {
+    cn: "武器",
+    en: "Weapons",
+    kr: "무기"
+  },
+  armor: {
+    cn: "盔甲",
+    en: "Armor",
+    kr: "갑옷"
+  },
+  hats: {
+    cn: "帽子",
+    en: "Hats",
+    kr: "모자"
+  },
+  belts: {
+    cn: "腰带",
+    en: "Belts",
+    kr: "벨트"
+  },
+  gloves: {
+    cn: "手套",
+    en: "Gloves",
+    kr: "장갑"
+  },
+  shoes: {
+    cn: "鞋子",
+    en: "Shoes",
+    kr: "신발"
+  },
+  cloaks: {
+    cn: "披风",
+    en: "Cloaks",
+    kr: "망토"
+  },
+  necklaces: {
+    cn: "项链",
+    en: "Necklaces",
+    kr: "목걸이"
+  },
+  rings: {
+    cn: "戒指",
+    en: "Rings",
+    kr: "반지"
+  },
+  shields: {
+    cn: "盾牌",
+    en: "Shields",
+    kr: "방패"
+  },
+  charms: {
+    cn: "护身符",
+    en: "Charms",
+    kr: "부적"
+  }
+};
+
+function updateTypeButtonsLang() {
+
+  document.querySelectorAll('#typeBar .type-btn').forEach(btn => {
+
+    const type = btn.dataset.type;
+
+    if(typeLangMap[type]) {
+      btn.innerText = typeLangMap[type][currentLang];
+    }
+
+  });
+
+}
+const langConfig = {
+  searchPlaceholder:{cn:"搜索名称/属性...",en:"Search name/attr...",kr:"이름/속성 검색..."},
+  pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
+  btnText:{
+    prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
+    source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
+    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无装备数据",en:"No data",kr:"데이터 없음"},
+    noAttr:{cn:"无属性",en:"No attr",kr:"속성 없음"}
+  },
+  attrName:{
+    attack:{cn:"攻击力",en:"ATTACK",kr:""}, armor:{cn:"防御力",en:"ARMOR",kr:""},
+    speed:{cn:"攻速",en:"SPEED",kr:""}, block:{cn:"阻挡",en:"block",kr:""},
+    hp:{cn:"体力",en:"HP",kr:""}, mana:{cn:"魔力",en:"MANA",kr:""},
+    hp_regen:{cn:"体力回复",en:"HP Regen",kr:""}, mana_regen:{cn:"魔力回复",en:"MANA Regen",kr:""},
+    str:{cn:"力量",en:"STR",kr:""}, dex:{cn:"敏捷",en:"DEX",kr:""}, int:{cn:"智力",en:"INT",kr:""},
+    hit:{cn:"命中",en:"Hit",kr:""}, cri:{cn:"暴击",en:"Cri",kr:""},
+    deadly:{cn:"致死一击",en:"Deadly",kr:""}, move:{cn:"移动速度",en:"Move",kr:""},
+    ice_resist:{cn:"冰抗",en:"Ice Res",kr:""}, fire_resist:{cn:"火抗",en:"Fire Res",kr:""},
+    magic_resist:{cn:"属性抗性",en:"Magic Res",kr:""},
+    set2:{cn:"2件套",en:"2SET",kr:""}, set3:{cn:"3件套",en:"3SET",kr:""}
+  },
+  rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"}, "高级":{cn:"高级",en:"Advanced",kr:"고급"}, "稀有":{cn:"稀有",en:"Rare",kr:"희귀"}, "英雄":{cn:"英雄",en:"Heroic",kr:"영웅"}, "传说":{cn:"传说",en:"Legendary",kr:"전설"} },
+  job:{ "Warrior":{cn:"战士",en:"Warrior",kr:""}, "Magician":{cn:"法师",en:"Magician",kr:""}, "Ranger":{cn:"游侠",en:"Ranger",kr:""}, "Breaker":{cn:"武术家",en:"Breaker",kr:""}, "all":{cn:"通用",en:"All",kr:""} }
+};
+
+let page = 1;
+let allItems = [];
+let filteredItems = [];
+let currentType = "all";
+function getPerPage(){
+
+  // PC
+  if(window.innerWidth >= 1024){
+    return 20;
+  }
+
+  // 平板
+  if(window.innerWidth >= 768){
+    return 15;
+  }
+
+  // 手机
+  return 12;
+}
+const equipFiles = [ { type:"all", path:"equipment_data/all_equip.json" } ];
+
+const statKeys = [
+  "attack",
+  "armor",
+  "speed",
+  "block",
+  "hp",
+  "mana",
+  "hp_regen",
+  "mana_regen",
+  "str",
+  "dex",
+  "int",
+  "hit",
+  "cri",
+  "deadly",
+  "ice_resist",
+  "fire_resist",
+  "magic_resist",
+  "move",
+  "set2",
+  "set3"
+];
+
+const rarityConfig = {
+  "一般":{color:"#4D5A75",bg:"#474F6E"}, "高级":{color:"#518B38",bg:"#328300"},
+  "稀有":{color:"#3774AE",bg:"#0068A9"}, "英雄":{color:"#733A9D",bg:"#69329B"},
+  "传说":{color:"#E7696C",bg:"#E60000"}
+};
+
+function tr(key, type){
+  const o = langConfig[type]?.[key];
+  return o?.[currentLang] || o?.cn || key;
+}
+
+function updateLangText(){
+  document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
+  document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
+  document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = tr('next','btnText');
+  document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
+  document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
+  document.querySelector('.modal-close').innerText = tr('close','btnText');
+}
+
+function updatePageInfo(){
+  const total = Math.ceil(filteredItems.length / getPerPage());
+  const s = langConfig.pageText[currentLang].replace("{now}",page).replace("{total}",total||1);
+  document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
+}
+
+function toggleLang(){
+  currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  updateLangText();
+  updateTypeButtonsLang();
+  renderCards();
+}
+
+function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
+
+function filterAndRender(keyword=""){
+  let list = allItems;
+  if(currentType !== "all") list = list.filter(x=>x.type === currentType);
+  if(keyword){
+    list = list.filter(item=>{
+      const name = (item.name_cn||item.name||"").toLowerCase();
+      const nameEn = (item.name||"").toLowerCase();
+      const nameKr = (item.name_kr||"").toLowerCase();
+      let attrStr = "";
+
+statKeys.forEach(k => {
+
+  if(item[k] == null || item[k] === "") return;
+
+  const value = String(item[k]).replace(/ to /g,"~");
+
+  // 属性翻译
+  const cn = langConfig.attrName[k]?.cn || "";
+  const en = langConfig.attrName[k]?.en || "";
+  const kr = langConfig.attrName[k]?.kr || "";
+
+ let alias = "";
+
+if(k === "move") alias = "移速 speed movement";
+if(k === "cri") alias = "暴率 crit critical";
+if(k === "hp") alias = "血量 生命";
+if(k === "mana") alias = "蓝量 魔力";
+if(k === "attack") alias = "攻击 攻";
+if(k === "armor") alias = "防御 防";
+if(k === "hp_regen") alias = "回血 回复";
+if(k === "mana_regen") alias = "回蓝";
+if(k === "deadly") alias = "致命 致死";
+if(k === "block") alias = "格挡";
+if(k === "fire_resist") alias = "火";
+
+  attrStr += `
+    ${k}
+    ${cn}
+    ${en}
+    ${kr}
+    ${alias}
+    ${value}
+  `;
+
+});
+      const all = [name,nameEn,nameKr, String(item.level||""), attrStr].join(" ").toLowerCase();
+      return all.includes(keyword);
+    });
+  }
+  filteredItems = list;
+  page = 1;
+  renderCards();
+}
+
+function setType(t){
+  currentType = t;
+
+  document
+    .querySelectorAll('#typeBar .type-btn')
+    .forEach(btn=>{
+      btn.classList.toggle(
+        'active',
+        btn.dataset.type === t
+      );
+    });
+
+  doSearch();
+}
+
+function goPrev(){ if(page>1){page--;renderCards();} }
+function goNext(){
+  const total = Math.ceil(filteredItems.length/getPerPage());
+  if(page<total){ page++; renderCards(); window.scrollTo(0,0); }
+}
+
+async function loadMyJson(){
+  let items = [];
+  for(const f of equipFiles){
+    try {
+      const res = await fetch(f.path);
+      items.push(...await res.json());
+    } catch(e) {
+      console.log("load fail",f.path,e);
+    }
+  }
+  
+  // 过滤掉隐藏装备
+  allItems = items.filter(item => !item.hide);
+  // 初始显示全部可见装备
+  filteredItems = [...allItems];
+  
+  // 清除可能的搜索和分类状态
+  currentType = "all";
+  document.querySelectorAll('.type-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.type === "all"));
+  document.getElementById('searchBox').value = "";
+
+  // 先更新界面文字（不渲染）
+  updateLangText();
+  updateTypeButtonsLang();
+
+  // 根据是否有定位参数决定如何渲染（只渲染一次）
+  if(location.search.includes('equip=')){
+    jumpToEquipFromUrl();
+  } else {
+    renderCards();
+  }
+}
+
+// 渲染卡片
+function renderCards(){
+  const grid = document.getElementById("equipGrid");
+  grid.innerHTML = "";
+  updatePageInfo();
+  const perPage = getPerPage();
+ const pageItems = filteredItems.slice((page-1)*perPage, page*perPage);
+  if(!pageItems.length){
+    grid.innerHTML = `<div style='grid-column:1/-1;text-align:center;padding:20px'>${tr('noData','btnText')}</div>`;
+    return;
+  }
+  pageItems.forEach(item=>{
+    if (item.hide === true) return;
+    const name =
+  currentLang === "cn"
+    ? (item.name_cn || item.name)
+    : currentLang === "kr"
+    ? (item.name_kr || item.name)
+    : item.name;
+    const rarityKey = item.rarity || "高级";
+    const rarity = tr(rarityKey,'rarity');
+    const rc = rarityConfig[rarityKey] || rarityConfig["高级"];
+    const jobIconMap = { "Warrior":"job/warrior.png","Magician":"job/magician.png","Ranger":"job/Ranger.png","Breaker":"job/Breaker.png","all":"job/all.png" };
+    let jobIconsHtml = "";
+    let jobs = Array.isArray(item.job) ? item.job : (typeof item.job=="string"&&item.job.includes(",") ? item.job.split(",").map(x=>x.trim()) : item.job ? [item.job] : []);
+    if(!jobs.length) jobs = ["all"];
+    jobs.forEach(j=>{ const src = jobIconMap[j] || jobIconMap["all"]; jobIconsHtml += `<img src="${src}" style="width:24px;height:24px;object-fit:contain;margin:2px" alt="${tr(j,'job')}">`; });
+
+    const icon = item.icon || "default.png";
+    let statsHtml = "";
+    statKeys.forEach(k=>{
+      let v = item[k];
+      if(v==null || v==="" || v===0 || v==="0") return;
+      statsHtml += `<div class="stat-item">${tr(k,'attrName')}: ${String(v).replace(/ to /g,"~")}</div>`;
+    });
+    if(!statsHtml) statsHtml = `<div class="stat-item">${tr('noAttr','btnText')}</div>`;
+
+    const desc = String(item.desc || "")
+  .replace(/'/g,"\\'")
+  .replace(/"/g,'\\"');
+  
+    const card = document.createElement("div");
+    card.className = "equip-card";
+    card.dataset.name = item.name || "";
+    card.dataset.nameCn = item.name_cn || "";
+    card.dataset.nameEn = item.name || "";
+    card.dataset.nameKr = item.name_kr || "";
+    card.innerHTML = `
+      <div class="equip-name" style="color:${rc.color}">${name}</div>
+      <div class="equip-info-row">
+        <div class="equip-icon-col">
+          <div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img loading="lazy" src="equip_icons/${icon}" onerror="this.src='equip_icons/default.png'"></div>
+          <div class="item-level">Lv ${item.level||1}</div>
+        </div>
+        <div class="equip-text-col">
+          <div class="tag-rarity" style="background:${rc.bg}">${rarity}</div>
+          <div class="tag-job">${jobIconsHtml}</div>
+        </div>
+      </div>
+      <div class="equip-stats">${statsHtml}</div>
+      <button class="btn-source" onclick="openModal('${desc}')">${tr('source','btnText')}</button>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// 定位装备（接收参数 equip）
+function jumpToEquipFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const equipName = decodeURIComponent(params.get("equip") || "").toLowerCase().trim();
+  if(!equipName) return;
+
+  // 在全部可见装备中查找
+  const index = allItems.findIndex(item => {
+    const names = [item.name, item.name_cn, item.name, item.name_kr].join(" ").toLowerCase();
+    return names.includes(equipName);
+  });
+
+  if(index === -1){
+    // 没找到 → 显示第一页
+    page = 1;
+    renderCards();
+    return;
+  }
+
+  // 计算目标所在页码
+  page = Math.floor(index / getPerPage()) + 1;
+  // 只渲染一次
+  renderCards();
+
+  // 渲染完成后定位高亮
+  setTimeout(() => {
+    const cards = document.querySelectorAll(".equip-card");
+    for(const card of cards){
+      const stored = [card.dataset.name,card.dataset.nameCn,card.dataset.nameKr].join(" ").toLowerCase();
+      if(stored.includes(equipName)){
+        card.scrollIntoView({ behavior:"smooth", block:"center" });
+        card.style.boxShadow = "0 0 20px gold";
+        setTimeout(() => { card.style.boxShadow = ""; }, 2000);
+        break;
+      }
+    }
+  }, 300);
+}
+
+function openModal(d){
+
+  // 空内容不弹窗
+  if (!d || d.trim() === '') return;
+
+  const modal = document.getElementById("modalText");
+
+  const lines = d
+    .split(/[\n,]/)
+    .filter(x => x.trim());
+
+  modal.innerHTML = lines.map(text => {
+
+    const t = text.trim();
+
+    // 怪物（可点击）
+    if (t.startsWith("@")) {
+
+      const monster = t.slice(1);
+
+      return `
+        <div onclick="goMonster('${monster.replace(/'/g,"\\'")}')">
+          ${monster}
+        </div>
+      `;
+    }
+
+    // NPC / 普通文本（不可点击）
+    else if (t.startsWith("#")) {
+
+      return `
+        <div style="
+          cursor:default;
+          background:#f3f3f3;
+        ">
+          ${t.slice(1)}
+        </div>
+      `;
+    }
+
+    // 默认普通文本
+    else {
+
+      return `
+        <div style="
+          cursor:default;
+          background:#f3f3f3;
+        ">
+          ${t}
+        </div>
+      `;
+    }
+
+  }).join("");
+
+  document.getElementById("modal").style.display = "flex";
+}
+
+function goMonster(name){
+  // 后退回来时避免重复定位
+  if (location.search.includes('equip=')) {
+    const url = new URL(location);
+    url.searchParams.delete('equip');
+    history.replaceState(history.state, '', url);
+  }
+  location.href = `index.html?monster=${encodeURIComponent(name)}`;
+}
+function closeModal(){ document.getElementById("modal").style.display="none" }
+
+document.getElementById('langBtn').onclick = toggleLang;
+document.getElementById('searchBox').addEventListener('input', doSearch);
+document.getElementById('prevTop').onclick = goPrev;
+document.getElementById('nextTop').onclick = goNext;
+document.getElementById('prevBot').onclick = goPrev;
+document.getElementById('nextBot').onclick = goNext;
+document
+  .querySelectorAll('#typeBar .type-btn')
+  .forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+      setType(btn.dataset.type);
+
+    });
+
+  });
+let resizeTimer;
+
+window.addEventListener('resize', () => {
+
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(() => {
+    renderCards();
+  }, 120);
+
+});
+loadMyJson();
+</script>
+</body>
+</html>

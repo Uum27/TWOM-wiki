@@ -3,11 +3,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>TWOM Wiki</title>
 <style>
-/* 全局样式重置 */
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}
 body{padding:8px;background:#f9f9f9;font-size:16px;}
 
-/* 顶部搜索栏+语言切换栏 */
 .top-bar{
   display:flex;gap:6px;margin-bottom:8px;
   position:sticky;top:0;background:#fff;padding:6px 0;z-index:10
@@ -15,12 +13,11 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 .search-box{
   flex:1;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px
 }
-.lang-btn,.page-btn{
+.lang-btn,.page-btn,.type-btn{
   padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px
 }
 .page-btn{margin:0 4px}
 
-/* 地区分类按钮容器 */
 .zone-bar {
   display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px;
   justify-content: center;
@@ -29,17 +26,13 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   flex:1 1 auto;min-width:90px;padding:6px 4px;text-align:center;
   white-space:nowrap;border:1px solid #ccc;background:#fff;border-radius:6px;font-size:14px;
 }
-/* 选中的分类按钮高亮 */
 .zone-btn.active {
   background:#408cdd;
   color:#fff;
   border-color:#007aff}
 
-/* 分页按钮区域 */
 .pagination{text-align:center;margin:8px 0}
 
-/* ====================== 响应式布局 ====================== */
-/* 手机端：1列 */
 @media (max-width:767px) {
   .grid{
     display:grid;
@@ -48,7 +41,6 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
     gap:8px;
   }
 }
-/* 平板端：2列 */
 @media (min-width:768px) and (max-width:1023px) {
   .grid{
     display:grid;
@@ -59,7 +51,6 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
     gap:10px;
   }
 }
-/* PC端：3列 */
 @media (min-width:1024px) {
   .grid{
     display:grid;
@@ -71,35 +62,27 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   }
 }
 
-/* 单张怪物卡片 */
 .card {
-  background:#f5f3f3;        /* 背景：白色 */
-  border:1px solid #ddd;  /* 边框：1像素 实线 浅灰色 */
-  border-radius:10px;    /* 圆角：让卡片四角变圆 */
-
-  display:grid;                     /* 布局：网格排版（把卡片分成几块） */
-  grid-template-columns:80px 1fr;    /* 左边80px，右边占满 */
-  grid-template-rows:repeat(3, 1fr);/* 高度分成三等份 */
-
-  /* 下面是布局区域分配：头像放哪、信息放哪、掉落放哪 */
+  background:#f5f3f3;
+  border:1px solid #ddd;
+  border-radius:10px;
+  display:grid;
+  grid-template-columns:80px 1fr;
+  grid-template-rows:repeat(3, 1fr);
   grid-template-areas:
   "avatar drops"
   "info drops"
   "revive desc";
-
-  overflow: hidden;  /* 超出部分隐藏（防止图片跑出去） */
-  min-height: 160px; /* 卡片最小高度 */
+  overflow: hidden;
+  min-height: 160px;
 }
-
-/* 平板/PC左边加宽 */
 @media (min-width:768px) {
   .card {
     grid-template-columns:90px 1fr;
-    min-height: 170px; /* 平板/PC端加高 */
+    min-height: 170px;
   }
 }
 
-/* 左侧怪物头像区域 */
 .avatar{
   grid-area:avatar;
   display:flex;flex-direction:column;
@@ -112,7 +95,6 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 }
 .hp{font-size:14px;text-align:center;margin-top:6px}
 
-/* 怪物名称/等级/地区信息 */
 .info{
   grid-area:info;display:flex;flex-direction:column;
   justify-content:center;gap:3px;
@@ -125,23 +107,22 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 .level{font-size:14px;font-weight:bold}
 .zone{font-size:13px;color:#4fad7e;}
 
-/* ====================== 掉落物：左对齐 + 两列平分 ====================== */
 .drops{
   grid-area:drops;
   padding:8px 10px;
   display:grid;
-  grid-template-columns:1fr 1fr; /* 左右严格各占50% */
+  grid-template-columns:1fr 1fr;
   gap:4px;
   align-content:center;
   font-size:14px;
-  text-align:left;      /* 文字左对齐 */
+  text-align:left;
   word-break:break-word;
   overflow:hidden;
 }
 .drops > div {
   display:flex;
   align-items:center;
-  justify-content:flex-start; /* 内容左对齐 */
+  justify-content:flex-start;
   gap:4px;
 }
 .drops img {
@@ -151,32 +132,23 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   object-fit: contain;
 }
 
-/* 复活时间/EXP */
 .revive{
   grid-area:revive;
   display:flex;
   flex-direction:column;
-  justify-content:space-between; /* 上下分布 */
-  padding:3px 4px; /* 上下3px内边距 */
+  justify-content:space-between;
+  padding:3px 4px;
   background:#eef7ff;
   font-size:13px;
   text-align:center;
-  
 }
-/* EXP 顶部间距 */
-.revive .exp {
-  margin-top: 5px;
-}
-/* 复活时间 底部间距 */
-.revive .revive-time {
-  margin-bottom: 5px;
-}
+.revive .exp { margin-top: 5px; }
+.revive .revive-time { margin-bottom: 5px; }
 .badge{
   font-size:13px; font-weight:bold; color:#c0392b;
   text-align:center;
 }
 
-/* 描述 - Boss类型特殊布局 */
 .desc{
   grid-area:desc;
   background:#eef7ff;
@@ -188,9 +160,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   padding:0 4px;
   margin-top: -1px;
   margin-left: -1px;
-  
 }
-/* Boss类怪物描述区域两列平分 */
 .card.boss-type .desc {
   display:grid;
   grid-template-columns:1fr;
@@ -200,28 +170,22 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   padding:8px;
 }
 
-/*  普通怪物卡片默认基础边框（所有怪物都生效） */
 .card {
-  border: 2px solid #b8b8b8 !important;      /* 边框 */
-  box-shadow: 0 0 4px rgba(143, 140, 140, 0.1) !important; /* 阴影 */
-  background: #f7f3f3 !important;            /* 背景 */
+  border: 2px solid #b8b8b8 !important;
+  box-shadow: 0 0 4px rgba(143, 140, 140, 0.1) !important;
+  background: #f7f3f3 !important;
 }
-
-/* Boss + Mini Boss 淡黄色样式 */
 .card.boss-type {
-  border: 2px solid #dfc984 !important;  /* 边框 */
-  box-shadow: 0 0 8px rgba(151, 140, 44, 0.4) !important;  /* 阴影 */
-  background: #fffded !important;    /* 背景 */
+  border: 2px solid #e2ca81 !important;
+  box-shadow: 0 0 8px rgba(156, 145, 45, 0.4) !important;
+  background: #fcf9e8 !important;
 }
-
-/* Raid Boss 深红色样式 */
 .card.boss-type.raid-boss {
-  border: 2px solid #e25454 !important;     /* 边框 */
-  box-shadow: 0 0 8px rgba(153, 38, 38, 0.6) !important;    /* 阴影 */
-  background: #fff0f0 !important;     /* 背景 */
+  border: 2px solid #e95858 !important;
+  box-shadow: 0 0 8px rgba(153, 38, 38, 0.6) !important;
+  background: #ffefef !important;
 }
 
-/* 平板适配 */
 @media (min-width:768px) and (max-width:1023px) {
   .name{font-size:17px;}
   .level{font-size:15px;}
@@ -229,8 +193,6 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   .drops{font-size:16px;}
   .drops img{width:22px;height:22px;}
 }
-
-/* PC适配 */
 @media (min-width:1024px) {
   .name{font-size:18px;}
   .level{font-size:16px;}
@@ -238,29 +200,27 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   .drops{font-size:17px;}
   .drops img{width:24px;height:24px;}
 }
-
 </style>
 
-<!-- 顶部 -->
 <div class="top-bar">
   <input class="search-box" placeholder="搜索名字/等级/地图/物品">
   <button class="lang-btn" id="langBtn"></button>
 </div>
 
-<!-- 地区 -->
+<div style="margin-bottom:6px;">
+  <button class="type-btn" onclick="location.href='equip.html'" style="padding:10px 12px; font-size:15px;">装备图鉴</button>
+</div>
+
 <div class="zone-bar" id="zoneBar"></div>
 
-<!-- 顶部翻页 -->
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="prevTop">上一页</button>
   <span id="pageInfo">第 1 页</span>
   <button class="page-btn" id="nextTop">下一页</button>
 </div>
 
-<!-- 卡片列表 -->
 <div class="grid" id="cardBox"></div>
 
-<!-- 底部翻页 -->
 <div class="pagination" id="bottomPagination">
   <button class="page-btn" id="prevBot">上一页</button>
   <span id="pageInfoBot">第 1 页</span>
@@ -268,220 +228,84 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 </div>
 
 <script>
-let isCN = true
 let allMonsters = []
 let filtered = []
 let lang = {}
 let drops = {}
+let dropColorMap = {}
+let equipNames = new Set()
 let page = 1
 
-// ====================== 自动判断设备 ======================
-const isMobile = window.innerWidth < 768
-const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024
-const isPC = window.innerWidth >= 1024
-const perPage = isPC ? 21 : 10  // PC21个 手机10个
-
+function getPerPage(){
+  return window.innerWidth >= 1024 ? 21 : 10;
+}
 let currentGroup = "all"
-
-const zoneGroups = {
-  "木木森/木林森": {
-    en: "Woody-Wordy Forest",
-    kr: "우디워디마을/우디위디마을",
-    zones: ["Woody-Weedy Forest,Woody-Wordy Forest"]
-  },
-  "蘑菇林": {
-    en: "Mushroom Marshland",
-    kr: "버섯늪지",
-    zones: ["Mushroom Marshland","Mushroom Spore"]
-  },
-  "沙滩/灯塔岛": {
-    en: "Beach",
-    kr: "윙프릴 섬해변/등대 섬",
-    zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"]
-  },
-  "灯塔": {
-    en: "LHD",
-    kr: "등대",
-    zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"]
-  },
-  "海盗船": {
-    en: "Pirate Ship",
-    kr: "해적선",
-    zones: ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"]
-  },
-  "兰诺斯平原/晚霞森林": {
-    en: "777",
-    kr: "라노스 평원/폐허가 있는 숲",
-    zones: ["Lanos Plains","Forest of Grave"]
-  },
-  "废墟森林/卡塔勒山脉": {
-    en: "Forest/Kataru",
-    kr: "해지는 노을숲/카타르 산맥",
-    zones: ["Forest with Ruins","Kataru Mountains"]
-  },
-  "污染森林": {
-    en: "Polluted Forest",
-    kr: "오염된 숲",
-    zones: ["Polluted Forest"]
-  },
-  "天空城": {
-    en: "sky castle",
-    kr: "하늘성채",
-    zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"]
-  },
-  "光绝神殿": {
-    en: "Temple of Wingfril",
-    kr: "빛이 들지않는 신전",
-    zones: ["Temple of Wingfril"]
-  },
-  "枯原/沙墓峡谷": {
-    en: "Arid/Des",
-    kr: "건조한 초원/모래무덤 골짜기",
-    zones: ["Arid Grassland","Desert Valley"]
-  },
-  "热沙平原": {
-    en: "HSP",
-    kr: "뜨거운 모래사막",
-    zones: ["Hot Sand Plains"]
-  },
-  "死亡沼泽": {
-    en: "Marsh of Death",
-    kr: "죽음의 늪",
-    zones: ["Marsh of Death"]
-  },
-  "森林迷宫": {
-    en: "Maze Forest",
-    kr: "숲의 미궁",
-    zones: ["Maze Forest"]
-  },
-  "伊斯洛实验室": {
-    en: "Islot's Lab",
-    kr: "이슬롯의 실험실",
-    zones: ["Islot's Lab","Syphnel Road"]
-  },
-  "伊斯洛神殿": {
-    en: "Islot's Temple",
-    kr: "이슬롯의 신전",
-    zones: ["Islot's Temple"]
-  },
-  "悲叹祭坛": {
-    en: "AA",
-    kr: "비탄의제단",
-    zones: ["Anguish Altar"]
-  },
-  "鲁纳夫": {
-    en: "Lunarf",
-    kr: "루나프",
-    zones: ["Lunarf"]
-  },
-  "莫勒波西兹": {
-    en: "Morphosis",
-    kr: "모르포시즈",
-    zones: ["Morphosis Root","Morphosis Garden"]
-  },
-  "图书库": {
-    en: "Forbidden Library",
-    kr: "금서고",
-    zones: ["Morphosis Forbidden Library"]
-  },
-  "副本": {
-    en: "Dungeon",
-    kr: "인스턴스 던전",
-    zones: ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"]
-  }
-};
-
-Promise.all([
-  fetch('monsters_data.json').then(r=>r.json()),
-  fetch('lang.json').then(r=>r.json()),
-  fetch('monster_drops.json').then(r=>r.json())
-]).then(([m,l,d])=>{
-  allMonsters = m
-  lang = l
-  drops = d
-  buildGroupButtons()
-  doSearch()
-  updateLangBtnText()
-  updateSearchPlaceholder()
-  updatePrevNextBtn()
-}).catch(err=>console.error("加载失败",err))
-
-// 全局语言变量，默认中文
 let currentLang = "cn";
 
-// 三语言翻译函数
+const zoneGroups = {
+  "木木森/木林森": { en: "Woody-Wordy Forest", kr: "우디워디마을/우디위디마을", zones: ["Woody-Weedy Forest,Woody-Wordy Forest"] },
+  "蘑菇林": { en: "Mushroom Marshland", kr: "버섯늪지", zones: ["Mushroom Marshland","Mushroom Spore"] },
+  "沙滩/灯塔岛": { en: "Beach", kr: "윙프릴 섬해변/등대 섬", zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"] },
+  "灯塔": { en: "LHD", kr: "등대", zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"] },
+  "海盗船": { en: "Pirate Ship", kr: "해적선", zones: ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"] },
+  "兰诺斯平原/晚霞森林": { en: "777", kr: "라노스 평원/폐허가 있는 숲", zones: ["Lanos Plains","Forest of Grave"] },
+  "废墟森林/卡塔勒山脉": { en: "Forest/Kataru", kr: "해지는 노을숲/카타르 산맥", zones: ["Forest with Ruins","Kataru Mountains"] },
+  "污染森林": { en: "Polluted Forest", kr: "오염된 숲", zones: ["Polluted Forest"] },
+  "天空城": { en: "sky castle", kr: "하늘성채", zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"] },
+  "光绝神殿": { en: "Temple of Wingfril", kr: "빛이 들지않는 신전", zones: ["Temple of Wingfril"] },
+  "枯原/沙墓峡谷": { en: "Arid/Des", kr: "건조한 초원/모래무덤 골짜기", zones: ["Arid Grassland","Desert Valley"] },
+  "热沙平原": { en: "HSP", kr: "뜨거운 모래사막", zones: ["Hot Sand Plains"] },
+  "死亡沼泽": { en: "Marsh of Death", kr: "죽음의 늪", zones: ["Marsh of Death"] },
+  "森林迷宫": { en: "Maze Forest", kr: "숲의 미궁", zones: ["Maze Forest"] },
+  "伊斯洛实验室": { en: "Islot's Lab", kr: "이슬롯의 실험실", zones: ["Islot's Lab","Syphnel Road"] },
+  "伊斯洛神殿": { en: "Islot's Temple", kr: "이슬롯의 신전", zones: ["Islot's Temple"] },
+  "悲叹祭坛": { en: "AA", kr: "비탄의제단", zones: ["Anguish Altar"] },
+  "鲁纳夫": { en: "Lunarf", kr: "루나프", zones: ["Lunarf"] },
+  "莫勒波西兹": { en: "Morphosis", kr: "모르포시즈", zones: ["Morphosis Root","Morphosis Garden"] },
+  "图书库": { en: "Forbidden Library", kr: "금서고", zones: ["Morphosis Forbidden Library"] },
+  "副本": { en: "Dungeon", kr: "인스턴스 던전", zones: ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"] }
+};
+
+// 翻译函数
 function tr(map, key){
   if (!map[key]) return key;
   return map[key][currentLang] || map[key]["en"] || key;
 }
 
-// 搜索框 + 分页 三语
 const searchPlaceholderMap = {
   cn: "搜索名称/等级/掉落物/地区...",
   en: "Search name/zone/drops/level...",
   kr: "이름/지역/드랍/레벨 검색..."
 };
-const pageTextMap = {
-  cn: "第 {now}/{total} 页",
-  en: "Page {now}/{total}",
-  kr: "페이지 {now}/{total}"
-};
-
-// 翻页按钮 三语
+const pageTextMap = { cn: "第 {now}/{total} 页", en: "Page {now}/{total}", kr: "페이지 {now}/{total}" };
 const btnTextMap = {
-  prev: {
-    cn: "上一页",
-    en: "Prev",
-    kr: "이전"
-  },
-  next: {
-    cn: "下一页",
-    en: "Next",
-    kr: "다음"
-  }
+  prev: { cn: "上一页", en: "Prev", kr: "이전" },
+  next: { cn: "下一页", en: "Next", kr: "다음" }
 };
 
-// 更新上一页 / 下一页 按钮文字
 function updatePrevNextBtn() {
   document.getElementById('prevTop').innerText = btnTextMap.prev[currentLang];
   document.getElementById('prevBot').innerText = btnTextMap.prev[currentLang];
   document.getElementById('nextTop').innerText = btnTextMap.next[currentLang];
   document.getElementById('nextBot').innerText = btnTextMap.next[currentLang];
 }
-
 function updateSearchPlaceholder(){
-  const input = document.querySelector('.search-box');
-  input.placeholder = searchPlaceholderMap[currentLang];
+  document.querySelector('.search-box').placeholder = searchPlaceholderMap[currentLang];
 }
-
 function updatePageLangText(now, total){
   let txt = pageTextMap[currentLang] || pageTextMap.cn;
   return txt.replace("{now}", now).replace("{total}", total);
 }
-
-// 更新按钮顺位文字
 function updateLangBtnText(){
   const btn = document.getElementById("langBtn");
-  const list = [
-    {code:"cn", txt:"中文"},
-    {code:"en", txt:"EN"},
-    {code:"kr", txt:"한국어"}
-  ];
+  const list = [{code:"cn", txt:"中文"},{code:"en", txt:"EN"},{code:"kr", txt:"한국어"}];
   let idx = list.findIndex(x=>x.code === currentLang);
-  let order = [
-    list[idx],
-    list[(idx+1)%3],
-    list[(idx+2)%3]
-  ];
+  let order = [ list[idx], list[(idx+1)%3], list[(idx+2)%3] ];
   btn.innerText = order.map(x=>x.txt).join(" / ");
 }
 
-// 单按钮循环切换 cn → en → kr → cn
 function toggleLang() {
-  if (currentLang === "cn") currentLang = "en";
-  else if (currentLang === "en") currentLang = "kr";
-  else currentLang = "cn";
-
+  currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
   updateLangBtnText();
   buildGroupButtons();
   updateSearchPlaceholder();
@@ -492,57 +316,30 @@ function toggleLang() {
 function buildGroupButtons(){
   const bar = document.getElementById('zoneBar');
   bar.innerHTML = `<button class="zone-btn active" id="resetAll">全部</button>`;
-
-  const allText = {
-    cn: "全部",
-    en: "All",
-    kr: "전체"
-  };
+  const allText = { cn: "全部", en: "All", kr: "전체" };
   document.getElementById('resetAll').innerText = allText[currentLang] || allText.cn;
-
-  document.getElementById('resetAll').onclick = () => {
-    currentGroup = "all";
-    page = 1;
-    doSearch();
-    setActiveBtn("all");
-  };
-
+  document.getElementById('resetAll').onclick = () => { currentGroup = "all"; page = 1; doSearch(); setActiveBtn("all"); };
   Object.keys(zoneGroups).forEach(key => {
     const data = zoneGroups[key];
     const btn = document.createElement('button');
     btn.className = 'zone-btn';
     btn.dataset.groupKey = key;
-
-    if (currentLang === 'en') btn.textContent = data.en;
-    else if (currentLang === 'kr') btn.textContent = data.kr;
-    else btn.textContent = key;
-
-    btn.onclick = () => {
-      currentGroup = key;
-      page = 1;
-      doSearch();
-      setActiveBtn(key);
-    };
+    btn.textContent = currentLang === 'en' ? data.en : currentLang === 'kr' ? data.kr : key;
+    btn.onclick = () => { currentGroup = key; page = 1; doSearch(); setActiveBtn(key); };
     bar.appendChild(btn);
   });
 }
 
 function setActiveBtn(key){
   document.querySelectorAll('.zone-btn').forEach(b=>b.classList.remove('active'));
-  if(key === "all"){
-    document.getElementById('resetAll').classList.add('active');
-  } else {
-    document.querySelectorAll('.zone-btn').forEach(b=>{
-      if(b.dataset.groupKey === key) b.classList.add('active');
-    });
-  }
+  if(key === "all") document.getElementById('resetAll').classList.add('active');
+  else document.querySelectorAll('.zone-btn').forEach(b=>{ if(b.dataset.groupKey === key) b.classList.add('active'); });
 }
 
 function doSearch(){
   const kw = document.querySelector('.search-box').value.toLowerCase().trim();
   filtered = (allMonsters || []).filter(m => {
     if (!m) return false;
-
     const nameCN = lang.nameMap[m.name]?.cn || '';
     const nameEN = m.name || '';
     const nameKR = lang.nameMap[m.name]?.kr || '';
@@ -555,78 +352,91 @@ function doSearch(){
     const dropEN = dropList.join(' ');
     const dropKR = dropList.map(i => lang.dropMap[i]?.kr || '').join(' ');
     const notes = m.notes || '';
-
-    const allText = [
-      nameCN, nameEN, nameKR,
-      zoneCN, zoneEN, zoneKR,
-      level,
-      dropCN, dropEN, dropKR,
-      notes
-    ].join(' ').toLowerCase();
-
+    const allText = [ nameCN, nameEN, nameKR, zoneCN, zoneEN, zoneKR, level, dropCN, dropEN, dropKR, notes ].join(' ').toLowerCase();
     let ok = true;
     if (currentGroup !== "all") {
       const zs = zoneGroups[currentGroup]?.zones || [];
-      ok = zs.some(z => 
-        m.zone == z || 
-        m.zone.includes(z) || 
-        z.includes(m.zone)
-      );
+      ok = zs.some(z => m.zone == z || m.zone.includes(z) || z.includes(m.zone));
     }
-    return allText.includes(kw) && ok;
+    if(!kw) return ok;
+
+// desc 来源搜索（精确匹配）
+if(kw.startsWith("@")){
+
+  const target = kw.slice(1).trim();
+
+  const descList = (m.desc || "")
+    .split(/[\n,]/)
+    .map(x => x.trim().replace(/^@/, ""));
+
+  return descList.includes(target) && ok;
+}
+
+// 普通搜索
+return allText.includes(kw) && ok;
+
   });
   render();
 }
 
 function updatePageInfo(){
-  const total = Math.ceil((filtered.length||0)/perPage)
-  const pageStr = updatePageLangText(page, total);
-  document.getElementById('pageInfo').innerText = pageStr
-  document.getElementById('pageInfoBot').innerText = pageStr
+  const total = Math.ceil((filtered.length||0)/getPerPage())
+  document.getElementById('pageInfo').innerText = updatePageLangText(page, total);
+  document.getElementById('pageInfoBot').innerText = updatePageLangText(page, total);
 }
 
-function goPrev(){
-  if(page>1){page--;render();}
-}
+function goPrev(){ if(page>1){page--;render();} }
 function goNext(){
-  const total = Math.ceil(filtered.length/perPage)
-  if(page<total){
-    page++;
-    render();
-    window.scrollTo(0, 0);
-  }
+  const total = Math.ceil(filtered.length/getPerPage())
+  if(page<total){ page++; render(); window.scrollTo(0,0); }
 }
 
+// ========== 渲染 ==========
 function render(){
   const box = document.getElementById('cardBox')
-  box.innerHTML = ''
+  let html = ''
+
   updatePageInfo()
-  const list = filtered.slice((page-1)*perPage, page*perPage)
+  const perPage = getPerPage();
+    const list = filtered.slice((page-1)*perPage, page*perPage)
 
   list.forEach(m => {
     if(!m) return
     const name = tr(lang.nameMap, m.name)
     const zone = tr(lang.zoneMap, m.zone)
     const dropHtml = (drops[m.name]?.掉落物||[]).map(i => {
-      return `<div><img src="drop_icons/${i}.png" onerror="this.style.display='none'">${tr(lang.dropMap,i)}</div>`
-    }).join('')
+    const itemName = tr(lang.dropMap,i);   // 中文名
+    const isEquip = equipNames.has(i) || equipNames.has(itemName);
+
+  if (isEquip) {
+    // 装备：显示为可点击
+    return `
+    <div>
+      <img loading="lazy" src="drop_icons/${i}.png" onerror="this.style.display='none'">
+      <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
+    </div>`;
+  } else {
+    // 非装备：普通文本
+    return `
+    <div>
+      <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
+      <span>${itemName}</span>
+    </div>`;
+  }
+}).join('')
 
     let reviveText = ""
-    if(m.revive?.trim()){
-      let txt = m.revive
-      reviveText = txt
-    }
-
+    if(m.revive?.trim()) reviveText = m.revive
     const img = `monsters_images/${m.name}.png`
     let badge = ""
     let isBossType = false
     const note = (m.notes||"").trim()
-    let cardClass = 'card'; 
+    let cardClass = 'card';
 
     if(note.includes("Raid Boss")) {
       badge = `<div class="badge">Raid Boss</div>`;
       isBossType = true;
-      cardClass += " boss-type raid-boss"; 
+      cardClass += " boss-type raid-boss";
     } else if(note.includes("Mini-Boss")) {
       badge = `<div class="badge">Mini Boss</div>`;
       isBossType = true;
@@ -639,24 +449,19 @@ function render(){
 
     let descHtml = m.desc || ''
     if(isBossType && descHtml) {
-      const descParts = descHtml.split(',').filter(part => part.trim())
-      if(descParts.length > 1) {
-        descHtml = `
-          <div>${descParts[0].trim()}</div>
-          <div>${descParts.slice(1).join(',').trim()}</div>
-        `
+      const parts = descHtml.split(',').filter(p=>p.trim())
+      if(parts.length > 1) {
+        descHtml = `<div>${parts[0].trim()}</div><div>${parts.slice(1).join(',').trim()}</div>`
       } else {
-        descHtml = `
-          <div>${descHtml}</div>
-          <div></div>
-        `
+        descHtml = `<div>${descHtml}</div><div></div>`
       }
     }
 
-    box.innerHTML += `
-    <div class="${cardClass}">
+    html += `
+
+    <div class="${cardClass}" data-monster="${m.name}" data-monster-cn="${lang.nameMap[m.name]?.cn || ''}">
       <div class="avatar">
-        <img src="${img}" onerror="this.src='https://picsum.photos/64'">
+        <img loading="lazy" src="${img}" onerror="this.src='monsters_images/default.png'">
         <div class="hp">HP: ${m.hp||'?'}</div>
       </div>
       <div class="info">
@@ -673,36 +478,8 @@ function render(){
       <div class="desc">${descHtml}</div>
     </div>`
   })
-}
-
-// 绑定点击
-document.getElementById('langBtn').onclick = toggleLang;
-document.querySelector('.search-box').addEventListener('input', doSearch)
-document.getElementById('prevTop').onclick = goPrev
-document.getElementById('nextTop').onclick = goNext
-document.getElementById('prevBot').onclick = goPrev
-document.getElementById('nextBot').onclick = goNext
-</script>
-
-<script>
-let dropColorMap = {};
-
-// 从 JSON 文件加载三语颜色配置
-async function loadColorConfig() {
-  try {
-    const res = await fetch('dropColors.json');
-    const data = await res.json();
-    
-    dropColorMap = {};
-    data.forEach(item => {
-      if (item.en) dropColorMap[item.en] = item.color;
-      if (item.cn) dropColorMap[item.cn] = item.color;
-      if (item.kr) dropColorMap[item.kr] = item.color;
-    });
-    colorizeDrops();
-  } catch (e) {
-    console.error('颜色配置加载失败', e);
-  }
+  box.innerHTML = html
+  colorizeDrops();
 }
 
 function colorizeDrops() {
@@ -710,24 +487,99 @@ function colorizeDrops() {
     const txt = el.textContent.trim();
     el.style.color = '';
     el.style.fontWeight = 'normal';
-    
     for (const name in dropColorMap) {
-      if (txt.includes(name)) {
-        el.style.color = dropColorMap[name];
-        el.style.fontWeight = 'bold';
-        break;
-      }
+      if (txt === name) { el.style.color = dropColorMap[name]; el.style.fontWeight = 'bold'; break; }
     }
   });
 }
 
-// 覆盖渲染函数
-const _render = render;
-render = () => {
-  _render();
-  setTimeout(colorizeDrops, 0);
-};
+// 跳转装备页：传递装备中文名
+function goEquip(itemName){
+  location.href = `equip.html?equip=${encodeURIComponent(itemName)}`;
+}
 
-// 启动加载
-loadColorConfig();
+function jumpToMonsterFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const monsterName = decodeURIComponent(params.get("monster") || "").toLowerCase().trim();
+  
+  if(!monsterName){
+    // 没有定位参数 → 正常渲染全部卡片
+    doSearch();
+    return;
+  }
+
+  // 有定位参数 → 先搜索再高亮
+  document.querySelector('.search-box').value = monsterName;
+  currentGroup = "all";
+  page = 1;
+  setActiveBtn("all");
+  doSearch();
+
+  setTimeout(() => {
+    const cards = document.querySelectorAll(".card");
+    for(let card of cards){
+      const stored = (card.dataset.monster + " " + card.dataset.monsterCn).toLowerCase();
+      if(stored.includes(monsterName)){
+        card.scrollIntoView({ behavior:"smooth", block:"center" });
+        card.style.boxShadow = "0 0 20px gold";
+        setTimeout(() => { card.style.boxShadow = ""; }, 2000);
+        break;
+      }
+    }
+  }, 300);
+}
+
+// 加载数据
+Promise.all([
+  fetch('monsters_data.json').then(r=>r.json()),
+  fetch('lang.json').then(r=>r.json()),
+  fetch('monster_drops.json').then(r=>r.json()),
+  fetch('dropColors.json').then(r=>r.json())
+]).then(([m, l, d, dc]) => {
+  allMonsters = m;
+  lang = l;
+  drops = d;
+
+   dc.forEach(item => {
+
+  // 所有物品都保留颜色
+  if (item.en) dropColorMap[item.en] = item.color;
+  if (item.cn) dropColorMap[item.cn] = item.color;
+  if (item.kr) dropColorMap[item.kr] = item.color;
+
+  // 只有装备才允许跳转
+  if (item.type === "equip") {
+
+    if (item.en) equipNames.add(item.en);
+    if (item.cn) equipNames.add(item.cn);
+
+  }
+
+});
+  buildGroupButtons();
+  updateLangBtnText();
+  updateSearchPlaceholder();
+  updatePrevNextBtn();
+
+  jumpToMonsterFromUrl();
+}).catch(err => console.error("加载失败", err))
+
+// 事件
+document.getElementById('langBtn').onclick = toggleLang;
+document.querySelector('.search-box').addEventListener('input', doSearch)
+document.getElementById('prevTop').onclick = goPrev
+document.getElementById('nextTop').onclick = goNext
+document.getElementById('prevBot').onclick = goPrev
+document.getElementById('nextBot').onclick = goNext
+let resizeTimer;
+
+window.addEventListener('resize', () => {
+
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(() => {
+    render();
+  }, 120);
+
+});
 </script>
