@@ -1572,7 +1572,7 @@
   {
     "type": "weapon",
     "job": "magician",
-    "name": "magician Staff",
+    "name": "Magician Staff",
     "name_cn": "魔法师法杖",
     "name_kr": "",
     "level": "14",
@@ -1583,7 +1583,7 @@
     "int": "0~7",
     "hit": "",
     "mana": "0~8",
-    "icon": "magician Staff.png",
+    "icon": "Magician Staff.png",
     "desc": ""
   },
   {
@@ -2297,7 +2297,7 @@
   {
     "type": "weapon",
     "job": "breaker",
-    "name": "breaker's Knuckle",
+    "name": "Breaker's Knuckle",
     "name_cn": "武术家指虎",
     "name_kr": "",
     "level": "14",
@@ -2307,7 +2307,7 @@
     "str": "0",
     "int": "0",
     "hit": "0~6",
-    "icon": "breaker's Knuckle.png",
+    "icon": "Breaker's Knuckle.png",
     "desc": ""
   },
   {
@@ -3480,7 +3480,7 @@
   {
     "type": "armor",
     "job": "magician",
-    "name": "Novice magician Robe",
+    "name": "Novice Magician Robe",
     "name_cn": "实习魔法师袍",
     "name_kr": "",
     "level": "5",
@@ -3498,13 +3498,13 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Novice magician Robe.png",
+    "icon": "Novice Magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
     "job": "magician",
-    "name": "Apprentice magician Robe",
+    "name": "Apprentice Magician Robe",
     "name_cn": "进阶魔法师袍",
     "name_kr": "",
     "level": "7",
@@ -3522,7 +3522,7 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Apprentice magician Robe.png",
+    "icon": "Apprentice Magician Robe.png",
     "desc": ""
   },
   {
@@ -3553,7 +3553,7 @@
   {
     "type": "armor",
     "job": "magician",
-    "name": "Expert magician Robe",
+    "name": "Expert Magician Robe",
     "name_cn": "专业魔法师袍",
     "name_kr": "",
     "level": "13",
@@ -3571,13 +3571,13 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Expert magician Robe.png",
+    "icon": "Expert Magician Robe.png",
     "desc": ""
   },
   {
     "type": "armor",
     "job": "magician",
-    "name": "Master magician Robe",
+    "name": "Master Magician Robe",
     "name_cn": "高级魔法师袍",
     "name_kr": "",
     "level": "17",
@@ -3595,7 +3595,7 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Master magician Robe.png",
+    "icon": "Master Magician Robe.png",
     "desc": ""
   },
   {
@@ -3842,7 +3842,7 @@
   {
     "type": "armor",
     "job": "breaker",
-    "name": "Apprentice breaker Robe",
+    "name": "Apprentice Breaker Robe",
     "name_cn": "见习武术家道服",
     "name_kr": "",
     "level": "5",
@@ -3860,7 +3860,7 @@
     "dex": "",
     "attribute_resistance": "",
     "spell_resist": "",
-    "icon": "Apprentice breaker Robe.png",
+    "icon": "Apprentice Breaker Robe.png",
     "desc": ""
   },
   {
@@ -5202,7 +5202,7 @@
   {
     "type": "hats",
     "job": "magician",
-    "name": "magician Hat",
+    "name": "Magician Hat",
     "name_cn": "魔法师帽",
     "name_kr": "",
     "level": "10",
@@ -5219,7 +5219,7 @@
     "int": "0~3",
     "dex": "",
     "spell_resist": "",
-    "icon": "magician Hat.png",
+    "icon": "Magician Hat.png",
     "desc": ""
   },
   {
@@ -5455,7 +5455,7 @@
   {
     "type": "hats",
     "job": "breaker",
-    "name": "breaker Hat",
+    "name": "Breaker Hat",
     "name_cn": "武术家帽",
     "name_kr": "",
     "level": "10",
@@ -5472,7 +5472,7 @@
     "int": "",
     "dex": "",
     "spell_resist": "",
-    "icon": "breaker Hat.png",
+    "icon": "Breaker Hat.png",
     "desc": ""
   },
   {
@@ -5912,7 +5912,7 @@
   {
     "type": "gloves",
     "job": "warrior",
-    "name": "Imp warrior's Gauntlet",
+    "name": "Imp Warrior's Gauntlet",
     "name_cn": "小恶魔的金属手套",
     "name_kr": "",
     "level": "24",
@@ -5929,7 +5929,7 @@
     "int": "",
     "dex": "",
     "hit": "0~3",
-    "icon": "Imp warrior's Gauntlet.png",
+    "icon": "Imp Warrior's Gauntlet.png",
     "desc": ""
   },
   {
@@ -7010,7 +7010,7 @@
     "type": "shoes",
     "job": "ranger",
     "name": "Boots of the Blue Forest",
-    "name_cn": "丛林长靴",
+    "name_cn": "丛林长鞋",
     "name_kr": "",
     "level": "24",
     "armor": "5",
@@ -7035,7 +7035,7 @@
     "type": "shoes",
     "job": "ranger",
     "name": "Toxic Boots",
-    "name_cn": "剧毒长靴",
+    "name_cn": "剧毒长鞋",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -7058,7 +7058,7 @@
     "type": "shoes",
     "job": "ranger",
     "name": "Snowfield Tracer Boots",
-    "name_cn": "雪原追踪者长靴",
+    "name_cn": "雪原追踪者长鞋",
     "name_kr": "",
     "level": "44",
     "armor": "7",
@@ -7105,7 +7105,7 @@
     "type": "shoes",
     "job": "magician",
     "name": "Boots of the Blue Waterfall",
-    "name_cn": "靛蓝瀑布长靴",
+    "name_cn": "靛蓝瀑布长鞋",
     "name_kr": "",
     "level": "24",
     "armor": "4",
@@ -7129,7 +7129,7 @@
     "type": "shoes",
     "job": "magician",
     "name": "Monk's Boots",
-    "name_cn": "修道士长靴",
+    "name_cn": "修道士长鞋",
     "name_kr": "",
     "level": "29",
     "armor": "4",
@@ -7152,7 +7152,7 @@
     "type": "shoes",
     "job": "magician",
     "name": "Snowy Field's Cursed Boots",
-    "name_cn": "雪原诅咒长靴",
+    "name_cn": "雪原诅咒长鞋",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -7222,7 +7222,7 @@
     "type": "shoes",
     "job": "magician",
     "name": "Determined Memory Boots",
-    "name_cn": "坚韧的记忆短靴",
+    "name_cn": "坚韧的记忆短鞋",
     "name_kr": "",
     "level": "46",
     "armor": "7",
@@ -7245,7 +7245,7 @@
     "type": "shoes",
     "job": "breaker",
     "name": "Yellow Canola Boots",
-    "name_cn": "油菜花长靴",
+    "name_cn": "油菜花长鞋",
     "name_kr": "",
     "level": "24",
     "armor": "5",
@@ -7269,7 +7269,7 @@
     "type": "shoes",
     "job": "breaker",
     "name": "Cloud Boots",
-    "name_cn": "云之长靴",
+    "name_cn": "云之长鞋",
     "name_kr": "",
     "level": "29",
     "armor": "5",
@@ -7293,7 +7293,7 @@
     "type": "shoes",
     "job": "breaker",
     "name": "Bitter Cold Boots",
-    "name_cn": "严寒长靴",
+    "name_cn": "严寒长鞋",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -7317,7 +7317,7 @@
     "type": "shoes",
     "job": "breaker",
     "name": "Thule's Boots",
-    "name_cn": "图勒长靴",
+    "name_cn": "图勒长鞋",
     "name_kr": "",
     "level": "38",
     "armor": "6",
@@ -7341,7 +7341,7 @@
     "type": "shoes",
     "job": "breaker",
     "name": "Sea Boots",
-    "name_cn": "海洋长靴",
+    "name_cn": "海洋长鞋",
     "name_kr": "",
     "level": "44",
     "armor": "7",
@@ -8028,7 +8028,7 @@
   {
     "type": "cloaks",
     "job": "warrior,ranger,magician,breaker",
-    "name": "warrior's Cloak",
+    "name": "Warrior's Cloak",
     "name_cn": "斗士的披风",
     "name_kr": "",
     "level": "20",
@@ -8045,7 +8045,7 @@
     "int": "",
     "dex": "",
     "block": "",
-    "icon": "warrior's Cloak.png",
+    "icon": "Warrior's Cloak.png",
     "desc": ""
   },
   {

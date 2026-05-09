@@ -352,7 +352,7 @@ function doSearch(){
     const dropEN = dropList.join(' ');
     const dropKR = dropList.map(i => lang.dropMap[i]?.kr || '').join(' ');
     const notes = m.notes || '';
-    const allText = [ nameCN, nameEN, nameKR, zoneCN, zoneEN, zoneKR, level, dropCN, dropEN, dropKR, notes ].join(' ').toLowerCase();
+    const allText = [ nameCN, nameEN, nameKR, zoneCN, zoneEN, zoneKR, level, dropCN, dropEN, dropKR, notes ].join(' ').toLowerCase().trim()
     let ok = true;
     if (currentGroup !== "all") {
       const zs = zoneGroups[currentGroup]?.zones || [];
@@ -518,7 +518,7 @@ function jumpToMonsterFromUrl(){
   setTimeout(() => {
     const cards = document.querySelectorAll(".card");
     for(let card of cards){
-      const stored = (card.dataset.monster + " " + card.dataset.monsterCn).toLowerCase();
+      const stored = (card.dataset.monster + " " + card.dataset.monsterCn).toLowerCase().trim()
       if(stored.includes(monsterName)){
         card.scrollIntoView({ behavior:"smooth", block:"center" });
         card.style.boxShadow = "0 0 20px gold";

@@ -9,8 +9,15 @@
 body{background:#f0f2f5;padding:12px}
 
 .top-bar{
-  display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;
-  position:sticky;top:0;background:#fff;padding:6px 0;z-index:10
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:8px;
+  position:sticky;
+  top:0;
+  background:#fff;
+  padding:6px 0;
+  z-index:10
 }
 
 #typeBar.top-bar {
@@ -20,7 +27,12 @@ body{background:#f0f2f5;padding:12px}
 }
 
 .search-box{
-  flex:1;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px
+  flex:1;
+  min-width:0;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px
 }
 .lang-btn,.page-btn,.type-btn{
   padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px
@@ -539,7 +551,14 @@ function jumpToEquipFromUrl(){
   setTimeout(() => {
     const cards = document.querySelectorAll(".equip-card");
     for(const card of cards){
-      const stored = [card.dataset.name,card.dataset.nameCn,card.dataset.nameKr].join(" ").toLowerCase();
+      const stored = [
+  card.dataset.name,
+  card.dataset.nameCn,
+  card.dataset.nameKr
+]
+.join(" ")
+.toLowerCase()
+.trim();
       if(stored.includes(equipName)){
         card.scrollIntoView({ behavior:"smooth", block:"center" });
         card.style.boxShadow = "0 0 20px gold";
