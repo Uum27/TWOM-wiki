@@ -15,15 +15,36 @@ body{background:#f0f2f5;padding:12px}
   margin-bottom:8px;
   position:sticky;
   top:0;
-  background:#fff;
+  background:#f0f2f5;
   padding:6px 0;
-  z-index:10
+  z-index:100;
 }
 
-#typeBar.top-bar {
-  position: static;
-  background: transparent;
-  margin-bottom: 0;
+/* 搜索框自动撑满 */
+.search-box{
+  flex:1;
+  min-width:0;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
+}
+
+/* 翻译按钮固定不压缩 */
+.lang-btn{
+  flex-shrink:0;
+}
+
+/* 分类栏 */
+#typeBar.top-bar{
+  position:sticky;
+  top:56px;
+  background:#f0f2f5;
+  z-index:99;
+
+  display:flex;
+  flex-wrap:wrap;   /* 换行 */
+  gap:6px;
 }
 
 .search-box{
