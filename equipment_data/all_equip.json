@@ -49,7 +49,7 @@
     "int": "",
     "hit": "0~3",
     "icon": "Practice Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@树叶野猪,@凶猛树叶野猪,#武器商人 赵侍 购买"
+    "desc": "怪物掉落↓可点击↓:,@树叶野猪,@凶猛树叶野猪,NPC武器商人:,赵侍"
   },
   {
     "type": "weapon",
@@ -65,7 +65,7 @@
     "int": "",
     "hit": "0",
     "icon": "Blunt Shortsword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇,@花精灵,@黑蜘蛛,@剧毒蜘蛛,@洞窟蝙蝠"
   },
   {
     "type": "weapon",
@@ -118,7 +118,7 @@
     "dexterity": "0~6",
     "icon": "Canine Tooth of Madness.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1"
   },
   {
     "type": "weapon",
@@ -203,7 +203,7 @@
     "int": "",
     "hit": "0~9",
     "icon": "Longsword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长,@白色骸骨"
   },
   {
     "type": "weapon",
@@ -236,7 +236,7 @@
     "int": "",
     "hit": "0~9",
     "icon": "Sharp Longsword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@黑色骸骨,@睡醒的库伊"
   },
   {
     "type": "weapon",
@@ -269,7 +269,7 @@
     "int": "",
     "hit": "0~13",
     "icon": "Katana.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
   },
   {
     "type": "weapon",
@@ -300,9 +300,9 @@
     "cri": "0",
     "str": "0~6",
     "int": "",
-    "hit": "0~11",
+    "hit": "0~12",
     "icon": "Viking Sword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
   },
   {
     "type": "weapon",
@@ -331,11 +331,11 @@
     "attack": "8~40",
     "speed": "1.2",
     "cri": "0",
-    "str": "0~6",
+    "str": "0~7",
     "int": "",
     "hit": "0~11",
     "icon": "Gladius.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
   },
   {
     "type": "weapon",
@@ -346,13 +346,13 @@
     "level": "30",
     "attack": "10~50",
     "speed": "0.8",
-    "cri": "1~4",
+    "cri": "1~3",
     "str": "3~5",
     "int": "",
     "hit": "3~5",
     "icon": "Platinum Rapier.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "光绝神殿NPC史密德:,【冻铁铸块】X5,【古代血液】X5,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
@@ -381,11 +381,11 @@
     "attack": "9~45",
     "speed": "1.2",
     "cri": "0",
-    "str": "0~6",
+    "str": "0~8",
     "int": "",
-    "hit": "0~10",
+    "hit": "0~11",
     "icon": "Rapier.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色细剑】X1,【第4精髓】X20"
   },
   {
     "type": "weapon",
@@ -414,12 +414,12 @@
     "attack": "10~50",
     "speed": "1.2",
     "cri": "0",
-    "str": "0~7",
+    "str": "0~8",
     "int": "",
     "hit": "0~12",
-    "Magic Resist": "0~16",
+    "Magic Resist": "0or2~18",
     "icon": "Rune Blade.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【短刃】X1,【第4精髓】X40"
   },
   {
     "type": "weapon",
@@ -448,11 +448,11 @@
     "attack": "9~54",
     "speed": "1.2",
     "cri": "0",
-    "str": "0~8",
+    "str": "0~9",
     "int": "",
-    "hit": "0~11",
+    "hit": "0~12",
     "icon": "Darksteel Sword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【钢铁剑】X1,【第4精髓】X60"
   },
   {
     "type": "weapon",
@@ -481,11 +481,11 @@
     "attack": "10~60",
     "speed": "1.2",
     "cri": "0",
-    "str": "0~10",
+    "str": "0or2~10",
     "int": "",
     "hit": "0~13",
     "icon": "War Sword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@湿地花怪,@理智之声,【组合书3】制作:,【战斗之剑】X1,【第5精髓】X20"
   },
   {
     "type": "weapon",
@@ -514,11 +514,11 @@
     "attack": "11~66",
     "speed": "1.2",
     "cri": "0~6",
-    "str": "0~10",
+    "str": "0or3~11",
     "int": "",
-    "hit": "0~12",
+    "hit": "0~13",
     "icon": "Kaisor Sword.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【军刀】X1,【第5精髓】X40"
   },
   {
     "type": "weapon",
@@ -529,13 +529,13 @@
     "level": "46",
     "attack": "10~70",
     "speed": "1.2",
-    "cri": "0~4",
-    "str": "0~11",
+    "cri": "0~6",
+    "str": "0or4~12",
     "int": "",
-    "hit": "0~9",
+    "hit": "0~13",
     "icon": "Burning Blade.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
   },
   {
     "type": "weapon",
@@ -546,13 +546,13 @@
     "level": "46",
     "attack": "4~68",
     "speed": "1.2",
-    "cri": "0~4",
-    "str": "0~11",
+    "cri": "0~6",
+    "str": "0or3~11",
     "int": "",
-    "hit": "0~9",
+    "hit": "0~13",
     "icon": "Guillotine.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
   },
   {
     "type": "weapon",
@@ -580,13 +580,13 @@
     "level": "48",
     "attack": "12~72",
     "speed": "1.2",
-    "cri": "?~?",
-    "str": "?~?",
+    "cri": "0~5",
+    "str": "2~8",
     "int": "",
-    "hit": "?~?",
+    "hit": "0or7~10",
     "icon": "Edge of Oblivion.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10"
   },
   {
     "type": "weapon",
@@ -597,13 +597,13 @@
     "level": "48",
     "attack": "11~77",
     "speed": "1.0",
-    "cri": "4~5",
-    "str": "8~10",
+    "cri": "0~8",
+    "str": "5~13",
     "int": "",
-    "hit": "5~7",
+    "hit": "0~13",
     "icon": "Inquisition.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡"
   },
   {
     "type": "weapon",
@@ -800,7 +800,7 @@
     "int": "",
     "hit": "0~6",
     "icon": "Wooden Shortbow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凶猛树叶野猪"
   },
   {
     "type": "weapon",
@@ -869,7 +869,7 @@
     "int": "",
     "hit": "0~8",
     "icon": "Long Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌波乌波"
   },
   {
     "type": "weapon",
@@ -902,7 +902,7 @@
     "int": "",
     "hit": "0",
     "icon": "Worn Shortbow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长"
   },
   {
     "type": "weapon",
@@ -955,7 +955,7 @@
     "dex": "0~5",
     "icon": "Swirling Bow.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@白色骷髅,@黑色骸骨,@睡醒的库伊,@惊喜宝箱"
   },
   {
     "type": "weapon",
@@ -989,7 +989,7 @@
     "hit": "0~13",
     "dex": "0~6",
     "icon": "Great Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
   },
   {
     "type": "weapon",
@@ -1020,10 +1020,10 @@
     "cri": "0",
     "str": "",
     "int": "",
-    "hit": "0~13",
-    "dex": "0~7",
+    "hit": "0~14",
+    "dex": "0~8",
     "icon": "Classic Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
   },
   {
     "type": "weapon",
@@ -1054,10 +1054,10 @@
     "cri": "0",
     "str": "",
     "int": "",
-    "hit": "0~12",
-    "dex": "0~7",
+    "hit": "3~11",
+    "dex": "0~8",
     "icon": "Hunter Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
   },
   {
     "type": "weapon",
@@ -1089,10 +1089,10 @@
     "str": "",
     "int": "",
     "hit": "2~4",
-    "dex": "2~4",
+    "dex": "3~4",
     "icon": "Wing's Wing.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "光绝神殿NPC伍德:,【古代羽毛】X3,【古代皮革】X10,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
@@ -1103,13 +1103,13 @@
     "level": "32",
     "attack": "6~30",
     "speed": "2.2",
-    "cri": "0~10",
+    "cri": "0~5",
     "str": "",
     "int": "",
     "hit": "0",
-    "dex": "0~7",
+    "dex": "0~8",
     "icon": "Horn Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【重型平弓】X1,【第4精髓】X20"
   },
   {
     "type": "weapon",
@@ -1137,14 +1137,14 @@
     "level": "35",
     "attack": "5~35",
     "speed": "2.2",
-    "cri": "0~4",
+    "cri": "0~5",
     "str": "",
     "int": "",
     "hit": "0",
-    "hp": "0~15",
-    "dex": "0~8",
+    "hp": "0or2~18",
+    "dex": "0~9",
     "icon": "Battle Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【轻型猎弓】X1,【第4精髓】X40"
   },
   {
     "type": "weapon",
@@ -1172,15 +1172,15 @@
     "level": "38",
     "attack": "5~40",
     "speed": "2.2",
-    "cri": "0~5",
+    "cri": "0~6",
     "str": "",
     "int": "",
     "hit": "0",
     "mana Regen": "0~5",
-    "dex": "0~10",
+    "dex": "0or2~10",
     "icon": "Dezoruba's Bow.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【戴楚拜伊的设计图】X1,【第4精髓】X60,【第6精髓】X5"
   },
   {
     "type": "weapon",
@@ -1195,9 +1195,9 @@
     "str": "",
     "int": "",
     "hit": "0",
-    "dex": "0~10",
+    "dex": "0or3~10",
     "icon": "War Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@腐烂的布丁,@理智之声,【组合书3】制作:,【白蜡木弓】X1,【第5精髓】X20"
   },
   {
     "type": "weapon",
@@ -1247,9 +1247,9 @@
     "int": "",
     "hit": "0",
     "move": "0~5%",
-    "dex": "0~11",
+    "dex": "0or3~11",
     "icon": "Shadow Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@缉命者,@暴食者,【组合书3】制作:,【磨损战弓】X1,【第5精髓】X40"
   },
   {
     "type": "weapon",
@@ -1265,10 +1265,10 @@
     "int": "",
     "hit": "0",
     "move": "0~5%",
-    "dex": "0~11",
+    "dex": "0or3~11",
     "icon": "Imperial Bow.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
   },
   {
     "type": "weapon",
@@ -1284,9 +1284,9 @@
     "int": "",
     "hit": "0",
     "move": "0~5%",
-    "dex": "0~11",
+    "dex": "0or3~11",
     "icon": "Crow's Cry.png",
-    "desc": ""
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
   },
   {
     "type": "weapon",
@@ -1319,10 +1319,10 @@
     "int": "",
     "hit": "0",
     "move": "0%~3%",
-    "dex": "0~10",
+    "dex": "0or7~10",
     "icon": "Corrupted Purity.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X20,【纯净的知识】X10"
   },
   {
     "type": "weapon",
@@ -1337,11 +1337,11 @@
     "str": "",
     "int": "",
     "hit": "0",
-    "move": "0~5%",
+    "move": "0~6%",
     "dex": "6~14",
     "icon": "Fail-Not.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡"
   },
   {
     "type": "weapon",
@@ -1461,7 +1461,7 @@
     "int": "0~6",
     "hit": "",
     "icon": "Wooden Staff.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@花精灵,@毒蘑菇,NPC武器商人:,赵侍"
   },
   {
     "type": "weapon",
@@ -1531,7 +1531,7 @@
     "hit": "",
     "mana": "0~6",
     "icon": "Oak Tree Staff.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@梦魔"
   },
   {
     "type": "weapon",
@@ -1584,7 +1584,7 @@
     "hit": "",
     "mana": "0~8",
     "icon": "Magician Staff.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@变种乌波"
   },
   {
     "type": "weapon",
@@ -1603,7 +1603,7 @@
     "mana": "0~9",
     "icon": "Woopa-Roopa's Staff.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌波鲁波族长,@幽灵魔法师"
   },
   {
     "type": "weapon",
@@ -1653,7 +1653,7 @@
     "int": "1~8",
     "hit": "",
     "icon": "Novice Shaman's Wand.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
   },
   {
     "type": "weapon",
@@ -1683,11 +1683,11 @@
     "speed": "4.2",
     "cri": "",
     "str": "",
-    "int": "1~8",
+    "int": "0~8",
     "hit": "",
-    "mana": "0~12",
+    "mana": "0~15",
     "icon": "Shaman's Wand.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@东东,@叮叮,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
   },
   {
     "type": "weapon",
@@ -1717,11 +1717,11 @@
     "speed": "4.2",
     "cri": "",
     "str": "",
-    "int": "0~9",
+    "int": "1~9",
     "hit": "",
-    "mana": "0~13",
+    "mana": "0~16",
     "icon": "Mystic Wand.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
   },
   {
     "type": "weapon",
@@ -1757,7 +1757,7 @@
     "mana": "0",
     "icon": "Ancient Wand.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "光绝神殿NPC伍德:,【古代树木】X1,【古代水晶】X1,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
@@ -1770,11 +1770,11 @@
     "speed": "4.2",
     "cri": "",
     "str": "",
-    "int": "1~9",
+    "int": "2~10",
     "hit": "",
-    "mana": "0~20",
+    "mana": "0or6~22",
     "icon": "Spiritual Wand.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【农夫法杖】X1,【第4精髓】X20"
   },
   {
     "type": "weapon",
@@ -1804,12 +1804,12 @@
     "speed": "4.2",
     "cri": "",
     "str": "",
-    "int": "1~10",
+    "int": "3~11",
     "hit": "",
-    "hp": "0~15",
-    "mana": "0~26",
+    "hp": "0or2~18",
+    "mana": "0or11~27",
     "icon": "Wand of Chaos.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@布兹兹,@上古眼怪,@莫宝,【组合书2】制作:,【铁饰法杖】X1,【第4精髓】X40"
   },
   {
     "type": "weapon",
@@ -1839,11 +1839,11 @@
     "speed": "4.2",
     "cri": "",
     "str": "",
-    "int": "0~12",
+    "int": "4~12",
     "hit": "",
-    "mana": "0~30",
+    "mana": "0or16~32",
     "icon": "Wand of Tranquility.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【战斗法杖】X1,【第4精髓】X60"
   },
   {
     "type": "weapon",
@@ -1873,11 +1873,11 @@
     "speed": "4.3",
     "cri": "",
     "str": "",
-    "int": "6~13",
+    "int": "5~13",
     "hit": "",
-    "mana": "0~33",
+    "mana": "0or20~36",
     "icon": "Hole of Silence.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@流浪者,@心声,@理智之声,@呱呱,【组合书3】制作:,【渔夫法杖】X1,【第5精髓】X20"
   },
   {
     "type": "weapon",
@@ -1910,10 +1910,10 @@
     "int": "6~14",
     "hit": "",
     "mana Regen": "0~5",
-    "mana": "0~40",
+    "mana": "0or24~40",
     "icon": "Staff Struck by Lightning.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@坚固的宝箱怪,@暴食者,【组合书3】制作:,【钢铁法杖】X1,【第5精髓】X40,【第6精髓】X5"
   },
   {
     "type": "weapon",
@@ -1926,13 +1926,13 @@
     "speed": "4.3",
     "cri": "",
     "str": "",
-    "int": "9~14",
+    "int": "7~15",
     "hit": "",
-    "mana Regen": "0~4",
-    "mana": "0~40",
+    "mana Regen": "0~5",
+    "mana": "0or28~44",
     "icon": "Hole of Destruction.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
   },
   {
     "type": "weapon",
@@ -1948,9 +1948,9 @@
     "int": "6~14",
     "hit": "",
     "mana Regen": "0~5",
-    "mana": "0~44",
+    "mana": "0or24~40",
     "icon": "Ritual Hall.png",
-    "desc": ""
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
   },
   {
     "type": "weapon",
@@ -1983,10 +1983,10 @@
     "int": "10~15",
     "hit": "",
     "mana Regen": "0~4",
-    "mana": "0~41",
+    "mana": "0or34~41",
     "icon": "Efflorescence of Purity.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X10,【纯净的知识】X20"
   },
   {
     "type": "weapon",
@@ -2005,7 +2005,7 @@
     "mana": "32~48",
     "icon": "Soul Eater.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡"
   },
   {
     "type": "weapon",
@@ -2191,7 +2191,7 @@
     "int": "0",
     "hit": "0",
     "icon": "Wooden Tonfa.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍"
   },
   {
     "type": "weapon",
@@ -2224,7 +2224,7 @@
     "int": "0",
     "hit": "0",
     "icon": "Dull Knuckle.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@湿地野猪,NPC武器商人:,赵侍"
   },
   {
     "type": "weapon",
@@ -2241,7 +2241,7 @@
     "hit": "0",
     "icon": "Bulldozer Tonfa.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1,【坚韧皮革】X10"
   },
   {
     "type": "weapon",
@@ -2308,7 +2308,7 @@
     "int": "0",
     "hit": "0~6",
     "icon": "Breaker's Knuckle.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@变种乌波"
   },
   {
     "type": "weapon",
@@ -2324,7 +2324,7 @@
     "int": "0",
     "hit": "0~?",
     "icon": "Shiny Knuckle.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@无神的库伊,@想睡的库伊"
   },
   {
     "type": "weapon",
@@ -2369,12 +2369,12 @@
     "level": "20",
     "attack": "3~21",
     "speed": "1.5",
-    "cri": "0~?",
+    "cri": "0~3",
     "str": "0",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~4",
     "icon": "Bone Tonfa.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼魂"
   },
   {
     "type": "weapon",
@@ -2403,11 +2403,11 @@
     "attack": "4~24",
     "speed": "1.5",
     "cri": "0",
-    "str": "0~?",
+    "str": "0~6",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~12",
     "icon": "Storm Whip.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@叮叮,箱子开启:,地下城宝物20"
   },
   {
     "type": "weapon",
@@ -2436,11 +2436,11 @@
     "attack": "4~28",
     "speed": "1.5",
     "cri": "0",
-    "str": "0~?",
+    "str": "0~7",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~11",
     "icon": "Iron Fist.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
   },
   {
     "type": "weapon",
@@ -2468,13 +2468,13 @@
     "level": "30",
     "attack": "5~42",
     "speed": "1.2",
-    "cri": "0~4",
-    "str": "0~3",
+    "cri": "1~4",
+    "str": "3~5",
     "int": "0",
-    "hit": "0~4",
+    "hit": "3~5",
     "icon": "Glacia.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "光绝神殿NPC史密德:,【冻铁铸块】X2,【虚空之球】X2,【水晶碎片】X10,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
@@ -2485,12 +2485,12 @@
     "level": "32",
     "attack": "4~40",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0~8",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~11",
     "icon": "Stormbreaker.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色拐棍】X1,【第4精髓】X20"
   },
   {
     "type": "weapon",
@@ -2518,12 +2518,12 @@
     "level": "35",
     "attack": "5~45",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0~8",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~12",
     "icon": "Fang of Dusk.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【粗糙指虎】X1,【第4精髓】X40"
   },
   {
     "type": "weapon",
@@ -2551,12 +2551,12 @@
     "level": "38",
     "attack": "6~48",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0~9",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~12",
     "icon": "Thundersteel.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,【组合书3】制作:,【钢制拐棍】X1,【第4精髓】X60"
   },
   {
     "type": "weapon",
@@ -2584,12 +2584,12 @@
     "level": "41",
     "attack": "7~49",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0or2~10",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~13",
     "icon": "War Knuckle.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@心声,【组合书3】制作:,【钢铁指虎】X1,【第5精髓】X20"
   },
   {
     "type": "weapon",
@@ -2617,12 +2617,12 @@
     "level": "44",
     "attack": "5~55",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0or3~11",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~13",
     "icon": "Shatter Fist.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【锁链指虎】X1,【第5精髓】X40"
   },
   {
     "type": "weapon",
@@ -2633,12 +2633,12 @@
     "level": "46",
     "attack": "6~54",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~6",
+    "str": "0or3~11",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~13",
     "icon": "Frost Claw.png",
-    "desc": ""
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
   },
   {
     "type": "weapon",
@@ -2649,13 +2649,13 @@
     "level": "46",
     "attack": "9~54",
     "speed": "?",
-    "cri": "?",
-    "str": "?",
-    "int": "?",
-    "hit": "?",
+    "cri": "0~6",
+    "str": "0or4~12",
+    "int": "",
+    "hit": "0~13",
     "icon": "Unyielding.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
   },
   {
     "type": "weapon",
@@ -2683,13 +2683,13 @@
     "level": "48",
     "attack": "6~60",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~7",
+    "str": "0or5~11",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~13",
     "icon": "Abyssal Fragment.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10"
   },
   {
     "type": "weapon",
@@ -2700,13 +2700,13 @@
     "level": "48",
     "attack": "9~63",
     "speed": "1.5",
-    "cri": "0~?",
-    "str": "0~?",
+    "cri": "0~8",
+    "str": "5~13",
     "int": "0",
-    "hit": "0~?",
+    "hit": "0~13",
     "icon": "Eternity.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡"
   },
   {
     "type": "weapon",
@@ -2744,8 +2744,6 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Frog Suit.png",
     "desc": ""
   },
@@ -2769,8 +2767,6 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Rudolf Costume.png",
     "desc": ""
   },
@@ -2794,8 +2790,6 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Santa Costume.png",
     "desc": ""
   },
@@ -2818,10 +2812,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Frayed Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍"
   },
   {
     "type": "armor",
@@ -2842,10 +2834,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Leather Jacket.png",
-    "desc": ""
+    "desc": "NPC武器商人:,赵侍"
   },
   {
     "type": "armor",
@@ -2866,10 +2856,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Leather Armor.png",
-    "desc": ""
+    "desc": "NPC武器商人:,赵侍"
   },
   {
     "type": "armor",
@@ -2890,10 +2878,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Sturdy Leather Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@剧毒蜘蛛,@湿地花精灵"
   },
   {
     "type": "armor",
@@ -2914,10 +2900,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Woopa Scale Armor.png",
-    "desc": ""
+    "desc": "沙滩NPC拉汀:,【乌波鲁波鳞片】X50"
   },
   {
     "type": "armor",
@@ -2938,10 +2922,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Spider Silk Bone Armor.png",
-    "desc": ""
+    "desc": "NPC麦伊斯特:,【加工的蜘蛛丝】X80,【骨头碎片】X80"
   },
   {
     "type": "armor",
@@ -2962,8 +2944,6 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Sturdy Woopa Armor.png",
     "desc": ""
   },
@@ -2986,10 +2966,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Bone Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@骸骨,@白色骸骨"
   },
   {
     "type": "armor",
@@ -2999,7 +2977,7 @@
     "name_kr": "",
     "level": "22",
     "armor": "8",
-    "hp": "10~18",
+    "hp": "6~21",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3010,10 +2988,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
+    "lightning_Resist": "0~11",
     "icon": "Lizard Leather Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@蛇尾蜥蜴,@蛇蛇查德,@毒蜥"
   },
   {
     "type": "armor",
@@ -3038,7 +3015,7 @@
     "set3": "3力量+5%速",
     "icon": "Armor of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
   },
   {
     "type": "armor",
@@ -3048,22 +3025,20 @@
     "name_kr": "",
     "level": "24",
     "armor": "12",
-    "hp": "20 or 25",
+    "hp": "20~25",
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "3",
-    "str": "1",
+    "magic_resist": "3~4",
+    "str": "1~2",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Blackskull Armor.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "NPC麦伊斯特:,【设计图:黑骸盔甲】X1,【黑色骸骨】X1,【雪人骨】X80"
   },
   {
     "type": "armor",
@@ -3073,21 +3048,19 @@
     "name_kr": "",
     "level": "26",
     "armor": "9",
-    "hp": "0~30",
+    "hp": "12~28",
     "mana": "",
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
     "str": "",
-    "ice_resist": "0~9",
+    "ice_resist": "0~11",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Sturdy Yeti Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@高阶守卫,@黑黑朱诺,@黑天,@恶灵"
   },
   {
     "type": "armor",
@@ -3097,21 +3070,19 @@
     "name_kr": "",
     "level": "27",
     "armor": "13",
-    "hp": "18~34",
+    "hp": "13~37",
     "mana": "",
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
     "str": "",
-    "ice_resist": "0~7",
+    "ice_resist": "0~11",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Highguard Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@高阶守卫"
   },
   {
     "type": "armor",
@@ -3121,21 +3092,19 @@
     "name_kr": "",
     "level": "32",
     "armor": "14",
-    "hp": "28~40",
+    "hp": "25~34",
     "mana": "",
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
-    "hp_regen": "1~3",
+    "hp_regen": "1~2",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Scale Armor.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X30,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X30"
   },
   {
     "type": "armor",
@@ -3145,7 +3114,7 @@
     "name_kr": "",
     "level": "34",
     "armor": "11",
-    "hp": "30~40",
+    "hp": "27~33",
     "mana": "",
     "mana_regen": "1~2",
     "cri": "",
@@ -3156,10 +3125,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Scout Jerkin.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【棉布料】X20,主城NPC史奇尼:,【厚实的皮革】X100/【棉布料】X20"
   },
   {
     "type": "armor",
@@ -3169,7 +3136,7 @@
     "name_kr": "",
     "level": "36",
     "armor": "15",
-    "hp": "34~40",
+    "hp": "31~40",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3180,10 +3147,8 @@
     "fire_resist": "7~15",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Steel Armor.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【铁矿石】X200/【强化剂】X50,卡塔勒山脉NPC高来莫:,【铁矿石】X200/【强化剂】X50"
   },
   {
     "type": "armor",
@@ -3193,21 +3158,19 @@
     "name_kr": "",
     "level": "38",
     "armor": "12",
-    "hp": "34~38",
+    "hp": "32~38",
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "8~12",
+    "magic_resist": "6~12",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Dezoruba's Tunic.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】,主城NPC史奇尼:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】"
   },
   {
     "type": "armor",
@@ -3217,7 +3180,7 @@
     "name_kr": "",
     "level": "39",
     "armor": "16",
-    "hp": "34~52",
+    "hp": "37~52",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3228,10 +3191,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Darksteel Armor.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【黑铁矿石】X100/【高级研磨剂】X30,卡塔勒山脉NPC高来莫:,【黑铁矿石】X100/【高级研磨剂】X30"
   },
   {
     "type": "armor",
@@ -3241,7 +3202,7 @@
     "name_kr": "",
     "level": "42",
     "armor": "17",
-    "hp": "47~53",
+    "hp": "46~54",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3252,11 +3213,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Warlord Armor.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3266,7 +3225,7 @@
     "name_kr": "",
     "level": "44",
     "armor": "18",
-    "hp": "47~52",
+    "hp": "42~58",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3274,13 +3233,12 @@
     "str": "0~3",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~16",
+    "fire_resist": "0or13~17",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
+    "set2": "体力5 命中2",
     "icon": "World Tree Bark Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院 NPC裴罗 制作:,皇冠鸭蛋 X10,魔力根茎 X60,电子核心 X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
   },
   {
     "type": "armor",
@@ -3290,7 +3248,7 @@
     "name_kr": "",
     "level": "46",
     "armor": "20",
-    "hp": "80~82",
+    "hp": "72~88",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -3298,14 +3256,12 @@
     "str": "3",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "14~16",
+    "fire_resist": "13~17",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Arbitrator's Armor.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
   {
     "type": "armor",
@@ -3326,10 +3282,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Boiled Leather Armor.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@坚固的宝箱怪"
   },
   {
     "type": "armor",
@@ -3350,11 +3304,9 @@
     "fire_resist": "",
     "set2": "35HP",
     "set3": "3敏捷+5%速",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Light Armor of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
   },
   {
     "type": "armor",
@@ -3364,10 +3316,10 @@
     "name_kr": "",
     "level": "30",
     "armor": "9",
-    "hp": "18~27",
+    "hp": "15~29",
     "mana": "",
     "mana_regen": "",
-    "cri": "0~2",
+    "cri": "0~3",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
@@ -3375,10 +3327,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Oatwill's Light Armor.png",
-    "desc": ""
+    "desc": "NPC贝伊尔伦:,【盔甲碎片】X40,【破碎的魔法石】X20,【毒袋】X4,【元素结晶】X8"
   },
   {
     "type": "armor",
@@ -3399,11 +3349,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Wyvern Tunic.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3413,7 +3361,7 @@
     "name_kr": "",
     "level": "44",
     "armor": "14",
-    "hp": "27~32",
+    "hp": "26~34",
     "mana": "",
     "mana_regen": "",
     "cri": "0~3",
@@ -3421,13 +3369,12 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~13",
+    "fire_resist": "0or10~14",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
+    "set2": "体力5 命中2",
     "icon": "World Tree Branch Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院 NPC裴罗 制作:,皇冠鸭蛋 X10,魔力根茎 X60,电子核心 X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
   },
   {
     "type": "armor",
@@ -3437,7 +3384,7 @@
     "name_kr": "",
     "level": "46",
     "armor": "16",
-    "hp": "60",
+    "hp": "52~68",
     "mana": "",
     "mana_regen": "",
     "cri": "3",
@@ -3445,13 +3392,11 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "15",
+    "fire_resist": "13~17",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Catcher's Light Armor.png",
-    "desc": ""
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
   {
     "type": "armor",
@@ -3472,10 +3417,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Cotton Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@库伊"
   },
   {
     "type": "armor",
@@ -3496,10 +3439,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Novice Magician Robe.png",
-    "desc": ""
+    "desc": "NPC武器商人:,赵侍"
   },
   {
     "type": "armor",
@@ -3520,10 +3461,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Apprentice Magician Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@湿地野猪"
   },
   {
     "type": "armor",
@@ -3544,11 +3483,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Mushroom Robe.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇"
   },
   {
     "type": "armor",
@@ -3569,10 +3506,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Expert Magician Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@湿地圆圆"
   },
   {
     "type": "armor",
@@ -3593,10 +3528,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Master Magician Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@无神的库伊"
   },
   {
     "type": "armor",
@@ -3617,23 +3550,20 @@
     "fire_resist": "",
     "int": "0~2",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "The Dead's Shroud.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@凶残的船员"
   },
   {
     "type": "armor",
     "job": "magician",
     "name": "Charmed Robe",
-    "hide": true,
     "name_cn": " ",
     "name_kr": "咒术袍",
     "level": "22",
     "armor": "5",
-    "hp": "0~16",
-    "mana": "0~33",
-    "mana_regen": "0",
+    "hp": "0or5~29",
+    "mana": "0or13~37",
+    "mana_regen": "",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -3642,10 +3572,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Charmed Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@小恶魔,@阿打,@暗黑小恶魔"
   },
   {
     "type": "armor",
@@ -3668,7 +3596,7 @@
     "set3": "3智力+5%速",
     "icon": "Robe of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
   },
   {
     "type": "armor",
@@ -3689,10 +3617,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Crystal Robe.png",
-    "desc": ""
+    "desc": "NPC古德:,【设计图:水晶长袍】X1,【赛乐亚之泪】X1,【水晶蜘蛛丝】X60"
   },
   {
     "type": "armor",
@@ -3702,8 +3628,8 @@
     "name_kr": "",
     "level": "30",
     "armor": "7",
-    "hp": "0~33",
-    "mana": "0~37",
+    "hp": "20~32",
+    "mana": "23~37",
     "mana_regen": "0",
     "cri": "",
     "magic_resist": "",
@@ -3713,10 +3639,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Monk's Robe.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【棉布料】X100/【神圣线团】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X100/【神圣线团】X30"
   },
   {
     "type": "armor",
@@ -3726,9 +3650,9 @@
     "name_kr": "",
     "level": "34",
     "armor": "8",
-    "hp": "23~34",
-    "mana": "28~43",
-    "mana_regen": "1~2",
+    "hp": "28~43",
+    "mana": "23~34",
+    "mana_regen": "2~3",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -3737,10 +3661,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Sage's Robe.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【棉布料】X200/【魔法线团】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X200/【魔法线团】X20"
   },
   {
     "type": "armor",
@@ -3761,10 +3683,8 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Robe of Silence.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1"
   },
   {
     "type": "armor",
@@ -3774,9 +3694,9 @@
     "name_kr": "",
     "level": "42",
     "armor": "10",
-    "hp": "34~36",
-    "mana": "49~53",
-    "mana_regen": "1~3",
+    "hp": "34~37",
+    "mana": "46~54",
+    "mana_regen": "0~4",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -3785,10 +3705,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Scholar's Gown.png",
-    "desc": ""
+    "rarity":"稀有",
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3798,8 +3717,8 @@
     "name_kr": "",
     "level": "44",
     "armor": "11",
-    "hp": "24~30",
-    "mana": "0~44",
+    "hp": "21~29",
+    "mana": "0or36~44",
     "mana_regen": "0",
     "cri": "",
     "magic_resist": "",
@@ -3808,11 +3727,9 @@
     "hp_regen": "",
     "fire_resist": "",
     "int": "0~3",
-    "dex": "0~3",
-    "attribute_resistance": "",
-    "spell_resist": "",
+    "set2": "体力5 智力2",
     "icon": "World Tree Leaf Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院 NPC裴罗 制作:,皇冠鸭蛋 X10,魔力根茎 X60,电子核心 X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
   },
   {
     "type": "armor",
@@ -3822,8 +3739,8 @@
     "name_kr": "",
     "level": "46",
     "armor": "13",
-    "hp": "64~67",
-    "mana": "79~81",
+    "hp": "61~69",
+    "mana": "76~84",
     "mana_regen": "0",
     "cri": "",
     "magic_resist": "",
@@ -3833,11 +3750,9 @@
     "fire_resist": "",
     "int": "3",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Historian's Shroud.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
   {
     "type": "armor",
@@ -3858,10 +3773,8 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Apprentice Breaker Robe.png",
-    "desc": ""
+    "desc": "NPC武器商人:,赵侍"
   },
   {
     "type": "armor",
@@ -3882,10 +3795,8 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Leather Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@黑蜘蛛"
   },
   {
     "type": "armor",
@@ -3906,10 +3817,8 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Woopa Scale Robe.png",
-    "desc": ""
+    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X80"
   },
   {
     "type": "armor",
@@ -3930,8 +3839,6 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Sturdy Woopa Robe.png",
     "desc": ""
   },
@@ -3954,10 +3861,8 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Coral Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凝视者,@白色骷髅"
   },
   {
     "type": "armor",
@@ -3967,22 +3872,20 @@
     "name_kr": "",
     "level": "24",
     "armor": "8",
-    "hp": "0~16",
+    "hp": "14~18",
     "mana": "",
     "mana_regen": "",
     "cri": "0",
     "magic_resist": "",
-    "str": "0~1",
+    "str": "0~2",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "0~1",
+    "int": "0~2",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Lighthouse Robe.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "灯塔2楼NPC工匠福克斯:,【水晶蜘蛛丝】X40,【古代皮革】X5,【精灵之尘】X5"
   },
   {
     "type": "armor",
@@ -4005,7 +3908,7 @@
     "set3": "3力量+5%速",
     "icon": "Yellow Canola Robe.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
   },
   {
     "type": "armor",
@@ -4015,21 +3918,19 @@
     "name_kr": "",
     "level": "27",
     "armor": "9",
-    "hp": "0~14",
+    "hp": "9~17",
     "mana": "",
     "mana_regen": "",
     "cri": "0",
     "magic_resist": "",
     "str": "0",
     "ice_resist": "",
-    "hp_regen": "0~2",
+    "hp_regen": "2",
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
     "icon": "Combat Robe.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@小企鹅"
   },
   {
     "type": "armor",
@@ -4039,104 +3940,7 @@
     "name_kr": "",
     "level": "32",
     "armor": "10",
-    "hp": "0~23",
-    "mana": "",
-    "mana_regen": "",
-    "cri": "0~1",
-    "magic_resist": "",
-    "str": "0",
-    "ice_resist": "",
-    "hp_regen": "",
-    "fire_resist": "",
-    "int": "0",
-    "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
-    "icon": "Lightning Robe.png",
-    "desc": ""
-  },
-  {
-    "type": "armor",
-    "job": "breaker",
-    "name": "Bitter Cold Robe",
-    "name_cn": "严寒道服",
-    "name_kr": "",
-    "level": "36",
-    "armor": "11",
-    "hp": "0~29",
-    "mana": "",
-    "mana_regen": "",
-    "cri": "0",
-    "magic_resist": "",
-    "str": "0~?",
-    "ice_resist": "",
-    "hp_regen": "",
-    "fire_resist": "",
-    "int": "0",
-    "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
-    "icon": "Bitter Cold Robe.png",
-    "desc": ""
-  },
-  {
-    "type": "armor",
-    "job": "breaker",
-    "name": "Thule's Robe",
-    "name_cn": "图勒道服",
-    "name_kr": "",
-    "level": "39",
-    "armor": "12",
-    "hp": "0~37",
-    "mana": "",
-    "mana_regen": "",
-    "cri": "0",
-    "magic_resist": "",
-    "str": "0",
-    "ice_resist": "",
-    "hp_regen": "",
-    "fire_resist": "",
-    "int": "0~?",
-    "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
-    "icon": "Thule's Robe.png",
-    "desc": ""
-  },
-  {
-    "type": "armor",
-    "job": "breaker",
-    "name": "Oblivion Robe",
-    "name_cn": "忘却道服",
-    "name_kr": "",
-    "level": "42",
-    "armor": "13",
-    "hp": "0~?",
-    "mana": "",
-    "mana_regen": "",
-    "cri": "0",
-    "magic_resist": "",
-    "str": "0",
-    "ice_resist": "",
-    "hp_regen": "",
-    "fire_resist": "",
-    "int": "0",
-    "dex": "",
-    "attribute_resistance": "0",
-    "spell_resist": "",
-    "icon": "Oblivion Robe.png",
-    "rarity": "稀有",
-    "desc": ""
-  },
-  {
-    "type": "armor",
-    "job": "breaker",
-    "name": "World Tree Robe",
-    "name_cn": "世界树道服",
-    "name_kr": "",
-    "level": "44",
-    "armor": "14",
-    "hp": "0~31",
+    "hp": "17~23",
     "mana": "",
     "mana_regen": "",
     "cri": "0~2",
@@ -4147,10 +3951,98 @@
     "fire_resist": "",
     "int": "0",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
+    "icon": "Lightning Robe.png",
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【神圣线团】X40,主城NPC史奇尼:,【厚实的皮革】X100/【神圣线团】X40"
+  },
+  {
+    "type": "armor",
+    "job": "breaker",
+    "name": "Bitter Cold Robe",
+    "name_cn": "严寒道服",
+    "name_kr": "",
+    "level": "36",
+    "armor": "11",
+    "hp": "28~32",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "0",
+    "magic_resist": "",
+    "str": "0or2~4",
+    "ice_resist": "",
+    "hp_regen": "",
+    "fire_resist": "",
+    "int": "0",
+    "dex": "",
+    "icon": "Bitter Cold Robe.png",
+    "desc": "主城NPC姚班:,【厚实的皮革】X150/【魔法线团】X30,主城NPC史奇尼:,【厚实的皮革】X150/【魔法线团】X30"
+  },
+  {
+    "type": "armor",
+    "job": "breaker",
+    "name": "Thule's Robe",
+    "name_cn": "图勒道服",
+    "name_kr": "",
+    "level": "39",
+    "armor": "12",
+    "hp": "35~39",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "0",
+    "magic_resist": "",
+    "str": "0",
+    "ice_resist": "",
+    "hp_regen": "",
+    "fire_resist": "",
+    "int": "0or2~4",
+    "dex": "",
+    "icon": "Thule's Robe.png",
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X30,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X30"
+  },
+  {
+    "type": "armor",
+    "job": "breaker",
+    "name": "Oblivion Robe",
+    "name_cn": "忘却道服",
+    "name_kr": "",
+    "level": "42",
+    "armor": "13",
+    "hp": "36~40",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "0",
+    "magic_resist": "9~13",
+    "str": "0",
+    "ice_resist": "",
+    "hp_regen": "",
+    "fire_resist": "",
+    "int": "",
+    "dex": "",
+    "icon": "Oblivion Robe.png",
+    "rarity": "稀有",
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+  },
+  {
+    "type": "armor",
+    "job": "breaker",
+    "name": "World Tree Robe",
+    "name_cn": "世界树道服",
+    "name_kr": "",
+    "level": "44",
+    "armor": "14",
+    "hp": "26~34",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "0~3",
+    "magic_resist": "",
+    "str": "0",
+    "ice_resist": "",
+    "hp_regen": "",
+    "fire_resist": "",
+    "int": "0",
+    "dex": "",
+    "set2": "体力5 命中2",
     "icon": "World Tree Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院 NPC裴罗 制作:,皇冠鸭蛋 X10,魔力根茎 X60,电子核心 X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
   },
   {
     "type": "armor",
@@ -4160,20 +4052,20 @@
     "name_kr": "",
     "level": "46",
     "armor": "16",
-    "hp": "0~?",
+    "hp": "52~68",
     "mana": "",
     "mana_regen": "",
     "cri": "3",
     "magic_resist": "",
-    "str": "0",
+    "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0",
-    "int": "0",
+    "fire_resist": "13~17",
+    "int": "",
     "dex": "",
-    "attribute_resistance": "",
-    "spell_resist": "",
-    "icon": "Apex Road.png"
+    "icon": "Apex Road.png",
+    "rarity":"英雄",
+    "desc":"庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
 
   {
@@ -4221,7 +4113,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Donguri Hat.png",
-    "desc": ""
+    "desc": "NPC心动库伊:,【圆圆卡10/J/Q/K/A】X1"
   },
   {
     "type": "hats",
@@ -4268,7 +4160,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Kooii Hat.png",
-    "desc": ""
+    "desc": "NPC心动库伊:,【库伊卡10/J/Q/K/A】X1"
   },
   {
     "type": "hats",
@@ -4315,7 +4207,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Mask.png",
-    "desc": ""
+    "desc": "周年NPC活动"
   },
   {
     "type": "hats",
@@ -4528,7 +4420,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Pirate Hat.png",
-    "desc": ""
+    "desc": "NPC食神宝箱:,【海盗卡10/J/Q/K/A】x1"
   },
   {
     "type": "hats",
@@ -4551,7 +4443,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Crown.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@狂睡乌龟,@爱困乌龟,箱子开启:,地下城宝物30"
   },
   {
     "type": "hats",
@@ -4785,7 +4677,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Blood-Flower Stem Hat.png",
-    "desc": ""
+    "desc": "NPC圣职者 燦:,【血花藤蔓】X1,【水晶蜘蛛丝】X20"
   },
   {
     "type": "hats",
@@ -4800,7 +4692,7 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "0~5",
+    "str": "2~4",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
@@ -4833,7 +4725,7 @@
     "set3": "3力量+5%速",
     "icon": "Helm of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
   },
   {
     "type": "hats",
@@ -4846,7 +4738,7 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "2~6",
+    "cri": "3~6",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
@@ -4856,7 +4748,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Snow-Flower Stem Hat.png",
-    "desc": ""
+    "desc": "NPC古德:,【设计图:雪花藤蔓帽】X1,【雪花藤蔓】X7,【水晶蜘蛛丝】X20"
   },
   {
     "type": "hats",
@@ -4871,14 +4763,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "3~7",
-    "str": "1~4",
+    "str": "2~4",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
     "icon": "Blackjuno's Helmet.png",
-    "desc": ""
+    "desc": "NPC麦伊斯特:,【设计图:黑黑朱诺头盔】X1,【黑黑朱诺利角】X1,【雪人骨】X80"
   },
   {
     "type": "hats",
@@ -4900,7 +4792,7 @@
     "int": "",
     "dex": "",
     "icon": "Hat of the Wind.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【棉布料】X70/【风之线团】X20,主城NPC史奇尼:,【棉布料】X70/【风之线团】X20"
   },
   {
     "type": "hats",
@@ -4915,7 +4807,7 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "3~5",
+    "str": "3~4",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
@@ -4923,7 +4815,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Heavy Iron Helmet.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【铁矿石】X70/【研磨剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20"
   },
   {
     "type": "hats",
@@ -4946,7 +4838,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hat of Blitzkrieg.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【棉布料】X70/【魔法线团】X20,主城NPC史奇尼:,【棉布料】X70/【魔法线团】X20"
   },
   {
     "type": "hats",
@@ -4964,11 +4856,11 @@
     "str": "4~6",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "4~9",
+    "fire_resist": "5~9",
     "int": "",
     "dex": "",
     "icon": "Helmet of Bravery.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X20/【强化剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20/【强化剂】X20"
   },
   {
     "type": "hats",
@@ -4982,15 +4874,15 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "0~9",
-    "str": "5~8",
+    "magic_resist": "5~9",
+    "str": "5~7",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
     "icon": "Darksteel Helmet.png",
-    "desc": ""
+    "desc": "枯原NPC吴瑙:,【黑铁矿石】X70/【高级研磨剂】X20,卡塔勒山脉NPC高来莫:,【黑铁矿石】X70/【高级研磨剂】X20"
   },
   {
     "type": "hats",
@@ -5008,11 +4900,10 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "5~9",
     "int": "",
     "dex": "",
     "icon": "Dezoruba's Hat.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【特殊棉布料】X70/【戴楚拜伊设计图】X1,主城NPC史奇尼:,【特殊棉布料】X70/【戴楚拜伊设计图】X1"
   },
   {
     "type": "hats",
@@ -5026,7 +4917,7 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "1~13",
+    "magic_resist": "0~15",
     "str": "2~10",
     "ice_resist": "",
     "hp_regen": "",
@@ -5034,7 +4925,7 @@
     "int": "",
     "dex": "",
     "icon": "Warlord Helmet.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
   },
   {
     "type": "hats",
@@ -5048,15 +4939,15 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "0~15",
-    "str": "0~11",
+    "magic_resist": "0~16",
+    "str": "0or3~11",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
     "icon": "Slaughterer Helm.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
   },
   {
     "type": "hats",
@@ -5066,20 +4957,20 @@
     "name_kr": "",
     "level": "46",
     "armor": "13",
-    "hp": "9~17",
+    "hp": "7~23",
     "mana": "",
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "6~10",
+    "str": "4~12",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "hr": "0~4",
+    "hit": "0~7",
     "icon": "Authority Helm.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
   },
   {
     "type": "hats",
@@ -5127,7 +5018,7 @@
     "dex": "1",
     "icon": "Cap of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毒液花,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
   },
   {
     "type": "hats",
@@ -5140,8 +5031,8 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "5~11",
-    "magic_resist": "0~14",
+    "cri": "3~11",
+    "magic_resist": "0~15",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
@@ -5150,7 +5041,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Wanderer's Hat.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
   },
   {
     "type": "hats",
@@ -5163,8 +5054,8 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "0~11",
-    "magic_resist": "0~15",
+    "cri": "0or3~11",
+    "magic_resist": "0~16",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
@@ -5173,7 +5064,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Blind Faith Helm.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
   },
   {
     "type": "hats",
@@ -5183,21 +5074,21 @@
     "name_kr": "",
     "level": "46",
     "armor": "12",
-    "hp": "9~15",
+    "hp": "5~21",
     "mana": "",
     "mana_regen": "",
-    "cri": "6~11",
+    "cri": "4~12",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
-    "dex": "0~3",
+    "dex": "0~7",
     "spell_resist": "",
     "icon": "Chasing Helm.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【变色心脏】X2,【五色皮革】X20"
   },
   {
     "type": "hats",
@@ -5243,7 +5134,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Eye of Beholder.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凝视者,@暗黑凝视者,@巨无霸凝视者"
   },
   {
     "type": "hats",
@@ -5259,14 +5150,14 @@
     "cri": "",
     "magic_resist": "",
     "str": "",
-    "ice_resist": "0~11",
+    "ice_resist": "7~9",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "1~5",
+    "int": "2~5",
     "dex": "",
     "spell_resist": "",
     "icon": "Hat of Spirit.png",
-    "desc": ""
+    "desc": "NPC古德:,【设计图:精灵帽】X1,【精灵之尘】X20,【水晶蜘蛛丝】X40"
   },
   {
     "type": "hats",
@@ -5289,7 +5180,7 @@
     "set3": "3智力+5%速",
     "icon": "Bandana of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@被感染的女王蜂,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
   },
   {
     "type": "hats",
@@ -5308,11 +5199,11 @@
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "1~6",
+    "int": "0~7",
     "dex": "",
-    "spell_resist": "",
+    "lightning_Resist": "0~13",
     "icon": "Shaman's Hat.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔"
   },
   {
     "type": "hats",
@@ -5324,18 +5215,18 @@
     "armor": "5",
     "hp": "",
     "mana": "",
-    "mana_regen": "1",
+    "mana_regen": "1~2",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "3~6",
+    "int": "4~6",
     "dex": "",
     "spell_resist": "",
     "icon": "Monk's Hat.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【棉布料】X70/【神圣线团】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X70/【神圣线团】X20"
   },
   {
     "type": "hats",
@@ -5349,7 +5240,7 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "5~17",
+    "magic_resist": "7~17",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
@@ -5358,7 +5249,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Sage's Eye.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【棉布料】X60/【魔法线团】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X60/【魔法线团】X30"
   },
   {
     "type": "hats",
@@ -5381,7 +5272,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hat of Tranquility.png",
-    "desc": ""
+    "desc": "主城NPC村村:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1"
   },
   {
     "type": "hats",
@@ -5393,18 +5284,18 @@
     "armor": "8",
     "hp": "",
     "mana": "",
-    "mana_regen": "0~4",
+    "mana_regen": "0~5",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "4~10",
+    "int": "2~10",
     "dex": "",
     "spell_resist": "",
     "icon": "Scholar Hat.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
   },
   {
     "type": "hats",
@@ -5416,18 +5307,18 @@
     "armor": "9",
     "hp": "",
     "mana": "",
-    "mana_regen": "0~4",
+    "mana_regen": "0~6",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "0~10",
+    "int": "0or3~11",
     "dex": "",
     "spell_resist": "",
     "icon": "Judge's Helm.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
   },
   {
     "type": "hats",
@@ -5437,20 +5328,20 @@
     "name_kr": "",
     "level": "46",
     "armor": "11",
-    "hp": "9~15",
+    "hp": "2~18",
     "mana": "",
-    "mana_regen": "1~4",
+    "mana_regen": "0~7",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "6~11",
+    "int": "4~12",
     "dex": "",
     "spell_resist": "",
     "icon": "Eyes of Mind.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【禁止阅览的实验日志】X2,【五色皮革】X20"
   },
   {
     "type": "hats",
@@ -5473,7 +5364,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Breaker Hat.png",
-    "desc": ""
+    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X50"
   },
   {
     "type": "hats",
@@ -5543,7 +5434,7 @@
     "set3": "3力量+5%速",
     "icon": "Yellow Canola Hat.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
   },
   {
     "type": "hats",
@@ -5556,13 +5447,13 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "4",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "1~2",
     "dex": "",
     "spell_resist": "",
     "icon": "Frostlight Bandana.png",
@@ -5580,17 +5471,17 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "2~6",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "0~2",
     "dex": "",
     "spell_resist": "",
     "icon": "Cloud Bandana.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【厚实的皮革】X70/【神圣线团】X30,主城NPC史奇尼:,【厚实的皮革】X70/【神圣线团】X30"
   },
   {
     "type": "hats",
@@ -5603,17 +5494,17 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "2~6",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "1~3",
     "dex": "",
     "spell_resist": "",
     "icon": "Training Hat.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【魔法线团】X20,主城NPC史奇尼:,【厚实的皮革】X100/【魔法线团】X20"
   },
   {
     "type": "hats",
@@ -5626,17 +5517,17 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "4~6",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "1~3",
     "dex": "",
     "spell_resist": "",
     "icon": "Thule's Hat.png",
-    "desc": ""
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X20,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X20"
   },
   {
     "type": "hats",
@@ -5649,17 +5540,17 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "6~7",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "3~4",
     "dex": "",
     "spell_resist": "",
     "icon": "Belt of Strength.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【堕落的魔法石】X30,【第5精髓】X20"
   },
   {
     "type": "hats",
@@ -5672,17 +5563,17 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "3~7",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "0or2~4",
     "dex": "",
     "spell_resist": "",
     "icon": "Speed of Thought.png",
-    "desc": ""
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
   },
   {
     "type": "hats",
@@ -5692,19 +5583,21 @@
     "name_kr": "",
     "level": "46",
     "armor": "9",
-    "hp": "",
+    "hp": "5~21",
     "mana": "",
     "mana_regen": "",
-    "cri": "",
+    "cri": "4~12",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "",
+    "int": "0~7",
     "dex": "",
     "spell_resist": "",
-    "icon": "Realm of Void.png"
+    "icon": "Realm of Void.png",
+    "rarity":"英雄",
+    "desc":"鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
   },
 
   {
@@ -5817,7 +5710,7 @@
     "int": "",
     "dex": "",
     "icon": "Mitten.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@红螃蟹"
   },
   {
     "type": "gloves",
@@ -5840,7 +5733,30 @@
     "dex": "",
     "hit": "0~12",
     "icon": "Sturdy Leather Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@实验用乌波"
+  },
+  {
+    "type": "gloves",
+    "job": "breaker",
+    "name": "Sturdy Leather Gloves",
+    "name_cn": "强化皮革手套",
+    "name_kr": "",
+    "level": "13",
+    "armor": "3",
+    "hp": "",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "",
+    "magic_resist": "",
+    "str": "",
+    "ice resist": "",
+    "hp regen": "",
+    "fire resist": "",
+    "int": "",
+    "dex": "",
+    "hit": "0~12",
+    "icon": "Sturdy Leather Gloves.png",
+    "desc": "怪物掉落↓可点击↓:,@实验用乌波"
   },
   {
     "type": "gloves",
@@ -5862,7 +5778,7 @@
     "int": "",
     "dex": "",
     "icon": "Pirate Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@扫帚"
   },
   {
     "type": "gloves",
@@ -5885,7 +5801,7 @@
     "dex": "",
     "rarity": "英雄",
     "icon": "Power Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@睡醒的库伊"
   },
   {
     "type": "gloves",
@@ -5928,9 +5844,9 @@
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hit": "0~3",
+    "hit": "0~4",
     "icon": "Imp Warrior's Gauntlet.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@嗜血蝙蝠"
   },
   {
     "type": "gloves",
@@ -5952,7 +5868,7 @@
     "int": "1~3",
     "dex": "",
     "icon": "The Dead's Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@惊喜宝箱"
   },
   {
     "type": "gloves",
@@ -5967,14 +5883,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "",
+    "str": "1~3",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
-    "int": "",
+    "int": "0~2",
     "dex": "",
     "icon": "Elemental Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@嗜血花"
   },
   {
     "type": "gloves",
@@ -5986,17 +5902,17 @@
     "armor": "3",
     "hp": "",
     "mana": "7~23",
-    "mana_regen": "0~2",
+    "mana_regen": "2",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
-    "int": "1~4",
+    "int": "0~4",
     "dex": "",
     "icon": "Seruang's Heart.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@瓦当卡老人"
   },
   {
     "type": "gloves",
@@ -6019,7 +5935,7 @@
     "dex": "",
     "hit": "0~4",
     "icon": "Scale Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@暴怒的风精灵,@巨无霸凝视者"
   },
   {
     "type": "gloves",
@@ -6034,14 +5950,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "0~4",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "hr": "?",
+    "hit": "0~2",
     "icon": "Cloud Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@仙人掌蜂,@沙漠刺猬"
   },
   {
     "type": "gloves",
@@ -6054,7 +5970,7 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "0~3",
+    "cri": "0~4",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
@@ -6062,9 +5978,9 @@
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "2~5",
+    "hit": "1~5",
     "icon": "Oatwill's Leather Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@精英小恶魔,@恶灵"
   },
   {
     "type": "gloves",
@@ -6074,7 +5990,7 @@
     "name_kr": "",
     "level": "31",
     "armor": "6",
-    "hp": "1~13",
+    "hp": "0~13",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -6085,9 +6001,9 @@
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "0~5",
+    "hit": "0~5",
     "icon": "Heavy Iron Gauntlet.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@石魔像,@僵尸"
   },
   {
     "type": "gloves",
@@ -6102,14 +6018,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "2~4",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "hr": "?",
+    "hit": "0~4",
     "icon": "Lightning Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@球怪"
   },
   {
     "type": "gloves",
@@ -6129,9 +6045,9 @@
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "dex": "2~7",
+    "dex": "2~6",
     "icon": "Desert Mercenary Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@祭坛清洁队,@液态怪"
   },
   {
     "type": "gloves",
@@ -6153,7 +6069,7 @@
     "int": "1~5",
     "dex": "",
     "icon": "Monk's Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@小青蛙,@剧毒石菇,@沉默灵魂"
   },
   {
     "type": "gloves",
@@ -6168,15 +6084,15 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "3~5",
+    "str": "2~5",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "0~5",
+    "hit": "0~5",
     "icon": "Iron Golem's Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@石像,@钢铁魔像,@暗黑朱诺"
   },
   {
     "type": "gloves",
@@ -6198,7 +6114,7 @@
     "int": "",
     "dex": "2~6",
     "icon": "Scout Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@滴水嘴兽,@机器人,@暗黑朱诺"
   },
   {
     "type": "gloves",
@@ -6220,7 +6136,7 @@
     "int": "2~6",
     "dex": "",
     "icon": "Sage's Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔像,@法杖机器人,@暗黑朱诺"
   },
   {
     "type": "gloves",
@@ -6235,14 +6151,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "2~5",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "hr": "?",
+    "hit": "0or2~4",
     "icon": "Bitter Cold Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@暗黑滴水嘴兽"
   },
   {
     "type": "gloves",
@@ -6255,16 +6171,16 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "0~4",
+    "cri": "0~5",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "dex": "3~5",
+    "dex": "2~6",
     "icon": "Gloves of Darkness.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【黑暗碎片】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6276,7 +6192,7 @@
     "armor": "6",
     "hp": "",
     "mana": "0~16",
-    "mana_regen": "0~5",
+    "mana_regen": "0~6",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -6286,7 +6202,7 @@
     "int": "2~6",
     "dex": "",
     "icon": "Gloves of Tranquility.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【灵魂石】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6301,15 +6217,15 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "0~5",
+    "str": "2~6",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "2~6",
+    "hit": "0~7",
     "icon": "Titanium Gauntlet.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【钛合金铁块】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6324,14 +6240,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "3~6",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "hr": "?",
+    "hit": "0or3~5",
     "icon": "Thule's Gloves.png",
-    "desc": ""
+    "desc": "【组合书3】制作:,【石冠实验室药瓶】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6343,17 +6259,17 @@
     "armor": "7",
     "hp": "",
     "mana": "1~17",
-    "mana_regen": "0~6",
+    "mana_regen": "0~7",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
-    "int": "4~7",
+    "int": "3~7",
     "dex": "",
     "icon": "Gloves of Purification.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
   },
   {
     "type": "gloves",
@@ -6366,16 +6282,16 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "0~5",
+    "cri": "0~6",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "dex": "4~6",
+    "dex": "3~7",
     "icon": "Gloves of the Forest Elf.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
   },
   {
     "type": "gloves",
@@ -6390,15 +6306,15 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "3~6",
+    "str": "3~7",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "0~7",
+    "hit": "0~8",
     "icon": "Gauntlets of Victory.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
   },
   {
     "type": "gloves",
@@ -6413,14 +6329,14 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "4~7",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "hr": "?",
+    "hit": "0or3~5",
     "icon": "Sea Gloves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
   },
   {
     "type": "gloves",
@@ -6433,18 +6349,18 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "?",
+    "cri": "0or3~5",
     "magic_resist": "",
-    "str": "?",
+    "str": "3~7",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
     "dex": "",
-    "hr": "?",
+    "hit": "3~7",
     "icon": "Protector's Hand Skin.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
   },
   {
     "type": "gloves",
@@ -6457,18 +6373,18 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "?",
+    "cri": "3~7",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
     "int": "",
-    "dex": "?",
-    "hr": "?",
+    "dex": "3~7",
+    "hit": "0or2~4",
     "icon": "Chainstrike Gloves.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
   },
   {
     "type": "gloves",
@@ -6480,18 +6396,18 @@
     "armor": "8",
     "hp": "",
     "mana": "16~24",
-    "mana_regen": "0~6",
+    "mana_regen": "0~8",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
-    "int": "5~7",
+    "int": "3~7",
     "dex": "",
     "icon": "lllusionist's Gloves.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
   },
   {
     "type": "gloves",
@@ -6506,15 +6422,15 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "?",
+    "str": "5~8",
     "ice resist": "",
     "hp regen": "",
     "fire resist": "",
-    "int": "?",
-    "hr": "?",
+    "int": "0or3",
+    "hit": "3~5",
     "icon": "Chainstrike Gloves.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
   },
   {
     "type": "gloves",
@@ -6539,7 +6455,7 @@
     "dmg": "20%",
     "icon": "Joma's Hands.png",
     "rarity": "传说",
-    "desc": "怪物掉落↓可点击↓:,@克里高,20个克里高的手制作"
+    "desc": "怪物掉落↓可点击↓:,@克里高,NPC利毕亚:,【克里高的手】X20,【魔核】X20,【设计图:月光石装备】X20,【第7精髓】X40"
   },
 
   {
@@ -6564,7 +6480,7 @@
     "move": "5%~16%",
     "icon": "Wingwing Boots.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@戴弗龙"
+    "desc": "怪物掉落↓可点击↓:,@戴弗龙,箱子开启:,地下城宝物25"
   },
   {
     "type": "shoes",
@@ -6685,8 +6601,7 @@
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Savage Boots",
-    "hide": true,
-    "name_cn": " ",
+    "name_cn": "野蛮鞋",
     "name_kr": "",
     "level": "10",
     "armor": "2",
@@ -6703,7 +6618,7 @@
     "dex": "",
     "move": "6%",
     "icon": "Savage Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌鸦,@狐狸"
   },
   {
     "type": "shoes",
@@ -6726,7 +6641,7 @@
     "dex": "",
     "move": "7%~9%",
     "icon": "Shoes (ShukShuk).png",
-    "desc": ""
+    "desc": "NPC咻咻:,【乌龟王冠】X1"
   },
   {
     "type": "shoes",
@@ -6738,7 +6653,7 @@
     "armor": "3",
     "hp": "",
     "mana": "",
-    "mana_regen": "0~2",
+    "mana_regen": "1~2",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -6793,10 +6708,10 @@
     "fire_resist": "",
     "int": "",
     "set2": "40HP",
-    "set3": "3力量+5%速",
+    "set3": "3力量 5%速",
     "icon": "Greaves of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -6810,7 +6725,7 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "0~10",
+    "magic_resist": "0~11",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
@@ -6819,7 +6734,7 @@
     "dex": "",
     "move": "",
     "icon": "Scale Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@木乃伊,@剧毒木乃伊"
   },
   {
     "type": "shoes",
@@ -6837,12 +6752,12 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "3,5,7",
+    "fire_resist": "3~7",
     "int": "",
     "dex": "",
     "move": "",
     "icon": "Kataru Shoes.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@不死鸟,NPC提诺:,【凤凰之眼】X1"
   },
   {
     "type": "shoes",
@@ -6860,12 +6775,12 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "4,6,8",
+    "fire_resist": "4~8",
     "int": "",
     "dex": "",
     "move": "",
     "icon": "Desert Mercenary Boots.png",
-    "desc": ""
+    "desc": "NPC凯伊洛:,【蜜蜂毒针】X5"
   },
   {
     "type": "shoes",
@@ -6883,12 +6798,12 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~10",
+    "fire_resist": "0~11",
     "int": "",
     "dex": "",
     "move": "",
     "icon": "Heavy Iron Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@鬼蛇,@熔岩扒手头目,@突变九头蛇"
   },
   {
     "type": "shoes",
@@ -6909,9 +6824,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "move": "3~10%",
+    "move": "2~10%",
     "icon": "Sharkun Greaves.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@夏库,@突变的夏库,@祭坛守护者"
   },
   {
     "type": "shoes",
@@ -6926,15 +6841,15 @@
     "mana_regen": "",
     "cri": "",
     "magic_resist": "",
-    "str": "0~4",
+    "str": "0~5",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~11",
+    "fire_resist": "0~12",
     "int": "",
     "dex": "",
     "move": "",
     "icon": "Titanium Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@钛合金魔像,@灰天"
   },
   {
     "type": "shoes",
@@ -6952,12 +6867,12 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~11",
+    "fire_resist": "0~12",
     "int": "",
-    "dex": "0~4",
+    "dex": "0~5",
     "move": "",
     "icon": "Boots of Darkness.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@暗黑恐惧,@灰天"
   },
   {
     "type": "shoes",
@@ -6981,7 +6896,7 @@
     "move": "0or6%~14%",
     "icon": "Berserker Boots.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
   },
   {
     "type": "shoes",
@@ -7002,9 +6917,9 @@
     "fire_resist": "0~12",
     "int": "",
     "dex": "",
-    "move": "0~12%",
+    "move": "0or4~12%",
     "icon": "Forbidden Library Tracks.png",
-    "desc": ""
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
   },
   {
     "type": "shoes",
@@ -7026,10 +6941,10 @@
     "int": "",
     "dex": "1",
     "set2": "35HP",
-    "set3": "3敏捷+5%速",
+    "set3": "3敏捷 5%速",
     "icon": "Boots of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7050,9 +6965,9 @@
     "fire_resist": "",
     "int": "",
     "dex": "0~4",
-    "move": "3~10%",
+    "move": "2~10%",
     "icon": "Toxic Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯,@祭坛守护者"
   },
   {
     "type": "shoes",
@@ -7076,7 +6991,7 @@
     "move": "0or6~14%",
     "icon": "Snowfield Tracer Boots.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
   },
   {
     "type": "shoes",
@@ -7097,9 +7012,9 @@
     "fire_resist": "0~12",
     "int": "",
     "dex": "0~5",
-    "move": "0~12%",
+    "move": "0or4~12%",
     "icon": "Elven Overshoes.png",
-    "desc": ""
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
   },
   {
     "type": "shoes",
@@ -7120,10 +7035,10 @@
     "fire_resist": "",
     "int": "1",
     "set2": "30HP",
-    "set3": "3智力+5%速",
+    "set3": "3智力 5%速",
     "icon": "Boots of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7135,7 +7050,7 @@
     "armor": "4",
     "hp": "",
     "mana": "",
-    "mana_regen": "",
+    "mana_regen": "0~2",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -7146,7 +7061,7 @@
     "dex": "",
     "move": "",
     "icon": "Monk's Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@风暴,@魔法小恶魔"
   },
   {
     "type": "shoes",
@@ -7158,7 +7073,7 @@
     "armor": "5",
     "hp": "",
     "mana": "",
-    "mana_regen": "0~3",
+    "mana_regen": "0~4",
     "cri": "",
     "magic_resist": "",
     "str": "",
@@ -7167,9 +7082,9 @@
     "fire_resist": "",
     "int": "0~4",
     "dex": "",
-    "move": "3~10%",
+    "move": "2~10%",
     "icon": "Snowy Field's Cursed Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@雪球,@雪宝,@祭坛守护者"
   },
   {
     "type": "shoes",
@@ -7181,18 +7096,18 @@
     "armor": "6",
     "hp": "",
     "mana": "",
-    "mana_regen": "0~4",
+    "mana_regen": "0~5",
     "cri": "",
     "magic_resist": "",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~11",
-    "int": "0~4",
+    "fire_resist": "0~14",
+    "int": "0~5",
     "dex": "",
     "move": "",
     "icon": "Shoes of Tranquility.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@怪鸟,@灰天"
   },
   {
     "type": "shoes",
@@ -7216,7 +7131,7 @@
     "move": "0or6%~14%",
     "icon": "Light Engraving Shoes.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
   },
   {
     "type": "shoes",
@@ -7237,9 +7152,9 @@
     "fire_resist": "0~12",
     "int": "0~5",
     "dex": "",
-    "move": "0~12%",
+    "move": "0or4~12%",
     "icon": "Determined Memory Boots.png",
-    "desc": ""
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
   },
   {
     "type": "shoes",
@@ -7260,10 +7175,10 @@
     "fire_resist": "",
     "int": "1",
     "set2": "35HP",
-    "set3": "3力量+5%速",
+    "set3": "3力量 5%速",
     "icon": "Yellow Canola Boots.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7282,12 +7197,12 @@
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "?",
+    "int": "0~2",
     "dex": "",
     "class": "",
     "move": "",
     "icon": "Cloud Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@小蜘蛛,@不死鸟"
   },
   {
     "type": "shoes",
@@ -7306,12 +7221,12 @@
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "?",
+    "int": "1~3",
     "dex": "",
     "class": "",
-    "move": "?",
+    "move": "5~7%",
     "icon": "Bitter Cold Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯"
   },
   {
     "type": "shoes",
@@ -7325,17 +7240,17 @@
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "?",
+    "magic_resist": "0~12",
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
-    "int": "?",
+    "int": "0or2~4",
     "dex": "",
     "class": "",
     "move": "",
     "icon": "Thule's Boots.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@地雷"
   },
   {
     "type": "shoes",
@@ -7353,14 +7268,14 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "",
-    "fire_resist": "0~15",
+    "fire_resist": "0~13",
     "int": "0~6",
     "dex": "",
     "class": "",
-    "move": "0,6~14%",
+    "move": "0or6~14%",
     "icon": "Sea Boots.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
   },
   {
     "type": "shoes",
@@ -7379,10 +7294,11 @@
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "0~12",
-    "int": "0~5",
+    "int": "0~4",
     "dex": "",
-    "move": "0~12%",
-    "icon": "Steps of Extremity.png"
+    "move": "0or6~10%",
+    "icon": "Steps of Extremity.png",
+    "desc":"NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
   },
   
   {
@@ -7650,7 +7566,7 @@
     "dex": "",
     "block": "",
     "icon": "Fungiskin Belt.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@毒蘑菇"
   },
   {
     "type": "belts",
@@ -7673,7 +7589,7 @@
     "dex": "",
     "block": "",
     "icon": "Madgar's Belt.png",
-    "desc": ""
+    "desc": "灯塔任务获取"
   },
   {
     "type": "belts",
@@ -7720,7 +7636,7 @@
     "block": "",
     "icon": "Belt of Mana Regeneration.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "灯塔2楼NPC:,【中级骨头设计图】携带,【骨头碎片】X10"
   },
   {
     "type": "belts",
@@ -7744,7 +7660,30 @@
     "block": "",
     "icon": "Belt of Mana Regeneration.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@哈哈"
+  },
+  {
+    "type": "belts",
+    "job": "warrior,ranger,magician,breaker",
+    "name": "Warrior's Belt",
+    "name_cn": "斗士的皮带",
+    "name_kr": "",
+    "level": "20",
+    "armor": "2",
+    "hp": "10",
+    "mana": "",
+    "mana_regen": "",
+    "cri": "",
+    "magic_resist": "",
+    "str": "",
+    "ice_resist": "",
+    "hp_regen": "1",
+    "fire_resist": "",
+    "int": "",
+    "dex": "",
+    "block": "",
+    "icon": "Warrior's Belt.png",
+    "desc": "【战场补给品】"
   },
   {
     "type": "belts",
@@ -7767,7 +7706,7 @@
     "dex": "",
     "block": "",
     "icon": "Belt of Belief.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@小妖精,@恶灵"
   },
   {
     "type": "belts",
@@ -7791,7 +7730,7 @@
     "block": "",
     "icon": "Titanium Belt.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书3】制作:,【钛合金铁块】X40,【第4精髓】X40,【第6精髓】X10"
   },
   {
     "type": "belts",
@@ -7810,11 +7749,9 @@
     "ice_resist": "",
     "hp_regen": "0~3",
     "fire_resist": "",
-    "int": "",
-    "dex": "",
-    "block": "",
+    "set2": "体力5 命中2",
     "icon": "Belt of Rough Roots.png",
-    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯"
+    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
   },
   {
     "type": "belts",
@@ -7832,12 +7769,9 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "0~3",
-    "fire_resist": "",
-    "int": "",
-    "dex": "",
-    "block": "",
+    "set2": "体力5 智力2",
     "icon": "Belt of Dry Magic.png",
-    "desc": "怪物掉落↓可点击↓:,@奥伯洛德"
+    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
   },
   {
     "type": "belts",
@@ -7855,12 +7789,9 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "0~3",
-    "fire_resist": "",
-    "int": "",
-    "dex": "",
-    "block": "",
+    "set2": "体力5 命中2",
     "icon": "Pledger's Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@奥伯洛德"
+    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
   },
   {
     "type": "belts",
@@ -7878,12 +7809,9 @@
     "str": "",
     "ice_resist": "",
     "hp_regen": "0~3",
-    "fire_resist": "",
-    "int": "",
-    "dex": "",
-    "block": "",
+    "set2": "体力5 命中2",
     "icon": "Teal Fragment Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯"
+    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
   },
   {
     "type": "belts",
@@ -7907,7 +7835,7 @@
     "block": "",
     "icon": "Otherworld Belt.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@克里高"
+    "desc": "怪物掉落↓可点击↓:,@克里高,【组合书3】制作:,【克里高的骨头】X30,【堕落的魔法石】X10,【完美黑暗】X3,箱子开启:,地下城宝物46/48/50"
   },
   {
     "type": "cloaks",
@@ -7953,7 +7881,7 @@
     "dex": "",
     "block": "",
     "icon": "Bulldozer Cloak.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥"
   },
   {
     "type": "cloaks",
@@ -7982,7 +7910,7 @@
     "type": "cloaks",
     "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Will",
-    "name_cn": "意志披风",
+    "name_cn": "意志披风(1~5)",
     "name_kr": "",
     "level": "8",
     "armor": "2",
@@ -8000,7 +7928,7 @@
     "block": "",
     "deadly": "0.2,0.4,0.6,0.8,1.0",
     "icon": "Cloak of Will.png",
-    "desc": ""
+    "desc": "【组合书1】制作:,【宠物币】X2 一件"
   },
   {
     "type": "cloaks",
@@ -8046,7 +7974,7 @@
     "dex": "",
     "block": "",
     "icon": "Warrior's Cloak.png",
-    "desc": ""
+    "desc": "【战场补给品】"
   },
   {
     "type": "cloaks",
@@ -8071,7 +7999,7 @@
     "deadly": "1.0",
     "icon": "Cloak of Half Death.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵,箱子开启:,地下城宝物20"
   },
   {
     "type": "cloaks",
@@ -8096,7 +8024,7 @@
     "deadly": "1.0",
     "icon": "Cloak of Death.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵"
   },
   {
     "type": "cloaks",
@@ -8121,7 +8049,7 @@
     "deadly": "2.0",
     "icon": "Passionate Cloak.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子开启:,被污染的湿地宝箱"
   },
   {
     "type": "necklaces",
@@ -8163,7 +8091,7 @@
     "dex": "",
     "icon": "Sparkling Necklace.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇"
   },
   {
     "type": "necklaces",
@@ -8183,7 +8111,7 @@
     "fire_resist": "2,4,7,12",
     "dex": "",
     "icon": "Necklace of Will.png",
-    "desc": ""
+    "desc": "【组合书1】制作:,【宠物币】X3 一条"
   },
   {
     "type": "necklaces",
@@ -8244,7 +8172,7 @@
     "dex": "",
     "icon": "Dark Skull.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@黑色骸骨"
   },
   {
     "type": "necklaces",
@@ -8304,7 +8232,7 @@
     "fire_resist": "",
     "dex": "",
     "icon": "Pirate Necklace.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@甲板长布朗卡"
   },
   {
     "type": "necklaces",
@@ -8325,7 +8253,7 @@
     "dex": "",
     "icon": "Necklace of Will V.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书1】制作:,【意志项链4】X2"
   },
   {
     "type": "necklaces",
@@ -8346,7 +8274,7 @@
     "dex": "",
     "icon": "Golden Necklace.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "【组合书3】制作:,【名誉项链】X1/【古代币】X10,【第4精髓】X10/【第6精髓】X10,【第7精髓】X10"
   },
   {
     "type": "necklaces",
@@ -8367,7 +8295,7 @@
     "str": "1~3",
     "icon": "Ouroboros.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
   },
   {
     "type": "necklaces",
@@ -8388,7 +8316,7 @@
     "int": "1~3",
     "icon": "Rosario.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
   },
   {
     "type": "necklaces",
@@ -8409,7 +8337,7 @@
     "dex": "1~3",
     "icon": "Intruder.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
   },
   {
     "type": "necklaces",
@@ -8430,7 +8358,7 @@
     "str": "1~3",
     "icon": "Equinox.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
   },
   {
     "type": "rings",
@@ -8451,7 +8379,7 @@
     "int": "",
     "icon": "Canine Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪少年"
   },
   {
     "type": "rings",
@@ -8499,7 +8427,7 @@
     "type": "rings",
     "job": "warrior,ranger,magician,breaker",
     "name": "Guardian's Ring",
-    "name_cn": "守护者的戒指",
+    "name_cn": "守护者戒指",
     "name_kr": "",
     "level": "10",
     "armor": "2",
@@ -8514,7 +8442,7 @@
     "int": "",
     "icon": "Guardian's Ring.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔,箱子开启:,地下城宝物30"
   },
   {
     "type": "rings",
@@ -8556,7 +8484,7 @@
     "dex": "2",
     "icon": "Ring of Soul.png",
     "rarity": "",
-    "desc": ""
+    "desc": "灯塔任务获取"
   },
   {
     "type": "rings",
@@ -8577,7 +8505,7 @@
     "int": "2",
     "icon": "Ring of Virgin.png",
     "rarity": "",
-    "desc": ""
+    "desc": "灯塔任务获取"
   },
   {
     "type": "rings",
@@ -8640,7 +8568,7 @@
     "int": "",
     "icon": "Pirate Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@海盗宝箱,@海盗幽灵,@海盗骸骨,@宝箱怪,@甲板长布朗卡"
   },
   {
     "type": "rings",
@@ -8661,7 +8589,7 @@
     "int": "",
     "icon": "Critical Ring of Will.png",
     "rarity": "",
-    "desc": ""
+    "desc": "【宠物币】X5"
   },
   {
     "type": "rings",
@@ -8682,7 +8610,7 @@
     "int": "",
     "icon": "HP Ring of Will.png",
     "rarity": "",
-    "desc": ""
+    "desc": "【宠物币】X5"
   },
   {
     "type": "rings",
@@ -8703,7 +8631,7 @@
     "int": "0~4",
     "icon": "Magic Power Ring of Will.png",
     "rarity": "",
-    "desc": ""
+    "desc": "【宠物币】X5"
   },
   {
     "type": "rings",
@@ -8724,7 +8652,7 @@
     "int": "0~5",
     "icon": "Ring of Promise.png",
     "rarity": "",
-    "desc": ""
+    "desc": "【组合书2】制作:,【魔力卷轴】X2,【高级魔力药水】X60,【第3精髓】X40"
   },
   {
     "type": "rings",
@@ -8745,7 +8673,7 @@
     "int": "",
     "icon": "Alloy Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@艾普"
   },
   {
     "type": "rings",
@@ -8766,7 +8694,7 @@
     "deadly": "1.0",
     "icon": "Radiant Paradox of Omnipotence.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "公会副本4~5阶段"
   },
   {
     "type": "rings",
@@ -8787,7 +8715,7 @@
     "int": "0~8",
     "icon": "Endless Arrogance of Omniscience.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "公会副本4~5阶段"
   },
   {
     "type": "rings",
@@ -8808,7 +8736,7 @@
     "int": "",
     "icon": "Eternal Paradox of Immortality.png",
     "rarity": "英雄",
-    "desc": ""
+    "desc": "公会副本4~5阶段"
   },
   {
     "type": "rings",
@@ -8829,7 +8757,7 @@
     "int": "",
     "icon": "Archangel.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "【组合书2】制作:,【魔力符文】X20,【第4精髓】X40,【第6精髓】X10"
   },
   {
     "type": "rings",
@@ -8850,7 +8778,7 @@
     "int": "",
     "icon": "Purified Ring of Strength.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
   },
   {
     "type": "rings",
@@ -8871,7 +8799,7 @@
     "int": "4~6",
     "icon": "Ring of Life Revival.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
   },
   {
     "type": "rings",
@@ -8892,13 +8820,13 @@
     "int": "",
     "icon": "Pioneer's Ring.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
   },
   {
     "type": "rings",
     "job": "warrior,ranger",
     "name": "Paradox of Omnipotence",
-    "name_cn": "全能悖论",
+    "name_cn": "全能悖论(无法交易)",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8913,13 +8841,13 @@
     "int": "",
     "icon": "Paradox of Omnipotence.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
   },
   {
     "type": "rings",
     "job": "warrior,ranger,magician,breaker",
     "name": "Arrogance of Omniscience",
-    "name_cn": "万能傲慢",
+    "name_cn": "万能傲慢(无法交易)",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8934,13 +8862,13 @@
     "int": "0~7",
     "icon": "Arrogance of Omniscience.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
   },
   {
     "type": "rings",
     "job": "warrior,ranger,magician,breaker",
     "name": "Paradox of Immortality",
-    "name_cn": "不死矛盾",
+    "name_cn": "不死矛盾(无法交易)",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8955,7 +8883,7 @@
     "int": "",
     "icon": "Paradox of Immortality.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
   },
   {
     "type": "charms",

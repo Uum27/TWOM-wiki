@@ -13,11 +13,13 @@ body{background:#f0f2f5;padding:12px}
   align-items:center;
   gap:6px;
   margin-bottom:8px;
+
   position:sticky;
   top:0;
+  z-index:100;
+
   background:#f0f2f5;
   padding:6px 0;
-  z-index:100;
 }
 
 /* 搜索框自动撑满 */
@@ -37,13 +39,12 @@ body{background:#f0f2f5;padding:12px}
 
 /* 分类栏 */
 #typeBar.top-bar{
-  position:sticky;
-  top:56px;
-  background:#f0f2f5;
-  z-index:99;
+  position:static;
+  background:transparent;
+  margin-bottom:0;
 
   display:flex;
-  flex-wrap:wrap;   /* 换行 */
+  flex-wrap:wrap;
   gap:6px;
 }
 
@@ -270,7 +271,7 @@ const langConfig = {
     hit:{cn:"命中",en:"Hit",kr:""}, cri:{cn:"暴击",en:"Cri",kr:""},
     deadly:{cn:"致死一击",en:"Deadly",kr:""}, move:{cn:"移动速度",en:"Move",kr:""},
     ice_resist:{cn:"冰抗",en:"Ice Res",kr:""}, fire_resist:{cn:"火抗",en:"Fire Res",kr:""},
-    magic_resist:{cn:"属性抗性",en:"Magic Res",kr:""},
+    lightning_Resist:{cn:"雷抗",en:"light Res",kr:""},magic_resist:{cn:"属性抗性",en:"Magic Res",kr:""},
     set2:{cn:"2件套",en:"2SET",kr:""}, set3:{cn:"3件套",en:"3SET",kr:""}
   },
   rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"}, "高级":{cn:"高级",en:"Advanced",kr:"고급"}, "稀有":{cn:"稀有",en:"Rare",kr:"희귀"}, "英雄":{cn:"英雄",en:"Heroic",kr:"영웅"}, "传说":{cn:"传说",en:"Legendary",kr:"전설"} },
@@ -316,6 +317,7 @@ const statKeys = [
   "ice_resist",
   "fire_resist",
   "magic_resist",
+  "lightning_Resist",
   "move",
   "set2",
   "set3"
