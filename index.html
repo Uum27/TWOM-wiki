@@ -322,14 +322,24 @@ const zoneGroups = {
       cn:"木木森",
       en:"Woody-Weedy Forest",
       kr:"우디위디숲",
-      img:"maps/woody-weedy-forest.png"
-    },
+
+   imgs:{
+     cn:"maps/cn/woody-wordy forest.webp",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+},
     {
       cn:"木林森",
       en:"Woody-Wordy Forest",
       kr:"우디워디숲",
-      img:"maps/woody-wordy-forest.png"
-    }
+
+   imgs:{
+     cn:"maps/cn/woody-weedy forest.webp",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+ }
   ]},
   "蘑菇林": { en: "Mushroom Marshland", kr: "버섯늪지", zones: ["Mushroom Marshland","Mushroom Spore"] ,maps:[
     {
@@ -338,7 +348,7 @@ const zoneGroups = {
       kr:"버섯늪지",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Mushroom Marshland.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -362,7 +372,7 @@ const zoneGroups = {
       kr:"윙프릴 섬해변",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Wingfril Island Beach.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -373,7 +383,7 @@ const zoneGroups = {
       kr:"등대 섬",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Island with the Lighthouse.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -386,7 +396,7 @@ const zoneGroups = {
       kr:"등대던전 1F",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lighthouse 1F.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -397,7 +407,7 @@ const zoneGroups = {
       kr:"등대던전 2F",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lighthouse 2F.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -408,7 +418,7 @@ const zoneGroups = {
       kr:"등대던전 3F",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lighthouse 3F.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -419,7 +429,7 @@ const zoneGroups = {
       kr:"등대던전 4F",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lighthouse 4F.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -430,7 +440,7 @@ const zoneGroups = {
       kr:"등대던전 5F",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lighthouse 5FLighthouse 5F.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -456,7 +466,7 @@ const zoneGroups = {
       kr:"라노스 평원",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Lanos Plains.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -467,7 +477,7 @@ const zoneGroups = {
       kr:"폐허가 있는 숲",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Forest of Grave.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -480,7 +490,7 @@ const zoneGroups = {
       kr:"해지는 노을숲",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Forest with Ruins.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -491,7 +501,7 @@ const zoneGroups = {
       kr:"카타르 산맥",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Kataru Mountains.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -504,24 +514,26 @@ const zoneGroups = {
       kr:"오염된 숲",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Polluted Forest.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
     }
   ]},
-  "天空城": { en: "sky castle", kr: "하늘성채", zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"],maps:[
+  "古代阁楼": { en: "Ancient Palace", kr: "고대의누각", zones: ["Ancient Palace"],maps:[
     {
       cn:"古代阁楼",
       en:"Ancient Palace",
       kr:"고대의누각",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Ancient Palace.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "天空西部": { en: "Western Sky Castle", kr: "하늘성채-서부", zones: ["Western Sky Castle"],maps:[
     {
       cn:"天空西部",
       en:"Western Sky Castle",
@@ -532,7 +544,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "天空东部": { en: "Eastern Sky Castle", kr: "하늘성채-동부", zones: ["Eastern Sky Castle"],maps:[
     {
       cn:"天空东部",
       en:"Eastern Sky Castle",
@@ -543,7 +557,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "石塔要塞": { en: "Stone Fortress", kr: "돌무더기 요새", zones: ["Stone Fortress"],maps:[
     {
       cn:"石塔要塞",
       en:"Stone Fortress",
@@ -554,7 +570,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "未知迷宫": { en: "Unknown Maze", kr: "알수없는 미로", zones: ["Unknown Maze"],maps:[
     {
       cn:"未知迷宫",
       en:"Unknown Maze",
@@ -565,14 +583,17 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "堕落神殿": { en: "Fallen Temple", kr: "타락한 신전", zones: ["Fallen Temple"],maps:
+  [
     {
       cn:"堕落神殿",
       en:"Fallen Temple",
       kr:"타락한 신전",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Fallen Temple.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -598,7 +619,7 @@ const zoneGroups = {
       kr:"건조한 초원",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Arid Grassland.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -609,7 +630,7 @@ const zoneGroups = {
       kr:"모래무덤 골짜기",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Desert Valley.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -622,7 +643,7 @@ const zoneGroups = {
       kr:"뜨거운 모래사막",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Hot Sand Plains.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -635,7 +656,7 @@ const zoneGroups = {
       kr:"죽음의 늪",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Marsh of Death.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -661,7 +682,7 @@ const zoneGroups = {
       kr:"이슬롯의 실험실",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Islot's Lab.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -674,7 +695,7 @@ const zoneGroups = {
       kr:"이슬롯의 신전",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Islot's Temple.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -687,7 +708,7 @@ const zoneGroups = {
       kr:"비탄의제단",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/Anguish Altar.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -706,9 +727,9 @@ const zoneGroups = {
   }
     }
   ]},
-  "莫勒波西兹": { en: "Morphosis", kr: "모르포시즈", zones: ["Morphosis Root","Morphosis Garden"],maps:[
+  "花园": { en: "Root", kr: "뿌리", zones: ["Morphosis Root"],maps:[
     {
-      cn:"花园",
+      cn:"莫勒波西兹 花园",
       en:"Morphosis Root",
       kr:"뿌리",
 
@@ -717,9 +738,11 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+   }
+  ]},
+  "庭院": { en: "Garden", kr: "정원", zones: ["Morphosis Garden"],maps:[
     {
-      cn:"庭院",
+      cn:"莫勒波西兹 庭院",
       en:"Morphosis Garden",
       kr:"정원",
 
@@ -756,7 +779,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "25副本": { en: "Dungeon 25", kr: "인스턴스 던전 25", zones: ["Ghost Ship",],maps:[
+  "25副本": { en: "Dungeon 25", kr: "인스턴스 던전 25", zones: ["Forgotten Cave",],maps:[
     {
       cn:"遗忘洞穴",
       en:"Forgotten Cave",
@@ -769,7 +792,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "30副本": { en: "Dungeon 30", kr: "인스턴스 던전 30", zones: ["Ghost Ship",],maps:[
+  "30副本": { en: "Dungeon 30", kr: "인스턴스 던전 30", zones: ["Silent Altar",],maps:[
     {
       cn:"沉默祭坛",
       en:"Silent Altar",
@@ -782,7 +805,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "35副本": { en: "Dungeon 35", kr: "인스턴스 던전 35", zones: ["Ghost Ship",],maps:[
+  "35副本": { en: "Dungeon 35", kr: "인스턴스 던전 35", zones: ["Impassable Cave",],maps:[
     {
       cn:"废弃洞穴",
       en:"Impassable Cave",
@@ -795,7 +818,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "40副本": { en: "Dungeon 40", kr: "인스턴스 던전 40", zones: ["Ghost Ship",],maps:[
+  "40副本": { en: "Dungeon 40", kr: "인스턴스 던전 40", zones: ["Desert Dungeon",],maps:[
     {
       cn:"沙漠地底洞穴",
       en:"Desert Dungeon",
@@ -967,10 +990,10 @@ if(mapExpanded){
         </div>
 
         <img
-          src="${m.imgs[currentLang]}"
-          loading="lazy"
-          onclick="openMap(this.src)"
-      >
+      src="${m.imgs?.[currentLang]}"
+      loading="lazy"
+      onclick="openMap(this.src)"
+   >
 
       </div>
 
