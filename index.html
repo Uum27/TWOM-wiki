@@ -62,6 +62,75 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   }
 }
 
+.map-card{
+  grid-column:1/-1;
+
+  width:100%;
+  max-width:800px;
+
+  margin:0 auto;
+
+  background:#fff;
+  border:2px solid #6aa7e8;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 0 8px rgba(0,0,0,0.15);
+}
+
+.map-card img{
+  width:100%;
+  max-width:800px;
+  display:block;
+  margin:auto;
+  cursor:pointer;
+}
+
+.map-card img{
+  cursor:pointer;
+}
+
+.map-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:99999;
+}
+
+.map-modal img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:12px;
+  box-shadow:0 0 20px rgba(255,255,255,0.3);
+}
+
+.map-title{
+  padding:10px;
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  background:#eef6ff;
+}
+
+.single-map + .single-map{
+  border-top:2px solid #6aa7e8;
+  padding-top:0px;
+  margin-top:0px;
+}
+
+.map-subtitle{
+  padding:8px;
+  text-align:center;
+  font-weight:bold;
+  background:#f4f8ff;
+  font-size:15px;
+}
+
 .card {
   background:#f5f3f3;
   border:1px solid #ddd;
@@ -220,7 +289,11 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 </div>
 
 <div class="grid" id="cardBox"></div>
+<div class="map-modal" id="mapModal">
 
+  <img id="mapModalImg">
+
+</div>
 <div class="pagination" id="bottomPagination">
   <button class="page-btn" id="prevBot">上一页</button>
   <span id="pageInfoBot">第 1 页</span>
@@ -241,29 +314,500 @@ function getPerPage(){
 }
 let currentGroup = "all"
 let currentLang = "cn";
+let mapExpanded = false;
 
 const zoneGroups = {
-  "木木森/木林森": { en: "Woody-Wordy Forest", kr: "우디워디마을/우디위디마을", zones: ["Woody-Weedy Forest,Woody-Wordy Forest"] },
-  "蘑菇林": { en: "Mushroom Marshland", kr: "버섯늪지", zones: ["Mushroom Marshland","Mushroom Spore"] },
-  "沙滩/灯塔岛": { en: "Beach", kr: "윙프릴 섬해변/등대 섬", zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"] },
-  "灯塔": { en: "LHD", kr: "등대", zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"] },
-  "海盗船": { en: "Pirate Ship", kr: "해적선", zones: ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"] },
-  "兰诺斯平原/晚霞森林": { en: "777", kr: "라노스 평원/폐허가 있는 숲", zones: ["Lanos Plains","Forest of Grave"] },
-  "废墟森林/卡塔勒山脉": { en: "Forest/Kataru", kr: "해지는 노을숲/카타르 산맥", zones: ["Forest with Ruins","Kataru Mountains"] },
-  "污染森林": { en: "Polluted Forest", kr: "오염된 숲", zones: ["Polluted Forest"] },
-  "天空城": { en: "sky castle", kr: "하늘성채", zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"] },
-  "光绝神殿": { en: "Temple of Wingfril", kr: "빛이 들지않는 신전", zones: ["Temple of Wingfril"] },
-  "枯原/沙墓峡谷": { en: "Arid/Des", kr: "건조한 초원/모래무덤 골짜기", zones: ["Arid Grassland","Desert Valley"] },
-  "热沙平原": { en: "HSP", kr: "뜨거운 모래사막", zones: ["Hot Sand Plains"] },
-  "死亡沼泽": { en: "Marsh of Death", kr: "죽음의 늪", zones: ["Marsh of Death"] },
-  "森林迷宫": { en: "Maze Forest", kr: "숲의 미궁", zones: ["Maze Forest"] },
-  "伊斯洛实验室": { en: "Islot's Lab", kr: "이슬롯의 실험실", zones: ["Islot's Lab","Syphnel Road"] },
-  "伊斯洛神殿": { en: "Islot's Temple", kr: "이슬롯의 신전", zones: ["Islot's Temple"] },
-  "悲叹祭坛": { en: "AA", kr: "비탄의제단", zones: ["Anguish Altar"] },
-  "鲁纳夫": { en: "Lunarf", kr: "루나프", zones: ["Lunarf"] },
-  "莫勒波西兹": { en: "Morphosis", kr: "모르포시즈", zones: ["Morphosis Root","Morphosis Garden"] },
-  "图书库": { en: "Forbidden Library", kr: "금서고", zones: ["Morphosis Forbidden Library"] },
-  "副本": { en: "Dungeon", kr: "인스턴스 던전", zones: ["Ghost Ship","Forgotten Cave","Silent Altar","Impassable Cave","Desert Dungeon","Endless Darkness"] }
+  "木木森/木林森": { en: "Woody-Wordy Forest", kr: "우디워디마을/우디위디마을", zones: ["Woody-Weedy Forest","Woody-Wordy Forest"],maps:[
+    {
+      cn:"木木森",
+      en:"Woody-Weedy Forest",
+      kr:"우디위디숲",
+      img:"maps/woody-weedy-forest.png"
+    },
+    {
+      cn:"木林森",
+      en:"Woody-Wordy Forest",
+      kr:"우디워디숲",
+      img:"maps/woody-wordy-forest.png"
+    }
+  ]},
+  "蘑菇林": { en: "Mushroom Marshland", kr: "버섯늪지", zones: ["Mushroom Marshland","Mushroom Spore"] ,maps:[
+    {
+      cn:"蘑菇湿地",
+      en:"Mushroom Marshland",
+      kr:"버섯늪지",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"蘑菇洞",
+      en:"Mushroom Spore",
+      kr:"머쉬룸스포어",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "沙滩/灯塔岛": { en: "Beach", kr: "윙프릴 섬해변/등대 섬", zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],maps:[
+    {
+      cn:"沙滩",
+      en:"Wingfril Island Beach",
+      kr:"윙프릴 섬해변",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"灯塔岛",
+      en:"Island with the Lighthouse",
+      kr:"등대 섬",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "灯塔": { en: "LHD", kr: "등대", zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],maps:[
+    {
+      cn:"灯塔1层",
+      en:"Lighthouse 1F",
+      kr:"등대던전 1F",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"灯塔2层",
+      en:"Lighthouse 2F",
+      kr:"등대던전 2F",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"灯塔3层",
+      en:"Lighthouse 3F",
+      kr:"등대던전 3F",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"灯塔4层",
+      en:"Lighthouse 4F",
+      kr:"등대던전 4F",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"灯塔5层",
+      en:"Lighthouse 5F",
+      kr:"등대던전 5F",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "海盗船": { en: "Pirate Ship", kr: "해적선", zones: ["Pirate Ship 1F","Pirate Ship 2F","Storage Room"],maps:[
+    {
+      cn:"海盗船",
+      en:"Pirate Ship",
+      kr:"해적선",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "兰诺斯平原/晚霞森林": { en: "777", kr: "라노스 평원/폐허가 있는 숲", zones: ["Lanos Plains","Forest of Grave"],maps:[
+    {
+      cn:"兰诺斯平原",
+      en:"Lanos Plains",
+      kr:"라노스 평원",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"晚霞森林",
+      en:"Forest of Grave",
+      kr:"폐허가 있는 숲",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "废墟森林/卡塔勒山脉": { en: "Forest/Kataru", kr: "해지는 노을숲/카타르 산맥", zones: ["Forest with Ruins","Kataru Mountains"],maps:[
+    {
+      cn:"废墟森林",
+      en:"Forest with Ruins",
+      kr:"해지는 노을숲",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"卡塔勒山脉",
+      en:"Kataru Mountains",
+      kr:"카타르 산맥",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "污染森林": { en: "Polluted Forest", kr: "오염된 숲", zones: ["Polluted Forest"],maps:[
+    {
+      cn:"污染森林",
+      en:"Polluted Forest",
+      kr:"오염된 숲",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "天空城": { en: "sky castle", kr: "하늘성채", zones: ["Ancient Palace","Western Sky Castle","Eastern Sky Castle","Stone Fortress","Unknown Maze","Fallen Temple"],maps:[
+    {
+      cn:"古代阁楼",
+      en:"Ancient Palace",
+      kr:"고대의누각",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"天空西部",
+      en:"Western Sky Castle",
+      kr:"하늘성채-서부",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"天空东部",
+      en:"Eastern Sky Castle",
+      kr:"하늘성채-동부",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"石塔要塞",
+      en:"Stone Fortress",
+      kr:"돌무더기 요새",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"未知迷宫",
+      en:"Unknown Maze",
+      kr:"알수없는 미로",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"堕落神殿",
+      en:"Fallen Temple",
+      kr:"타락한 신전",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "光绝神殿": { en: "Temple of Wingfril", kr: "빛이 들지않는 신전", zones: ["Temple of Wingfril"],maps:[
+    {
+      cn:"光绝神殿",
+      en:"Temple of Wingfril",
+      kr:"빛이 들지않는 신전",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "枯原/沙墓峡谷": { en: "Arid/Des", kr: "건조한 초원/모래무덤 골짜기", zones: ["Arid Grassland","Desert Valley"],maps:[
+    {
+      cn:"枯原",
+      en:"Arid Grassland",
+      kr:"건조한 초원",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"沙墓峡谷",
+      en:"Desert Valley",
+      kr:"모래무덤 골짜기",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "热沙平原": { en: "HSP", kr: "뜨거운 모래사막", zones: ["Hot Sand Plains"],maps:[
+    {
+      cn:"热沙平原",
+      en:"Hot Sand Plains",
+      kr:"뜨거운 모래사막",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "死亡沼泽": { en: "Marsh of Death", kr: "죽음의 늪", zones: ["Marsh of Death"],maps:[
+    {
+      cn:"死亡沼泽",
+      en:"Marsh of Death",
+      kr:"죽음의 늪",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "森林迷宫": { en: "Maze Forest", kr: "숲의 미궁", zones: ["Maze Forest"],maps:[
+    {
+      cn:"森林迷宫",
+      en:"Maze Forest",
+      kr:"숲의 미궁",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "伊斯洛实验室": { en: "Islot's Lab", kr: "이슬롯의 실험실", zones: ["Islot's Lab","Syphnel Road"],maps:[
+    {
+      cn:"实验室",
+      en:"Islot's Lab",
+      kr:"이슬롯의 실험실",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "伊斯洛神殿": { en: "Islot's Temple", kr: "이슬롯의 신전", zones: ["Islot's Temple"],maps:[
+    {
+      cn:"实验室2楼",
+      en:"Islot's Temple",
+      kr:"이슬롯의 신전",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "悲叹祭坛": { en: "AA", kr: "비탄의제단", zones: ["Anguish Altar"],maps:[
+    {
+      cn:"悲叹祭坛",
+      en:"Anguish Altar/AA",
+      kr:"비탄의제단",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "鲁纳夫": { en: "Lunarf", kr: "루나프", zones: ["Lunarf"],maps:[
+    {
+      cn:"鲁纳夫",
+      en:"Lunarf",
+      kr:"루나프",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "莫勒波西兹": { en: "Morphosis", kr: "모르포시즈", zones: ["Morphosis Root","Morphosis Garden"],maps:[
+    {
+      cn:"花园",
+      en:"Morphosis Root",
+      kr:"뿌리",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    },
+    {
+      cn:"庭院",
+      en:"Morphosis Garden",
+      kr:"정원",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "图书库": { en: "Forbidden Library", kr: "금서고", zones: ["Morphosis Forbidden Library"],maps:[
+    {
+      cn:"图书库",
+      en:"Morphosis Forbidden Library",
+      kr:"금서고",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "20副本": { en: "Dungeon 20", kr: "인스턴스 던전 20", zones: ["Ghost Ship",],maps:[
+    {
+      cn:"废弃幽灵船",
+      en:"Ghost Ship",
+      kr:"버려진 유령선",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "25副本": { en: "Dungeon 25", kr: "인스턴스 던전 25", zones: ["Ghost Ship",],maps:[
+    {
+      cn:"遗忘洞穴",
+      en:"Forgotten Cave",
+      kr:"잊혀진 동굴",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "30副本": { en: "Dungeon 30", kr: "인스턴스 던전 30", zones: ["Ghost Ship",],maps:[
+    {
+      cn:"沉默祭坛",
+      en:"Silent Altar",
+      kr:"인스턴스 던전",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "35副本": { en: "Dungeon 35", kr: "인스턴스 던전 35", zones: ["Ghost Ship",],maps:[
+    {
+      cn:"废弃洞穴",
+      en:"Impassable Cave",
+      kr:"폐쇄된동굴",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]},
+  "40副本": { en: "Dungeon 40", kr: "인스턴스 던전 40", zones: ["Ghost Ship",],maps:[
+    {
+      cn:"沙漠地底洞穴",
+      en:"Desert Dungeon",
+      kr:"사막지하 동굴",
+
+   imgs:{
+     cn:"maps/cn/",
+     en:"maps/en/",
+     kr:"maps/kr/"
+  }
+    }
+  ]}
 };
 
 // 翻译函数
@@ -396,6 +940,66 @@ function render(){
   const box = document.getElementById('cardBox')
   let html = ''
 
+  // 当前地区地图
+if(page === 1 && currentGroup !== "all" && zoneGroups[currentGroup]){
+
+  const mapData = zoneGroups[currentGroup];
+
+const mapName =
+  currentLang === "en"
+    ? mapData.en
+    : currentLang === "kr"
+    ? mapData.kr
+    : currentGroup;
+
+let mapsHtml = "";
+
+if(mapExpanded){
+
+  (mapData.maps || []).forEach(m => {
+
+    mapsHtml += `
+
+      <div class="single-map">
+
+        <div class="map-subtitle">
+          ${m[currentLang] || m.en}
+        </div>
+
+        <img
+          src="${m.imgs[currentLang]}"
+          loading="lazy"
+          onclick="openMap(this.src)"
+      >
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+html += `
+
+<div class="map-card" id="topMapCard">
+
+  <div
+  class="map-title"
+  onclick="toggleMap()"
+  style="cursor:pointer"
+>
+  ${mapName}
+  ${mapExpanded ? "▲" : "▼"}
+</div>
+
+  ${mapsHtml}
+
+</div>
+
+`;
+}
+
   updatePageInfo()
   const perPage = getPerPage();
     const list = filtered.slice((page-1)*perPage, page*perPage)
@@ -467,7 +1071,13 @@ function render(){
       <div class="info">
         <div class="name">${name}</div>
         <div class="level">Lv.${m.level||'?'}</div>
-        <div class="zone">${zone}</div>
+        <div
+  class="zone"
+  onclick="openMonsterMap('${m.zone.replace(/'/g,"\\'")}')"
+  style="cursor:pointer"
+>
+  ${zone}
+</div>
       </div>
       <div class="revive">
         <div class="exp">EXP: ${m.exp||'?'}</div>
@@ -491,6 +1101,104 @@ function colorizeDrops() {
       if (txt === name) { el.style.color = dropColorMap[name]; el.style.fontWeight = 'bold'; break; }
     }
   });
+}
+
+function scrollToMap(){
+
+  const map = document.getElementById("topMapCard");
+
+  if(map){
+
+    map.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+    
+    map.style.boxShadow = "0 0 20px gold";
+
+    setTimeout(()=>{
+      map.style.boxShadow = "";
+    },2000);
+
+  }
+
+}
+
+function openMonsterMap(zone){
+
+  // 找到属于哪个地图组
+  for(const key in zoneGroups){
+
+    const group = zoneGroups[key];
+
+    if(group.zones.some(z =>
+      z === zone ||
+      z.includes(zone) ||
+      zone.includes(z)
+    )){
+
+      currentGroup = key;
+
+      page = 1;
+
+      mapExpanded = true;
+
+      setActiveBtn(key);
+
+      doSearch();
+
+      setTimeout(()=>{
+
+        const map = document.getElementById("topMapCard");
+
+        if(map){
+
+          map.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+          });
+
+          map.style.boxShadow = "0 0 20px gold";
+
+          setTimeout(()=>{
+            map.style.boxShadow = "";
+          },2000);
+
+        }
+
+      },100);
+
+      return;
+
+    }
+
+  }
+
+}
+
+function toggleMap(){
+
+  mapExpanded = !mapExpanded;
+
+  render();
+
+}
+
+function openMap(src){
+
+  const modal = document.getElementById("mapModal");
+  const img = document.getElementById("mapModalImg");
+
+  img.src = src;
+
+  modal.style.display = "flex";
+
+}
+
+document.getElementById("mapModal").onclick = function(){
+
+  this.style.display = "none";
+
 }
 
 // 跳转装备页：传递装备中文名
