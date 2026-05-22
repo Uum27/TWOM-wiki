@@ -2685,7 +2685,8 @@
       "Gemstone",
       "Pet Crystal",
       "Broken Magic Stone",
-      "Shinning Metal"
+      "Shinning Metal",
+      "Void Sphere"
     ]
   },
   "Gnome": {
@@ -2716,7 +2717,8 @@
       "Broken Magic Stone",
       "Shinning Metal",
       "Gunpowder",
-      "Fatal Attack 2"
+      "Fatal Attack 2",
+      "Void Sphere"
     ]
   },
   "Orb": {
@@ -3305,6 +3307,8 @@
       "Gold",
       "Armor Enchant Scroll (S Class)",
       "Weapon Enchant Scroll (S Class)",
+      "Enchanted Bone",
+      "Enchanted Leather",
       "Execution Rune",
       "Torture Rune",
       "Bio Magic Power Rune",
