@@ -911,6 +911,17 @@ function tr(map, key){
   if (!map[key]) return key;
   return map[key][currentLang] || map[key]["en"] || key;
 }
+function translateReviveTime(text){
+
+  if(!text) return "";
+
+  return text
+    .replace(/小时/g, lang.revive.h[currentLang] || "h")
+    .replace(/时/g, lang.revive.h[currentLang] || "h")
+    .replace(/分/g, lang.revive.min[currentLang] || "min")
+    .replace(/秒/g, lang.revive.sec[currentLang] || "sec");
+
+}
 
 const searchPlaceholderMap = {
   cn: "搜索名称/等级/掉落物/地区...",
@@ -1127,7 +1138,9 @@ html += `
 }).join('')
 
     let reviveText = ""
-    if(m.revive?.trim()) reviveText = m.revive
+if(m.revive?.trim()){
+  reviveText = translateReviveTime(m.revive);
+}
     const img = `monsters_images/${m.name}.png`
     let badge = ""
     let isBossType = false
