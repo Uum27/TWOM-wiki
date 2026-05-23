@@ -308,6 +308,57 @@ let drops = {}
 let dropColorMap = {}
 let equipNames = new Set()
 let page = 1
+let aliasMap = {
+
+  "Illust":[
+    "棺材",
+    "NTR",
+    "牛头人"
+  ],
+  "Darlene the Witch":[
+    "女巫"
+  ],
+  "Barslaf":[
+    "雪人"
+  ],
+  "BIGMAMA":[
+    "BMM",
+    "大妈妈"
+  ],
+  "CALIGO":[
+    "龙"
+  ],
+  "Ukpana":[
+    "UK"
+  ],
+  "Sephia":[
+    "狐狸"
+  ],
+  "Aiyo's Protector":[
+    "熊"
+  ],
+  "Platanista":[
+    "鲸鱼",
+    "Whale"
+  ],
+  "Actaemon":[
+    "Deer",
+    "鹿"
+  ],
+  "Crown Duck":[
+    "鸭子"
+  ],
+  "Leafrog":[
+    "青蛙"
+  ],
+  "Leafsoul":[
+    "水滴"
+  ],
+  "Abyss Eater":[
+    "兔子"
+  ],
+}
+
 
 function getPerPage(){
   return window.innerWidth >= 1024 ? 21 : 10;
@@ -535,12 +586,12 @@ const zoneGroups = {
   ]},
   "天空西部": { en: "Western Sky Castle", kr: "하늘성채-서부", zones: ["Western Sky Castle"],maps:[
     {
-      cn:"天空西部",
+      cn:"天空西部【王国双数/帝国单数】",
       en:"Western Sky Castle",
       kr:"하늘성채-서부",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/天空西部.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -548,12 +599,12 @@ const zoneGroups = {
   ]},
   "天空东部": { en: "Eastern Sky Castle", kr: "하늘성채-동부", zones: ["Eastern Sky Castle"],maps:[
     {
-      cn:"天空东部",
+      cn:"天空东部【王国单数/帝国双数】",
       en:"Eastern Sky Castle",
       kr:"하늘성채-동부",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/天空东部.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -561,12 +612,12 @@ const zoneGroups = {
   ]},
   "石塔要塞": { en: "Stone Fortress", kr: "돌무더기 요새", zones: ["Stone Fortress"],maps:[
     {
-      cn:"石塔要塞",
+      cn:"石塔要塞【王国双数/帝国单数】",
       en:"Stone Fortress",
       kr:"돌무더기 요새",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/石塔要塞.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -574,12 +625,12 @@ const zoneGroups = {
   ]},
   "未知迷宫": { en: "Unknown Maze", kr: "알수없는 미로", zones: ["Unknown Maze"],maps:[
     {
-      cn:"未知迷宫",
+      cn:"未知迷宫【王国单数/帝国双数】",
       en:"Unknown Maze",
       kr:"알수없는 미로",
 
    imgs:{
-     cn:"maps/cn/",
+     cn:"maps/cn/未知迷宫.webp",
      en:"maps/en/",
      kr:"maps/kr/"
   }
@@ -941,7 +992,8 @@ function doSearch(){
     const dropEN = dropList.join(' ');
     const dropKR = dropList.map(i => lang.dropMap[i]?.kr || '').join(' ');
     const notes = m.notes || '';
-    const allText = [ nameCN, nameEN, nameKR, zoneCN, zoneEN, zoneKR, level, dropCN, dropEN, dropKR, notes ].join(' ').toLowerCase().trim()
+    const aliases = (aliasMap[m.name] || []).join(' ');
+    const allText = [ nameCN, nameEN, nameKR, zoneCN, zoneEN, zoneKR, level, dropCN, dropEN, dropKR, notes, aliases ].join(' ').toLowerCase().trim()
     let ok = true;
     if (currentGroup !== "all") {
       const zs = zoneGroups[currentGroup]?.zones || [];
