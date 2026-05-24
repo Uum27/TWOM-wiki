@@ -5341,6 +5341,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Eyes of Mind.png",
+    "rarity": "英雄",
     "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【禁止阅览的实验日志】X2,【五色皮革】X20"
   },
   {
@@ -8825,7 +8826,7 @@
   {
     "type": "rings",
     "job": "warrior,ranger",
-    "name": "Paradox of Omnipotence",
+    "name": "Paradox of Omnipotence(SB)",
     "name_cn": "全能悖论(无法交易)",
     "name_kr": "",
     "level": "44",
@@ -8845,8 +8846,8 @@
   },
   {
     "type": "rings",
-    "job": "warrior,ranger,magician,breaker",
-    "name": "Arrogance of Omniscience",
+    "job": "magician",
+    "name": "Arrogance of Omniscience(SB)",
     "name_cn": "万能傲慢(无法交易)",
     "name_kr": "",
     "level": "44",
@@ -8866,8 +8867,8 @@
   },
   {
     "type": "rings",
-    "job": "warrior,ranger,magician,breaker",
-    "name": "Paradox of Immortality",
+    "job": "breaker",
+    "name": "Paradox of Immortality(SB)",
     "name_cn": "不死矛盾(无法交易)",
     "name_kr": "",
     "level": "44",
@@ -9067,10 +9068,10 @@
     "hp": "",
     "mana": "",
     "mana_regen": "",
-    "cri": "3",
+    "cri": "3 or ?",
     "magic_resist": "",
-    "move": "4~6%",
-    "int": "5~6",
+    "move": "4~6% or ?%",
+    "int": "5~6 or ?",
     "icon": "Relic of Infinity.png",
     "rarity": "稀有",
     "desc": "怪物掉落↓可点击↓:,@阿克泰萌"
