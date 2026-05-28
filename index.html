@@ -289,11 +289,6 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 </div>
 
 <div class="grid" id="cardBox"></div>
-<div class="map-modal" id="mapModal">
-
-  <img id="mapModalImg">
-
-</div>
 <div class="pagination" id="bottomPagination">
   <button class="page-btn" id="prevBot">上一页</button>
   <span id="pageInfoBot">第 1 页</span>
@@ -1073,7 +1068,6 @@ if(mapExpanded){
         <img
       src="${m.imgs?.[currentLang]}"
       loading="lazy"
-      onclick="openMap(this.src)"
    >
 
       </div>
@@ -1287,23 +1281,6 @@ function toggleMap(){
   mapExpanded = !mapExpanded;
 
   render();
-
-}
-
-function openMap(src){
-
-  const modal = document.getElementById("mapModal");
-  const img = document.getElementById("mapModalImg");
-
-  img.src = src;
-
-  modal.style.display = "flex";
-
-}
-
-document.getElementById("mapModal").onclick = function(){
-
-  this.style.display = "none";
 
 }
 

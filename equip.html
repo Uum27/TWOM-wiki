@@ -37,15 +37,26 @@ body{background:#f0f2f5;padding:12px}
   flex-shrink:0;
 }
 
-/* 分类栏 */
+/* 部位分类栏 */
 #typeBar.top-bar{
   position:static;
   background:transparent;
-  margin-bottom:0;
+  margin-bottom:1px;
 
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
+  gap:4px;
+}
+
+/* 职业分类栏 */
+#jobBar.top-bar{
+  position:static;
+  background:transparent;
+  margin-bottom:1px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
 }
 
 .search-box{
@@ -142,6 +153,13 @@ body{background:#f0f2f5;padding:12px}
   <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
 </div>
 <button class="type-btn" onclick="location.href='index.html'">怪物图鉴</button>
+<div class="top-bar" id="jobBar">
+  <button class="type-btn active" data-job="all">全部职业</button>
+  <button class="type-btn" data-job="warrior">战士</button>
+  <button class="type-btn" data-job="ranger">弓手</button>
+  <button class="type-btn" data-job="magician">法师</button>
+  <button class="type-btn" data-job="breaker">武术家</button>
+</div>
 <div class="top-bar" id="typeBar">
   <button class="type-btn active" data-type="all">全部</button>
   <button class="type-btn" data-type="weapon">武器</button>
@@ -239,7 +257,52 @@ const typeLangMap = {
     kr: "부적"
   }
 };
+const jobLangMap = {
 
+  all:{
+    cn:"全部职业",
+    en:"All Jobs",
+    kr:"전체 직업"
+  },
+
+  warrior:{
+    cn:"战士",
+    en:"Warrior",
+    kr:"전사"
+  },
+
+  ranger:{
+    cn:"弓手",
+    en:"Ranger",
+    kr:"궁수"
+  },
+
+  magician:{
+    cn:"法师",
+    en:"Magician",
+    kr:"마법사"
+  },
+
+  breaker:{
+    cn:"武术家",
+    en:"Breaker",
+    kr:"무도가"
+  }
+
+};
+function updateJobButtonsLang() {
+
+  document.querySelectorAll('#jobBar .type-btn').forEach(btn => {
+
+    const job = btn.dataset.job;
+
+    if(jobLangMap[job]) {
+      btn.innerText = jobLangMap[job][currentLang];
+    }
+
+  });
+
+}
 function updateTypeButtonsLang() {
 
   document.querySelectorAll('#typeBar .type-btn').forEach(btn => {
@@ -282,6 +345,7 @@ let page = 1;
 let allItems = [];
 let filteredItems = [];
 let currentType = "all";
+let currentJob = "all";
 function getPerPage(){
 
   // PC
@@ -353,6 +417,7 @@ function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
   updateLangText();
   updateTypeButtonsLang();
+  updateJobButtonsLang();
   renderCards();
 }
 
@@ -361,6 +426,26 @@ function doSearch(){ filterAndRender(document.getElementById('searchBox').value.
 function filterAndRender(keyword=""){
   let list = allItems;
   if(currentType !== "all") list = list.filter(x=>x.type === currentType);
+
+  if(currentJob !== "all"){
+
+  list = list.filter(item => {
+
+    let jobs = [];
+
+    if(Array.isArray(item.job)){
+      jobs = item.job;
+    }
+    else if(typeof item.job === "string"){
+      jobs = item.job.split(",").map(x=>x.trim().toLowerCase());
+    }
+
+    return jobs.includes(currentJob);
+
+  });
+
+}
+
   if(keyword){
     list = list.filter(item=>{
       const name = (item.name_cn||item.name||"").toLowerCase();
@@ -427,6 +512,24 @@ function setType(t){
   doSearch();
 }
 
+function setJob(job){
+
+  currentJob = job;
+
+  document
+    .querySelectorAll('#jobBar .type-btn')
+    .forEach(btn=>{
+
+      btn.classList.toggle(
+        'active',
+        btn.dataset.job === job
+      );
+
+    });
+
+  doSearch();
+
+}
 function goPrev(){ if(page>1){page--;renderCards();} }
 function goNext(){
   const total = Math.ceil(filteredItems.length/getPerPage());
@@ -457,6 +560,7 @@ async function loadMyJson(){
   // 先更新界面文字（不渲染）
   updateLangText();
   updateTypeButtonsLang();
+  updateJobButtonsLang();
 
   // 根据是否有定位参数决定如何渲染（只渲染一次）
   if(location.search.includes('equip=')){
@@ -667,6 +771,21 @@ document.getElementById('prevTop').onclick = goPrev;
 document.getElementById('nextTop').onclick = goNext;
 document.getElementById('prevBot').onclick = goPrev;
 document.getElementById('nextBot').onclick = goNext;
+
+/* 职业按钮 */
+document
+  .querySelectorAll('#jobBar .type-btn')
+  .forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+      setJob(btn.dataset.job);
+
+    });
+
+  });
+
+/* 部位按钮 */
 document
   .querySelectorAll('#typeBar .type-btn')
   .forEach(btn => {
