@@ -892,7 +892,8 @@
     "type": "weapon",
     "job": "ranger",
     "name": "Worn Shortbow",
-    "name_cn": "复合弓",
+    "hide": true,
+    "name_cn": "",
     "name_kr": "",
     "level": "14",
     "attack": "2~8",
@@ -902,14 +903,13 @@
     "int": "",
     "hit": "0",
     "icon": "Worn Shortbow.png",
-    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长"
+    "desc": ""
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Composite Bow",
-    "hide": true,
-    "name_cn": " ",
+    "name_cn": "复合弓",
     "name_kr": "",
     "level": "14",
     "attack": "3~12",
@@ -920,7 +920,7 @@
     "hit": "0~12",
     "dex": "0~5",
     "icon": "Composite Bow.png",
-    "desc": ""
+    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长"
   },
   {
     "type": "weapon",
@@ -3557,8 +3557,8 @@
     "type": "armor",
     "job": "magician",
     "name": "Charmed Robe",
-    "name_cn": " ",
-    "name_kr": "咒术袍",
+    "name_cn": "咒术袍",
+    "name_kr": "",
     "level": "22",
     "armor": "5",
     "hp": "0 or 5~29",
@@ -7659,7 +7659,7 @@
     "int": "",
     "dex": "",
     "block": "",
-    "icon": "Belt of Mana Regeneration.png",
+    "icon": "Belt of Regeneration.png",
     "rarity": "英雄",
     "desc": "怪物掉落↓可点击↓:,@哈哈"
   },

@@ -4506,6 +4506,26 @@
         "cn": "虚空之球",
         "en": "Void Sphere",
         "kr": ""
+    },
+    "Observation Record D": {
+        "cn": "观测记录D",
+        "en": "Observation Record D",
+        "kr": ""
+    },
+    "Observation Record C": {
+        "cn": "观测记录C",
+        "en": "Observation Record C",
+        "kr": ""
+    },
+    "Observation Record B": {
+        "cn": "观测记录B",
+        "en": "Observation Record B",
+        "kr": ""
+    },
+    "Observation Record A": {
+        "cn": "观测记录A",
+        "en": "Observation Record A",
+        "kr": ""
     }
   },
     "revive":

@@ -671,6 +671,7 @@
       "Ancient Treasure",
       "Skull Shield",
       "Design Blackskull Armor",
+      "Swirling Bow",
       "Bone Armor",
       "Piece of Bone",
       "Ice Lance 1",
@@ -2630,7 +2631,8 @@
       "Dongryu Juice",
       "Broken Magic Stone",
       "Belt of Belief",
-      "Gunpowder"
+      "Gunpowder",
+      "Observation Record B"
     ]
   },
   "Couatl": {
@@ -2643,7 +2645,8 @@
       "Dongryu Juice",
       "Healing Potion",
       "Broken Magic Stone",
-      "Pocket of Poison"
+      "Pocket of Poison",
+      "Observation Record A"
     ]
   },
   "Kobold": {
@@ -2746,7 +2749,8 @@
       "Well Being Herb Bread",
       "Broken Magic Stone",
       "Magic Marble",
-      "Monk's Boots"
+      "Monk's Boots",
+      "Observation Record C"
     ]
   },
   "Bulette": {
@@ -2759,7 +2763,8 @@
       "Well Being Herb Bread",
       "Dongryu Juice",
       "Broken Magic Stone",
-      "Stone Powder"
+      "Stone Powder",
+      "Observation Record D"
     ]
   },
   "Tank": {

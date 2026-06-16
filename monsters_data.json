@@ -2856,7 +2856,7 @@
   },
   {
     "zone": "Morphosis Root",
-    "desc": "2个魔力球制作一个任意手套",
+    "desc": "123命中,2个魔力球制作一个任意手套",
     "name": "Aiyo's Protector",
     "level": "52",
     "notes": "Raid Boss",
@@ -2868,7 +2868,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "118命中",
     "name": "Crown Duck",
     "level": "48",
     "notes": "-",
@@ -2880,7 +2880,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "116命中",
     "name": "Leafsoul",
     "level": "48",
     "notes": "-",
@@ -2892,7 +2892,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "116命中",
     "name": "Leafrog",
     "level": "48",
     "notes": "-",
@@ -2904,7 +2904,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "122命中",
     "name": "Circuit Golem",
     "level": "49",
     "notes": "-",
@@ -2916,7 +2916,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "122命中",
     "name": "Sikenel",
     "level": "49",
     "notes": "-",
@@ -2928,7 +2928,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "126命中",
     "name": "Charge Stone",
     "level": "49",
     "notes": "-",
@@ -2940,7 +2940,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "124命中",
     "name": "Glucose",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2952,7 +2952,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "126命中",
     "name": "Overload",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2964,7 +2964,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "",
+    "desc": "130命中",
     "name": "Soul Lich",
     "level": "50",
     "notes": "Mini-Boss",
@@ -2976,7 +2976,7 @@
   },
   {
     "zone": "Morphosis Garden",
-    "desc": "箱子随机开4职业技能符文一个",
+    "desc": "131命中,箱子随机开4职业技能符文一个",
     "name": "Platanista",
     "level": "52",
     "notes": "Raid Boss",
@@ -2988,7 +2988,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "120命中",
     "name": "Justified Knowledge",
     "level": "49",
     "notes": "",
@@ -3000,7 +3000,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "122命中",
     "name": "Parchment of Oblivion",
     "level": "49",
     "notes": "",
@@ -3012,7 +3012,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "126命中",
     "name": "Corrupted Pledger",
     "level": "50",
     "notes": "",
@@ -3024,7 +3024,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "126命中",
     "name": "Lapis",
     "level": "50",
     "notes": "",
@@ -3036,7 +3036,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "126命中",
     "name": "Justified Principle",
     "level": "50",
     "notes": "Mini Boss",
@@ -3048,7 +3048,7 @@
   },
   {
     "zone": "Morphosis Forbidden Library",
-    "desc": "",
+    "desc": "126命中",
     "name": "Lazuli",
     "level": "50",
     "notes": "Mini Boss",
