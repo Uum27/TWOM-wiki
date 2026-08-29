@@ -5940,7 +5940,7 @@
   },
   {
     "type": "gloves",
-    "job": "warrior,ranger",
+    "job": "breaker",
     "name": "Cloud Gloves",
     "name_cn": "云之手套",
     "name_kr": "",
@@ -6008,7 +6008,7 @@
   },
   {
     "type": "gloves",
-    "job": "warrior,ranger",
+    "job": "breaker",
     "name": "Lightning Gloves",
     "name_cn": "雷电手套",
     "name_kr": "",
@@ -6467,7 +6467,7 @@
     "name_kr": "",
     "level": "1",
     "armor": "4",
-    "hp": "45~55",
+    "hp": "42~58",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -6478,7 +6478,7 @@
     "fire_resist": "",
     "int": "",
     "dex": "",
-    "move": "5%~16%",
+    "move": "2%~18%",
     "icon": "Wingwing Boots.png",
     "rarity": "英雄",
     "desc": "怪物掉落↓可点击↓:,@戴弗龙,箱子开启:,地下城宝物25"
