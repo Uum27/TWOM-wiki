@@ -1,7 +1,7 @@
 [
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "desc": "欢迎来到魔法世界,我是可爱库伊",
+    "desc": "欢迎使用魔法世界Wiki,制作人:Uum,如果你有任何问题,请联系QQ:810026494/Kakao:Uum27",
     "name": "Kooii",
     "level": "2",
     "notes": "-",
@@ -2109,7 +2109,7 @@
     "hp": "149,999",
     "exp": "?",
     "中文名": "瓦当卡老人",
-    "revive": "+-2小时30分"
+    "revive": "2小时30分"
   },
   {
     "zone": "Polluted Forest",
@@ -2969,7 +2969,7 @@
     "level": "50",
     "notes": "Mini-Boss",
     "image local": "monsters images/Soul Lich.png",
-    "hp": "?",
+    "hp": "100,000",
     "exp": "?",
     "中文名": "索尔里奇",
     "revive": "24小时15分"
