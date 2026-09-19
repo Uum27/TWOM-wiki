@@ -3396,6 +3396,7 @@
     "int": "",
     "dex": "",
     "icon": "Catcher's Light Armor.png",
+    "rarity": "英雄",
     "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
   {
@@ -4970,6 +4971,7 @@
     "dex": "",
     "hit": "0~7",
     "icon": "Authority Helm.png",
+    "rarity": "英雄",
     "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
   },
   {
