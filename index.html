@@ -31,6 +31,12 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   color:#fff;
   border-color:#007aff}
 
+/* 区域筛选折叠栏 */
+.zone-panel{margin-bottom:8px;text-align:center}
+.zone-panel-title{display:inline-flex;align-items:center;gap:6px;width:fit-content;padding:6px 10px;border:1px solid #ccc;background:#fff;border-radius:8px;font-size:16px;cursor:pointer}
+.zone-panel:not(.open) .zone-bar{display:none}
+.zone-panel.open .zone-bar{display:flex;margin-top:6px;margin-bottom:0}
+
 .pagination{text-align:center;margin:8px 0}
 
 @media (max-width:767px) {
@@ -281,7 +287,13 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   <button class="type-btn" onclick="location.href='items.html'" data-nav="item" style="padding:10px 12px; font-size:15px;">物品图鉴</button>
 </div>
 
-<div class="zone-bar" id="zoneBar"></div>
+<div class="zone-panel" id="zonePanel">
+  <div class="zone-panel-title" onclick="toggleZonePanel()">
+    <span id="zonePanelText">区域筛选：全部</span>
+    <span id="zonePanelArrow">▼</span>
+  </div>
+  <div class="zone-bar" id="zoneBar"></div>
+</div>
 
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="prevTop">上一页</button>
@@ -363,6 +375,7 @@ function getPerPage(){
 let currentGroup = "all"
 let currentLang = "cn";
 let mapExpanded = false;
+let zonePanelOpen = window.innerWidth >= 768;
 
 const zoneGroups = {
   "木木森/木林森": { en: "Woody-Wordy Forest", kr: "우디워디마을/우디위디마을", zones: ["Woody-Weedy Forest","Woody-Wordy Forest"],maps:[
@@ -437,7 +450,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "灯塔": { en: "LHD", kr: "등대", zones: ["Lighthouse 1F","Lighthouse 2F","Lighthouse 3F","Lighthouse 4F","Lighthouse 5F"],maps:[
+  "灯塔1层": { en: "Lighthouse 1F", kr: "등대던전 1F", zones: ["Lighthouse 1F"],maps:[
     {
       cn:"灯塔1层",
       en:"Lighthouse 1F",
@@ -448,7 +461,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "灯塔2层": { en: "Lighthouse 2F", kr: "등대던전 2F", zones: ["Lighthouse 2F"],maps:[
     {
       cn:"灯塔2层",
       en:"Lighthouse 2F",
@@ -459,7 +474,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "灯塔3层": { en: "Lighthouse 3F", kr: "등대던전 3F", zones: ["Lighthouse 3F"],maps:[
     {
       cn:"灯塔3层",
       en:"Lighthouse 3F",
@@ -470,7 +487,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "灯塔4层": { en: "Lighthouse 4F", kr: "등대던전 4F", zones: ["Lighthouse 4F"],maps:[
     {
       cn:"灯塔4层",
       en:"Lighthouse 4F",
@@ -481,7 +500,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "灯塔5层": { en: "Lighthouse 5F", kr: "등대던전 5F", zones: ["Lighthouse 5F"],maps:[
     {
       cn:"灯塔5层",
       en:"Lighthouse 5F",
@@ -982,6 +1003,7 @@ function toggleLang() {
   updateSearchPlaceholder();
   updatePrevNextBtn();
   updateNavLang();
+  updateZonePanel();
   render();
 }
 
@@ -1006,6 +1028,41 @@ function setActiveBtn(key){
   document.querySelectorAll('.zone-btn').forEach(b=>b.classList.remove('active'));
   if(key === "all") document.getElementById('resetAll').classList.add('active');
   else document.querySelectorAll('.zone-btn').forEach(b=>{ if(b.dataset.groupKey === key) b.classList.add('active'); });
+  if(window.innerWidth < 768) zonePanelOpen = false;   // 手机端选完自动收起
+  updateZonePanel();
+}
+
+// 区域筛选折叠栏
+function updateZonePanel(){
+  const panel = document.getElementById('zonePanel');
+  if(!panel) return;
+  panel.classList.toggle('open', zonePanelOpen);
+  const arrow = document.getElementById('zonePanelArrow');
+  if(arrow) arrow.innerText = zonePanelOpen ? "▲" : "▼";
+  const label = {cn:"区域筛选", en:"Zone", kr:"지역"}[currentLang] || "区域筛选";
+  const sep = currentLang === "cn" ? "：" : ": ";
+  const allName = {cn:"全部", en:"All", kr:"전체"}[currentLang] || "全部";
+  const name = currentGroup === "all" ? allName : ((zoneGroups[currentGroup] && zoneGroups[currentGroup][currentLang]) || currentGroup);
+  const txt = document.getElementById('zonePanelText');
+  if(txt) txt.innerText = label + sep + name;
+}
+
+function toggleZonePanel(){
+  zonePanelOpen = !zonePanelOpen;
+  updateZonePanel();
+}
+
+// 展开逗号分隔的区域： "Lighthouse 1F,2F" -> ["Lighthouse 1F","Lighthouse 2F"]
+function expandZone(zone){
+  const parts = String(zone || "").split(",").map(s => s.trim()).filter(Boolean);
+  if(parts.length <= 1) return parts;
+  const out = [parts[0]];
+  const base = parts[0].replace(/\S*$/, "").trim();
+  for(let i=1;i<parts.length;i++){
+    const p = parts[i];
+    out.push((!p.includes(" ") && base) ? (base + " " + p) : p);
+  }
+  return out;
 }
 
 function doSearch(){
@@ -1029,7 +1086,8 @@ function doSearch(){
     let ok = true;
     if (currentGroup !== "all") {
       const zs = zoneGroups[currentGroup]?.zones || [];
-      ok = zs.some(z => m.zone == z || m.zone.includes(z) || z.includes(m.zone));
+      const mz = expandZone(m.zone);
+      ok = zs.some(z => mz.some(part => part === z || part.includes(z) || z.includes(part)));
     }
     if(!kw) return ok;
 
@@ -1409,6 +1467,7 @@ Promise.all([
   updateSearchPlaceholder();
   updatePrevNextBtn();
   updateNavLang();
+  updateZonePanel();
 
   jumpToMonsterFromUrl();
 }).catch(err => console.error("加载失败", err))
