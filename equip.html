@@ -882,14 +882,20 @@ document
 
   });
 let resizeTimer;
+let lastPerPage = getPerPage();
 
 window.addEventListener('resize', () => {
 
   clearTimeout(resizeTimer);
 
   resizeTimer = setTimeout(() => {
+
+    const perPage = getPerPage();
+    if (perPage === lastPerPage) return;
+    lastPerPage = perPage;
     renderCards();
-  }, 120);
+
+  }, 150);
 
 });
 loadMyJson();
