@@ -277,7 +277,8 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 </div>
 
 <div style="margin-bottom:6px;">
-  <button class="type-btn" onclick="location.href='equip.html'" style="padding:10px 12px; font-size:15px;">装备图鉴</button>
+  <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip" style="padding:10px 12px; font-size:15px;">装备图鉴</button>
+  <button class="type-btn" onclick="location.href='items.html'" data-nav="item" style="padding:10px 12px; font-size:15px;">物品图鉴</button>
 </div>
 
 <div class="zone-bar" id="zoneBar"></div>
@@ -302,6 +303,7 @@ let lang = {}
 let drops = {}
 let dropColorMap = {}
 let equipNames = new Set()
+let skillNames = new Set()
 let page = 1
 let aliasMap = {
 
@@ -959,12 +961,27 @@ function updateLangBtnText(){
   btn.innerText = order.map(x=>x.txt).join(" / ");
 }
 
+// 导航按钮三语
+const navLang = {
+  monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
+  equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
+  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"}
+};
+
+function updateNavLang(){
+  document.querySelectorAll('[data-nav]').forEach(btn=>{
+    const k = btn.dataset.nav;
+    if(navLang[k]) btn.innerText = navLang[k][currentLang];
+  });
+}
+
 function toggleLang() {
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
   updateLangBtnText();
   buildGroupButtons();
   updateSearchPlaceholder();
   updatePrevNextBtn();
+  updateNavLang();
   render();
 }
 
@@ -1122,20 +1139,28 @@ html += `
     const dropHtml = (drops[m.name]?.掉落物||[]).map(i => {
     const itemName = tr(lang.dropMap,i);   // 中文名
     const isEquip = equipNames.has(i) || equipNames.has(itemName);
+    const isSkill = skillNames.has(i) || skillNames.has(itemName);
 
   if (isEquip) {
-    // 装备：显示为可点击
+    // 装备：显示为可点击，跳装备图鉴
     return `
     <div>
       <img loading="lazy" src="drop_icons/${i}.png" onerror="this.style.display='none'">
       <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
     </div>`;
-  } else {
-    // 非装备：普通文本
+  } else if (isSkill) {
+    // 技能：暂不可点击（等技能图鉴）
     return `
     <div>
       <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
       <span>${itemName}</span>
+    </div>`;
+  } else {
+    // 其他物品：可点击，跳物品图鉴
+    return `
+    <div>
+      <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
+      <span class="drop-link" onclick="goItem('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
     </div>`;
   }
 }).join('')
@@ -1302,6 +1327,11 @@ function goEquip(itemName){
   location.href = `equip.html?equip=${encodeURIComponent(itemName)}`;
 }
 
+// 跳转物品页：传递物品名（中文/英文均可匹配）
+function goItem(itemName){
+  location.href = `items.html?item=${encodeURIComponent(itemName)}`;
+}
+
 function jumpToMonsterFromUrl(){
   const params = new URLSearchParams(location.search);
   const monsterName = decodeURIComponent(params.get("monster") || "").toLowerCase().trim();
@@ -1359,11 +1389,26 @@ Promise.all([
 
   }
 
+  // 技能：暂不可点击（等技能图鉴上线）
+  if (item.type === "skill") {
+
+    if (item.en) skillNames.add(item.en);
+    if (item.cn) skillNames.add(item.cn);
+
+  }
+
 });
+
+// 补充装备名单（dropColors 未标 equip，但属于装备，跳装备图鉴）
+["Apprentice Magician Robe","Canine Tooth of Madness","Crown","Master Magician Robe",
+ "Mitten","Thundersteel","Woopa Roopa's Staff",
+ "进阶魔法师袍","疯狂獠牙","乌龟王冠","高级魔法师袍","连指手套","雷钢","族长法杖"
+].forEach(n => equipNames.add(n));
   buildGroupButtons();
   updateLangBtnText();
   updateSearchPlaceholder();
   updatePrevNextBtn();
+  updateNavLang();
 
   jumpToMonsterFromUrl();
 }).catch(err => console.error("加载失败", err))

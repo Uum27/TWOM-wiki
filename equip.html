@@ -135,6 +135,7 @@ body{background:#f0f2f5;padding:12px}
 .stat-item{ font-size:15px;font-weight:bold;text-align:left;padding:2px 0 }
 @media(min-width:1024px){.stat-item{font-size:17px}}
 .btn-source{ width:60%;margin:0 auto;padding:8px;margin-top:auto;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block }
+.btn-source.disabled{ background:#9AA7BC;cursor:default }
 @media(min-width:1024px){.btn-source{padding:10px;font-size:16px}}
 
 /* 卡片底部操作行 */
@@ -180,7 +181,8 @@ body{background:#f0f2f5;padding:12px}
   <input class="search-box" placeholder="搜索名称/属性..." id="searchBox">
   <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
 </div>
-<button class="type-btn" onclick="location.href='index.html'">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
 <div class="top-bar" id="jobBar">
   <button class="type-btn active" data-job="all">全部职业</button>
   <button class="type-btn" data-job="warrior">战士</button>
@@ -433,6 +435,20 @@ const rarityConfig = {
   "传说":{color:"#E7696C",bg:"#E60000"}
 };
 
+// 导航按钮三语
+const navLang = {
+  monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
+  equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
+  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"}
+};
+
+function updateNavLang(){
+  document.querySelectorAll('[data-nav]').forEach(btn=>{
+    const k = btn.dataset.nav;
+    if(navLang[k]) btn.innerText = navLang[k][currentLang];
+  });
+}
+
 function tr(key, type){
   const o = langConfig[type]?.[key];
   return o?.[currentLang] || o?.cn || key;
@@ -446,6 +462,7 @@ function updateLangText(){
   document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
   document.querySelector('.modal-close').innerText = tr('close','btnText');
   document.getElementById('resetModalClose').innerText = tr('close','btnText');
+  updateNavLang();
 }
 
 function updatePageInfo(){
@@ -675,6 +692,11 @@ function renderCards(){
   .replace(/'/g,"\\'")
   .replace(/"/g,'\\"');
 
+    const hasSource = String(item.desc || "").trim() !== "";
+    const sourceBtn = hasSource
+      ? `<button class="btn-source" onclick="openModal('${desc}')">${tr('source','btnText')}</button>`
+      : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
+
     const nameCnKey = (item.name_cn || "").trim();
     const resetBtn = resetMap[nameCnKey]
       ? `<button class="btn-reset" onclick="openResetModal('${nameCnKey.replace(/'/g,"\\'")}')">${tr('reset','btnText')}</button>`
@@ -700,7 +722,7 @@ function renderCards(){
       </div>
       <div class="equip-stats">${statsHtml}</div>
       <div class="card-actions">
-        <button class="btn-source" onclick="openModal('${desc}')">${tr('source','btnText')}</button>
+        ${sourceBtn}
         ${resetBtn}
       </div>
     `;

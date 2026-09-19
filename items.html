@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>物品图鉴</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+body{background:#f0f2f5;padding:12px}
+
+.top-bar{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:8px;
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  background:#f0f2f5;
+  padding:6px 0;
+}
+
+.search-box{
+  flex:1;
+  min-width:0;
+  padding:8px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px
+}
+.lang-btn,.page-btn,.type-btn{
+  padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px
+}
+.type-btn.active{ background:#718ACC;color:#fff;border-color:#718ACC }
+.page-btn{margin:0 4px}
+
+/* 分类栏 */
+#catBar.top-bar{
+  position:static;
+  background:transparent;
+  margin-bottom:1px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.pagination{text-align:center;margin:8px 0}
+
+.equip-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+/* 平板 */
+@media(min-width:768px) and (max-width:1023px){
+  .equip-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+}
+
+/* PC */
+@media(min-width:1024px){
+  .equip-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+}
+
+.equip-card{
+  background:#D9E3EC;border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;
+  display:flex;flex-direction:column;padding:4px;gap:4px;border:1px solid #94A6BE;
+}
+.equip-name{
+  text-align:center;font-weight:bold;font-size:18px;
+  padding:4px 4px;
+  border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;
+  background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);
+  border-radius:8px;
+  line-height:1.2;
+}
+@media(min-width:1024px){ .equip-name{ font-size:20px;padding:6px 4px } }
+
+.equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.equip-icon-col{ width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px }
+.equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px}
+
+.hex-icon{ width:56px;height:56px;display:flex;align-items:center;justify-content:center; clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%); background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden; }
+.hex-icon::before{ content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%); }
+.hex-icon::after{ content:"";position:absolute;inset:0;box-shadow:inset 0 0 15px rgba(255,255,255,0.35),inset 0 0 25px rgba(255,255,255,0.15); }
+.hex-icon .star{ position:absolute;width:8px;height:8px;z-index:1; }
+.hex-icon .star::before{ content:"";position:absolute;width:100%;height:2px;top:50%;left:0;transform:translateY(-50%);background:linear-gradient(to right,transparent,rgba(255,255,255,0.95),transparent); }
+.hex-icon .star::after{ content:"";position:absolute;width:2px;height:100%;left:50%;top:0;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.95),transparent); }
+.hex-icon .star1{ top:18%;left:15%; }
+.hex-icon .star2{ bottom:18%;right:15%; }
+.hex-icon img{width:34px;height:34px;object-fit:contain}
+@media(min-width:1024px){ .hex-icon{width:68px;height:68px} .hex-icon img{width:42px;height:42px} }
+
+.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
+.item-level{ min-height:20px }          /* 等级位留空 */
+.item-card .job-slot{ min-height:24px } /* 职业位留空 */
+
+.equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
+.item-stats{ min-height:40px }          /* 属性框先留空 */
+
+/* 卡片底部操作行 */
+.card-actions{ display:flex;gap:6px;margin-top:auto }
+.card-actions .btn-source{ flex:1;width:auto;margin:0;padding:7px 2px;font-size:14px }
+.btn-source{ width:60%;margin:0 auto;padding:8px;margin-top:auto;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block }
+.btn-source.disabled{ background:#9AA7BC;cursor:default }
+@media(min-width:1024px){ .card-actions .btn-source{padding:10px 6px;font-size:16px} }
+
+.modal-backdrop{ position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999 }
+.modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
+.modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+.modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
+.modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; }
+.modal-desc div:hover{ background:#e0e7ff; }
+.modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+
+/* 获取途径弹窗：内容超高时内部滚动 */
+.modal-content.source-modal{ max-height:60%;display:flex;flex-direction:column }
+.modal-content.source-modal .modal-title{ flex-shrink:0 }
+.modal-content.source-modal .modal-desc{ flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain }
+.modal-content.source-modal .modal-close{ align-self:center;flex-shrink:0 }
+</style>
+</head>
+
+<body>
+<div class="top-bar">
+  <input class="search-box" placeholder="搜索物品名..." id="searchBox">
+  <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
+</div>
+<button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
+<div class="top-bar" id="catBar">
+  <button class="type-btn active" data-cat="all">全部</button>
+  <button class="type-btn" data-cat="consume">消耗品</button>
+  <button class="type-btn" data-cat="other">其他</button>
+</div>
+<div class="pagination" id="topPagination">
+  <button class="page-btn" id="prevTop">上一页</button>
+  <span id="pageInfo">第 1 页</span>
+  <button class="page-btn" id="nextTop">下一页</button>
+</div>
+<div class="equip-grid" id="itemGrid">加载中...</div>
+<div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="prevBot">上一页</button>
+  <span id="pageInfoBot">第 1 页</span>
+  <button class="page-btn" id="nextBot">下一页</button>
+</div>
+<div class="modal-backdrop" id="modal">
+  <div class="modal-content source-modal">
+    <div class="modal-title" id="modalTitle">获取途径</div>
+    <div class="modal-desc" id="modalText"></div>
+    <button class="modal-close" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<script>
+let currentLang = "cn";
+const langConfig = {
+  searchPlaceholder:{cn:"搜索物品名...",en:"Search item...",kr:"아이템 검색..."},
+  pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
+  btnText:{
+    prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
+    source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
+    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无物品数据",en:"No data",kr:"데이터 없음"}
+  },
+  rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"} }
+};
+const rarityConfig = { "一般":{color:"#4D5A75",bg:"#474F6E"} };
+
+// 导航按钮三语
+const navLang = {
+  monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
+  equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
+  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"}
+};
+
+function updateNavLang(){
+  document.querySelectorAll('[data-nav]').forEach(btn=>{
+    const k = btn.dataset.nav;
+    if(navLang[k]) btn.innerText = navLang[k][currentLang];
+  });
+}
+
+// 分类筛选
+const catLang = {
+  all:{cn:"全部",en:"All",kr:"전체"},
+  consume:{cn:"消耗品",en:"Consumable",kr:"소모품"},
+  other:{cn:"其他",en:"Other",kr:"기타"}
+};
+
+// 消耗品名单（其余归入「其他」）
+const CONSUMABLES = new Set([
+  "Lesser Healing Potion","Healing Potion","Greater Healing Potion","Super Healing Potion","Health Regeneration Potion",
+  "Lesser Mana Potion","Mana Potion","Greater Mana Potion","Super Mana Potion","Mana Regeneration Potion",
+  "Greater Restoration Potion",
+  "Bandage","Thick Bandage",
+  "Barbeque","Wild Boar Barbeque","Well Being Herb Bread","Dongryu Juice","Nutrition Beverage","Palm Cocktail","Lollipop",
+  "Small Treasure Box","Old Box","Box Flowing with Mana","Potion Bag"
+]);
+
+// 补充装备名单（dropColors 未标 equip，但属于装备，需从物品图鉴排除）
+const EXTRA_EQUIP = new Set([
+  "Apprentice Magician Robe","Canine Tooth of Madness","Crown","Master Magician Robe",
+  "Mitten","Thundersteel","Woopa Roopa's Staff"
+]);
+
+let page = 1;
+let allItems = [];
+let filteredItems = [];
+let dropMap = {};
+let nameMap = {};
+let dcType = {};
+let currentCat = "all";
+
+function getPerPage(){
+  if(window.innerWidth >= 1024) return 20;
+  if(window.innerWidth >= 768) return 15;
+  return 12;
+}
+
+function tr(key, type){
+  const o = langConfig[type]?.[key];
+  return o?.[currentLang] || o?.cn || key;
+}
+
+function itemDisplayName(en){
+  const m = dropMap[en] || {};
+  if(currentLang === "en") return m.en || en;
+  if(currentLang === "kr") return m.kr || m.en || en;
+  return m.cn || en;
+}
+
+function monsterDisplayName(en){
+  const m = nameMap[en] || {};
+  return m[currentLang] || m.cn || en;
+}
+
+function updateLangText(){
+  document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
+  document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
+  document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = tr('next','btnText');
+  document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
+  document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
+  document.querySelector('.modal-close').innerText = tr('close','btnText');
+  updateCatButtonsLang();
+  updateNavLang();
+}
+
+function updateCatButtonsLang(){
+  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
+    const c = btn.dataset.cat;
+    if(catLang[c]) btn.innerText = catLang[c][currentLang];
+  });
+}
+
+function updatePageInfo(){
+  const total = Math.ceil(filteredItems.length / getPerPage());
+  const s = langConfig.pageText[currentLang].replace("{now}",page).replace("{total}",total||1);
+  document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
+}
+
+function toggleLang(){
+  currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  updateLangText();
+  renderCards();
+}
+
+function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
+
+function filterAndRender(keyword=""){
+  let list = allItems;
+  if(currentCat !== "all") list = list.filter(x=>x.cat === currentCat);
+  if(keyword){
+    list = list.filter(x=>{
+      const m = dropMap[x.name] || {};
+      const all = [x.name, m.cn||"", m.en||"", m.kr||""].join(" ").toLowerCase();
+      return all.includes(keyword);
+    });
+  }
+  filteredItems = list;
+  page = 1;
+  renderCards();
+}
+
+function setCat(cat){
+  currentCat = cat;
+  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.cat === cat);
+  });
+  doSearch();
+}
+
+function goPrev(){ if(page>1){page--;renderCards();} }
+function goNext(){
+  const total = Math.ceil(filteredItems.length/getPerPage());
+  if(page<total){ page++; renderCards(); window.scrollTo(0,0); }
+}
+
+// 渲染卡片
+function renderCards(){
+  const grid = document.getElementById("itemGrid");
+  grid.innerHTML = "";
+  updatePageInfo();
+  const perPage = getPerPage();
+  const pageItems = filteredItems.slice((page-1)*perPage, page*perPage);
+  if(!pageItems.length){
+    grid.innerHTML = `<div style='grid-column:1/-1;text-align:center;padding:20px'>${tr('noData','btnText')}</div>`;
+    return;
+  }
+  pageItems.forEach(item=>{
+    const m = dropMap[item.name] || {};
+    const name = itemDisplayName(item.name);
+    const rc = rarityConfig["一般"];
+    const rarity = tr("一般","rarity");
+    const hasSource = item.monsters.length > 0;
+    const sourceBtn = hasSource
+      ? `<button class="btn-source" onclick="openSourceModal('${item.name.replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
+      : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
+
+    const card = document.createElement("div");
+    card.className = "equip-card item-card";
+    card.dataset.name = item.name;
+    card.dataset.nameCn = m.cn || "";
+    card.dataset.nameKr = m.kr || "";
+    card.innerHTML = `
+      <div class="equip-name" style="color:${rc.color}">${name}</div>
+      <div class="equip-info-row">
+        <div class="equip-icon-col">
+          <div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img loading="lazy" src="drop_icons/${item.name}.png" onerror="this.style.display='none'"></div>
+          <div class="item-level"></div>
+        </div>
+        <div class="equip-text-col">
+          <div class="tag-rarity" style="background:${rc.bg}">${rarity}</div>
+          <div class="job-slot"></div>
+        </div>
+      </div>
+      <div class="equip-stats item-stats"></div>
+      <div class="card-actions">${sourceBtn}</div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// 获取途径弹窗（掉落怪物，可点击回怪物图鉴）
+function openSourceModal(nameEn){
+  const item = allItems.find(x => x.name === nameEn);
+  if(!item || !item.monsters.length) return;
+  const list = item.monsters.slice().sort((a,b)=>{
+    const x = monsterDisplayName(a), y = monsterDisplayName(b);
+    return currentLang === "cn" ? x.localeCompare(y, "zh-Hans") : x.localeCompare(y);
+  });
+  document.getElementById("modalText").innerHTML = list.map(mn=>{
+    const disp = monsterDisplayName(mn);
+    const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
+    return `<div onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</div>`;
+  }).join("");
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modalText").scrollTop = 0;
+  lockPageScroll(true);
+}
+function goMonster(cnName){
+  location.href = `index.html?monster=${encodeURIComponent(cnName)}`;
+}
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+  lockPageScroll(false);
+}
+
+// 弹窗打开时锁定页面滚动（含滚动条宽度补偿，防止页面横向跳动）
+let pageScrollLocked = false;
+function lockPageScroll(lock){
+  if(lock === pageScrollLocked) return;
+  pageScrollLocked = lock;
+  if(lock){
+    const sw = window.innerWidth - document.documentElement.clientWidth;
+    const pr = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+    document.body.style.overflow = "hidden";
+    if(sw > 0) document.body.style.paddingRight = (pr + sw) + "px";
+  } else {
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
+  }
+}
+
+// 定位物品（接收参数 item）
+function jumpToItemFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const key = decodeURIComponent(params.get("item") || "").toLowerCase().trim();
+  if(!key) return;
+
+  // 定位前重置分类，避免目标被筛掉
+  currentCat = "all";
+  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.cat === "all");
+  });
+
+  const index = allItems.findIndex(item=>{
+    const m = dropMap[item.name] || {};
+    const names = [item.name, m.cn, m.en, m.kr].join(" ").toLowerCase();
+    return names.includes(key);
+  });
+
+  if(index === -1){
+    page = 1;
+    renderCards();
+    return;
+  }
+
+  page = Math.floor(index / getPerPage()) + 1;
+  renderCards();
+
+  setTimeout(() => {
+    const cards = document.querySelectorAll(".item-card");
+    for(const card of cards){
+      const stored = [card.dataset.name, card.dataset.nameCn, card.dataset.nameKr].join(" ").toLowerCase().trim();
+      if(stored.includes(key)){
+        card.scrollIntoView({ behavior:"smooth", block:"center" });
+        card.style.boxShadow = "0 0 20px gold";
+        setTimeout(() => { card.style.boxShadow = ""; }, 2000);
+        break;
+      }
+    }
+  }, 300);
+}
+
+async function loadData(){
+  let drops = {}, lang = {}, dc = [];
+  try {
+    const [r1, r2, r3] = await Promise.all([
+      fetch("monster_drops.json"),
+      fetch("lang.json"),
+      fetch("dropColors.json")
+    ]);
+    drops = await r1.json();
+    lang = await r2.json();
+    dc = await r3.json();
+  } catch(e) {
+    console.log("load fail", e);
+  }
+  dropMap = lang.dropMap || {};
+  nameMap = lang.nameMap || {};
+  dcType = {};
+  dc.forEach(x=>{ if(x.en) dcType[x.en] = x.type || ""; });
+
+  // 反向映射：物品 -> 掉落怪物（排除装备与技能）
+  const map = {};
+  Object.keys(drops).forEach(monster=>{
+    const list = (drops[monster] && drops[monster].掉落物) || [];
+    list.forEach(it=>{
+      if(dcType[it] === "equip" || dcType[it] === "skill" || EXTRA_EQUIP.has(it)) return;
+      if(!map[it]) map[it] = { name: it, monsters: [], cat: CONSUMABLES.has(it) ? "consume" : "other" };
+      map[it].monsters.push(monster);
+    });
+  });
+  allItems = Object.keys(map).map(k=>map[k]);
+  // 掉落数量降序，数量相同按英文名 A-Z
+  allItems.sort((a,b)=> (b.monsters.length - a.monsters.length) || a.name.localeCompare(b.name));
+  filteredItems = [...allItems];
+  document.getElementById('searchBox').value = "";
+
+  updateLangText();
+
+  if(location.search.includes('item=')){
+    jumpToItemFromUrl();
+  } else {
+    renderCards();
+  }
+}
+
+document.getElementById('langBtn').onclick = toggleLang;
+document.getElementById('searchBox').addEventListener('input', doSearch);
+document.getElementById('prevTop').onclick = goPrev;
+document.getElementById('nextTop').onclick = goNext;
+document.getElementById('prevBot').onclick = goPrev;
+document.getElementById('nextBot').onclick = goNext;
+
+/* 分类按钮 */
+document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{ setCat(btn.dataset.cat); });
+});
+
+let resizeTimer;
+let lastPerPage = getPerPage();
+
+window.addEventListener('resize', () => {
+
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(() => {
+
+    const perPage = getPerPage();
+    if (perPage === lastPerPage) return;
+    lastPerPage = perPage;
+    renderCards();
+
+  }, 150);
+
+});
+loadData();
+</script>
+</body>
+</html>
