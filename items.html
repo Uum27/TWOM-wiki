@@ -102,6 +102,7 @@ body{background:#f0f2f5;padding:12px}
 @media(min-width:1024px){ .hex-icon{width:68px;height:68px} .hex-icon img{width:42px;height:42px} }
 
 .tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
+.item-card .tag-rarity{ position:relative;left:6px;top:-3px }   /* 物品图鉴：标签右移6px、上移3px */
 .item-level{ min-height:20px }          /* 等级位留空 */
 .item-card .job-slot{ min-height:24px } /* 职业位留空 */
 
@@ -244,6 +245,12 @@ function monsterDisplayName(en){
   return m[currentLang] || m.cn || en;
 }
 
+// 按当前语言名称排序（中文拼音，英文/韩文按英文名）
+function sortItems(){
+  const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
+  allItems.sort((a,b)=> coll.compare(itemDisplayName(a.name), itemDisplayName(b.name)) || a.name.localeCompare(b.name));
+}
+
 function updateLangText(){
   document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
   document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
@@ -271,12 +278,13 @@ function updatePageInfo(){
 function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
   updateLangText();
-  renderCards();
+  sortItems();
+  filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim(), true);
 }
 
 function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
 
-function filterAndRender(keyword=""){
+function filterAndRender(keyword="", keepPage){
   let list = allItems;
   if(currentCat !== "all") list = list.filter(x=>x.cat === currentCat);
   if(keyword){
@@ -287,7 +295,12 @@ function filterAndRender(keyword=""){
     });
   }
   filteredItems = list;
-  page = 1;
+  if(keepPage){
+    const total = Math.ceil(filteredItems.length / getPerPage());
+    if(page > total) page = Math.max(1, total);
+  } else {
+    page = 1;
+  }
   renderCards();
 }
 
@@ -462,8 +475,8 @@ async function loadData(){
     });
   });
   allItems = Object.keys(map).map(k=>map[k]);
-  // 掉落数量降序，数量相同按英文名 A-Z
-  allItems.sort((a,b)=> (b.monsters.length - a.monsters.length) || a.name.localeCompare(b.name));
+  // 按当前语言名称排序
+  sortItems();
   filteredItems = [...allItems];
   document.getElementById('searchBox').value = "";
 
