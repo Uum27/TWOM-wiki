@@ -285,6 +285,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 <div style="margin-bottom:6px;">
   <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip" style="padding:10px 12px; font-size:15px;">装备图鉴</button>
   <button class="type-btn" onclick="location.href='items.html'" data-nav="item" style="padding:10px 12px; font-size:15px;">物品图鉴</button>
+  <button class="type-btn" onclick="location.href='skills.html'" data-nav="skill" style="padding:10px 12px; font-size:15px;">技能图鉴</button>
 </div>
 
 <div class="zone-panel" id="zonePanel">
@@ -929,9 +930,57 @@ const zoneGroups = {
       kr:"",
 
    imgs:{
-     cn:"maps/cn/",
-     en:"maps/en/",
-     kr:"maps/kr/"
+      cn:"maps/cn/",
+      en:"maps/en/",
+      kr:"maps/kr/"
+  }
+    }
+  ]},
+  "狩猎场(简单)": { en: "Hunting Ground (Easy)", kr: "", zones: ["Bitum Wetland (Easy)","Shinar Plain (Easy)"],maps:[
+    {
+      cn:"比图姆湿地",
+      en:"Bitum Wetland",
+      kr:"",
+
+   imgs:{
+     cn:"",
+     en:"",
+     kr:""
+  }
+    },
+    {
+      cn:"希纳尔平原",
+      en:"Shinar Plain",
+      kr:"",
+
+   imgs:{
+     cn:"",
+     en:"",
+     kr:""
+  }
+    }
+  ]},
+  "狩猎场(困难)": { en: "Hunting Ground (Hard)", kr: "", zones: ["Bitum Wetland (Hard)","Shinar Plain (Hard)"],maps:[
+    {
+      cn:"比图姆湿地",
+      en:"Bitum Wetland",
+      kr:"",
+
+   imgs:{
+     cn:"",
+     en:"",
+     kr:""
+  }
+    },
+    {
+      cn:"希纳尔平原",
+      en:"Shinar Plain",
+      kr:"",
+
+   imgs:{
+     cn:"",
+     en:"",
+     kr:""
   }
     }
   ]}
@@ -986,7 +1035,8 @@ function updateLangBtnText(){
 const navLang = {
   monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
   equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
-  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"}
+  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"},
+  skill:   {cn:"技能图鉴", en:"Skills", kr:"스킬 도감"}
 };
 
 function updateNavLang(){
@@ -1018,7 +1068,7 @@ function buildGroupButtons(){
     const btn = document.createElement('button');
     btn.className = 'zone-btn';
     btn.dataset.groupKey = key;
-    btn.textContent = currentLang === 'en' ? data.en : currentLang === 'kr' ? data.kr : key;
+    btn.textContent = currentLang === 'en' ? data.en : currentLang === 'kr' ? (data.kr || data.en) : key;
     btn.onclick = () => { currentGroup = key; page = 1; doSearch(); setActiveBtn(key); };
     bar.appendChild(btn);
   });
@@ -1042,7 +1092,8 @@ function updateZonePanel(){
   const label = {cn:"区域筛选", en:"Zone", kr:"지역"}[currentLang] || "区域筛选";
   const sep = currentLang === "cn" ? "：" : ": ";
   const allName = {cn:"全部", en:"All", kr:"전체"}[currentLang] || "全部";
-  const name = currentGroup === "all" ? allName : ((zoneGroups[currentGroup] && zoneGroups[currentGroup][currentLang]) || currentGroup);
+  const grp = zoneGroups[currentGroup];
+  const name = currentGroup === "all" ? allName : ((currentLang === "cn" || !grp) ? currentGroup : (grp[currentLang] || grp.en || currentGroup));
   const txt = document.getElementById('zonePanelText');
   if(txt) txt.innerText = label + sep + name;
 }
@@ -1136,7 +1187,7 @@ const mapName =
   currentLang === "en"
     ? mapData.en
     : currentLang === "kr"
-    ? mapData.kr
+    ? (mapData.kr || mapData.en)
     : currentGroup;
 
 let mapsHtml = "";
@@ -1144,6 +1195,8 @@ let mapsHtml = "";
 if(mapExpanded){
 
   (mapData.maps || []).forEach(m => {
+
+    const mapSrc = m.imgs?.[currentLang] || "";
 
     mapsHtml += `
 
@@ -1153,10 +1206,10 @@ if(mapExpanded){
           ${m[currentLang] || m.en}
         </div>
 
-        <img
-      src="${m.imgs?.[currentLang]}"
+        ${mapSrc ? `<img
+      src="${mapSrc}"
       loading="lazy"
-   >
+   >` : ""}
 
       </div>
 
@@ -1207,11 +1260,12 @@ html += `
       <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
     </div>`;
   } else if (isSkill) {
-    // 技能：暂不可点击（等技能图鉴）
+    // 技能：可点击，跳技能图鉴（去掉名称末尾等级数字）
+    const skillBase = itemName.replace(/\s*\d+$/, "");
     return `
     <div>
       <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span>${itemName}</span>
+      <span class="drop-link" onclick="goSkill('${skillBase.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
     </div>`;
   } else {
     // 其他物品：可点击，跳物品图鉴
@@ -1388,6 +1442,11 @@ function goEquip(itemName){
 // 跳转物品页：传递物品名（中文/英文均可匹配）
 function goItem(itemName){
   location.href = `items.html?item=${encodeURIComponent(itemName)}`;
+}
+
+// 跳转技能页：传递技能名（中文/英文均可匹配）
+function goSkill(skillName){
+  location.href = `skills.html?skill=${encodeURIComponent(skillName)}`;
 }
 
 function jumpToMonsterFromUrl(){

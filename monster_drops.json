@@ -1,10 +1,9 @@
 {
-  
   "Kooii": {
     "中文名": "库伊",
     "掉落物": [
       "Gold",
-      "Kooii Doll" ,
+      "Kooii Doll",
       "Kooii Voucher",
       "Lesser Mana Potion",
       "Lesser Healing Potion",
@@ -121,7 +120,8 @@
       "Blunt Shortsword",
       "Potion Bag",
       "Wooden Shield",
-      "Weapon Enchant Scroll (D Class)"
+      "Weapon Enchant Scroll (D Class)",
+      "Leather Quiver"
     ]
   },
   "Flower Elemental": {
@@ -352,7 +352,8 @@
       "Oak Tree Staff",
       "Old Box",
       "Mystic Stone",
-      "Coral Guard"
+      "Coral Guard",
+      "Coral Quiver"
     ]
   },
   "Woopa": {
@@ -721,7 +722,8 @@
       "Curse of Doom 2",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Venom Quiver"
     ]
   },
   "Dark Beholder": {
@@ -1309,7 +1311,8 @@
       "Armor Enchant Scroll (C Class)",
       "Weapon Enchant Scroll (C Class)",
       "Wild Charge 2",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Thorn Quiver"
     ]
   },
   "Crow": {
@@ -1442,7 +1445,8 @@
       "Armor Enchant Scroll (C Class)",
       "Weapon Enchant Scroll (C Class)",
       "Toughness 3",
-      "Pet Crystal"
+      "Pet Crystal",
+      "Thorn Quiver"
     ]
   },
   "777TAILFOX": {
@@ -1489,7 +1493,8 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Ancient Treasure",
-      "Spider Silk"
+      "Spider Silk",
+      "Hunter's Quiver"
     ]
   },
   "Spidey": {
@@ -1565,7 +1570,8 @@
       "Gold",
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
-      "Ancient Treasure"
+      "Ancient Treasure",
+      "Hunter's Quiver"
     ]
   },
   "Bbinikjoe": {
@@ -1668,7 +1674,8 @@
       "Potion Bag",
       "Well Being Herb Bread",
       "Multi Shot 2",
-      "Poisonous Bee Sting"
+      "Poisonous Bee Sting",
+      "Stinger Quiver"
     ]
   },
   "Smaaack": {
@@ -1711,7 +1718,8 @@
       "Soul Powder",
       "Pet Crystal",
       "Amplify Sense 2",
-      "Bandana of the Blue Waterfall"
+      "Bandana of the Blue Waterfall",
+      "Stinger Quiver"
     ]
   },
   "Corrupt Forest Keeper": {
@@ -1787,7 +1795,8 @@
       "Enhancer",
       "Shout of Calmness 1",
       "Clarity 1",
-      "Sara's Blessing 1"
+      "Sara's Blessing 1",
+      "Scout's Belt"
     ]
   },
   "Buzss": {
@@ -1945,7 +1954,8 @@
       "Divine Thread",
       "Shout of Calmness 1",
       "Clarity 1",
-      "Sara's Blessing 1"
+      "Sara's Blessing 1",
+      "Scout's Belt"
     ]
   },
   "3eyelizard": {
@@ -2389,7 +2399,8 @@
       "Hopeful Magic Essence",
       "Crown Rock Experiment Bottle",
       "Snowy Field's Cursed Boots",
-      "Critical Insight 2"
+      "Critical Insight 2",
+      "Frostbound Quiver"
     ]
   },
   "Urpus": {
@@ -2689,7 +2700,8 @@
       "Pet Crystal",
       "Broken Magic Stone",
       "Shinning Metal",
-      "Void Sphere"
+      "Void Sphere",
+      "Frostbound Quiver"
     ]
   },
   "Gnome": {
@@ -3097,7 +3109,8 @@
       "Pet Crystal",
       "Dark Piece",
       "Fallen Magic Stone",
-      "The Perfect Darkness"
+      "The Perfect Darkness",
+      "Wanderer's Quiver"
     ]
   },
   "Fear of the Darkness": {
@@ -3380,7 +3393,8 @@
       "Armor Enchant Scroll (S Class)",
       "Weapon Enchant Scroll (S Class)",
       "Inherited Book of Knowledge",
-      "Morty's Ear"
+      "Morty's Ear",
+      "Wanderer's Quiver"
     ]
   },
   "Mushroom Bulldozer": {
@@ -3556,7 +3570,8 @@
       "World Tree Bark Armor",
       "World Tree Branch Armor",
       "World Tree Leaf Robe",
-      "World Tree Robe"
+      "World Tree Robe",
+      "Legacy of the Steel Wind"
     ]
   },
   "Platanista": {
@@ -3678,6 +3693,164 @@
       "Weapon Enchant Scroll (S Class)",
       "Broken Oath",
       "Pure Knowledge"
+    ]
+  },
+  "Mossrock (Easy)": {
+    "中文名": "苔岩兽(简单)",
+    "掉落物": [
+      "Moss-Covered Stone Piece"
+    ]
+  },
+  "Mossrock (Hard)": {
+    "中文名": "苔岩兽(困难)",
+    "掉落物": [
+      "Moss-Covered Stone Piece"
+    ]
+  },
+  "Flaretoad (Easy)": {
+    "中文名": "烈焰蟾蜍(简单)",
+    "掉落物": [
+      "Red Back Hide"
+    ]
+  },
+  "Flaretoad (Hard)": {
+    "中文名": "烈焰蟾蜍(困难)",
+    "掉落物": [
+      "Red Back Hide"
+    ]
+  },
+  "Snapcroc (Easy)": {
+    "中文名": "巨颚鳄(简单)",
+    "掉落物": [
+      "Moss-Covered Carapace"
+    ]
+  },
+  "Snapcroc (Hard)": {
+    "中文名": "巨颚鳄(困难)",
+    "掉落物": [
+      "Moss-Covered Carapace"
+    ]
+  },
+  "Coilram (Easy)": {
+    "中文名": "科伊拉姆(简单)",
+    "掉落物": [
+      "Coilram's Horn"
+    ]
+  },
+  "Coilram (Hard)": {
+    "中文名": "科伊拉姆(困难)",
+    "掉落物": [
+      "Coilram's Horn"
+    ]
+  },
+  "Silverhorn (Easy)": {
+    "中文名": "希尔巴霍恩(简单)",
+    "掉落物": [
+      "Silverhorn's Horn"
+    ]
+  },
+  "Silverhorn (Hard)": {
+    "中文名": "希尔巴霍恩(困难)",
+    "掉落物": [
+      "Silverhorn's Horn"
+    ]
+  },
+  "Veilhorn (Easy)": {
+    "中文名": "贝尔霍恩(简单)",
+    "掉落物": [
+      "Veilhorn Mask Piece"
+    ]
+  },
+  "Veilhorn (Hard)": {
+    "中文名": "贝尔霍恩(困难)",
+    "掉落物": [
+      "Veilhorn Mask Piece"
+    ]
+  },
+  "Sprout (Easy)": {
+    "中文名": "萌芽体(简单)",
+    "掉落物": [
+      "Mana Seed"
+    ]
+  },
+  "Sprout (Hard)": {
+    "中文名": "萌芽体(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Mana Fruit"
+    ]
+  },
+  "Floura (Easy)": {
+    "中文名": "盛放体(简单)",
+    "掉落物": [
+      "Mana Seed"
+    ]
+  },
+  "Floura (Hard)": {
+    "中文名": "盛放体(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Mana Fruit",
+      "Weapon Enchant Scroll (Grade SS)",
+      "Armor Enchant Scroll (Grade SS)"
+    ]
+  },
+  "OverBloom (Easy)": {
+    "中文名": "极盛开华体(简单)",
+    "掉落物": [
+      "Mana Seed"
+    ]
+  },
+  "OverBloom (Hard)": {
+    "中文名": "极盛开华体(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Rich Mana Fruit",
+      "Weapon Enchant Scroll (Grade SS)",
+      "Armor Enchant Scroll (Grade SS)"
+    ]
+  },
+  "Revenant (Easy)": {
+    "中文名": "亡灵(简单)",
+    "掉落物": [
+      "Spiritual Energy Piece"
+    ]
+  },
+  "Revenant (Hard)": {
+    "中文名": "亡灵(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Faint Spiritual Energy"
+    ]
+  },
+  "Grudgebound Revenant (Easy)": {
+    "中文名": "含恨亡灵(简单)",
+    "掉落物": [
+      "Spiritual Energy Piece"
+    ]
+  },
+  "Grudgebound Revenant (Hard)": {
+    "中文名": "含恨亡灵(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Faint Spiritual Energy",
+      "Weapon Enchant Scroll (Grade SS)",
+      "Armor Enchant Scroll (Grade SS)"
+    ]
+  },
+  "Hate-Tainted Revenant (Easy)": {
+    "中文名": "染上憎恨的亡灵(简单)",
+    "掉落物": [
+      "Spiritual Energy Piece"
+    ]
+  },
+  "Hate-Tainted Revenant (Hard)": {
+    "中文名": "染上憎恨的亡灵(困难)",
+    "掉落物": [
+      "Corrupted Mana",
+      "Vivid Spiritual Energy",
+      "Weapon Enchant Scroll (Grade SS)",
+      "Armor Enchant Scroll (Grade SS)"
     ]
   }
 }

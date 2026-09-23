@@ -1,0 +1,3061 @@
+{
+  "Amplify Sense": {
+    "cn": "强化反应",
+    "en": "Amplify Sense",
+    "class": "ranger",
+    "learnLevel": 25,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "大幅提升反应度，增加暴击伤害量。",
+      "en": "Passive. Amplificates the caster's sensitivity to increase damage when critical."
+    },
+    "levels": {
+      "1": {
+        "cn": "5%",
+        "en": "+5% critical dmg"
+      },
+      "2": {
+        "cn": "10%",
+        "en": "+10% critical dmg"
+      }
+    },
+    "books": {
+      "2": "Amplify Sense 2",
+      "1": "Amplify Sense 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Amputator": {
+    "cn": "一刀两断",
+    "en": "Amputator",
+    "class": "warrior",
+    "learnLevel": 45,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "发动一击砍伤敌人，造成强大的伤害。目标对象数量越少，造成的伤害则越强。",
+      "en": ""
+    },
+    "levels": {
+      "1": {
+        "cn": "追加300%",
+        "en": ""
+      },
+      "2": {
+        "cn": "追加350%",
+        "en": ""
+      },
+      "3": {
+        "cn": "追加400%",
+        "en": ""
+      }
+    },
+    "books": {},
+    "extraSources": {}
+  },
+  "Baekha's Strike": {
+    "cn": "白荷之拳",
+    "en": "Baekha's Strike",
+    "class": "breaker",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "All",
+    "effect": {
+      "cn": "集中全力并发动致命一击。",
+      "en": "Focuses all strength into a single powerful blow. Consumes all available Crystal Points; damage scales with amount consumed."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20%",
+        "en": "20% addition"
+      },
+      "2": {
+        "cn": "追加40%",
+        "en": "40% addition"
+      },
+      "3": {
+        "cn": "追加60%",
+        "en": "60% addition"
+      },
+      "4": {
+        "cn": "追加80%",
+        "en": "80% addition"
+      }
+    },
+    "books": {
+      "2": "Baekha's Strike 2",
+      "3": "Baekha's Strike 3",
+      "1": "Baekha's Strike 1",
+      "4": "Baekha's Strike 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予无法移动、眩晕减益效果",
+        "赋予闪电：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold: SPD Decrease + Stun",
+        "Electric: Stun"
+      ]
+    }
+  },
+  "Berserk": {
+    "cn": "狂暴",
+    "en": "Berserk",
+    "class": "warrior",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "提升愤怒值，恢复水晶点数。",
+      "en": "Berserk mode buff."
+    },
+    "levels": {
+      "1": {
+        "cn": "2个",
+        "en": "Berserk effect"
+      },
+      "2": {
+        "cn": "3个",
+        "en": "Stronger berserk"
+      }
+    },
+    "books": {
+      "2": "Berserk 2",
+      "1": "Berserk 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Breaker's Strike I": {
+    "cn": "武术1击",
+    "en": "Breaker's Strike I",
+    "class": "breaker",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "冲向目标并造成伤害。",
+      "en": "Charges toward the target and deals damage. Changes to Breaker's Strike II after use."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加10%",
+        "en": "10% addition"
+      },
+      "2": {
+        "cn": "追加20%",
+        "en": "20% addition"
+      },
+      "3": {
+        "cn": "追加30%",
+        "en": "30% addition"
+      },
+      "4": {
+        "cn": "追加40%",
+        "en": "40% addition"
+      }
+    },
+    "books": {
+      "1": "Breaker's Strike 1",
+      "4": "Breaker's Strike 4",
+      "2": "Breaker's Strike 2",
+      "3": "Breaker's Strike 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予眩晕减益效果",
+        "赋予闪电：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold Imbue: Apply Stun",
+        "Electric Imbue: Apply Stun"
+      ]
+    }
+  },
+  "Breaker's Strike II": {
+    "cn": "武术2击",
+    "en": "Breaker's Strike II",
+    "class": "breaker",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "跃向空中并攻击敌人。",
+      "en": "Launches toward the sky and strikes the enemy. Changes to Breaker's Strike III. Level determined by Breaker's Strike I."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加60%",
+        "en": "60% addition"
+      },
+      "2": {
+        "cn": "追加120%",
+        "en": "120% addition"
+      },
+      "3": {
+        "cn": "追加180%",
+        "en": "180% addition"
+      },
+      "4": {
+        "cn": "追加240%",
+        "en": "240% addition"
+      }
+    },
+    "books": {
+      "2": "Breaker's Strike 2",
+      "4": "Breaker's Strike 4"
+    },
+    "extraSources": {
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予降低移动速度减益效果",
+        "赋予闪电：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold: Movement SPD Decrease",
+        "Electric: Stun"
+      ]
+    }
+  },
+  "Breaker's Strike III": {
+    "cn": "武术3击",
+    "en": "Breaker's Strike III",
+    "class": "breaker",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "重击地面并对攻击敌人。",
+      "en": "Slams the ground and strikes the enemy. Level determined by Breaker's Strike I."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加80%",
+        "en": "80% addition"
+      },
+      "2": {
+        "cn": "追加160%",
+        "en": "160% addition"
+      },
+      "3": {
+        "cn": "追加240%",
+        "en": "240% addition"
+      },
+      "4": {
+        "cn": "追加320%",
+        "en": "320% addition"
+      }
+    },
+    "books": {
+      "3": "Breaker's Strike 3",
+      "4": "Breaker's Strike 4"
+    },
+    "extraSources": {
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予眩晕减益效果",
+        "赋予闪电：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold Imbue: Apply Stun",
+        "Electric Imbue: Apply Stun"
+      ]
+    }
+  },
+  "Bull Rush": {
+    "cn": "急速冲刺",
+    "en": "Bull Rush",
+    "class": "warrior",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "使用时，持续7秒提升移动速度。",
+      "en": "Increases the movement speed."
+    },
+    "levels": {
+      "1": {
+        "cn": "24%",
+        "en": "24%"
+      },
+      "2": {
+        "cn": "36%",
+        "en": "36%"
+      },
+      "3": {
+        "cn": "48%",
+        "en": "48%"
+      }
+    },
+    "books": {
+      "2": "Bull Rush 2",
+      "1": "Bull Rush 1",
+      "3": "Bull Rush 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波水晶鳞片）",
+        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波水晶鳞片)"
+      }
+    }
+  },
+  "Carnivalize": {
+    "cn": "魔力转换",
+    "en": "Carnivalize",
+    "class": "magician",
+    "learnLevel": 15,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "转换20体力为魔力。",
+      "en": "Converts 20 health to mana."
+    },
+    "levels": {
+      "1": {
+        "cn": "恢复16%魔力",
+        "en": "16% mana"
+      },
+      "2": {
+        "cn": "恢复20%魔力",
+        "en": "20% mana"
+      },
+      "3": {
+        "cn": "恢复24%魔力",
+        "en": "24% mana"
+      }
+    },
+    "books": {
+      "1": "Carnivalize 1",
+      "2": "Carnivalize 2",
+      "3": "Carnivalize 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Chainstrike": {
+    "cn": "连击",
+    "en": "Chainstrike",
+    "class": "breaker",
+    "learnLevel": 2,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "快速攻击并造成伤害。",
+      "en": "Strikes rapidly to deal damage. Using the skill inflicts a short stun. Note: Actual damage may differ from description."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20%",
+        "en": "20% addition"
+      },
+      "2": {
+        "cn": "追加40%",
+        "en": "40% addition"
+      },
+      "3": {
+        "cn": "追加80%",
+        "en": "80% addition"
+      },
+      "4": {
+        "cn": "追加160%",
+        "en": "160% addition"
+      }
+    },
+    "books": {
+      "4": "Chainstrike 4",
+      "1": "Chainstrike 1",
+      "2": "Chainstrike 2",
+      "3": "Chainstrike 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予眩晕减益效果",
+        "赋予闪电：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold Imbue: Apply Stun",
+        "Electric Imbue: Apply Stun"
+      ]
+    }
+  },
+  "Clarity": {
+    "cn": "补充气力",
+    "en": "Clarity",
+    "class": "ranger",
+    "learnLevel": 35,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "持续5秒增加周围半径8格内队友的水晶、魔力再生速度。",
+      "en": "Regenerates party member's crystals and mana faster for 5 seconds. Affects members within 8 tiles."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间180秒",
+        "en": "Cooldown 180 seconds"
+      },
+      "2": {
+        "cn": "冷却时间160秒",
+        "en": "Cooldown 160 seconds"
+      }
+    },
+    "books": {
+      "1": "Clarity 1",
+      "2": "Clarity 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Cold Imbue": {
+    "cn": "赋予寒气",
+    "en": "Cold Imbue",
+    "class": "breaker",
+    "learnLevel": 2,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "以寒气魔力环绕全身并增幅伤害。",
+      "en": "Envelops the body with cold energy to amplify damage."
+    },
+    "levels": {
+      "1": {
+        "cn": "伤害追加1%",
+        "en": "1% damage increase"
+      },
+      "2": {
+        "cn": "伤害追加5%",
+        "en": "5% damage increase"
+      },
+      "3": {
+        "cn": "伤害追加10%",
+        "en": "10% damage increase"
+      },
+      "4": {
+        "cn": "伤害追加20%",
+        "en": "20% damage increase"
+      }
+    },
+    "books": {
+      "4": "Cold Imbue 4",
+      "1": "Cold Imbue 1",
+      "2": "Cold Imbue 2",
+      "3": "Cold Imbue 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予眩晕减益效果"
+      ],
+      "en": [
+        "Cold Imbue: Apply Stun"
+      ]
+    }
+  },
+  "Concentrate": {
+    "cn": "全神贯注",
+    "en": "Concentrate",
+    "class": "ranger",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "有一定时间追加命中率。",
+      "en": "Increases accuracy rate for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "2%",
+        "en": "+2% accuracy"
+      },
+      "2": {
+        "cn": "4%",
+        "en": "+4% accuracy"
+      },
+      "3": {
+        "cn": "6%",
+        "en": "+6% accuracy"
+      }
+    },
+    "books": {
+      "3": "Concentrate 3",
+      "1": "Concentrate 1",
+      "2": "Concentrate 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Counterattack": {
+    "cn": "反击",
+    "en": "Counterattack",
+    "class": "warrior",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "于阻挡武器攻击时启用，使用时可造成反击伤害。",
+      "en": "An Instant attack available when an enemy blocks you."
+    },
+    "levels": {
+      "1": {
+        "cn": "140%",
+        "en": "140%"
+      },
+      "2": {
+        "cn": "160%",
+        "en": "160%"
+      }
+    },
+    "books": {
+      "1": "Counterattack 1",
+      "2": "Counterattack 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Critical Blow": {
+    "cn": "追击要害",
+    "en": "Critical Blow",
+    "class": "ranger",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "剑专属技能，攻击要害造成追加伤害。",
+      "en": "Causes additional damage by striking a vital spot. Requires a blade."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加40%",
+        "en": "+40% addition"
+      }
+    },
+    "books": {
+      "1": "Critical Blow 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Critical Insight": {
+    "cn": "要害洞察",
+    "en": "Critical Insight",
+    "class": "breaker",
+    "learnLevel": 30,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "增加暴击率。",
+      "en": "Increases critical rate."
+    },
+    "levels": {
+      "1": {
+        "cn": "暴击增加1",
+        "en": "1 critical rate increase"
+      },
+      "2": {
+        "cn": "暴击增加2",
+        "en": "2 critical rate increase"
+      },
+      "3": {
+        "cn": "暴击增加3",
+        "en": "3 critical rate increase"
+      }
+    },
+    "books": {
+      "2": "Critical Insight 2",
+      "3": "Critical Insight 3",
+      "1": "Critical Insight 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Cure Poison": {
+    "cn": "治愈",
+    "en": "Cure Poison",
+    "class": "magician",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "治疗毒、麻痹及恐怖状态。",
+      "en": ""
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间30秒",
+        "en": ""
+      },
+      "2": {
+        "cn": "冷却时间25秒",
+        "en": ""
+      }
+    },
+    "books": {
+      "2": "Cure Poison 2",
+      "1": "Cure Poison 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Curse of Doom": {
+    "cn": "破坏之咒",
+    "en": "Curse of Doom",
+    "class": "magician",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "对目标下持续10秒的诅咒，并在下一回合增加目标所受伤害量。",
+      "en": "Curses the target to have it receive the next damage with amplification."
+    },
+    "levels": {
+      "1": {
+        "cn": "伤害量200%",
+        "en": "200%"
+      },
+      "2": {
+        "cn": "伤害量220%",
+        "en": "220%"
+      }
+    },
+    "books": {
+      "2": "Curse of Doom 2",
+      "1": "Curse of Doom 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Double Shot": {
+    "cn": "双发射击",
+    "en": "Double Shot",
+    "class": "ranger",
+    "learnLevel": 2,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "发射2个弓箭，造成2次打击。",
+      "en": "Shoots two arrows quickly."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20%",
+        "en": "20% addition"
+      },
+      "2": {
+        "cn": "追加40%",
+        "en": "40% addition"
+      },
+      "3": {
+        "cn": "追加80%",
+        "en": "80% addition"
+      },
+      "4": {
+        "cn": "追加160%",
+        "en": "160% addition"
+      }
+    },
+    "books": {
+      "3": "Double Shot 3",
+      "1": "Double Shot 1",
+      "2": "Double Shot 2",
+      "4": "Double Shot 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "4": {
+        "cn": "蘑菇林 库林处合成（百发百中1/2/3p）",
+        "en": "Synthesize at 蘑菇林 库林 (百发百中1/2/3p)"
+      }
+    }
+  },
+  "Drowsiness": {
+    "cn": "疲乏无力",
+    "en": "Drowsiness",
+    "class": "warrior",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "砍击对方脚踝，并持续一定时间减缓动作。",
+      "en": "Deals only half amount of damage, but slows down the target's movement speed for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续5秒",
+        "en": "Half damage + slow"
+      },
+      "2": {
+        "cn": "持续6秒",
+        "en": ""
+      }
+    },
+    "books": {
+      "1": "Drowsiness 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Electric Imbue": {
+    "cn": "赋予闪电",
+    "en": "Electric Imbue",
+    "class": "breaker",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "以闪电魔力包裹全身，对攻击目标周边敌人也造成伤害。",
+      "en": "Wraps your body in electric power to protect yourself and damage enemies near your target."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加1个目标",
+        "en": "+1 target"
+      },
+      "2": {
+        "cn": "追加2个目标",
+        "en": "+2 target"
+      },
+      "3": {
+        "cn": "追加3个目标",
+        "en": "+3 target"
+      },
+      "4": {
+        "cn": "追加4个目标",
+        "en": "+4 target"
+      }
+    },
+    "books": {
+      "2": "Electric Imbue 2",
+      "3": "Electric Imbue 3",
+      "1": "Electric Imbue 1",
+      "4": "Electric Imbue 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
+      }
+    },
+    "notes": {
+      "cn": [
+        "减少30%从怪物受到的伤害",
+        "减少50%对敌人造成的伤害"
+      ],
+      "en": [
+        "30% less damage taken from monsters",
+        "50% less damage dealt to enemies"
+      ]
+    }
+  },
+  "Elemental Cycle": {
+    "cn": "元素循环",
+    "en": "Elemental Cycle",
+    "class": "breaker",
+    "learnLevel": 15,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "以目前体力为比例恢复体力。",
+      "en": "Continuously recovers HP proportionate to current HP. Can be removed by Warrior's Hemorrhage. (Mana Cost: 10)"
+    },
+    "levels": {
+      "1": {
+        "cn": "3秒内效果持续",
+        "en": "3 seconds buff duration"
+      },
+      "2": {
+        "cn": "5秒内效果持续",
+        "en": "5 seconds buff duration"
+      },
+      "3": {
+        "cn": "7秒内效果持续",
+        "en": "7 seconds buff duration"
+      }
+    },
+    "books": {
+      "2": "Elemental Cycle 2",
+      "3": "Elemental Cycle 3",
+      "1": "Elemental Cycle 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Elemental Release": {
+    "cn": "元素释放",
+    "en": "Elemental Release",
+    "class": "breaker",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "释放凝聚元素并对敌人赋予状态异常。",
+      "en": "Releases condensed elemental energy to inflict status effects. Effects vary by Cold or Electric Imbue."
+    },
+    "levels": {
+      "1": {
+        "cn": "寒气状态：移动速度减少20%、闪电状态：1.5秒内眩晕",
+        "en": "Cold: 20% movement SPD decrease / Electric: 1.5s stun"
+      },
+      "2": {
+        "cn": "寒气状态：移动速度减少25%、闪电状态：2秒内眩晕",
+        "en": "Cold: 25% movement SPD decrease / Electric: 2s stun"
+      },
+      "3": {
+        "cn": "寒气状态：移动速度减少40%、闪电状态：2.5秒内眩晕",
+        "en": "Cold: 40% movement SPD decrease / Electric: 2.5s stun"
+      }
+    },
+    "books": {
+      "2": "Elemental Release 2",
+      "1": "Elemental Release 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Ensnare": {
+    "cn": "圈套",
+    "en": "Ensnare",
+    "class": "ranger",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "设置陷阱，减弱目标速度。",
+      "en": "Places a trap to lower the target's movement speed."
+    },
+    "levels": {
+      "1": {
+        "cn": "移动速度减少36%",
+        "en": "36% slowed"
+      },
+      "2": {
+        "cn": "移动速度减少48%",
+        "en": "48% slowed"
+      },
+      "3": {
+        "cn": "移动速度减少60%",
+        "en": "60% slowed"
+      }
+    },
+    "books": {
+      "2": "Ensnare 2",
+      "1": "Ensnare 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Epiphany": {
+    "cn": "顿悟",
+    "en": "Epiphany",
+    "class": "magician",
+    "learnLevel": 45,
+    "type": "passive",
+    "crystal": "0",
+    "effect": {
+      "cn": " 特定技能可于顿悟后强化。已强化的技能将会受到追加魔力的影响。",
+      "en": "(Passive) Certain skills are awakened and powered up. Powered-up skills are affected by additional Mana."
+    },
+    "levels": {
+      "1": {
+        "cn": "强化守护祷告",
+        "en": "Power up Prayer of Protection"
+      },
+      "2": {
+        "cn": "强化光明疗愈",
+        "en": "Power up Light Healing"
+      },
+      "3": {
+        "cn": "强化护身盾牌及塞拉的祝福",
+        "en": "Power up Shield and Sara's Blessing"
+      }
+    },
+    "books": {},
+    "extraSources": {}
+  },
+  "Fatal Attack": {
+    "cn": "致命一击",
+    "en": "Fatal Attack",
+    "class": "warrior",
+    "learnLevel": 30,
+    "type": "active",
+    "crystal": "4",
+    "effect": {
+      "cn": "瞄准要害致命一击。",
+      "en": "Causes a fatal attack against the target's fatal spot."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加100%",
+        "en": "100% Addition"
+      },
+      "2": {
+        "cn": "追加200%",
+        "en": "200% Addition"
+      },
+      "3": {
+        "cn": "追加300%",
+        "en": "300% Addition"
+      }
+    },
+    "books": {
+      "1": "Fatal Attack 1",
+      "2": "Fatal Attack 2",
+      "3": "Fatal Attack 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      },
+      "3": {
+        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
+      }
+    }
+  },
+  "Fear": {
+    "cn": "恐怖",
+    "en": "Fear",
+    "class": "magician",
+    "learnLevel": 35,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使敌人陷入恐怖并逃跑。",
+      "en": "Strikes fear into the enemy, causing it to run away in fright."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续4秒",
+        "en": "Fears for 7-12 seconds (scales with INT)"
+      }
+    },
+    "books": {
+      "1": "Fear 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Firebolt": {
+    "cn": "火球",
+    "en": "Firebolt",
+    "class": "magician",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使用魔法召唤出小火球。",
+      "en": "Hurls a small fiery ball."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成28伤害",
+        "en": "28 damage"
+      },
+      "2": {
+        "cn": "造成33伤害",
+        "en": "33 damage"
+      },
+      "3": {
+        "cn": "造成42伤害",
+        "en": "42 damage"
+      },
+      "4": {
+        "cn": "造成60伤害",
+        "en": "60 damage"
+      }
+    },
+    "books": {
+      "2": "Firebolt 2",
+      "1": "Firebolt 1",
+      "3": "Firebolt 3",
+      "4": "Firebolt 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Firestorm": {
+    "cn": "火焰风暴",
+    "en": "Firestorm",
+    "class": "magician",
+    "learnLevel": 30,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "以目标为中心，制造火焰风暴。",
+      "en": "Causes a wave of flame to be radiated outward from the target."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成23伤害",
+        "en": "23 damage"
+      },
+      "2": {
+        "cn": "造成28伤害",
+        "en": "28 damage"
+      },
+      "3": {
+        "cn": "造成42伤害",
+        "en": "42 damage"
+      }
+    },
+    "books": {
+      "1": "Firestorm 1",
+      "2": "Firestorm 2",
+      "3": "Firestorm 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      },
+      "3": {
+        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
+      }
+    }
+  },
+  "Flame Shock": {
+    "cn": "火花冲击",
+    "en": "Flame Shock",
+    "class": "magician",
+    "learnLevel": 2,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "造成火花冲击。",
+      "en": "Deals shock damage by the flame."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成12伤害",
+        "en": "12 damage"
+      },
+      "2": {
+        "cn": "造成16伤害",
+        "en": "16 damage"
+      },
+      "3": {
+        "cn": "造成24伤害",
+        "en": "24 damage"
+      },
+      "4": {
+        "cn": "造成40伤害",
+        "en": "40 damage"
+      }
+    },
+    "books": {
+      "3": "Flame Shock 3",
+      "1": "Flame Shock 1",
+      "2": "Flame Shock 2",
+      "4": "Flame Shock 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "4": {
+        "cn": "蘑菇林 库林处合成（空中悬浮秘籍1/2/3p）",
+        "en": "Synthesize at 蘑菇林 库林 (空中悬浮秘籍1/2/3p)"
+      }
+    }
+  },
+  "Flame of Kataru": {
+    "cn": "卡塔勒的火焰",
+    "en": "Flame of Kataru",
+    "class": "magician",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "周围半径4格内，施展火焰魔法。",
+      "en": "Calls down a pillar of fire to burn all enemies within 3 tiles."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成14伤害",
+        "en": "14 damage"
+      },
+      "2": {
+        "cn": "造成16伤害",
+        "en": "16 damage"
+      },
+      "3": {
+        "cn": "造成21伤害",
+        "en": "21 damage"
+      },
+      "4": {
+        "cn": "造成30伤害",
+        "en": "30 damage"
+      }
+    },
+    "books": {
+      "1": "Flame of Kataru 1",
+      "2": "Flame of Kataru 2",
+      "3": "Flame of Kataru 3",
+      "4": "Flame of Kataru 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Flare": {
+    "cn": "爆燃",
+    "en": "Flare",
+    "class": "magician",
+    "learnLevel": 15,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "对目标造成瞬间火焰伤害。",
+      "en": "Blasts the target with fire damage instantly."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成28伤害",
+        "en": "28 damage"
+      },
+      "2": {
+        "cn": "造成33伤害",
+        "en": "33 damage"
+      },
+      "3": {
+        "cn": "造成42伤害",
+        "en": "42 damage"
+      }
+    },
+    "books": {
+      "1": "Flare 1",
+      "2": "Flare 2",
+      "3": "Flare 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Forest Eye": {
+    "cn": "森林之眼",
+    "en": "Forest Eye",
+    "class": "ranger",
+    "learnLevel": 45,
+    "type": "active",
+    "crystal": "?",
+    "effect": {
+      "cn": "5秒内增加射程，并提升暴击伤害。",
+      "en": "Increases the weapon range and critical hit damage for 5 seconds."
+    },
+    "levels": {
+      "1": {
+        "cn": "暴击伤害追加提升10%",
+        "en": "10% additional critical hit damage"
+      },
+      "2": {
+        "cn": "暴击伤害追加提升30%",
+        "en": "30% additional critical hit damage"
+      },
+      "3": {
+        "cn": "暴击伤害追加提升50%",
+        "en": "50% additional critical hit damage"
+      }
+    },
+    "books": {},
+    "extraSources": {}
+  },
+  "Freezing Trap": {
+    "cn": "冰冻",
+    "en": "Freezing Trap",
+    "class": "magician",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "冰冻目标，造成不可移动效果。",
+      "en": "Freezes the target causing it to be frozen in place for a certain time. If frozen target is attacked, freezing could be broken."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续4秒",
+        "en": "4 seconds"
+      },
+      "2": {
+        "cn": "持续6秒",
+        "en": "6 seconds"
+      },
+      "3": {
+        "cn": "持续8秒",
+        "en": "8 seconds"
+      }
+    },
+    "books": {
+      "3": "Freezing Trap 3",
+      "2": "Freezing Trap 2",
+      "1": "Freezing Trap 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Harden Body": {
+    "cn": "锻炼体力",
+    "en": "Harden Body",
+    "class": "warrior",
+    "learnLevel": 30,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "锻炼体力，强化体力上限。",
+      "en": "Harden Body skill (details limited)."
+    },
+    "levels": {
+      "1": {
+        "cn": "体力增加4%",
+        "en": "Effect level 1"
+      },
+      "2": {
+        "cn": "体力增加6%",
+        "en": "Effect level 2"
+      }
+    },
+    "books": {
+      "1": "Harden Body 1",
+      "2": "Harden Body 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Healing Wave": {
+    "cn": "治愈波",
+    "en": "Healing Wave",
+    "class": "magician",
+    "learnLevel": 25,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "持续30秒施展治愈。",
+      "en": "Heals friendly target's health every 2 seconds over 30 seconds (Healing scales with INT)."
+    },
+    "levels": {
+      "1": {
+        "cn": "每2秒治愈3体力",
+        "en": "3 health"
+      },
+      "2": {
+        "cn": "每2秒治愈6体力",
+        "en": "6 health"
+      }
+    },
+    "books": {
+      "1": "Healing Wave 1",
+      "2": "Healing Wave 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Heavy Strike": {
+    "cn": "强击",
+    "en": "Heavy Strike",
+    "class": "warrior",
+    "learnLevel": 40,
+    "type": "active",
+    "crystal": "All",
+    "effect": {
+      "cn": "消耗所有水晶，造成强力一击，有一定机率造成沉默状态。",
+      "en": "Heavy single target strike."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间30秒",
+        "en": "Heavy damage"
+      },
+      "2": {
+        "cn": "冷却时间25秒",
+        "en": "Heavier damage"
+      }
+    },
+    "books": {
+      "2": "Heavy Strike 2",
+      "1": "Heavy Strike 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Hellfire": {
+    "cn": "炼狱火道",
+    "en": "Hellfire",
+    "class": "magician",
+    "learnLevel": 40,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使目标燃烧起炼狱之火。",
+      "en": "Ignites by drawing hellfire up from where the target stands."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成33伤害",
+        "en": "33 damage"
+      },
+      "2": {
+        "cn": "造成40伤害",
+        "en": "40 damage"
+      }
+    },
+    "books": {
+      "1": "Hellfire 1",
+      "2": "Hellfire 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Hemorrhage": {
+    "cn": "出血",
+    "en": "Hemorrhage",
+    "class": "warrior",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "发动每次可造成伤害的攻击。",
+      "en": "Wounds the targets causing them to bleed."
+    },
+    "levels": {
+      "1": {
+        "cn": "每次造成2伤害",
+        "en": "2 damage per tick"
+      },
+      "2": {
+        "cn": "每次造成4伤害",
+        "en": "4 damage per tick"
+      },
+      "3": {
+        "cn": "每次造成8伤害",
+        "en": "8 damage per tick"
+      }
+    },
+    "books": {
+      "3": "Hemorrhage 3",
+      "1": "Hemorrhage 1",
+      "2": "Hemorrhage 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Ice Lance": {
+    "cn": "冰矛",
+    "en": "Ice Lance",
+    "class": "magician",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "丢掷冰矛冷冻目标，使其陷入无法移动状态。",
+      "en": "Throws an ice lance at target, possibly freezing it."
+    },
+    "levels": {
+      "1": {
+        "cn": "造成18伤害",
+        "en": "18 damage"
+      },
+      "2": {
+        "cn": "造成20伤害",
+        "en": "20 damage"
+      }
+    },
+    "books": {
+      "1": "Ice Lance 1",
+      "2": "Ice Lance 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Ice Prison": {
+    "cn": "冰牢",
+    "en": "Ice Prison",
+    "class": "magician",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "冰冻一定范围内的目标，并造成不可移动状态。",
+      "en": "Freezes targets within certain range (4 tiles)."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续4秒",
+        "en": "Freezes 4 seconds"
+      },
+      "2": {
+        "cn": "持续6秒",
+        "en": "Freezes 6 seconds"
+      },
+      "3": {
+        "cn": "持续8秒",
+        "en": "Freezes 8 seconds"
+      }
+    },
+    "books": {
+      "2": "Ice Prison 2",
+      "1": "Ice Prison 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Impact Shot": {
+    "cn": "强烈一击",
+    "en": "Impact Shot",
+    "class": "ranger",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "将力量灌注在弓箭上射向目标，造成伤害并陷入眩晕状态。",
+      "en": "Puts energy in an arrow to cause temporal impact on the target."
+    },
+    "levels": {
+      "1": {
+        "cn": "20%",
+        "en": "20% addition"
+      },
+      "2": {
+        "cn": "40%",
+        "en": "40% addition"
+      },
+      "3": {
+        "cn": "80%",
+        "en": "80% addition"
+      },
+      "4": {
+        "cn": "160%",
+        "en": "160% addition"
+      }
+    },
+    "books": {
+      "2": "Impact Shot 2",
+      "3": "Impact Shot 3",
+      "1": "Impact Shot 1",
+      "4": "Impact Shot 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Impact Training": {
+    "cn": "冲击锻炼",
+    "en": "Impact Training",
+    "class": "breaker",
+    "learnLevel": 25,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "于一定时间内免疫减益效果。免疫成功时，恢复水晶点数。",
+      "en": "Grants immunity to debuffs for a certain period. Restores Crystal Points upon successful resistance."
+    },
+    "levels": {
+      "1": {
+        "cn": "0.5秒内免疫",
+        "en": "0.5 seconds immunity"
+      },
+      "2": {
+        "cn": "1秒内免疫",
+        "en": "1.0 seconds immunity"
+      },
+      "3": {
+        "cn": "1.5秒内免疫",
+        "en": "1.5 seconds immunity"
+      }
+    },
+    "books": {
+      "2": "Impact Training 2",
+      "3": "Impact Training 3",
+      "1": "Impact Training 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Instinct Stimulus": {
+    "cn": "刺激本能",
+    "en": "Instinct Stimulus",
+    "class": "ranger",
+    "learnLevel": 30,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "刺激本能，增加暴击伤害量上限。",
+      "en": "Stimulates the caster's instinct to increase the maximum amount of crystals."
+    },
+    "levels": {
+      "1": {
+        "cn": "水晶x1",
+        "en": "1 crystal"
+      }
+    },
+    "books": {
+      "1": "Instinct Stimulus 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Last Resistance": {
+    "cn": "最后抵抗",
+    "en": "Last Resistance",
+    "class": "warrior",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "一定时间内减少90%所受伤害量。",
+      "en": "Receive only 10% of the damage for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续5秒",
+        "en": "5 seconds"
+      },
+      "2": {
+        "cn": "持续6秒",
+        "en": "6 seconds"
+      }
+    },
+    "books": {
+      "1": "Last Resistance 1",
+      "2": "Last Resistance 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Leap": {
+    "cn": "跳跃",
+    "en": "Leap",
+    "class": "breaker",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "快速向前移动。",
+      "en": "Quickly dashes toward the facing direction."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间6秒",
+        "en": "6 seconds cooldown"
+      },
+      "2": {
+        "cn": "冷却时间5秒",
+        "en": "5 seconds cooldown"
+      },
+      "3": {
+        "cn": "冷却时间4秒",
+        "en": "4 seconds cooldown"
+      },
+      "4": {
+        "cn": "冷却时间3秒",
+        "en": "3 seconds cooldown"
+      }
+    },
+    "books": {
+      "4": "Leap 4",
+      "1": "Leap 1",
+      "2": "Leap 2",
+      "3": "Leap 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
+      }
+    }
+  },
+  "Light Healing": {
+    "cn": "光明疗愈",
+    "en": "Light Healing",
+    "class": "magician",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "恢复目标的体力。(智力从10点开始，每增加1点奇数智力，治疗量增加+1。)",
+      "en": "Heals a friendly target(Starting at 10 Int, each odd Int value increases Healing by +1.)."
+    },
+    "levels": {
+      "1": {
+        "cn": "恢复20体力",
+        "en": "Heals 20"
+      },
+      "2": {
+        "cn": "恢复30体力",
+        "en": "Heals 30"
+      },
+      "3": {
+        "cn": "恢复40体力",
+        "en": "Heals 40"
+      }
+    },
+    "books": {
+      "3": "Light Healing 3",
+      "1": "Light Healing 1",
+      "2": "Light Healing 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Meditation": {
+    "cn": "冥想",
+    "en": "Meditation",
+    "class": "magician",
+    "learnLevel": 15,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "增加魔力再生速度。",
+      "en": "Passive. Increases mana regeneration."
+    },
+    "levels": {
+      "1": {
+        "cn": "魔力再生增加10",
+        "en": "+10"
+      },
+      "2": {
+        "cn": "魔力再生增加15",
+        "en": "+15"
+      }
+    },
+    "books": {
+      "2": "Meditation 2",
+      "1": "Meditation 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Multi Shot": {
+    "cn": "多重射击",
+    "en": "Multi Shot",
+    "class": "ranger",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "追加对其他目标发射弓箭。",
+      "en": "Shoots multiple targets."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加1个目标",
+        "en": "1 additional target"
+      },
+      "2": {
+        "cn": "追加2个目标",
+        "en": "2 additional targets"
+      },
+      "3": {
+        "cn": "追加3个目标",
+        "en": "3 additional targets"
+      }
+    },
+    "books": {
+      "2": "Multi Shot 2",
+      "1": "Multi Shot 1",
+      "3": "Multi Shot 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Neutralize": {
+    "cn": "无效化",
+    "en": "Neutralize",
+    "class": "magician",
+    "learnLevel": 40,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "解除目标所有水晶。",
+      "en": "Remove all of the opponent's crystals."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间80秒",
+        "en": "Cool time 80 seconds"
+      },
+      "2": {
+        "cn": "冷却时间70秒",
+        "en": "Cool time 70 seconds"
+      }
+    },
+    "books": {
+      "1": "Neutralize 1",
+      "2": "Neutralize 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Parry": {
+    "cn": "阻挡攻击",
+    "en": "Parry",
+    "class": "warrior",
+    "learnLevel": 5,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "有一定机率以武器阻挡攻击。",
+      "en": "Passive skill, blocks enemy attacks with a set probability."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加1%",
+        "en": "1%"
+      },
+      "2": {
+        "cn": "追加2%",
+        "en": "2%"
+      },
+      "3": {
+        "cn": "追加4%",
+        "en": "4%"
+      }
+    },
+    "books": {
+      "3": "Parry 3",
+      "1": "Parry 1",
+      "2": "Parry 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Poisoning": {
+    "cn": "中毒",
+    "en": "Poisoning",
+    "class": "magician",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "对目标下毒，持续15秒造成伤害。",
+      "en": "Poisons the target causing damage over 15 seconds."
+    },
+    "levels": {
+      "1": {
+        "cn": "每次造成3伤害",
+        "en": "15 damage"
+      },
+      "2": {
+        "cn": "每次造成4伤害",
+        "en": "20 damage"
+      },
+      "3": {
+        "cn": "每次造成6伤害",
+        "en": "30 damage"
+      }
+    },
+    "books": {
+      "1": "Poisoning 1",
+      "2": "Poisoning 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Power Shot": {
+    "cn": "强力射击",
+    "en": "Power Shot",
+    "class": "ranger",
+    "learnLevel": 40,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "发射强烈一箭。",
+      "en": "Shoots a powerful arrow."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加100%",
+        "en": "Raise 100%"
+      },
+      "2": {
+        "cn": "追加150%",
+        "en": "Raise 150%"
+      }
+    },
+    "books": {
+      "1": "Power Shot 1",
+      "2": "Power Shot 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Prayer of Protection": {
+    "cn": "守护祷告",
+    "en": "Prayer of Protection",
+    "class": "magician",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "恢复目标的体力，并施展吸收伤害的护身盾牌。(守护祷告存在期间，免疫眩晕)",
+      "en": "Casts a weaker shield spell while at the same time healing a small amount.(While POP is active, immune to Stun.)"
+    },
+    "levels": {
+      "1": {
+        "cn": "恢复15体力+吸收35伤害",
+        "en": "Heal 15, Shield 25"
+      },
+      "2": {
+        "cn": "恢复25体力+吸收55伤害",
+        "en": "Heal 25, Shield 55"
+      },
+      "3": {
+        "cn": "恢复35体力+吸收95伤害",
+        "en": "Heal 35, Shield 95"
+      }
+    },
+    "books": {
+      "1": "Prayer of Protection 1",
+      "2": "Prayer of Protection 2",
+      "3": "Prayer of Protection 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Rage": {
+    "cn": "暴怒",
+    "en": "Rage",
+    "class": "warrior",
+    "learnLevel": 15,
+    "type": "active",
+    "crystal": "3",
+    "effect": {
+      "cn": "使用时，持续6秒暴怒并提高暴击率。",
+      "en": "Enrages the caster to cause all attacks to be critical at a random probability."
+    },
+    "levels": {
+      "1": {
+        "cn": "55%",
+        "en": "+55% crit"
+      }
+    },
+    "books": {
+      "1": "Rage 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Sara's Blessing": {
+    "cn": "塞拉的祝福",
+    "en": "Sara's Blessing",
+    "class": "magician",
+    "learnLevel": 35,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使用时，恢复周围半径8格内队友的体力。",
+      "en": "Heals party members within 8 tiles. Healing scales with INT."
+    },
+    "levels": {
+      "1": {
+        "cn": "恢复20体力",
+        "en": "Heals 20"
+      },
+      "2": {
+        "cn": "恢复30体力",
+        "en": "Heals 30"
+      }
+    },
+    "books": {
+      "1": "Sara's Blessing 1",
+      "2": "Sara's Blessing 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Sharp Eye": {
+    "cn": "迅速反应",
+    "en": "Sharp Eye",
+    "class": "ranger",
+    "learnLevel": 15,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "提升反应度，提高暴击率。",
+      "en": "Passive. Increases critical rate by increasing the caster's senses."
+    },
+    "levels": {
+      "1": {
+        "cn": "1%",
+        "en": "Increases 1%"
+      },
+      "2": {
+        "cn": "2%",
+        "en": "Increases 2%"
+      },
+      "3": {
+        "cn": "4%",
+        "en": "Increases 4%"
+      }
+    },
+    "books": {
+      "1": "Sharp Eye 1",
+      "2": "Sharp Eye 2",
+      "3": "Sharp Eye 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Shield": {
+    "cn": "护身盾牌",
+    "en": "Shield",
+    "class": "magician",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "召唤出吸收伤害的盾牌。",
+      "en": "Spell casts a shield to absorb damage."
+    },
+    "levels": {
+      "1": {
+        "cn": "吸收10伤害",
+        "en": "Absorbs 10"
+      },
+      "2": {
+        "cn": "吸收20伤害",
+        "en": "Absorbs 20"
+      },
+      "3": {
+        "cn": "吸收40伤害",
+        "en": "Absorbs 40"
+      },
+      "4": {
+        "cn": "吸收80伤害",
+        "en": "Absorbs 80"
+      }
+    },
+    "books": {
+      "3": "Shield 3",
+      "4": "Shield 4",
+      "1": "Shield 1",
+      "2": "Shield 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Shift": {
+    "cn": "切换方位",
+    "en": "Shift",
+    "class": "ranger",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "往目标的反方向快速移动。",
+      "en": "Draws the caster away quickly from the target."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间13秒",
+        "en": "Cooldown 13 seconds"
+      },
+      "2": {
+        "cn": "冷却时间12秒",
+        "en": "Cooldown 12 seconds"
+      }
+    },
+    "books": {
+      "2": "Shift 2",
+      "1": "Shift 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Shout of Calmness": {
+    "cn": "平静呐喊",
+    "en": "Shout of Calmness",
+    "class": "warrior",
+    "learnLevel": 35,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "解除恐怖状态，并在一定时间内处于免疫恐怖状态。",
+      "en": "Shout of Calmness skill (details limited)."
+    },
+    "levels": {
+      "1": {
+        "cn": "免疫5秒，冷却时间90秒",
+        "en": "Effect level 1"
+      },
+      "2": {
+        "cn": "免疫6秒，冷却时间80秒",
+        "en": "Effect level 2"
+      }
+    },
+    "books": {
+      "1": "Shout of Calmness 1",
+      "2": "Shout of Calmness 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Silence": {
+    "cn": "沉默",
+    "en": "Silence",
+    "class": "magician",
+    "learnLevel": 30,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "一定时间内无法使用有害时间的技能。",
+      "en": "Stops target from casting for a certain amount of time."
+    },
+    "levels": {
+      "1": {
+        "cn": "3秒",
+        "en": "3 seconds"
+      },
+      "2": {
+        "cn": "4秒",
+        "en": "4 seconds"
+      }
+    },
+    "books": {
+      "1": "Silence 1",
+      "2": "Silence 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Sixth Sense": {
+    "cn": "预感",
+    "en": "Sixth Sense",
+    "class": "breaker",
+    "learnLevel": 35,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "以锻炼的感知预判并回避对方的攻击。",
+      "en": "Heightened Instincts allow evasion of enemy attacks."
+    },
+    "levels": {
+      "1": {
+        "cn": "回避增加1",
+        "en": "1 evasion increase"
+      },
+      "2": {
+        "cn": "回避增加2",
+        "en": "2 evasion increase"
+      }
+    },
+    "books": {
+      "2": "Sixth Sense 2",
+      "1": "Sixth Sense 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Slam": {
+    "cn": "强力肘击",
+    "en": "Slam",
+    "class": "warrior",
+    "learnLevel": 15,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "用剑击伤对方，并造成伤害使其陷入眩晕状态。",
+      "en": "A strike with a sword that may stun the target for some time."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20%",
+        "en": "20% addition"
+      },
+      "2": {
+        "cn": "追加40%",
+        "en": "40% addition"
+      },
+      "3": {
+        "cn": "追加80%",
+        "en": "80% addition"
+      }
+    },
+    "books": {
+      "2": "Slam 2",
+      "3": "Slam 3",
+      "1": "Slam 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Soul Drain Shot": {
+    "cn": "灵魂射击",
+    "en": "Soul Drain Shot",
+    "class": "ranger",
+    "learnLevel": 30,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "将魔力灌入弓箭中，造成一定伤害并吸收体力。",
+      "en": "Enchants an arrow to deal a certain amount of damage to drain health from the target to the caster."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20",
+        "en": "20 addition"
+      },
+      "2": {
+        "cn": "追加40",
+        "en": "40 addition"
+      },
+      "3": {
+        "cn": "追加60",
+        "en": "60 addition"
+      }
+    },
+    "books": {
+      "1": "Soul Drain Shot 1",
+      "2": "Soul Drain Shot 2",
+      "3": "Soul Drain Shot 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      },
+      "3": {
+        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
+      }
+    }
+  },
+  "Stampede": {
+    "cn": "惊逃",
+    "en": "Stampede",
+    "class": "warrior",
+    "learnLevel": 35,
+    "type": "active",
+    "crystal": "1",
+    "effect": {
+      "cn": "使用时，持续10秒增加周围半径8格内队友的移动速度。",
+      "en": "Increases Party members movement speed by 19 within 8 tiles for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间160秒",
+        "en": "Cooltime 180 seconds"
+      },
+      "2": {
+        "cn": "冷却时间140秒",
+        "en": "Cooltime 160 seconds"
+      }
+    },
+    "books": {
+      "1": "Stampede 1",
+      "2": "Stampede 2"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Stoneskin": {
+    "cn": "坚石皮肤",
+    "en": "Stoneskin",
+    "class": "ranger",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "持续3分钟增加防御力。",
+      "en": "Increases the friendly target's armor for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "防御力增加2",
+        "en": "2 armor"
+      },
+      "2": {
+        "cn": "防御力增加3",
+        "en": "3 armor"
+      },
+      "3": {
+        "cn": "防御力增加4",
+        "en": "4 armor"
+      }
+    },
+    "books": {
+      "1": "Stoneskin 1",
+      "2": "Stoneskin 2",
+      "3": "Stoneskin 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Stun": {
+    "cn": "麻痹",
+    "en": "Stun",
+    "class": "magician",
+    "learnLevel": 25,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "施履冲击，并持续一定时间陷入麻痹状态。",
+      "en": "Paralyzes the target for a certain time."
+    },
+    "levels": {
+      "1": {
+        "cn": "持续2秒",
+        "en": "2 seconds"
+      },
+      "2": {
+        "cn": "持续3秒",
+        "en": "3 seconds"
+      }
+    },
+    "books": {
+      "2": "Stun 2",
+      "1": "Stun 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Sweeping Strikes": {
+    "cn": "强力横扫",
+    "en": "Sweeping Strikes",
+    "class": "warrior",
+    "learnLevel": 20,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "使用时，持续6秒对追加目标造成伤害。",
+      "en": "A sweeping attack that deals damage to additional targets. Also increases attack range."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加1个目标",
+        "en": "1 additional target"
+      },
+      "2": {
+        "cn": "追加2个目标",
+        "en": "2 additional target"
+      },
+      "3": {
+        "cn": "追加3个目标",
+        "en": "3 additional target"
+      },
+      "4": {
+        "cn": "追加4个目标",
+        "en": "4 additional target"
+      }
+    },
+    "books": {
+      "1": "Sweeping Strikes 1",
+      "2": "Sweeping Strikes 2",
+      "3": "Sweeping Strikes 3",
+      "4": "Sweeping Strikes 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Swift": {
+    "cn": "俐落身手",
+    "en": "Swift",
+    "class": "ranger",
+    "learnLevel": 15,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "身体变得轻快，提高闪避率。",
+      "en": "Passive. Lightens the weight of your body to increase evasion rate."
+    },
+    "levels": {
+      "1": {
+        "cn": "提高1%",
+        "en": "+1% increase"
+      }
+    },
+    "books": {
+      "1": "Swift 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Taunting Blow": {
+    "cn": "挑衅",
+    "en": "Taunting Blow",
+    "class": "warrior",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "2",
+    "effect": {
+      "cn": "对敌人发动挑衅攻击。技能等级越高，挑衅强度越高。",
+      "en": "Taunts the target to attack you, dealing slight damage."
+    },
+    "levels": {
+      "1": {
+        "cn": "挑衅强度提升",
+        "en": "As the skill level increases, so does the taunting strength."
+      },
+      "2": {
+        "cn": "挑衅强度提升",
+        "en": "Increased taunting strength"
+      }
+    },
+    "books": {
+      "2": "Taunting Blow 2",
+      "1": "Taunting Blow 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      }
+    }
+  },
+  "Teleport": {
+    "cn": "瞬间移动",
+    "en": "Teleport",
+    "class": "magician",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "向前方瞬间移动一定距离。",
+      "en": "Teleports the caster a certain distance in the direction they are facing."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间12秒",
+        "en": "Cooltime 12 seconds"
+      },
+      "2": {
+        "cn": "冷却时间11秒",
+        "en": "Cooltime 11 seconds"
+      },
+      "3": {
+        "cn": "冷却时间10秒",
+        "en": "Cooltime 10 seconds"
+      }
+    },
+    "books": {
+      "2": "Teleport 2",
+      "3": "Teleport 3",
+      "1": "Teleport 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波鲁波图腾）",
+        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波鲁波图腾)"
+      }
+    }
+  },
+  "Thorns": {
+    "cn": "尖刺藤蔓",
+    "en": "Thorns",
+    "class": "ranger",
+    "learnLevel": 5,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "持续2分钟每次被攻击时，反射一定伤害量。",
+      "en": "Reflects certain amount of damage received."
+    },
+    "levels": {
+      "1": {
+        "cn": "反射2伤害",
+        "en": "2 damage"
+      },
+      "2": {
+        "cn": "反射4伤害",
+        "en": "4 damage"
+      },
+      "3": {
+        "cn": "反射8伤害",
+        "en": "8 damage"
+      }
+    },
+    "books": {
+      "1": "Thorns 1",
+      "2": "Thorns 2",
+      "3": "Thorns 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
+      }
+    }
+  },
+  "Toughness": {
+    "cn": "强韧",
+    "en": "Toughness",
+    "class": "warrior",
+    "learnLevel": 15,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "锻炼身体，减少所受伤害。",
+      "en": "Passive skill. Decrease damage taken from all sources."
+    },
+    "levels": {
+      "1": {
+        "cn": "2%",
+        "en": "2%"
+      },
+      "2": {
+        "cn": "4%",
+        "en": "4%"
+      },
+      "3": {
+        "cn": "6%",
+        "en": "6%"
+      }
+    },
+    "books": {
+      "1": "Toughness 1",
+      "2": "Toughness 2",
+      "3": "Toughness 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      }
+    }
+  },
+  "Weakness": {
+    "cn": "弱化防御",
+    "en": "Weakness",
+    "class": "ranger",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "弱化目标的防御力。",
+      "en": "Weakens the targets' armor."
+    },
+    "levels": {
+      "1": {
+        "cn": "防御力减少2",
+        "en": "Decrease 2 armor"
+      },
+      "2": {
+        "cn": "防御力减少4",
+        "en": "Decrease 4 armor"
+      },
+      "3": {
+        "cn": "防御力减少8",
+        "en": "Decrease 8 armor"
+      }
+    },
+    "books": {
+      "2": "Weakness 2",
+      "1": "Weakness 1",
+      "3": "Weakness 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波青铜铃铛）",
+        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波青铜铃铛)"
+      }
+    }
+  },
+  "Wild Charge": {
+    "cn": "疯狂冲刺",
+    "en": "Wild Charge",
+    "class": "warrior",
+    "learnLevel": 10,
+    "type": "active",
+    "crystal": "0",
+    "effect": {
+      "cn": "冲向范围内的目标，造成眩晕状态。",
+      "en": "Charges the target within a certain range causing a stun."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间15秒",
+        "en": "Cooltime 15 seconds"
+      },
+      "2": {
+        "cn": "冷却时间13秒",
+        "en": "Cooltime 13 seconds"
+      },
+      "3": {
+        "cn": "冷却时间11秒",
+        "en": "Cooltime 11 seconds"
+      },
+      "4": {
+        "cn": "冷却时间9秒",
+        "en": "Cooltime 9 seconds"
+      }
+    },
+    "books": {
+      "1": "Wild Charge 1",
+      "2": "Wild Charge 2",
+      "3": "Wild Charge 3",
+      "4": "Wild Charge 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "羽妖岛海岸 阅读家马尔处购买",
+        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
+      },
+      "3": {
+        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
+      },
+      "4": {
+        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
+      }
+    }
+  },
+  "Wild Swing": {
+    "cn": "疯狂剑舞",
+    "en": "Wild Swing",
+    "class": "warrior",
+    "learnLevel": 2,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "强力砍击，造成追加伤害。",
+      "en": "Deals additional damage with a strong attack."
+    },
+    "levels": {
+      "1": {
+        "cn": "追加20%",
+        "en": "20% additional damage"
+      },
+      "2": {
+        "cn": "追加40%",
+        "en": "40% additional damage"
+      },
+      "3": {
+        "cn": "追加80%",
+        "en": "80% additional damage"
+      },
+      "4": {
+        "cn": "追加160%",
+        "en": "160% additional damage"
+      }
+    },
+    "books": {
+      "3": "Wild Swing 3",
+      "1": "Wild Swing 1",
+      "2": "Wild Swing 2",
+      "4": "Wild Swing 4"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "2": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "3": {
+        "cn": "木林村/木木村 阅读家拉尔处购买",
+        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
+      },
+      "4": {
+        "cn": "蘑菇林 库林处合成（双手活用武器秘籍1/2/3p）",
+        "en": "Synthesize at 蘑菇林 库林 (双手活用武器秘籍1/2/3p)"
+      }
+    }
+  },
+  "Will of Elemental": {
+    "cn": "强烈意志",
+    "en": "Will of Elemental",
+    "class": "warrior",
+    "learnLevel": 25,
+    "type": "passive",
+    "crystal": "",
+    "effect": {
+      "cn": "提高对所有元素的抵抗力。",
+      "en": "Will of Elemental skill (details limited)."
+    },
+    "levels": {
+      "1": {
+        "cn": "抵抗+1",
+        "en": "Effect level 1"
+      },
+      "2": {
+        "cn": "抵抗+2",
+        "en": "Effect level 2"
+      }
+    },
+    "books": {
+      "2": "Will of Elemental 2",
+      "1": "Will of Elemental 1"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "主城 阅读家哈尔处购买",
+        "en": "Buy from 阅读家哈尔 at 主城"
+      }
+    }
+  },
+  "Ki Barrier": {
+    "cn": "气之帷幕",
+    "en": "Ki Barrier",
+    "class": "breaker",
+    "learnLevel": 25,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使HP上限增加10秒，并立即恢复HP",
+      "en": "Increases Max HP for 10 sec and instantly recovers HP."
+    },
+    "levels": {
+      "1": {
+        "cn": "HP 50",
+        "en": "HP 50"
+      },
+      "2": {
+        "cn": "HP 75",
+        "en": "HP 75"
+      },
+      "3": {
+        "cn": "HP 100",
+        "en": "HP 100"
+      }
+    },
+    "notes": {},
+    "books": {},
+    "extraSources": {}
+  },
+  "Upsurge": {
+    "cn": "激昂",
+    "en": "Upsurge",
+    "class": "breaker",
+    "learnLevel": 40,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "使用时，使周围半径8格内队友的暴击率提升5，持续5秒",
+      "en": "Increases the critical rate of party members in a radius of 8 tiles by 5 for 5 sec."
+    },
+    "levels": {
+      "1": {
+        "cn": "冷却时间180秒",
+        "en": "180 seconds cooldown"
+      },
+      "2": {
+        "cn": "冷却时间160秒",
+        "en": "160 seconds cooldown"
+      }
+    },
+    "notes": {},
+    "books": {},
+    "extraSources": {}
+  },
+  "Air-Rending Kick": {
+    "cn": "破空脚",
+    "en": "Air-Rending Kick",
+    "class": "breaker",
+    "learnLevel": 45,
+    "type": "active",
+    "crystal": "",
+    "effect": {
+      "cn": "以强力回旋踢撼动空气，对远处的目标造成冲击。自身目前体力越低，伤害量越高",
+      "en": "Unleashes a powerful roundhouse kick that sends a shockwave through the air to strike a distant target. Deals more damage the lower your current HP."
+    },
+    "levels": {
+      "1": {
+        "cn": "100%",
+        "en": "100%"
+      },
+      "2": {
+        "cn": "200%",
+        "en": "200%"
+      },
+      "3": {
+        "cn": "300%",
+        "en": "300%"
+      }
+    },
+    "notes": {
+      "cn": [
+        "赋予寒气：赋予麻痹减益效果",
+        "赋予闪电：赋予麻痹减益效果"
+      ],
+      "en": [
+        "Cold Imbue: Apply Stun",
+        "Electric Imbue: Apply Stun"
+      ]
+    },
+    "books": {},
+    "extraSources": {}
+  }
+}

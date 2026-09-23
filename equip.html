@@ -183,6 +183,7 @@ body{background:#f0f2f5;padding:12px}
 </div>
 <button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
 <button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
 <div class="top-bar" id="jobBar">
   <button class="type-btn active" data-job="all">全部职业</button>
   <button class="type-btn" data-job="warrior">战士</button>
@@ -201,8 +202,9 @@ body{background:#f0f2f5;padding:12px}
   <button class="type-btn" data-type="cloaks">披风</button>
   <button class="type-btn" data-type="necklaces">项链</button>
   <button class="type-btn" data-type="rings">戒指</button>
-  <button class="type-btn" data-type="shields">盾牌</button>
-  <button class="type-btn" data-type="charms">护身符</button>
+<button class="type-btn" data-type="shields">盾牌</button>
+<button class="type-btn" data-type="quivers">箭袋</button>
+<button class="type-btn" data-type="charms">护身符</button>
 </div>
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="prevTop">上一页</button>
@@ -288,6 +290,11 @@ const typeLangMap = {
     en: "Shields",
     kr: "방패"
   },
+  quivers: {
+    cn: "箭袋",
+    en: "Quivers",
+    kr: "화살통"
+  },
   charms: {
     cn: "护身符",
     en: "Charms",
@@ -371,7 +378,7 @@ const langConfig = {
     speed:{cn:"攻速",en:"SPEED",kr:""}, block:{cn:"阻挡",en:"block",kr:""},
     hp:{cn:"体力",en:"HP",kr:""}, mana:{cn:"魔力",en:"MANA",kr:""},
     hp_regen:{cn:"体力回复",en:"HP Regen",kr:""}, mana_regen:{cn:"魔力回复",en:"MANA Regen",kr:""},
-    str:{cn:"力量",en:"STR",kr:""}, dex:{cn:"敏捷",en:"DEX",kr:""}, int:{cn:"智力",en:"INT",kr:""},
+    str:{cn:"力量",en:"STR",kr:""}, dex:{cn:"敏捷",en:"DEX",kr:""}, precision:{cn:"精密",en:"Precision",kr:""}, int:{cn:"智力",en:"INT",kr:""},
     hit:{cn:"命中",en:"Hit",kr:""}, cri:{cn:"暴击",en:"Cri",kr:""},
     deadly:{cn:"致死一击",en:"Deadly",kr:""}, move:{cn:"移动速度",en:"Move",kr:""},
     ice_resist:{cn:"冰抗",en:"Ice Res",kr:""}, fire_resist:{cn:"火抗",en:"Fire Res",kr:""},
@@ -386,6 +393,8 @@ let page = 1;
 let allItems = [];
 let filteredItems = [];
 let resetMap = {};
+let nameMap = {};
+let cnToEnMap = {};
 let currentType = "all";
 let currentJob = "all";
 function getPerPage(){
@@ -406,6 +415,7 @@ function getPerPage(){
 const equipFiles = [ { type:"all", path:"equipment_data/all_equip.json" } ];
 
 const statKeys = [
+  "precision",
   "attack",
   "armor",
   "speed",
@@ -439,7 +449,8 @@ const rarityConfig = {
 const navLang = {
   monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
   equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
-  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"}
+  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"},
+  skill:   {cn:"技能图鉴", en:"Skills", kr:"스킬 도감"}
 };
 
 function updateNavLang(){
@@ -535,6 +546,7 @@ if(k === "mana_regen") alias = "回蓝";
 if(k === "deadly") alias = "致命 致死";
 if(k === "block") alias = "格挡";
 if(k === "fire_resist") alias = "火";
+if(k === "precision") alias = "精准";
 
   attrStr += `
     ${k}
@@ -612,6 +624,21 @@ async function loadMyJson(){
   } catch(e) {
     console.log("load reset fail", e);
     resetMap = {};
+  }
+
+  // 加载语言数据（获取途径弹窗怪物名本地化）
+  try {
+    const res = await fetch("lang.json");
+    const lang = await res.json();
+    nameMap = lang.nameMap || {};
+  } catch(e) {
+    console.log("load lang fail", e);
+    nameMap = {};
+  }
+  cnToEnMap = {};
+  for(const en in nameMap){
+    const v = nameMap[en];
+    if(v && v.cn) cnToEnMap[v.cn] = en;
   }
   
   // 过滤掉隐藏装备
@@ -807,14 +834,31 @@ function openModal(d){
 
     const t = text.trim();
 
-    // 怪物（可点击）
+    // 掉落提示前缀（跟随语言）
+    if (t.indexOf("怪物掉落") === 0) {
+
+      const prefix = currentLang === "en" ? "Monster drops (clickable):" : "怪物掉落↓可点击↓:";
+
+      return `
+        <div style="
+          cursor:default;
+          background:#f3f3f3;
+        ">
+          ${prefix}
+        </div>
+      `;
+    }
+
+    // 怪物（可点击，名称跟随语言）
     if (t.startsWith("@")) {
 
       const monster = t.slice(1);
+      const en = cnToEnMap[monster];
+      const disp = en ? ((nameMap[en] && (nameMap[en][currentLang] || nameMap[en].en)) || monster) : monster;
 
       return `
         <div onclick="goMonster('${monster.replace(/'/g,"\\'")}')">
-          ${monster}
+          ${disp}
         </div>
       `;
     }

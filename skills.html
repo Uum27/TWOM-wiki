@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>物品图鉴</title>
+<title>技能图鉴</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
 body{background:#f0f2f5;padding:12px}
@@ -36,8 +36,8 @@ body{background:#f0f2f5;padding:12px}
 .type-btn.active{ background:#718ACC;color:#fff;border-color:#718ACC }
 .page-btn{margin:0 4px}
 
-/* 分类栏 */
-#catBar.top-bar{
+/* 职业分类栏 */
+#classBar.top-bar{
   position:static;
   background:transparent;
   margin-bottom:1px;
@@ -54,21 +54,11 @@ body{background:#f0f2f5;padding:12px}
   grid-template-columns:repeat(2,1fr);
   gap:12px;
 }
-
-/* 平板 */
 @media(min-width:768px) and (max-width:1023px){
-  .equip-grid{
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-  }
+  .equip-grid{ grid-template-columns:repeat(3,1fr);gap:14px; }
 }
-
-/* PC */
 @media(min-width:1024px){
-  .equip-grid{
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-  }
+  .equip-grid{ grid-template-columns:repeat(4,1fr);gap:18px; }
 }
 
 .equip-card{
@@ -101,15 +91,44 @@ body{background:#f0f2f5;padding:12px}
 .hex-icon img{width:34px;height:34px;object-fit:contain}
 @media(min-width:1024px){ .hex-icon{width:68px;height:68px} .hex-icon img{width:42px;height:42px} }
 
-.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
-.item-card .tag-rarity{ position:relative;left:6px;top:-3px }   /* 物品图鉴：标签右移6px、上移3px */
-.item-level{ min-height:20px }          /* 等级位留空 */
-.item-card .job-slot{ min-height:24px } /* 职业位留空 */
+/* 技能卡：圆形图标框（与技能图标同尺寸，去掉星星） */
+.skill-card .hex-icon{ width:44px;height:44px;border-radius:50%;clip-path:none; }
+.skill-card .hex-icon .star{ display:none; }
+.skill-card .hex-icon img{ width:44px;height:44px; }
+@media(min-width:1024px){
+  .skill-card .hex-icon{ width:56px;height:56px; }
+  .skill-card .hex-icon img{ width:56px;height:56px; }
+}
 
-.equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
-.item-stats{ min-height:40px }          /* 属性框先留空 */
-.item-note{ font-size:13px;color:#3D4E68;line-height:1.6;text-align:left;padding:0 4px }
-.item-link{ color:#3774AE;text-decoration:underline;cursor:pointer }
+.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
+.skill-type.active{ background:#328300 }
+.skill-type.passive{ background:#0068A9 }
+
+/* 技能卡：信息行顶部对齐（无等级占位） */
+.skill-card .equip-info-row{ align-items:flex-start }
+/* 需求等级（金黄） */
+.skill-learn{ font-size:13px;font-weight:bold;color:#C9A227;line-height:1.2 }
+/* 第二行：主动/被动 + 水晶消耗 */
+.skill-row2{ display:flex;align-items:center;gap:6px;flex-wrap:wrap }
+.skill-row2 .skill-crystal{ margin-left:auto }
+.skill-crystal{ display:inline-flex;align-items:center;gap:3px;font-size:13px;color:#3D4E68 }
+.skill-crystal img{ width:12px;height:20px;object-fit:contain }
+
+/* 技能效果框（全宽） */
+.skill-effect{
+  background:#EEF3F9;border-radius:8px;padding:6px 8px;margin-top:4px;
+  font-size:14px;color:#333;line-height:1.5;text-align:left;min-height:38px;
+  white-space:pre-line;
+}
+/* 备注行（寒气/闪电等，金黄） */
+.skill-notes{ color:#C9A227;margin-top:2px }
+
+/* 属性框：各级加成（全绿 + 斑马线） */
+.equip-stats{ background:#C6D4E4;padding:6px 8px;border-radius:8px;margin-top:4px }
+.skill-level-row{ display:flex;align-items:center;gap:6px;font-size:14px;line-height:1.6;text-align:left;padding:2px 8px;margin:0 -8px;border-radius:4px }
+.skill-level-row:nth-child(even){ background:#BCCBDE }
+.skill-lv{ font-weight:bold;color:#2E7D32;flex:0 0 auto }
+.skill-bonus{ color:#2E7D32;flex:1 }
 
 /* 卡片底部操作行 */
 .card-actions{ display:flex;gap:6px;margin-top:auto }
@@ -122,8 +141,6 @@ body{background:#f0f2f5;padding:12px}
 .modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
 .modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
 .modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
-.modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; }
-.modal-desc div:hover{ background:#e0e7ff; }
 .modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
 
 /* 获取途径弹窗：内容超高时内部滚动 */
@@ -131,28 +148,42 @@ body{background:#f0f2f5;padding:12px}
 .modal-content.source-modal .modal-title{ flex-shrink:0 }
 .modal-content.source-modal .modal-desc{ flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain }
 .modal-content.source-modal .modal-close{ align-self:center;flex-shrink:0 }
+
+/* 获取途径：行内格式「名称：怪物/怪物」+ 斑马纹 */
+.modal-desc .source-row{
+  display:block;padding:6px 8px;margin:0;border-radius:0;
+  background:none;cursor:default;text-align:left;
+}
+.modal-desc .source-row:nth-child(even){ background:#f7f9fc }
+.source-name{ font-weight:bold;color:#3D4E68 }
+.source-src{ color:#666 }
+.src-monster{ color:#3774AE;cursor:pointer;text-decoration:underline }
+.src-sep{ color:#999;margin:0 3px }
+.src-text{ color:#666 }
 </style>
 </head>
 
 <body>
 <div class="top-bar">
-  <input class="search-box" placeholder="搜索物品名..." id="searchBox">
+  <input class="search-box" placeholder="搜索技能名/效果..." id="searchBox">
   <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
 </div>
 <button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
 <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
-<button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
-<div class="top-bar" id="catBar">
-  <button class="type-btn active" data-cat="all">全部</button>
-  <button class="type-btn" data-cat="consume">消耗品</button>
-  <button class="type-btn" data-cat="other">其他</button>
+<button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<div class="top-bar" id="classBar">
+  <button class="type-btn active" data-class="all">全部</button>
+  <button class="type-btn" data-class="warrior">战士</button>
+  <button class="type-btn" data-class="ranger">游侠</button>
+  <button class="type-btn" data-class="magician">法师</button>
+  <button class="type-btn" data-class="breaker">武术家</button>
 </div>
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="prevTop">上一页</button>
   <span id="pageInfo">第 1 页</span>
   <button class="page-btn" id="nextTop">下一页</button>
 </div>
-<div class="equip-grid" id="itemGrid">加载中...</div>
+<div class="equip-grid" id="skillGrid">加载中...</div>
 <div class="pagination" id="bottomPagination">
   <button class="page-btn" id="prevBot">上一页</button>
   <span id="pageInfoBot">第 1 页</span>
@@ -169,16 +200,31 @@ body{background:#f0f2f5;padding:12px}
 <script>
 let currentLang = "cn";
 const langConfig = {
-  searchPlaceholder:{cn:"搜索物品名...",en:"Search item...",kr:"아이템 검색..."},
+  searchPlaceholder:{cn:"搜索技能名/效果...",en:"Search skill...",kr:"스킬 검색..."},
   pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
   btnText:{
     prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
     source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
-    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无物品数据",en:"No data",kr:"데이터 없음"}
+    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无技能数据",en:"No data",kr:"데이터 없음"}
   },
-  rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"} }
+  skillType:{
+    active:{cn:"主动",en:"Active",kr:"액티브"},
+    passive:{cn:"被动",en:"Passive",kr:"패시브"}
+  },
+  skillText:{
+    crystalAll:{cn:"全部",en:"All",kr:"전체"},
+    reqLv:{cn:"需求等级:LV",en:"Req Lv: ",kr:"요구 Lv: "}
+  }
 };
-const rarityConfig = { "一般":{color:"#4D5A75",bg:"#474F6E"} };
+
+const classLang = {
+  all:{cn:"全部",en:"All",kr:"전체"},
+  warrior:{cn:"战士",en:"Warrior",kr:"전사"},
+  ranger:{cn:"游侠",en:"Ranger",kr:"궁수"},
+  magician:{cn:"法师",en:"Magician",kr:"마법사"},
+  breaker:{cn:"武术家",en:"Breaker",kr:"무도가"}
+};
+const classOrder = ["warrior","ranger","magician","breaker"];
 
 // 导航按钮三语
 const navLang = {
@@ -195,89 +241,13 @@ function updateNavLang(){
   });
 }
 
-// 分类筛选
-const catLang = {
-  all:{cn:"全部",en:"All",kr:"전체"},
-  consume:{cn:"消耗品",en:"Consumable",kr:"소모품"},
-  other:{cn:"其他",en:"Other",kr:"기타"}
-};
-
-// 消耗品名单（其余归入「其他」）
-const CONSUMABLES = new Set([
-  "Lesser Healing Potion","Healing Potion","Greater Healing Potion","Super Healing Potion","Health Regeneration Potion",
-  "Lesser Mana Potion","Mana Potion","Greater Mana Potion","Super Mana Potion","Mana Regeneration Potion",
-  "Greater Restoration Potion",
-  "Bandage","Thick Bandage",
-  "Barbeque","Wild Boar Barbeque","Well Being Herb Bread","Dongryu Juice","Nutrition Beverage","Palm Cocktail","Lollipop",
-  "Small Treasure Box","Old Box","Box Flowing with Mana","Potion Bag"
-]);
-
-// 补充装备名单（dropColors 未标 equip，但属于装备，需从物品图鉴排除）
-const EXTRA_EQUIP = new Set([
-  "Apprentice Magician Robe","Canine Tooth of Madness","Crown","Master Magician Robe",
-  "Mitten","Thundersteel","Woopa Roopa's Staff"
-]);
-
-// 符文兑换：3 个相同符文 -> 技能书
-const RUNE_EXCHANGE = {
-  "Mercy Rune":           { where: "石冠营地 神秘幻影研究家", book: "Wild Charge 4" },
-  "Penitence Rune":       { where: "石冠营地 神秘幻影研究家", book: "Impact Shot 4" },
-  "Resurrection Rune":    { where: "石冠营地 神秘幻影研究家", book: "Firebolt 4" },
-  "Atonement Rune":       { where: "石冠营地 神秘幻影研究家", book: "Breaker's Strike 4" },
-  "Execution Rune":       { where: "石冠营地 神秘幻影研究家", book: "Sweeping Strikes 4" },
-  "Torture Rune":         { where: "石冠营地 神秘幻影研究家", book: "Multi Shot 3" },
-  "Bio Magic Power Rune": { where: "石冠营地 神秘幻影研究家", book: "Flame of Kataru 4" },
-  "Corruption Rune":      { where: "石冠营地 神秘幻影研究家", book: "Electric Imbue 4" },
-  "Supremacy Rune":       { where: "庭院 戴尔菲", book: "Baekha's Strike 4", fromBox: true },
-  "Giant's rune":         { where: "庭院 戴尔菲", book: "Fatal Attack 3", fromBox: true },
-  "Depredation rune":     { where: "庭院 戴尔菲", book: "Soul Drain Shot 3", fromBox: true },
-  "Judgment rune":        { where: "庭院 戴尔菲", book: "Firestorm 3", fromBox: true }
-};
-const BOX_RUNES = ["Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"];
-
-// 物品名称（当前语言 → 中文 → 英文）
-function itemNameOf(en){
-  const m = dropMap[en] || {};
-  if(currentLang === "en") return m.en || en;
-  if(currentLang === "kr") return m.kr || m.en || en;
-  return m.cn || en;
-}
-
-// 符文/箱子说明（含跳转）
-function itemNote(name){
-  const isEn = currentLang === "en";
-  if(name === "Box Flowing with Mana"){
-    const links = BOX_RUNES.map(r =>
-      `<span class="item-link" onclick="goItem('${r.replace(/'/g,"\\'")}')">${itemNameOf(r)}</span>`
-    ).join(" / ");
-    return `<div class="item-note">${isEn ? "Randomly contains: " : "开启随机获得："}${links}</div>`;
-  }
-  const info = RUNE_EXCHANGE[name];
-  if(!info) return "";
-  const skillLink = `<span class="item-link" onclick="goSkill('${info.book.replace(/'/g,"\\'")}')">${itemNameOf(info.book)}</span>`;
-  const exchange = isEn ? `${info.where} x3 exchange: ` : `${info.where}x3兑换：`;
-  if(info.fromBox){
-    const boxLink = `<span class="item-link" onclick="goItem('Box Flowing with Mana')">${itemNameOf("Box Flowing with Mana")}</span>`;
-    return `<div class="item-note">${isEn ? "Randomly obtained from " : "由"}${boxLink}${isEn ? "; " : "随机开出；"}${exchange}${skillLink}</div>`;
-  }
-  return `<div class="item-note">${exchange}${skillLink}</div>`;
-}
-
-function goItem(name){
-  location.href = `items.html?item=${encodeURIComponent(name)}`;
-}
-function goSkill(name){
-  const base = String(name).replace(/\s*\d+$/, "");
-  location.href = `skills.html?skill=${encodeURIComponent(base)}`;
-}
-
 let page = 1;
-let allItems = [];
-let filteredItems = [];
+let allSkills = [];
+let filteredSkills = [];
 let dropMap = {};
 let nameMap = {};
-let dcType = {};
-let currentCat = "all";
+let bookMonsters = {};
+let currentClass = "all";
 
 function getPerPage(){
   if(window.innerWidth >= 1024) return 20;
@@ -290,11 +260,17 @@ function tr(key, type){
   return o?.[currentLang] || o?.cn || key;
 }
 
-function itemDisplayName(en){
-  const m = dropMap[en] || {};
-  if(currentLang === "en") return m.en || en;
-  if(currentLang === "kr") return m.kr || m.en || en;
-  return m.cn || en;
+function skillName(s){
+  if(currentLang === "en") return s.en || s.cn || s.key;
+  if(currentLang === "kr") return s.kr || s.en || s.cn || s.key;
+  return s.cn || s.en || s.key;
+}
+
+// 中英双语字段取值（当前语言 → 中文 → 英文）
+function pick(v){
+  if(v == null) return "";
+  if(typeof v === "string") return v.trim();
+  return String(v[currentLang] || v.cn || v.en || "").trim();
 }
 
 function monsterDisplayName(en){
@@ -302,10 +278,37 @@ function monsterDisplayName(en){
   return m[currentLang] || m.cn || en;
 }
 
-// 按当前语言名称排序（中文拼音，英文/韩文按英文名）
-function sortItems(){
+// 来源文案中的怪物名 -> 可点击（faith/illust/billiard/sephia/whale）
+const EXTRA_MONSTERS = [
+  ["faith", "Faith"], ["illust", "Illust"], ["billiard", "Billiard"], ["sephia", "Sephia"], ["whale", "Platanista"]
+];
+function linkifySourceText(text){
+  let out = text;
+  EXTRA_MONSTERS.forEach(([alias, en])=>{
+    const re = new RegExp("\\b" + alias + "\\b", "gi");
+    const disp = monsterDisplayName(en);
+    const cn = (nameMap[en] && nameMap[en].cn) || en;
+    out = out.replace(re, `<span class="src-monster" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>`);
+  });
+  return out;
+}
+
+// 排序：职业（战士→游侠→法师→武术家）→ 学习等级升序 → 名称
+function sortSkills(){
   const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
-  allItems.sort((a,b)=> coll.compare(itemDisplayName(a.name), itemDisplayName(b.name)) || a.name.localeCompare(b.name));
+  const classRank = (c)=>{
+    const i = classOrder.indexOf(c);
+    return i === -1 ? 99 : i;
+  };
+  allSkills.sort((a,b)=>{
+    const ca = classRank(a.class), cb = classRank(b.class);
+    if(ca !== cb) return ca - cb;
+    const la = parseInt(a.learnLevel, 10), lb = parseInt(b.learnLevel, 10);
+    const va = isNaN(la) ? Infinity : la;
+    const vb = isNaN(lb) ? Infinity : lb;
+    if(va !== vb) return va - vb;
+    return coll.compare(skillName(a), skillName(b)) || a.key.localeCompare(b.key);
+  });
 }
 
 function updateLangText(){
@@ -315,19 +318,19 @@ function updateLangText(){
   document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
   document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
   document.querySelector('.modal-close').innerText = tr('close','btnText');
-  updateCatButtonsLang();
+  updateClassButtonsLang();
   updateNavLang();
 }
 
-function updateCatButtonsLang(){
-  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
-    const c = btn.dataset.cat;
-    if(catLang[c]) btn.innerText = catLang[c][currentLang];
+function updateClassButtonsLang(){
+  document.querySelectorAll('#classBar .type-btn').forEach(btn=>{
+    const c = btn.dataset.class;
+    if(classLang[c]) btn.innerText = classLang[c][currentLang];
   });
 }
 
 function updatePageInfo(){
-  const total = Math.ceil(filteredItems.length / getPerPage());
+  const total = Math.ceil(filteredSkills.length / getPerPage());
   const s = langConfig.pageText[currentLang].replace("{now}",page).replace("{total}",total||1);
   document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
 }
@@ -335,25 +338,25 @@ function updatePageInfo(){
 function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
   updateLangText();
-  sortItems();
+  sortSkills();
   filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim(), true);
 }
 
 function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
 
+function searchable(s){
+  return [s.key, s.cn||"", s.en||"", s.effect||""].join(" ").toLowerCase();
+}
+
 function filterAndRender(keyword="", keepPage){
-  let list = allItems;
-  if(currentCat !== "all") list = list.filter(x=>x.cat === currentCat);
+  let list = allSkills;
+  if(currentClass !== "all") list = list.filter(x=>x.class === currentClass);
   if(keyword){
-    list = list.filter(x=>{
-      const m = dropMap[x.name] || {};
-      const all = [x.name, m.cn||"", m.en||"", m.kr||""].join(" ").toLowerCase();
-      return all.includes(keyword);
-    });
+    list = list.filter(x=>searchable(x).includes(keyword));
   }
-  filteredItems = list;
+  filteredSkills = list;
   if(keepPage){
-    const total = Math.ceil(filteredItems.length / getPerPage());
+    const total = Math.ceil(filteredSkills.length / getPerPage());
     if(page > total) page = Math.max(1, total);
   } else {
     page = 1;
@@ -361,89 +364,108 @@ function filterAndRender(keyword="", keepPage){
   renderCards();
 }
 
-function setCat(cat){
-  currentCat = cat;
-  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
-    btn.classList.toggle('active', btn.dataset.cat === cat);
+function setClass(c){
+  currentClass = c;
+  document.querySelectorAll('#classBar .type-btn').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.class === c);
   });
   doSearch();
 }
 
 function goPrev(){ if(page>1){page--;renderCards();} }
 function goNext(){
-  const total = Math.ceil(filteredItems.length/getPerPage());
+  const total = Math.ceil(filteredSkills.length/getPerPage());
   if(page<total){ page++; renderCards(); window.scrollTo(0,0); }
 }
 
 // 渲染卡片
 function renderCards(){
-  const grid = document.getElementById("itemGrid");
+  const grid = document.getElementById("skillGrid");
   grid.innerHTML = "";
   updatePageInfo();
   const perPage = getPerPage();
-  const pageItems = filteredItems.slice((page-1)*perPage, page*perPage);
-  if(!pageItems.length){
+  const pageSkills = filteredSkills.slice((page-1)*perPage, page*perPage);
+  if(!pageSkills.length){
     grid.innerHTML = `<div style='grid-column:1/-1;text-align:center;padding:20px'>${tr('noData','btnText')}</div>`;
     return;
   }
-  pageItems.forEach(item=>{
-    const m = dropMap[item.name] || {};
-    const name = itemDisplayName(item.name);
-    const rc = rarityConfig["一般"];
-    const rarity = tr("一般","rarity");
-    const hasSource = item.monsters.length > 0 || BOX_RUNES.includes(item.name);
+  pageSkills.forEach(s=>{
+    const name = skillName(s);
+    const typeText = (s.type === "active" || s.type === "passive") ? tr(s.type,'skillType') : "";
+    const typeTag = typeText ? `<div class="tag-rarity skill-type ${s.type}">${typeText}</div>` : "";
+    const learnHtml = (s.learnLevel !== "" && s.learnLevel != null)
+      ? `<div class="skill-learn">${tr('reqLv','skillText')}${s.learnLevel}</div>` : "";
+    const crystalHtml = (s.crystal !== "" && s.crystal != null)
+      ? `<span class="skill-crystal"><img src="skill_icons/Rage Crystal.png" alt="">${s.crystal === "All" ? tr('crystalAll','skillText') : s.crystal}</span>` : "";
+    const row2 = (typeTag || crystalHtml) ? `<div class="skill-row2">${typeTag}${crystalHtml}</div>` : "";
+    const effectText = pick(s.effect) || "—";
+    const noteLines = (s.notes && (s.notes[currentLang] || s.notes.cn || s.notes.en)) || [];
+    const notesHtml = noteLines.length ? `<div class="skill-notes">${noteLines.map(n=>`<div>${n}</div>`).join("")}</div>` : "";
+    const levels = Object.keys(s.levels || {}).sort((a,b)=>Number(a)-Number(b));
+    const levelsHtml = levels.length
+      ? levels.map(lv=>{
+          const bonus = pick((s.levels||{})[lv]) || "—";
+          return `<div class="skill-level-row"><span class="skill-lv">Lv${lv}.</span><span class="skill-bonus">${bonus}</span></div>`;
+        }).join("")
+      : `<div class="skill-level-row"><span class="skill-bonus">—</span></div>`;
+    const hasSource = Object.keys(s.books || {}).length > 0;
     const sourceBtn = hasSource
-      ? `<button class="btn-source" onclick="openSourceModal('${item.name.replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
+      ? `<button class="btn-source" onclick="openSourceModal('${s.key.replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
       : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
 
-    const noteHtml = itemNote(item.name);
     const card = document.createElement("div");
-    card.className = "equip-card item-card";
-    card.dataset.name = item.name;
-    card.dataset.nameCn = m.cn || "";
-    card.dataset.nameKr = m.kr || "";
+    card.className = "equip-card skill-card";
+    card.dataset.key = s.key;
+    card.dataset.cn = s.cn || "";
+    card.dataset.en = s.en || "";
     card.innerHTML = `
-      <div class="equip-name" style="color:${rc.color}">${name}</div>
+      <div class="equip-name" style="color:#3D4E68">${name}</div>
       <div class="equip-info-row">
         <div class="equip-icon-col">
-          <div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img loading="lazy" src="drop_icons/${item.name}.png" onerror="this.style.display='none'"></div>
-          <div class="item-level"></div>
+          <div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img loading="lazy" src="skill_icons/${s.en || s.key}.png" onerror="this.style.display='none'"></div>
         </div>
         <div class="equip-text-col">
-          <div class="tag-rarity" style="background:${rc.bg}">${rarity}</div>
-          <div class="job-slot"></div>
+          ${learnHtml}
+          ${row2}
         </div>
       </div>
-      <div class="equip-stats item-stats">${noteHtml}</div>
+      <div class="skill-effect">${effectText}${notesHtml}</div>
+      <div class="equip-stats">${levelsHtml}</div>
       <div class="card-actions">${sourceBtn}</div>
     `;
     grid.appendChild(card);
   });
 }
 
-// 获取途径弹窗（掉落怪物，可点击回怪物图鉴）
-function openSourceModal(nameEn){
-  const item = allItems.find(x => x.name === nameEn);
-  if(!item) return;
-  // 箱子开出的符文：来源显示为「充满魔力的箱子」（可点击）
-  if(BOX_RUNES.includes(nameEn) && !item.monsters.length){
-    document.getElementById("modalText").innerHTML =
-      `<div onclick="goItem('Box Flowing with Mana')">${itemNameOf("Box Flowing with Mana")}</div>`;
-    document.getElementById("modal").style.display = "flex";
-    document.getElementById("modalText").scrollTop = 0;
-    lockPageScroll(true);
-    return;
-  }
-  if(!item.monsters.length) return;
-  const list = item.monsters.slice().sort((a,b)=>{
-    const x = monsterDisplayName(a), y = monsterDisplayName(b);
-    return currentLang === "cn" ? x.localeCompare(y, "zh-Hans") : x.localeCompare(y);
-  });
-  document.getElementById("modalText").innerHTML = list.map(mn=>{
-    const disp = monsterDisplayName(mn);
-    const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
-    return `<div onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</div>`;
+// 获取途径弹窗（横向行：技能书名称+等级 | 来源，怪物可点击）
+function openSourceModal(key){
+  const s = allSkills.find(x=>x.key === key);
+  if(!s) return;
+  const bookKeys = Object.keys(s.books || {}).sort((a,b)=>Number(a)-Number(b));
+  let rows = bookKeys.map(lv=>{
+    const bookEn = s.books[lv];
+    const bm = dropMap[bookEn] || {};
+    const bookName = bm[currentLang] || bm.en || bm.cn || bookEn;
+    const monsters = bookMonsters[bookEn] || [];
+    const extraRaw = (s.extraSources && s.extraSources[lv]) ? s.extraSources[lv] : "";
+    let extra = "";
+    if(typeof extraRaw === "string") extra = extraRaw;
+    else if(extraRaw) extra = (currentLang === "en") ? (extraRaw.en || extraRaw.cn || "") : (extraRaw.cn || extraRaw.en || "");
+    let parts = monsters.map(mn=>{
+      const disp = monsterDisplayName(mn);
+      const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
+      return `<span class="src-monster" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>`;
+    });
+    if(extra) parts.push(`<span class="src-text">${linkifySourceText(extra)}</span>`);
+    const srcHtml = parts.length ? parts.join('<span class="src-sep">/</span>') : `<span class="src-text">—</span>`;
+    const colon = currentLang === "cn" ? "：" : ": ";
+    return `<div class="source-row"><span class="source-name">${bookName}</span><span class="source-src">${colon}${srcHtml}</span></div>`;
   }).join("");
+  if(!rows){
+    rows = `<div class="source-row"><span class="source-name">—</span><span class="source-src"><span class="src-text">—</span></span></div>`;
+  }
+  document.getElementById("modalTitle").innerText = tr('modalTitle','btnText') + " · " + skillName(s);
+  document.getElementById("modalText").innerHTML = rows;
   document.getElementById("modal").style.display = "flex";
   document.getElementById("modalText").scrollTop = 0;
   lockPageScroll(true);
@@ -456,7 +478,7 @@ function closeModal(){
   lockPageScroll(false);
 }
 
-// 弹窗打开时锁定页面滚动（含滚动条宽度补偿，防止页面横向跳动）
+// 弹窗打开时锁定页面滚动（含滚动条宽度补偿）
 let pageScrollLocked = false;
 function lockPageScroll(lock){
   if(lock === pageScrollLocked) return;
@@ -472,21 +494,19 @@ function lockPageScroll(lock){
   }
 }
 
-// 定位物品（接收参数 item）
-function jumpToItemFromUrl(){
+// 定位技能（接收参数 skill）
+function jumpToSkillFromUrl(){
   const params = new URLSearchParams(location.search);
-  const key = decodeURIComponent(params.get("item") || "").toLowerCase().trim();
+  const key = decodeURIComponent(params.get("skill") || "").toLowerCase().trim();
   if(!key) return;
 
-  // 定位前重置分类，避免目标被筛掉
-  currentCat = "all";
-  document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
-    btn.classList.toggle('active', btn.dataset.cat === "all");
+  currentClass = "all";
+  document.querySelectorAll('#classBar .type-btn').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.class === "all");
   });
 
-  const index = allItems.findIndex(item=>{
-    const m = dropMap[item.name] || {};
-    const names = [item.name, m.cn, m.en, m.kr].join(" ").toLowerCase();
+  const index = allSkills.findIndex(s=>{
+    const names = [s.key, s.cn, s.en, s.kr].join(" ").toLowerCase();
     return names.includes(key);
   });
 
@@ -500,9 +520,9 @@ function jumpToItemFromUrl(){
   renderCards();
 
   setTimeout(() => {
-    const cards = document.querySelectorAll(".item-card");
+    const cards = document.querySelectorAll(".skill-card");
     for(const card of cards){
-      const stored = [card.dataset.name, card.dataset.nameCn, card.dataset.nameKr].join(" ").toLowerCase().trim();
+      const stored = [card.dataset.key, card.dataset.cn, card.dataset.en].join(" ").toLowerCase().trim();
       if(stored.includes(key)){
         card.scrollIntoView({ behavior:"smooth", block:"center" });
         card.style.boxShadow = "0 0 20px gold";
@@ -514,48 +534,40 @@ function jumpToItemFromUrl(){
 }
 
 async function loadData(){
-  let drops = {}, lang = {}, dc = [];
+  let skillData = {}, lang = {}, drops = {};
   try {
     const [r1, r2, r3] = await Promise.all([
-      fetch("monster_drops.json"),
+      fetch("skill_data.json"),
       fetch("lang.json"),
-      fetch("dropColors.json")
+      fetch("monster_drops.json")
     ]);
-    drops = await r1.json();
+    skillData = await r1.json();
     lang = await r2.json();
-    dc = await r3.json();
+    drops = await r3.json();
   } catch(e) {
     console.log("load fail", e);
   }
   dropMap = lang.dropMap || {};
   nameMap = lang.nameMap || {};
-  dcType = {};
-  dc.forEach(x=>{ if(x.en) dcType[x.en] = x.type || ""; });
 
-  // 反向映射：物品 -> 掉落怪物（排除装备与技能）
-  const map = {};
+  // 技能书 -> 掉落怪物
   Object.keys(drops).forEach(monster=>{
     const list = (drops[monster] && drops[monster].掉落物) || [];
     list.forEach(it=>{
-      if(dcType[it] === "equip" || dcType[it] === "skill" || EXTRA_EQUIP.has(it)) return;
-      if(!map[it]) map[it] = { name: it, monsters: [], cat: CONSUMABLES.has(it) ? "consume" : "other" };
-      map[it].monsters.push(monster);
+      if(!bookMonsters[it]) bookMonsters[it] = [];
+      bookMonsters[it].push(monster);
     });
   });
-  // 特殊物品：不在怪物掉落表中（如恒河豚箱子开出的符文）
-  BOX_RUNES.forEach(name=>{
-    if(!map[name]) map[name] = { name: name, monsters: [], cat: "other" };
-  });
-  allItems = Object.keys(map).map(k=>map[k]);
-  // 按当前语言名称排序
-  sortItems();
-  filteredItems = [...allItems];
+
+  allSkills = Object.keys(skillData).map(k=>({ key:k, ...skillData[k] }));
+  sortSkills();
+  filteredSkills = [...allSkills];
   document.getElementById('searchBox').value = "";
 
   updateLangText();
 
-  if(location.search.includes('item=')){
-    jumpToItemFromUrl();
+  if(location.search.includes('skill=')){
+    jumpToSkillFromUrl();
   } else {
     renderCards();
   }
@@ -568,9 +580,9 @@ document.getElementById('nextTop').onclick = goNext;
 document.getElementById('prevBot').onclick = goPrev;
 document.getElementById('nextBot').onclick = goNext;
 
-/* 分类按钮 */
-document.querySelectorAll('#catBar .type-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=>{ setCat(btn.dataset.cat); });
+/* 职业按钮 */
+document.querySelectorAll('#classBar .type-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{ setClass(btn.dataset.class); });
 });
 
 let resizeTimer;

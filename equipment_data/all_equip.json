@@ -3707,7 +3707,7 @@
     "int": "",
     "dex": "",
     "icon": "Scholar's Gown.png",
-    "rarity":"稀有",
+    "rarity": "稀有",
     "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
@@ -4065,10 +4065,9 @@
     "int": "",
     "dex": "",
     "icon": "Apex Road.png",
-    "rarity":"英雄",
-    "desc":"庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
+    "rarity": "英雄",
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
   },
-
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
@@ -5599,10 +5598,9 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Realm of Void.png",
-    "rarity":"英雄",
-    "desc":"鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
+    "rarity": "英雄",
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
   },
-
   {
     "type": "gloves",
     "job": "warrior,ranger,magician,breaker",
@@ -6460,7 +6458,6 @@
     "rarity": "传说",
     "desc": "怪物掉落↓可点击↓:,@克里高,NPC利毕亚:,【克里高的手】X20,【魔核】X20,【设计图:月光石装备】X20,【第7精髓】X40"
   },
-
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
@@ -7301,9 +7298,8 @@
     "dex": "",
     "move": "0 or 6~10%",
     "icon": "Steps of Extremity.png",
-    "desc":"NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
   },
-  
   {
     "type": "shields",
     "job": "warrior",
@@ -9097,6 +9093,175 @@
     "icon": "",
     "rarity": "",
     "desc": "怪物掉落↓可点击↓:,@"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Leather Quiver",
+    "name_cn": "皮革箭袋",
+    "name_kr": "",
+    "level": "5",
+    "rarity": "高级",
+    "precision": "3",
+    "hit": "??",
+    "hp": "??",
+    "dex": "",
+    "move": "",
+    "ice_resist": "",
+    "icon": "Leather Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Coral Quiver",
+    "name_cn": "珊瑚箭袋",
+    "name_kr": "",
+    "level": "11",
+    "rarity": "高级",
+    "precision": "3",
+    "hit": "??",
+    "hp": "??",
+    "dex": "",
+    "move": "",
+    "ice_resist": "",
+    "icon": "Coral Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@梦魔"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Thorn Quiver",
+    "name_cn": "荆棘箭袋",
+    "name_kr": "",
+    "level": "14",
+    "rarity": "高级",
+    "precision": "4",
+    "hit": "??",
+    "hp": "??",
+    "dex": "",
+    "move": "",
+    "ice_resist": "",
+    "icon": "Thorn Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@布莱斯特,@彩霞枯花"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Venom Quiver",
+    "name_cn": "剧毒箭袋",
+    "name_kr": "",
+    "level": "17",
+    "rarity": "稀有",
+    "precision": "4",
+    "hit": "??",
+    "hp": "",
+    "dex": "??",
+    "move": "??%",
+    "ice_resist": "",
+    "icon": "Venom Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@蛇尾查德"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Hunter's Quiver",
+    "name_cn": "猎人箭袋",
+    "name_kr": "",
+    "level": "21",
+    "rarity": "高级",
+    "precision": "5",
+    "hit": "??",
+    "hp": "??",
+    "dex": "",
+    "move": "",
+    "ice_resist": "",
+    "icon": "Hunter's Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@巨无霸蜘蛛,@火鸟"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Stinger Quiver",
+    "name_cn": "蜂刺箭袋",
+    "name_kr": "",
+    "level": "25",
+    "rarity": "高级",
+    "precision": "5",
+    "hit": "??",
+    "hp": "??",
+    "dex": "",
+    "move": "",
+    "ice_resist": "",
+    "icon": "Stinger Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@变异工蜂,@被感染的女王蜂"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Scout's Belt",
+    "name_cn": "童军腰带",
+    "name_kr": "",
+    "level": "30",
+    "rarity": "高级",
+    "precision": "6",
+    "hit": "??",
+    "hp": "",
+    "dex": "",
+    "move": "??%",
+    "ice_resist": "",
+    "icon": "Scout's Belt.png",
+    "desc": "怪物掉落↓可点击↓:,@粗犷梦魇,@多利"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Frostbound Quiver",
+    "name_cn": "寒霜箭袋",
+    "name_kr": "",
+    "level": "35",
+    "rarity": "高级",
+    "precision": "6",
+    "hit": "??",
+    "hp": "",
+    "dex": "",
+    "move": "??%",
+    "ice_resist": "??",
+    "icon": "Frostbound Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@雪宝,@盲从者"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Wanderer's Quiver",
+    "name_cn": "流浪者箭袋",
+    "name_kr": "",
+    "level": "40",
+    "rarity": "高级",
+    "precision": "7",
+    "hit": "??",
+    "hp": "",
+    "dex": "",
+    "move": "??%",
+    "ice_resist": "",
+    "icon": "Wanderer's Quiver.png",
+    "desc": "怪物掉落↓可点击↓:,@莫提,@监督官"
+  },
+  {
+    "type": "quivers",
+    "job": "ranger",
+    "name": "Legacy of the Steel Wind",
+    "name_cn": "钢铁之风的遗产",
+    "name_kr": "",
+    "level": "45",
+    "rarity": "稀有",
+    "precision": "7",
+    "hit": "??",
+    "hp": "",
+    "dex": "??",
+    "move": "??%",
+    "ice_resist": "",
+    "icon": "Legacy of the Steel Wind.png",
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇"
   }
-
 ]
