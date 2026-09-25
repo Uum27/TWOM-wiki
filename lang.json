@@ -2149,6 +2149,11 @@
             "en": "Ice Prison 2",
             "kr": ""
         },
+        "Ice Prison 3": {
+            "cn": "冰牢3",
+            "en": "Ice Prison 3",
+            "kr": ""
+        },
         "Parry 3": {
             "cn": "阻挡攻击3",
             "en": "Parry 3",
@@ -2172,6 +2177,11 @@
         "Ensnare 2": {
             "cn": "圈套2",
             "en": "Ensnare 2",
+            "kr": ""
+        },
+        "Ensnare 3": {
+            "cn": "圈套3",
+            "en": "Ensnare 3",
             "kr": ""
         },
         "Sparkling Necklace": {
@@ -2217,6 +2227,11 @@
         "Drowsiness 1": {
             "cn": "疲乏无力1",
             "en": "Drowsiness 1",
+            "kr": ""
+        },
+        "Drowsiness 2": {
+            "cn": "疲乏无力2",
+            "en": "Drowsiness 2",
             "kr": ""
         },
         "Mushroom Robe": {
@@ -5327,6 +5342,66 @@
         "Magic Power Whirlpool": {
             "cn": "魔力漩涡",
             "en": "Magic Power Whirlpool",
+            "kr": ""
+        },
+        "Pendant of Honor": {
+            "cn": "名誉项链",
+            "en": "Pendant of Honor",
+            "kr": ""
+        },
+        "Riel's War Drum": {
+            "cn": "里艾尔的战鼓",
+            "en": "Riel's War Drum",
+            "kr": ""
+        },
+        "Ancient Coin": {
+            "cn": "古代币",
+            "en": "Ancient Coin",
+            "kr": ""
+        },
+        "Beast Coin": {
+            "cn": "野兽币",
+            "en": "Beast Coin",
+            "kr": ""
+        },
+        "Intermediate Consumable Box": {
+            "cn": "中级消耗品箱",
+            "en": "Intermediate Consumable Box",
+            "kr": ""
+        },
+        "Enchant Scroll - Strength": {
+            "cn": "力量卷轴",
+            "en": "Enchant Scroll - Strength",
+            "kr": ""
+        },
+        "Enchant Scroll - Dexterity": {
+            "cn": "灵敏卷轴",
+            "en": "Enchant Scroll - Dexterity",
+            "kr": ""
+        },
+        "Enchant Scroll - Intelligence": {
+            "cn": "智力卷轴",
+            "en": "Enchant Scroll - Intelligence",
+            "kr": ""
+        },
+        "Enchant Scroll - HP": {
+            "cn": "体力卷轴",
+            "en": "Enchant Scroll - HP",
+            "kr": ""
+        },
+        "Enchant Scroll - MP": {
+            "cn": "魔力卷轴",
+            "en": "Enchant Scroll - MP",
+            "kr": ""
+        },
+        "Pagan Relic": {
+            "cn": "异教徒圣物",
+            "en": "Pagan Relic",
+            "kr": ""
+        },
+        "Geol's Memo": {
+            "cn": "盖尔的手记",
+            "en": "Geol's Memo",
             "kr": ""
         },
         "5th Core": {

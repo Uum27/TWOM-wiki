@@ -116,7 +116,9 @@ body{background:#f0f2f5;padding:12px}
 .card-actions .btn-source{ flex:1;width:auto;margin:0;padding:7px 2px;font-size:14px }
 .btn-source{ width:60%;margin:0 auto;padding:8px;margin-top:auto;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block }
 .btn-source.disabled{ background:#9AA7BC;cursor:default }
-@media(min-width:1024px){ .card-actions .btn-source{padding:10px 6px;font-size:16px} }
+.card-actions .btn-rate{ flex:1;width:auto;margin:0;padding:7px 2px;font-size:14px }
+.btn-rate{ background:#4E9A8C;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer }
+@media(min-width:1024px){ .card-actions .btn-source{padding:10px 6px;font-size:16px} .card-actions .btn-rate{padding:10px 6px;font-size:16px} }
 
 .modal-backdrop{ position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999 }
 .modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
@@ -131,6 +133,17 @@ body{background:#f0f2f5;padding:12px}
 .modal-content.source-modal .modal-title{ flex-shrink:0 }
 .modal-content.source-modal .modal-desc{ flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain }
 .modal-content.source-modal .modal-close{ align-self:center;flex-shrink:0 }
+
+/* 里艾尔的战鼓：获得概率弹窗 */
+.modal-content.rate-modal{ width:fit-content;max-width:80%;height:auto;max-height:60%;display:flex;flex-direction:column;text-align:left }
+.modal-content.rate-modal .modal-title{ flex-shrink:0;text-align:center }
+.modal-content.rate-modal .modal-close{ align-self:center;flex-shrink:0 }
+.rate-body{ flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:4px 0 12px }
+.rate-table{ width:100%;border-collapse:collapse;font-size:14px;background:#fff }
+.rate-table th{ background:#e0e7f3;color:#3D4E68;padding:5px 12px;font-weight:bold;text-align:center }
+.rate-table td{ padding:5px 12px;border-top:1px solid #eef2f7;text-align:center }
+.rate-table tbody tr:nth-child(even) td{ background:#f7f9fc }
+.rate-table td.rate-val{ font-weight:bold;color:#3D4E68 }
 </style>
 </head>
 
@@ -167,6 +180,13 @@ body{background:#f0f2f5;padding:12px}
     <button class="modal-close" onclick="closeModal()">关闭</button>
   </div>
 </div>
+<div class="modal-backdrop" id="rateModal">
+  <div class="modal-content rate-modal">
+    <div class="modal-title" id="rateModalTitle">获得概率</div>
+    <div class="rate-body" id="rateModalBody"></div>
+    <button class="modal-close" id="rateModalClose" onclick="closeRateModal()">关闭</button>
+  </div>
+</div>
 
 <script>
 let currentLang = "cn";
@@ -176,7 +196,9 @@ const langConfig = {
   btnText:{
     prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
     source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
-    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无物品数据",en:"No data",kr:"데이터 없음"}
+    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无物品数据",en:"No data",kr:"데이터 없음"},
+    rate:{cn:"获得概率",en:"Drop Rate",kr:"획득 확률"}, rateTitle:{cn:"获得概率",en:"Drop Rate",kr:"획득 확률"},
+    rateItem:{cn:"物品",en:"Item",kr:"아이템"}, rateValue:{cn:"概率",en:"Rate",kr:"확률"}
   },
   rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"} }
 };
@@ -242,7 +264,9 @@ const CONSUMABLES = new Set([
   "Greater Restoration Potion",
   "Bandage","Thick Bandage",
   "Barbeque","Wild Boar Barbeque","Well Being Herb Bread","Dongryu Juice","Nutrition Beverage","Palm Cocktail","Lollipop",
-  "Small Treasure Box","Old Box","Box Flowing with Mana","Potion Bag"
+  "Small Treasure Box","Old Box","Box Flowing with Mana","Potion Bag",
+  "Enchant Scroll - Strength","Enchant Scroll - Dexterity","Enchant Scroll - Intelligence","Enchant Scroll - HP","Enchant Scroll - MP",
+  "Intermediate Consumable Box","Riel's War Drum"
 ]);
 
 // 补充装备名单（dropColors 未标 equip，但属于装备，需从物品图鉴排除）
@@ -269,13 +293,47 @@ const RUNE_EXCHANGE = {
 const BOX_RUNES = ["Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"];
 const EXTRA_ITEMS = ["Refined Mana"];
 // 补充物品（有图标无物品，后续补入图鉴，无怪物掉落）
-const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool"];
-// 补充物品获取途径（1st Core 无来源）
-const SUPPLEMENT_SOURCES = {
+const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool", "Pendant of Honor", "Pagan Relic", "Riel's War Drum"];
+// 精髓获取途径（显示在怪物列表上方）
+const CORE_SOURCES = {
+  "1st Core": { cn: "分解1~10级绿色装备获得", en: "Obtained by disassembling green items LV1-10" },
+  "2nd Core": { cn: "分解11~20级绿色装备获得", en: "Obtained by disassembling green items LV11-20" },
+  "3rd Core": { cn: "分解21~30级绿色装备获得", en: "Obtained by disassembling green items LV21-30" },
+  "4th Core": { cn: "分解31~40级绿色装备获得", en: "Obtained by disassembling green items LV31-40" },
+  "5th Core": { cn: "分解41~50级绿色装备获得", en: "Obtained by disassembling green items LV41-50" },
   "6th Core": { cn: "分解蓝色装备获得", en: "Obtained by disassembling Rare (blue) equipment" },
-  "7th Core": { cn: "分解紫色装备获得", en: "Obtained by disassembling Hero (purple) equipment" },
-  "Magic Power Whirlpool": { link: "Magic Power Breath" }
+  "7th Core": { cn: "分解紫色装备获得", en: "Obtained by disassembling Hero (purple) equipment" }
 };
+// 补充物品获取途径
+const SUPPLEMENT_SOURCES = {
+  "Magic Power Whirlpool": { link: "Magic Power Breath" },
+  "Riel's War Drum": { link: "Pendant of Honor", qty: 3, cn: "在暴风战场管理员处兑换", en: "Battlefield Manager" }
+};
+// 战鼓开启物品 -> 来源
+const OPEN_FROM = {
+  "Intermediate Consumable Box": { chest: "Riel's War Drum" },
+  "Beast Coin": { chest: "Riel's War Drum" },
+  "Ancient Coin": { chest: "Riel's War Drum" },
+  "Geol's Memo": { chest: "Riel's War Drum" },
+  "Enchant Scroll - Strength": { chest: "Riel's War Drum", pt: true },
+  "Enchant Scroll - Dexterity": { chest: "Riel's War Drum", pt: true },
+  "Enchant Scroll - Intelligence": { chest: "Riel's War Drum", pt: true },
+  "Enchant Scroll - HP": { chest: "Riel's War Drum", pt: true },
+  "Enchant Scroll - MP": { chest: "Riel's War Drum", pt: true }
+};
+// 双分类物品（同时出现在箱子与消耗品）
+const DUAL_CATS = { "Riel's War Drum": ["chest"] };
+// 里艾尔的战鼓开箱概率
+const DRUM_RATES = [
+  { en: "Enchant Scroll - Strength", rate: "0.4%" },
+  { en: "Enchant Scroll - Dexterity", rate: "0.4%" },
+  { en: "Enchant Scroll - Intelligence", rate: "0.4%" },
+  { en: "Enchant Scroll - HP", rate: "0.4%" },
+  { en: "Enchant Scroll - MP", rate: "0.4%" },
+  { en: "Ancient Coin", rate: "24.0%" },
+  { en: "Beast Coin", rate: "24.0%" },
+  { en: "Intermediate Consumable Box", rate: "50.0%" }
+];
 // 副本宝物箱（非怪物掉落，通过副本完成/击杀Boss获得）
 const TREASURE_ITEMS = [
   "Dungeon Treasure 20", "Dungeon Treasure 25", "Dungeon Treasure 30", "Dungeon Treasure 35", "Dungeon Treasure 40",
@@ -421,16 +479,36 @@ function itemNoteBase(name){
   return `<div class="item-note">${exchange}${skillLink}</div>`;
 }
 
-// 卡片说明：在原有说明后追加「可制作装备」
+// 卡片说明：在原有说明后追加「可兑换技能」「可制作装备」
 function itemNote(name){
-  const base = itemNoteBase(name);
-  const eqs = craftMap[name];
-  if(!eqs || !eqs.length) return base;
+  let html = itemNoteBase(name);
   const isEn = currentLang === "en";
-  const links = eqs.map(en=>
-    `<span class="item-link" onclick="goEquip('${en.replace(/'/g,"\\'")}')">${equipNameOf(en)}</span>`
-  ).join("<br>");
-  return base + `<div class="item-note">${isEn ? "Craftable equipment:" : "可制作装备："}<br>${links}</div>`;
+  const exs = skillExMap[name];
+  if(exs && exs.length){
+    const bySrc = {};
+    exs.forEach(x=>{ const k = isEn ? x.srcEn : x.srcCn; (bySrc[k] = bySrc[k] || []).push(x.book); });
+    Object.keys(bySrc).forEach(src=>{
+      const links = [...new Set(bySrc[src])].map(book=>
+        `<span class="item-link" onclick="goSkill('${book.replace(/'/g,"\\'")}')">${itemNameOf(book)}</span>`
+      ).join("<br>");
+      html += `<div class="item-note">${src}：<br>${links}</div>`;
+    });
+  }
+  const eqs = craftMap[name];
+  if(eqs && eqs.length){
+    const links = eqs.map(en=>
+      `<span class="item-link" onclick="goEquip('${en.replace(/'/g,"\\'")}')">${equipNameOf(en)}</span>`
+    ).join("<br>");
+    html += `<div class="item-note">${isEn ? "Craftable equipment:" : "可制作装备："}<br>${links}</div>`;
+  }
+  return html;
+}
+
+// 「名称1/2/3p」展开；普通内容按换行或 / 拆分并去掉 x数量
+function expandExchangeNames(text){
+  const m = String(text).match(/^(.+?)(\d+)\/(\d+)\/(\d+)(p?)$/);
+  if(m) return [m[1] + m[2] + m[5], m[1] + m[3] + m[5], m[1] + m[4] + m[5]];
+  return String(text).split(/[\n/+＋]/).map(x=>x.replace(/\s*x\s*\d+\s*$/i, "").trim()).filter(Boolean);
 }
 
 // 解析装备文案里的制作材料（【组合书X】制作 / NPC 制作段之后的【...】）
@@ -476,6 +554,7 @@ let dcType = {};
 let currentCat = "all";
 let equipNameMap = {};
 let craftMap = {};
+let skillExMap = {};
 
 function getPerPage(){
   if(window.innerWidth >= 1024) return 20;
@@ -505,7 +584,7 @@ function monsterDisplayName(en){
 const CHEST_SORT_ORDER = [
   "Swamp Treasure", "Maze Treasure", "Snowfield Altar Treasure",
   "Box Flowing with Mana", "Random Enchant Scroll Box",
-  "Lucky Box", "High Lucky Box",
+  "Lucky Box", "High Lucky Box", "Riel's War Drum",
   "Wingfril's Treasure", "Strange Treasure", "Ancient Treasure", "Old Box", "Small Treasure Box"
 ];
 function chestSortKey(name){
@@ -523,6 +602,7 @@ function itemCardWeight(name){
   else if(chestContents[name]) lines = 2 + chestContents[name].length;
   else if(ADRA_MATERIALS[name]) lines = 1 + ADRA_MATERIALS[name].equips.length;
   else if(RUNE_EXCHANGE[name]) lines = 1;
+  if(skillExMap[name]) lines += 1 + skillExMap[name].length;
   if(craftMap[name]) lines += 1 + craftMap[name].length;
   return Math.min(lines, 10);
 }
@@ -555,6 +635,7 @@ function updateLangText(){
   document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
   document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
   document.querySelector('.modal-close').innerText = tr('close','btnText');
+  document.getElementById('rateModalClose').innerText = tr('close','btnText');
   updateCatButtonsLang();
   updateNavLang();
 }
@@ -583,7 +664,7 @@ function doSearch(){ filterAndRender(document.getElementById('searchBox').value.
 
 function filterAndRender(keyword="", keepPage){
   let list = allItems;
-  if(currentCat !== "all") list = list.filter(x=>x.cat === currentCat);
+  if(currentCat !== "all") list = list.filter(x=>x.cat === currentCat || (DUAL_CATS[x.name]||[]).includes(currentCat));
   if(keyword){
     list = list.filter(x=>{
       const m = dropMap[x.name] || {};
@@ -632,10 +713,13 @@ function renderCards(){
     const name = itemDisplayName(item.name);
     const rc = rarityConfig["一般"];
     const rarity = tr("一般","rarity");
-    const hasSource = item.monsters.length > 0 || BOX_RUNES.includes(item.name) || EXTRA_ITEMS.includes(item.name) || TREASURE_ITEMS.includes(item.name) || !!SUPPLEMENT_SOURCES[item.name];
+    const hasSource = item.monsters.length > 0 || BOX_RUNES.includes(item.name) || EXTRA_ITEMS.includes(item.name) || TREASURE_ITEMS.includes(item.name) || !!SUPPLEMENT_SOURCES[item.name] || !!CORE_SOURCES[item.name] || !!OPEN_FROM[item.name];
     const sourceBtn = hasSource
       ? `<button class="btn-source" onclick="openSourceModal('${item.name.replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
       : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
+    const rateBtn = item.name === "Riel's War Drum"
+      ? `<button class="btn-rate" onclick="openRateModal()">${tr('rate','btnText')}</button>`
+      : "";
 
     const noteHtml = itemNote(item.name);
     const card = document.createElement("div");
@@ -656,7 +740,7 @@ function renderCards(){
         </div>
       </div>
       <div class="equip-stats item-stats">${noteHtml}</div>
-      <div class="card-actions">${sourceBtn}</div>
+      <div class="card-actions">${sourceBtn}${rateBtn}</div>
     `;
     grid.appendChild(card);
   });
@@ -666,6 +750,38 @@ function renderCards(){
 function openSourceModal(nameEn){
   const item = allItems.find(x => x.name === nameEn);
   if(!item) return;
+  // 战鼓开启物品（附魔卷轴另显示 SHOP 宠物活动 PT 抽取）
+  const of = OPEN_FROM[nameEn];
+  if(of && !item.monsters.length){
+    const isEn = currentLang === "en";
+    const drum = `<span class="item-link" onclick="goItem('Riel\\'s War Drum')">${itemNameOf("Riel's War Drum")}</span>`;
+    const rows = [isEn ? `Obtained by opening ${drum}` : `由 ${drum} 开启获得`];
+    if(of.pt) rows.push(isEn ? "Obtained from SHOP Pet Event PT Draw" : "SHOP 宠物活动 PT 抽取获得");
+    document.getElementById("modalText").innerHTML = rows.map(x=>`<div>${x}</div>`).join("");
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalText").scrollTop = 0;
+    lockPageScroll(true);
+    return;
+  }
+  // 精髓：分解装备获得（显示在怪物列表上方）
+  const coreSrc = CORE_SOURCES[nameEn];
+  if(coreSrc){
+    const isEn = currentLang === "en";
+    const line = `<div style="cursor:default;background:#f3f3f3;">${isEn ? coreSrc.en : coreSrc.cn}</div>`;
+    const list = item.monsters.slice().sort((a,b)=>{
+      const x = monsterDisplayName(a), y = monsterDisplayName(b);
+      return currentLang === "cn" ? x.localeCompare(y, "zh-Hans") : x.localeCompare(y);
+    });
+    document.getElementById("modalText").innerHTML = line + list.map(mn=>{
+      const disp = monsterDisplayName(mn);
+      const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
+      return `<div onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</div>`;
+    }).join("");
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalText").scrollTop = 0;
+    lockPageScroll(true);
+    return;
+  }
   // 箱子开出的符文：来源显示为「充满魔力的箱子」（可点击）
   if(BOX_RUNES.includes(nameEn) && !item.monsters.length){
     document.getElementById("modalText").innerHTML =
@@ -693,14 +809,16 @@ function openSourceModal(nameEn){
     lockPageScroll(true);
     return;
   }
-  // 补充物品：分解装备 / 魔力之息概率合成
+  // 补充物品：兑换 / 分解装备 / 魔力之息概率合成
   const sup = SUPPLEMENT_SOURCES[nameEn];
   if(sup && !item.monsters.length){
     const isEn = currentLang === "en";
     let html;
     if(sup.link){
       const link = `<span class="item-link" onclick="goItem('${sup.link.replace(/'/g,"\\'")}')">${itemNameOf(sup.link)}</span>`;
-      html = isEn ? `Chance to craft from ${link}` : `由「${link}」概率合成获得`;
+      html = sup.qty
+        ? (isEn ? `Trade ${link} x${sup.qty} to ${sup.en}` : `用 ${link} x${sup.qty} ${sup.cn}`)
+        : (isEn ? `Chance to craft from ${link}` : `由「${link}」概率合成获得`);
     } else {
       html = isEn ? sup.en : sup.cn;
     }
@@ -738,6 +856,25 @@ function goMonster(cnName){
 }
 function closeModal(){
   document.getElementById("modal").style.display = "none";
+  lockPageScroll(false);
+}
+
+// 里艾尔的战鼓：获得概率弹窗
+function openRateModal(){
+  document.getElementById("rateModalTitle").innerText =
+    `${tr('rateTitle','btnText')} · ${itemDisplayName("Riel's War Drum")}`;
+  const rows = DRUM_RATES.map(r=>{
+    const link = `<span class="item-link" onclick="goItem('${r.en.replace(/'/g,"\\'")}')">${itemDisplayName(r.en)}</span>`;
+    return `<tr><td>${link}</td><td class="rate-val">${r.rate}</td></tr>`;
+  }).join("");
+  document.getElementById("rateModalBody").innerHTML =
+    `<table class="rate-table"><thead><tr><th>${tr('rateItem','btnText')}</th><th>${tr('rateValue','btnText')}</th></tr></thead><tbody>${rows}</tbody></table>`;
+  document.getElementById("rateModal").style.display = "flex";
+  document.getElementById("rateModalBody").scrollTop = 0;
+  lockPageScroll(true);
+}
+function closeRateModal(){
+  document.getElementById("rateModal").style.display = "none";
   lockPageScroll(false);
 }
 
@@ -799,20 +936,22 @@ function jumpToItemFromUrl(){
 }
 
 async function loadData(){
-  let drops = {}, lang = {}, dc = [], equipData = [], chestData = {};
+  let drops = {}, lang = {}, dc = [], equipData = [], chestData = {}, skillData = {};
   try {
-    const [r1, r2, r3, r4, r5] = await Promise.all([
+    const [r1, r2, r3, r4, r5, r6] = await Promise.all([
       fetch("monster_drops.json"),
       fetch("lang.json"),
       fetch("dropColors.json"),
       fetch("equipment_data/all_equip.json"),
-      fetch("chest_data.json")
+      fetch("chest_data.json"),
+      fetch("skill_data.json")
     ]);
     drops = await r1.json();
     lang = await r2.json();
     dc = await r3.json();
     equipData = await r4.json();
     chestData = await r5.json();
+    skillData = await r6.json();
   } catch(e) {
     console.log("load fail", e);
   }
@@ -841,6 +980,33 @@ async function loadData(){
       if(!en) return;
       if(!craftMap[en]) craftMap[en] = [];
       if(!craftMap[en].includes(e.name)) craftMap[en].push(e.name);
+    });
+  });
+
+  // 物品 -> 可兑换技能（解析技能 extraSources 括号里的材料）
+  skillExMap = {};
+  const skillItemCn = {};
+  for(const en in dropMap){
+    const cn = ((dropMap[en] && dropMap[en].cn) || "").trim();
+    if(!cn) continue;
+    if(!skillItemCn[cn]) skillItemCn[cn] = en;
+  }
+  Object.keys(skillData).forEach(key=>{
+    const s = skillData[key];
+    Object.keys(s.extraSources || {}).forEach(lv=>{
+      const o = s.extraSources[lv] || {};
+      const cn = o.cn || "";
+      const m = cn.match(/（([^）]+)）/);
+      if(!m) return;
+      const book = (s.books || {})[lv] || "";
+      if(!book) return;
+      const srcCn = (cn.slice(0, m.index) + cn.slice(m.index + m[0].length)).trim();
+      const srcEn = (o.en || "").replace(/\s*\([^)]*\)\s*$/, "").trim();
+      expandExchangeNames(m[1]).forEach(nm=>{
+        const itemEn = skillItemCn[nm];
+        if(!itemEn) return;
+        (skillExMap[itemEn] = skillExMap[itemEn] || []).push({ book: book, srcCn: srcCn, srcEn: srcEn });
+      });
     });
   });
 

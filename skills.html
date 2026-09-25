@@ -159,6 +159,7 @@ body{background:#f0f2f5;padding:12px}
 .source-name{ font-weight:bold;color:#3D4E68 }
 .source-src{ color:#666 }
 .src-monster{ color:#3774AE;cursor:pointer;text-decoration:underline }
+.src-item{ color:#3774AE;cursor:pointer;text-decoration:underline }
 .src-sep{ color:#999;margin:0 3px }
 .src-text{ color:#666 }
 </style>
@@ -248,6 +249,7 @@ let filteredSkills = [];
 let dropMap = {};
 let nameMap = {};
 let bookMonsters = {};
+let itemCnIndex = {};
 let currentClass = "all";
 
 function getPerPage(){
@@ -291,7 +293,52 @@ function linkifySourceText(text){
     const cn = (nameMap[en] && nameMap[en].cn) || en;
     out = out.replace(re, `<span class="src-monster" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>`);
   });
+  // 括号内兑换/合成材料 -> 物品图鉴（如 乌波水晶鳞片、名誉项链x60、百发百中1/2/3p）
+  out = out.replace(/（([^）]+)）/g, (full, inner)=>{
+    const parts = expandSkillMaterials(inner);
+    if(!parts.some(p=>p.en)) return full;
+    const html = parts.map(p=>{
+      if(p.sep) return p.sep;
+      const name = p.en
+        ? `<span class="src-item" onclick="goItem('${p.en.replace(/'/g,"\\'")}')">${itemDisplayName(p.en)}</span>`
+        : p.base;
+      return name + p.suffix;
+    }).join("");
+    return "（" + html + "）";
+  });
+  return out.replace(/\n/g, " ");
+}
+
+// 括号内材料：「名称1/2/3p」展开；普通内容按换行或 / 拆分并保留原数量
+function expandSkillMaterials(text){
+  const s = String(text);
+  const m = s.match(/^(.+?)(\d+)\/(\d+)\/(\d+)(p?)$/);
+  if(m){
+    return [m[1] + m[2] + m[5], m[1] + m[3] + m[5], m[1] + m[4] + m[5]]
+      .map((n, i)=>({ base: n, suffix: "", sep: i ? "/" : "", en: itemCnIndex[n] || null }));
+  }
+  const out = [];
+  s.split(/([\n/+＋])/).forEach(tk=>{
+    if(tk === "/"){ out.push({ sep: "/" }); return; }
+    if(tk === "\n" || tk === "+" || tk === "＋"){ out.push({ sep: " + " }); return; }
+    if(!tk) return;
+    const q = tk.match(/^(.*?)(\s*[xX×]\s*\d+)\s*$/);
+    const base = (q ? q[1] : tk).trim();
+    const suffix = q ? q[2] : "";
+    out.push({ base: base, suffix: suffix, sep: "", en: itemCnIndex[base] || null });
+  });
   return out;
+}
+
+function itemDisplayName(en){
+  const m = dropMap[en] || {};
+  if(currentLang === "en") return m.en || en;
+  if(currentLang === "kr") return m.kr || m.en || en;
+  return m.cn || en;
+}
+
+function goItem(name){
+  location.href = `items.html?item=${encodeURIComponent(name)}`;
 }
 
 // 排序：职业（战士→游侠→法师→武术家）→ 学习等级升序 → 名称
@@ -551,6 +598,14 @@ async function loadData(){
   }
   dropMap = lang.dropMap || {};
   nameMap = lang.nameMap || {};
+
+  // 物品中文名索引（获取途径括号里的兑换/合成材料）
+  itemCnIndex = {};
+  for(const en in dropMap){
+    const cn = ((dropMap[en] && dropMap[en].cn) || "").trim();
+    if(cn.length < 2 || en === "-") continue;
+    if(!itemCnIndex[cn]) itemCnIndex[cn] = en;
+  }
 
   // 技能书 -> 掉落怪物
   Object.keys(drops).forEach(monster=>{
