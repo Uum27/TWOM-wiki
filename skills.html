@@ -106,8 +106,9 @@ body{background:#f0f2f5;padding:12px}
 
 /* 技能卡：信息行顶部对齐（无等级占位） */
 .skill-card .equip-info-row{ align-items:flex-start }
-/* 需求等级（金黄） */
-.skill-learn{ font-size:13px;font-weight:bold;color:#C9A227;line-height:1.2 }
+/* 需求等级（金黄，不换行；窄屏缩小字号防溢出） */
+.skill-learn{ font-size:13px;font-weight:bold;color:#C9A227;line-height:1.2;white-space:nowrap }
+@media(max-width:420px){ .skill-learn{ font-size:12px } }
 /* 第二行：主动/被动 + 水晶消耗 */
 .skill-row2{ display:flex;align-items:center;gap:6px;flex-wrap:wrap }
 .skill-row2 .skill-crystal{ margin-left:auto }
@@ -200,7 +201,7 @@ body{background:#f0f2f5;padding:12px}
 <script>
 let currentLang = "cn";
 const langConfig = {
-  searchPlaceholder:{cn:"搜索技能名/效果...",en:"Search skill...",kr:"스킬 검색..."},
+  searchPlaceholder:{cn:"搜索技能名/需求等级...",en:"Search skill/level...",kr:"스킬명/레벨 검색..."},
   pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
   btnText:{
     prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
@@ -345,7 +346,8 @@ function toggleLang(){
 function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
 
 function searchable(s){
-  return [s.key, s.cn||"", s.en||"", s.effect||""].join(" ").toLowerCase();
+  const lv = (s.learnLevel === "" || s.learnLevel == null) ? "" : String(s.learnLevel);
+  return [s.key, s.cn||"", s.en||"", s.kr||"", lv, lv ? lv+"级" : "", lv ? "lv"+lv : ""].join(" ").toLowerCase();
 }
 
 function filterAndRender(keyword="", keepPage){

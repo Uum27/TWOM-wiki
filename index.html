@@ -427,7 +427,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "沙滩/灯塔岛": { en: "Beach", kr: "윙프릴 섬해변/등대 섬", zones: ["Wingfril Island Beach","Island with the Lighthouse","Wingfril Island Beach,Island with the Lighthouse"],maps:[
+  "沙滩": { en: "Beach", kr: "윙프릴 섬해변", zones: ["Wingfril Island Beach"],maps:[
     {
       cn:"沙滩",
       en:"Wingfril Island Beach",
@@ -438,7 +438,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "灯塔岛": { en: "Island", kr: "등대 섬", zones: ["Island with the Lighthouse"],maps:[
     {
       cn:"灯塔岛",
       en:"Island with the Lighthouse",
@@ -529,7 +531,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "兰诺斯平原/晚霞森林": { en: "777", kr: "라노스 평원/폐허가 있는 숲", zones: ["Lanos Plains","Forest of Grave"],maps:[
+  "兰诺斯平原": { en: "Lanos777", kr: "라노스 평원", zones: ["Lanos Plains"],maps:[
     {
       cn:"兰诺斯平原",
       en:"Lanos Plains",
@@ -540,7 +542,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "晚霞森林": { en: "Siras777", kr: "폐허가 있는 숲", zones: ["Forest of Grave"],maps:[
     {
       cn:"晚霞森林",
       en:"Forest of Grave",
@@ -553,7 +557,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "废墟森林/卡塔勒山脉": { en: "Forest/Kataru", kr: "해지는 노을숲/카타르 산맥", zones: ["Forest with Ruins","Kataru Mountains"],maps:[
+  "废墟森林": { en: "Forest", kr: "해지는 노을숲", zones: ["Forest with Ruins"],maps:[
     {
       cn:"废墟森林",
       en:"Forest with Ruins",
@@ -564,7 +568,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "卡塔勒山脉": { en: "Kataru", kr: "카타르 산맥", zones: ["Kataru Mountains"],maps:[
     {
       cn:"卡塔勒山脉",
       en:"Kataru Mountains",
@@ -682,7 +688,7 @@ const zoneGroups = {
   }
     }
   ]},
-  "枯原/沙墓峡谷": { en: "Arid/Des", kr: "건조한 초원/모래무덤 골짜기", zones: ["Arid Grassland","Desert Valley"],maps:[
+  "枯原": { en: "Arid", kr: "건조한 초원", zones: ["Arid Grassland"],maps:[
     {
       cn:"枯原",
       en:"Arid Grassland",
@@ -693,7 +699,9 @@ const zoneGroups = {
      en:"maps/en/",
      kr:"maps/kr/"
   }
-    },
+    }
+  ]},
+  "沙墓峡谷": { en: "Des", kr: "모래무덤 골짜기", zones: ["Desert Valley"],maps:[
     {
       cn:"沙墓峡谷",
       en:"Desert Valley",
@@ -936,51 +944,51 @@ const zoneGroups = {
   }
     }
   ]},
-  "狩猎场(简单)": { en: "Hunting Ground (Easy)", kr: "", zones: ["Bitum Wetland (Easy)","Shinar Plain (Easy)"],maps:[
+  "狩猎场(简单)": { en: "Hunting Ground (Easy)", kr: "", zones: ["Bitum Wetland (Easy)","Sinar Plains (Easy)"],maps:[
     {
       cn:"比图姆湿地",
       en:"Bitum Wetland",
       kr:"",
 
    imgs:{
-     cn:"",
-     en:"",
-     kr:""
+     cn:"maps/cn/比图姆湿地.webp",
+     en:"maps/cn/比图姆湿地.webp",
+     kr:"maps/cn/比图姆湿地.webp"
   }
     },
     {
       cn:"希纳尔平原",
-      en:"Shinar Plain",
+      en:"Sinar Plains",
       kr:"",
 
    imgs:{
-     cn:"",
-     en:"",
-     kr:""
+     cn:"maps/cn/希纳尔平原.webp",
+     en:"maps/cn/希纳尔平原.webp",
+     kr:"maps/cn/希纳尔平原.webp"
   }
     }
   ]},
-  "狩猎场(困难)": { en: "Hunting Ground (Hard)", kr: "", zones: ["Bitum Wetland (Hard)","Shinar Plain (Hard)"],maps:[
+  "狩猎场(困难)": { en: "Hunting Ground (Hard)", kr: "", zones: ["Bitum Wetland (Hard)","Sinar Plains (Hard)"],maps:[
     {
       cn:"比图姆湿地",
       en:"Bitum Wetland",
       kr:"",
 
    imgs:{
-     cn:"",
-     en:"",
-     kr:""
+     cn:"maps/cn/比图姆湿地.webp",
+     en:"maps/cn/比图姆湿地.webp",
+     kr:"maps/cn/比图姆湿地.webp"
   }
     },
     {
       cn:"希纳尔平原",
-      en:"Shinar Plain",
+      en:"Sinar Plains",
       kr:"",
 
    imgs:{
-     cn:"",
-     en:"",
-     kr:""
+     cn:"maps/cn/希纳尔平原.webp",
+     en:"maps/cn/希纳尔平原.webp",
+     kr:"maps/cn/希纳尔平原.webp"
   }
     }
   ]}
@@ -1247,8 +1255,12 @@ html += `
     if(!m) return
     const name = tr(lang.nameMap, m.name)
     const zone = tr(lang.zoneMap, m.zone)
-    const dropHtml = (drops[m.name]?.掉落物||[]).map(i => {
+    const dropHtml = (drops[m.name]?.掉落物||[]).map(raw => {
+    const qm = String(raw).match(/^(.*?)\s+x(\d+)$/i);
+    const i = qm ? qm[1] : raw;
+    const qty = qm ? " ×" + qm[2] : "";
     const itemName = tr(lang.dropMap,i);   // 中文名
+    const showName = itemName + qty;
     const isEquip = equipNames.has(i) || equipNames.has(itemName);
     const isSkill = skillNames.has(i) || skillNames.has(itemName);
 
@@ -1257,7 +1269,7 @@ html += `
     return `
     <div>
       <img loading="lazy" src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
+      <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
     </div>`;
   } else if (isSkill) {
     // 技能：可点击，跳技能图鉴（去掉名称末尾等级数字）
@@ -1265,14 +1277,14 @@ html += `
     return `
     <div>
       <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goSkill('${skillBase.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
+      <span class="drop-link" onclick="goSkill('${skillBase.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
     </div>`;
   } else {
     // 其他物品：可点击，跳物品图鉴
     return `
     <div>
       <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goItem('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${itemName}</span>
+      <span class="drop-link" onclick="goItem('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
     </div>`;
   }
 }).join('')
@@ -1344,7 +1356,7 @@ if(m.revive?.trim()){
 
 function colorizeDrops() {
   document.querySelectorAll('.drops div').forEach(el => {
-    const txt = el.textContent.trim();
+    const txt = el.textContent.trim().replace(/\s+×\d+$/, "");
     el.style.color = '';
     el.style.fontWeight = 'normal';
     for (const name in dropColorMap) {
@@ -1449,6 +1461,26 @@ function goSkill(skillName){
   location.href = `skills.html?skill=${encodeURIComponent(skillName)}`;
 }
 
+// 区域跳转（接收参数 zone，如 index.html?zone=25副本）
+function jumpToZoneFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const zone = decodeURIComponent(params.get("zone") || "").trim();
+  if(!zone) return false;
+
+  const key = Object.keys(zoneGroups).find(k =>
+    k === zone ||
+    (zoneGroups[k] && (zoneGroups[k].cn === zone || zoneGroups[k].en === zone))
+  );
+  if(!key) return false;
+
+  currentGroup = key;
+  page = 1;
+  setActiveBtn(key);
+  doSearch();
+  setTimeout(scrollToMap, 200);
+  return true;
+}
+
 function jumpToMonsterFromUrl(){
   const params = new URLSearchParams(location.search);
   const monsterName = decodeURIComponent(params.get("monster") || "").toLowerCase().trim();
@@ -1528,7 +1560,7 @@ Promise.all([
   updateNavLang();
   updateZonePanel();
 
-  jumpToMonsterFromUrl();
+  if(!jumpToZoneFromUrl()) jumpToMonsterFromUrl();
 }).catch(err => console.error("加载失败", err))
 
 // 事件

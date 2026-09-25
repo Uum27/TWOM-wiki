@@ -1565,14 +1565,14 @@
             "en": "Sprout (Hard)",
             "kr": "스프라우트(Hard)"
         },
-        "Floura (Easy)": {
+        "Flouna (Easy)": {
             "cn": "盛放体(简单)",
-            "en": "Floura (Easy)",
+            "en": "Flouna (Easy)",
             "kr": "플라우나(Easy)"
         },
-        "Floura (Hard)": {
+        "Flouna (Hard)": {
             "cn": "盛放体(困难)",
-            "en": "Floura (Hard)",
+            "en": "Flouna (Hard)",
             "kr": "플라우나(Hard)"
         },
         "OverBloom (Easy)": {
@@ -1668,9 +1668,9 @@
             "kr": "머쉬룸스포어"
         },
         "Wingfril Island Beach,Island with the Lighthouse": {
-            "cn": "沙滩",
+            "cn": "沙滩/灯塔岛",
             "en": "Wingfril Island Beach,Island with the Lighthouse",
-            "kr": "윙프릴 섬해변"
+            "kr": "윙프릴 섬해변/등대 섬"
         },
         "Wingfril Island Beach": {
             "cn": "沙滩",
@@ -1882,14 +1882,14 @@
             "en": "Bitum Wetland",
             "kr": ""
         },
-        "Shinar Plain (Easy)": {
+        "Sinar Plains (Easy)": {
             "cn": "希纳尔平原",
-            "en": "Shinar Plain",
+            "en": "Sinar Plains",
             "kr": ""
         },
-        "Shinar Plain (Hard)": {
+        "Sinar Plains (Hard)": {
             "cn": "希纳尔平原",
-            "en": "Shinar Plain",
+            "en": "Sinar Plains",
             "kr": ""
         }
     },
@@ -5124,14 +5124,14 @@
             "en": "Spiritual Energy Piece",
             "kr": "원혼의 조각"
         },
-        "Weapon Enchant Scroll (Grade SS)": {
+        "Weapon Enchant Scroll (SS Class)": {
             "cn": "武器卷轴(SS级)",
-            "en": "Weapon Enchant Scroll (Grade SS)",
+            "en": "Weapon Enchant Scroll (SS Class)",
             "kr": "무기 마법서(SS 등급)"
         },
-        "Armor Enchant Scroll (Grade SS)": {
+        "Armor Enchant Scroll (SS Class)": {
             "cn": "盔甲卷轴(SS级)",
-            "en": "Armor Enchant Scroll (Grade SS)",
+            "en": "Armor Enchant Scroll (SS Class)",
             "kr": "갑옷 마법서(SS 등급)"
         },
         "Coilram's Horn": {
@@ -5177,6 +5177,261 @@
         "Judgment rune": {
             "cn": "审判符文",
             "en": "Judgment rune",
+            "kr": ""
+        },
+        "Equipment Stamp A": {
+            "cn": "装备印章A",
+            "en": "Equipment Stamp A",
+            "kr": ""
+        },
+        "Equipment Stamp B": {
+            "cn": "装备印章B",
+            "en": "Equipment Stamp B",
+            "kr": ""
+        },
+        "Abaddon Equipment Stamp A": {
+            "cn": "阿比顿装备印章A",
+            "en": "Abaddon Equipment Stamp A",
+            "kr": ""
+        },
+        "Abaddon Equipment Stamp B": {
+            "cn": "阿比顿装备印章B",
+            "en": "Abaddon Equipment Stamp B",
+            "kr": ""
+        },
+        "Random Enchant Scroll Box": {
+            "cn": "随机附魔卷轴箱",
+            "en": "Random Enchant Scroll Box",
+            "kr": ""
+        },
+        "Mana Condensate": {
+            "cn": "魔力凝聚体",
+            "en": "Mana Condensate",
+            "kr": ""
+        },
+        "Mana Condensate Piece": {
+            "cn": "魔力凝聚体碎片",
+            "en": "Mana Condensate Piece",
+            "kr": ""
+        },
+        "Refined Mana": {
+            "cn": "精炼魔力",
+            "en": "Refined Mana",
+            "kr": ""
+        },
+        "Dungeon Chest 20": {
+            "cn": "地下城宝箱20",
+            "en": "Dungeon Chest 20",
+            "kr": ""
+        },
+        "Dungeon Chest 25": {
+            "cn": "地下城宝箱25",
+            "en": "Dungeon Chest 25",
+            "kr": ""
+        },
+        "Dungeon Chest 30": {
+            "cn": "地下城宝箱30",
+            "en": "Dungeon Chest 30",
+            "kr": ""
+        },
+        "Dungeon Chest 35": {
+            "cn": "地下城宝箱35",
+            "en": "Dungeon Chest 35",
+            "kr": ""
+        },
+        "Dungeon Chest 40": {
+            "cn": "地下城宝箱40",
+            "en": "Dungeon Chest 40",
+            "kr": ""
+        },
+        "Dungeon Treasure 20": {
+            "cn": "地下城宝物20",
+            "en": "Dungeon Treasure 20",
+            "kr": ""
+        },
+        "Dungeon Treasure 25": {
+            "cn": "地下城宝物25",
+            "en": "Dungeon Treasure 25",
+            "kr": ""
+        },
+        "Dungeon Treasure 30": {
+            "cn": "地下城宝物30",
+            "en": "Dungeon Treasure 30",
+            "kr": ""
+        },
+        "Dungeon Treasure 35": {
+            "cn": "地下城宝物35",
+            "en": "Dungeon Treasure 35",
+            "kr": ""
+        },
+        "Dungeon Treasure 40": {
+            "cn": "地下城宝物40",
+            "en": "Dungeon Treasure 40",
+            "kr": ""
+        },
+        "Dungeon Treasure 42": {
+            "cn": "地下城宝物42",
+            "en": "Dungeon Treasure 42",
+            "kr": ""
+        },
+        "Dungeon Treasure 44": {
+            "cn": "地下城宝物44",
+            "en": "Dungeon Treasure 44",
+            "kr": ""
+        },
+        "Dungeon Treasure 46": {
+            "cn": "地下城宝物46",
+            "en": "Dungeon Treasure 46",
+            "kr": ""
+        },
+        "Dungeon Treasure 48": {
+            "cn": "地下城宝物48",
+            "en": "Dungeon Treasure 48",
+            "kr": ""
+        },
+        "Dungeon Treasure 50": {
+            "cn": "地下城宝物50",
+            "en": "Dungeon Treasure 50",
+            "kr": ""
+        },
+                "1st Core": {
+            "cn": "第1精髓",
+            "en": "1st Core",
+            "kr": ""
+        },
+        "2nd Core": {
+            "cn": "第2精髓",
+            "en": "2nd Core",
+            "kr": ""
+        },
+        "3rd Core": {
+            "cn": "第3精髓",
+            "en": "3rd Core",
+            "kr": ""
+        },
+        "4th Core": {
+            "cn": "第4精髓",
+            "en": "4th Core",
+            "kr": ""
+        },
+                "6th Core": {
+            "cn": "第6精髓",
+            "en": "6th Core",
+            "kr": ""
+        },
+        "7th Core": {
+            "cn": "第7精髓",
+            "en": "7th Core",
+            "kr": ""
+        },
+        "Magic Power Whirlpool": {
+            "cn": "魔力漩涡",
+            "en": "Magic Power Whirlpool",
+            "kr": ""
+        },
+        "5th Core": {
+            "cn": "第5精髓",
+            "en": "5th Core",
+            "kr": ""
+        },
+        "Lucky Box": {
+            "cn": "幸运箱",
+            "en": "Lucky Box",
+            "kr": ""
+        },
+        "High Lucky Box": {
+            "cn": "高级幸运箱",
+            "en": "High Lucky Box",
+            "kr": ""
+        },
+        "Potion of Restoration": {
+            "cn": "恢复药水",
+            "en": "Potion of Restoration",
+            "kr": ""
+        },
+        "Potion of Threat": {
+            "cn": "挑衅药水",
+            "en": "Potion of Threat",
+            "kr": ""
+        },
+        "Potion of Vanishing": {
+            "cn": "隐身药水",
+            "en": "Potion of Vanishing",
+            "kr": ""
+        },
+        "Recall Scroll": {
+            "cn": "返回卷轴",
+            "en": "Recall Scroll",
+            "kr": ""
+        },
+        "Seruang's Tear": {
+            "cn": "赛乐亚之泪",
+            "en": "Seruang's Tear",
+            "kr": ""
+        },
+        "Berserker Boots": {
+            "cn": "狂战士鞋",
+            "en": "Berserker Boots",
+            "kr": ""
+        },
+        "Burning Blade": {
+            "cn": "烈焰刃",
+            "en": "Burning Blade",
+            "kr": ""
+        },
+        "Gauntlets of Victory": {
+            "cn": "胜利金属手套",
+            "en": "Gauntlets of Victory",
+            "kr": ""
+        },
+        "Gloves of Purification": {
+            "cn": "净化手套",
+            "en": "Gloves of Purification",
+            "kr": ""
+        },
+        "Gloves of the Forest Elf": {
+            "cn": "森林妖精手套",
+            "en": "Gloves of the Forest Elf",
+            "kr": ""
+        },
+        "Hole of Destruction": {
+            "cn": "破坏之穴",
+            "en": "Hole of Destruction",
+            "kr": ""
+        },
+        "Imperial Bow": {
+            "cn": "帝国弓",
+            "en": "Imperial Bow",
+            "kr": ""
+        },
+        "Light Engraving Shoes": {
+            "cn": "光雕鞋",
+            "en": "Light Engraving Shoes",
+            "kr": ""
+        },
+        "Sea Boots": {
+            "cn": "海洋长鞋",
+            "en": "Sea Boots",
+            "kr": ""
+        },
+        "Sea Gloves": {
+            "cn": "海洋手套",
+            "en": "Sea Gloves",
+            "kr": ""
+        },
+        "Snowfield Tracer Boots": {
+            "cn": "雪原追踪者长鞋",
+            "en": "Snowfield Tracer Boots",
+            "kr": ""
+        },
+        "Unyielding": {
+            "cn": "不屈",
+            "en": "Unyielding",
+            "kr": ""
+        },
+        "Woopa-Roopa's Staff": {
+            "cn": "族长法杖",
+            "en": "Woopa-Roopa's Staff",
             "kr": ""
         }
     },

@@ -3661,10 +3661,10 @@
     "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Mossrock (Easy)",
-    "level": "?",
+    "level": "34",
     "notes": "-",
     "image local": "monsters images/Mossrock (Easy).png",
-    "hp": "?",
+    "hp": "2050",
     "exp": "?",
     "中文名": "苔岩兽(简单)",
     "revive": ""
@@ -3685,10 +3685,10 @@
     "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Flaretoad (Easy)",
-    "level": "?",
+    "level": "40",
     "notes": "-",
     "image local": "monsters images/Flaretoad (Easy).png",
-    "hp": "?",
+    "hp": "2700",
     "exp": "?",
     "中文名": "烈焰蟾蜍(简单)",
     "revive": ""
@@ -3709,10 +3709,10 @@
     "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Snapcroc (Easy)",
-    "level": "?",
+    "level": "44",
     "notes": "-",
     "image local": "monsters images/Snapcroc (Easy).png",
-    "hp": "?",
+    "hp": "4000",
     "exp": "?",
     "中文名": "巨颚鳄(简单)",
     "revive": ""
@@ -3730,19 +3730,19 @@
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Coilram (Easy)",
-    "level": "?",
+    "level": "34",
     "notes": "-",
     "image local": "monsters images/Coilram (Easy).png",
-    "hp": "?",
+    "hp": "2050",
     "exp": "?",
     "中文名": "科伊拉姆(简单)",
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Coilram (Hard)",
     "level": "49",
@@ -3754,19 +3754,19 @@
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Silverhorn (Easy)",
-    "level": "?",
+    "level": "40",
     "notes": "-",
     "image local": "monsters images/Silverhorn (Easy).png",
-    "hp": "?",
+    "hp": "2700",
     "exp": "?",
     "中文名": "希尔巴霍恩(简单)",
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Silverhorn (Hard)",
     "level": "51",
@@ -3778,19 +3778,19 @@
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Veilhorn (Easy)",
-    "level": "?",
+    "level": "44",
     "notes": "-",
     "image local": "monsters images/Veilhorn (Easy).png",
-    "hp": "?",
+    "hp": "4000",
     "exp": "?",
     "中文名": "贝尔霍恩(简单)",
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Veilhorn (Hard)",
     "level": "52",
@@ -3808,7 +3808,7 @@
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Sprout (Easy).png",
-    "hp": "?",
+    "hp": "3",
     "exp": "?",
     "中文名": "萌芽体(简单)",
     "revive": ""
@@ -3820,7 +3820,7 @@
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Sprout (Hard).png",
-    "hp": "?",
+    "hp": "3",
     "exp": "?",
     "中文名": "萌芽体(困难)",
     "revive": ""
@@ -3828,11 +3828,11 @@
   {
     "zone": "Bitum Wetland (Easy)",
     "desc": "",
-    "name": "Floura (Easy)",
+    "name": "Flouna (Easy)",
     "level": "?",
     "notes": "-",
-    "image local": "monsters images/Floura (Easy).png",
-    "hp": "?",
+    "image local": "monsters images/Flouna (Easy).png",
+    "hp": "5",
     "exp": "?",
     "中文名": "盛放体(简单)",
     "revive": ""
@@ -3840,11 +3840,11 @@
   {
     "zone": "Bitum Wetland (Hard)",
     "desc": "",
-    "name": "Floura (Hard)",
+    "name": "Flouna (Hard)",
     "level": "?",
     "notes": "-",
-    "image local": "monsters images/Floura (Hard).png",
-    "hp": "?",
+    "image local": "monsters images/Flouna (Hard).png",
+    "hp": "5",
     "exp": "?",
     "中文名": "盛放体(困难)",
     "revive": ""
@@ -3856,7 +3856,7 @@
     "level": "?",
     "notes": "-",
     "image local": "monsters images/OverBloom (Easy).png",
-    "hp": "?",
+    "hp": "9",
     "exp": "?",
     "中文名": "极盛开华体(简单)",
     "revive": ""
@@ -3868,37 +3868,37 @@
     "level": "?",
     "notes": "-",
     "image local": "monsters images/OverBloom (Hard).png",
-    "hp": "?",
+    "hp": "9",
     "exp": "?",
     "中文名": "极盛开华体(困难)",
     "revive": ""
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Revenant (Easy)",
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Revenant (Easy).png",
-    "hp": "?",
+    "hp": "24000",
     "exp": "?",
     "中文名": "亡灵(简单)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Revenant (Hard)",
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Revenant (Hard).png",
-    "hp": "?",
+    "hp": "48000",
     "exp": "?",
     "中文名": "亡灵(困难)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Grudgebound Revenant (Easy)",
     "level": "?",
@@ -3907,42 +3907,42 @@
     "hp": "?",
     "exp": "?",
     "中文名": "含恨亡灵(简单)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Grudgebound Revenant (Hard)",
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Grudgebound Revenant (Hard).png",
-    "hp": "?",
+    "hp": "68000",
     "exp": "?",
     "中文名": "含恨亡灵(困难)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   },
   {
-    "zone": "Shinar Plain (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Hate-Tainted Revenant (Easy)",
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Hate-Tainted Revenant (Easy).png",
-    "hp": "?",
+    "hp": "62000",
     "exp": "?",
     "中文名": "染上憎恨的亡灵(简单)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   },
   {
-    "zone": "Shinar Plain (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Hate-Tainted Revenant (Hard)",
     "level": "?",
     "notes": "-",
     "image local": "monsters images/Hate-Tainted Revenant (Hard).png",
-    "hp": "?",
+    "hp": "100000",
     "exp": "?",
     "中文名": "染上憎恨的亡灵(困难)",
-    "revive": ""
+    "revive": "100% Spiritual Energy"
   }
 ]

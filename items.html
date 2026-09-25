@@ -107,7 +107,7 @@ body{background:#f0f2f5;padding:12px}
 .item-card .job-slot{ min-height:24px } /* 职业位留空 */
 
 .equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
-.item-stats{ min-height:40px }          /* 属性框先留空 */
+.item-card .item-stats{ min-height:40px;max-height:200px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch } /* 说明超长时内部滚动 */
 .item-note{ font-size:13px;color:#3D4E68;line-height:1.6;text-align:left;padding:0 4px }
 .item-link{ color:#3774AE;text-decoration:underline;cursor:pointer }
 
@@ -144,6 +144,8 @@ body{background:#f0f2f5;padding:12px}
 <button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
 <div class="top-bar" id="catBar">
   <button class="type-btn active" data-cat="all">全部</button>
+  <button class="type-btn" data-cat="chest">箱子</button>
+  <button class="type-btn" data-cat="rune">符文</button>
   <button class="type-btn" data-cat="consume">消耗品</button>
   <button class="type-btn" data-cat="other">其他</button>
 </div>
@@ -199,8 +201,39 @@ function updateNavLang(){
 const catLang = {
   all:{cn:"全部",en:"All",kr:"전체"},
   consume:{cn:"消耗品",en:"Consumable",kr:"소모품"},
+  chest:{cn:"箱子",en:"Chests",kr:"상자"},
+  rune:{cn:"符文",en:"Runes",kr:"룬"},
   other:{cn:"其他",en:"Other",kr:"기타"}
 };
+
+// 箱子类 / 符文类
+const CHEST_ITEMS = new Set([
+  "Dungeon Chest 20", "Dungeon Chest 25", "Dungeon Chest 30", "Dungeon Chest 35", "Dungeon Chest 40",
+  "Dungeon Treasure 20", "Dungeon Treasure 25", "Dungeon Treasure 30", "Dungeon Treasure 35", "Dungeon Treasure 40",
+  "Dungeon Treasure 42", "Dungeon Treasure 44", "Dungeon Treasure 46", "Dungeon Treasure 48", "Dungeon Treasure 50",
+  "Small Treasure Box", "Old Box", "Box Flowing with Mana", "Random Enchant Scroll Box",
+  "Lucky Box", "High Lucky Box",
+  "Swamp Treasure", "Maze Treasure", "Snowfield Altar Treasure",
+  "Ancient Treasure", "Strange Treasure", "Wingfril's Treasure"
+]);
+const RUNE_ITEMS = new Set([
+  "Mercy Rune", "Penitence Rune", "Resurrection Rune", "Execution Rune", "Torture Rune", "Bio Magic Power Rune",
+  "Corruption Rune", "Atonement Rune", "Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"
+]);
+// 副本区域名（三语）
+const DUNGEON_LABEL = {
+  "20副本": { cn: "20副本", en: "Dungeon 20", kr: "인스턴스 던전 20" },
+  "25副本": { cn: "25副本", en: "Dungeon 25", kr: "인스턴스 던전 25" },
+  "30副本": { cn: "30副本", en: "Dungeon 30", kr: "인스턴스 던전 30" },
+  "35副本": { cn: "35副本", en: "Dungeon 35", kr: "인스턴스 던전 35" },
+  "40副本": { cn: "40副本", en: "Dungeon 40", kr: "인스턴스 던전 40" }
+};
+
+function itemCat(name){
+  if(CHEST_ITEMS.has(name)) return "chest";
+  if(RUNE_ITEMS.has(name)) return "rune";
+  return CONSUMABLES.has(name) ? "consume" : "other";
+}
 
 // 消耗品名单（其余归入「其他」）
 const CONSUMABLES = new Set([
@@ -234,6 +267,56 @@ const RUNE_EXCHANGE = {
   "Judgment rune":        { where: "庭院 戴尔菲", book: "Firestorm 3", fromBox: true }
 };
 const BOX_RUNES = ["Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"];
+const EXTRA_ITEMS = ["Refined Mana"];
+// 补充物品（有图标无物品，后续补入图鉴，无怪物掉落）
+const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool"];
+// 补充物品获取途径（1st Core 无来源）
+const SUPPLEMENT_SOURCES = {
+  "6th Core": { cn: "分解蓝色装备获得", en: "Obtained by disassembling Rare (blue) equipment" },
+  "7th Core": { cn: "分解紫色装备获得", en: "Obtained by disassembling Hero (purple) equipment" },
+  "Magic Power Whirlpool": { link: "Magic Power Breath" }
+};
+// 副本宝物箱（非怪物掉落，通过副本完成/击杀Boss获得）
+const TREASURE_ITEMS = [
+  "Dungeon Treasure 20", "Dungeon Treasure 25", "Dungeon Treasure 30", "Dungeon Treasure 35", "Dungeon Treasure 40",
+  "Dungeon Treasure 42", "Dungeon Treasure 44", "Dungeon Treasure 46", "Dungeon Treasure 48", "Dungeon Treasure 50"
+];
+// 42~50 宝物：描述中「来源」与「开启获得」分两行显示
+const TREASURE_42_50 = ["Dungeon Treasure 42", "Dungeon Treasure 44", "Dungeon Treasure 46", "Dungeon Treasure 48", "Dungeon Treasure 50"];
+// 宝物箱对应副本/ Boss
+const CHEST_DUNGEONS = {
+  "Dungeon Treasure 20": { type: "zone", zone: "20副本" },
+  "Dungeon Treasure 25": { type: "zone", zone: "25副本" },
+  "Dungeon Treasure 30": { type: "zone", zone: "30副本" },
+  "Dungeon Treasure 35": { type: "zone", zone: "35副本" },
+  "Dungeon Treasure 40": { type: "zone", zone: "40副本" },
+  "Dungeon Treasure 42": { type: "monster", monster: "Deep Darkness" },
+  "Dungeon Treasure 44": { type: "monster", monster: "Burning Darkness" },
+  "Dungeon Treasure 46": { type: "monster", monster: "Sorrowful Darkness" },
+  "Dungeon Treasure 48": { type: "monster", monster: "Harsh Darkness" },
+  "Dungeon Treasure 50": { type: "monster", monster: "Endless Darkness" }
+};
+// 宝物来源：由某几个地下城宝物开启获得
+const CHEST_FROM = {
+  "Swamp Treasure": ["Dungeon Treasure 46", "Dungeon Treasure 48"]
+};
+let chestContents = {};
+
+// 阿德拉兑换：材料 -> 相关装备（列出装备图鉴链接）
+const ADRA_EQUIPS = [
+  "Mana-Infused Armor", "Mana-Infused Light Armor", "Mana-Infused Robe", "Mana-Infused Martial Arts Garb",
+  "Mighty Mana Belt", "Swift Mana Belt", "Condensed Mana Belt", "Surging Mana Belt",
+  "Sharur", "Imhullu", "Shimati", "Kudurru"
+];
+const ADRA_WEAPONS = ["Sharur", "Imhullu", "Shimati", "Kudurru"];
+const ADRA_MATERIALS = {
+  "Refined Mana":           { equips: ADRA_EQUIPS, extra: "污染魔力 x1 + 3000金 兑换" },
+  "Corrupted Mana":         { equips: ADRA_EQUIPS },
+  "Faint Spiritual Energy": { equips: ADRA_EQUIPS },
+  "Mana Fruit":             { equips: ADRA_EQUIPS },
+  "Vivid Spiritual Energy": { equips: ADRA_WEAPONS },
+  "Rich Mana Fruit":        { equips: ADRA_WEAPONS }
+};
 
 // 物品名称（当前语言 → 中文 → 英文）
 function itemNameOf(en){
@@ -243,14 +326,89 @@ function itemNameOf(en){
   return m.cn || en;
 }
 
+// 装备名称（当前语言 → 中文 → 英文）
+function equipNameOf(en){
+  const m = equipNameMap[en] || {};
+  if(currentLang === "en") return m.en || en;
+  return m.cn || m.en || en;
+}
+
+// 宝箱内容条目：数量 + 链接（物品→物品图鉴、装备→装备图鉴）
+function chestEntryHtml(raw){
+  if(/^Gold\b/.test(raw)){
+    const rest = String(raw).replace(/^Gold\s*/, "").replace(/^\s*\(/, "").replace(/\)\s*$/, "").trim();
+    const qDisp = currentLang === "en" ? rest.replace(/或/g, "or") : rest;
+    return `<span class="item-link" onclick="goItem('Gold')">${itemNameOf("Gold")}</span> (${qDisp})`;
+  }
+  let base = raw, suffix = "";
+  let m = String(raw).match(/^(.*?)\s*\(([\d\s\-,~]+)\)\s*$/);
+  if(m){
+    base = m[1].trim();
+    suffix = " x" + m[2].replace(/\s+/g, "");
+  } else {
+    m = String(raw).match(/^(.*?)\s+x(\d+)\s*$/i);
+    if(m){ base = m[1].trim(); suffix = " x" + m[2]; }
+  }
+  if(equipNameMap[base]){
+    return `<span class="item-link" onclick="goEquip('${base.replace(/'/g,"\\'")}')">${equipNameOf(base)}</span>${suffix}`;
+  }
+  if(dropMap[base]){
+    return `<span class="item-link" onclick="goItem('${base.replace(/'/g,"\\'")}')">${itemNameOf(base)}</span>${suffix}`;
+  }
+  // 非数量括号（如 (Soulbound)、(B Class)）：去掉括号再解析，括号内容保留显示
+  m = String(raw).match(/^(.*?)\s*(\([^()]*\))\s*$/);
+  if(m){
+    const b2 = m[1].trim();
+    if(equipNameMap[b2]) return `<span class="item-link" onclick="goEquip('${b2.replace(/'/g,"\\'")}')">${equipNameOf(b2)}</span> ${m[2]}`;
+    if(dropMap[b2]) return `<span class="item-link" onclick="goItem('${b2.replace(/'/g,"\\'")}')">${itemNameOf(b2)}</span> ${m[2]}`;
+  }
+  return raw;
+}
+
+// 宝物箱来源（副本完成 / 击杀Boss后退出）
+function chestSourceLine(name, isEn){
+  const dg = CHEST_DUNGEONS[name];
+  if(!dg) return "";
+  if(dg.type === "zone"){
+    const z = dg.zone;
+    const label = (DUNGEON_LABEL[z] && DUNGEON_LABEL[z][currentLang]) || z;
+    return `<span class="item-link" onclick="goZone('${z}')">${label}</span>${isEn ? " completion" : "完成获得"}`;
+  }
+  const mn = dg.monster;
+  const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
+  const disp = monsterDisplayName(mn);
+  return `${isEn ? "Defeat " : "击杀 "}<span class="item-link" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>${isEn ? " then exit the dungeon" : " 后退出副本获得"}`;
+}
+function chestNoteHead(name, isEn){
+  const line = chestSourceLine(name, isEn);
+  return line ? line + (isEn ? "; " : "；") : "";
+}
+
 // 符文/箱子说明（含跳转）
-function itemNote(name){
+function itemNoteBase(name){
   const isEn = currentLang === "en";
   if(name === "Box Flowing with Mana"){
     const links = BOX_RUNES.map(r =>
       `<span class="item-link" onclick="goItem('${r.replace(/'/g,"\\'")}')">${itemNameOf(r)}</span>`
-    ).join(" / ");
-    return `<div class="item-note">${isEn ? "Randomly contains: " : "开启随机获得："}${links}</div>`;
+    ).join("<br>");
+    return `<div class="item-note">${isEn ? "Randomly contains:" : "开启随机获得："}<br>${links}</div>`;
+  }
+  // 宝箱开启内容（每个内容单独一行）
+  const chestList = chestContents[name];
+  if(chestList){
+    const parts = chestList.map(chestEntryHtml).join("<br>");
+    const head = chestNoteHead(name, isEn);
+    const label = isEn ? "Opening yields:" : "开启获得：";
+    const brk = head && TREASURE_42_50.includes(name) ? "<br>" : "";
+    return `<div class="item-note">${head}${brk}${label}<br>${parts}</div>`;
+  }
+  const ainfo = ADRA_MATERIALS[name];
+  if(ainfo){
+    const links = ainfo.equips.map(en=>
+      `<span class="item-link" onclick="goEquip('${en.replace(/'/g,"\\'")}')">${equipNameOf(en)}</span>`
+    ).join("<br>");
+    const prefix = ainfo.extra ? (isEn ? ainfo.extra + "; " : ainfo.extra + "；") : "";
+    return `<div class="item-note">${prefix}${isEn ? "Used for Adra exchange:" : "用于阿德拉处兑换："}<br>${links}</div>`;
   }
   const info = RUNE_EXCHANGE[name];
   if(!info) return "";
@@ -263,12 +421,50 @@ function itemNote(name){
   return `<div class="item-note">${exchange}${skillLink}</div>`;
 }
 
+// 卡片说明：在原有说明后追加「可制作装备」
+function itemNote(name){
+  const base = itemNoteBase(name);
+  const eqs = craftMap[name];
+  if(!eqs || !eqs.length) return base;
+  const isEn = currentLang === "en";
+  const links = eqs.map(en=>
+    `<span class="item-link" onclick="goEquip('${en.replace(/'/g,"\\'")}')">${equipNameOf(en)}</span>`
+  ).join("<br>");
+  return base + `<div class="item-note">${isEn ? "Craftable equipment:" : "可制作装备："}<br>${links}</div>`;
+}
+
+// 解析装备文案里的制作材料（【组合书X】制作 / NPC 制作段之后的【...】）
+function parseRecipeMaterials(desc){
+  const segs = String(desc || "").split(/[,\n]/).map(s=>s.trim()).filter(Boolean);
+  const out = [];
+  let mode = "none";
+  segs.forEach(s=>{
+    if(s.startsWith("@")) return;
+    if(s.indexOf("怪物掉落") === 0 || s.indexOf("获取途径") === 0){ mode = "drop"; return; }
+    if(s.indexOf("箱子开启") >= 0){ mode = "chest"; return; }
+    if(s.startsWith("#")){ mode = "note"; return; }
+    if(s.indexOf("制作") >= 0 || s.indexOf("NPC") >= 0){ mode = "craft"; return; }
+    if(mode !== "craft") return;
+    (s.match(/【([^】]+)】/g) || []).forEach(b=>{
+      const n = b.slice(1, -1).trim();
+      if(n && !n.startsWith("组合书")) out.push(n);
+    });
+  });
+  return out;
+}
+
 function goItem(name){
   location.href = `items.html?item=${encodeURIComponent(name)}`;
 }
 function goSkill(name){
   const base = String(name).replace(/\s*\d+$/, "");
   location.href = `skills.html?skill=${encodeURIComponent(base)}`;
+}
+function goEquip(name){
+  location.href = `equip.html?equip=${encodeURIComponent(name)}`;
+}
+function goZone(name){
+  location.href = `index.html?zone=${encodeURIComponent(name)}`;
 }
 
 let page = 1;
@@ -278,6 +474,8 @@ let dropMap = {};
 let nameMap = {};
 let dcType = {};
 let currentCat = "all";
+let equipNameMap = {};
+let craftMap = {};
 
 function getPerPage(){
   if(window.innerWidth >= 1024) return 20;
@@ -303,9 +501,51 @@ function monsterDisplayName(en){
 }
 
 // 按当前语言名称排序（中文拼音，英文/韩文按英文名）
+// 箱子类排序：地下城宝箱20→40、地下城宝物20→50、其余按指定顺序（表外按名称兜底）
+const CHEST_SORT_ORDER = [
+  "Swamp Treasure", "Maze Treasure", "Snowfield Altar Treasure",
+  "Box Flowing with Mana", "Random Enchant Scroll Box",
+  "Lucky Box", "High Lucky Box",
+  "Wingfril's Treasure", "Strange Treasure", "Ancient Treasure", "Old Box", "Small Treasure Box"
+];
+function chestSortKey(name){
+  let m = name.match(/^Dungeon Chest (\d+)$/);
+  if(m) return [0, parseInt(m[1], 10)];
+  m = name.match(/^Dungeon Treasure (\d+)$/);
+  if(m) return [1, parseInt(m[1], 10)];
+  const idx = CHEST_SORT_ORDER.indexOf(name);
+  return [2, idx === -1 ? 999 : idx];
+}
+// 卡片高度估算：按说明行数（封顶 10 行 ≈ 200px 说明框）
+function itemCardWeight(name){
+  let lines = 0;
+  if(name === "Box Flowing with Mana") lines = 1 + BOX_RUNES.length;
+  else if(chestContents[name]) lines = 2 + chestContents[name].length;
+  else if(ADRA_MATERIALS[name]) lines = 1 + ADRA_MATERIALS[name].equips.length;
+  else if(RUNE_EXCHANGE[name]) lines = 1;
+  if(craftMap[name]) lines += 1 + craftMap[name].length;
+  return Math.min(lines, 10);
+}
+// 分类排序（与分类栏一致：箱子→符文→消耗品→其他）
+const CAT_RANK = { chest: 0, rune: 1, consume: 2, other: 3 };
 function sortItems(){
   const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
-  allItems.sort((a,b)=> coll.compare(itemDisplayName(a.name), itemDisplayName(b.name)) || a.name.localeCompare(b.name));
+  allItems.sort((a,b)=>
+    itemCardWeight(a.name) - itemCardWeight(b.name)
+    || (CAT_RANK[a.cat] ?? 9) - (CAT_RANK[b.cat] ?? 9)
+    || coll.compare(itemDisplayName(a.name), itemDisplayName(b.name))
+    || a.name.localeCompare(b.name)
+  );
+}
+// 箱子分类专用排序（类别内全部是箱子，排序一致）
+function sortChestList(list){
+  const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
+  return list.slice().sort((a,b)=>{
+    const ka = chestSortKey(a.name), kb = chestSortKey(b.name);
+    if(ka[0] !== kb[0]) return ka[0] - kb[0];
+    if(ka[1] !== kb[1]) return ka[1] - kb[1];
+    return coll.compare(itemDisplayName(a.name), itemDisplayName(b.name)) || a.name.localeCompare(b.name);
+  });
 }
 
 function updateLangText(){
@@ -351,7 +591,8 @@ function filterAndRender(keyword="", keepPage){
       return all.includes(keyword);
     });
   }
-  filteredItems = list;
+  // 箱子分类：按掉落等级排序（宝箱20→40、宝物20→50、其他按名称）
+  filteredItems = currentCat === "chest" ? sortChestList(list) : list;
   if(keepPage){
     const total = Math.ceil(filteredItems.length / getPerPage());
     if(page > total) page = Math.max(1, total);
@@ -391,7 +632,7 @@ function renderCards(){
     const name = itemDisplayName(item.name);
     const rc = rarityConfig["一般"];
     const rarity = tr("一般","rarity");
-    const hasSource = item.monsters.length > 0 || BOX_RUNES.includes(item.name);
+    const hasSource = item.monsters.length > 0 || BOX_RUNES.includes(item.name) || EXTRA_ITEMS.includes(item.name) || TREASURE_ITEMS.includes(item.name) || !!SUPPLEMENT_SOURCES[item.name];
     const sourceBtn = hasSource
       ? `<button class="btn-source" onclick="openSourceModal('${item.name.replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
       : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
@@ -434,12 +675,56 @@ function openSourceModal(nameEn){
     lockPageScroll(true);
     return;
   }
+  // 地下城宝物：只显示来源（副本完成 / 击杀Boss后退出）
+  if(TREASURE_ITEMS.includes(nameEn) && !item.monsters.length){
+    const line = chestSourceLine(nameEn, currentLang === "en");
+    document.getElementById("modalText").innerHTML = line ? `<div>${line}</div>` : "";
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalText").scrollTop = 0;
+    lockPageScroll(true);
+    return;
+  }
+  // 精炼魔力：兑换来源（污染魔力可点击）
+  if(nameEn === "Refined Mana" && !item.monsters.length){
+    document.getElementById("modalText").innerHTML =
+      `<div><span class="item-link" onclick="goItem('Corrupted Mana')">${itemNameOf("Corrupted Mana")}</span> x1 + 3000金 兑换</div>`;
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalText").scrollTop = 0;
+    lockPageScroll(true);
+    return;
+  }
+  // 补充物品：分解装备 / 魔力之息概率合成
+  const sup = SUPPLEMENT_SOURCES[nameEn];
+  if(sup && !item.monsters.length){
+    const isEn = currentLang === "en";
+    let html;
+    if(sup.link){
+      const link = `<span class="item-link" onclick="goItem('${sup.link.replace(/'/g,"\\'")}')">${itemNameOf(sup.link)}</span>`;
+      html = isEn ? `Chance to craft from ${link}` : `由「${link}」概率合成获得`;
+    } else {
+      html = isEn ? sup.en : sup.cn;
+    }
+    document.getElementById("modalText").innerHTML = `<div>${html}</div>`;
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalText").scrollTop = 0;
+    lockPageScroll(true);
+    return;
+  }
   if(!item.monsters.length) return;
   const list = item.monsters.slice().sort((a,b)=>{
     const x = monsterDisplayName(a), y = monsterDisplayName(b);
     return currentLang === "cn" ? x.localeCompare(y, "zh-Hans") : x.localeCompare(y);
   });
-  document.getElementById("modalText").innerHTML = list.map(mn=>{
+  // 宝物来源（如湿地宝物 ← 地下城宝物46/48）
+  let extra = "";
+  const from = CHEST_FROM[nameEn];
+  if(from){
+    const links = from.map(t=>
+      `<span class="item-link" onclick="goItem('${t.replace(/'/g,"\\'")}')">${itemNameOf(t)}</span>`
+    ).join(" / ");
+    extra = currentLang === "en" ? `<div>Obtained by opening ${links}</div>` : `<div>由 ${links} 开启获得</div>`;
+  }
+  document.getElementById("modalText").innerHTML = extra + list.map(mn=>{
     const disp = monsterDisplayName(mn);
     const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
     return `<div onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</div>`;
@@ -514,38 +799,97 @@ function jumpToItemFromUrl(){
 }
 
 async function loadData(){
-  let drops = {}, lang = {}, dc = [];
+  let drops = {}, lang = {}, dc = [], equipData = [], chestData = {};
   try {
-    const [r1, r2, r3] = await Promise.all([
+    const [r1, r2, r3, r4, r5] = await Promise.all([
       fetch("monster_drops.json"),
       fetch("lang.json"),
-      fetch("dropColors.json")
+      fetch("dropColors.json"),
+      fetch("equipment_data/all_equip.json"),
+      fetch("chest_data.json")
     ]);
     drops = await r1.json();
     lang = await r2.json();
     dc = await r3.json();
+    equipData = await r4.json();
+    chestData = await r5.json();
   } catch(e) {
     console.log("load fail", e);
   }
+  chestContents = chestData.contents || {};
   dropMap = lang.dropMap || {};
   nameMap = lang.nameMap || {};
   dcType = {};
   dc.forEach(x=>{ if(x.en) dcType[x.en] = x.type || ""; });
+  equipNameMap = {};
+  equipData.forEach(e=>{ equipNameMap[e.name] = { cn: (e.name_cn || "").trim(), en: e.name }; });
+
+  // 物品 -> 可制作装备（解析装备文案中的制作材料）
+  craftMap = {};
+  const matCnToEn = {};
+  for(const en in dropMap){
+    const cn = ((dropMap[en] && dropMap[en].cn) || "").trim();
+    if(!cn) continue;
+    if(!matCnToEn[cn]) matCnToEn[cn] = en;
+    const short = cn.replace(/[的之]/g, "");
+    if(short && !matCnToEn[short]) matCnToEn[short] = en;
+  }
+  equipData.forEach(e=>{
+    if(e.hide) return;
+    parseRecipeMaterials(e.desc).forEach(cn=>{
+      const en = matCnToEn[cn];
+      if(!en) return;
+      if(!craftMap[en]) craftMap[en] = [];
+      if(!craftMap[en].includes(e.name)) craftMap[en].push(e.name);
+    });
+  });
 
   // 反向映射：物品 -> 掉落怪物（排除装备与技能）
   const map = {};
   Object.keys(drops).forEach(monster=>{
     const list = (drops[monster] && drops[monster].掉落物) || [];
-    list.forEach(it=>{
+    list.forEach(raw=>{
+      const it = String(raw).replace(/\s+x\d+$/i, "");
       if(dcType[it] === "equip" || dcType[it] === "skill" || EXTRA_EQUIP.has(it)) return;
       if(!map[it]) map[it] = { name: it, monsters: [], cat: CONSUMABLES.has(it) ? "consume" : "other" };
       map[it].monsters.push(monster);
     });
   });
-  // 特殊物品：不在怪物掉落表中（如恒河豚箱子开出的符文）
+  // 特殊物品：不在怪物掉落表中（如恒河豚箱子开出的符文、精炼魔力）
   BOX_RUNES.forEach(name=>{
     if(!map[name]) map[name] = { name: name, monsters: [], cat: "other" };
   });
+  EXTRA_ITEMS.forEach(name=>{
+    if(!map[name]) map[name] = { name: name, monsters: [], cat: "other" };
+  });
+  SUPPLEMENT_ITEMS.forEach(name=>{
+    if(!map[name]) map[name] = { name: name, monsters: [], cat: "other" };
+  });
+  TREASURE_ITEMS.forEach(name=>{
+    if(!map[name]) map[name] = { name: name, monsters: [], cat: "other" };
+  });
+  // 宝箱内容涉及、但不在掉落表中的物品（如 第2精髓/幸运箱/返回卷轴/赛乐亚之泪）
+  Object.keys(chestContents).forEach(k=>{
+    chestContents[k].forEach(raw=>{
+      if(/^Gold\b/.test(raw)) return;
+      let base = String(raw);
+      let m = base.match(/^(.*?)\s*\(([\d\s\-,~]+)\)\s*$/);
+      if(m){ base = m[1].trim(); }
+      else {
+        m = base.match(/^(.*?)\s+x(\d+)\s*$/i);
+        if(m){ base = m[1].trim(); }
+        else {
+          m = base.match(/^(.*?)\s*(\([^()]*\))\s*$/);
+          if(m) base = m[1].trim();
+        }
+      }
+      if(equipNameMap[base]) return;
+      if(!dropMap[base]) return;
+      if(!map[base]) map[base] = { name: base, monsters: [], cat: "other" };
+    });
+  });
+  // 分类归一（箱子/符文优先）
+  Object.keys(map).forEach(k=>{ map[k].cat = itemCat(k); });
   allItems = Object.keys(map).map(k=>map[k]);
   // 按当前语言名称排序
   sortItems();

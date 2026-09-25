@@ -2224,5 +2224,96 @@
     "kr": "",
     "color": "#ff9329",
     "type": "item"
+  },
+  {
+    "en": "Berserker Boots",
+    "cn": "狂战士鞋",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Burning Blade",
+    "cn": "烈焰刃",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Crown",
+    "cn": "乌龟王冠",
+    "kr": "",
+    "color": "#6ece34",
+    "type": "equip"
+  },
+  {
+    "en": "Gauntlets of Victory",
+    "cn": "胜利金属手套",
+    "kr": "",
+    "color": "#6ece34",
+    "type": "equip"
+  },
+  {
+    "en": "Gloves of Purification",
+    "cn": "净化手套",
+    "kr": "",
+    "color": "#6ece34",
+    "type": "equip"
+  },
+  {
+    "en": "Gloves of the Forest Elf",
+    "cn": "森林妖精手套",
+    "kr": "",
+    "color": "#6ece34",
+    "type": "equip"
+  },
+  {
+    "en": "Hole of Destruction",
+    "cn": "破坏之穴",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Imperial Bow",
+    "cn": "帝国弓",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Light Engraving Shoes",
+    "cn": "光雕鞋",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Sea Boots",
+    "cn": "海洋长鞋",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Sea Gloves",
+    "cn": "海洋手套",
+    "kr": "",
+    "color": "#6ece34",
+    "type": "equip"
+  },
+  {
+    "en": "Snowfield Tracer Boots",
+    "cn": "雪原追踪者长鞋",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
+  },
+  {
+    "en": "Unyielding",
+    "cn": "不屈",
+    "kr": "",
+    "color": "#39acf4",
+    "type": "equip"
   }
 ]

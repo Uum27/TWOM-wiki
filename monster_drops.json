@@ -3442,6 +3442,8 @@
       "Old Scroll",
       "Armor Enchant Scroll (S Class)",
       "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
       "Wingfril's Treasure",
       "Pure Magic Orb",
       "Protector's Hand Skin",
@@ -3582,6 +3584,8 @@
       "Wingfril's Treasure",
       "Armor Enchant Scroll (S Class)",
       "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
       "Charge Core",
       "Surge Cycle",
       "Box Flowing with Mana"
@@ -3698,127 +3702,201 @@
   "Mossrock (Easy)": {
     "中文名": "苔岩兽(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Moss-Covered Stone Piece"
     ]
   },
   "Mossrock (Hard)": {
     "中文名": "苔岩兽(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Moss-Covered Stone Piece"
     ]
   },
   "Flaretoad (Easy)": {
     "中文名": "烈焰蟾蜍(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Red Back Hide"
     ]
   },
   "Flaretoad (Hard)": {
     "中文名": "烈焰蟾蜍(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Red Back Hide"
     ]
   },
   "Snapcroc (Easy)": {
     "中文名": "巨颚鳄(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Moss-Covered Carapace"
     ]
   },
   "Snapcroc (Hard)": {
     "中文名": "巨颚鳄(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Moss-Covered Carapace"
     ]
   },
   "Coilram (Easy)": {
     "中文名": "科伊拉姆(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Coilram's Horn"
     ]
   },
   "Coilram (Hard)": {
     "中文名": "科伊拉姆(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Coilram's Horn"
     ]
   },
   "Silverhorn (Easy)": {
     "中文名": "希尔巴霍恩(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Silverhorn's Horn"
     ]
   },
   "Silverhorn (Hard)": {
     "中文名": "希尔巴霍恩(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Silverhorn's Horn"
     ]
   },
   "Veilhorn (Easy)": {
     "中文名": "贝尔霍恩(简单)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate Piece",
       "Veilhorn Mask Piece"
     ]
   },
   "Veilhorn (Hard)": {
     "中文名": "贝尔霍恩(困难)",
     "掉落物": [
+      "Gold",
+      "Mana Condensate",
       "Veilhorn Mask Piece"
     ]
   },
   "Sprout (Easy)": {
     "中文名": "萌芽体(简单)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Random Enchant Scroll Box",
       "Mana Seed"
     ]
   },
   "Sprout (Hard)": {
     "中文名": "萌芽体(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
       "Mana Fruit"
     ]
   },
-  "Floura (Easy)": {
+  "Flouna (Easy)": {
     "中文名": "盛放体(简单)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
       "Mana Seed"
     ]
   },
-  "Floura (Hard)": {
+  "Flouna (Hard)": {
     "中文名": "盛放体(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
-      "Mana Fruit",
-      "Weapon Enchant Scroll (Grade SS)",
-      "Armor Enchant Scroll (Grade SS)"
+      "Mana Fruit"
     ]
   },
   "OverBloom (Easy)": {
     "中文名": "极盛开华体(简单)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp B",
+      "Abaddon Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
       "Mana Seed"
     ]
   },
   "OverBloom (Hard)": {
     "中文名": "极盛开华体(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Abaddon Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
-      "Rich Mana Fruit",
-      "Weapon Enchant Scroll (Grade SS)",
-      "Armor Enchant Scroll (Grade SS)"
+      "Rich Mana Fruit"
     ]
   },
   "Revenant (Easy)": {
     "中文名": "亡灵(简单)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Random Enchant Scroll Box",
       "Spiritual Energy Piece"
     ]
   },
   "Revenant (Hard)": {
     "中文名": "亡灵(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
       "Faint Spiritual Energy"
     ]
@@ -3826,31 +3904,662 @@
   "Grudgebound Revenant (Easy)": {
     "中文名": "含恨亡灵(简单)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
       "Spiritual Energy Piece"
     ]
   },
   "Grudgebound Revenant (Hard)": {
     "中文名": "含恨亡灵(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
-      "Faint Spiritual Energy",
-      "Weapon Enchant Scroll (Grade SS)",
-      "Armor Enchant Scroll (Grade SS)"
+      "Faint Spiritual Energy"
     ]
   },
   "Hate-Tainted Revenant (Easy)": {
     "中文名": "染上憎恨的亡灵(简单)",
     "掉落物": [
-      "Spiritual Energy Piece"
+      "Gold",
+      "Equipment Stamp B",
+      "Abaddon Equipment Stamp B",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Random Enchant Scroll Box",
+      "Spiritual Energy Piece x20"
     ]
   },
   "Hate-Tainted Revenant (Hard)": {
     "中文名": "染上憎恨的亡灵(困难)",
     "掉落物": [
+      "Gold",
+      "Equipment Stamp A",
+      "Abaddon Equipment Stamp A",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Armor Enchant Scroll (SS Class)",
+      "Weapon Enchant Scroll (SS Class)",
+      "Random Enchant Scroll Box",
       "Corrupted Mana",
-      "Vivid Spiritual Energy",
-      "Weapon Enchant Scroll (Grade SS)",
-      "Armor Enchant Scroll (Grade SS)"
+      "Vivid Spiritual Energy"
+    ]
+  },
+  "Blood Bat": {
+    "中文名": "嗜血蝙蝠",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Alloy Ring"
+    ]
+  },
+  "Tough Mimic": {
+    "中文名": "坚固的宝箱怪",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Pirate Ring",
+      "Boiled Leather Armor"
+    ]
+  },
+  "Violent Crew": {
+    "中文名": "凶残的船员",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Pirate Gloves"
+    ]
+  },
+  "White Ghost": {
+    "中文名": "白色幽灵",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Carnivalize 2"
+    ]
+  },
+  "Weary Crew": {
+    "中文名": "疲惫的船员",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Sharp Eye 2",
+      "The Dead's Shroud",
+      "Ion Shield"
+    ]
+  },
+  "Bomb Wing": {
+    "中文名": "炸弹翼",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (C Class)",
+      "Weapon Enchant Scroll (C Class)"
+    ]
+  },
+  "Jack in the Box": {
+    "中文名": "惊喜宝箱",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Skull Shield",
+      "Swirling Bow",
+      "The Dead's Gloves"
+    ]
+  },
+  "Ghost Witch": {
+    "中文名": "幽灵魔法师",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Woopa-Roopa's Staff",
+      "Novice Shaman's Wand",
+      "Katana"
+    ]
+  },
+  "CAPTAIN TWIN": {
+    "中文名": "双胞胎船长",
+    "掉落物": [
+      "Gold",
+      "Ancient Treasure",
+      "3rd Core",
+      "Dungeon Chest 20",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Classic Bow",
+      "Viking Sword",
+      "Shaman's Wand",
+      "Pet Crystal x2"
+    ]
+  },
+  "Poison Lizard": {
+    "中文名": "毒蜥",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 25",
+      "3rd Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Lizard Leather",
+      "Ancient Treasure",
+      "Lizard Leather Armor",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)"
+    ]
+  },
+  "Big Eyed Soul": {
+    "中文名": "巨无霸凝视者",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 25",
+      "3rd Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Eye of Beholder"
+    ]
+  },
+  "Dark Imp": {
+    "中文名": "暗黑小恶魔",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 25",
+      "3rd Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Charmed Robe",
+      "Prayer of Protection 2"
+    ]
+  },
+  "Poison Mummy": {
+    "中文名": "巨毒木乃伊",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 25",
+      "3rd Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Scale Boots",
+      "Amplify Sense 2"
+    ]
+  },
+  "Magic Imp": {
+    "中文名": "魔法小恶魔",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 25",
+      "3rd Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Ancient Treasure",
+      "Armor Enchant Scroll (B Class)",
+      "Weapon Enchant Scroll (B Class)",
+      "Stun 2",
+      "Charmed Robe",
+      "Monk's Boots"
+    ]
+  },
+  "Evil Spirit": {
+    "中文名": "恶灵",
+    "掉落物": [
+      "Dungeon Chest 25",
+      "3rd Core",
+      "4th Core",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Oatwill's Leather Gloves",
+      "Sturdy Yeti Armor",
+      "Belt of Belief",
+      "Great Bow",
+      "Novice Shaman's Wand",
+      "Katana"
+    ]
+  },
+  "Walking Dead": {
+    "中文名": "丧尸",
+    "掉落物": [
+      "Dungeon Chest 25",
+      "Ancient Treasure",
+      "4th Core",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Hunter Bow",
+      "Gladius",
+      "Mystic Wand"
+    ]
+  },
+  "MUTANTHYDRA": {
+    "中文名": "突变九头蛇",
+    "掉落物": [
+      "Ancient Treasure",
+      "4th Core",
+      "Old Scroll",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Dungeon Chest 25",
+      "Crystal Shield",
+      "Heavy Iron Boots",
+      "Wingwing Boots"
+    ]
+  },
+  "Altar Cleaner": {
+    "中文名": "祭坛清洁队",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Scout Gloves"
+    ]
+  },
+  "Silent Ghost": {
+    "中文名": "沉默幽灵",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Rock Golem": {
+    "中文名": "石魔像",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Heavy Iron Gauntlet"
+    ]
+  },
+  "Fluid Form": {
+    "中文名": "液态怪",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Strange Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Morphing": {
+    "中文名": "莫宝",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "Strange Treasure",
+      "4th Core",
+      "Rune Blade",
+      "Battle Bow",
+      "Wand of Chaos",
+      "Fang of Dusk",
+      "Pet Crystal"
+    ]
+  },
+  "Mystery": {
+    "中文名": "不可思议",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Armor Enchant Scroll (A Class)",
+      "Pet Crystal",
+      "Spiritual Wand",
+      "Horn Bow"
+    ]
+  },
+  "MALTARGUARDIAN": {
+    "中文名": "祭坛守护者",
+    "掉落物": [
+      "Gold",
+      "Crown",
+      "Dungeon Chest 30",
+      "4th Core",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)",
+      "Sharkun Greaves",
+      "Toxic Boots",
+      "Snowy Field's Cursed Boots"
+    ]
+  },
+  "Cave Spider": {
+    "中文名": "洞窟蜘蛛",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Bull's-Eye 2p",
+      "Wingfril's Treasure",
+      "Ice Lance 2",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Hairy": {
+    "中文名": "大胡子",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Yeti's Leather",
+      "Wingfril's Treasure",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Cave Keeper": {
+    "中文名": "洞窟守护者",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Yeti's Leather",
+      "The Way of Two Hands 3p",
+      "Wingfril's Treasure",
+      "Healing Wave 2",
+      "Armor Enchant Scroll (A Class)",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "Light Wing": {
+    "中文名": "轻风",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Potion of Restoration",
+      "Potion of Threat",
+      "Potion of Vanishing",
+      "Flame of Kataru 2",
+      "Wingfril's Treasure",
+      "About Levitation 1p",
+      "Weapon Enchant Scroll (A Class)"
+    ]
+  },
+  "DARKJUNO": {
+    "中文名": "暗黑朱诺",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Pet Crystal",
+      "Weapon Enchant Scroll (A Class)",
+      "Iron Golem's Gloves",
+      "Sage's Gloves",
+      "The Way of Two Hands 1p"
+    ]
+  },
+  "GRAYSKY": {
+    "中文名": "灰天",
+    "掉落物": [
+      "Gold",
+      "Wingfril's Treasure",
+      "Dungeon Chest 35",
+      "4th Core",
+      "Pet Crystal",
+      "Weapon Enchant Scroll (A Class)",
+      "Boots of Darkness",
+      "Shoes of Tranquility",
+      "Titanium Boots"
+    ]
+  },
+  "WHITEWADANGKA": {
+    "中文名": "白色瓦当卡",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 35",
+      "5th Core",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Potion of Restoration",
+      "Bull's-Eye 1p",
+      "The Way of Two Hands 2p",
+      "About Levitation 3p",
+      "Darksteel Sword",
+      "Dezoruba's Bow",
+      "Wand of Tranquility"
+    ]
+  },
+  "Silhouette": {
+    "中文名": "影客",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core"
+    ]
+  },
+  "Underground Eater": {
+    "中文名": "地底食怪",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core"
+    ]
+  },
+  "Bandageman": {
+    "中文名": "绷带人",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core"
+    ]
+  },
+  "Reason Scream": {
+    "中文名": "理智之声",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Pet Crystal"
+    ]
+  },
+  "Gluttony": {
+    "中文名": "暴食者",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Pet Crystal"
+    ]
+  },
+  "THEMAMA": {
+    "中文名": "魔女",
+    "掉落物": [
+      "Gold",
+      "Dungeon Chest 40",
+      "5th Core",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Seruang's Heart",
+      "Pet Crystal x2"
+    ]
+  },
+  "Deep Darkness": {
+    "中文名": "漆黑",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Gloves of the Forest Elf",
+      "Gloves of Purification",
+      "Gauntlets of Victory",
+      "Sea Gloves"
+    ]
+  },
+  "Burning Darkness": {
+    "中文名": "炙黑",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Prayer of Protection 3",
+      "Impact Shot 2",
+      "Slam 2"
+    ]
+  },
+  "Sorrowful Darkness": {
+    "中文名": "悲黑",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Burning Blade",
+      "Imperial Bow",
+      "Hole of Destruction",
+      "Unyielding",
+      "Faded Ring",
+      "Essence of Corruption"
+    ]
+  },
+  "Harsh Darkness": {
+    "中文名": "酷黑",
+    "掉落物": [
+      "Gold",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Berserker Boots",
+      "Snowfield Tracer Boots",
+      "Light Engraving Shoes",
+      "Sea Boots",
+      "Ancient Magic Powder",
+      "Star Powder",
+      "Star Piece"
+    ]
+  },
+  "Endless Darkness": {
+    "中文名": "恒黑",
+    "掉落物": [
+      "Gold",
+      "Fallen Magic Stone",
+      "Old Scroll",
+      "Armor Enchant Scroll (S Class)",
+      "Weapon Enchant Scroll (S Class)",
+      "Caligo's Scale",
+      "Caligo's Bone",
+      "The Perfect Darkness",
+      "Otherworld Belt"
     ]
   }
 }

@@ -166,6 +166,7 @@ body{background:#f0f2f5;padding:12px}
 .modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
 .modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; }
 .modal-desc div:hover{ background:#e0e7ff; }
+.item-link{ color:#3774AE;text-decoration:underline;cursor:pointer }
 .modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
 
 /* 获取途径弹窗：内容超高时内部滚动 */
@@ -395,6 +396,11 @@ let filteredItems = [];
 let resetMap = {};
 let nameMap = {};
 let cnToEnMap = {};
+let dropMap = {};
+let aliasIndex = {};
+let aliasList = [];
+let aliasPattern = null;
+let equipIndex = {};
 let currentType = "all";
 let currentJob = "all";
 function getPerPage(){
@@ -626,20 +632,48 @@ async function loadMyJson(){
     resetMap = {};
   }
 
-  // 加载语言数据（获取途径弹窗怪物名本地化）
+  // 加载语言数据（获取途径弹窗怪物名/材料名本地化）
   try {
     const res = await fetch("lang.json");
     const lang = await res.json();
     nameMap = lang.nameMap || {};
+    dropMap = lang.dropMap || {};
   } catch(e) {
     console.log("load lang fail", e);
     nameMap = {};
+    dropMap = {};
   }
   cnToEnMap = {};
   for(const en in nameMap){
     const v = nameMap[en];
     if(v && v.cn) cnToEnMap[v.cn] = en;
   }
+
+  // 获取途径文案中的物品/装备名 -> 可点击（物品跳物品图鉴、装备跳装备图鉴）
+  aliasIndex = {};
+  equipIndex = {};
+  for(const en in dropMap){
+    const v = dropMap[en];
+    const cn = ((v && v.cn) || "").trim();
+    if(cn.length < 2 || !v.en || en === "-") continue;
+    aliasIndex[cn] = { alias: cn, kind: "item", en: en };
+  }
+  items.forEach(item=>{
+    if(item.hide) return;
+    const cn = (item.name_cn || "").trim();
+    if(cn.length < 2) return;
+    aliasIndex[cn] = { alias: cn, kind: "equip", en: item.name };
+    equipIndex[item.name] = item;
+  });
+  // 自动补充去掉「的/之」的写法（如「森林守护者印章」→「森林守护者的印章」）
+  Object.keys(aliasIndex).forEach(cn=>{
+    if(!/[的之]/.test(cn)) return;
+    const short = cn.replace(/[的之]/g, "");
+    if(short.length < 2 || aliasIndex[short]) return;
+    aliasIndex[short] = { alias: short, kind: aliasIndex[cn].kind, en: aliasIndex[cn].en };
+  });
+  aliasList = Object.values(aliasIndex).sort((a, b)=>b.alias.length - a.alias.length);
+  aliasPattern = new RegExp(aliasList.map(x=>x.alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "g");
   
   // 过滤掉隐藏装备
   allItems = items.filter(item => !item.hide);
@@ -826,18 +860,29 @@ function openModal(d){
 
   const modal = document.getElementById("modalText");
 
-  const lines = d
-    .split(/[\n,]/)
-    .filter(x => x.trim());
+  // 逗号分隔为一行一个来源；连写的「地下城宝物46/48/50」拆成多行
+  const lines = [];
+  d.split(/[\n,]/).forEach(x=>{
+    const t = x.trim();
+    if(!t) return;
+    if(/^地下城宝物\s*\d+(?:\s*\/\s*\d+)+$/.test(t)){
+      t.split(/\s*\/\s*/).forEach(part=>{
+        lines.push("地下城宝物" + part.replace(/[^\d]/g, ""));
+      });
+    } else {
+      splitOutsideBrackets(t).forEach(part=>lines.push(part));
+    }
+  });
 
-  modal.innerHTML = lines.map(text => {
+  modal.innerHTML = lines.map(t => {
 
-    const t = text.trim();
+    // 掉落/获取提示前缀（跟随语言）
+    if (t.indexOf("怪物掉落") === 0 || t.indexOf("获取途径") === 0) {
 
-    // 掉落提示前缀（跟随语言）
-    if (t.indexOf("怪物掉落") === 0) {
-
-      const prefix = currentLang === "en" ? "Monster drops (clickable):" : "怪物掉落↓可点击↓:";
+      let prefix = t;
+      if (currentLang === "en") {
+        prefix = t.indexOf("怪物掉落") === 0 ? "Monster drops (clickable):" : "Source (clickable):";
+      }
 
       return `
         <div style="
@@ -863,36 +908,103 @@ function openModal(d){
       `;
     }
 
-    // NPC / 普通文本（不可点击）
-    else if (t.startsWith("#")) {
+    const text = t.startsWith("#") ? t.slice(1) : t;
+    const hit = rowAlias(text);
+    const html = stripBrackets(linkifyEquipText(text));
 
-      return `
-        <div style="
-          cursor:default;
-          background:#f3f3f3;
-        ">
-          ${t.slice(1)}
-        </div>
-      `;
+    // 整行就是一个物品/装备：一行一个跳转
+    if (hit && (html.match(/class="item-link"/g) || []).length === 1) {
+      const en = hit.en.replace(/'/g,"\\'");
+      const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
+      const row = html.replace(/<span class="item-link" onclick="[^"]*">/, '<span class="item-link">');
+      return `<div onclick="${call}">${row}</div>`;
     }
 
-    // 默认普通文本
-    else {
-
-      return `
-        <div style="
-          cursor:default;
-          background:#f3f3f3;
-        ">
-          ${t}
-        </div>
-      `;
-    }
+    // 其余文本：行内物品名可点击
+    return `
+      <div style="
+        cursor:default;
+        background:#f3f3f3;
+      ">
+        ${html}
+      </div>
+    `;
 
   }).join("");
 
   document.getElementById("modal").style.display = "flex";
   lockPageScroll(true);
+}
+
+// 整行名称 -> 别名（去掉【】与数量后缀后精确匹配）
+function rowAlias(t){
+  let core = String(t).replace(/[【】]/g, "").trim();
+  core = core.replace(/\s*[xX×]\s*[\d,~\-/]+\s*.*$/, "").trim();
+  return aliasIndex[core] || null;
+}
+
+// 只在【】外按 / 拆行（括号内的斜杠保留，如卡牌 10/J/Q/K/A）
+function splitOutsideBrackets(t){
+  const parts = [];
+  let depth = 0, cur = "";
+  for(const ch of String(t)){
+    if(ch === "【") depth++;
+    else if(ch === "】") depth = Math.max(0, depth - 1);
+    if(ch === "/" && depth === 0){ parts.push(cur); cur = ""; }
+    else cur += ch;
+  }
+  parts.push(cur);
+  return parts.map(x=>x.trim()).filter(Boolean);
+}
+
+// 显示层去掉【】，】后留空格（不处理 HTML 标签内部）
+function stripBrackets(html){
+  return html.replace(/<[^>]*>|[【】]/g, m=>{
+    if(m === "【") return "";
+    if(m === "】") return " ";
+    return m;
+  }).replace(/[ \t]{2,}/g, " ").replace(/[ \t]+$/g, "");
+}
+
+// 文案显示名（跟随当前语言）
+function aliasDisplayName(hit){
+  if(hit.kind === "equip"){
+    const eq = equipIndex[hit.en];
+    if(!eq) return hit.en;
+    if(currentLang === "en") return eq.name;
+    if(currentLang === "kr") return eq.name_kr || eq.name;
+    return eq.name_cn || eq.name;
+  }
+  const v = dropMap[hit.en] || {};
+  if(currentLang === "en") return v.en || hit.en;
+  if(currentLang === "kr") return v.kr || v.en || hit.en;
+  return v.cn || hit.en;
+}
+
+// 获取途径文案里的物品/装备名 -> 可点击（括号内须整体同名，避免误链）
+function linkifyEquipText(text){
+  if(!aliasPattern) return text;
+  return text.replace(aliasPattern, (m, offset, whole)=>{
+    const hit = aliasIndex[m];
+    if(!hit) return m;
+    const open = whole.lastIndexOf("【", offset);
+    const close = whole.lastIndexOf("】", offset);
+    if(open > close){
+      const end = whole.indexOf("】", offset + m.length);
+      const inner = whole.slice(open + 1, end === -1 ? whole.length : end).trim();
+      if(inner !== m) return m;
+    }
+    const en = hit.en.replace(/'/g,"\\'");
+    const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
+    return `<span class="item-link" onclick="${call}">${aliasDisplayName(hit)}</span>`;
+  });
+}
+
+function goItem(name){
+  location.href = `items.html?item=${encodeURIComponent(name)}`;
+}
+function goEquip(name){
+  location.href = `equip.html?equip=${encodeURIComponent(name)}`;
 }
 
 function goMonster(name){
