@@ -118,7 +118,7 @@ body{background:#f0f2f5;padding:12px}
 /* 技能效果框（全宽） */
 .skill-effect{
   background:#EEF3F9;border-radius:8px;padding:6px 8px;margin-top:4px;
-  font-size:14px;color:#333;line-height:1.5;text-align:left;min-height:38px;
+  font-size:15px;color:#333;line-height:1.5;text-align:left;min-height:38px;
   white-space:pre-line;
 }
 /* 备注行（寒气/闪电等，金黄） */
@@ -126,7 +126,8 @@ body{background:#f0f2f5;padding:12px}
 
 /* 属性框：各级加成（全绿 + 斑马线） */
 .equip-stats{ background:#C6D4E4;padding:6px 8px;border-radius:8px;margin-top:4px }
-.skill-level-row{ display:flex;align-items:center;gap:6px;font-size:14px;line-height:1.6;text-align:left;padding:2px 8px;margin:0 -8px;border-radius:4px }
+.skill-level-row{ display:flex;align-items:center;gap:6px;font-size:15px;line-height:1.6;text-align:left;padding:2px 8px;margin:0 -8px;border-radius:4px }
+@media(min-width:1024px){ .skill-effect{ font-size:17px } .skill-level-row{ font-size:17px } }
 .skill-level-row:nth-child(even){ background:#BCCBDE }
 .skill-lv{ font-weight:bold;color:#2E7D32;flex:0 0 auto }
 .skill-bonus{ color:#2E7D32;flex:1 }
@@ -200,7 +201,7 @@ body{background:#f0f2f5;padding:12px}
 </div>
 
 <script>
-let currentLang = "cn";
+let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
 const langConfig = {
   searchPlaceholder:{cn:"搜索技能名/需求等级...",en:"Search skill/level...",kr:"스킬명/레벨 검색..."},
   pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
@@ -385,6 +386,7 @@ function updatePageInfo(){
 
 function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  try{ localStorage.setItem("twom-lang", currentLang); }catch(e){}
   updateLangText();
   sortSkills();
   filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim(), true);

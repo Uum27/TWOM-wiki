@@ -234,7 +234,7 @@ body{background:#f0f2f5;padding:12px}
 </div>
 
 <script>
-let currentLang = "cn";
+let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
 const typeLangMap = {
   all: {
     cn: "全部",
@@ -514,6 +514,7 @@ function updatePageInfo(){
 
 function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  try{ localStorage.setItem("twom-lang", currentLang); }catch(e){}
   updateLangText();
   updateTypeButtonsLang();
   updateJobButtonsLang();
@@ -682,6 +683,7 @@ async function loadMyJson(){
     const v = dropMap[en];
     const cn = ((v && v.cn) || "").trim();
     if(cn.length < 2 || !v.en || en === "-") continue;
+    if(aliasIndex[cn]) continue;
     aliasIndex[cn] = { alias: cn, kind: "item", en: en };
   }
   items.forEach(item=>{
@@ -792,7 +794,7 @@ function renderCards(){
 
     const hasSource = String(item.desc || "").trim() !== "";
     const sourceBtn = hasSource
-      ? `<button class="btn-source" onclick="openModal('${desc}')">${tr('source','btnText')}</button>`
+      ? `<button class="btn-source" onclick="openModal('${desc}', '${(item.name||"").replace(/'/g,"\\'")}')">${tr('source','btnText')}</button>`
       : `<button class="btn-source disabled" disabled>${tr('source','btnText')}</button>`;
 
     const nameCnKey = (item.name_cn || "").trim();
@@ -890,7 +892,7 @@ function lockPageScroll(lock){
   }
 }
 
-function openModal(d){
+function openModal(d, ctxName){
 
   // 空内容不弹窗
   if (!d || d.trim() === '') return;
@@ -947,11 +949,13 @@ function openModal(d){
 
     const text = t.startsWith("#") ? t.slice(1) : t;
     const hit = rowAlias(text);
-    const html = stripBrackets(linkifyEquipText(text));
+    const html = stripBrackets(linkifyEquipText(text, ctxName));
 
     // 整行就是一个物品/装备：一行一个跳转
     if (hit && (html.match(/class="item-link"/g) || []).length === 1) {
-      const en = hit.en.replace(/'/g,"\\'");
+      const ov = ctxName && SRC_CONTEXT[ctxName];
+      const targetEn = (ov && ov[hit.alias]) || hit.en;
+      const en = targetEn.replace(/'/g,"\\'");
       const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
       const row = html.replace(/<span class="item-link" onclick="[^"]*">/, '<span class="item-link">');
       return `<div onclick="${call}">${row}</div>`;
@@ -1031,8 +1035,13 @@ function cardShorthandHtml(text){
   }).join("/");
 }
 
+// 同名物品按装备上下文消歧（如两个「魔力卷轴」）
+const SRC_CONTEXT = {
+  "Ring of Promise": { "魔力卷轴": "Enchant Scroll - MP" }
+};
+
 // 获取途径文案里的物品/装备名 -> 可点击（括号内须整体同名，避免误链）
-function linkifyEquipText(text){
+function linkifyEquipText(text, ctxName){
   // 卡牌简写先取出占位，避免被单个卡名截断
   const shorthands = [];
   let out = String(text).replace(/(^|[\s【()（）:：,，、])([^\s【】\/:：,，、]+?)((?:10|[JQKA])(?:\/(?:10|[JQKA]))+)/g, (full, pre, base, ranks)=>{
@@ -1050,7 +1059,9 @@ function linkifyEquipText(text){
         const inner = whole.slice(open + 1, end === -1 ? whole.length : end).trim();
         if(inner !== m) return m;
       }
-      const en = hit.en.replace(/'/g,"\\'");
+      const ov = ctxName && SRC_CONTEXT[ctxName];
+      const targetEn = (ov && ov[m]) || hit.en;
+      const en = targetEn.replace(/'/g,"\\'");
       const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
       return `<span class="item-link" onclick="${call}">${aliasDisplayName(hit)}</span>`;
     });

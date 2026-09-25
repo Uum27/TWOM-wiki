@@ -108,7 +108,8 @@ body{background:#f0f2f5;padding:12px}
 
 .equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
 .item-card .item-stats{ min-height:40px;max-height:200px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch } /* 说明超长时内部滚动 */
-.item-note{ font-size:13px;color:#3D4E68;line-height:1.6;text-align:left;padding:0 4px }
+.item-note{ font-size:15px;color:#3D4E68;line-height:1.6;text-align:left;padding:0 4px }
+@media(min-width:1024px){ .item-note{ font-size:17px } }
 .item-link{ color:#3774AE;text-decoration:underline;cursor:pointer }
 
 /* 卡片底部操作行 */
@@ -189,7 +190,7 @@ body{background:#f0f2f5;padding:12px}
 </div>
 
 <script>
-let currentLang = "cn";
+let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
 const langConfig = {
   searchPlaceholder:{cn:"搜索物品名...",en:"Search item...",kr:"아이템 검색..."},
   pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
@@ -609,7 +610,7 @@ function itemCardWeight(name){
   else if(RUNE_EXCHANGE[name]) lines = 1;
   if(skillExMap[name]) lines += 1 + skillExMap[name].length;
   if(craftMap[name]) lines += 1 + craftMap[name].length;
-  return Math.min(lines, 10);
+  return Math.min(lines, 8);
 }
 // 分类排序（与分类栏一致：箱子→符文→消耗品→其他）
 const CAT_RANK = { chest: 0, rune: 1, consume: 2, other: 3 };
@@ -666,6 +667,7 @@ function updatePageInfo(){
 
 function toggleLang(){
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  try{ localStorage.setItem("twom-lang", currentLang); }catch(e){}
   updateLangText();
   sortItems();
   filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim(), true);
@@ -1004,11 +1006,14 @@ async function loadData(){
     const names = m[2].split("/").map(rk=>m[1] + rk);
     return names.some(n=>matCnToEn[n]) ? names : [name];
   };
+  // 同名「魔力卷轴」按装备上下文消歧
+  const MAT_CONTEXT = { "Ring of Promise": { "魔力卷轴": "Enchant Scroll - MP" } };
   equipData.forEach(e=>{
     if(e.hide) return;
+    const ctx = MAT_CONTEXT[e.name];
     parseRecipeMaterials(e.desc).forEach(cn=>{
       expandCardShorthand(cn).forEach(name=>{
-        const en = matCnToEn[name];
+        const en = (ctx && ctx[name]) || matCnToEn[name];
         if(!en) return;
         if(!craftMap[en]) craftMap[en] = [];
         if(!craftMap[en].includes(e.name)) craftMap[en].push(e.name);

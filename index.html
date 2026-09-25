@@ -283,9 +283,9 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 </div>
 
 <div style="margin-bottom:6px;">
-  <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip" style="padding:10px 12px; font-size:15px;">装备图鉴</button>
-  <button class="type-btn" onclick="location.href='items.html'" data-nav="item" style="padding:10px 12px; font-size:15px;">物品图鉴</button>
-  <button class="type-btn" onclick="location.href='skills.html'" data-nav="skill" style="padding:10px 12px; font-size:15px;">技能图鉴</button>
+  <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
+  <button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+  <button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
 </div>
 
 <div class="zone-panel" id="zonePanel">
@@ -374,7 +374,7 @@ function getPerPage(){
   return window.innerWidth >= 1024 ? 21 : 10;
 }
 let currentGroup = "all"
-let currentLang = "cn";
+let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
 let mapExpanded = false;
 let zonePanelOpen = window.innerWidth >= 768;
 
@@ -1065,6 +1065,7 @@ function updateNavLang(){
 
 function toggleLang() {
   currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
+  try{ localStorage.setItem("twom-lang", currentLang); }catch(e){}
   updateLangBtnText();
   buildGroupButtons();
   updateSearchPlaceholder();
