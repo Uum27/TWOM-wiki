@@ -445,6 +445,28 @@ const statKeys = [
   "set3"
 ];
 
+// 套装属性值三语（数据里的值内嵌中文，显示层翻译；两个属性之间统一用 +）
+const SET_VALUE_CN = {
+  "3力量 5%速": "3力量+5%速", "3敏捷 5%速": "3敏捷+5%速", "3智力 5%速": "3智力+5%速",
+  "体力5 命中2": "体力5+命中2", "体力5 智力2": "体力5+智力2"
+};
+const SET_VALUE_EN = {
+  "3力量+5%速": "3STR+5%Move", "3敏捷+5%速": "3DEX+5%Move", "3智力+5%速": "3INT+5%Move",
+  "3力量 5%速": "3STR+5%Move", "3敏捷 5%速": "3DEX+5%Move", "3智力 5%速": "3INT+5%Move",
+  "体力5 命中2": "HP5+Hit2", "体力5 智力2": "HP5+INT2"
+};
+function statValueText(k, v){
+  const s = String(v).replace(/ to /g,"~");
+  if(k === "set2" || k === "set3"){
+    if(currentLang === "cn") return SET_VALUE_CN[s] || s;
+    if(SET_VALUE_EN[s]) return SET_VALUE_EN[s];
+    return s.replace(/体力/g,"HP").replace(/魔力/g,"MANA").replace(/力量/g,"STR")
+            .replace(/敏捷/g,"DEX").replace(/智力/g,"INT").replace(/命中/g,"Hit")
+            .replace(/暴击/g,"Cri").replace(/移动速度/g,"Move").replace(/移速/g,"Move").replace(/速/g,"Move");
+  }
+  return s;
+}
+
 const rarityConfig = {
   "一般":{color:"#4D5A75",bg:"#474F6E"}, "高级":{color:"#518B38",bg:"#328300"},
   "稀有":{color:"#3774AE",bg:"#0068A9"}, "英雄":{color:"#733A9D",bg:"#69329B"},
@@ -533,6 +555,7 @@ statKeys.forEach(k => {
   if(item[k] == null || item[k] === "") return;
 
   const value = String(item[k]).replace(/ to /g,"~");
+  const valueAlt = statValueText(k, item[k]);
 
   // 属性翻译
   const cn = langConfig.attrName[k]?.cn || "";
@@ -561,6 +584,7 @@ if(k === "precision") alias = "精准";
     ${kr}
     ${alias}
     ${value}
+    ${valueAlt}
   `;
 
 });
@@ -745,7 +769,7 @@ function renderCards(){
     statKeys.forEach(k=>{
       let v = item[k];
       if(v==null || v==="" || v===0 || v==="0") return;
-      statsHtml += `<div class="stat-item">${tr(k,'attrName')}: ${String(v).replace(/ to /g,"~")}</div>`;
+      statsHtml += `<div class="stat-item">${tr(k,'attrName')}: ${statValueText(k, v)}</div>`;
     });
     if(!statsHtml) statsHtml = `<div class="stat-item">${tr('noAttr','btnText')}</div>`;
 
