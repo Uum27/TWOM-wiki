@@ -3099,9 +3099,159 @@
             "en": "Design Snow-Flower Stem Hat",
             "kr": ""
         },
-        "Design Moonstone Equipment": {
+        "Design Moon Ore Equipment": {
             "cn": "设计图:月光石装备",
-            "en": "Design Moonstone Equipment",
+            "en": "Design Moon Ore Equipment",
+            "kr": ""
+        },
+        "Ancient Core": {
+            "cn": "古代核心",
+            "en": "Ancient Core",
+            "kr": ""
+        },
+        "Desert Crystal": {
+            "cn": "沙漠结晶",
+            "en": "Desert Crystal",
+            "kr": ""
+        },
+        "Bolt of Spider Silk": {
+            "cn": "加工的蜘蛛丝",
+            "en": "Bolt of Spider Silk",
+            "kr": ""
+        },
+        "Processed Moon Ore": {
+            "cn": "加工过的月光石",
+            "en": "Processed Moon Ore",
+            "kr": ""
+        },
+        "Thread of Wind": {
+            "cn": "风之线团",
+            "en": "Thread of Wind",
+            "kr": ""
+        },
+        "Pet Coin": {
+            "cn": "宠物币",
+            "en": "Pet Coin",
+            "kr": ""
+        },
+        "Maze Token": {
+            "cn": "迷宫币",
+            "en": "Maze Token",
+            "kr": ""
+        },
+        "Proeta Piece": {
+            "cn": "普罗埃塔碎片",
+            "en": "Proeta Piece",
+            "kr": ""
+        },
+        "Battlefield Supplies": {
+            "cn": "战场补给品",
+            "en": "Battlefield Supplies",
+            "kr": ""
+        },
+        "Pirate Card J": {
+            "cn": "海盗卡J",
+            "en": "Pirate Card J",
+            "kr": ""
+        },
+        "Pirate Card Q": {
+            "cn": "海盗卡Q",
+            "en": "Pirate Card Q",
+            "kr": ""
+        },
+        "Pirate Card K": {
+            "cn": "海盗卡K",
+            "en": "Pirate Card K",
+            "kr": ""
+        },
+        "Donguri Card 10": {
+            "cn": "圆圆卡10",
+            "en": "Donguri Card 10",
+            "kr": ""
+        },
+        "Donguri Card J": {
+            "cn": "圆圆卡J",
+            "en": "Donguri Card J",
+            "kr": ""
+        },
+        "Donguri Card Q": {
+            "cn": "圆圆卡Q",
+            "en": "Donguri Card Q",
+            "kr": ""
+        },
+        "Donguri Card K": {
+            "cn": "圆圆卡K",
+            "en": "Donguri Card K",
+            "kr": ""
+        },
+        "Donguri Card A": {
+            "cn": "圆圆卡A",
+            "en": "Donguri Card A",
+            "kr": ""
+        },
+        "Guild Coin": {
+            "cn": "公会币",
+            "en": "Guild Coin",
+            "kr": ""
+        },
+        "Amputator 1": {
+            "cn": "一刀两断1",
+            "en": "Amputator 1",
+            "kr": ""
+        },
+        "Amputator 2": {
+            "cn": "一刀两断2",
+            "en": "Amputator 2",
+            "kr": ""
+        },
+        "Amputator 3": {
+            "cn": "一刀两断3",
+            "en": "Amputator 3",
+            "kr": ""
+        },
+        "Epiphany 1": {
+            "cn": "顿悟1",
+            "en": "Epiphany 1",
+            "kr": ""
+        },
+        "Epiphany 2": {
+            "cn": "顿悟2",
+            "en": "Epiphany 2",
+            "kr": ""
+        },
+        "Epiphany 3": {
+            "cn": "顿悟3",
+            "en": "Epiphany 3",
+            "kr": ""
+        },
+        "Forest Eye 1": {
+            "cn": "森林之眼1",
+            "en": "Forest Eye 1",
+            "kr": ""
+        },
+        "Forest Eye 2": {
+            "cn": "森林之眼2",
+            "en": "Forest Eye 2",
+            "kr": ""
+        },
+        "Forest Eye 3": {
+            "cn": "森林之眼3",
+            "en": "Forest Eye 3",
+            "kr": ""
+        },
+        "Air-Rending Kick 1": {
+            "cn": "破空脚1",
+            "en": "Air-Rending Kick 1",
+            "kr": ""
+        },
+        "Air-Rending Kick 2": {
+            "cn": "破空脚2",
+            "en": "Air-Rending Kick 2",
+            "kr": ""
+        },
+        "Air-Rending Kick 3": {
+            "cn": "破空脚3",
+            "en": "Air-Rending Kick 3",
             "kr": ""
         },
         "Highguard Armor": {

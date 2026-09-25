@@ -293,7 +293,7 @@ const RUNE_EXCHANGE = {
 const BOX_RUNES = ["Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"];
 const EXTRA_ITEMS = ["Refined Mana"];
 // 补充物品（有图标无物品，后续补入图鉴，无怪物掉落）
-const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool", "Pendant of Honor", "Pagan Relic", "Riel's War Drum", "Design Moonstone Equipment"];
+const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool", "Pendant of Honor", "Pagan Relic", "Riel's War Drum", "Design Moon Ore Equipment", "Ancient Core", "Bolt of Spider Silk", "Processed Moon Ore", "Thread of Wind", "Pet Coin", "Maze Token", "Proeta Piece", "Battlefield Supplies", "Pirate Card J", "Pirate Card Q", "Pirate Card K", "Donguri Card 10", "Donguri Card J", "Donguri Card Q", "Donguri Card K", "Donguri Card A", "Guild Coin"];
 // 精髓获取途径（显示在怪物列表上方）
 const CORE_SOURCES = {
   "1st Core": { cn: "分解1~10级绿色装备获得", en: "Obtained by disassembling green items LV1-10" },
@@ -307,7 +307,15 @@ const CORE_SOURCES = {
 // 补充物品获取途径
 const SUPPLEMENT_SOURCES = {
   "Magic Power Whirlpool": { link: "Magic Power Breath" },
-  "Riel's War Drum": { link: "Pendant of Honor", qty: 3, cn: "在暴风战场管理员处兑换", en: "Battlefield Manager" }
+  "Riel's War Drum": { link: "Pendant of Honor", qty: 3, cn: "在暴风战场管理员处兑换", en: "Battlefield Manager" },
+  "Ancient Core": { link: "Magic Stem", qty: 10, cn: "在V2/V3传送点兑换", en: "V2/V3 Teleport Point" },
+  "Bolt of Spider Silk": { link: "Spider Silk", qty: 20, gold: 2000, out: 20 },
+  "Proeta Piece": { cn: "公会副本2阶段以上掉落 0~2 个", en: "Dropped in Guild Dungeon stage 2+ (0-2)" },
+  "Battlefield Supplies": { link: "Pendant of Honor", qty: 3, cn: "在暴风战场管理员处兑换", en: "Battlefield Manager" },
+  "Guild Coin": { cn: "公会副本\n公会签到\n公会任务", en: "Guild Dungeon\nGuild Check-in\nGuild Quest" },
+  "Thread of Wind": { link: "Sand-Tree Leaf", qty: 5, gain: "1~2" },
+  "Maze Token": { monster: "Darlene the Witch", cn: "死亡时在身边获得 2 个", en: "Obtained 2 if nearby when she dies" },
+  "Pagan Relic": { link: "Abyss Guard Token", qty: 30, cn: "在祭坛NPC图巴卡因处兑换", en: "Altar NPC Tubakain" }
 };
 // 战鼓开启物品 -> 来源
 const OPEN_FROM = {
@@ -605,10 +613,16 @@ function itemCardWeight(name){
 }
 // 分类排序（与分类栏一致：箱子→符文→消耗品→其他）
 const CAT_RANK = { chest: 0, rune: 1, consume: 2, other: 3 };
+// 有可制作装备 / 可兑换（技能、阿德拉、符文）的卡片靠前
+function hasCraftExchange(name){
+  return !!((craftMap[name] && craftMap[name].length) || (skillExMap[name] && skillExMap[name].length) || ADRA_MATERIALS[name] || RUNE_EXCHANGE[name]);
+}
 function sortItems(){
   const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
   allItems.sort((a,b)=>
-    itemCardWeight(a.name) - itemCardWeight(b.name)
+    (hasCraftExchange(a.name) ? 0 : 1) - (hasCraftExchange(b.name) ? 0 : 1)
+    || (itemCardWeight(a.name) > 0 ? 0 : 1) - (itemCardWeight(b.name) > 0 ? 0 : 1)
+    || itemCardWeight(a.name) - itemCardWeight(b.name)
     || (CAT_RANK[a.cat] ?? 9) - (CAT_RANK[b.cat] ?? 9)
     || coll.compare(itemDisplayName(a.name), itemDisplayName(b.name))
     || a.name.localeCompare(b.name)
@@ -811,15 +825,28 @@ function openSourceModal(nameEn){
   if(sup && !item.monsters.length){
     const isEn = currentLang === "en";
     let html;
-    if(sup.link){
+    if(sup.monster){
+      const mn = sup.monster;
+      const mc = (nameMap[mn] && nameMap[mn].cn) || mn;
+      const link = `<span class="item-link" onclick="goMonster('${mc.replace(/'/g,"\\'")}')">${monsterDisplayName(mn)}</span>`;
+      html = isEn ? `Obtained 2 if nearby when ${link} dies` : `${link}${sup.cn}`;
+    } else if(sup.link){
       const link = `<span class="item-link" onclick="goItem('${sup.link.replace(/'/g,"\\'")}')">${itemNameOf(sup.link)}</span>`;
-      html = sup.qty
-        ? (isEn ? `Trade ${link} x${sup.qty} to ${sup.en}` : `用 ${link} x${sup.qty} ${sup.cn}`)
-        : (isEn ? `Chance to craft from ${link}` : `由「${link}」概率合成获得`);
+      if(sup.gold){
+        html = isEn
+          ? `Craft ${sup.out} from ${link} x${sup.qty} + ${sup.gold.toLocaleString()} Gold`
+          : `用 ${link} x${sup.qty} + ${sup.gold}金 制作 ${sup.out} 个`;
+      } else if(sup.qty && sup.gain){
+        html = isEn ? `Exchange ${link} x${sup.qty} for ${sup.gain}` : `用 ${link} x${sup.qty} 兑换 ${sup.gain} 个`;
+      } else if(sup.qty){
+        html = isEn ? `Trade ${link} x${sup.qty} to ${sup.en}` : `用 ${link} x${sup.qty} ${sup.cn}`;
+      } else {
+        html = isEn ? `Chance to craft from ${link}` : `由「${link}」概率合成获得`;
+      }
     } else {
       html = isEn ? sup.en : sup.cn;
     }
-    document.getElementById("modalText").innerHTML = `<div>${html}</div>`;
+    document.getElementById("modalText").innerHTML = String(html).split("\n").map(x=>`<div>${x}</div>`).join("");
     document.getElementById("modal").style.display = "flex";
     document.getElementById("modalText").scrollTop = 0;
     lockPageScroll(true);
@@ -970,13 +997,22 @@ async function loadData(){
     const short = cn.replace(/[的之]/g, "");
     if(short && !matCnToEn[short]) matCnToEn[short] = en;
   }
+  // 卡牌简写：库伊卡10/J/Q/K/A -> 展开为逐张名称（仅当展开名在库中存在）
+  const expandCardShorthand = (name)=>{
+    const m = String(name).match(/^([^\s【】\/]+?)((?:10|[JQKA])(?:\/(?:10|[JQKA]))+)$/);
+    if(!m) return [name];
+    const names = m[2].split("/").map(rk=>m[1] + rk);
+    return names.some(n=>matCnToEn[n]) ? names : [name];
+  };
   equipData.forEach(e=>{
     if(e.hide) return;
     parseRecipeMaterials(e.desc).forEach(cn=>{
-      const en = matCnToEn[cn];
-      if(!en) return;
-      if(!craftMap[en]) craftMap[en] = [];
-      if(!craftMap[en].includes(e.name)) craftMap[en].push(e.name);
+      expandCardShorthand(cn).forEach(name=>{
+        const en = matCnToEn[name];
+        if(!en) return;
+        if(!craftMap[en]) craftMap[en] = [];
+        if(!craftMap[en].includes(e.name)) craftMap[en].push(e.name);
+      });
     });
   });
 

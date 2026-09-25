@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>TWOM Wiki</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
 body{padding:8px;background:#f9f9f9;font-size:16px;}
 
 .top-bar{
@@ -178,8 +178,8 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   border-bottom:1px solid #ddd;
   text-align:center;
 }
-.name{font-size:16px;font-weight:bold}
-.level{font-size:14px;font-weight:bold}
+.name{font-size:18px;font-weight:bold}
+.level{font-size:17px;font-weight:bold}
 .zone{font-size:13px;color:#4fad7e;}
 
 .drops{
@@ -189,7 +189,7 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   grid-template-columns:1fr 1fr;
   gap:4px;
   align-content:center;
-  font-size:14px;
+  font-size:15px;
   text-align:left;
   word-break:break-word;
   overflow:hidden;
@@ -262,15 +262,15 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 }
 
 @media (min-width:768px) and (max-width:1023px) {
-  .name{font-size:17px;}
-  .level{font-size:15px;}
+  .name{font-size:18px;}
+  .level{font-size:17px;}
   .zone{font-size:14px;}
-  .drops{font-size:16px;}
+  .drops{font-size:15px;}
   .drops img{width:22px;height:22px;}
 }
 @media (min-width:1024px) {
-  .name{font-size:18px;}
-  .level{font-size:16px;}
+  .name{font-size:20px;}
+  .level{font-size:19px;}
   .zone{font-size:15px;}
   .drops{font-size:17px;}
   .drops img{width:24px;height:24px;}
@@ -999,8 +999,17 @@ function tr(map, key){
   if (!map[key]) return key;
   return map[key][currentLang] || map[key]["en"] || key;
 }
+// 特殊复活文案（跟随语言切换）
+const reviveSpecialMap = {
+  "100%亡灵气息": { cn: "100%亡灵气息", en: "100% Spiritual Energy", kr: "" },
+  "100% Spiritual Energy": { cn: "100%亡灵气息", en: "100% Spiritual Energy", kr: "" },
+  "早晚10点": { cn: "早晚10点", en: "10 AM / 10 PM", kr: "" }
+};
 function translateReviveTime(text){
   if(!text) return "";
+  const key = String(text).trim();
+  const sp = reviveSpecialMap[key];
+  if(sp) return sp[currentLang] || sp.en || key;
   return text
     .replace(/小时/g, lang.revive.h[currentLang] || "h")
     .replace(/分/g, lang.revive.min[currentLang] || "min")

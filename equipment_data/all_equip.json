@@ -352,14 +352,14 @@
     "hit": "3~5",
     "icon": "Platinum Rapier.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC史密德:,【冻铁铸块】X5,【古代血液】X5,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X5,【古代血液】X5,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Gray Rapier",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "灰色细剑",
     "name_kr": "",
     "level": "30",
     "attack": "8~40",
@@ -392,7 +392,7 @@
     "job": "warrior",
     "name": "Short Blade",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "短刃",
     "name_kr": "",
     "level": "35",
     "attack": "9~45",
@@ -426,7 +426,7 @@
     "job": "warrior",
     "name": "Steel Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "钢铁剑",
     "name_kr": "",
     "level": "38",
     "attack": "8~48",
@@ -459,7 +459,7 @@
     "job": "warrior",
     "name": "Battle Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "战斗之剑",
     "name_kr": "",
     "level": "41",
     "attack": "9~54",
@@ -492,7 +492,7 @@
     "job": "warrior",
     "name": "Sabre",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "军刀",
     "name_kr": "",
     "level": "44",
     "attack": "10~60",
@@ -551,7 +551,7 @@
     "int": "",
     "hit": "0~13",
     "icon": "Guillotine.png",
-    "rarity": "稀有",
+    "rarity": "高级",
     "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
   },
   {
@@ -1064,7 +1064,7 @@
     "job": "ranger",
     "name": "Heavy Flat Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "重型平弓",
     "name_kr": "",
     "level": "30",
     "attack": "5~25",
@@ -1116,7 +1116,7 @@
     "job": "ranger",
     "name": "Light Hunting Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "轻型猎弓",
     "name_kr": "",
     "level": "35",
     "attack": "4~28",
@@ -1204,7 +1204,7 @@
     "job": "ranger",
     "name": "Ashwood Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "白蜡木弓",
     "name_kr": "",
     "level": "41",
     "attack": "4~36",
@@ -1221,7 +1221,7 @@
     "job": "ranger",
     "name": "Worn War Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "磨损战弓",
     "name_kr": "",
     "level": "44",
     "attack": "6~42",
@@ -1728,7 +1728,7 @@
     "job": "magician",
     "name": "Farmer Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "农夫法杖",
     "name_kr": "",
     "level": "30",
     "attack": "4~28",
@@ -1781,7 +1781,7 @@
     "job": "magician",
     "name": "Ironhead Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "铁饰法杖",
     "name_kr": "",
     "level": "35",
     "attack": "4~32",
@@ -1816,7 +1816,7 @@
     "job": "magician",
     "name": "Battle Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "战斗法杖",
     "name_kr": "",
     "level": "38",
     "attack": "4~36",
@@ -1850,7 +1850,7 @@
     "job": "magician",
     "name": "Fisherman Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "渔夫法杖",
     "name_kr": "",
     "level": "41",
     "attack": "6~42",
@@ -1884,7 +1884,7 @@
     "job": "magician",
     "name": "Iron Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "钢铁法杖",
     "name_kr": "",
     "level": "44",
     "attack": "5~45",
@@ -2447,7 +2447,7 @@
     "job": "breaker",
     "name": "Gray Tonfa",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "灰色拐棍",
     "name_kr": "",
     "level": "30",
     "attack": "?",
@@ -2474,7 +2474,7 @@
     "hit": "3~5",
     "icon": "Glacia.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC史密德:,【冻铁铸块】X2,【虚空之球】X2,【水晶碎片】X10,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X2,【虚空之球】X2,【水晶碎片】X10,【赛乐亚之泪】X1"
   },
   {
     "type": "weapon",
@@ -2497,7 +2497,7 @@
     "job": "breaker",
     "name": "Rough Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "粗糙指虎",
     "name_kr": "",
     "level": "35",
     "attack": "?",
@@ -2530,7 +2530,7 @@
     "job": "breaker",
     "name": "Steel Tonfa",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "钢制拐棍",
     "name_kr": "",
     "level": "38",
     "attack": "?",
@@ -2563,7 +2563,7 @@
     "job": "breaker",
     "name": "Steel Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "钢铁指虎",
     "name_kr": "",
     "level": "41",
     "attack": "?",
@@ -2596,7 +2596,7 @@
     "job": "breaker",
     "name": "Chain Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "锁链指虎",
     "name_kr": "",
     "level": "44",
     "attack": "?",
@@ -3215,7 +3215,7 @@
     "dex": "",
     "icon": "Warlord Armor.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3351,7 +3351,7 @@
     "dex": "",
     "icon": "Wyvern Tunic.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3641,7 +3641,7 @@
     "int": "",
     "dex": "",
     "icon": "Monk's Robe.png",
-    "desc": "主城NPC村村:,【棉布料】X100/【神圣线团】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X100/【神圣线团】X30"
+    "desc": "主城NPC村村:,【棉布料】X100/【神圣线圈】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X100/【神圣线圈】X30"
   },
   {
     "type": "armor",
@@ -3708,7 +3708,7 @@
     "dex": "",
     "icon": "Scholar's Gown.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -3953,7 +3953,7 @@
     "int": "0",
     "dex": "",
     "icon": "Lightning Robe.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X100/【神圣线团】X40,主城NPC史奇尼:,【厚实的皮革】X100/【神圣线团】X40"
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【神圣线圈】X40,主城NPC史奇尼:,【厚实的皮革】X100/【神圣线圈】X40"
   },
   {
     "type": "armor",
@@ -4020,7 +4020,7 @@
     "dex": "",
     "icon": "Oblivion Robe.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验室药剂】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
   },
   {
     "type": "armor",
@@ -5227,7 +5227,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Monk's Hat.png",
-    "desc": "主城NPC村村:,【棉布料】X70/【神圣线团】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X70/【神圣线团】X20"
+    "desc": "主城NPC村村:,【棉布料】X70/【神圣线圈】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X70/【神圣线圈】X20"
   },
   {
     "type": "hats",
@@ -5483,7 +5483,7 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Cloud Bandana.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X70/【神圣线团】X30,主城NPC史奇尼:,【厚实的皮革】X70/【神圣线团】X30"
+    "desc": "主城NPC姚班:,【厚实的皮革】X70/【神圣线圈】X30,主城NPC史奇尼:,【厚实的皮革】X70/【神圣线圈】X30"
   },
   {
     "type": "hats",
@@ -6226,7 +6226,7 @@
     "dex": "",
     "hit": "0~7",
     "icon": "Titanium Gauntlet.png",
-    "desc": "【组合书3】制作:,【钛合金铁块】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6248,7 +6248,7 @@
     "int": "",
     "hit": "0 or 3~5",
     "icon": "Thule's Gloves.png",
-    "desc": "【组合书3】制作:,【石冠实验室药瓶】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【石冠实验药瓶】X40,【第5精髓】X20"
   },
   {
     "type": "gloves",
@@ -6711,7 +6711,7 @@
     "set3": "3力量 5%速",
     "icon": "Greaves of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -6780,7 +6780,7 @@
     "dex": "",
     "move": "",
     "icon": "Desert Mercenary Boots.png",
-    "desc": "NPC凯伊洛:,【蜜蜂毒针】X5"
+    "desc": "NPC凯伊洛:,【蜜蜂毒刺】X5"
   },
   {
     "type": "shoes",
@@ -6944,7 +6944,7 @@
     "set3": "3敏捷 5%速",
     "icon": "Boots of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7038,7 +7038,7 @@
     "set3": "3智力 5%速",
     "icon": "Boots of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7178,7 +7178,7 @@
     "set3": "3力量 5%速",
     "icon": "Yellow Canola Boots.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染的物质】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
   },
   {
     "type": "shoes",
@@ -7729,7 +7729,7 @@
     "block": "",
     "icon": "Titanium Belt.png",
     "rarity": "稀有",
-    "desc": "【组合书3】制作:,【钛合金铁块】X40,【第4精髓】X40,【第6精髓】X10"
+    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第4精髓】X40,【第6精髓】X10"
   },
   {
     "type": "belts",

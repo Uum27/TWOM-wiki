@@ -3883,7 +3883,7 @@
     "hp": "24000",
     "exp": "?",
     "中文名": "亡灵(简单)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   },
   {
     "zone": "Sinar Plains (Hard)",
@@ -3895,7 +3895,7 @@
     "hp": "48000",
     "exp": "?",
     "中文名": "亡灵(困难)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   },
   {
     "zone": "Sinar Plains (Easy)",
@@ -3907,7 +3907,7 @@
     "hp": "?",
     "exp": "?",
     "中文名": "含恨亡灵(简单)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   },
   {
     "zone": "Sinar Plains (Hard)",
@@ -3919,7 +3919,7 @@
     "hp": "68000",
     "exp": "?",
     "中文名": "含恨亡灵(困难)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   },
   {
     "zone": "Sinar Plains (Easy)",
@@ -3931,7 +3931,7 @@
     "hp": "62000",
     "exp": "?",
     "中文名": "染上憎恨的亡灵(简单)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   },
   {
     "zone": "Sinar Plains (Hard)",
@@ -3943,6 +3943,6 @@
     "hp": "100000",
     "exp": "?",
     "中文名": "染上憎恨的亡灵(困难)",
-    "revive": "100% Spiritual Energy"
+    "revive": "100%亡灵气息"
   }
 ]

@@ -401,6 +401,8 @@ let aliasIndex = {};
 let aliasList = [];
 let aliasPattern = null;
 let equipIndex = {};
+let plainEquipIndex = {};
+let plainEquipPattern = null;
 let currentType = "all";
 let currentJob = "all";
 function getPerPage(){
@@ -698,7 +700,18 @@ async function loadMyJson(){
   });
   aliasList = Object.values(aliasIndex).sort((a, b)=>b.alias.length - a.alias.length);
   aliasPattern = new RegExp(aliasList.map(x=>x.alias.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "g");
-  
+
+  // 纯文本装备名（含隐藏装备）：仅做显示语言本地化，不生成链接
+  plainEquipIndex = {};
+  const plainNames = [];
+  items.forEach(item=>{
+    const cn = (item.name_cn || "").trim();
+    if(cn.length < 2) return;
+    if(!plainEquipIndex[cn]){ plainEquipIndex[cn] = item; plainNames.push(cn); }
+  });
+  plainNames.sort((a, b)=>b.length - a.length);
+  plainEquipPattern = new RegExp("<[^>]*>|" + plainNames.map(n=>n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "g");
+
   // 过滤掉隐藏装备
   allItems = items.filter(item => !item.hide);
   // 初始显示全部可见装备
@@ -1005,23 +1018,58 @@ function aliasDisplayName(hit){
   return v.cn || hit.en;
 }
 
+// 卡牌简写：库伊卡10/J/Q/K/A -> 每张分别链接
+function cardShorthandHtml(text){
+  const m = String(text).match(/^([^\s【】\/]+?)((?:10|[JQKA])(?:\/(?:10|[JQKA]))+)$/);
+  if(!m) return text;
+  const base = m[1];
+  return m[2].split("/").map(rk=>{
+    const name = base + rk;
+    const hit = aliasIndex[name];
+    if(!hit || hit.kind !== "item") return name;
+    return `<span class="item-link" onclick="goItem('${hit.en.replace(/'/g,"\\'")}')">${aliasDisplayName(hit)}</span>`;
+  }).join("/");
+}
+
 // 获取途径文案里的物品/装备名 -> 可点击（括号内须整体同名，避免误链）
 function linkifyEquipText(text){
-  if(!aliasPattern) return text;
-  return text.replace(aliasPattern, (m, offset, whole)=>{
-    const hit = aliasIndex[m];
-    if(!hit) return m;
-    const open = whole.lastIndexOf("【", offset);
-    const close = whole.lastIndexOf("】", offset);
-    if(open > close){
-      const end = whole.indexOf("】", offset + m.length);
-      const inner = whole.slice(open + 1, end === -1 ? whole.length : end).trim();
-      if(inner !== m) return m;
-    }
-    const en = hit.en.replace(/'/g,"\\'");
-    const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
-    return `<span class="item-link" onclick="${call}">${aliasDisplayName(hit)}</span>`;
+  // 卡牌简写先取出占位，避免被单个卡名截断
+  const shorthands = [];
+  let out = String(text).replace(/(^|[\s【()（）:：,，、])([^\s【】\/:：,，、]+?)((?:10|[JQKA])(?:\/(?:10|[JQKA]))+)/g, (full, pre, base, ranks)=>{
+    shorthands.push(base + ranks);
+    return pre + "\u0001" + (shorthands.length - 1) + "\u0001";
   });
+  if(aliasPattern){
+    out = out.replace(aliasPattern, (m, offset, whole)=>{
+      const hit = aliasIndex[m];
+      if(!hit) return m;
+      const open = whole.lastIndexOf("【", offset);
+      const close = whole.lastIndexOf("】", offset);
+      if(open > close){
+        const end = whole.indexOf("】", offset + m.length);
+        const inner = whole.slice(open + 1, end === -1 ? whole.length : end).trim();
+        if(inner !== m) return m;
+      }
+      const en = hit.en.replace(/'/g,"\\'");
+      const call = hit.kind === "equip" ? `goEquip('${en}')` : `goItem('${en}')`;
+      return `<span class="item-link" onclick="${call}">${aliasDisplayName(hit)}</span>`;
+    });
+  }
+  // 纯文本装备名 -> 本地化显示（不生成链接）
+  if(plainEquipPattern){
+    out = out.replace(plainEquipPattern, m=>{
+      if(m.charAt(0) === "<") return m;
+      const eq = plainEquipIndex[m];
+      if(!eq) return m;
+      if(currentLang === "en") return eq.name || m;
+      if(currentLang === "kr") return eq.name_kr || eq.name || m;
+      return eq.name_cn || m;
+    });
+  }
+  if(shorthands.length){
+    out = out.replace(/\u0001(\d+)\u0001/g, (_, i)=>cardShorthandHtml(shorthands[+i]));
+  }
+  return out;
 }
 
 function goItem(name){

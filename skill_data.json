@@ -56,8 +56,25 @@
         "en": ""
       }
     },
-    "books": {},
-    "extraSources": {}
+        "books": {
+      "1": "Amputator 1",
+      "2": "Amputator 2",
+      "3": "Amputator 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "2": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "3": {
+        "cn": "公会商店兑换（公会币x150000）",
+        "en": "Exchange at Guild Shop (Guild Coin x150000)"
+      }
+    }
   },
   "Baekha's Strike": {
     "cn": "白荷之拳",
@@ -1021,8 +1038,25 @@
         "en": "Power up Shield and Sara's Blessing"
       }
     },
-    "books": {},
-    "extraSources": {}
+        "books": {
+      "1": "Epiphany 1",
+      "2": "Epiphany 2",
+      "3": "Epiphany 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "2": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "3": {
+        "cn": "公会商店兑换（公会币x150000）",
+        "en": "Exchange at Guild Shop (Guild Coin x150000)"
+      }
+    }
   },
   "Fatal Attack": {
     "cn": "致命一击",
@@ -1345,8 +1379,25 @@
         "en": "50% additional critical hit damage"
       }
     },
-    "books": {},
-    "extraSources": {}
+        "books": {
+      "1": "Forest Eye 1",
+      "2": "Forest Eye 2",
+      "3": "Forest Eye 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "2": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "3": {
+        "cn": "公会商店兑换（公会币x150000）",
+        "en": "Exchange at Guild Shop (Guild Coin x150000)"
+      }
+    }
   },
   "Freezing Trap": {
     "cn": "冰冻",
@@ -3070,7 +3121,24 @@
         "Electric Imbue: Apply Stun"
       ]
     },
-    "books": {},
-    "extraSources": {}
+        "books": {
+      "1": "Air-Rending Kick 1",
+      "2": "Air-Rending Kick 2",
+      "3": "Air-Rending Kick 3"
+    },
+    "extraSources": {
+      "1": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "2": {
+        "cn": "公会商店兑换（公会币x100000）",
+        "en": "Exchange at Guild Shop (Guild Coin x100000)"
+      },
+      "3": {
+        "cn": "公会商店兑换（公会币x150000）",
+        "en": "Exchange at Guild Shop (Guild Coin x150000)"
+      }
+    }
   }
 }
