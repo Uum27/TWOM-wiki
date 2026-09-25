@@ -293,7 +293,7 @@ const RUNE_EXCHANGE = {
 const BOX_RUNES = ["Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"];
 const EXTRA_ITEMS = ["Refined Mana"];
 // 补充物品（有图标无物品，后续补入图鉴，无怪物掉落）
-const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool", "Pendant of Honor", "Pagan Relic", "Riel's War Drum"];
+const SUPPLEMENT_ITEMS = ["1st Core", "6th Core", "7th Core", "Magic Power Whirlpool", "Pendant of Honor", "Pagan Relic", "Riel's War Drum", "Design Moonstone Equipment"];
 // 精髓获取途径（显示在怪物列表上方）
 const CORE_SOURCES = {
   "1st Core": { cn: "分解1~10级绿色装备获得", en: "Obtained by disassembling green items LV1-10" },
@@ -511,18 +511,15 @@ function expandExchangeNames(text){
   return String(text).split(/[\n/+＋]/).map(x=>x.replace(/\s*x\s*\d+\s*$/i, "").trim()).filter(Boolean);
 }
 
-// 解析装备文案里的制作材料（【组合书X】制作 / NPC 制作段之后的【...】）
+// 解析装备文案里的制作材料（排除怪物/宝箱/出处段，其余【...】视为材料）
 function parseRecipeMaterials(desc){
   const segs = String(desc || "").split(/[,\n]/).map(s=>s.trim()).filter(Boolean);
   const out = [];
-  let mode = "none";
+  let stop = false;
   segs.forEach(s=>{
-    if(s.startsWith("@")) return;
-    if(s.indexOf("怪物掉落") === 0 || s.indexOf("获取途径") === 0){ mode = "drop"; return; }
-    if(s.indexOf("箱子开启") >= 0){ mode = "chest"; return; }
-    if(s.startsWith("#")){ mode = "note"; return; }
-    if(s.indexOf("制作") >= 0 || s.indexOf("NPC") >= 0){ mode = "craft"; return; }
-    if(mode !== "craft") return;
+    if(s.startsWith("#") || s.indexOf("箱子开启") >= 0){ stop = true; return; }
+    if(stop || s.startsWith("@")) return;
+    if(s.indexOf("怪物掉落") === 0 || s.indexOf("获取途径") === 0) return;
     (s.match(/【([^】]+)】/g) || []).forEach(b=>{
       const n = b.slice(1, -1).trim();
       if(n && !n.startsWith("组合书")) out.push(n);
