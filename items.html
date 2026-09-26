@@ -348,8 +348,6 @@ const TREASURE_ITEMS = [
   "Dungeon Treasure 20", "Dungeon Treasure 25", "Dungeon Treasure 30", "Dungeon Treasure 35", "Dungeon Treasure 40",
   "Dungeon Treasure 42", "Dungeon Treasure 44", "Dungeon Treasure 46", "Dungeon Treasure 48", "Dungeon Treasure 50"
 ];
-// 42~50 宝物：描述中「来源」与「开启获得」分两行显示
-const TREASURE_42_50 = ["Dungeon Treasure 42", "Dungeon Treasure 44", "Dungeon Treasure 46", "Dungeon Treasure 48", "Dungeon Treasure 50"];
 // 宝物箱对应副本/ Boss
 const CHEST_DUNGEONS = {
   "Dungeon Treasure 20": { type: "zone", zone: "20副本" },
@@ -446,11 +444,6 @@ function chestSourceLine(name, isEn){
   const disp = monsterDisplayName(mn);
   return `${isEn ? "Defeat " : "击杀 "}<span class="item-link" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>${isEn ? " then exit the dungeon" : " 后退出副本获得"}`;
 }
-function chestNoteHead(name, isEn){
-  const line = chestSourceLine(name, isEn);
-  return line ? line + (isEn ? "; " : "；") : "";
-}
-
 // 符文/箱子说明（含跳转）
 function itemNoteBase(name){
   const isEn = currentLang === "en";
@@ -460,14 +453,12 @@ function itemNoteBase(name){
     ).join("<br>");
     return `<div class="item-note">${isEn ? "Randomly contains:" : "开启随机获得："}<br>${links}</div>`;
   }
-  // 宝箱开启内容（每个内容单独一行）
+  // 宝箱开启内容（每个内容单独一行）；获取方式见「获取途径」弹窗
   const chestList = chestContents[name];
   if(chestList){
     const parts = chestList.map(chestEntryHtml).join("<br>");
-    const head = chestNoteHead(name, isEn);
     const label = isEn ? "Opening yields:" : "开启获得：";
-    const brk = head && TREASURE_42_50.includes(name) ? "<br>" : "";
-    return `<div class="item-note">${head}${brk}${label}<br>${parts}</div>`;
+    return `<div class="item-note">${label}<br>${parts}</div>`;
   }
   const ainfo = ADRA_MATERIALS[name];
   if(ainfo){
@@ -605,7 +596,7 @@ function chestSortKey(name){
 function itemCardWeight(name){
   let lines = 0;
   if(name === "Box Flowing with Mana") lines = 1 + BOX_RUNES.length;
-  else if(chestContents[name]) lines = 2 + chestContents[name].length;
+  else if(chestContents[name]) lines = 1 + chestContents[name].length;
   else if(ADRA_MATERIALS[name]) lines = 1 + ADRA_MATERIALS[name].equips.length;
   else if(RUNE_EXCHANGE[name]) lines = 1;
   if(skillExMap[name]) lines += 1 + skillExMap[name].length;
