@@ -142,6 +142,10 @@ body{background:#f0f2f5;padding:12px}
 .modal-backdrop{ position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999 }
 .modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
 .modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+/* 弹窗标题文字色：与对应按钮色协调（同色系加深，白底清晰易读、不刺眼） */
+#modalTitle{ color:#355E9C }                                   /* 获取途径：蓝 */
+#rateModalTitle,#probModalTitle{ color:#2C7267 }                /* 获得概率：青绿 */
+#relicModalTitle{ color:#4E7A3C }                               /* 文物概率：深绿 */
 .modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
 .modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
 
@@ -154,7 +158,7 @@ body{background:#f0f2f5;padding:12px}
 /* 获取途径：行内格式「名称：怪物/怪物」+ 斑马纹 */
 .modal-desc .source-row{
   display:block;padding:6px 8px;margin:0;border-radius:0;
-  background:none;cursor:default;text-align:left;
+  background:none;cursor:default;text-align:center;   /* 获取途径正文居中 */
 }
 .modal-desc .source-row:nth-child(even){ background:#f7f9fc }
 .source-name{ font-weight:bold;color:#3D4E68 }
@@ -163,17 +167,32 @@ body{background:#f0f2f5;padding:12px}
 .src-item{ color:#3774AE;cursor:pointer;text-decoration:underline }
 .src-sep{ color:#999;margin:0 3px }
 .src-text{ color:#666 }
+/* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
+select.lang-btn{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:32px;
+  padding-left:8px;                  /* 左侧留白收紧（右侧需给箭头留位） */
+  text-align:center;text-align-last:center;   /* 仅文字居中，箭头仍靠右 */
+}
 </style>
 </head>
 
 <body>
 <div class="top-bar">
   <input class="search-box" placeholder="搜索技能名/效果..." id="searchBox">
-  <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
+  <select class="lang-btn" id="langSelect"></select>
 </div>
 <button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
 <button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
 <button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<button class="type-btn active" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
+<button class="type-btn" onclick="location.href='gem.html'" data-nav="gem">宝石图鉴</button>
+<button class="type-btn" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
+<button class="type-btn" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
+<button class="type-btn" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
 <div class="top-bar" id="classBar">
   <button class="type-btn active" data-class="all">全部</button>
   <button class="type-btn" data-class="warrior">战士</button>
@@ -182,15 +201,19 @@ body{background:#f0f2f5;padding:12px}
   <button class="type-btn" data-class="breaker">武术家</button>
 </div>
 <div class="pagination" id="topPagination">
+  <button class="page-btn" id="firstTop">首页</button>
   <button class="page-btn" id="prevTop">上一页</button>
-  <span id="pageInfo">第 1 页</span>
+  <span class="page-jump" id="pageJumpTop"><span id="pageInfo">第 1 页</span><input class="page-jump-input" id="pageInputTop" type="number" min="1" step="1" inputmode="numeric"></span>
   <button class="page-btn" id="nextTop">下一页</button>
+  <button class="page-btn" id="lastTop">尾页</button>
 </div>
 <div class="equip-grid" id="skillGrid">加载中...</div>
 <div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="firstBot">首页</button>
   <button class="page-btn" id="prevBot">上一页</button>
-  <span id="pageInfoBot">第 1 页</span>
+  <span class="page-jump" id="pageJumpBot"><span id="pageInfoBot">第 1 页</span><input class="page-jump-input" id="pageInputBot" type="number" min="1" step="1" inputmode="numeric"></span>
   <button class="page-btn" id="nextBot">下一页</button>
+  <button class="page-btn" id="lastBot">尾页</button>
 </div>
 <div class="modal-backdrop" id="modal">
   <div class="modal-content source-modal">
@@ -201,48 +224,52 @@ body{background:#f0f2f5;padding:12px}
 </div>
 
 <script>
-let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
-const langConfig = {
-  searchPlaceholder:{cn:"搜索技能名/需求等级...",en:"Search skill/level...",kr:"스킬명/레벨 검색..."},
-  pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
-  btnText:{
-    prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
-    source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
-    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无技能数据",en:"No data",kr:"데이터 없음"}
-  },
-  skillType:{
-    active:{cn:"主动",en:"Active",kr:"액티브"},
-    passive:{cn:"被动",en:"Passive",kr:"패시브"}
-  },
-  skillText:{
-    crystalAll:{cn:"全部",en:"All",kr:"전체"},
-    reqLv:{cn:"需求等级:LV",en:"Req Lv: ",kr:"요구 Lv: "}
+/* ===== 语言工具（内联，不依赖额外 js 文件；语言对照数据在 lang.json） ===== */
+var TWOM_LANG_OPTIONS=[["en","English"],["zh","中文"],["ja","日本語"],["ko","한국어"]];
+var TWOM_UI2CODE={en:"en",zh:"cn",ja:"ja",ko:"kr"};
+var TWOM_CODE2UI={en:"en",cn:"zh",ja:"ja",kr:"ko"};
+var TWOM_NAV={},TWOM_TXTJA={};
+function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"kr",ko:"kr"})[v]||"cn";}
+function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
+function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="kr"?"ko":"en";}
+function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomApplyLangData(L){TWOM_NAV=(L&&L.nav)||{};TWOM_TXTJA=(L&&L.txtJa)||{};NPC_TEXT=(L&&L.npcText)||NPC_TEXT;twomUpdateNav();
+  var S=(L&&L.skillsLang)||{};Object.assign(langConfig,S.langConfig||{});Object.assign(classLang,S.className||{});
+}
+function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
+function twomTxt(cn,lang){return lang==="ja"?(TWOM_TXTJA[cn]||cn):cn;}
+
+/* ===== NPC_LOCALIZE_PATCH：NPC 名跟随语言 =====
+   把文案里出现的官方 NPC 名（lang.json.npcText）换成当前语言的官方名。
+   注意只吃 npcText 这个**子集**：官方 NPC 表里还有一批与物品/称号/怪物名撞车的词
+   （Knight / Magic Stone / Forest / Pie / Guard …），整表替换会把 `Fallen Magic Stone`（物品）、
+   `Jewel Knight`（称号）里的词一起换掉。子集由 work/scripts/build_npc_text.py 生成。 */
+let NPC_TEXT = {};          /* ← lang.json 的 npcText */
+let _npcRes = null;
+function npcLocalize(text){
+  const s = String(text == null ? '' : text);
+  const ks = Object.keys(NPC_TEXT);
+  if(!s || !ks.length) return s;
+  if(!_npcRes){
+    const sorted = ks.slice().sort(function(a, b){ return b.length - a.length; });
+    _npcRes = new RegExp('\\b(' + sorted.map(function(k){ return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')\\b', 'g');
   }
-};
-
-const classLang = {
-  all:{cn:"全部",en:"All",kr:"전체"},
-  warrior:{cn:"战士",en:"Warrior",kr:"전사"},
-  ranger:{cn:"游侠",en:"Ranger",kr:"궁수"},
-  magician:{cn:"法师",en:"Magician",kr:"마법사"},
-  breaker:{cn:"武术家",en:"Breaker",kr:"무도가"}
-};
-const classOrder = ["warrior","ranger","magician","breaker"];
-
-// 导航按钮三语
-const navLang = {
-  monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
-  equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
-  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"},
-  skill:   {cn:"技能图鉴", en:"Skills", kr:"스킬 도감"}
-};
-
-function updateNavLang(){
-  document.querySelectorAll('[data-nav]').forEach(btn=>{
-    const k = btn.dataset.nav;
-    if(navLang[k]) btn.innerText = navLang[k][currentLang];
+  return s.replace(_npcRes, function(m){
+    const v = NPC_TEXT[m] || {};
+    return v[currentLang] || v.cn || v.en || m;
   });
 }
+function twomUi(L,k,lang,vars){var o=((L&&L.ui)||{})[k];var s=o?(o[lang]||o.cn||o.en||k):k;return String(s).replace(/\{(\w+)\}/g,function(_,n){return (vars&&vars[n]!=null)?vars[n]:"";});}
+</script>
+<script>
+let currentLang = twomReadLang();
+const langConfig = {};   /* ← lang.json 的 skillsLang.langConfig（页面不再自带文案） */;
+
+const classLang = {};   /* ← lang.json 的 skillsLang.className（页面不再自带文案） */;
+const classOrder = ["warrior","ranger","magician","breaker"];
+
+// 导航按钮（改用公共库）
+function updateNavLang(){ twomUpdateNav(currentLang); }
 
 let page = 1;
 let allSkills = [];
@@ -261,11 +288,12 @@ function getPerPage(){
 
 function tr(key, type){
   const o = langConfig[type]?.[key];
-  return o?.[currentLang] || o?.cn || key;
+  return o?.[currentLang] || twomTxt(o?.cn, currentLang) || o?.cn || key;
 }
 
 function skillName(s){
   if(currentLang === "en") return s.en || s.cn || s.key;
+  if(currentLang === "ja") return s.ja || s.en || s.cn || s.key;
   if(currentLang === "kr") return s.kr || s.en || s.cn || s.key;
   return s.cn || s.en || s.key;
 }
@@ -292,7 +320,7 @@ function linkifySourceText(text){
     const re = new RegExp("\\b" + alias + "\\b", "gi");
     const disp = monsterDisplayName(en);
     const cn = (nameMap[en] && nameMap[en].cn) || en;
-    out = out.replace(re, `<span class="src-monster" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>`);
+    out = out.replace(re, `<span class="src-monster" onclick="goMonster('${disp.replace(/'/g,"\\'")}')">${disp}</span>`);
   });
   // 括号内兑换/合成材料 -> 物品图鉴（如 乌波水晶鳞片、名誉项链x60、百发百中1/2/3p）
   out = out.replace(/（([^）]+)）/g, (full, inner)=>{
@@ -301,7 +329,7 @@ function linkifySourceText(text){
     const html = parts.map(p=>{
       if(p.sep) return p.sep;
       const name = p.en
-        ? `<span class="src-item" onclick="goItem('${p.en.replace(/'/g,"\\'")}')">${itemDisplayName(p.en)}</span>`
+        ? `<span class="src-item" onclick="goItem('${itemDisplayName(p.en).replace(/'/g,"\\'")}')">${itemDisplayName(p.en)}</span>`
         : p.base;
       return name + p.suffix;
     }).join("");
@@ -334,17 +362,37 @@ function expandSkillMaterials(text){
 function itemDisplayName(en){
   const m = dropMap[en] || {};
   if(currentLang === "en") return m.en || en;
+  if(currentLang === "ja") return m.ja || m.en || en;
   if(currentLang === "kr") return m.kr || m.en || en;
   return m.cn || en;
 }
 
+/* 跳转助手：把「英文键或任意语言的名字」解析成当前语言的显示名，找不到就原样返回 */
+function locKeyOf(map, v){
+  const s = String(v == null ? '' : v).trim();
+  if(!s || !map) return null;
+  if(map[s]) return s;
+  const low = s.toLowerCase();
+  const ks = Object.keys(map);
+  for(let i = 0; i < ks.length; i++){
+    const o = map[ks[i]] || {};
+    const cand = [ks[i], o.cn, o.en, o.ja, o.kr];
+    for(let j = 0; j < cand.length; j++){
+      if(String(cand[j] || '').toLowerCase() === low) return ks[i];
+    }
+  }
+  return null;
+}
+
+/* 跳转统一传「当前语言的名称」 */
 function goItem(name){
-  location.href = `items.html?item=${encodeURIComponent(name)}`;
+  const k = locKeyOf(dropMap, name);
+  location.href = `items.html?item=${encodeURIComponent(k ? itemDisplayName(k) : name)}`;
 }
 
 // 排序：职业（战士→游侠→法师→武术家）→ 学习等级升序 → 名称
 function sortSkills(){
-  const coll = new Intl.Collator(currentLang === "cn" ? "zh-Hans" : "en");
+  const coll = new Intl.Collator(twomLocale(currentLang));
   const classRank = (c)=>{
     const i = classOrder.indexOf(c);
     return i === -1 ? 99 : i;
@@ -364,7 +412,6 @@ function updateLangText(){
   document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
   document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
   document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = tr('next','btnText');
-  document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
   document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
   document.querySelector('.modal-close').innerText = tr('close','btnText');
   updateClassButtonsLang();
@@ -396,7 +443,7 @@ function doSearch(){ filterAndRender(document.getElementById('searchBox').value.
 
 function searchable(s){
   const lv = (s.learnLevel === "" || s.learnLevel == null) ? "" : String(s.learnLevel);
-  return [s.key, s.cn||"", s.en||"", s.kr||"", lv, lv ? lv+"级" : "", lv ? "lv"+lv : ""].join(" ").toLowerCase();
+  return [s.key, s.cn||"", s.en||"", s.ja||"", s.kr||"", lv, lv ? lv+"级" : "", lv ? "lv"+lv : ""].join(" ").toLowerCase();
 }
 
 function filterAndRender(keyword="", keepPage){
@@ -420,6 +467,9 @@ function setClass(c){
   document.querySelectorAll('#classBar .type-btn').forEach(btn=>{
     btn.classList.toggle('active', btn.dataset.class === c);
   });
+  // 点分类按钮 = 重置搜索框（残留关键词会把新分类的结果筛空）
+  const box = document.getElementById('searchBox');
+  if(box) box.value = "";
   doSearch();
 }
 
@@ -501,13 +551,13 @@ function openSourceModal(key){
     const extraRaw = (s.extraSources && s.extraSources[lv]) ? s.extraSources[lv] : "";
     let extra = "";
     if(typeof extraRaw === "string") extra = extraRaw;
-    else if(extraRaw) extra = (currentLang === "en") ? (extraRaw.en || extraRaw.cn || "") : (extraRaw.cn || extraRaw.en || "");
+    else if(extraRaw) extra = pick(extraRaw);   // 四语跟随（ja/kr 缺失时回退 cn/en）
     let parts = monsters.map(mn=>{
       const disp = monsterDisplayName(mn);
       const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
-      return `<span class="src-monster" onclick="goMonster('${cn.replace(/'/g,"\\'")}')">${disp}</span>`;
+      return `<span class="src-monster" onclick="goMonster('${disp.replace(/'/g,"\\'")}')">${disp}</span>`;
     });
-    if(extra) parts.push(`<span class="src-text">${linkifySourceText(extra)}</span>`);
+    if(extra) parts.push(`<span class="src-text">${linkifySourceText(npcLocalize(extra))}</span>`);
     const srcHtml = parts.length ? parts.join('<span class="src-sep">/</span>') : `<span class="src-text">—</span>`;
     const colon = currentLang === "cn" ? "：" : ": ";
     return `<div class="source-row"><span class="source-name">${bookName}</span><span class="source-src">${colon}${srcHtml}</span></div>`;
@@ -521,8 +571,9 @@ function openSourceModal(key){
   document.getElementById("modalText").scrollTop = 0;
   lockPageScroll(true);
 }
-function goMonster(cnName){
-  location.href = `index.html?monster=${encodeURIComponent(cnName)}`;
+function goMonster(name){
+  const k = locKeyOf(nameMap, name);
+  location.href = `index.html?monster=${encodeURIComponent(k ? monsterDisplayName(k) : name)}`;
 }
 function closeModal(){
   document.getElementById("modal").style.display = "none";
@@ -557,8 +608,9 @@ function jumpToSkillFromUrl(){
   });
 
   const index = allSkills.findIndex(s=>{
-    const names = [s.key, s.cn, s.en, s.kr].join(" ").toLowerCase();
-    return names.includes(key);
+    /* 强跳转：只认完全同名，不再子串模糊匹配 */
+    const names = [s.key, s.cn, s.en, s.ja, s.kr].filter(Boolean).map(v=>String(v).toLowerCase().trim());
+    return names.indexOf(key) >= 0;
   });
 
   if(index === -1){
@@ -600,7 +652,16 @@ async function loadData(){
   }
   dropMap = lang.dropMap || {};
   nameMap = lang.nameMap || {};
-
+  // 语言对照（lang.json：nav / ui / 技能 ja 名等）
+  twomApplyLangData(lang);
+  const sk = lang.skills || {};
+  Object.keys(skillData).forEach(function(k){
+    const s = skillData[k]; const x = sk[k] || (s.en && sk[s.en]);
+    if(!x) return;
+    if(x.ja && !s.ja) s.ja = x.ja;
+    if(x.kr && !s.kr) s.kr = x.kr;
+  });
+  
   // 物品中文名索引（获取途径括号里的兑换/合成材料）
   itemCnIndex = {};
   for(const en in dropMap){
@@ -632,7 +693,10 @@ async function loadData(){
   }
 }
 
-document.getElementById('langBtn').onclick = toggleLang;
+twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
+  currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
+  updateLangText(); sortSkills(); filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim(), true);
+});
 document.getElementById('searchBox').addEventListener('input', doSearch);
 document.getElementById('prevTop').onclick = goPrev;
 document.getElementById('nextTop').onclick = goNext;
@@ -662,6 +726,120 @@ window.addEventListener('resize', () => {
 
 });
 loadData();
+</script>
+<style>
+/* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
+/* PAGE_NAV_COMPACT_V5：桌面按钮仍为原尺寸(16px)，手机端只微收 1~2px，保证两位数页码仍在一排 */
+.page-jump{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.page-jump:hover > span{text-decoration:underline}
+.page-jump-input{display:none;width:66px;padding:6px 4px;border:1px solid #ccc;border-radius:8px;font-size:16px;text-align:center;font-family:inherit;-moz-appearance:textfield;appearance:textfield}
+.page-jump-input::-webkit-outer-spin-button,.page-jump-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.page-jump.editing .page-jump-input{display:inline-block}
+.page-jump.editing > span{display:none}
+.page-btn:disabled{opacity:.45}
+/* 分页栏改弹性单行：只为消除 HTML 空白造成的换行，不改按钮尺寸（尺寸仍用页面原有 .page-btn 规则）。
+   gap:4px 是补回原先元素间空白所占的宽度，让桌面观感与改动前一致。 */
+.pagination{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:4px}
+.pagination > *{flex:0 0 auto}
+.pagination .page-jump{white-space:nowrap}
+/* 手机端只微收一点（越窄越收，最小 14px；桌面 16px 保持不变） */
+@media(max-width:480px){
+  .pagination{gap:3px}
+  .pagination .page-btn{padding:7px;margin:0 3px;font-size:16px}
+  .page-jump-input{width:62px;font-size:16px;padding:5px 4px}
+}
+@media(max-width:400px){
+  .pagination{gap:2px}
+  .pagination .page-btn{padding:6px;margin:0 2px;font-size:15px}
+  .page-jump-input{width:58px;font-size:15px}
+}
+@media(max-width:340px){
+  .pagination{gap:1px}
+  .pagination .page-btn{padding:5px;margin:0 1px;font-size:14px}
+  .page-jump-input{width:52px;font-size:14px}
+}
+</style>
+<script>
+/* ===== PAGE_NAV_PATCH：首页 / 尾页 / 点击「第 x/y 页」输入页码（6 个图鉴页共用） =====
+   在各页原有脚本之后运行，复用其 page / filteredXxx / getPerPage / renderCards 或 render / updatePageInfo。 */
+(function(){
+  var JUMP_LABEL = {
+    cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
+    en:{first:"First",last:"Last",tip:"Click to enter a page number"},
+    ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
+    kr:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+  };
+  function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
+  function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }
+  function listOf(){
+    if(typeof filtered !== "undefined" && filtered) return filtered;
+    if(typeof filteredItems !== "undefined" && filteredItems) return filteredItems;
+    if(typeof filteredSkills !== "undefined" && filteredSkills) return filteredSkills;
+    return [];
+  }
+  function totalPages(){ return Math.max(1, Math.ceil(listOf().length / getPerPage())); }
+  function draw(){
+    if(typeof renderCards === "function") return renderCards();
+    if(typeof render === "function") return render();
+  }
+  function syncInfo(){ if(typeof updatePageInfo === "function") updatePageInfo(); }
+  function goTo(n){
+    var t = totalPages(), v = Math.min(Math.max(1, parseInt(n, 10) || 1), t);
+    if(v === page){ syncInfo(); return; }
+    page = v; draw(); syncInfo();
+  }
+  function refresh(){
+    var t = totalPages(), L = lbl();
+    [["Top","firstTop","lastTop"],["Bot","firstBot","lastBot"]].forEach(function(a){
+      var f = document.getElementById(a[1]), l = document.getElementById(a[2]);
+      if(f){ f.innerText = L.first; f.disabled = page <= 1; }
+      if(l){ l.innerText = L.last;  l.disabled = page >= t; }
+      var jw = document.getElementById("pageJump" + a[0]), inp = document.getElementById("pageInput" + a[0]);
+      if(jw) jw.title = L.tip;
+      if(inp){ inp.max = t; inp.title = L.tip; if(!jw || !jw.classList.contains("editing")) inp.value = page; }
+    });
+  }
+  function cancelEdit(jw, inp){ jw.classList.remove("editing"); inp.value = page; inp.blur(); syncInfo(); }
+  function commit(jw, inp){
+    if(!jw.classList.contains("editing")) return;
+    var v = parseInt(inp.value, 10);
+    jw.classList.remove("editing");
+    if(!isNaN(v)) goTo(v); else syncInfo();
+  }
+  function bindJump(sfx){
+    var jw = document.getElementById("pageJump" + sfx), inp = document.getElementById("pageInput" + sfx);
+    if(!jw || !inp) return;
+    jw.onclick = function(ev){
+      if(ev && ev.target === inp) return;
+      if(jw.classList.contains("editing")) return;
+      jw.classList.add("editing");
+      inp.value = page;
+      inp.focus(); try{ inp.select(); }catch(e){}
+    };
+    inp.onkeydown = function(e){
+      var k = e.key || "";
+      if(k === "Enter" || e.keyCode === 13){ e.preventDefault(); commit(jw, inp); inp.blur(); }
+      else if(k === "Escape" || e.keyCode === 27){ e.preventDefault(); cancelEdit(jw, inp); }
+    };
+    inp.onblur = function(){ commit(jw, inp); };
+  }
+  function bindBtn(id, fn){
+    var b = document.getElementById(id);
+    if(!b) return;
+    b.onclick = function(){ if(b.disabled) return; fn(); };
+  }
+  ["Top","Bot"].forEach(function(sfx){
+    bindJump(sfx);
+    bindBtn("first" + sfx, function(){ if(page > 1){ page = 1; draw(); syncInfo(); window.scrollTo(0,0); } });
+    bindBtn("last" + sfx,  function(){ var t = totalPages(); if(page < t){ page = t; draw(); syncInfo(); window.scrollTo(0,0); } });
+  });
+  // 包一层 updatePageInfo：每次刷新（含切语言）都同步按钮文案 / 输入框上下限
+  if(typeof updatePageInfo === "function"){
+    var _orig = updatePageInfo;
+    updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
+  }
+  refresh();
+})();
 </script>
 </body>
 </html>

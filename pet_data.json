@@ -1,0 +1,5476 @@
+[
+ {
+  "name": "Abaddon",
+  "catCode": "宠",
+  "icon": "pet_icons/Abaddon.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.2",
+  "hp": "133",
+  "obtain": "",
+  "note": "Released June 2021"
+ },
+ {
+  "name": "Ace",
+  "catCode": "宠",
+  "icon": "pet_icons/Ace.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.0",
+  "hp": "31",
+  "obtain": "Card Egg",
+  "note": ""
+ },
+ {
+  "name": "Adorable Yeti",
+  "catCode": "宠",
+  "icon": "pet_icons/Adorable Yeti.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.7",
+  "hp": "38",
+  "obtain": "Yeti Egg",
+  "note": ""
+ },
+ {
+  "name": "Aiyo",
+  "catCode": "宠",
+  "icon": "pet_icons/Aiyo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.0",
+  "hp": "121",
+  "obtain": "Little Ranger Egg",
+  "note": ""
+ },
+ {
+  "name": "Alexander",
+  "catCode": "宠",
+  "icon": "pet_icons/Alexander.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.6",
+  "hp": "147",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Alicia",
+  "catCode": "宠",
+  "icon": "pet_icons/Alicia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.8",
+  "hp": "149",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Amateur Spy",
+  "catCode": "宠",
+  "icon": "pet_icons/Amateur Spy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.7",
+  "hp": "98",
+  "obtain": "Amateur Spy Egg",
+  "note": ""
+ },
+ {
+  "name": "Amateur Tiger",
+  "catCode": "宠",
+  "icon": "pet_icons/Amateur Tiger.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.4",
+  "hp": "165",
+  "obtain": "Premium Shop",
+  "note": "Released April 24, 2024"
+ },
+ {
+  "name": "Amelia",
+  "catCode": "宠",
+  "icon": "pet_icons/Amelia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.3",
+  "hp": "144",
+  "obtain": "Premium Shop\nMagic Trainee Egg",
+  "note": "Released June 29, 2022"
+ },
+ {
+  "name": "Angry Skull",
+  "catCode": "宠",
+  "icon": "pet_icons/Angry Skull.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.1",
+  "hp": "72",
+  "obtain": "Skull Egg\nDeath Knight's Box",
+  "note": ""
+ },
+ {
+  "name": "Angry Turkey",
+  "catCode": "宠",
+  "icon": "pet_icons/Angry Turkey.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.2",
+  "hp": "22",
+  "obtain": "Thanksgiving Gift Box\nHen Egg",
+  "note": ""
+ },
+ {
+  "name": "Apprentice Knight",
+  "catCode": "宠",
+  "icon": "pet_icons/Apprentice Knight.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.4",
+  "hp": "155",
+  "obtain": "Premium Shop\nApprentice Knight Egg",
+  "note": "Released June 28, 2023"
+ },
+ {
+  "name": "Apprentice Magician",
+  "catCode": "宠",
+  "icon": "pet_icons/Apprentice Magician.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.6",
+  "hp": "107",
+  "obtain": "Apprentice Magician Egg",
+  "note": ""
+ },
+ {
+  "name": "Apprentice Magician 2",
+  "catCode": "宠",
+  "icon": "pet_icons/Apprentice Magician 2.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.2",
+  "hp": "163",
+  "obtain": "Premium Shop",
+  "note": "Released February 22, 2024"
+ },
+ {
+  "name": "Apprentice Magician II",
+  "catCode": "宠",
+  "icon": "pet_icons/Apprentice Magician II.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.8",
+  "hp": "129",
+  "obtain": "Magician's Egg\nGeol's Pouch",
+  "note": "Acquisition Rate will only apply to Magician's Egg.\nCould only be obtained from Geol's Pouch during Feb. 24th to Mar. 10th."
+ },
+ {
+  "name": "Apprentice Warrior",
+  "catCode": "宠",
+  "icon": "pet_icons/Apprentice Warrior.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.8",
+  "hp": "119",
+  "obtain": "Apprentice Warrior Egg",
+  "note": ""
+ },
+ {
+  "name": "Aqua Shaman",
+  "catCode": "宠",
+  "icon": "pet_icons/Aqua Shaman.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.2",
+  "hp": "53",
+  "obtain": "Woopa Egg",
+  "note": ""
+ },
+ {
+  "name": "Archimage",
+  "catCode": "宠",
+  "icon": "pet_icons/Archimage.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.4",
+  "hp": "35",
+  "obtain": "Broom Egg",
+  "note": ""
+ },
+ {
+  "name": "Ardor",
+  "catCode": "宠",
+  "icon": "pet_icons/Ardor.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.7",
+  "hp": "88",
+  "obtain": "Fireball Egg",
+  "note": ""
+ },
+ {
+  "name": "Aren",
+  "catCode": "宠",
+  "icon": "pet_icons/Aren.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.0",
+  "hp": "111",
+  "obtain": "Warrior Egg",
+  "note": ""
+ },
+ {
+  "name": "Ares",
+  "catCode": "宠",
+  "icon": "pet_icons/Ares.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.4",
+  "hp": "155",
+  "obtain": "Premium Shop\nApprentice Knight Egg",
+  "note": "Released June 28, 2023"
+ },
+ {
+  "name": "Arondite",
+  "catCode": "宠",
+  "icon": "pet_icons/Arondite.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.1",
+  "hp": "152",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Art Student",
+  "catCode": "宠",
+  "icon": "pet_icons/Art Student.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.0",
+  "hp": "131",
+  "obtain": "",
+  "note": "Released April 2021"
+ },
+ {
+  "name": "Artemis",
+  "catCode": "宠",
+  "icon": "pet_icons/Artemis.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.1",
+  "hp": "162",
+  "obtain": "Premium Shop",
+  "note": "Released January 2024"
+ },
+ {
+  "name": "Ashlin",
+  "catCode": "宠",
+  "icon": "pet_icons/Ashlin.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.9",
+  "hp": "90",
+  "obtain": "Magic School Student Egg",
+  "note": ""
+ },
+ {
+  "name": "Auttie",
+  "catCode": "宠",
+  "icon": "pet_icons/Auttie.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.8",
+  "hp": "159",
+  "obtain": "Premium Shop\nAutumn Fairy Egg",
+  "note": "Released October 2023"
+ },
+ {
+  "name": "Autumn Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Autumn Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.8",
+  "hp": "159",
+  "obtain": "Premium Shop\nAutumn Fairy Egg",
+  "note": "Released October 2023"
+ },
+ {
+  "name": "Awakened Urun",
+  "catCode": "宠",
+  "icon": "pet_icons/Awakened Urun.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.5",
+  "hp": "106",
+  "obtain": "Awakened Urun Egg",
+  "note": ""
+ },
+ {
+  "name": "Azure Koala",
+  "catCode": "宠",
+  "icon": "pet_icons/Azure Koala.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.4",
+  "hp": "45",
+  "obtain": "Koala Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Bat",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Bat.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.2",
+  "hp": "93",
+  "obtain": "Baby Bat Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Bear",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Bear.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.5",
+  "hp": "46",
+  "obtain": "Bear Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Desert Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Desert Dragon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.1",
+  "hp": "92",
+  "obtain": "Desert Dragon Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Dinosaur",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Dinosaur.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.6",
+  "hp": "147",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Baby Dolphin",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Dolphin.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.6",
+  "hp": "67",
+  "obtain": "Baby Dolphin Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Fire Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Fire Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.8",
+  "hp": "79",
+  "obtain": "Fire Fairy Egg\nPlanah's Red Box",
+  "note": ""
+ },
+ {
+  "name": "Baby Forest Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Forest Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.7",
+  "hp": "78",
+  "obtain": "Forest Fairy Egg\nSylvia's Old Box",
+  "note": ""
+ },
+ {
+  "name": "Baby Lion",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Lion.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.0",
+  "hp": "61",
+  "obtain": "Lion Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Mouse",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Mouse.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.7",
+  "hp": "148",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Baby Pher",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Pher.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.4",
+  "hp": "105",
+  "obtain": "Baby Pher Egg",
+  "note": ""
+ },
+ {
+  "name": "Baby Water Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Water Dragon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.4",
+  "hp": "145",
+  "obtain": "Premium Shop\nBaby Water Dragon Egg",
+  "note": "Released July 27, 2022"
+ },
+ {
+  "name": "Baby Water Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Water Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.9",
+  "hp": "80",
+  "obtain": "Water Fairy Egg\nNereija's Box",
+  "note": ""
+ },
+ {
+  "name": "Baby Whale",
+  "catCode": "宠",
+  "icon": "pet_icons/Baby Whale.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.7",
+  "hp": "158",
+  "obtain": "Premium Shop\nBaby Whale Egg",
+  "note": "Released September 25, 2023"
+ },
+ {
+  "name": "Barlaf",
+  "catCode": "宠",
+  "icon": "pet_icons/Barlaf.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.5",
+  "hp": "116",
+  "obtain": "Snowball Egg",
+  "note": ""
+ },
+ {
+  "name": "Bellodia",
+  "catCode": "宠",
+  "icon": "pet_icons/Bellodia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.6",
+  "hp": "177",
+  "obtain": "Premium Shop",
+  "note": "Released April 22, 2026"
+ },
+ {
+  "name": "Berua",
+  "catCode": "宠",
+  "icon": "pet_icons/Berua.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.8",
+  "hp": "179",
+  "obtain": "Premium Shop",
+  "note": "Released September 9, 2026"
+ },
+ {
+  "name": "Bessie",
+  "catCode": "宠",
+  "icon": "pet_icons/Bessie.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.2",
+  "hp": "93",
+  "obtain": "Baby Bat Egg",
+  "note": ""
+ },
+ {
+  "name": "Black Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Black Dragon.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.4",
+  "hp": "24",
+  "obtain": "Dragon Egg\nOld Rare Pet Egg\n2012 Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Black Kitty",
+  "catCode": "宠",
+  "icon": "pet_icons/Black Kitty.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.0",
+  "hp": "41",
+  "obtain": "Cat Egg",
+  "note": ""
+ },
+ {
+  "name": "Black Sheep",
+  "catCode": "宠",
+  "icon": "pet_icons/Black Sheep.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.7",
+  "hp": "48",
+  "obtain": "Sheep Egg",
+  "note": ""
+ },
+ {
+  "name": "Black Witch",
+  "catCode": "宠",
+  "icon": "pet_icons/Black Witch.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.1",
+  "hp": "122",
+  "obtain": "Black Witch Egg\nHania's Pouch",
+  "note": ""
+ },
+ {
+  "name": "Blacksmith",
+  "catCode": "宠",
+  "icon": "pet_icons/Blacksmith.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.6",
+  "hp": "127",
+  "obtain": "Blacksmith Egg",
+  "note": ""
+ },
+ {
+  "name": "Blue Hair Girl",
+  "catCode": "宠",
+  "icon": "pet_icons/Blue Hair Girl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.3",
+  "hp": "134",
+  "obtain": "",
+  "note": "Released July 2021"
+ },
+ {
+  "name": "Blue Slime",
+  "catCode": "宠",
+  "icon": "pet_icons/Blue Slime.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.2",
+  "hp": "73",
+  "obtain": "Slime Egg\nSlime King's Box",
+  "note": ""
+ },
+ {
+  "name": "Blushing Hen",
+  "catCode": "宠",
+  "icon": "pet_icons/Blushing Hen.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.2",
+  "hp": "22",
+  "obtain": "Hen Egg\nThanksgiving Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Bomi",
+  "catCode": "宠",
+  "icon": "pet_icons/Bomi.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.2",
+  "hp": "153",
+  "obtain": "Premium Shop\nSpring Fairy Egg",
+  "note": "Released April 19, 2023"
+ },
+ {
+  "name": "Booba",
+  "catCode": "宠",
+  "icon": "pet_icons/Booba.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.5",
+  "hp": "96",
+  "obtain": "Rusty Robot Egg",
+  "note": ""
+ },
+ {
+  "name": "Brill",
+  "catCode": "宠",
+  "icon": "pet_icons/Brill.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.5",
+  "hp": "146",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Brown Bear",
+  "catCode": "宠",
+  "icon": "pet_icons/Brown Bear.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.9",
+  "hp": "120",
+  "obtain": "Brown Bear Egg\nPandaloo's Secret Box",
+  "note": ""
+ },
+ {
+  "name": "Brown Conch",
+  "catCode": "宠",
+  "icon": "pet_icons/Brown Conch.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12",
+  "hp": "101",
+  "obtain": "Brown Conch Egg",
+  "note": ""
+ },
+ {
+  "name": "Bubo",
+  "catCode": "宠",
+  "icon": "pet_icons/Bubo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.0",
+  "hp": "141",
+  "obtain": "Premium Shop\nBubo Egg",
+  "note": "Released February 24, 2022"
+ },
+ {
+  "name": "Butler of the Maze",
+  "catCode": "宠",
+  "icon": "pet_icons/Butler of the Maze.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.9",
+  "hp": "160",
+  "obtain": "Premium Shop\nButler of the Maze Egg",
+  "note": "Released November 22, 2023"
+ },
+ {
+  "name": "Catcher In The Winter",
+  "catCode": "宠",
+  "icon": "pet_icons/Catcher In The Winter.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.9",
+  "hp": "150",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Catfield",
+  "catCode": "宠",
+  "icon": "pet_icons/Catfield.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.5",
+  "hp": "136",
+  "obtain": "Premium Shop\nLittle Cat Egg",
+  "note": "Released September 28, 2021"
+ },
+ {
+  "name": "Chamie",
+  "catCode": "宠",
+  "icon": "pet_icons/Chamie.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.6",
+  "hp": "57",
+  "obtain": "Kumiho Egg\nKumiho Egg Pack",
+  "note": ""
+ },
+ {
+  "name": "Choco Hero",
+  "catCode": "宠",
+  "icon": "pet_icons/Choco Hero.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.5",
+  "hp": "26",
+  "obtain": "Choco Egg",
+  "note": ""
+ },
+ {
+  "name": "Chocolate Cookie",
+  "catCode": "宠",
+  "icon": "pet_icons/Chocolate Cookie.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.8",
+  "hp": "69",
+  "obtain": "Cookie Egg",
+  "note": ""
+ },
+ {
+  "name": "Chubby Pig",
+  "catCode": "宠",
+  "icon": "pet_icons/Chubby Pig.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.1",
+  "hp": "42",
+  "obtain": "Pig Egg",
+  "note": ""
+ },
+ {
+  "name": "Clever Monkey",
+  "catCode": "宠",
+  "icon": "pet_icons/Clever Monkey.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.9",
+  "hp": "30",
+  "obtain": "Monkey Egg\nSummer Vacation Gift",
+  "note": ""
+ },
+ {
+  "name": "Clumsy Ranger",
+  "catCode": "宠",
+  "icon": "pet_icons/Clumsy Ranger.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.2",
+  "hp": "113",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Colorful House Bunny",
+  "catCode": "宠",
+  "icon": "pet_icons/Colorful House Bunny.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.5",
+  "hp": "156",
+  "obtain": "Premium Shop\nHouse Bunny Egg",
+  "note": "Released July 26, 2023 in collaboration with MiniGame Party."
+ },
+ {
+  "name": "Cooligo",
+  "catCode": "宠",
+  "icon": "pet_icons/Cooligo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.3",
+  "hp": "104",
+  "obtain": "Evil Gargoyle Egg",
+  "note": ""
+ },
+ {
+  "name": "Corgi",
+  "catCode": "宠",
+  "icon": "pet_icons/Corgi.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.2",
+  "hp": "143",
+  "obtain": "Premium Shop\nSmall Puppy Egg",
+  "note": "Released May 19, 2022"
+ },
+ {
+  "name": "Cunning Wolf",
+  "catCode": "宠",
+  "icon": "pet_icons/Cunning Wolf.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.1",
+  "hp": "62",
+  "obtain": "Red Riding Hood Egg",
+  "note": ""
+ },
+ {
+  "name": "Cute Bunny",
+  "catCode": "宠",
+  "icon": "pet_icons/Cute Bunny.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.4",
+  "hp": "95",
+  "obtain": "Cute Bunny Egg",
+  "note": ""
+ },
+ {
+  "name": "Cute Chick",
+  "catCode": "宠",
+  "icon": "pet_icons/Cute Chick.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.1",
+  "hp": "102",
+  "obtain": "Cute Chick Egg",
+  "note": ""
+ },
+ {
+  "name": "Cute Tiger",
+  "catCode": "宠",
+  "icon": "pet_icons/Cute Tiger.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.0",
+  "hp": "51",
+  "obtain": "Tiger Egg\nWooden Gift Box 2014",
+  "note": ""
+ },
+ {
+  "name": "Cutie Pie Kooii",
+  "catCode": "宠",
+  "icon": "pet_icons/Cutie Pie Kooii.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.2",
+  "hp": "83",
+  "obtain": "Cutie Pie Kooii Egg",
+  "note": ""
+ },
+ {
+  "name": "Dark Bat",
+  "catCode": "宠",
+  "icon": "pet_icons/Dark Bat.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.5",
+  "hp": "76",
+  "obtain": "Dark Bat Egg\nMist's Magic Pouch",
+  "note": ""
+ },
+ {
+  "name": "Death Knight Vellar",
+  "catCode": "宠",
+  "icon": "pet_icons/Death Knight Vellar.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.1",
+  "hp": "72",
+  "obtain": "Skull Egg",
+  "note": ""
+ },
+ {
+  "name": "Defour",
+  "catCode": "宠",
+  "icon": "pet_icons/Defour.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.1",
+  "hp": "102",
+  "obtain": "Cute Chick Egg",
+  "note": ""
+ },
+ {
+  "name": "Dekoolang",
+  "catCode": "宠",
+  "icon": "pet_icons/Dekoolang.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.5",
+  "hp": "86",
+  "obtain": "Furious Demon Egg",
+  "note": ""
+ },
+ {
+  "name": "Demon",
+  "catCode": "宠",
+  "icon": "pet_icons/Demon.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.8",
+  "hp": "59",
+  "obtain": "Imp Egg",
+  "note": ""
+ },
+ {
+  "name": "Diligent Otter",
+  "catCode": "宠",
+  "icon": "pet_icons/Diligent Otter.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.2",
+  "hp": "43",
+  "obtain": "Otter Egg\nOld Gift Box 2 (2013)",
+  "note": ""
+ },
+ {
+  "name": "Dinosaur",
+  "catCode": "宠",
+  "icon": "pet_icons/Dinosaur.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.4",
+  "hp": "54",
+  "obtain": "Dinosaur Egg\nOld Wooden Box 2014",
+  "note": ""
+ },
+ {
+  "name": "Double Bun Girl",
+  "catCode": "宠",
+  "icon": "pet_icons/Double Bun Girl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.1",
+  "hp": "132",
+  "obtain": "",
+  "note": "Released May 2021"
+ },
+ {
+  "name": "Drakoon",
+  "catCode": "宠",
+  "icon": "pet_icons/Drakoon.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.2",
+  "hp": "63",
+  "obtain": "Drakoon Egg",
+  "note": ""
+ },
+ {
+  "name": "Eco Woopa",
+  "catCode": "宠",
+  "icon": "pet_icons/Eco Woopa.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.2",
+  "hp": "53",
+  "obtain": "Woopa Egg",
+  "note": ""
+ },
+ {
+  "name": "Egg Shell Owl",
+  "catCode": "宠",
+  "icon": "pet_icons/Egg Shell Owl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.0",
+  "hp": "141",
+  "obtain": "Premium Shop\nBubo Egg",
+  "note": "Released February 24, 2022"
+ },
+ {
+  "name": "Elepher",
+  "catCode": "宠",
+  "icon": "pet_icons/Elepher.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.7",
+  "hp": "108",
+  "obtain": "Elepher Egg",
+  "note": ""
+ },
+ {
+  "name": "Ella",
+  "catCode": "宠",
+  "icon": "pet_icons/Ella.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.3",
+  "hp": "124",
+  "obtain": "Child Egg",
+  "note": ""
+ },
+ {
+  "name": "Endless Dark Expedition",
+  "catCode": "宠",
+  "icon": "pet_icons/Endless Dark Expedition.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.2",
+  "hp": "123",
+  "obtain": "Kooii the Triplets Egg",
+  "note": ""
+ },
+ {
+  "name": "Eremus",
+  "catCode": "宠",
+  "icon": "pet_icons/Eremus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.9",
+  "hp": "110",
+  "obtain": "Sprouty Egg",
+  "note": ""
+ },
+ {
+  "name": "Eucalyptus",
+  "catCode": "宠",
+  "icon": "pet_icons/Eucalyptus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.4",
+  "hp": "45",
+  "obtain": "Koala Egg",
+  "note": ""
+ },
+ {
+  "name": "Evil Gargoyle",
+  "catCode": "宠",
+  "icon": "pet_icons/Evil Gargoyle.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.3",
+  "hp": "104",
+  "obtain": "Evil Gargoyle Egg",
+  "note": ""
+ },
+ {
+  "name": "Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.7",
+  "hp": "58",
+  "obtain": "Fairy Egg\nFairy's Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Fairy Queen",
+  "catCode": "宠",
+  "icon": "pet_icons/Fairy Queen.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.7",
+  "hp": "58",
+  "obtain": "Fairy Egg",
+  "note": ""
+ },
+ {
+  "name": "Felin",
+  "catCode": "宠",
+  "icon": "pet_icons/Felin.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.2",
+  "hp": "103",
+  "obtain": "Tender Banshee Egg",
+  "note": ""
+ },
+ {
+  "name": "Fennec Fox",
+  "catCode": "宠",
+  "icon": "pet_icons/Fennec Fox.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.9",
+  "hp": "40",
+  "obtain": "Fox Egg",
+  "note": ""
+ },
+ {
+  "name": "Fierce Tiger",
+  "catCode": "宠",
+  "icon": "pet_icons/Fierce Tiger.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.4",
+  "hp": "165",
+  "obtain": "Premium Shop",
+  "note": "Released April 24, 2024"
+ },
+ {
+  "name": "Fire Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Fire Dragon.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.6",
+  "hp": "167",
+  "obtain": "Premium Shop",
+  "note": "Released August 22, 2024"
+ },
+ {
+  "name": "Fireball",
+  "catCode": "宠",
+  "icon": "pet_icons/Fireball.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.7",
+  "hp": "88",
+  "obtain": "Fireball Egg",
+  "note": ""
+ },
+ {
+  "name": "Firetail Lizard",
+  "catCode": "宠",
+  "icon": "pet_icons/Firetail Lizard.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.6",
+  "hp": "167",
+  "obtain": "Premium Shop",
+  "note": "Released August 21, 2024"
+ },
+ {
+  "name": "Flower Butterfly",
+  "catCode": "宠",
+  "icon": "pet_icons/Flower Butterfly.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.5",
+  "hp": "166",
+  "obtain": "Premium Shop",
+  "note": "Released May 22, 2024"
+ },
+ {
+  "name": "Fluffy Sheep",
+  "catCode": "宠",
+  "icon": "pet_icons/Fluffy Sheep.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.6",
+  "hp": "177",
+  "obtain": "Premium Shop",
+  "note": "Released April 22, 2026"
+ },
+ {
+  "name": "Foox",
+  "catCode": "宠",
+  "icon": "pet_icons/Foox.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.6",
+  "hp": "97",
+  "obtain": "Pointy Ear Fox Egg",
+  "note": ""
+ },
+ {
+  "name": "Forest Teddy Bear",
+  "catCode": "宠",
+  "icon": "pet_icons/Forest Teddy Bear.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.0",
+  "hp": "151",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Fragile Pumpkin",
+  "catCode": "宠",
+  "icon": "pet_icons/Fragile Pumpkin.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.3",
+  "hp": "74",
+  "obtain": "Fragile Pumpkin Egg\nWukong's Secret Bag",
+  "note": ""
+ },
+ {
+  "name": "Fragile Scarecrow",
+  "catCode": "宠",
+  "icon": "pet_icons/Fragile Scarecrow.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.7",
+  "hp": "118",
+  "obtain": "Fragile Scarecrow Egg\nKata's Box",
+  "note": ""
+ },
+ {
+  "name": "Funniped",
+  "catCode": "宠",
+  "icon": "pet_icons/Funniped.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.9",
+  "hp": "170",
+  "obtain": "Premium Shop",
+  "note": "Released March 5, 2025"
+ },
+ {
+  "name": "Furious Demon",
+  "catCode": "宠",
+  "icon": "pet_icons/Furious Demon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.5",
+  "hp": "86",
+  "obtain": "Furious Demon Egg",
+  "note": ""
+ },
+ {
+  "name": "Ganesha",
+  "catCode": "宠",
+  "icon": "pet_icons/Ganesha.png",
+  "hasIcon": true,
+  "rarity": "传说",
+  "level": 5,
+  "classes": [
+   "all"
+  ],
+  "exp": "5%",
+  "crit": "2",
+  "deadly": "22.0",
+  "hp": "200",
+  "obtain": "Season end reward for Guilds who participated in Inotia War",
+  "note": "Released for Season 2 Inotia War. It cannot be traded, sold, or enchanted. This item is Time-limited for 41 days 0 hours. This item cannot be used after expiry."
+ },
+ {
+  "name": "Gentle Cat",
+  "catCode": "宠",
+  "icon": "pet_icons/Gentle Cat.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.0",
+  "hp": "41",
+  "obtain": "Cat Egg",
+  "note": ""
+ },
+ {
+  "name": "Geol",
+  "catCode": "宠",
+  "icon": "pet_icons/Geol.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.8",
+  "hp": "129",
+  "obtain": "Magician's Egg",
+  "note": ""
+ },
+ {
+  "name": "Ginger, the Cookie Man",
+  "catCode": "宠",
+  "icon": "pet_icons/Ginger, the Cookie Man.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.8",
+  "hp": "69",
+  "obtain": "Cookie Egg",
+  "note": ""
+ },
+ {
+  "name": "Giraffy",
+  "catCode": "宠",
+  "icon": "pet_icons/Giraffy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.1",
+  "hp": "112",
+  "obtain": "Koo Egg",
+  "note": ""
+ },
+ {
+  "name": "Girl of Light",
+  "catCode": "宠",
+  "icon": "pet_icons/Girl of Light.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.9",
+  "hp": "140",
+  "obtain": "Premium Shop\nGirl of Light Egg",
+  "note": "Released January 26, 2022"
+ },
+ {
+  "name": "Green Hood",
+  "catCode": "宠",
+  "icon": "pet_icons/Green Hood.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.6",
+  "hp": "77",
+  "obtain": "Green Hood Egg\nJeanne's Gift",
+  "note": ""
+ },
+ {
+  "name": "Grim Reaper",
+  "catCode": "宠",
+  "icon": "pet_icons/Grim Reaper.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.6",
+  "hp": "47",
+  "obtain": "Ghost Egg",
+  "note": ""
+ },
+ {
+  "name": "Halloween Ghost",
+  "catCode": "宠",
+  "icon": "pet_icons/Halloween Ghost.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.6",
+  "hp": "47",
+  "obtain": "Ghost Egg\nHalloween Gift Box (3)",
+  "note": ""
+ },
+ {
+  "name": "Hania",
+  "catCode": "宠",
+  "icon": "pet_icons/Hania.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.1",
+  "hp": "122",
+  "obtain": "Black Witch Egg",
+  "note": ""
+ },
+ {
+  "name": "Happy Angel",
+  "catCode": "宠",
+  "icon": "pet_icons/Happy Angel.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.8",
+  "hp": "49",
+  "obtain": "Angel Egg\nIce Box (2014)",
+  "note": ""
+ },
+ {
+  "name": "Hard Turtle",
+  "catCode": "宠",
+  "icon": "pet_icons/Hard Turtle.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.3",
+  "hp": "44",
+  "obtain": "Turtle Egg",
+  "note": ""
+ },
+ {
+  "name": "Hawk Eye",
+  "catCode": "宠",
+  "icon": "pet_icons/Hawk Eye.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.2",
+  "hp": "113",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Hecate",
+  "catCode": "宠",
+  "icon": "pet_icons/Hecate.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.2",
+  "hp": "163",
+  "obtain": "Premium Shop",
+  "note": "Released February 22, 2024"
+ },
+ {
+  "name": "Hilla",
+  "catCode": "宠",
+  "icon": "pet_icons/Hilla.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.1",
+  "hp": "92",
+  "obtain": "Desert Dragon Egg",
+  "note": ""
+ },
+ {
+  "name": "Hoggnir",
+  "catCode": "宠",
+  "icon": "pet_icons/Hoggnir.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.4",
+  "hp": "145",
+  "obtain": "Premium Shop\nBaby Water Dragon Egg",
+  "note": "Released July 27, 2022"
+ },
+ {
+  "name": "Honey Bee",
+  "catCode": "宠",
+  "icon": "pet_icons/Honey Bee.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.3",
+  "hp": "54",
+  "obtain": "Bee Egg\nAlchemy Box",
+  "note": ""
+ },
+ {
+  "name": "House Bunny",
+  "catCode": "宠",
+  "icon": "pet_icons/House Bunny.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.5",
+  "hp": "156",
+  "obtain": "Premium Shop\nHouse Bunny Egg",
+  "note": "Released July 26, 2023 in collaboration with MiniGame Party."
+ },
+ {
+  "name": "House Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/House Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.5",
+  "hp": "66",
+  "obtain": "House Fairy Egg\nHouse Fairy's Gift",
+  "note": ""
+ },
+ {
+  "name": "IMO Style",
+  "catCode": "宠",
+  "icon": "pet_icons/IMO Style.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.2",
+  "hp": "33",
+  "obtain": "Puppy Egg",
+  "note": ""
+ },
+ {
+  "name": "Imp",
+  "catCode": "宠",
+  "icon": "pet_icons/Imp.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.8",
+  "hp": "59",
+  "obtain": "Imp Egg\nThanksgiving Gift Box (2014)",
+  "note": ""
+ },
+ {
+  "name": "Innocent Rabbit",
+  "catCode": "宠",
+  "icon": "pet_icons/Innocent Rabbit.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.7",
+  "hp": "28",
+  "obtain": "2nd Anniversary Gift Box\nRabbit Egg\nOld Normal Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Iron Ball",
+  "catCode": "宠",
+  "icon": "pet_icons/Iron Ball.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.3",
+  "hp": "34",
+  "obtain": "Zombie Egg",
+  "note": ""
+ },
+ {
+  "name": "Jack O'Lantern",
+  "catCode": "宠",
+  "icon": "pet_icons/Jack O'Lantern.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.1",
+  "hp": "22",
+  "obtain": "Pumpkin Egg",
+  "note": "Prices depend greatly on server."
+ },
+ {
+  "name": "Janice",
+  "catCode": "宠",
+  "icon": "pet_icons/Janice.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.6",
+  "hp": "107",
+  "obtain": "",
+  "note": ""
+ },
+ {
+  "name": "Jeanne",
+  "catCode": "宠",
+  "icon": "pet_icons/Jeanne.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.6",
+  "hp": "77",
+  "obtain": "Green Hood Egg",
+  "note": ""
+ },
+ {
+  "name": "Jellfy",
+  "catCode": "宠",
+  "icon": "pet_icons/Jellfy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.1",
+  "hp": "172",
+  "obtain": "Premium Shop",
+  "note": "Released June 25, 2025"
+ },
+ {
+  "name": "Jingle Bell",
+  "catCode": "宠",
+  "icon": "pet_icons/Jingle Bell.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.8",
+  "hp": "49",
+  "obtain": "Angel Egg",
+  "note": ""
+ },
+ {
+  "name": "Joyful Reindeer",
+  "catCode": "宠",
+  "icon": "pet_icons/Joyful Reindeer.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.3",
+  "hp": "24",
+  "obtain": "Reindeer Egg\nSanta's Sack (2011)",
+  "note": ""
+ },
+ {
+  "name": "Judy",
+  "catCode": "宠",
+  "icon": "pet_icons/Judy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.1",
+  "hp": "142",
+  "obtain": "Premium Shop\nMagical Girl Egg",
+  "note": "Released March 23, 2022"
+ },
+ {
+  "name": "Juris",
+  "catCode": "宠",
+  "icon": "pet_icons/Juris.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.0",
+  "hp": "131",
+  "obtain": "",
+  "note": "Released April 2021"
+ },
+ {
+  "name": "Karro",
+  "catCode": "宠",
+  "icon": "pet_icons/Karro.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.7",
+  "hp": "108",
+  "obtain": "Elepher Egg",
+  "note": ""
+ },
+ {
+  "name": "Kata",
+  "catCode": "宠",
+  "icon": "pet_icons/Kata.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.7",
+  "hp": "118",
+  "obtain": "Fragile Scarecrow Egg",
+  "note": ""
+ },
+ {
+  "name": "Killoost",
+  "catCode": "宠",
+  "icon": "pet_icons/Killoost.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.8",
+  "hp": "139",
+  "obtain": "Premium Shop\nLittle Executioner Egg",
+  "note": "Released December 29, 2021"
+ },
+ {
+  "name": "King Slime Koo'ring",
+  "catCode": "宠",
+  "icon": "pet_icons/King Slime Koo'ring.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.2",
+  "hp": "73",
+  "obtain": "Slime Egg",
+  "note": ""
+ },
+ {
+  "name": "Koo",
+  "catCode": "宠",
+  "icon": "pet_icons/Koo.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.1",
+  "hp": "112",
+  "obtain": "Koo Egg\nGiraffy Box",
+  "note": "Acquisition Rate will only apply to Koo Egg."
+ },
+ {
+  "name": "Kooii Expedition",
+  "catCode": "宠",
+  "icon": "pet_icons/Kooii Expedition.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.6",
+  "hp": "87",
+  "obtain": "Lost Slime Egg\nExpedition Belongings",
+  "note": ""
+ },
+ {
+  "name": "Kooii the Triplets",
+  "catCode": "宠",
+  "icon": "pet_icons/Kooii the Triplets.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.2",
+  "hp": "123",
+  "obtain": "Kooii the Triplets Egg\nEndless Dark Expedition Box",
+  "note": ""
+ },
+ {
+  "name": "Koolska",
+  "catCode": "宠",
+  "icon": "pet_icons/Koolska.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.8",
+  "hp": "99",
+  "obtain": "Tiny Bouncing Ball Egg",
+  "note": ""
+ },
+ {
+  "name": "Koopana",
+  "catCode": "宠",
+  "icon": "pet_icons/Koopana.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.7",
+  "hp": "68",
+  "obtain": "Soul Egg",
+  "note": ""
+ },
+ {
+  "name": "Koorrari",
+  "catCode": "宠",
+  "icon": "pet_icons/Koorrari.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.9",
+  "hp": "60",
+  "obtain": "Car Egg",
+  "note": ""
+ },
+ {
+  "name": "Kuindar",
+  "catCode": "宠",
+  "icon": "pet_icons/Kuindar.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.8",
+  "hp": "109",
+  "obtain": "Guardian Egg",
+  "note": ""
+ },
+ {
+  "name": "Kulados",
+  "catCode": "宠",
+  "icon": "pet_icons/Kulados.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.7",
+  "hp": "128",
+  "obtain": "Box Egg",
+  "note": ""
+ },
+ {
+  "name": "Kulaus",
+  "catCode": "宠",
+  "icon": "pet_icons/Kulaus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.2",
+  "hp": "83",
+  "obtain": "Cutie Pie Kooii Egg",
+  "note": ""
+ },
+ {
+  "name": "Kumi",
+  "catCode": "宠",
+  "icon": "pet_icons/Kumi.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.1",
+  "hp": "82",
+  "obtain": "Kumi Egg",
+  "note": ""
+ },
+ {
+  "name": "Kumiho",
+  "catCode": "宠",
+  "icon": "pet_icons/Kumiho.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.6",
+  "hp": "57",
+  "obtain": "Kumiho Egg\nWooden Gift Box 2014 (2)",
+  "note": ""
+ },
+ {
+  "name": "Kunellia",
+  "catCode": "宠",
+  "icon": "pet_icons/Kunellia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.1",
+  "hp": "82",
+  "obtain": "Kumi Egg",
+  "note": ""
+ },
+ {
+  "name": "Kurr",
+  "catCode": "宠",
+  "icon": "pet_icons/Kurr.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.9",
+  "hp": "130",
+  "obtain": "Magic Kooii's Egg",
+  "note": ""
+ },
+ {
+  "name": "Kurtus",
+  "catCode": "宠",
+  "icon": "pet_icons/Kurtus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.5",
+  "hp": "106",
+  "obtain": "Awakened Urun Egg",
+  "note": ""
+ },
+ {
+  "name": "Laboratory Wolf",
+  "catCode": "宠",
+  "icon": "pet_icons/Laboratory Wolf.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.4",
+  "hp": "135",
+  "obtain": "Premium Shop\nLaboratory Wolf Egg",
+  "note": "Released August 26, 2021"
+ },
+ {
+  "name": "Lamia",
+  "catCode": "宠",
+  "icon": "pet_icons/Lamia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.6",
+  "hp": "117",
+  "obtain": "Teleporter Egg",
+  "note": ""
+ },
+ {
+  "name": "Lana",
+  "catCode": "宠",
+  "icon": "pet_icons/Lana.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.8",
+  "hp": "89",
+  "obtain": "Swamp Frog Egg",
+  "note": ""
+ },
+ {
+  "name": "Lateru",
+  "catCode": "宠",
+  "icon": "pet_icons/Lateru.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.5",
+  "hp": "126",
+  "obtain": "Shadow Pher Egg",
+  "note": ""
+ },
+ {
+  "name": "Leafy",
+  "catCode": "宠",
+  "icon": "pet_icons/Leafy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.3",
+  "hp": "164",
+  "obtain": "Premium Shop",
+  "note": "Released April, 2024"
+ },
+ {
+  "name": "Leo",
+  "catCode": "宠",
+  "icon": "pet_icons/Leo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.0",
+  "hp": "61",
+  "obtain": "Lion Egg",
+  "note": ""
+ },
+ {
+  "name": "Lepakin",
+  "catCode": "宠",
+  "icon": "pet_icons/Lepakin.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13",
+  "hp": "101",
+  "obtain": "Brown Conch Egg",
+  "note": ""
+ },
+ {
+  "name": "Lethal Assassin",
+  "catCode": "宠",
+  "icon": "pet_icons/Lethal Assassin.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.4",
+  "hp": "75",
+  "obtain": "Assassin Egg\nMiss Cheery's Present",
+  "note": ""
+ },
+ {
+  "name": "Lilith",
+  "catCode": "宠",
+  "icon": "pet_icons/Lilith.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.6",
+  "hp": "137",
+  "obtain": "Premium Shop\nYoung Succubus Egg",
+  "note": "Released October 21, 2021"
+ },
+ {
+  "name": "Little Cat",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Cat.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.5",
+  "hp": "136",
+  "obtain": "Premium Shop\nLittle Cat Egg",
+  "note": "Released September 28, 2021"
+ },
+ {
+  "name": "Little Demon",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Demon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.7",
+  "hp": "138",
+  "obtain": "Premium Shop\nLittle Demon Egg",
+  "note": "Released November 17, 2021"
+ },
+ {
+  "name": "Little Dylan",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Dylan.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.9",
+  "hp": "70",
+  "obtain": "Witch Egg",
+  "note": ""
+ },
+ {
+  "name": "Little Executioner",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Executioner.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.8",
+  "hp": "139",
+  "obtain": "Premium Shop\nLittle Executioner Egg",
+  "note": "Released December 29, 2021"
+ },
+ {
+  "name": "Little Guardian",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Guardian.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.8",
+  "hp": "109",
+  "obtain": "Guardian Egg",
+  "note": ""
+ },
+ {
+  "name": "Little Kooii",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Kooii.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.0",
+  "hp": "20",
+  "obtain": "Event Egg\nOld Normal Pet Egg\nKooii Egg",
+  "note": "A soulbound version of this pet is obtainable through the Quest A Day in Woody Weedy/Wordy or talk to Xian . This soulbound version does not have a level requirement."
+ },
+ {
+  "name": "Little Mummy",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Mummy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.4",
+  "hp": "125",
+  "obtain": "Mummy's Egg\nTinia's Bag",
+  "note": ""
+ },
+ {
+  "name": "Little Ranger",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Ranger.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.0",
+  "hp": "121",
+  "obtain": "Little Ranger Egg\nAiyo's Secret Box",
+  "note": ""
+ },
+ {
+  "name": "Little Sephia",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Sephia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.4",
+  "hp": "135",
+  "obtain": "Premium Shop\nLaboratory Wolf Egg",
+  "note": "Released August 26, 2021"
+ },
+ {
+  "name": "Little Spider",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Spider.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.7",
+  "hp": "178",
+  "obtain": "Premium Shop",
+  "note": "Released June 24, 2026"
+ },
+ {
+  "name": "Little Witch",
+  "catCode": "宠",
+  "icon": "pet_icons/Little Witch.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.9",
+  "hp": "70",
+  "obtain": "Witch Egg\nWitch's Pouch",
+  "note": ""
+ },
+ {
+  "name": "Lost Slimes",
+  "catCode": "宠",
+  "icon": "pet_icons/Lost Slimes.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.6",
+  "hp": "87",
+  "obtain": "Lost Slime Egg\nExpedition Belongings",
+  "note": ""
+ },
+ {
+  "name": "Lost Test Subject",
+  "catCode": "宠",
+  "icon": "pet_icons/Lost Test Subject.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.8",
+  "hp": "179",
+  "obtain": "Premium Shop",
+  "note": "Released September 9, 2026"
+ },
+ {
+  "name": "Lovely Choco",
+  "catCode": "宠",
+  "icon": "pet_icons/Lovely Choco.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.5",
+  "hp": "26",
+  "obtain": "Valentine Gift Box\nChoco Egg",
+  "note": ""
+ },
+ {
+  "name": "Lovely Puppy",
+  "catCode": "宠",
+  "icon": "pet_icons/Lovely Puppy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.0",
+  "hp": "71",
+  "obtain": "Lovely Egg",
+  "note": ""
+ },
+ {
+  "name": "Lucy",
+  "catCode": "宠",
+  "icon": "pet_icons/Lucy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 0,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.0",
+  "hp": "100",
+  "obtain": "Fellowship Support Bag",
+  "note": "Released April 10, 2024"
+ },
+ {
+  "name": "Lumen",
+  "catCode": "宠",
+  "icon": "pet_icons/Lumen.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.4",
+  "hp": "95",
+  "obtain": "Cute Bunny Egg",
+  "note": ""
+ },
+ {
+  "name": "Lupin",
+  "catCode": "宠",
+  "icon": "pet_icons/Lupin.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.9",
+  "hp": "40",
+  "obtain": "Fox Egg",
+  "note": ""
+ },
+ {
+  "name": "Magic Book",
+  "catCode": "宠",
+  "icon": "pet_icons/Magic Book.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.2",
+  "hp": "133",
+  "obtain": "",
+  "note": "Released June 2021"
+ },
+ {
+  "name": "Magic Kooii",
+  "catCode": "宠",
+  "icon": "pet_icons/Magic Kooii.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.9",
+  "hp": "130",
+  "obtain": "Magic Kooii's Egg\nKurr's Box",
+  "note": "Acquisition Rate will only apply to Magic Kooii's Egg.\nCould only be obtained from Kurr's Box during March 24th 2021 to April 7th 2021."
+ },
+ {
+  "name": "Magic School Student",
+  "catCode": "宠",
+  "icon": "pet_icons/Magic School Student.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.9",
+  "hp": "90",
+  "obtain": "Magic School Student Egg",
+  "note": ""
+ },
+ {
+  "name": "Magic Trainee",
+  "catCode": "宠",
+  "icon": "pet_icons/Magic Trainee.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.3",
+  "hp": "144",
+  "obtain": "Premium Shop\nMagic Trainee Egg",
+  "note": "Released June 29, 2022"
+ },
+ {
+  "name": "Magical Girl",
+  "catCode": "宠",
+  "icon": "pet_icons/Magical Girl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.1",
+  "hp": "142",
+  "obtain": "Premium Shop\nMagical Girl Egg",
+  "note": "Released March 23, 2022"
+ },
+ {
+  "name": "Mary the Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Mary the Fairy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.5",
+  "hp": "66",
+  "obtain": "House Fairy Egg",
+  "note": ""
+ },
+ {
+  "name": "Mask Trainee",
+  "catCode": "宠",
+  "icon": "pet_icons/Mask Trainee.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.0",
+  "hp": "91",
+  "obtain": "Mask Trainee Egg\nOsmagus’ Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Master Panda",
+  "catCode": "宠",
+  "icon": "pet_icons/Master Panda.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.5",
+  "hp": "46",
+  "obtain": "Bear Egg",
+  "note": ""
+ },
+ {
+  "name": "Medic",
+  "catCode": "宠",
+  "icon": "pet_icons/Medic.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.3",
+  "hp": "64",
+  "obtain": "Medic Egg\nMedic's Gift",
+  "note": ""
+ },
+ {
+  "name": "Medusa",
+  "catCode": "宠",
+  "icon": "pet_icons/Medusa.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.4",
+  "hp": "65",
+  "obtain": "Medusa Egg\nMedusa's Gift",
+  "note": ""
+ },
+ {
+  "name": "Meow Meow",
+  "catCode": "宠",
+  "icon": "pet_icons/Meow Meow.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.0",
+  "hp": "71",
+  "obtain": "Lovely Egg\nLovely Gift",
+  "note": ""
+ },
+ {
+  "name": "Merry Snowman",
+  "catCode": "宠",
+  "icon": "pet_icons/Merry Snowman.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.6",
+  "hp": "37",
+  "obtain": "Snowman Egg",
+  "note": ""
+ },
+ {
+  "name": "Mimid",
+  "catCode": "宠",
+  "icon": "pet_icons/Mimid.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.3",
+  "hp": "114",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Mini Mushroom",
+  "catCode": "宠",
+  "icon": "pet_icons/Mini Mushroom.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.6",
+  "hp": "26",
+  "obtain": "Wooden Gift Box\nMushroom Egg",
+  "note": ""
+ },
+ {
+  "name": "Mini Pumpkin",
+  "catCode": "宠",
+  "icon": "pet_icons/Mini Pumpkin.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.1",
+  "hp": "22",
+  "obtain": "Pumpkin Egg",
+  "note": ""
+ },
+ {
+  "name": "Mischievous Alien",
+  "catCode": "宠",
+  "icon": "pet_icons/Mischievous Alien.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.8",
+  "hp": "28",
+  "obtain": "Alien Egg\nWooden Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Miss Cheery",
+  "catCode": "宠",
+  "icon": "pet_icons/Miss Cheery.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.4",
+  "hp": "75",
+  "obtain": "Assassin Egg",
+  "note": ""
+ },
+ {
+  "name": "Mist",
+  "catCode": "宠",
+  "icon": "pet_icons/Mist.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.5",
+  "hp": "76",
+  "obtain": "Dark Bat Egg",
+  "note": ""
+ },
+ {
+  "name": "Morana",
+  "catCode": "宠",
+  "icon": "pet_icons/Morana.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.7",
+  "hp": "138",
+  "obtain": "Premium Shop\nLittle Demon Egg",
+  "note": "Released November 17, 2021"
+ },
+ {
+  "name": "Mossgardy",
+  "catCode": "宠",
+  "icon": "pet_icons/Mossgardy.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.5",
+  "hp": "176",
+  "obtain": "Premium Shop",
+  "note": "Released February 25, 2026"
+ },
+ {
+  "name": "Mr Carol",
+  "catCode": "宠",
+  "icon": "pet_icons/Mr Carol.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.6",
+  "hp": "37",
+  "obtain": "Snowman Egg",
+  "note": ""
+ },
+ {
+  "name": "Nereija",
+  "catCode": "宠",
+  "icon": "pet_icons/Nereija.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.9",
+  "hp": "80",
+  "obtain": "Water Fairy Egg",
+  "note": ""
+ },
+ {
+  "name": "Neria",
+  "catCode": "宠",
+  "icon": "pet_icons/Neria.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.3",
+  "hp": "134",
+  "obtain": "",
+  "note": "Released July 2021"
+ },
+ {
+  "name": "Nightingale",
+  "catCode": "宠",
+  "icon": "pet_icons/Nightingale.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.3",
+  "hp": "64",
+  "obtain": "Medic Egg",
+  "note": ""
+ },
+ {
+  "name": "Ninox",
+  "catCode": "宠",
+  "icon": "pet_icons/Ninox.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.4",
+  "hp": "175",
+  "obtain": "Premium Shop",
+  "note": "Released December 17, 2025"
+ },
+ {
+  "name": "Noble Fungus",
+  "catCode": "宠",
+  "icon": "pet_icons/Noble Fungus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.6",
+  "hp": "26",
+  "obtain": "Mushroom Egg",
+  "note": ""
+ },
+ {
+  "name": "Novice Warrior",
+  "catCode": "宠",
+  "icon": "pet_icons/Novice Warrior.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.0",
+  "hp": "111",
+  "obtain": "Warrior Egg\nAren's Pocket",
+  "note": "Acquisition Rate will only apply to Warrior Egg."
+ },
+ {
+  "name": "Nyampkin",
+  "catCode": "宠",
+  "icon": "pet_icons/Nyampkin.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.3",
+  "hp": "174",
+  "obtain": "Premium Shop",
+  "note": "Released October 29, 2025"
+ },
+ {
+  "name": "Old Box",
+  "catCode": "宠",
+  "icon": "pet_icons/Old Box.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.3",
+  "hp": "114",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Oleaf",
+  "catCode": "宠",
+  "icon": "pet_icons/Oleaf.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.8",
+  "hp": "169",
+  "obtain": "Premium Shop",
+  "note": "Released December 19, 2024"
+ },
+ {
+  "name": "Oopsie",
+  "catCode": "宠",
+  "icon": "pet_icons/Oopsie.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 0,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.0",
+  "hp": "100",
+  "obtain": "Give Kooiis' Happiness (5) to Ragi",
+  "note": "Released April 19, 2023"
+ },
+ {
+  "name": "Osmagus",
+  "catCode": "宠",
+  "icon": "pet_icons/Osmagus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.0",
+  "hp": "91",
+  "obtain": "Mask Trainee Egg",
+  "note": ""
+ },
+ {
+  "name": "Oz",
+  "catCode": "宠",
+  "icon": "pet_icons/Oz.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.5",
+  "hp": "56",
+  "obtain": "Robot Egg",
+  "note": ""
+ },
+ {
+  "name": "Pandaloo",
+  "catCode": "宠",
+  "icon": "pet_icons/Pandaloo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.9",
+  "hp": "120",
+  "obtain": "Brown Bear Egg",
+  "note": ""
+ },
+ {
+  "name": "Paper Box",
+  "catCode": "宠",
+  "icon": "pet_icons/Paper Box.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.7",
+  "hp": "128",
+  "obtain": "Box Egg",
+  "note": ""
+ },
+ {
+  "name": "Penguin Boy",
+  "catCode": "宠",
+  "icon": "pet_icons/Penguin Boy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.1",
+  "hp": "32",
+  "obtain": "Penguin Egg\nIce Box",
+  "note": ""
+ },
+ {
+  "name": "Penku",
+  "catCode": "宠",
+  "icon": "pet_icons/Penku.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.3",
+  "hp": "84",
+  "obtain": "Young Penguin Egg",
+  "note": ""
+ },
+ {
+  "name": "Perper Cat",
+  "catCode": "宠",
+  "icon": "pet_icons/Perper Cat.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.4",
+  "hp": "105",
+  "obtain": "Baby Pher Egg",
+  "note": ""
+ },
+ {
+  "name": "Pet Mama",
+  "catCode": "宠",
+  "icon": "pet_icons/Pet Mama.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.4",
+  "hp": "65",
+  "obtain": "Medusa Egg",
+  "note": ""
+ },
+ {
+  "name": "Phoenix",
+  "catCode": "宠",
+  "icon": "pet_icons/Phoenix.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.8",
+  "hp": "39",
+  "obtain": "Parrot Egg.",
+  "note": ""
+ },
+ {
+  "name": "Pink Princess",
+  "catCode": "宠",
+  "icon": "pet_icons/Pink Princess.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.1",
+  "hp": "32",
+  "obtain": "Penguin Egg",
+  "note": ""
+ },
+ {
+  "name": "Pinocchio",
+  "catCode": "宠",
+  "icon": "pet_icons/Pinocchio.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.1",
+  "hp": "52",
+  "obtain": "Doll Egg",
+  "note": ""
+ },
+ {
+  "name": "Planah",
+  "catCode": "宠",
+  "icon": "pet_icons/Planah.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.8",
+  "hp": "79",
+  "obtain": "Fire Fairy Egg",
+  "note": ""
+ },
+ {
+  "name": "Platanya",
+  "catCode": "宠",
+  "icon": "pet_icons/Platanya.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.7",
+  "hp": "158",
+  "obtain": "Premium Shop\nBaby Whale Egg",
+  "note": "Released September 25, 2023"
+ },
+ {
+  "name": "Pocur",
+  "catCode": "宠",
+  "icon": "pet_icons/Pocur.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.9",
+  "hp": "100",
+  "obtain": "Yellow-green Pig Egg",
+  "note": ""
+ },
+ {
+  "name": "Pointy Ear Fox",
+  "catCode": "宠",
+  "icon": "pet_icons/Pointy Ear Fox.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.6",
+  "hp": "97",
+  "obtain": "Pointy Ear Fox Egg",
+  "note": ""
+ },
+ {
+  "name": "Pumpkitty",
+  "catCode": "宠",
+  "icon": "pet_icons/Pumpkitty.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.3",
+  "hp": "174",
+  "obtain": "Premium Shop",
+  "note": "Released October 29, 2025"
+ },
+ {
+  "name": "Pup Seal",
+  "catCode": "宠",
+  "icon": "pet_icons/Pup Seal.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.9",
+  "hp": "170",
+  "obtain": "Premium Shop",
+  "note": "Released March 5, 2025"
+ },
+ {
+  "name": "Pure Tree",
+  "catCode": "宠",
+  "icon": "pet_icons/Pure Tree.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.4",
+  "hp": "85",
+  "obtain": "Pure Tree Egg",
+  "note": ""
+ },
+ {
+  "name": "Rabbit Ears Girl",
+  "catCode": "宠",
+  "icon": "pet_icons/Rabbit Ears Girl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.5",
+  "hp": "146",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Racehorse",
+  "catCode": "宠",
+  "icon": "pet_icons/Racehorse.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.9",
+  "hp": "50",
+  "obtain": "Horse Egg\n2014 Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Red and Black",
+  "catCode": "宠",
+  "icon": "pet_icons/Red and Black.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.5",
+  "hp": "36",
+  "obtain": "Chick Egg",
+  "note": ""
+ },
+ {
+  "name": "Red Cap",
+  "catCode": "宠",
+  "icon": "pet_icons/Red Cap.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.7",
+  "hp": "28",
+  "obtain": "image:Kooii Egg.pngRabbit Egg",
+  "note": ""
+ },
+ {
+  "name": "Red Card",
+  "catCode": "宠",
+  "icon": "pet_icons/Red Card.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.0",
+  "hp": "31",
+  "obtain": "Card Egg\nOld Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Red Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Red Dragon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.2",
+  "hp": "63",
+  "obtain": "Drakoon Egg",
+  "note": ""
+ },
+ {
+  "name": "Red Hood Kwoo",
+  "catCode": "宠",
+  "icon": "pet_icons/Red Hood Kwoo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.1",
+  "hp": "62",
+  "obtain": "Red Riding Hood Egg",
+  "note": ""
+ },
+ {
+  "name": "Retila",
+  "catCode": "宠",
+  "icon": "pet_icons/Retila.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.2",
+  "hp": "173",
+  "obtain": "Premium Shop",
+  "note": "Released August 26, 2025"
+ },
+ {
+  "name": "Riel",
+  "catCode": "宠",
+  "icon": "pet_icons/Riel.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.8",
+  "hp": "119",
+  "obtain": "Apprentice Warrior Egg",
+  "note": ""
+ },
+ {
+  "name": "Rookie Reaper",
+  "catCode": "宠",
+  "icon": "pet_icons/Rookie Reaper.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.7",
+  "hp": "168",
+  "obtain": "Premium Shop",
+  "note": "Released October 23, 2024"
+ },
+ {
+  "name": "Roshan",
+  "catCode": "宠",
+  "icon": "pet_icons/Roshan.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.9",
+  "hp": "140",
+  "obtain": "Premium Shop\nGirl of Light Egg",
+  "note": "Released January 26, 2022"
+ },
+ {
+  "name": "Rudolph",
+  "catCode": "宠",
+  "icon": "pet_icons/Rudolph.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.3",
+  "hp": "24",
+  "obtain": "By opening:\nOld Rare Pet Egg\nReindeer Egg\nSanta's Sack (2011)",
+  "note": "Plays a tune when summoned"
+ },
+ {
+  "name": "Running Zombie",
+  "catCode": "宠",
+  "icon": "pet_icons/Running Zombie.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.3",
+  "hp": "34",
+  "obtain": "Zombie Egg\nAutumn Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Rusty Robot",
+  "catCode": "宠",
+  "icon": "pet_icons/Rusty Robot.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.5",
+  "hp": "96",
+  "obtain": "Rusty Robot Egg",
+  "note": ""
+ },
+ {
+  "name": "Santa Girl",
+  "catCode": "宠",
+  "icon": "pet_icons/Santa Girl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.8",
+  "hp": "149",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Sasha",
+  "catCode": "宠",
+  "icon": "pet_icons/Sasha.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.9",
+  "hp": "160",
+  "obtain": "Premium Shop\nButler of the Maze Egg",
+  "note": "Released November 22, 2023"
+ },
+ {
+  "name": "Saurus",
+  "catCode": "宠",
+  "icon": "pet_icons/Saurus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.4",
+  "hp": "55",
+  "obtain": "Dinosaur Egg",
+  "note": ""
+ },
+ {
+  "name": "Sea Prince",
+  "catCode": "宠",
+  "icon": "pet_icons/Sea Prince.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.2",
+  "hp": "43",
+  "obtain": "Otter Egg",
+  "note": ""
+ },
+ {
+  "name": "Sea Turtle",
+  "catCode": "宠",
+  "icon": "pet_icons/Sea Turtle.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.0",
+  "hp": "81",
+  "obtain": "Sea Turtle Egg",
+  "note": ""
+ },
+ {
+  "name": "Seabiscuit",
+  "catCode": "宠",
+  "icon": "pet_icons/Seabiscuit.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.9",
+  "hp": "50",
+  "obtain": "Horse Egg\n2014 Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Sealed Sword",
+  "catCode": "宠",
+  "icon": "pet_icons/Sealed Sword.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.1",
+  "hp": "152",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Seiran",
+  "catCode": "宠",
+  "icon": "pet_icons/Seiran.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.9",
+  "hp": "150",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Sena",
+  "catCode": "宠",
+  "icon": "pet_icons/Sena.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.1",
+  "hp": "132",
+  "obtain": "",
+  "note": "Released May 2021"
+ },
+ {
+  "name": "Shadow Pher",
+  "catCode": "宠",
+  "icon": "pet_icons/Shadow Pher.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.5",
+  "hp": "126",
+  "obtain": "Shadow Pher Egg",
+  "note": ""
+ },
+ {
+  "name": "Sharkoo",
+  "catCode": "宠",
+  "icon": "pet_icons/Sharkoo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "9.6",
+  "hp": "67",
+  "obtain": "Baby Dolphin Egg",
+  "note": ""
+ },
+ {
+  "name": "Shiny Kooii",
+  "catCode": "宠",
+  "icon": "pet_icons/Shiny Kooii.png",
+  "hasIcon": true,
+  "rarity": "一般",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "0%",
+  "crit": "0",
+  "deadly": "4.9",
+  "hp": "30",
+  "obtain": "Turn in quest line \"Second Data Collection\" to Sido\nTurn in quest line to \"Honorary Knight Appointment\" to King Roberto",
+  "note": "You must follow the Main Quest Call of the Kingdom or Call of the Empire."
+ },
+ {
+  "name": "Silo",
+  "catCode": "宠",
+  "icon": "pet_icons/Silo.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.7",
+  "hp": "148",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Slowpoke",
+  "catCode": "宠",
+  "icon": "pet_icons/Slowpoke.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.3",
+  "hp": "44",
+  "obtain": "Turtle Egg",
+  "note": ""
+ },
+ {
+  "name": "Small Puppy",
+  "catCode": "宠",
+  "icon": "pet_icons/Small Puppy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "16.2",
+  "hp": "143",
+  "obtain": "Premium Shop\nSmall Puppy Egg",
+  "note": "Released May 19, 2022"
+ },
+ {
+  "name": "Small Snowball",
+  "catCode": "宠",
+  "icon": "pet_icons/Small Snowball.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.5",
+  "hp": "116",
+  "obtain": "Snowball Egg",
+  "note": ""
+ },
+ {
+  "name": "Small Woopa",
+  "catCode": "宠",
+  "icon": "pet_icons/Small Woopa.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.3",
+  "hp": "154",
+  "obtain": "Premium Shop\nSmall Woopa Egg",
+  "note": "Released May 24, 2023"
+ },
+ {
+  "name": "Smart Pup",
+  "catCode": "宠",
+  "icon": "pet_icons/Smart Pup.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.2",
+  "hp": "33",
+  "obtain": "Puppy Egg\nGreen Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Snowkid",
+  "catCode": "宠",
+  "icon": "pet_icons/Snowkid.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.8",
+  "hp": "169",
+  "obtain": "Premium Shop",
+  "note": "Released December 19, 2024"
+ },
+ {
+  "name": "Spring Butterfly",
+  "catCode": "宠",
+  "icon": "pet_icons/Spring Butterfly.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.5",
+  "hp": "166",
+  "obtain": "Premium Shop",
+  "note": "Released May 22, 2024"
+ },
+ {
+  "name": "Spring Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Spring Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.2",
+  "hp": "153",
+  "obtain": "Premium Shop\nSpring Fairy Egg",
+  "note": "Released April 19, 2023"
+ },
+ {
+  "name": "Sprout Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Sprout Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.3",
+  "hp": "164",
+  "obtain": "Premium Shop",
+  "note": "Released April 2024"
+ },
+ {
+  "name": "Sprout Golem",
+  "catCode": "宠",
+  "icon": "pet_icons/Sprout Golem.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.5",
+  "hp": "176",
+  "obtain": "Premium Shop",
+  "note": "Released February 25, 2026"
+ },
+ {
+  "name": "Sprouty",
+  "catCode": "宠",
+  "icon": "pet_icons/Sprouty.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.9",
+  "hp": "110",
+  "obtain": "Sprouty Egg\nEremus' Handbag",
+  "note": "Acquisition Rate will only apply to Sprouty Egg."
+ },
+ {
+  "name": "Stylish Kooii",
+  "catCode": "宠",
+  "icon": "pet_icons/Stylish Kooii.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.0",
+  "hp": "20",
+  "obtain": "image:Kooii Egg.pngKooii Egg\nimage:Event_Egg.pngOld Rare Pet Egg",
+  "note": "*Price varies largely depending on server. Rare and endangered species. Only a lucky few still have."
+ },
+ {
+  "name": "Summer Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Summer Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "17.6",
+  "hp": "157",
+  "obtain": "Premium Shop\nSummer Fairy Egg",
+  "note": "Released August 23, 2023"
+ },
+ {
+  "name": "Suvi",
+  "catCode": "宠",
+  "icon": "pet_icons/Suvi.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.6",
+  "hp": "157",
+  "obtain": "Premium Shop\nSummer Fairy Egg",
+  "note": "Released August 23, 2023"
+ },
+ {
+  "name": "Swamp Frog",
+  "catCode": "宠",
+  "icon": "pet_icons/Swamp Frog.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.8",
+  "hp": "89",
+  "obtain": "Swamp Frog Egg\nLana's Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Swamp Plant",
+  "catCode": "宠",
+  "icon": "pet_icons/Swamp Plant.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.3",
+  "hp": "94",
+  "obtain": "Swamp Plant Egg",
+  "note": ""
+ },
+ {
+  "name": "SwingShot",
+  "catCode": "宠",
+  "icon": "pet_icons/SwingShot.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.9",
+  "hp": "30",
+  "obtain": "Monkey Egg",
+  "note": ""
+ },
+ {
+  "name": "Sylvia",
+  "catCode": "宠",
+  "icon": "pet_icons/Sylvia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.7",
+  "hp": "78",
+  "obtain": "Forest Fairy Egg",
+  "note": ""
+ },
+ {
+  "name": "Tasha",
+  "catCode": "宠",
+  "icon": "pet_icons/Tasha.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.4",
+  "hp": "115",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Teleporter Kid",
+  "catCode": "宠",
+  "icon": "pet_icons/Teleporter Kid.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.6",
+  "hp": "117",
+  "obtain": "Teleporter Egg",
+  "note": ""
+ },
+ {
+  "name": "Tender Banshee",
+  "catCode": "宠",
+  "icon": "pet_icons/Tender Banshee.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.2",
+  "hp": "103",
+  "obtain": "Tender Banshee Egg",
+  "note": ""
+ },
+ {
+  "name": "Timid Soul",
+  "catCode": "宠",
+  "icon": "pet_icons/Timid Soul.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.7",
+  "hp": "68",
+  "obtain": "Soul Egg",
+  "note": ""
+ },
+ {
+  "name": "Tin Robot",
+  "catCode": "宠",
+  "icon": "pet_icons/Tin Robot.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.5",
+  "hp": "56",
+  "obtain": "Robot Egg\nOld Gift Box 2014 (3)",
+  "note": ""
+ },
+ {
+  "name": "Tinia",
+  "catCode": "宠",
+  "icon": "pet_icons/Tinia.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.4",
+  "hp": "125",
+  "obtain": "Mummy Egg",
+  "note": ""
+ },
+ {
+  "name": "Tiny Bouncing Ball",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiny Bouncing Ball.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.8",
+  "hp": "99",
+  "obtain": "Tiny Bouncing Ball Egg",
+  "note": ""
+ },
+ {
+  "name": "Tiny Car",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiny Car.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.9",
+  "hp": "60",
+  "obtain": "Car Egg",
+  "note": ""
+ },
+ {
+  "name": "Tiny Fox",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiny Fox.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.2",
+  "hp": "173",
+  "obtain": "Premium Shop",
+  "note": "Released August 26, 2025"
+ },
+ {
+  "name": "Tiny Parrot",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiny Parrot.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.8",
+  "hp": "39",
+  "obtain": "Parrot Egg",
+  "note": ""
+ },
+ {
+  "name": "Tiny Pop",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiny Pop.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.7",
+  "hp": "48",
+  "obtain": "Sheep Egg",
+  "note": ""
+ },
+ {
+  "name": "Tiro",
+  "catCode": "宠",
+  "icon": "pet_icons/Tiro.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.0",
+  "hp": "151",
+  "obtain": "Premium Shop",
+  "note": ""
+ },
+ {
+  "name": "Top Gun",
+  "catCode": "宠",
+  "icon": "pet_icons/Top Gun.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.3",
+  "hp": "54",
+  "obtain": "Bee Egg",
+  "note": ""
+ },
+ {
+  "name": "TORTOISE Z",
+  "catCode": "宠",
+  "icon": "pet_icons/TORTOISE Z.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.0",
+  "hp": "81",
+  "obtain": "Sea Turtle Egg",
+  "note": ""
+ },
+ {
+  "name": "Trained Reaper",
+  "catCode": "宠",
+  "icon": "pet_icons/Trained Reaper.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.7",
+  "hp": "168",
+  "obtain": "Premium Shop",
+  "note": "Released October 23, 2024"
+ },
+ {
+  "name": "Trainee Ranger",
+  "catCode": "宠",
+  "icon": "pet_icons/Trainee Ranger.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.1",
+  "hp": "162",
+  "obtain": "Premium Shop",
+  "note": "Released January 2024"
+ },
+ {
+  "name": "Troublemaker",
+  "catCode": "宠",
+  "icon": "pet_icons/Troublemaker.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "13.4",
+  "hp": "115",
+  "obtain": "Pet Egg",
+  "note": ""
+ },
+ {
+  "name": "Ulucus",
+  "catCode": "宠",
+  "icon": "pet_icons/Ulucus.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.3",
+  "hp": "94",
+  "obtain": "Swamp Plant Egg",
+  "note": ""
+ },
+ {
+  "name": "Valinda",
+  "catCode": "宠",
+  "icon": "pet_icons/Valinda.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.4",
+  "hp": "85",
+  "obtain": "Pure Tree Egg",
+  "note": ""
+ },
+ {
+  "name": "Valter",
+  "catCode": "宠",
+  "icon": "pet_icons/Valter.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.6",
+  "hp": "127",
+  "obtain": "Blacksmith Egg",
+  "note": ""
+ },
+ {
+  "name": "Vespera",
+  "catCode": "宠",
+  "icon": "pet_icons/Vespera.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.7",
+  "hp": "178",
+  "obtain": "Premium Shop",
+  "note": "Released June 24, 2026"
+ },
+ {
+  "name": "Wadangka Jr",
+  "catCode": "宠",
+  "icon": "pet_icons/Wadangka Jr.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "6.7",
+  "hp": "38",
+  "obtain": "Yeti Egg",
+  "note": ""
+ },
+ {
+  "name": "Water Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Water Dragon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.0",
+  "hp": "171",
+  "obtain": "Premium Shop",
+  "note": "Released April 22, 2025"
+ },
+ {
+  "name": "Water Dragon's Pouch",
+  "catCode": "宠",
+  "icon": "pet_icons/Water Dragon's Pouch.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "20.0",
+  "hp": "171",
+  "obtain": "Premium Shop",
+  "note": "Released April 22, 2025"
+ },
+ {
+  "name": "White Tiger",
+  "catCode": "宠",
+  "icon": "pet_icons/White Tiger.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "8.0",
+  "hp": "51",
+  "obtain": "Tiger Egg",
+  "note": ""
+ },
+ {
+  "name": "Wild Bulldozer",
+  "catCode": "宠",
+  "icon": "pet_icons/Wild Bulldozer.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.1",
+  "hp": "42",
+  "obtain": "Pig Egg",
+  "note": ""
+ },
+ {
+  "name": "Winter Fairy",
+  "catCode": "宠",
+  "icon": "pet_icons/Winter Fairy.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.0",
+  "hp": "161",
+  "obtain": "Premium Shop",
+  "note": "Released December 2023"
+ },
+ {
+  "name": "Winter Night Owl",
+  "catCode": "宠",
+  "icon": "pet_icons/Winter Night Owl.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.4",
+  "hp": "175",
+  "obtain": "Premium Shop",
+  "note": "Released December 17, 2025"
+ },
+ {
+  "name": "Wintie",
+  "catCode": "宠",
+  "icon": "pet_icons/Wintie.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.0",
+  "hp": "161",
+  "obtain": "Premium Shop",
+  "note": "Released December 2023"
+ },
+ {
+  "name": "Witch's Broom",
+  "catCode": "宠",
+  "icon": "pet_icons/Witch's Broom.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.4",
+  "hp": "35",
+  "obtain": "Broom Egg\nHalloween Gift Box (2012)",
+  "note": ""
+ },
+ {
+  "name": "Wooden Doll",
+  "catCode": "宠",
+  "icon": "pet_icons/Wooden Doll.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "7.1",
+  "hp": "52",
+  "obtain": "Doll Egg",
+  "note": ""
+ },
+ {
+  "name": "Woody-Weedy Child",
+  "catCode": "宠",
+  "icon": "pet_icons/Woody-Weedy Child.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "14.3",
+  "hp": "124",
+  "obtain": "Child Egg\nElla's Magic Pouch",
+  "note": ""
+ },
+ {
+  "name": "Woompa Loompa",
+  "catCode": "宠",
+  "icon": "pet_icons/Woompa Loompa.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "18.3",
+  "hp": "154",
+  "obtain": "Premium Shop\nSmall Woopa Egg",
+  "note": "Released May 24, 2023"
+ },
+ {
+  "name": "Wukong",
+  "catCode": "宠",
+  "icon": "pet_icons/Wukong.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.3",
+  "hp": "74",
+  "obtain": "Fragile Pumpkin Egg",
+  "note": ""
+ },
+ {
+  "name": "X-Jet",
+  "catCode": "宠",
+  "icon": "pet_icons/X-Jet.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.8",
+  "hp": "28",
+  "obtain": "Alien Egg",
+  "note": ""
+ },
+ {
+  "name": "Yellow Chick",
+  "catCode": "宠",
+  "icon": "pet_icons/Yellow Chick.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "5.5",
+  "hp": "36",
+  "obtain": "Chick Egg",
+  "note": ""
+ },
+ {
+  "name": "Yellow-green Pig",
+  "catCode": "宠",
+  "icon": "pet_icons/Yellow-green Pig.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "11.9",
+  "hp": "100",
+  "obtain": "Yellow-green Pig Egg\nPocur's Snack Box",
+  "note": ""
+ },
+ {
+  "name": "Young Dragon",
+  "catCode": "宠",
+  "icon": "pet_icons/Young Dragon.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "4.4",
+  "hp": "24",
+  "obtain": "Dragon Egg\n2012 Gift Box",
+  "note": ""
+ },
+ {
+  "name": "Young Jelly",
+  "catCode": "宠",
+  "icon": "pet_icons/Young Jelly.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "19.1",
+  "hp": "172",
+  "obtain": "Premium Shop",
+  "note": "Released June 25, 2025"
+ },
+ {
+  "name": "Young Penguin",
+  "catCode": "宠",
+  "icon": "pet_icons/Young Penguin.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "10.3",
+  "hp": "84",
+  "obtain": "Young Penguin Egg",
+  "note": ""
+ },
+ {
+  "name": "Young Succubus",
+  "catCode": "宠",
+  "icon": "pet_icons/Young Succubus.png",
+  "hasIcon": true,
+  "rarity": "高级",
+  "level": 8,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "15.6",
+  "hp": "137",
+  "obtain": "Premium Shop\nYoung Succubus Egg",
+  "note": "Released October 21, 2021"
+ },
+ {
+  "name": "Zero",
+  "catCode": "宠",
+  "icon": "pet_icons/Zero.png",
+  "hasIcon": true,
+  "rarity": "稀有",
+  "level": 9,
+  "classes": [
+   "all"
+  ],
+  "exp": "3%",
+  "crit": "1",
+  "deadly": "12.7",
+  "hp": "98",
+  "obtain": "Amateur Spy Egg",
+  "note": ""
+ }
+]

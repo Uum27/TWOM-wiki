@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>图鉴任务</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+body{background:#f0f2f5;padding:12px}
+.top-bar{display:flex;align-items:center;gap:6px;margin-bottom:8px;position:sticky;top:0;z-index:100;background:#f0f2f5;padding:6px 0}
+.search-box{flex:1;min-width:0;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.lang-btn,.page-btn,.type-btn{padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px}
+select.lang-btn{font-size:15px}
+.type-btn.active{background:#718ACC;color:#fff;border-color:#718ACC}
+.page-btn{margin:0 4px}
+/* 滚动时只冻结搜索框（吸顶）；分类栏/书籍栏保持原有行为，不吸顶 */
+#catBar.top-bar,#bookBar.top-bar{position:static;background:transparent;margin-bottom:1px;display:flex;flex-wrap:wrap;gap:4px}
+.pagination{text-align:center;margin:8px 0}
+
+/* ===== 卡片网格：手机 1 列 / 平板 2 列 / PC 3 列 ===== */
+/* minmax(0,1fr) 而不是 1fr：避免内容撑宽导致列宽不均（3 列会参差） */
+.coll-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+/* 手机端卡片适当收窄并居中，避免横向撑满过于拉伸 */
+@media(max-width:767px){
+  .coll-card{width:100%;max-width:360px;justify-self:center}
+}
+@media(min-width:768px) and (max-width:1023px){.coll-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+@media(min-width:1024px){.coll-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+
+/* ===== 卡片（标题沿用装备图鉴的卡片样式） ===== */
+.coll-card{background:#D9E3EC;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;display:flex;flex-direction:column;padding:4px;gap:4px;border:1px solid #94A6BE}
+.coll-name{text-align:center;font-weight:bold;font-size:18px;padding:4px 4px;border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px;line-height:1.2;color:#22334a}
+@media(min-width:1024px){.coll-name{font-size:20px;padding:6px 4px}}
+
+.coll-body{display:flex;gap:6px;align-items:stretch;padding:2px}
+/* 左：奖励数值（单条一行，字号缩小，过长折行不截断） */
+.coll-rewards{flex:0 0 50%;min-width:0;background:#fff;border-radius:8px;padding:6px 7px;display:flex;flex-direction:column;gap:1px;justify-content:center}
+.coll-reward{font-size:13px;font-weight:bold;color:#3D67D4;line-height:1.3;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+@media(min-width:768px){.coll-reward{font-size:14px}}
+.coll-reward.none{color:#77839A;font-weight:normal;font-size:12px}
+/* 事件类任务的「限时任务」标记：淡红，排在奖励框最下方，不遮挡奖励数值 */
+.coll-limited{margin-top:3px;padding-top:2px;font-size:12px;font-weight:bold;
+  color:#E08585;line-height:1.2;border-top:1px dashed #EFCFCF}
+@media(min-width:1024px){.coll-limited{font-size:13px}}
+/* 右：需要收集的材料（4 格换行；格子上限 54px，宽度不够时自动收缩） */
+.coll-mats{flex:1 1 auto;min-width:0;display:grid;grid-template-columns:repeat(4,minmax(0,54px));gap:5px;align-content:start;justify-content:center}
+@media(min-width:1024px){
+  .coll-rewards{flex:0 0 52%}
+  .coll-mats{grid-template-columns:repeat(4,minmax(0,60px));gap:5px}
+}
+.mat-box img{width:92%;height:92%;object-fit:contain}
+/* ===== 材料悬停浮层：装备类=装备图鉴完整卡片 / 材料类=轻量（名称+描述） ===== */
+.mat-tip{position:fixed;z-index:210;display:none;pointer-events:none;max-width:86vw;
+  /* 图标框内图片的缩放（装备 / 时装 / 宠物 三类共用）：用户微调只改这一处即可；
+     框体 52×52、矩形边框、flex 居中均不受影响。 */
+  --tip-hex-img:70%}
+.mat-tip.show{display:block;pointer-events:auto}
+/* 建议：卡片面用「近乎不透明」的 92%（轻微透视 + 白底内衬），
+   既保留浮层感，又保证属性文字清晰可读；纯 60% 会让密集属性行发灰难读。 */
+/* 手机端：材料类约 150px、装备/宠物/时装卡片约 200px（PC 放宽） */
+.mat-tip .tip-card{background:rgba(217,227,236,0.92);border:1px solid #94A6BE;border-radius:12px;position:relative;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);padding:6px;width:150px;overflow:hidden}
+.mat-tip .tip-card.tip-equip{width:200px}
+@media(min-width:1024px){
+  .mat-tip .tip-card{width:220px}
+  .mat-tip .tip-card.tip-equip{width:300px}
+}
+/* 文本不超边界：允许折行、禁止横向溢出 */
+.mat-tip .tl-body{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.mat-tip .tl-name{overflow-wrap:anywhere}
+.mat-tip .equip-name,.mat-tip .stat-item{overflow-wrap:anywhere;word-break:break-word}
+/* 「高级」标签（等级>10 由一般升级而来 / 本身为高级）：绿色文字 + 浅绿底，保证可读 */
+.mat-tip .tag-rarity.adv{background:#E9F4E6;color:#518B38;border:1px solid #B7D9AE}
+/* 以下复用装备图鉴的卡片组件与样式（同名类，仅在本浮层内生效，不影响页面其它部分） */
+.mat-tip .equip-name{text-align:center;font-weight:bold;font-size:16px;padding:3px 4px;line-height:1.2;
+  border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;
+  background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px}
+.mat-tip .equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.mat-tip .equip-icon-col{width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px}
+.mat-tip .hex-icon{width:52px;height:52px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:#EDF0F4;border:2px solid #94A6BE;border-radius:8px}
+/* object-fit:contain + 外层 flex 居中：只等比缩放图片本体，不变形、不偏移、不越界 */
+.mat-tip .hex-icon img{width:var(--tip-hex-img,76%);height:var(--tip-hex-img,76%);object-fit:contain}
+.mat-tip .item-level{font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1}
+.mat-tip .equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px;padding-left:4px}
+.mat-tip .tag-rarity{padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content}
+.mat-tip .tag-job{display:flex;align-items:center;gap:3px;min-height:20px;width:fit-content}
+.mat-tip .tag-job img{width:20px;height:20px;object-fit:contain}
+.mat-tip .equip-stats{background:#C6D4E4;padding:6px;border-radius:8px;margin-top:4px;position:relative;padding-right:24px}
+.mat-tip .stat-item{font-size:13px;font-weight:bold;text-align:left;padding:1px 0}
+/* 属性框内右下角的「跳转详情」图标（转弯箭头）：半透明圆底，pointer-events:auto 使其可点
+   （.mat-tip.show 现在整体 pointer-events:auto，图标也保持 auto 以兼容旧逻辑） */
+.mat-tip .tip-jump{position:absolute;right:5px;bottom:5px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(34,44,62,0.55);color:#fff;cursor:pointer;pointer-events:auto;
+  box-shadow:0 1px 3px rgba(0,0,0,0.35);transition:background .15s}
+.mat-tip .tip-jump:hover{background:rgba(34,44,62,0.85)}
+.mat-tip .tip-jump svg{display:block}
+/* 轻量浮层（材料/物品）：图标 + 名称（+ 描述，没有描述就只有名称和图标） */
+.mat-tip .tip-light{display:flex;gap:8px;align-items:flex-start;padding:2px}
+.mat-tip .tip-light .tl-icon{position:relative;width:48px;height:48px;flex:0 0 48px;background:#EDF0F4;
+  border:1px solid #B9C4D4;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mat-tip .tip-light .tl-icon img{width:88%;height:88%;object-fit:contain}
+.mat-tip .tip-light .tl-name{font-size:14px;font-weight:bold;color:#22334a;line-height:1.3}
+.mat-tip .tip-light .tl-desc{font-size:12px;color:#3D4E68;margin-top:3px;line-height:1.35}
+/* 点击选中的条目高亮 */
+.mat-box.sel{outline:2px solid #4E9A8C;outline-offset:-2px;box-shadow:0 0 0 2px rgba(78,154,140,0.35)}
+/* 角标基类（只管定位与层级，具体样式分两类） */
+.mat-badge{position:absolute;font-weight:bold;line-height:1.2;z-index:2;pointer-events:none}
+/* ① 数量：右下角，与图标边缘留 1px 间距，圆角底框，不压住图标主体 */
+/* 数量角标：底色加深（接近实色），白字更清晰；保留圆角 */
+.mat-qty{right:1px;bottom:1px;background:rgba(34,44,62,0.6);color:#fff;font-size:9px;padding:0 3px;
+  border-radius:5px;border:1px solid rgba(255,255,255,0.25)}
+/* ② 强化值：右上角，无底色无边框，只留文字 + 1px 描边（四向 text-shadow + text-stroke） */
+/* 描边用 text-shadow 画（阴影在文字下方，白色填充不会被吃掉），
+   不用 -webkit-text-stroke —— 后者会盖在填充色之上，小字会整字发黑 */
+.mat-enh{right:1px;top:0;background:none;border:0;color:#fff;font-size:10px;
+  text-shadow:1px 0 0 rgba(0,0,0,0.9), -1px 0 0 rgba(0,0,0,0.9), 0 1px 0 rgba(0,0,0,0.9), 0 -1px 0 rgba(0,0,0,0.9),
+              1px 1px 0 rgba(0,0,0,0.9), -1px -1px 0 rgba(0,0,0,0.9), 1px -1px 0 rgba(0,0,0,0.9), -1px 1px 0 rgba(0,0,0,0.9)}
+@media(min-width:1024px){
+  .mat-qty{font-size:10px;border-radius:6px;right:3px;bottom:3px}
+  .mat-enh{font-size:11px;right:2px}
+}
+.mat-box{position:relative;aspect-ratio:1/1;background:#EDF0F4;border:1px solid #B9C4D4;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mat-box.empty::after{content:"?";color:#A9B4C6;font-size:15px;font-weight:bold}
+
+/* 语言下拉框自定义箭头（与其它页一致） */
+select.lang-btn{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:32px;padding-left:8px;
+  text-align:center;text-align-last:center;
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <input class="search-box" id="searchBox" placeholder="搜索任务名 / 属性 / 材料...">
+  <select class="lang-btn" id="langSelect"></select>
+</div>
+<button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
+<button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
+<button class="type-btn" onclick="location.href='gem.html'" data-nav="gem">宝石图鉴</button>
+<button class="type-btn" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
+<button class="type-btn" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
+<button class="type-btn active" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
+<div class="top-bar" id="bookBar"></div>
+<div class="top-bar" id="catBar"></div>
+<div class="pagination" id="topPagination">
+  <button class="page-btn" id="firstTop">首页</button>
+  <button class="page-btn" id="prevTop">上一页</button>
+  <span class="page-jump" id="pageJumpTop"><span id="pageInfo">第 1 页</span><input class="page-jump-input" id="pageInputTop" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextTop">下一页</button>
+  <button class="page-btn" id="lastTop">尾页</button>
+</div>
+<div class="coll-grid" id="itemGrid">加载中...</div>
+<div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="firstBot">首页</button>
+  <button class="page-btn" id="prevBot">上一页</button>
+  <span class="page-jump" id="pageJumpBot"><span id="pageInfoBot">第 1 页</span><input class="page-jump-input" id="pageInputBot" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextBot">下一页</button>
+  <button class="page-btn" id="lastBot">尾页</button>
+</div>
+
+<script>
+/* ===== 语言工具（内联，与其它页一致；语言对照数据在 lang.json） ===== */
+var TWOM_LANG_OPTIONS=[["en","English"],["zh","中文"],["ja","日本語"],["ko","한국어"]];
+var TWOM_UI2CODE={en:"en",zh:"cn",ja:"ja",ko:"kr"};
+var TWOM_CODE2UI={en:"en",cn:"zh",ja:"ja",kr:"ko"};
+var TWOM_NAV={},TWOM_TXTJA={};
+function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"ko",ko:"ko"})[v]||"cn";}
+function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
+function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="ko"?"ko":"en";}
+function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomApplyLangData(L){
+  TWOM_NAV=(L&&L.nav)||{};
+  TWOM_TXTJA=(L&&L.txtJa)||{};
+  COLL_LANG=(L&&L.collectionLang)||{};
+  twomUpdateNav();
+}
+function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
+</script>
+<script>
+/* =====================================================================
+   图鉴任务（Collection Quest）
+   数据：collection_data.json（由解包数据生成，见 work/scripts/build_collection_site_data.py）
+   卡片：标题=任务名；左栏=奖励（竖排，字号缩小，过长折行）；右栏=需要收集的材料（4 格换行，右上角强化值）
+   默认排序：无奖励沉底；其余按类别（一般→时装→事件→宠物）分组、组内奖励条数由少到多
+   ===================================================================== */
+var currentLang = twomReadLang();
+var DATA = [], ITEMS = {}, ATTR = {}, CATS = [], BOOKS = [], COLL_LANG = {}, PET_LANG = {};
+var filtered = [];
+var page = 1;
+var curCat = 'all';
+var curBook = 'all';
+
+var TXT_FALLBACK = {
+  search: {cn:"搜索任务名 / 属性 / 材料...", en:"Search quest / stat / material...", ja:"任務名 / 属性 / 素材で検索...", ko:"임무명 / 능력치 / 재료 검색..."},
+  all:    {cn:"全部", en:"All", ja:"すべて", ko:"전체"},
+  empty:  {cn:"没有匹配的图鉴任务", en:"No matching quests", ja:"該当する図鑑任務がありません", ko:"일치하는 도감 임무가 없습니다"},
+  req:    {cn:"需要收集", en:"Required", ja:"必要素材", ko:"필요 재료"},
+  reward: {cn:"完成奖励", en:"Reward", ja:"達成報酬", ko:"완료 보상"},
+  none:   {cn:"无奖励数据", en:"No reward", ja:"報酬データなし", ko:"보상 데이터 없음"},
+  loading:{cn:"加载中...", en:"Loading...", ja:"読み込み中...", ko:"불러오는 중..."},
+  limited:{cn:"限时任务", en:"Limited-Time Quest", ja:"期間限定任務", kr:"기간 한정 임무"},
+  page:   {cn:"第 {now} / {total} 页", en:"Page {now} / {total}", ja:"{now} / {total} ページ", ko:"{now} / {total} 페이지"},
+  prev:   {cn:"上一页", en:"Prev", ja:"前へ", ko:"이전"},
+  next:   {cn:"下一页", en:"Next", ja:"次へ", ko:"다음"}
+};
+
+function t(k, vars){
+  var o = (COLL_LANG[k] || TXT_FALLBACK[k] || {});
+  var s = o[currentLang] || o.cn || o.en || k;
+  return String(s).replace(/\{(\w+)\}/g, function(_, n){ return (vars && vars[n] != null) ? vars[n] : ""; });
+}
+
+function isPC(){ return (typeof window !== "undefined" && window.innerWidth >= 1024); }
+function getPerPage(){ return isPC() ? 15 : 10; }   /* PC 每页 15 张 / 手机 10 张 */
+
+function escHtml(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function escAttr(s){ return escHtml(s); }
+
+/* ---------- 名称 ---------- */
+function questName(e){ var n = e.n || {}; return n[currentLang] || n.cn || n.en || ("#" + e.qid); }
+function itemOf(iid){ return ITEMS[String(iid)] || {}; }
+function itemName(iid){ var it = itemOf(iid); return it[currentLang] || it.cn || it.en || ("#" + iid); }
+function itemIcon(iid){ return "collection_icons/" + iid + ".png"; }
+
+/* ---------- 奖励文本：显示值 = 存储值 / 换算系数 ---------- */
+function attrText(x){
+  var oid = x[0], val = x[1];
+  var a = ATTR[String(oid)];
+  if(!a) return oid + ":" + val;
+  var v = val / a.s;
+  var body = v.toFixed(a.d);
+  var nm = a.n[currentLang] || a.n.cn || a.n.en || ("#" + oid);
+  return nm + "+" + body + (a.p ? "%" : "");
+}
+
+/* ---------- 材料角标：数量（右下，带圆角底框）+ 强化值（右上，无底框、带描边） ---------- */
+function matQtyBadge(qty){ return qty > 1 ? "×" + qty : ""; }
+function matEnhBadge(enh){ return enh ? "+" + enh : ""; }
+/* 旧的单角标规则保留（其它逻辑/用例仍引用）：有强化值时只显示强化值 */
+function matBadge(qty, enh){
+  if(enh) return "+" + enh;
+  if(qty > 1) return "×" + qty;
+  return "";
+}
+
+/* ---------- 搜索索引（任务名 + 属性名 + 材料名，全部四语） ---------- */
+function buildSearch(e){
+  var parts = [];
+  for(var k in e.n) if(e.n[k]) parts.push(e.n[k]);
+  for(var i = 0; i < e.r.length; i++){
+    var a = ATTR[String(e.r[i][0])];
+    if(a) for(var k2 in a.n) if(a.n[k2]) parts.push(a.n[k2]);
+  }
+  for(var j = 0; j < e.t.length; j++){
+    var it = itemOf(e.t[j][0]);
+    for(var k3 in it) if(typeof it[k3] === "string" && it[k3]) parts.push(it[k3]);
+  }
+  parts.push("idx" + e.idx, String(e.qid));
+  return parts.join(" ").toLowerCase();
+}
+
+/* ---------- 分类：卡片是否命中某分类 ---------- */
+function catOids(k){
+  for(var i = 0; i < CATS.length; i++) if(CATS[i].k === k) return CATS[i].o;
+  return null;
+}
+function hitCat(e, k){
+  var oids = catOids(k);
+  if(!oids) return true;
+  for(var i = 0; i < e.r.length; i++){
+    for(var j = 0; j < oids.length; j++) if(e.r[i][0] === oids[j]) return true;
+  }
+  return false;
+}
+
+/* ---------- 卡片 HTML ---------- */
+function cardInnerHtml(e){
+  var rew = "";
+  if(e.r.length){
+    for(var i = 0; i < e.r.length; i++) rew += '<div class="coll-reward">' + escHtml(attrText(e.r[i])) + "</div>";
+  }else{
+    rew = '<div class="coll-reward none">' + escHtml(t("none")) + "</div>";
+  }
+  /* 事件类任务：奖励框底部补一行「限时任务」（浅红，不挤占原有奖励行） */
+  if(e.book === "event") rew += '<div class="coll-limited">' + escHtml(t("limited")) + "</div>";
+
+  var mats = "";
+  for(var j = 0; j < e.t.length; j++){
+    var iid = e.t[j][0], qty = e.t[j][1], enh = e.t[j][2];
+    var it = itemOf(iid);
+    var boxName = petNameFromAlias(iid, it) || itemName(iid);   /* 宠物物品名 -> 宠物图鉴卡片名 */
+    var bq = matQtyBadge(qty), be = matEnhBadge(enh);
+    var tip = boxName + " ×" + qty + (enh ? " (+" + enh + ")" : "");
+    /* 固定宽高 + decoding=async：解码不阻塞主线程，也不会因解码导致重排抖动 */
+    mats += '<div class="mat-box" data-iid="' + escAttr(iid) + '" data-qty="' + escAttr(qty) + '" title="' + escAttr(tip) + '">'
+          + '<img width="100%" height="100%" decoding="async" src="' + escAttr(itemIcon(iid)) + '"'
+          + ' alt="' + escAttr(boxName) + '"'
+          + ' onerror="this.style.display=\'none\';this.parentNode.classList.add(\'empty\')">'
+          /* 强化值：右上，无底框、带 1px 描边；数量：右下，圆角底框 —— 两者可同时显示 */
+          + (be ? '<span class="mat-badge mat-enh">' + escHtml(be) + "</span>" : "")
+          + (bq ? '<span class="mat-badge mat-qty">' + escHtml(bq) + "</span>" : "")
+          + "</div>";
+  }
+
+  return   '<div class="coll-name">' + escHtml(questName(e)) + "</div>"
+       +   '<div class="coll-body">'
+       +     '<div class="coll-rewards">' + rew + "</div>"
+       +     '<div class="coll-mats">' + mats + "</div>"
+       +   "</div>";
+}
+function cardHtml(e){
+  return '<div class="coll-card" data-idx="' + e.idx + '">' + cardInnerHtml(e) + "</div>";
+}
+
+/* ---------- 材料悬停浮层 ----------
+   装备类 -> 装备图鉴完整信息卡片（图标/名称/品质/等级/职业/属性）
+   材料类 -> 轻量浮层：名称 + 描述（无描述则只有名称和图标）
+   桌面端：悬停延时显示、移出销毁；手机端：单击显示、点浮层外消失并取消高亮。
+   数据按 ID 从现有配置读取，缺失字段做安全兜底。                       */
+var EQUIP_BY_EN = {}, EQUIP_BY_CN = {}, RARITY_TXT = {}, RARITY_COLOR = {}, ATTR_NAME = {};
+var PET_BY_EN = {}, COSTUME_BY_EN = {}, DROP_MAP = {}, CAT_NAME_COS = {}, CAT_NAME_PET = {};
+/* 图鉴任务里的宠物物品名 ≠ 宠物图鉴内的名字 -> 按 ID 映射到图鉴里已有的卡片：
+   210333 忠犬小鲁/Good Boi = 小小汪 Small Puppy（体力143+死亡一击16.2 逐项一致）；
+   210334 道奇柯基/Dogi Corgi = 柯基 Corgi（图标与 pet_icons/Corgi.png 逐字节一致）。 */
+var PET_ALIAS = {"210333":"Small Puppy", "210334":"Corgi"};
+/* 图鉴任务里的宠物物品名（collection_data.json.items，如 210333=忠犬小鲁/Good Boi）
+   要换成宠物图鉴卡片名（lang.json.pets，如 Small Puppy=小小汪）。
+   与 buildTipHtml 查宠物的逻辑一致：优先用 PET_ALIAS 映射，其次用物品英文名直配；
+   找不到对应宠物卡片时返回 null，由调用方回退到物品名。 */
+function petNameFromAlias(iid, it){
+  var aliasEn = PET_ALIAS[String(iid)] || "";
+  var enKey = String(aliasEn || (it && it.en) || "").trim().toLowerCase();
+  var p = PET_BY_EN[enKey] || null;
+  if(!p) return null;
+  var pl = PET_LANG[p.name] || {};
+  return pl[currentLang] || pl.cn || p.name || null;
+}
+/* 宠物 / 时装属性名的四语标签（站点语言表里没有现成的键，内联兜底） */
+var TIP_LABEL = {
+  level :{cn:"等级",     en:"Level",  ja:"レベル",       kr:"레벨"},
+  hp    :{cn:"体力",     en:"HP",     ja:"体力",         kr:"체력"},
+  deadly:{cn:"死亡一击", en:"Deadly", ja:"致死打撃",     kr:"치명적 일격"},
+  crit  :{cn:"暴击",     en:"Crit",   ja:"クリティカル", kr:"크리티컬"},
+  exp   :{cn:"经验值",   en:"EXP",    ja:"経験値",       kr:"경험치"},
+  part  :{cn:"部位",     en:"Part",   ja:"部位",         kr:"부위"}
+};
+function tipLabel(k){
+  var o = TIP_LABEL[k] || {};
+  return o[currentLang] || o.cn || k;
+}
+/* 名称按当前语言取值：物品本地化名优先，其次装备表字段，最后落站点掉落表 */
+function tipNameOf(it, eq){
+  var key = currentLang === "ko" ? "kr" : currentLang;   /* 页面语言码统一：cn/en/ja/kr */
+  var own = (it && it[key]) || "";
+  var dm = DROP_MAP[String((eq && eq.name) || (it && it.en) || "").trim()] || null;
+  var dmv = dm ? (dm[key] || dm.kr || "") : "";
+  var eqv = eq ? (key === "cn" ? eq.name_cn : key === "ja" ? eq.name_ja : key === "kr" ? eq.name_kr : eq.name) : "";
+  return own || eqv || dmv || (it && (it.cn || it.en)) || (eq && (eq.name_cn || eq.name)) || ("#" + (it ? "" : ""));
+}
+var STAT_KEYS = ["attack","speed","armor","block","cri","str","int","dex","hit","hp","mana",
+                 "mana_regen","hp_regen","magic_resist","ice_resist","fire_resist","lightning_resist"];
+var JOB_ICON = {warrior:"job/warrior.png", magician:"job/magician.png",
+                ranger:"job/ranger.png", breaker:"job/breaker.png"};
+var TIP_DELAY = 160;
+var TIP_HIDE_DELAY = 220;   /* 悬停移出材料格/浮层之间留的宽限期，给鼠标跨越两者间隙的时间 */
+var tipNode = null, tipInner = null, tipTimer = null, tipIid = null, tipBox = null, selBox = null, hideTimer = null, tipLastBox = null;
+
+function ensureTip(){
+  if(tipNode) return tipNode;
+  tipNode = document.createElement("div");
+  tipNode.className = "mat-tip";
+  tipInner = document.createElement("div");
+  if(tipNode.appendChild) tipNode.appendChild(tipInner);
+  var host = document.body || document.documentElement;
+  if(host && host.appendChild) host.appendChild(tipNode);
+  return tipNode;
+}
+function tipEquipStats(eq){
+  var out = [];
+  STAT_KEYS.forEach(function(k){
+    var v = eq[k];
+    if(v == null || v === "" || v === "0") return;
+    /* ATTR_NAME[k] 是 {cn,en,ja,kr} 四语对象，必须按当前语言取值，直接插会变成 [object Object] */
+    var an = ATTR_NAME[k];
+    var nm = k;
+    if(typeof an === "string") nm = an;
+    else if(an && typeof an === "object") nm = an[currentLang] || an.cn || an.en || k;
+    out.push([nm, v]);
+  });
+  return out;
+}
+function tipJobHtml(eq){
+  var jobs = Array.isArray(eq.job) ? eq.job : (eq.job ? String(eq.job).split(",") : []);
+  if(!jobs.length) jobs = ["all"];
+  var out = "";
+  jobs.forEach(function(j){
+    j = String(j).trim().toLowerCase();
+    out += '<img src="' + escAttr(JOB_ICON[j] || "job/all.png") + '" alt="' + escAttr(j) + '">';
+  });
+  return out;
+}
+/* 等级 > 10 且品质为「一般」时升级为「高级」标签 */
+function tipRarityKey(lv, rarity){
+  if(rarity && rarity !== "一般") return rarity;
+  return (parseInt(lv, 10) || 0) > 10 ? "高级" : "一般";
+}
+/* 统一卡片（装备 / 宠物 / 时装共用）：图标 + 名称（跟随品质色） + 等级 + 品质标签 + 属性数值 */
+function tipCardHtml(o){
+  var key = o.rarity || "一般";
+  var rc = RARITY_COLOR[key] || RARITY_COLOR["一般"] || {color:"#4D5A75", bg:"#474F6E"};
+  var rar = ((RARITY_TXT[key] || {})[currentLang] || (RARITY_TXT[key] || {}).cn || key);
+  var adv = (key === "高级") ? " adv" : "";
+  var bgStyle = adv ? "" : ' style="background:' + escAttr(rc.bg) + '"';
+  var stats = "";
+  (o.stats || []).forEach(function(s){
+    if(!s || s[1] === "" || s[1] == null) return;
+    stats += '<div class="stat-item">' + escHtml(s[0]) + ": " + escHtml(String(s[1])) + "</div>";
+  });
+  if(!stats) stats = '<div class="stat-item">' + escHtml(t("none")) + "</div>";
+  /* 属性框右下角的「前往详情页」图标（仅当传入 jumpUrl 时显示：装备/时装） */
+  var jumpIcon = "";
+  if(o.jumpUrl){
+    jumpIcon = '<div class="tip-jump" data-url="' + escAttr(o.jumpUrl) + '" onclick="tipJump(event,this)"'
+      + ' title="' + escAttr(tipJumpTitle()) + '" aria-label="open detail">'
+      + '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+      + '<path d="M6 18 V9 a4 4 0 0 1 4 -4 H18"/>'   /* 向上再右转 */
+      + '<path d="M13 2 L18 5 L13 8"/>'               /* 箭头（指向右） */
+      + '</svg></div>';
+  }
+  return '<div class="tip-card tip-equip">'
+    + '<div class="equip-name" style="color:' + escAttr(rc.color) + '">' + escHtml(o.name) + "</div>"
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col">'
+    +     '<div class="hex-icon"><img src="' + escAttr(o.icon) + '" alt=""'
+    +       ' onerror="this.style.display=\'none\'"></div>'
+    +     '<div class="item-level">Lv.' + escHtml(String(o.level || 1)) + "</div>"
+    +   "</div>"
+    +   '<div class="equip-text-col">'
+    +     '<div class="tag-rarity' + adv + '"' + bgStyle + '>' + escHtml(rar) + "</div>"
+    +     (o.jobHtml ? '<div class="tag-job">' + o.jobHtml + "</div>" : "")
+    +   "</div>"
+    + "</div>"
+    + '<div class="equip-stats">' + stats + jumpIcon + "</div>"
+    + "</div>";
+}
+/* 按 itemId 段位判定条目类型，再只在对应的表里查：
+   纯按英文名匹配会跨类型撞名（例如材料 150014「种子 / Seed」撞到时装表里的 Seed 火苗帽，
+   于是材料却弹出时装卡片；230229「小兔兔」被宠物表抢先匹配，实际它是时装）。
+   段位：宠物 210000-219999 / 时装 230000-299999 / 材料 150000-159999 / 其余按装备表匹配。 */
+function tipKindOf(iid){
+  var n = parseInt(iid, 10) || 0;
+  if(n >= 210000 && n < 220000) return "pet";
+  if(n >= 230000 && n < 300000) return "costume";
+  if(n >= 150000 && n < 160000) return "material";
+  return "equip";
+}
+function buildTipHtml(iid, qty){
+  var it = itemOf(iid) || {};
+  var nm = it[currentLang] || it.cn || it.en || ("#" + iid);
+  var enKey = String(it.en || "").trim().toLowerCase();
+  var cnKey = String(it.cn || "").trim().toLowerCase();
+  var kind = tipKindOf(iid);
+  var eq  = (kind === "equip")   ? (EQUIP_BY_EN[enKey] || EQUIP_BY_CN[cnKey] || null) : null;
+  var pet = (kind === "pet")     ? (PET_BY_EN[enKey] || PET_BY_EN[String(PET_ALIAS[String(iid)] || "").trim().toLowerCase()] || null) : null;
+  var cos = (kind === "costume") ? (COSTUME_BY_EN[enKey] || null) : null;
+  if(eq){
+    /* ---- 装备类：完整信息卡片 ---- */
+    var lvEq = parseInt(eq.level, 10) || 1;
+    return tipCardHtml({
+      name: tipNameOf(it, eq) || nm,
+      icon: "equip_icons/" + (eq.icon || "default.png"),
+      level: lvEq,
+      rarity: tipRarityKey(lvEq, eq.rarity),
+      jobHtml: tipJobHtml(eq),
+      stats: tipEquipStats(eq),
+      jumpUrl: "equip.html?equip=" + encodeURIComponent(eq.name)
+    });
+  }
+  if(pet){
+    /* ---- 宠物：沿用装备卡片样式，名称颜色跟随其品质标签色 ---- */
+    var lvP = parseInt(pet.level, 10) || 1;
+    return tipCardHtml({
+      name: petNameFromAlias(iid, it) || tipNameOf(it, null) || nm, icon: pet.icon || itemIcon(iid), level: lvP,
+      rarity: tipRarityKey(lvP, pet.rarity),
+      stats: [[tipLabel("level"), lvP], [tipLabel("hp"), pet.hp], [tipLabel("deadly"), pet.deadly],
+              [tipLabel("crit"), pet.crit], [tipLabel("exp"), pet.exp]]
+    });
+  }
+  if(cos){
+    /* ---- 时装：沿用装备卡片样式，名称颜色跟随其品质标签色 ---- */
+    var lvC = parseInt(cos.level, 10) || 1;
+    var catObj = CAT_NAME_COS[cos.cat] || null;
+    var catTxt = catObj ? (catObj[currentLang] || catObj.cn || "") : (cos.catCode || cos.cat || "");
+    return tipCardHtml({
+      name: tipNameOf(it, null) || nm, icon: cos.icon || itemIcon(iid), level: lvC,
+      rarity: tipRarityKey(lvC, cos.rarity),
+      stats: [[tipLabel("level"), lvC], [tipLabel("hp"), cos.hp], [tipLabel("part"), catTxt]],
+      jumpUrl: "costume.html?costume=" + encodeURIComponent(cos.name)
+    });
+  }
+  /* ---- 材料/物品类：轻量浮层（名称 + 描述，没有描述就只有名称和图标） ---- */
+  var d = it.desc || null;
+  var desc = d ? (d[currentLang] || d.cn || d.en || "") : "";
+  var n = parseInt(qty, 10) || 0;
+  return '<div class="tip-card"><div class="tip-light">'
+    + '<div class="tl-icon"><img src="' + escAttr(itemIcon(iid)) + '" alt=""'
+    +   ' onerror="this.style.display=\'none\'"></div>'
+    /* 数量已在卡片格子的右下角显示（.mat-qty），浮层里不再重复 */
+    + '<div class="tl-body"><div class="tl-name">' + escHtml(nm) + "</div>"
+    + (desc ? '<div class="tl-desc">' + escHtml(desc) + "</div>" : "")
+    + "</div></div></div>";
+}
+function placeTip(box){
+  var r = (box && box.getBoundingClientRect) ? box.getBoundingClientRect() : null;
+  if(!r || !tipNode) return;
+  var vw = (typeof window !== "undefined" && window.innerWidth) || 1024;
+  var vh = (typeof window !== "undefined" && window.innerHeight) || 800;
+  var pw = tipNode.offsetWidth || 262, ph = tipNode.offsetHeight || 120;
+  var left = r.right + 8;                                   /* 优先放右侧 */
+  if(left + pw > vw - 4) left = r.left - pw - 8;            /* 右边越界 -> 左侧 */
+  if(left < 4) left = Math.max(4, Math.min(r.left, vw - pw - 4));
+  var top = r.top + r.height / 2 - ph / 2;                  /* 垂直居中并夹在视口内 */
+  var maxTop = vh - ph - 4;
+  if(top > maxTop) top = Math.max(4, maxTop);
+  if(top < 4) top = 4;
+  tipNode.style.left = left + "px";
+  tipNode.style.top = top + "px";
+}
+function showTip(box){
+  if(!box) return;
+  var iid = box.getAttribute ? box.getAttribute("data-iid") : "";
+  if(!iid) return;
+  var qty = box.getAttribute ? box.getAttribute("data-qty") : "";
+  var nd = ensureTip();
+  var ck = String(iid) + "|" + String(qty || "");
+  if(tipInner && tipIid !== ck){
+    tipInner.innerHTML = buildTipHtml(iid, qty);   /* 同一时刻只有一个浮层，内容就地替换 */
+    tipIid = ck;
+  }
+  nd.classList.add("show");
+  tipBox = box;
+  tipLastBox = box;
+  placeTip(box);
+}
+function hideTip(clearSel){
+  if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+  if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+  if(tipNode) tipNode.classList.remove("show");
+  tipBox = null;
+  tipLastBox = null;
+  if(clearSel) clearSelBox();
+}
+function setSelBox(box){
+  if(selBox && selBox.classList) selBox.classList.remove("sel");
+  selBox = box || null;
+  if(selBox && selBox.classList) selBox.classList.add("sel");
+}
+function clearSelBox(){
+  if(selBox && selBox.classList) selBox.classList.remove("sel");
+  selBox = null;
+}
+/* 属性框内跳转图标：跳转到对应详情页（装备→equip.html?equip= / 时装→costume.html?costume=）。
+   图标自身 pointer-events:auto，需 stopPropagation 避免被 document 的 click 监听当作「外部点击」关掉浮层。 */
+function tipJumpTitle(){
+  var m = {cn:"查看详情", en:"View details", ja:"詳細を見る", kr:"자세히 보기"};
+  return m[currentLang] || m.cn;
+}
+function tipJump(ev, el){
+  if(ev && ev.stopPropagation) ev.stopPropagation();
+  if(ev && ev.preventDefault) ev.preventDefault();
+  var u = el && el.getAttribute ? el.getAttribute("data-url") : "";
+  if(u) location.href = u;
+}
+function initMatTip(){
+  if(!document.addEventListener) return;
+  /* 桌面端：悬停延时显示；鼠标移到浮层（含跳转按钮）上保持显示；
+     移出材料格/浮层之间留 TIP_HIDE_DELAY 宽限期（跨越两者间的间隙），超出才销毁。
+     关键点：.mat-tip.show 设为 pointer-events:auto，浮层主体才能收到鼠标事件——
+     否则 pointer-events:none 时鼠标移到浮层空白区会被误判为「移到别处」而提前销毁。 */
+  document.addEventListener("mouseover", function(ev){
+    var t = ev && ev.target;
+    if(!t || !t.closest) return;
+    var box = t.closest(".mat-box");
+    if(box){
+      if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+      if(box === tipBox) return;                 /* 已在显示，保持 */
+      if(tipTimer) clearTimeout(tipTimer);
+      tipTimer = setTimeout(function(){ showTip(box); }, TIP_DELAY);
+      return;
+    }
+    /* 鼠标在浮层自身（属性框 / 跳转按钮等）内：保持显示；若宽限期内已隐藏则重建 */
+    if(tipNode && tipNode.contains && tipNode.contains(t)){
+      if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+      if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+      if(!tipNode.classList.contains("show") && tipLastBox) showTip(tipLastBox);
+      return;
+    }
+    /* 移到其它地方：取消显示计时，并启动宽限销毁计时（真正移出浮层区域才销毁） */
+    if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+    if(tipBox && !hideTimer){
+      hideTimer = setTimeout(function(){ hideTip(false); hideTimer = null; }, TIP_HIDE_DELAY);
+    }
+  }, false);
+  /* 手机端：单击显示并高亮；点浮层/条目外 -> 消失并取消高亮 */
+  document.addEventListener("click", function(ev){
+    var t = ev && ev.target;
+    var box = (t && t.closest) ? t.closest(".mat-box") : null;
+    if(box){ setSelBox(box); showTip(box); return; }
+    hideTip(true);
+  }, false);
+  if(window.addEventListener){
+    window.addEventListener("resize", function(){ hideTip(false); }, false);
+    window.addEventListener("scroll", function(){ hideTip(false); }, true);
+  }
+}
+
+/* ---------- 卡片节点复用：同一张卡复用同一个 DOM 节点，img 不会被重建 ---------- */
+var cardCache = {}, cardCacheOrder = [], CARD_CACHE_MAX = 320, lastRenderSig = "";
+function clearCardCache(){ cardCache = {}; cardCacheOrder = []; lastRenderSig = ""; }
+function cardCachePut(k, node){
+  cardCache[k] = node;
+  cardCacheOrder.push(k);
+  while(cardCacheOrder.length > CARD_CACHE_MAX) delete cardCache[cardCacheOrder.shift()];
+}
+function cardNode(e){
+  var key = String(e.idx), node = cardCache[key];
+  if(!node){
+    node = document.createElement("div");
+    node.className = "coll-card";
+    node.setAttribute("data-idx", key);
+    node.innerHTML = cardInnerHtml(e);
+    cardCachePut(key, node);
+  }
+  return node;
+}
+
+function renderCards(){
+  var grid = document.getElementById("itemGrid");
+  grid.className = "coll-grid";
+  updatePageInfo();
+  var perPage = getPerPage();
+  var items = filtered.slice((page - 1) * perPage, page * perPage);
+  /* 网格里的文本节点（初始占位的「加载中...」）会被当成匿名网格项，白占第一格并让整列错位 —— 先清掉 */
+  var kids = grid.childNodes || [];
+  for(var q = kids.length - 1; q >= 0; q--){
+    var nd = kids[q];
+    if(nd && nd.nodeType === 3 && grid.removeChild) grid.removeChild(nd);
+  }
+  if(!items.length){
+    grid.innerHTML = "<div style='grid-column:1/-1;text-align:center;padding:20px'>" + escHtml(t("empty")) + "</div>";
+    lastRenderSig = "";
+    return;
+  }
+  var sig = perPage + "|" + items.map(function(e){ return e.idx; }).join(",");
+  /* 本页内容与上次完全一致（例如 resize / 重复点击同一分类）-> 一个节点都不动 */
+  if(sig === lastRenderSig && grid.children && grid.children.length === items.length) return;
+
+  /* 无 createElement 能力的环境（用例桩）退回整体 innerHTML，行为与改动前一致 */
+  if(typeof document.createElement !== "function"){
+    grid.innerHTML = items.map(cardHtml).join("");
+    lastRenderSig = sig;
+    return;
+  }
+
+  var wanted = items.map(cardNode);
+  Array.prototype.slice.call(grid.children || []).forEach(function(c){
+    if(wanted.indexOf(c) < 0) grid.removeChild(c);
+  });
+  var frag = (typeof document.createDocumentFragment === "function") ? document.createDocumentFragment() : null;
+  wanted.forEach(function(n){ frag ? frag.appendChild(n) : grid.appendChild(n); });
+  if(frag) grid.appendChild(frag);
+  lastRenderSig = sig;
+}
+
+/* ---------- 默认排序：无奖励沉底；其余按类别（一般→时装→事件→宠物）分组、组内奖励条数由少到多 ---------- */
+var BOOK_RANK = {general: 0, costume: 1, event: 2, pet: 3};
+function rewardCount(e){ return (e && e.r) ? e.r.length : 0; }
+function bookRank(e){ var v = BOOK_RANK[e.book]; return typeof v === "number" ? v : 9; }
+function defaultSort(list){
+  return list.slice().sort(function(a, b){
+    var az = rewardCount(a) === 0, bz = rewardCount(b) === 0;
+    if(az !== bz) return az ? 1 : -1;                    /* 无奖励统一沉底 */
+    if(az && bz) return (a.idx || 0) - (b.idx || 0);     /* 沉底区内按解包顺序 */
+    var d = bookRank(a) - bookRank(b);                   /* 类别分组 */
+    if(d !== 0) return d;
+    d = rewardCount(a) - rewardCount(b);                 /* 组内奖励从低到高 */
+    if(d !== 0) return d;
+    return (a.idx || 0) - (b.idx || 0);
+  });
+}
+
+/* ---------- 筛选 ---------- */
+function filterAndRender(keepPage){
+  var kw = (document.getElementById("searchBox").value || "").trim().toLowerCase();
+  var list = DATA;
+  if(kw){
+    var kws = kw.split(/\s+/);
+    list = list.filter(function(e){
+      for(var i = 0; i < kws.length; i++) if(e._s.indexOf(kws[i]) < 0) return false;
+      return true;
+    });
+  }
+  if(curBook !== "all") list = list.filter(function(e){ return e.book === curBook; });
+  if(curCat !== "all") list = list.filter(function(e){ return hitCat(e, curCat); });
+
+  filtered = defaultSort(list);          /* 默认排序：奖励条数由少到多 */
+  if(keepPage){
+    var total = Math.ceil(filtered.length / getPerPage());
+    if(page > total) page = Math.max(1, total);
+  }else{
+    page = 1;
+  }
+  renderCards();
+}
+
+/* ---------- 书籍栏（一般 / 事件 / 时装 / 宠物） ---------- */
+function buildBookBar(){
+  var bar = document.getElementById("bookBar");
+  if(!bar) return;
+  bar.innerHTML = BOOKS.map(function(b){
+    return '<button class="type-btn" data-book="' + b.k + '">'
+         + escHtml(b.n[currentLang] || b.n.cn || b.n.en) + "</button>";
+  }).join("");
+  updateBookBar();
+}
+function updateBookBar(){
+  var bar = document.getElementById("bookBar");
+  if(!bar) return;
+  Array.prototype.forEach.call(bar.children, function(b){
+    var k = b.getAttribute("data-book");
+    if(!k) return;
+    b.classList.toggle("active", k === curBook);
+    for(var i = 0; i < BOOKS.length; i++){
+      if(BOOKS[i].k === k){ b.innerText = BOOKS[i].n[currentLang] || BOOKS[i].n.cn || BOOKS[i].n.en; break; }
+    }
+  });
+}
+
+/* ---------- 分类栏 ---------- */
+function buildCatBar(){
+  var bar = document.getElementById("catBar");
+  bar.innerHTML = '<button class="type-btn" data-cat="all">' + escHtml(t("all")) + "</button>"
+    + CATS.map(function(c){
+        return '<button class="type-btn" data-cat="' + c.k + '">' + escHtml(c.n[currentLang] || c.n.cn || c.n.en) + "</button>";
+      }).join("");
+  updateCatBar();
+}
+function updateCatBar(){
+  var bar = document.getElementById("catBar");
+  if(!bar) return;
+  Array.prototype.forEach.call(bar.children, function(b){
+    var c = b.getAttribute("data-cat");
+    if(!c) return;                                   /* 无 data-cat 的按钮跳过 */
+    b.classList.toggle("active", c === curCat);
+    if(c === "all") b.innerText = t("all");
+    else{
+      for(var i = 0; i < CATS.length; i++){
+        if(CATS[i].k === c){ b.innerText = CATS[i].n[currentLang] || CATS[i].n.cn || CATS[i].n.en; break; }
+      }
+    }
+  });
+}
+
+/* ---------- 分页 ---------- */
+function updatePageInfo(){
+  var total = Math.ceil(filtered.length / getPerPage()) || 1;
+  var s = t("page", {now: page, total: total});
+  var a = document.getElementById("pageInfo"), b = document.getElementById("pageInfoBot");
+  if(a) a.innerText = s;
+  if(b) b.innerText = s;
+}
+function goPrev(){ if(page > 1){ page--; renderCards(); window.scrollTo(0, 0); } }
+function goNext(){ var total = Math.ceil(filtered.length / getPerPage()); if(page < total){ page++; renderCards(); window.scrollTo(0, 0); } }
+
+/* ---------- 文案刷新 ---------- */
+function updateLangText(){
+  document.getElementById("searchBox").placeholder = t("search");
+  document.getElementById("prevTop").innerText = document.getElementById("prevBot").innerText = t("prev");
+  document.getElementById("nextTop").innerText = document.getElementById("nextBot").innerText = t("next");
+  updateCatBar();
+  updateBookBar();
+  twomUpdateNav(currentLang);
+}
+
+/* ---------- 初始化 ---------- */
+async function init(){
+  try{
+    var res = await Promise.all([
+      fetch("collection_data.json").then(function(r){ return r.json(); }),
+      fetch("lang.json").then(function(r){ return r.json(); }).catch(function(){ return null; }),
+      fetch("equipment_data/all_equip.json").then(function(r){ return r.json(); }).catch(function(){ return []; }),
+      fetch("pet_data.json").then(function(r){ return r.json(); }).catch(function(){ return []; }),
+      fetch("costume_data.json").then(function(r){ return r.json(); }).catch(function(){ return []; })
+    ]);
+    var d = res[0], lg = res[1], eq = res[2] || [], pets = res[3] || [], cost = res[4] || [];
+    DATA = d.entries || [];
+    ITEMS = d.items || {};
+    ATTR = d.attr || {};
+    CATS = d.cats || [];
+    BOOKS = d.books || [];
+    if(lg) twomApplyLangData(lg);
+    /* 悬停浮层用的装备数据（按英文名索引）与品质配色 / 属性名 */
+    EQUIP_BY_EN = {}; EQUIP_BY_CN = {};
+    (Array.isArray(eq) ? eq : []).forEach(function(it){
+      var k = String(it.name || "").trim().toLowerCase();
+      if(k) EQUIP_BY_EN[k] = it;
+      var c = String(it.name_cn || "").trim().toLowerCase();
+      if(c) EQUIP_BY_CN[c] = it;
+    });
+    /* 宠物 / 时装：悬停浮层沿用装备卡片样式，名称色跟随各自品质标签色 */
+    PET_BY_EN = {}; COSTUME_BY_EN = {};
+    (Array.isArray(pets) ? pets : []).forEach(function(p){
+      var k = String(p.name || "").trim().toLowerCase();
+      if(k) PET_BY_EN[k] = p;
+    });
+    (Array.isArray(cost) ? cost : []).forEach(function(c){
+      var k = String(c.name || "").trim().toLowerCase();
+      if(k) COSTUME_BY_EN[k] = c;
+    });
+    if(lg){
+      RARITY_TXT = lg.rarity || {};
+      RARITY_COLOR = lg.rarityColor || {};
+      ATTR_NAME = (lg.equipLang && lg.equipLang.attrName) || {};
+      DROP_MAP = lg.dropMap || {};
+      CAT_NAME_COS = (lg.costumeLang && lg.costumeLang.catName) || {};
+      CAT_NAME_PET = (lg.petLang && lg.petLang.catName) || {};
+      PET_LANG = (lg && lg.pets) || {};   /* 宠物图鉴名称表（lang.json.pets）：把图鉴任务里的宠物「物品名」换成宠物图鉴「卡片名」 */
+    }
+  }catch(err){
+    DATA = [];
+  }
+  for(var i = 0; i < DATA.length; i++) DATA[i]._s = buildSearch(DATA[i]);
+
+  buildBookBar();
+  buildCatBar();
+  twomFillLangSelect(document.getElementById("langSelect"), currentLang, function(code){
+    currentLang = TWOM_UI2CODE[code];
+    twomWriteLang(currentLang);
+    clearCardCache();          /* 换语言 -> 卡片文案要重渲染，节点缓存失效 */
+    hideTip(true); tipIid = null;   /* 浮层同理：强制下次按新语言重建（否则 ja/kr 不生效） */
+    updateLangText();
+    filterAndRender(true);
+  });
+  document.getElementById("searchBox").addEventListener("input", function(){ filterAndRender(); });
+  document.getElementById("bookBar").addEventListener("click", function(ev){
+    var b = ev.target.closest ? ev.target.closest("[data-book]") : null;
+    if(!b) return;
+    curBook = b.getAttribute("data-book") || "all";
+    document.getElementById("searchBox").value = "";   /* 切书籍时清空搜索框 */
+    updateBookBar();
+    filterAndRender();
+    window.scrollTo(0, 0);
+  });
+  document.getElementById("catBar").addEventListener("click", function(ev){
+    var b = ev.target.closest ? ev.target.closest("[data-cat]") : null;
+    if(!b) return;
+    curCat = b.getAttribute("data-cat") || "all";
+    document.getElementById("searchBox").value = "";   /* 切分类/全部时清空搜索框 */
+    updateCatBar();
+    filterAndRender();
+    window.scrollTo(0, 0);
+  });
+  document.getElementById("prevTop").onclick = goPrev;
+  document.getElementById("nextTop").onclick = goNext;
+  document.getElementById("prevBot").onclick = goPrev;
+  document.getElementById("nextBot").onclick = goNext;
+  window.addEventListener("resize", function(){ renderCards(); });
+  initMatTip();                  /* 材料悬停浮层（装备=完整卡片 / 材料=轻量）+ 点击高亮 */
+  updateLangText();
+  filterAndRender();
+}
+init();
+</script>
+<style>
+/* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
+/* PAGE_NAV_COMPACT_V5：桌面按钮仍为原尺寸(16px)，手机端只微收 1~2px，保证两位数页码仍在一排 */
+.page-jump{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.page-jump:hover > span{text-decoration:underline}
+.page-jump-input{display:none;width:66px;padding:6px 4px;border:1px solid #ccc;border-radius:8px;font-size:16px;text-align:center;font-family:inherit;-moz-appearance:textfield;appearance:textfield}
+.page-jump-input::-webkit-outer-spin-button,.page-jump-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.page-jump.editing .page-jump-input{display:inline-block}
+.page-jump.editing > span{display:none}
+.page-btn:disabled{opacity:.45}
+/* 分页栏改弹性单行：只为消除 HTML 空白造成的换行，不改按钮尺寸（尺寸仍用页面原有 .page-btn 规则）。
+   gap:4px 是补回原先元素间空白所占的宽度，让桌面观感与改动前一致。 */
+.pagination{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:4px}
+.pagination > *{flex:0 0 auto}
+.pagination .page-jump{white-space:nowrap}
+/* 手机端只微收一点（越窄越收，最小 14px；桌面 16px 保持不变） */
+@media(max-width:480px){
+  .pagination{gap:3px}
+  .pagination .page-btn{padding:7px;margin:0 3px;font-size:16px}
+  .page-jump-input{width:62px;font-size:16px;padding:5px 4px}
+}
+@media(max-width:400px){
+  .pagination{gap:2px}
+  .pagination .page-btn{padding:6px;margin:0 2px;font-size:15px}
+  .page-jump-input{width:58px;font-size:15px}
+}
+@media(max-width:340px){
+  .pagination{gap:1px}
+  .pagination .page-btn{padding:5px;margin:0 1px;font-size:14px}
+  .page-jump-input{width:52px;font-size:14px}
+}
+</style>
+<script>
+/* ===== PAGE_NAV_PATCH：首页 / 尾页 / 点击「第 x/y 页」输入页码（各图鉴页共用） =====
+   在各页原有脚本之后运行，复用其 page / filtered / getPerPage / renderCards / updatePageInfo。 */
+(function(){
+  var JUMP_LABEL = {
+    cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
+    en:{first:"First",last:"Last",tip:"Click to enter a page number"},
+    ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
+    ko:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+  };
+  function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
+  function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }
+  function listOf(){
+    if(typeof filtered !== "undefined" && filtered) return filtered;
+    if(typeof filteredItems !== "undefined" && filteredItems) return filteredItems;
+    if(typeof filteredSkills !== "undefined" && filteredSkills) return filteredSkills;
+    return [];
+  }
+  function totalPages(){ return Math.max(1, Math.ceil(listOf().length / getPerPage())); }
+  function draw(){
+    if(typeof renderCards === "function") return renderCards();
+    if(typeof render === "function") return render();
+  }
+  function syncInfo(){ if(typeof updatePageInfo === "function") updatePageInfo(); }
+  function goTo(n){
+    var t = totalPages(), v = Math.min(Math.max(1, parseInt(n, 10) || 1), t);
+    if(v === page){ syncInfo(); return; }
+    page = v; draw(); syncInfo();
+  }
+  function refresh(){
+    var t = totalPages(), L = lbl();
+    [["Top","firstTop","lastTop"],["Bot","firstBot","lastBot"]].forEach(function(a){
+      var f = document.getElementById(a[1]), l = document.getElementById(a[2]);
+      if(f){ f.innerText = L.first; f.disabled = page <= 1; }
+      if(l){ l.innerText = L.last;  l.disabled = page >= t; }
+      var jw = document.getElementById("pageJump" + a[0]), inp = document.getElementById("pageInput" + a[0]);
+      if(jw) jw.title = L.tip;
+      if(inp){ inp.max = t; inp.title = L.tip; if(!jw || !jw.classList.contains("editing")) inp.value = page; }
+    });
+  }
+  function cancelEdit(jw, inp){ jw.classList.remove("editing"); inp.value = page; inp.blur(); syncInfo(); }
+  function commit(jw, inp){
+    if(!jw.classList.contains("editing")) return;
+    var v = parseInt(inp.value, 10);
+    jw.classList.remove("editing");
+    if(!isNaN(v)) goTo(v); else syncInfo();
+  }
+  function bindJump(sfx){
+    var jw = document.getElementById("pageJump" + sfx), inp = document.getElementById("pageInput" + sfx);
+    if(!jw || !inp) return;
+    jw.onclick = function(ev){
+      if(ev && ev.target === inp) return;
+      if(jw.classList.contains("editing")) return;
+      jw.classList.add("editing");
+      inp.value = page;
+      inp.focus(); try{ inp.select(); }catch(e){}
+    };
+    inp.onkeydown = function(e){
+      var k = e.key || "";
+      if(k === "Enter" || e.keyCode === 13){ e.preventDefault(); commit(jw, inp); inp.blur(); }
+      else if(k === "Escape" || e.keyCode === 27){ e.preventDefault(); cancelEdit(jw, inp); }
+    };
+    inp.onblur = function(){ commit(jw, inp); };
+  }
+  function bindBtn(id, fn){
+    var b = document.getElementById(id);
+    if(!b) return;
+    b.onclick = function(){ if(b.disabled) return; fn(); };
+  }
+  ["Top","Bot"].forEach(function(sfx){
+    bindJump(sfx);
+    bindBtn("first" + sfx, function(){ if(page > 1){ page = 1; draw(); syncInfo(); window.scrollTo(0,0); } });
+    bindBtn("last" + sfx,  function(){ var t = totalPages(); if(page < t){ page = t; draw(); syncInfo(); window.scrollTo(0,0); } });
+  });
+  if(typeof updatePageInfo === "function"){
+    var _orig = updatePageInfo;
+    updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
+  }
+  refresh();
+})();
+</script>
+</body>
+</html>

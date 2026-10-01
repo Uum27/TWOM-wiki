@@ -1,3144 +1,4147 @@
 {
-  "Amplify Sense": {
-    "cn": "强化反应",
-    "en": "Amplify Sense",
-    "class": "ranger",
-    "learnLevel": 25,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "大幅提升反应度，增加暴击伤害量。",
-      "en": "Passive. Amplificates the caster's sensitivity to increase damage when critical."
-    },
-    "levels": {
-      "1": {
-        "cn": "5%",
-        "en": "+5% critical dmg"
-      },
-      "2": {
-        "cn": "10%",
-        "en": "+10% critical dmg"
-      }
-    },
-    "books": {
-      "2": "Amplify Sense 2",
-      "1": "Amplify Sense 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Amputator": {
-    "cn": "一刀两断",
-    "en": "Amputator",
-    "class": "warrior",
-    "learnLevel": 45,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "发动一击砍伤敌人，造成强大的伤害。目标对象数量越少，造成的伤害则越强。",
-      "en": ""
-    },
-    "levels": {
-      "1": {
-        "cn": "追加300%",
-        "en": ""
-      },
-      "2": {
-        "cn": "追加350%",
-        "en": ""
-      },
-      "3": {
-        "cn": "追加400%",
-        "en": ""
-      }
-    },
-        "books": {
-      "1": "Amputator 1",
-      "2": "Amputator 2",
-      "3": "Amputator 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "2": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "3": {
-        "cn": "公会商店兑换（公会币x150000）",
-        "en": "Exchange at Guild Shop (Guild Coin x150000)"
-      }
-    }
-  },
-  "Baekha's Strike": {
-    "cn": "白荷之拳",
-    "en": "Baekha's Strike",
-    "class": "breaker",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "All",
-    "effect": {
-      "cn": "集中全力并发动致命一击。",
-      "en": "Focuses all strength into a single powerful blow. Consumes all available Crystal Points; damage scales with amount consumed."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20%",
-        "en": "20% addition"
-      },
-      "2": {
-        "cn": "追加40%",
-        "en": "40% addition"
-      },
-      "3": {
-        "cn": "追加60%",
-        "en": "60% addition"
-      },
-      "4": {
-        "cn": "追加80%",
-        "en": "80% addition"
-      }
-    },
-    "books": {
-      "2": "Baekha's Strike 2",
-      "3": "Baekha's Strike 3",
-      "1": "Baekha's Strike 1",
-      "4": "Baekha's Strike 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
-        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予无法移动、眩晕减益效果",
-        "赋予闪电：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold: SPD Decrease + Stun",
-        "Electric: Stun"
-      ]
-    }
-  },
-  "Berserk": {
-    "cn": "狂暴",
-    "en": "Berserk",
-    "class": "warrior",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "提升愤怒值，恢复水晶点数。",
-      "en": "Berserk mode buff."
-    },
-    "levels": {
-      "1": {
-        "cn": "2个",
-        "en": "Berserk effect"
-      },
-      "2": {
-        "cn": "3个",
-        "en": "Stronger berserk"
-      }
-    },
-    "books": {
-      "2": "Berserk 2",
-      "1": "Berserk 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Breaker's Strike I": {
-    "cn": "武术1击",
-    "en": "Breaker's Strike I",
-    "class": "breaker",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "冲向目标并造成伤害。",
-      "en": "Charges toward the target and deals damage. Changes to Breaker's Strike II after use."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加10%",
-        "en": "10% addition"
-      },
-      "2": {
-        "cn": "追加20%",
-        "en": "20% addition"
-      },
-      "3": {
-        "cn": "追加30%",
-        "en": "30% addition"
-      },
-      "4": {
-        "cn": "追加40%",
-        "en": "40% addition"
-      }
-    },
-    "books": {
-      "1": "Breaker's Strike 1",
-      "4": "Breaker's Strike 4",
-      "2": "Breaker's Strike 2",
-      "3": "Breaker's Strike 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予眩晕减益效果",
-        "赋予闪电：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold Imbue: Apply Stun",
-        "Electric Imbue: Apply Stun"
-      ]
-    }
-  },
-  "Breaker's Strike II": {
-    "cn": "武术2击",
-    "en": "Breaker's Strike II",
-    "class": "breaker",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "跃向空中并攻击敌人。",
-      "en": "Launches toward the sky and strikes the enemy. Changes to Breaker's Strike III. Level determined by Breaker's Strike I."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加60%",
-        "en": "60% addition"
-      },
-      "2": {
-        "cn": "追加120%",
-        "en": "120% addition"
-      },
-      "3": {
-        "cn": "追加180%",
-        "en": "180% addition"
-      },
-      "4": {
-        "cn": "追加240%",
-        "en": "240% addition"
-      }
-    },
-    "books": {
-      "2": "Breaker's Strike 2",
-      "4": "Breaker's Strike 4"
-    },
-    "extraSources": {
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予降低移动速度减益效果",
-        "赋予闪电：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold: Movement SPD Decrease",
-        "Electric: Stun"
-      ]
-    }
-  },
-  "Breaker's Strike III": {
-    "cn": "武术3击",
-    "en": "Breaker's Strike III",
-    "class": "breaker",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "重击地面并对攻击敌人。",
-      "en": "Slams the ground and strikes the enemy. Level determined by Breaker's Strike I."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加80%",
-        "en": "80% addition"
-      },
-      "2": {
-        "cn": "追加160%",
-        "en": "160% addition"
-      },
-      "3": {
-        "cn": "追加240%",
-        "en": "240% addition"
-      },
-      "4": {
-        "cn": "追加320%",
-        "en": "320% addition"
-      }
-    },
-    "books": {
-      "3": "Breaker's Strike 3",
-      "4": "Breaker's Strike 4"
-    },
-    "extraSources": {
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予眩晕减益效果",
-        "赋予闪电：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold Imbue: Apply Stun",
-        "Electric Imbue: Apply Stun"
-      ]
-    }
-  },
-  "Bull Rush": {
-    "cn": "急速冲刺",
-    "en": "Bull Rush",
-    "class": "warrior",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "使用时，持续7秒提升移动速度。",
-      "en": "Increases the movement speed."
-    },
-    "levels": {
-      "1": {
-        "cn": "24%",
-        "en": "24%"
-      },
-      "2": {
-        "cn": "36%",
-        "en": "36%"
-      },
-      "3": {
-        "cn": "48%",
-        "en": "48%"
-      }
-    },
-    "books": {
-      "2": "Bull Rush 2",
-      "1": "Bull Rush 1",
-      "3": "Bull Rush 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波水晶鳞片）",
-        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波水晶鳞片)"
-      }
-    }
-  },
-  "Carnivalize": {
-    "cn": "魔力转换",
-    "en": "Carnivalize",
-    "class": "magician",
-    "learnLevel": 15,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "转换20体力为魔力。",
-      "en": "Converts 20 health to mana."
-    },
-    "levels": {
-      "1": {
-        "cn": "恢复16%魔力",
-        "en": "16% mana"
-      },
-      "2": {
-        "cn": "恢复20%魔力",
-        "en": "20% mana"
-      },
-      "3": {
-        "cn": "恢复24%魔力",
-        "en": "24% mana"
-      }
-    },
-    "books": {
-      "1": "Carnivalize 1",
-      "2": "Carnivalize 2",
-      "3": "Carnivalize 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Chainstrike": {
-    "cn": "连击",
-    "en": "Chainstrike",
-    "class": "breaker",
-    "learnLevel": 2,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "快速攻击并造成伤害。",
-      "en": "Strikes rapidly to deal damage. Using the skill inflicts a short stun. Note: Actual damage may differ from description."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20%",
-        "en": "20% addition"
-      },
-      "2": {
-        "cn": "追加40%",
-        "en": "40% addition"
-      },
-      "3": {
-        "cn": "追加80%",
-        "en": "80% addition"
-      },
-      "4": {
-        "cn": "追加160%",
-        "en": "160% addition"
-      }
-    },
-    "books": {
-      "4": "Chainstrike 4",
-      "1": "Chainstrike 1",
-      "2": "Chainstrike 2",
-      "3": "Chainstrike 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予眩晕减益效果",
-        "赋予闪电：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold Imbue: Apply Stun",
-        "Electric Imbue: Apply Stun"
-      ]
-    }
-  },
-  "Clarity": {
-    "cn": "补充气力",
-    "en": "Clarity",
-    "class": "ranger",
-    "learnLevel": 35,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "持续5秒增加周围半径8格内队友的水晶、魔力再生速度。",
-      "en": "Regenerates party member's crystals and mana faster for 5 seconds. Affects members within 8 tiles."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间180秒",
-        "en": "Cooldown 180 seconds"
-      },
-      "2": {
-        "cn": "冷却时间160秒",
-        "en": "Cooldown 160 seconds"
-      }
-    },
-    "books": {
-      "1": "Clarity 1",
-      "2": "Clarity 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Cold Imbue": {
-    "cn": "赋予寒气",
-    "en": "Cold Imbue",
-    "class": "breaker",
-    "learnLevel": 2,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "以寒气魔力环绕全身并增幅伤害。",
-      "en": "Envelops the body with cold energy to amplify damage."
-    },
-    "levels": {
-      "1": {
-        "cn": "伤害追加1%",
-        "en": "1% damage increase"
-      },
-      "2": {
-        "cn": "伤害追加5%",
-        "en": "5% damage increase"
-      },
-      "3": {
-        "cn": "伤害追加10%",
-        "en": "10% damage increase"
-      },
-      "4": {
-        "cn": "伤害追加20%",
-        "en": "20% damage increase"
-      }
-    },
-    "books": {
-      "4": "Cold Imbue 4",
-      "1": "Cold Imbue 1",
-      "2": "Cold Imbue 2",
-      "3": "Cold Imbue 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予眩晕减益效果"
-      ],
-      "en": [
-        "Cold Imbue: Apply Stun"
-      ]
-    }
-  },
-  "Concentrate": {
-    "cn": "全神贯注",
-    "en": "Concentrate",
-    "class": "ranger",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "有一定时间追加命中率。",
-      "en": "Increases accuracy rate for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "2%",
-        "en": "+2% accuracy"
-      },
-      "2": {
-        "cn": "4%",
-        "en": "+4% accuracy"
-      },
-      "3": {
-        "cn": "6%",
-        "en": "+6% accuracy"
-      }
-    },
-    "books": {
-      "3": "Concentrate 3",
-      "1": "Concentrate 1",
-      "2": "Concentrate 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Counterattack": {
-    "cn": "反击",
-    "en": "Counterattack",
-    "class": "warrior",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "于阻挡武器攻击时启用，使用时可造成反击伤害。",
-      "en": "An Instant attack available when an enemy blocks you."
-    },
-    "levels": {
-      "1": {
-        "cn": "140%",
-        "en": "140%"
-      },
-      "2": {
-        "cn": "160%",
-        "en": "160%"
-      }
-    },
-    "books": {
-      "1": "Counterattack 1",
-      "2": "Counterattack 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Critical Blow": {
-    "cn": "追击要害",
-    "en": "Critical Blow",
-    "class": "ranger",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "剑专属技能，攻击要害造成追加伤害。",
-      "en": "Causes additional damage by striking a vital spot. Requires a blade."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加40%",
-        "en": "+40% addition"
-      }
-    },
-    "books": {
-      "1": "Critical Blow 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Critical Insight": {
-    "cn": "要害洞察",
-    "en": "Critical Insight",
-    "class": "breaker",
-    "learnLevel": 30,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "增加暴击率。",
-      "en": "Increases critical rate."
-    },
-    "levels": {
-      "1": {
-        "cn": "暴击增加1",
-        "en": "1 critical rate increase"
-      },
-      "2": {
-        "cn": "暴击增加2",
-        "en": "2 critical rate increase"
-      },
-      "3": {
-        "cn": "暴击增加3",
-        "en": "3 critical rate increase"
-      }
-    },
-    "books": {
-      "2": "Critical Insight 2",
-      "3": "Critical Insight 3",
-      "1": "Critical Insight 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Cure Poison": {
-    "cn": "治愈",
-    "en": "Cure Poison",
-    "class": "magician",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "治疗毒、麻痹及恐怖状态。",
-      "en": ""
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间30秒",
-        "en": ""
-      },
-      "2": {
-        "cn": "冷却时间25秒",
-        "en": ""
-      }
-    },
-    "books": {
-      "2": "Cure Poison 2",
-      "1": "Cure Poison 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Curse of Doom": {
-    "cn": "破坏之咒",
-    "en": "Curse of Doom",
-    "class": "magician",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "对目标下持续10秒的诅咒，并在下一回合增加目标所受伤害量。",
-      "en": "Curses the target to have it receive the next damage with amplification."
-    },
-    "levels": {
-      "1": {
-        "cn": "伤害量200%",
-        "en": "200%"
-      },
-      "2": {
-        "cn": "伤害量220%",
-        "en": "220%"
-      }
-    },
-    "books": {
-      "2": "Curse of Doom 2",
-      "1": "Curse of Doom 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Double Shot": {
-    "cn": "双发射击",
-    "en": "Double Shot",
-    "class": "ranger",
-    "learnLevel": 2,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "发射2个弓箭，造成2次打击。",
-      "en": "Shoots two arrows quickly."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20%",
-        "en": "20% addition"
-      },
-      "2": {
-        "cn": "追加40%",
-        "en": "40% addition"
-      },
-      "3": {
-        "cn": "追加80%",
-        "en": "80% addition"
-      },
-      "4": {
-        "cn": "追加160%",
-        "en": "160% addition"
-      }
-    },
-    "books": {
-      "3": "Double Shot 3",
-      "1": "Double Shot 1",
-      "2": "Double Shot 2",
-      "4": "Double Shot 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "4": {
-        "cn": "蘑菇林 库林处合成（百发百中1/2/3p）",
-        "en": "Synthesize at 蘑菇林 库林 (百发百中1/2/3p)"
-      }
-    }
-  },
-  "Drowsiness": {
-    "cn": "疲乏无力",
-    "en": "Drowsiness",
-    "class": "warrior",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "砍击对方脚踝，并持续一定时间减缓动作。",
-      "en": "Deals only half amount of damage, but slows down the target's movement speed for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续5秒",
-        "en": "Half damage + slow"
-      },
-      "2": {
-        "cn": "持续6秒",
-        "en": ""
-      }
-    },
-    "books": {
-      "1": "Drowsiness 1",
-      "2": "Drowsiness 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "2": {
-        "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
-        "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)"
-      }
-    }
-  },
-  "Electric Imbue": {
-    "cn": "赋予闪电",
-    "en": "Electric Imbue",
-    "class": "breaker",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "以闪电魔力包裹全身，对攻击目标周边敌人也造成伤害。",
-      "en": "Wraps your body in electric power to protect yourself and damage enemies near your target."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加1个目标",
-        "en": "+1 target"
-      },
-      "2": {
-        "cn": "追加2个目标",
-        "en": "+2 target"
-      },
-      "3": {
-        "cn": "追加3个目标",
-        "en": "+3 target"
-      },
-      "4": {
-        "cn": "追加4个目标",
-        "en": "+4 target"
-      }
-    },
-    "books": {
-      "2": "Electric Imbue 2",
-      "3": "Electric Imbue 3",
-      "1": "Electric Imbue 1",
-      "4": "Electric Imbue 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
-        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
-      }
-    },
-    "notes": {
-      "cn": [
-        "减少30%从怪物受到的伤害",
-        "减少50%对敌人造成的伤害"
-      ],
-      "en": [
-        "30% less damage taken from monsters",
-        "50% less damage dealt to enemies"
-      ]
-    }
-  },
-  "Elemental Cycle": {
-    "cn": "元素循环",
-    "en": "Elemental Cycle",
-    "class": "breaker",
-    "learnLevel": 15,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "以目前体力为比例恢复体力。",
-      "en": "Continuously recovers HP proportionate to current HP. Can be removed by Warrior's Hemorrhage. (Mana Cost: 10)"
-    },
-    "levels": {
-      "1": {
-        "cn": "3秒内效果持续",
-        "en": "3 seconds buff duration"
-      },
-      "2": {
-        "cn": "5秒内效果持续",
-        "en": "5 seconds buff duration"
-      },
-      "3": {
-        "cn": "7秒内效果持续",
-        "en": "7 seconds buff duration"
-      }
-    },
-    "books": {
-      "2": "Elemental Cycle 2",
-      "3": "Elemental Cycle 3",
-      "1": "Elemental Cycle 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Elemental Release": {
-    "cn": "元素释放",
-    "en": "Elemental Release",
-    "class": "breaker",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "释放凝聚元素并对敌人赋予状态异常。",
-      "en": "Releases condensed elemental energy to inflict status effects. Effects vary by Cold or Electric Imbue."
-    },
-    "levels": {
-      "1": {
-        "cn": "寒气状态：移动速度减少20%、闪电状态：1.5秒内眩晕",
-        "en": "Cold: 20% movement SPD decrease / Electric: 1.5s stun"
-      },
-      "2": {
-        "cn": "寒气状态：移动速度减少25%、闪电状态：2秒内眩晕",
-        "en": "Cold: 25% movement SPD decrease / Electric: 2s stun"
-      },
-      "3": {
-        "cn": "寒气状态：移动速度减少40%、闪电状态：2.5秒内眩晕",
-        "en": "Cold: 40% movement SPD decrease / Electric: 2.5s stun"
-      }
-    },
-    "books": {
-      "2": "Elemental Release 2",
-      "1": "Elemental Release 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Ensnare": {
-    "cn": "圈套",
-    "en": "Ensnare",
-    "class": "ranger",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "设置陷阱，减弱目标速度。",
-      "en": "Places a trap to lower the target's movement speed."
-    },
-    "levels": {
-      "1": {
-        "cn": "移动速度减少36%",
-        "en": "36% slowed"
-      },
-      "2": {
-        "cn": "移动速度减少48%",
-        "en": "48% slowed"
-      },
-      "3": {
-        "cn": "移动速度减少60%",
-        "en": "60% slowed"
-      }
-    },
-    "books": {
-      "2": "Ensnare 2",
-      "1": "Ensnare 1",
-      "3": "Ensnare 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
-        "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)"
-      }
-    }
-  },
-  "Epiphany": {
-    "cn": "顿悟",
-    "en": "Epiphany",
-    "class": "magician",
-    "learnLevel": 45,
-    "type": "passive",
-    "crystal": "0",
-    "effect": {
-      "cn": " 特定技能可于顿悟后强化。已强化的技能将会受到追加魔力的影响。",
-      "en": "(Passive) Certain skills are awakened and powered up. Powered-up skills are affected by additional Mana."
-    },
-    "levels": {
-      "1": {
-        "cn": "强化守护祷告",
-        "en": "Power up Prayer of Protection"
-      },
-      "2": {
-        "cn": "强化光明疗愈",
-        "en": "Power up Light Healing"
-      },
-      "3": {
-        "cn": "强化护身盾牌及塞拉的祝福",
-        "en": "Power up Shield and Sara's Blessing"
-      }
-    },
-        "books": {
-      "1": "Epiphany 1",
-      "2": "Epiphany 2",
-      "3": "Epiphany 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "2": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "3": {
-        "cn": "公会商店兑换（公会币x150000）",
-        "en": "Exchange at Guild Shop (Guild Coin x150000)"
-      }
-    }
-  },
-  "Fatal Attack": {
-    "cn": "致命一击",
-    "en": "Fatal Attack",
-    "class": "warrior",
-    "learnLevel": 30,
-    "type": "active",
-    "crystal": "4",
-    "effect": {
-      "cn": "瞄准要害致命一击。",
-      "en": "Causes a fatal attack against the target's fatal spot."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加100%",
-        "en": "100% Addition"
-      },
-      "2": {
-        "cn": "追加200%",
-        "en": "200% Addition"
-      },
-      "3": {
-        "cn": "追加300%",
-        "en": "300% Addition"
-      }
-    },
-    "books": {
-      "1": "Fatal Attack 1",
-      "2": "Fatal Attack 2",
-      "3": "Fatal Attack 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      },
-      "3": {
-        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
-        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
-      }
-    }
-  },
-  "Fear": {
-    "cn": "恐怖",
-    "en": "Fear",
-    "class": "magician",
-    "learnLevel": 35,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使敌人陷入恐怖并逃跑。",
-      "en": "Strikes fear into the enemy, causing it to run away in fright."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续4秒",
-        "en": "Fears for 7-12 seconds (scales with INT)"
-      }
-    },
-    "books": {
-      "1": "Fear 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Firebolt": {
-    "cn": "火球",
-    "en": "Firebolt",
-    "class": "magician",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使用魔法召唤出小火球。",
-      "en": "Hurls a small fiery ball."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成28伤害",
-        "en": "28 damage"
-      },
-      "2": {
-        "cn": "造成33伤害",
-        "en": "33 damage"
-      },
-      "3": {
-        "cn": "造成42伤害",
-        "en": "42 damage"
-      },
-      "4": {
-        "cn": "造成60伤害",
-        "en": "60 damage"
-      }
-    },
-    "books": {
-      "2": "Firebolt 2",
-      "1": "Firebolt 1",
-      "3": "Firebolt 3",
-      "4": "Firebolt 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
-        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Firestorm": {
-    "cn": "火焰风暴",
-    "en": "Firestorm",
-    "class": "magician",
-    "learnLevel": 30,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "以目标为中心，制造火焰风暴。",
-      "en": "Causes a wave of flame to be radiated outward from the target."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成23伤害",
-        "en": "23 damage"
-      },
-      "2": {
-        "cn": "造成28伤害",
-        "en": "28 damage"
-      },
-      "3": {
-        "cn": "造成42伤害",
-        "en": "42 damage"
-      }
-    },
-    "books": {
-      "1": "Firestorm 1",
-      "2": "Firestorm 2",
-      "3": "Firestorm 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      },
-      "3": {
-        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
-        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
-      }
-    }
-  },
-  "Flame Shock": {
-    "cn": "火花冲击",
-    "en": "Flame Shock",
-    "class": "magician",
-    "learnLevel": 2,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "造成火花冲击。",
-      "en": "Deals shock damage by the flame."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成12伤害",
-        "en": "12 damage"
-      },
-      "2": {
-        "cn": "造成16伤害",
-        "en": "16 damage"
-      },
-      "3": {
-        "cn": "造成24伤害",
-        "en": "24 damage"
-      },
-      "4": {
-        "cn": "造成40伤害",
-        "en": "40 damage"
-      }
-    },
-    "books": {
-      "3": "Flame Shock 3",
-      "1": "Flame Shock 1",
-      "2": "Flame Shock 2",
-      "4": "Flame Shock 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "4": {
-        "cn": "蘑菇林 库林处合成（空中悬浮秘籍1/2/3p）",
-        "en": "Synthesize at 蘑菇林 库林 (空中悬浮秘籍1/2/3p)"
-      }
-    }
-  },
-  "Flame of Kataru": {
-    "cn": "卡塔勒的火焰",
-    "en": "Flame of Kataru",
-    "class": "magician",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "周围半径4格内，施展火焰魔法。",
-      "en": "Calls down a pillar of fire to burn all enemies within 3 tiles."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成14伤害",
-        "en": "14 damage"
-      },
-      "2": {
-        "cn": "造成16伤害",
-        "en": "16 damage"
-      },
-      "3": {
-        "cn": "造成21伤害",
-        "en": "21 damage"
-      },
-      "4": {
-        "cn": "造成30伤害",
-        "en": "30 damage"
-      }
-    },
-    "books": {
-      "1": "Flame of Kataru 1",
-      "2": "Flame of Kataru 2",
-      "3": "Flame of Kataru 3",
-      "4": "Flame of Kataru 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
-        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Flare": {
-    "cn": "爆燃",
-    "en": "Flare",
-    "class": "magician",
-    "learnLevel": 15,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "对目标造成瞬间火焰伤害。",
-      "en": "Blasts the target with fire damage instantly."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成28伤害",
-        "en": "28 damage"
-      },
-      "2": {
-        "cn": "造成33伤害",
-        "en": "33 damage"
-      },
-      "3": {
-        "cn": "造成42伤害",
-        "en": "42 damage"
-      }
-    },
-    "books": {
-      "1": "Flare 1",
-      "2": "Flare 2",
-      "3": "Flare 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Forest Eye": {
-    "cn": "森林之眼",
-    "en": "Forest Eye",
-    "class": "ranger",
-    "learnLevel": 45,
-    "type": "active",
-    "crystal": "?",
-    "effect": {
-      "cn": "5秒内增加射程，并提升暴击伤害。",
-      "en": "Increases the weapon range and critical hit damage for 5 seconds."
-    },
-    "levels": {
-      "1": {
-        "cn": "暴击伤害追加提升10%",
-        "en": "10% additional critical hit damage"
-      },
-      "2": {
-        "cn": "暴击伤害追加提升30%",
-        "en": "30% additional critical hit damage"
-      },
-      "3": {
-        "cn": "暴击伤害追加提升50%",
-        "en": "50% additional critical hit damage"
-      }
-    },
-        "books": {
-      "1": "Forest Eye 1",
-      "2": "Forest Eye 2",
-      "3": "Forest Eye 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "2": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "3": {
-        "cn": "公会商店兑换（公会币x150000）",
-        "en": "Exchange at Guild Shop (Guild Coin x150000)"
-      }
-    }
-  },
-  "Freezing Trap": {
-    "cn": "冰冻",
-    "en": "Freezing Trap",
-    "class": "magician",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "冰冻目标，造成不可移动效果。",
-      "en": "Freezes the target causing it to be frozen in place for a certain time. If frozen target is attacked, freezing could be broken."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续4秒",
-        "en": "4 seconds"
-      },
-      "2": {
-        "cn": "持续6秒",
-        "en": "6 seconds"
-      },
-      "3": {
-        "cn": "持续8秒",
-        "en": "8 seconds"
-      }
-    },
-    "books": {
-      "3": "Freezing Trap 3",
-      "2": "Freezing Trap 2",
-      "1": "Freezing Trap 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Harden Body": {
-    "cn": "锻炼体力",
-    "en": "Harden Body",
-    "class": "warrior",
-    "learnLevel": 30,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "锻炼体力，强化体力上限。",
-      "en": "Harden Body skill (details limited)."
-    },
-    "levels": {
-      "1": {
-        "cn": "体力增加4%",
-        "en": "Effect level 1"
-      },
-      "2": {
-        "cn": "体力增加6%",
-        "en": "Effect level 2"
-      }
-    },
-    "books": {
-      "1": "Harden Body 1",
-      "2": "Harden Body 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Healing Wave": {
-    "cn": "治愈波",
-    "en": "Healing Wave",
-    "class": "magician",
-    "learnLevel": 25,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "持续30秒施展治愈。",
-      "en": "Heals friendly target's health every 2 seconds over 30 seconds (Healing scales with INT)."
-    },
-    "levels": {
-      "1": {
-        "cn": "每2秒治愈3体力",
-        "en": "3 health"
-      },
-      "2": {
-        "cn": "每2秒治愈6体力",
-        "en": "6 health"
-      }
-    },
-    "books": {
-      "1": "Healing Wave 1",
-      "2": "Healing Wave 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Heavy Strike": {
-    "cn": "强击",
-    "en": "Heavy Strike",
-    "class": "warrior",
-    "learnLevel": 40,
-    "type": "active",
-    "crystal": "All",
-    "effect": {
-      "cn": "消耗所有水晶，造成强力一击，有一定机率造成沉默状态。",
-      "en": "Heavy single target strike."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间30秒",
-        "en": "Heavy damage"
-      },
-      "2": {
-        "cn": "冷却时间25秒",
-        "en": "Heavier damage"
-      }
-    },
-    "books": {
-      "2": "Heavy Strike 2",
-      "1": "Heavy Strike 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Hellfire": {
-    "cn": "炼狱火道",
-    "en": "Hellfire",
-    "class": "magician",
-    "learnLevel": 40,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使目标燃烧起炼狱之火。",
-      "en": "Ignites by drawing hellfire up from where the target stands."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成33伤害",
-        "en": "33 damage"
-      },
-      "2": {
-        "cn": "造成40伤害",
-        "en": "40 damage"
-      }
-    },
-    "books": {
-      "1": "Hellfire 1",
-      "2": "Hellfire 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Hemorrhage": {
-    "cn": "出血",
-    "en": "Hemorrhage",
-    "class": "warrior",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "发动每次可造成伤害的攻击。",
-      "en": "Wounds the targets causing them to bleed."
-    },
-    "levels": {
-      "1": {
-        "cn": "每次造成2伤害",
-        "en": "2 damage per tick"
-      },
-      "2": {
-        "cn": "每次造成4伤害",
-        "en": "4 damage per tick"
-      },
-      "3": {
-        "cn": "每次造成8伤害",
-        "en": "8 damage per tick"
-      }
-    },
-    "books": {
-      "3": "Hemorrhage 3",
-      "1": "Hemorrhage 1",
-      "2": "Hemorrhage 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Ice Lance": {
-    "cn": "冰矛",
-    "en": "Ice Lance",
-    "class": "magician",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "丢掷冰矛冷冻目标，使其陷入无法移动状态。",
-      "en": "Throws an ice lance at target, possibly freezing it."
-    },
-    "levels": {
-      "1": {
-        "cn": "造成18伤害",
-        "en": "18 damage"
-      },
-      "2": {
-        "cn": "造成20伤害",
-        "en": "20 damage"
-      }
-    },
-    "books": {
-      "1": "Ice Lance 1",
-      "2": "Ice Lance 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Ice Prison": {
-    "cn": "冰牢",
-    "en": "Ice Prison",
-    "class": "magician",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "冰冻一定范围内的目标，并造成不可移动状态。",
-      "en": "Freezes targets within certain range (4 tiles)."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续4秒",
-        "en": "Freezes 4 seconds"
-      },
-      "2": {
-        "cn": "持续6秒",
-        "en": "Freezes 6 seconds"
-      },
-      "3": {
-        "cn": "持续8秒",
-        "en": "Freezes 8 seconds"
-      }
-    },
-    "books": {
-      "2": "Ice Prison 2",
-      "1": "Ice Prison 1",
-      "3": "Ice Prison 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
-        "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)"
-      }
-    }
-  },
-  "Impact Shot": {
-    "cn": "强烈一击",
-    "en": "Impact Shot",
-    "class": "ranger",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "将力量灌注在弓箭上射向目标，造成伤害并陷入眩晕状态。",
-      "en": "Puts energy in an arrow to cause temporal impact on the target."
-    },
-    "levels": {
-      "1": {
-        "cn": "20%",
-        "en": "20% addition"
-      },
-      "2": {
-        "cn": "40%",
-        "en": "40% addition"
-      },
-      "3": {
-        "cn": "80%",
-        "en": "80% addition"
-      },
-      "4": {
-        "cn": "160%",
-        "en": "160% addition"
-      }
-    },
-    "books": {
-      "2": "Impact Shot 2",
-      "3": "Impact Shot 3",
-      "1": "Impact Shot 1",
-      "4": "Impact Shot 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Impact Training": {
-    "cn": "冲击锻炼",
-    "en": "Impact Training",
-    "class": "breaker",
-    "learnLevel": 25,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "于一定时间内免疫减益效果。免疫成功时，恢复水晶点数。",
-      "en": "Grants immunity to debuffs for a certain period. Restores Crystal Points upon successful resistance."
-    },
-    "levels": {
-      "1": {
-        "cn": "0.5秒内免疫",
-        "en": "0.5 seconds immunity"
-      },
-      "2": {
-        "cn": "1秒内免疫",
-        "en": "1.0 seconds immunity"
-      },
-      "3": {
-        "cn": "1.5秒内免疫",
-        "en": "1.5 seconds immunity"
-      }
-    },
-    "books": {
-      "2": "Impact Training 2",
-      "3": "Impact Training 3",
-      "1": "Impact Training 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Instinct Stimulus": {
-    "cn": "刺激本能",
-    "en": "Instinct Stimulus",
-    "class": "ranger",
-    "learnLevel": 30,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "刺激本能，增加暴击伤害量上限。",
-      "en": "Stimulates the caster's instinct to increase the maximum amount of crystals."
-    },
-    "levels": {
-      "1": {
-        "cn": "水晶x1",
-        "en": "1 crystal"
-      }
-    },
-    "books": {
-      "1": "Instinct Stimulus 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Last Resistance": {
-    "cn": "最后抵抗",
-    "en": "Last Resistance",
-    "class": "warrior",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "一定时间内减少90%所受伤害量。",
-      "en": "Receive only 10% of the damage for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续5秒",
-        "en": "5 seconds"
-      },
-      "2": {
-        "cn": "持续6秒",
-        "en": "6 seconds"
-      }
-    },
-    "books": {
-      "1": "Last Resistance 1",
-      "2": "Last Resistance 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Leap": {
-    "cn": "跳跃",
-    "en": "Leap",
-    "class": "breaker",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "快速向前移动。",
-      "en": "Quickly dashes toward the facing direction."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间6秒",
-        "en": "6 seconds cooldown"
-      },
-      "2": {
-        "cn": "冷却时间5秒",
-        "en": "5 seconds cooldown"
-      },
-      "3": {
-        "cn": "冷却时间4秒",
-        "en": "4 seconds cooldown"
-      },
-      "4": {
-        "cn": "冷却时间3秒",
-        "en": "3 seconds cooldown"
-      }
-    },
-    "books": {
-      "4": "Leap 4",
-      "1": "Leap 1",
-      "2": "Leap 2",
-      "3": "Leap 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
-        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
-      }
-    }
-  },
-  "Light Healing": {
-    "cn": "光明疗愈",
-    "en": "Light Healing",
-    "class": "magician",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "恢复目标的体力。(智力从10点开始，每增加1点奇数智力，治疗量增加+1。)",
-      "en": "Heals a friendly target(Starting at 10 Int, each odd Int value increases Healing by +1.)."
-    },
-    "levels": {
-      "1": {
-        "cn": "恢复20体力",
-        "en": "Heals 20"
-      },
-      "2": {
-        "cn": "恢复30体力",
-        "en": "Heals 30"
-      },
-      "3": {
-        "cn": "恢复40体力",
-        "en": "Heals 40"
-      }
-    },
-    "books": {
-      "3": "Light Healing 3",
-      "1": "Light Healing 1",
-      "2": "Light Healing 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Meditation": {
-    "cn": "冥想",
-    "en": "Meditation",
-    "class": "magician",
-    "learnLevel": 15,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "增加魔力再生速度。",
-      "en": "Passive. Increases mana regeneration."
-    },
-    "levels": {
-      "1": {
-        "cn": "魔力再生增加10",
-        "en": "+10"
-      },
-      "2": {
-        "cn": "魔力再生增加15",
-        "en": "+15"
-      }
-    },
-    "books": {
-      "2": "Meditation 2",
-      "1": "Meditation 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Multi Shot": {
-    "cn": "多重射击",
-    "en": "Multi Shot",
-    "class": "ranger",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "追加对其他目标发射弓箭。",
-      "en": "Shoots multiple targets."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加1个目标",
-        "en": "1 additional target"
-      },
-      "2": {
-        "cn": "追加2个目标",
-        "en": "2 additional targets"
-      },
-      "3": {
-        "cn": "追加3个目标",
-        "en": "3 additional targets"
-      }
-    },
-    "books": {
-      "2": "Multi Shot 2",
-      "1": "Multi Shot 1",
-      "3": "Multi Shot 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
-        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Neutralize": {
-    "cn": "无效化",
-    "en": "Neutralize",
-    "class": "magician",
-    "learnLevel": 40,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "解除目标所有水晶。",
-      "en": "Remove all of the opponent's crystals."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间80秒",
-        "en": "Cool time 80 seconds"
-      },
-      "2": {
-        "cn": "冷却时间70秒",
-        "en": "Cool time 70 seconds"
-      }
-    },
-    "books": {
-      "1": "Neutralize 1",
-      "2": "Neutralize 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Parry": {
-    "cn": "阻挡攻击",
-    "en": "Parry",
-    "class": "warrior",
-    "learnLevel": 5,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "有一定机率以武器阻挡攻击。",
-      "en": "Passive skill, blocks enemy attacks with a set probability."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加1%",
-        "en": "1%"
-      },
-      "2": {
-        "cn": "追加2%",
-        "en": "2%"
-      },
-      "3": {
-        "cn": "追加4%",
-        "en": "4%"
-      }
-    },
-    "books": {
-      "3": "Parry 3",
-      "1": "Parry 1",
-      "2": "Parry 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Poisoning": {
-    "cn": "中毒",
-    "en": "Poisoning",
-    "class": "magician",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "对目标下毒，持续15秒造成伤害。",
-      "en": "Poisons the target causing damage over 15 seconds."
-    },
-    "levels": {
-      "1": {
-        "cn": "每次造成3伤害",
-        "en": "15 damage"
-      },
-      "2": {
-        "cn": "每次造成4伤害",
-        "en": "20 damage"
-      },
-      "3": {
-        "cn": "每次造成6伤害",
-        "en": "30 damage"
-      }
-    },
-    "books": {
-      "1": "Poisoning 1",
-      "2": "Poisoning 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Power Shot": {
-    "cn": "强力射击",
-    "en": "Power Shot",
-    "class": "ranger",
-    "learnLevel": 40,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "发射强烈一箭。",
-      "en": "Shoots a powerful arrow."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加100%",
-        "en": "Raise 100%"
-      },
-      "2": {
-        "cn": "追加150%",
-        "en": "Raise 150%"
-      }
-    },
-    "books": {
-      "1": "Power Shot 1",
-      "2": "Power Shot 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Prayer of Protection": {
-    "cn": "守护祷告",
-    "en": "Prayer of Protection",
-    "class": "magician",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "恢复目标的体力，并施展吸收伤害的护身盾牌。(守护祷告存在期间，免疫眩晕)",
-      "en": "Casts a weaker shield spell while at the same time healing a small amount.(While POP is active, immune to Stun.)"
-    },
-    "levels": {
-      "1": {
-        "cn": "恢复15体力+吸收35伤害",
-        "en": "Heal 15, Shield 25"
-      },
-      "2": {
-        "cn": "恢复25体力+吸收55伤害",
-        "en": "Heal 25, Shield 55"
-      },
-      "3": {
-        "cn": "恢复35体力+吸收95伤害",
-        "en": "Heal 35, Shield 95"
-      }
-    },
-    "books": {
-      "1": "Prayer of Protection 1",
-      "2": "Prayer of Protection 2",
-      "3": "Prayer of Protection 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Rage": {
-    "cn": "暴怒",
-    "en": "Rage",
-    "class": "warrior",
-    "learnLevel": 15,
-    "type": "active",
-    "crystal": "3",
-    "effect": {
-      "cn": "使用时，持续6秒暴怒并提高暴击率。",
-      "en": "Enrages the caster to cause all attacks to be critical at a random probability."
-    },
-    "levels": {
-      "1": {
-        "cn": "55%",
-        "en": "+55% crit"
-      }
-    },
-    "books": {
-      "1": "Rage 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Sara's Blessing": {
-    "cn": "塞拉的祝福",
-    "en": "Sara's Blessing",
-    "class": "magician",
-    "learnLevel": 35,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使用时，恢复周围半径8格内队友的体力。",
-      "en": "Heals party members within 8 tiles. Healing scales with INT."
-    },
-    "levels": {
-      "1": {
-        "cn": "恢复20体力",
-        "en": "Heals 20"
-      },
-      "2": {
-        "cn": "恢复30体力",
-        "en": "Heals 30"
-      }
-    },
-    "books": {
-      "1": "Sara's Blessing 1",
-      "2": "Sara's Blessing 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Sharp Eye": {
-    "cn": "迅速反应",
-    "en": "Sharp Eye",
-    "class": "ranger",
-    "learnLevel": 15,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "提升反应度，提高暴击率。",
-      "en": "Passive. Increases critical rate by increasing the caster's senses."
-    },
-    "levels": {
-      "1": {
-        "cn": "1%",
-        "en": "Increases 1%"
-      },
-      "2": {
-        "cn": "2%",
-        "en": "Increases 2%"
-      },
-      "3": {
-        "cn": "4%",
-        "en": "Increases 4%"
-      }
-    },
-    "books": {
-      "1": "Sharp Eye 1",
-      "2": "Sharp Eye 2",
-      "3": "Sharp Eye 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Shield": {
-    "cn": "护身盾牌",
-    "en": "Shield",
-    "class": "magician",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "召唤出吸收伤害的盾牌。",
-      "en": "Spell casts a shield to absorb damage."
-    },
-    "levels": {
-      "1": {
-        "cn": "吸收10伤害",
-        "en": "Absorbs 10"
-      },
-      "2": {
-        "cn": "吸收20伤害",
-        "en": "Absorbs 20"
-      },
-      "3": {
-        "cn": "吸收40伤害",
-        "en": "Absorbs 40"
-      },
-      "4": {
-        "cn": "吸收80伤害",
-        "en": "Absorbs 80"
-      }
-    },
-    "books": {
-      "3": "Shield 3",
-      "4": "Shield 4",
-      "1": "Shield 1",
-      "2": "Shield 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Shift": {
-    "cn": "切换方位",
-    "en": "Shift",
-    "class": "ranger",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "往目标的反方向快速移动。",
-      "en": "Draws the caster away quickly from the target."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间13秒",
-        "en": "Cooldown 13 seconds"
-      },
-      "2": {
-        "cn": "冷却时间12秒",
-        "en": "Cooldown 12 seconds"
-      }
-    },
-    "books": {
-      "2": "Shift 2",
-      "1": "Shift 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Shout of Calmness": {
-    "cn": "平静呐喊",
-    "en": "Shout of Calmness",
-    "class": "warrior",
-    "learnLevel": 35,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "解除恐怖状态，并在一定时间内处于免疫恐怖状态。",
-      "en": "Shout of Calmness skill (details limited)."
-    },
-    "levels": {
-      "1": {
-        "cn": "免疫5秒，冷却时间90秒",
-        "en": "Effect level 1"
-      },
-      "2": {
-        "cn": "免疫6秒，冷却时间80秒",
-        "en": "Effect level 2"
-      }
-    },
-    "books": {
-      "1": "Shout of Calmness 1",
-      "2": "Shout of Calmness 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Silence": {
-    "cn": "沉默",
-    "en": "Silence",
-    "class": "magician",
-    "learnLevel": 30,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "一定时间内无法使用有害时间的技能。",
-      "en": "Stops target from casting for a certain amount of time."
-    },
-    "levels": {
-      "1": {
-        "cn": "3秒",
-        "en": "3 seconds"
-      },
-      "2": {
-        "cn": "4秒",
-        "en": "4 seconds"
-      }
-    },
-    "books": {
-      "1": "Silence 1",
-      "2": "Silence 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Sixth Sense": {
-    "cn": "预感",
-    "en": "Sixth Sense",
-    "class": "breaker",
-    "learnLevel": 35,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "以锻炼的感知预判并回避对方的攻击。",
-      "en": "Heightened Instincts allow evasion of enemy attacks."
-    },
-    "levels": {
-      "1": {
-        "cn": "回避增加1",
-        "en": "1 evasion increase"
-      },
-      "2": {
-        "cn": "回避增加2",
-        "en": "2 evasion increase"
-      }
-    },
-    "books": {
-      "2": "Sixth Sense 2",
-      "1": "Sixth Sense 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Slam": {
-    "cn": "强力肘击",
-    "en": "Slam",
-    "class": "warrior",
-    "learnLevel": 15,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "用剑击伤对方，并造成伤害使其陷入眩晕状态。",
-      "en": "A strike with a sword that may stun the target for some time."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20%",
-        "en": "20% addition"
-      },
-      "2": {
-        "cn": "追加40%",
-        "en": "40% addition"
-      },
-      "3": {
-        "cn": "追加80%",
-        "en": "80% addition"
-      }
-    },
-    "books": {
-      "2": "Slam 2",
-      "3": "Slam 3",
-      "1": "Slam 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Soul Drain Shot": {
-    "cn": "灵魂射击",
-    "en": "Soul Drain Shot",
-    "class": "ranger",
-    "learnLevel": 30,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "将魔力灌入弓箭中，造成一定伤害并吸收体力。",
-      "en": "Enchants an arrow to deal a certain amount of damage to drain health from the target to the caster."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20",
-        "en": "20 addition"
-      },
-      "2": {
-        "cn": "追加40",
-        "en": "40 addition"
-      },
-      "3": {
-        "cn": "追加60",
-        "en": "60 addition"
-      }
-    },
-    "books": {
-      "1": "Soul Drain Shot 1",
-      "2": "Soul Drain Shot 2",
-      "3": "Soul Drain Shot 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      },
-      "3": {
-        "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
-        "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲"
-      }
-    }
-  },
-  "Stampede": {
-    "cn": "惊逃",
-    "en": "Stampede",
-    "class": "warrior",
-    "learnLevel": 35,
-    "type": "active",
-    "crystal": "1",
-    "effect": {
-      "cn": "使用时，持续10秒增加周围半径8格内队友的移动速度。",
-      "en": "Increases Party members movement speed by 19 within 8 tiles for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间160秒",
-        "en": "Cooltime 180 seconds"
-      },
-      "2": {
-        "cn": "冷却时间140秒",
-        "en": "Cooltime 160 seconds"
-      }
-    },
-    "books": {
-      "1": "Stampede 1",
-      "2": "Stampede 2"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Stoneskin": {
-    "cn": "坚石皮肤",
-    "en": "Stoneskin",
-    "class": "ranger",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "持续3分钟增加防御力。",
-      "en": "Increases the friendly target's armor for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "防御力增加2",
-        "en": "2 armor"
-      },
-      "2": {
-        "cn": "防御力增加3",
-        "en": "3 armor"
-      },
-      "3": {
-        "cn": "防御力增加4",
-        "en": "4 armor"
-      }
-    },
-    "books": {
-      "1": "Stoneskin 1",
-      "2": "Stoneskin 2",
-      "3": "Stoneskin 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Stun": {
-    "cn": "麻痹",
-    "en": "Stun",
-    "class": "magician",
-    "learnLevel": 25,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "施履冲击，并持续一定时间陷入麻痹状态。",
-      "en": "Paralyzes the target for a certain time."
-    },
-    "levels": {
-      "1": {
-        "cn": "持续2秒",
-        "en": "2 seconds"
-      },
-      "2": {
-        "cn": "持续3秒",
-        "en": "3 seconds"
-      }
-    },
-    "books": {
-      "2": "Stun 2",
-      "1": "Stun 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Sweeping Strikes": {
-    "cn": "强力横扫",
-    "en": "Sweeping Strikes",
-    "class": "warrior",
-    "learnLevel": 20,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "使用时，持续6秒对追加目标造成伤害。",
-      "en": "A sweeping attack that deals damage to additional targets. Also increases attack range."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加1个目标",
-        "en": "1 additional target"
-      },
-      "2": {
-        "cn": "追加2个目标",
-        "en": "2 additional target"
-      },
-      "3": {
-        "cn": "追加3个目标",
-        "en": "3 additional target"
-      },
-      "4": {
-        "cn": "追加4个目标",
-        "en": "4 additional target"
-      }
-    },
-    "books": {
-      "1": "Sweeping Strikes 1",
-      "2": "Sweeping Strikes 2",
-      "3": "Sweeping Strikes 3",
-      "4": "Sweeping Strikes 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
-        "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Swift": {
-    "cn": "俐落身手",
-    "en": "Swift",
-    "class": "ranger",
-    "learnLevel": 15,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "身体变得轻快，提高闪避率。",
-      "en": "Passive. Lightens the weight of your body to increase evasion rate."
-    },
-    "levels": {
-      "1": {
-        "cn": "提高1%",
-        "en": "+1% increase"
-      }
-    },
-    "books": {
-      "1": "Swift 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Taunting Blow": {
-    "cn": "挑衅",
-    "en": "Taunting Blow",
-    "class": "warrior",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "2",
-    "effect": {
-      "cn": "对敌人发动挑衅攻击。技能等级越高，挑衅强度越高。",
-      "en": "Taunts the target to attack you, dealing slight damage."
-    },
-    "levels": {
-      "1": {
-        "cn": "挑衅强度提升",
-        "en": "As the skill level increases, so does the taunting strength."
-      },
-      "2": {
-        "cn": "挑衅强度提升",
-        "en": "Increased taunting strength"
-      }
-    },
-    "books": {
-      "2": "Taunting Blow 2",
-      "1": "Taunting Blow 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      }
-    }
-  },
-  "Teleport": {
-    "cn": "瞬间移动",
-    "en": "Teleport",
-    "class": "magician",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "向前方瞬间移动一定距离。",
-      "en": "Teleports the caster a certain distance in the direction they are facing."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间12秒",
-        "en": "Cooltime 12 seconds"
-      },
-      "2": {
-        "cn": "冷却时间11秒",
-        "en": "Cooltime 11 seconds"
-      },
-      "3": {
-        "cn": "冷却时间10秒",
-        "en": "Cooltime 10 seconds"
-      }
-    },
-    "books": {
-      "2": "Teleport 2",
-      "3": "Teleport 3",
-      "1": "Teleport 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波鲁波图腾）",
-        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波鲁波图腾)"
-      }
-    }
-  },
-  "Thorns": {
-    "cn": "尖刺藤蔓",
-    "en": "Thorns",
-    "class": "ranger",
-    "learnLevel": 5,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "持续2分钟每次被攻击时，反射一定伤害量。",
-      "en": "Reflects certain amount of damage received."
-    },
-    "levels": {
-      "1": {
-        "cn": "反射2伤害",
-        "en": "2 damage"
-      },
-      "2": {
-        "cn": "反射4伤害",
-        "en": "4 damage"
-      },
-      "3": {
-        "cn": "反射8伤害",
-        "en": "8 damage"
-      }
-    },
-    "books": {
-      "1": "Thorns 1",
-      "2": "Thorns 2",
-      "3": "Thorns 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
-        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
-      }
-    }
-  },
-  "Toughness": {
-    "cn": "强韧",
-    "en": "Toughness",
-    "class": "warrior",
-    "learnLevel": 15,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "锻炼身体，减少所受伤害。",
-      "en": "Passive skill. Decrease damage taken from all sources."
-    },
-    "levels": {
-      "1": {
-        "cn": "2%",
-        "en": "2%"
-      },
-      "2": {
-        "cn": "4%",
-        "en": "4%"
-      },
-      "3": {
-        "cn": "6%",
-        "en": "6%"
-      }
-    },
-    "books": {
-      "1": "Toughness 1",
-      "2": "Toughness 2",
-      "3": "Toughness 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      }
-    }
-  },
-  "Weakness": {
-    "cn": "弱化防御",
-    "en": "Weakness",
-    "class": "ranger",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "弱化目标的防御力。",
-      "en": "Weakens the targets' armor."
-    },
-    "levels": {
-      "1": {
-        "cn": "防御力减少2",
-        "en": "Decrease 2 armor"
-      },
-      "2": {
-        "cn": "防御力减少4",
-        "en": "Decrease 4 armor"
-      },
-      "3": {
-        "cn": "防御力减少8",
-        "en": "Decrease 8 armor"
-      }
-    },
-    "books": {
-      "2": "Weakness 2",
-      "1": "Weakness 1",
-      "3": "Weakness 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波青铜铃铛）",
-        "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波青铜铃铛)"
-      }
-    }
-  },
-  "Wild Charge": {
-    "cn": "疯狂冲刺",
-    "en": "Wild Charge",
-    "class": "warrior",
-    "learnLevel": 10,
-    "type": "active",
-    "crystal": "0",
-    "effect": {
-      "cn": "冲向范围内的目标，造成眩晕状态。",
-      "en": "Charges the target within a certain range causing a stun."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间15秒",
-        "en": "Cooltime 15 seconds"
-      },
-      "2": {
-        "cn": "冷却时间13秒",
-        "en": "Cooltime 13 seconds"
-      },
-      "3": {
-        "cn": "冷却时间11秒",
-        "en": "Cooltime 11 seconds"
-      },
-      "4": {
-        "cn": "冷却时间9秒",
-        "en": "Cooltime 9 seconds"
-      }
-    },
-    "books": {
-      "1": "Wild Charge 1",
-      "2": "Wild Charge 2",
-      "3": "Wild Charge 3",
-      "4": "Wild Charge 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "羽妖岛海岸 阅读家马尔处购买",
-        "en": "Buy from 阅读家马尔 at 羽妖岛海岸"
-      },
-      "3": {
-        "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
-        "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)"
-      },
-      "4": {
-        "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
-        "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家"
-      }
-    }
-  },
-  "Wild Swing": {
-    "cn": "疯狂剑舞",
-    "en": "Wild Swing",
-    "class": "warrior",
-    "learnLevel": 2,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "强力砍击，造成追加伤害。",
-      "en": "Deals additional damage with a strong attack."
-    },
-    "levels": {
-      "1": {
-        "cn": "追加20%",
-        "en": "20% additional damage"
-      },
-      "2": {
-        "cn": "追加40%",
-        "en": "40% additional damage"
-      },
-      "3": {
-        "cn": "追加80%",
-        "en": "80% additional damage"
-      },
-      "4": {
-        "cn": "追加160%",
-        "en": "160% additional damage"
-      }
-    },
-    "books": {
-      "3": "Wild Swing 3",
-      "1": "Wild Swing 1",
-      "2": "Wild Swing 2",
-      "4": "Wild Swing 4"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "2": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "3": {
-        "cn": "木林村/木木村 阅读家拉尔处购买",
-        "en": "Buy from 阅读家拉尔 at 木林村/木木村"
-      },
-      "4": {
-        "cn": "蘑菇林 库林处合成（双手活用武器秘籍1/2/3p）",
-        "en": "Synthesize at 蘑菇林 库林 (双手活用武器秘籍1/2/3p)"
-      }
-    }
-  },
-  "Will of Elemental": {
-    "cn": "强烈意志",
-    "en": "Will of Elemental",
-    "class": "warrior",
-    "learnLevel": 25,
-    "type": "passive",
-    "crystal": "",
-    "effect": {
-      "cn": "提高对所有元素的抵抗力。",
-      "en": "Will of Elemental skill (details limited)."
-    },
-    "levels": {
-      "1": {
-        "cn": "抵抗+1",
-        "en": "Effect level 1"
-      },
-      "2": {
-        "cn": "抵抗+2",
-        "en": "Effect level 2"
-      }
-    },
-    "books": {
-      "2": "Will of Elemental 2",
-      "1": "Will of Elemental 1"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "主城 阅读家哈尔处购买",
-        "en": "Buy from 阅读家哈尔 at 主城"
-      }
-    }
-  },
-  "Ki Barrier": {
-    "cn": "气之帷幕",
-    "en": "Ki Barrier",
-    "class": "breaker",
-    "learnLevel": 25,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使HP上限增加10秒，并立即恢复HP",
-      "en": "Increases Max HP for 10 sec and instantly recovers HP."
-    },
-    "levels": {
-      "1": {
-        "cn": "HP 50",
-        "en": "HP 50"
-      },
-      "2": {
-        "cn": "HP 75",
-        "en": "HP 75"
-      },
-      "3": {
-        "cn": "HP 100",
-        "en": "HP 100"
-      }
-    },
-    "notes": {},
-    "books": {},
-    "extraSources": {}
-  },
-  "Upsurge": {
-    "cn": "激昂",
-    "en": "Upsurge",
-    "class": "breaker",
-    "learnLevel": 40,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "使用时，使周围半径8格内队友的暴击率提升5，持续5秒",
-      "en": "Increases the critical rate of party members in a radius of 8 tiles by 5 for 5 sec."
-    },
-    "levels": {
-      "1": {
-        "cn": "冷却时间180秒",
-        "en": "180 seconds cooldown"
-      },
-      "2": {
-        "cn": "冷却时间160秒",
-        "en": "160 seconds cooldown"
-      }
-    },
-    "notes": {},
-    "books": {},
-    "extraSources": {}
-  },
-  "Air-Rending Kick": {
-    "cn": "破空脚",
-    "en": "Air-Rending Kick",
-    "class": "breaker",
-    "learnLevel": 45,
-    "type": "active",
-    "crystal": "",
-    "effect": {
-      "cn": "以强力回旋踢撼动空气，对远处的目标造成冲击。自身目前体力越低，伤害量越高",
-      "en": "Unleashes a powerful roundhouse kick that sends a shockwave through the air to strike a distant target. Deals more damage the lower your current HP."
-    },
-    "levels": {
-      "1": {
-        "cn": "100%",
-        "en": "100%"
-      },
-      "2": {
-        "cn": "200%",
-        "en": "200%"
-      },
-      "3": {
-        "cn": "300%",
-        "en": "300%"
-      }
-    },
-    "notes": {
-      "cn": [
-        "赋予寒气：赋予麻痹减益效果",
-        "赋予闪电：赋予麻痹减益效果"
-      ],
-      "en": [
-        "Cold Imbue: Apply Stun",
-        "Electric Imbue: Apply Stun"
-      ]
-    },
-        "books": {
-      "1": "Air-Rending Kick 1",
-      "2": "Air-Rending Kick 2",
-      "3": "Air-Rending Kick 3"
-    },
-    "extraSources": {
-      "1": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "2": {
-        "cn": "公会商店兑换（公会币x100000）",
-        "en": "Exchange at Guild Shop (Guild Coin x100000)"
-      },
-      "3": {
-        "cn": "公会商店兑换（公会币x150000）",
-        "en": "Exchange at Guild Shop (Guild Coin x150000)"
-      }
-    }
+ "Amplify Sense": {
+  "cn": "强化反应",
+  "en": "Amplify Sense",
+  "class": "ranger",
+  "learnLevel": 25,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "大幅提升反应度，增加暴击伤害量。",
+   "en": "Passive. Amplificates the caster's sensitivity to increase damage when critical.",
+   "ja": "パッシブ。感覚を研ぎ澄まし、クリティカル時のダメージを増加させます。",
+   "kr": "패시브. 감각을 극대화하여 크리티컬 시 데미지를 증가시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "5%",
+    "en": "+5% critical dmg",
+    "ja": "クリティカルダメージ +5%",
+    "kr": "크리티컬 데미지 +5%"
+   },
+   "2": {
+    "cn": "10%",
+    "en": "+10% critical dmg",
+    "ja": "クリティカルダメージ +10%",
+    "kr": "크리티컬 데미지 +10%"
+   }
+  },
+  "books": {
+   "2": "Amplify Sense 2",
+   "1": "Amplify Sense 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Amputator": {
+  "cn": "一刀两断",
+  "en": "Amputator",
+  "class": "warrior",
+  "learnLevel": 45,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "发动一击砍伤敌人，造成强大的伤害。目标对象数量越少，造成的伤害则越强。",
+   "en": ""
+  },
+  "levels": {
+   "1": {
+    "cn": "追加300%",
+    "en": "",
+    "ja": "300% 追加",
+    "kr": "300% 추가"
+   },
+   "2": {
+    "cn": "追加350%",
+    "en": "",
+    "ja": "350% 追加",
+    "kr": "350% 추가"
+   },
+   "3": {
+    "cn": "追加400%",
+    "en": "",
+    "ja": "400% 追加",
+    "kr": "400% 추가"
+   }
+  },
+  "books": {
+   "1": "Amputator 1",
+   "2": "Amputator 2",
+   "3": "Amputator 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "2": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "3": {
+    "cn": "公会商店兑换（公会币x150000）",
+    "en": "Exchange at Guild Shop (Guild Coin x150000)",
+    "ja": "ギルド商店 で交換（Guild Coin x150000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x150000)"
+   }
+  },
+  "notes": {}
+ },
+ "Baekha’s Strike": {
+  "cn": "白荷之拳",
+  "en": "Baekha’s Strike",
+  "class": "breaker",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "All",
+  "effect": {
+   "cn": "集中全力并发动致命一击。",
+   "en": "Focuses all strength into a single powerful blow. Consumes all available Crystal Points; damage scales with amount consumed.",
+   "ja": "全身の力を一点に集めた強力な一撃を放ちます。所持クリスタルをすべて消費し、消費量に応じてダメージが増加します。",
+   "kr": "모든 힘을 한 점에 모아 강력한 일격을 가합니다. 보유 크리스탈을 모두 소모하며, 소모량에 따라 데미지가 증가합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "2": {
+    "cn": "追加40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   },
+   "3": {
+    "cn": "追加60%",
+    "en": "60% addition",
+    "ja": "60% 増加",
+    "kr": "60% 증가"
+   },
+   "4": {
+    "cn": "追加80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   }
+  },
+  "books": {
+   "2": "Baekha's Strike 2",
+   "3": "Baekha's Strike 3",
+   "1": "Baekha's Strike 1",
+   "4": "Baekha's Strike 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+    "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲",
+    "ja": "同一のクジラルーン3個を 庭園 デルピ で交換",
+    "kr": "동일한 고래 룬 3개를 정원 델피에서 교환"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予无法移动、眩晕减益效果",
+    "赋予闪电：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold: SPD Decrease + Stun",
+    "Electric: Stun"
+   ],
+   "ja": [
+    "冷気: 移動速度減少 + 気絶",
+    "電気: 気絶"
+   ],
+   "kr": [
+    "냉기: 이동속도 감소 + 기절",
+    "전기: 기절"
+   ]
   }
+ },
+ "Berserk": {
+  "cn": "狂暴",
+  "en": "Berserk",
+  "class": "warrior",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "提升愤怒值，恢复水晶点数。",
+   "en": "Berserk mode buff.",
+   "ja": "バーサクモードのバフ。",
+   "kr": "버서크 모드 버프."
+  },
+  "levels": {
+   "1": {
+    "cn": "2个",
+    "en": "Berserk effect",
+    "ja": "バーサク効果",
+    "kr": "버서크 효과"
+   },
+   "2": {
+    "cn": "3个",
+    "en": "Stronger berserk",
+    "ja": "バーサク強化",
+    "kr": "버서크 강화"
+   }
+  },
+  "books": {
+   "2": "Berserk 2",
+   "1": "Berserk 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Breaker’s Strike I": {
+  "cn": "武术1击",
+  "en": "Breaker’s Strike I",
+  "class": "breaker",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "冲向目标并造成伤害。",
+   "en": "Charges toward the target and deals damage. Changes to Breaker's Strike II after use.",
+   "ja": "対象に突進してダメージを与えます。使用後は「武闘の二撃」に変化します。",
+   "kr": "대상에게 돌진하여 데미지를 줍니다. 사용 후 「무도의 2격」으로 변화합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加10%",
+    "en": "10% addition",
+    "ja": "10% 増加",
+    "kr": "10% 증가"
+   },
+   "2": {
+    "cn": "追加20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "3": {
+    "cn": "追加30%",
+    "en": "30% addition",
+    "ja": "30% 増加",
+    "kr": "30% 증가"
+   },
+   "4": {
+    "cn": "追加40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   }
+  },
+  "books": {
+   "1": "Breaker's Strike 1",
+   "4": "Breaker's Strike 4",
+   "2": "Breaker's Strike 2",
+   "3": "Breaker's Strike 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予眩晕减益效果",
+    "赋予闪电：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold Imbue: Apply Stun",
+    "Electric Imbue: Apply Stun"
+   ],
+   "ja": [
+    "冷気付与: 気絶付与",
+    "電気付与: 気絶付与"
+   ],
+   "kr": [
+    "냉기 부여: 기절 부여",
+    "전기 부여: 기절 부여"
+   ]
+  }
+ },
+ "Breaker’s Strike II": {
+  "cn": "武术2击",
+  "en": "Breaker’s Strike II",
+  "class": "breaker",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "跃向空中并攻击敌人。",
+   "en": "Launches toward the sky and strikes the enemy. Changes to Breaker's Strike III. Level determined by Breaker's Strike I.",
+   "ja": "空中に跳び上がって敵を攻撃します。「武闘の三撃」に変化し、レベルは「武闘の一撃」に準じます。",
+   "kr": "하늘로 뛰어올라 적을 공격합니다. 「무도의 3격」으로 변화하며, 레벨은 「무도의 1격」을 따릅니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加60%",
+    "en": "60% addition",
+    "ja": "60% 増加",
+    "kr": "60% 증가"
+   },
+   "2": {
+    "cn": "追加120%",
+    "en": "120% addition",
+    "ja": "120% 増加",
+    "kr": "120% 증가"
+   },
+   "3": {
+    "cn": "追加180%",
+    "en": "180% addition",
+    "ja": "180% 増加",
+    "kr": "180% 증가"
+   },
+   "4": {
+    "cn": "追加240%",
+    "en": "240% addition",
+    "ja": "240% 増加",
+    "kr": "240% 증가"
+   }
+  },
+  "books": {
+   "2": "Breaker's Strike 2",
+   "4": "Breaker's Strike 4"
+  },
+  "extraSources": {
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予降低移动速度减益效果",
+    "赋予闪电：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold: Movement SPD Decrease",
+    "Electric: Stun"
+   ],
+   "ja": [
+    "冷気: 移動速度減少",
+    "電気: 気絶"
+   ],
+   "kr": [
+    "냉기: 이동속도 감소",
+    "전기: 기절"
+   ]
+  }
+ },
+ "Breaker’s Strike III": {
+  "cn": "武术3击",
+  "en": "Breaker’s Strike III",
+  "class": "breaker",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "重击地面并对攻击敌人。",
+   "en": "Slams the ground and strikes the enemy. Level determined by Breaker's Strike I.",
+   "ja": "地面を叩きつけて敵を攻撃します。レベルは「武闘の一撃」に準じます。",
+   "kr": "지면을 강타하여 적을 공격합니다. 레벨은 「무도의 1격」을 따릅니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   },
+   "2": {
+    "cn": "追加160%",
+    "en": "160% addition",
+    "ja": "160% 増加",
+    "kr": "160% 증가"
+   },
+   "3": {
+    "cn": "追加240%",
+    "en": "240% addition",
+    "ja": "240% 増加",
+    "kr": "240% 증가"
+   },
+   "4": {
+    "cn": "追加320%",
+    "en": "320% addition",
+    "ja": "320% 増加",
+    "kr": "320% 증가"
+   }
+  },
+  "books": {
+   "3": "Breaker's Strike 3",
+   "4": "Breaker's Strike 4"
+  },
+  "extraSources": {
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予眩晕减益效果",
+    "赋予闪电：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold Imbue: Apply Stun",
+    "Electric Imbue: Apply Stun"
+   ],
+   "ja": [
+    "冷気付与: 気絶付与",
+    "電気付与: 気絶付与"
+   ],
+   "kr": [
+    "냉기 부여: 기절 부여",
+    "전기 부여: 기절 부여"
+   ]
+  }
+ },
+ "Bull Rush": {
+  "cn": "急速冲刺",
+  "en": "Bull Rush",
+  "class": "warrior",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "使用时，持续7秒提升移动速度。",
+   "en": "Increases the movement speed.",
+   "ja": "移動速度を上昇させます。",
+   "kr": "이동속도를 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "24%",
+    "en": "24%",
+    "ja": "24%",
+    "kr": "24%"
+   },
+   "2": {
+    "cn": "36%",
+    "en": "36%",
+    "ja": "36%",
+    "kr": "36%"
+   },
+   "3": {
+    "cn": "48%",
+    "en": "48%",
+    "ja": "48%",
+    "kr": "48%"
+   }
+  },
+  "books": {
+   "2": "Bull Rush 2",
+   "1": "Bull Rush 1",
+   "3": "Bull Rush 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波水晶鳞片）",
+    "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波水晶鳞片)",
+    "ja": "ウィングフリール島海岸 呪術師ドンゴ で交換（ウパの水晶鱗）",
+    "kr": "윙프릴섬의 해변 주술사 동고에서 교환 (우파수정비늘)"
+   }
+  },
+  "notes": {}
+ },
+ "Carnivalize": {
+  "cn": "魔力转换",
+  "en": "Carnivalize",
+  "class": "magician",
+  "learnLevel": 15,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "转换20体力为魔力。",
+   "en": "Converts 20 health to mana.",
+   "ja": "体力 20 をマナに変換します。",
+   "kr": "체력 20을 마나로 변환합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "恢复16%魔力",
+    "en": "16% mana",
+    "ja": "マナ 16%",
+    "kr": "마나 16%"
+   },
+   "2": {
+    "cn": "恢复20%魔力",
+    "en": "20% mana",
+    "ja": "マナ 20%",
+    "kr": "마나 20%"
+   },
+   "3": {
+    "cn": "恢复24%魔力",
+    "en": "24% mana",
+    "ja": "マナ 24%",
+    "kr": "마나 24%"
+   }
+  },
+  "books": {
+   "1": "Carnivalize 1",
+   "2": "Carnivalize 2",
+   "3": "Carnivalize 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Chainstrike": {
+  "cn": "连击",
+  "en": "Chainstrike",
+  "class": "breaker",
+  "learnLevel": 2,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "快速攻击并造成伤害。",
+   "en": "Strikes rapidly to deal damage. Using the skill inflicts a short stun. Note: Actual damage may differ from description.",
+   "ja": "素早く連撃してダメージを与えます。使用時に短い気絶を付与します。※実際のダメージは説明と異なる場合があります。",
+   "kr": "빠르게 연격하여 데미지를 줍니다. 사용 시 짧은 기절을 부여합니다. ※실제 데미지는 설명과 다를 수 있습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "2": {
+    "cn": "追加40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   },
+   "3": {
+    "cn": "追加80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   },
+   "4": {
+    "cn": "追加160%",
+    "en": "160% addition",
+    "ja": "160% 増加",
+    "kr": "160% 증가"
+   }
+  },
+  "books": {
+   "4": "Chainstrike 4",
+   "1": "Chainstrike 1",
+   "2": "Chainstrike 2",
+   "3": "Chainstrike 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予眩晕减益效果",
+    "赋予闪电：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold Imbue: Apply Stun",
+    "Electric Imbue: Apply Stun"
+   ],
+   "ja": [
+    "冷気付与: 気絶付与",
+    "電気付与: 気絶付与"
+   ],
+   "kr": [
+    "냉기 부여: 기절 부여",
+    "전기 부여: 기절 부여"
+   ]
+  }
+ },
+ "Clarity": {
+  "cn": "补充气力",
+  "en": "Clarity",
+  "class": "ranger",
+  "learnLevel": 35,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "持续5秒增加周围半径8格内队友的水晶、魔力再生速度。",
+   "en": "Regenerates party member's crystals and mana faster for 5 seconds. Affects members within 8 tiles.",
+   "ja": "5秒間、パーティーメンバーのクリスタルとマナの回復速度を上げます。8マス以内のメンバーに適用されます。",
+   "kr": "5초 동안 파티원의 크리스탈과 마나 회복 속도를 높입니다. 8칸 이내의 파티원에게 적용됩니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间180秒",
+    "en": "Cooldown 180 seconds",
+    "ja": "クールタイム 180秒",
+    "kr": "재사용 대기시간 180초"
+   },
+   "2": {
+    "cn": "冷却时间160秒",
+    "en": "Cooldown 160 seconds",
+    "ja": "クールタイム 160秒",
+    "kr": "재사용 대기시간 160초"
+   }
+  },
+  "books": {
+   "1": "Clarity 1",
+   "2": "Clarity 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Cold Imbue": {
+  "cn": "赋予寒气",
+  "en": "Cold Imbue",
+  "class": "breaker",
+  "learnLevel": 2,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "以寒气魔力环绕全身并增幅伤害。",
+   "en": "Envelops the body with cold energy to amplify damage.",
+   "ja": "冷気のエネルギーを身にまとい、ダメージを増幅させます。",
+   "kr": "냉기의 기운을 몸에 두르고 데미지를 증폭시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "伤害追加1%",
+    "en": "1% damage increase",
+    "ja": "ダメージ 1% 増加",
+    "kr": "데미지 1% 증가"
+   },
+   "2": {
+    "cn": "伤害追加5%",
+    "en": "5% damage increase",
+    "ja": "ダメージ 5% 増加",
+    "kr": "데미지 5% 증가"
+   },
+   "3": {
+    "cn": "伤害追加10%",
+    "en": "10% damage increase",
+    "ja": "ダメージ 10% 増加",
+    "kr": "데미지 10% 증가"
+   },
+   "4": {
+    "cn": "伤害追加20%",
+    "en": "20% damage increase",
+    "ja": "ダメージ 20% 増加",
+    "kr": "데미지 20% 증가"
+   }
+  },
+  "books": {
+   "4": "Cold Imbue 4",
+   "1": "Cold Imbue 1",
+   "2": "Cold Imbue 2",
+   "3": "Cold Imbue 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予眩晕减益效果"
+   ],
+   "en": [
+    "Cold Imbue: Apply Stun"
+   ],
+   "ja": [
+    "冷気付与: 気絶付与"
+   ],
+   "kr": [
+    "냉기 부여: 기절 부여"
+   ]
+  }
+ },
+ "Concentrate": {
+  "cn": "全神贯注",
+  "en": "Concentrate",
+  "class": "ranger",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "有一定时间追加命中率。",
+   "en": "Increases accuracy rate for a certain time.",
+   "ja": "一定時間、的中率を上昇させます。",
+   "kr": "일정 시간 동안 명중률을 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "2%",
+    "en": "+2% accuracy",
+    "ja": "的中 +2%",
+    "kr": "명중 +2%"
+   },
+   "2": {
+    "cn": "4%",
+    "en": "+4% accuracy",
+    "ja": "的中 +4%",
+    "kr": "명중 +4%"
+   },
+   "3": {
+    "cn": "6%",
+    "en": "+6% accuracy",
+    "ja": "的中 +6%",
+    "kr": "명중 +6%"
+   }
+  },
+  "books": {
+   "3": "Concentrate 3",
+   "1": "Concentrate 1",
+   "2": "Concentrate 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Counterattack": {
+  "cn": "反击",
+  "en": "Counterattack",
+  "class": "warrior",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "于阻挡武器攻击时启用，使用时可造成反击伤害。",
+   "en": "An Instant attack available when an enemy blocks you.",
+   "ja": "敵に阻まれた際に発動できる即時攻撃です。",
+   "kr": "적이 막아섰을 때 사용할 수 있는 즉시 공격입니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "140%",
+    "en": "140%",
+    "ja": "140%",
+    "kr": "140%"
+   },
+   "2": {
+    "cn": "160%",
+    "en": "160%",
+    "ja": "160%",
+    "kr": "160%"
+   }
+  },
+  "books": {
+   "1": "Counterattack 1",
+   "2": "Counterattack 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Critical Blow": {
+  "cn": "追击要害",
+  "en": "Critical Blow",
+  "class": "ranger",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "剑专属技能，攻击要害造成追加伤害。",
+   "en": "Causes additional damage by striking a vital spot. Requires a blade.",
+   "ja": "急所を打って追加ダメージを与えます。刀剣が必要です。",
+   "kr": "급소를 찔러 추가 데미지를 줍니다. 검류 무기가 필요합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加40%",
+    "en": "+40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   }
+  },
+  "books": {
+   "1": "Critical Blow 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Critical Insight": {
+  "cn": "要害洞察",
+  "en": "Critical Insight",
+  "class": "breaker",
+  "learnLevel": 30,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "增加暴击率。",
+   "en": "Increases critical rate.",
+   "ja": "クリティカル率を上昇させます。",
+   "kr": "크리티컬 확률을 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "暴击增加1",
+    "en": "1 critical rate increase",
+    "ja": "クリティカル率 1 増加",
+    "kr": "크리티컬 확률 1 증가"
+   },
+   "2": {
+    "cn": "暴击增加2",
+    "en": "2 critical rate increase",
+    "ja": "クリティカル率 2 増加",
+    "kr": "크리티컬 확률 2 증가"
+   },
+   "3": {
+    "cn": "暴击增加3",
+    "en": "3 critical rate increase",
+    "ja": "クリティカル率 3 増加",
+    "kr": "크리티컬 확률 3 증가"
+   }
+  },
+  "books": {
+   "2": "Critical Insight 2",
+   "3": "Critical Insight 3",
+   "1": "Critical Insight 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Cure": {
+  "cn": "治愈",
+  "en": "Cure",
+  "class": "magician",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "治疗毒、麻痹及恐怖状态。",
+   "en": ""
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间30秒",
+    "en": "",
+    "ja": "クールタイム 30秒",
+    "kr": "재사용 대기시간 30초"
+   },
+   "2": {
+    "cn": "冷却时间25秒",
+    "en": "",
+    "ja": "クールタイム 25秒",
+    "kr": "재사용 대기시간 25초"
+   }
+  },
+  "books": {
+   "2": "Cure Poison 2",
+   "1": "Cure Poison 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Curse of Doom": {
+  "cn": "破坏之咒",
+  "en": "Curse of Doom",
+  "class": "magician",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "对目标下持续10秒的诅咒，并在下一回合增加目标所受伤害量。",
+   "en": "Curses the target to have it receive the next damage with amplification.",
+   "ja": "対象に呪いをかけ、次に受けるダメージを増幅させます。",
+   "kr": "대상에게 저주를 걸어 다음에 받는 데미지를 증폭시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "伤害量200%",
+    "en": "200%",
+    "ja": "200%",
+    "kr": "200%"
+   },
+   "2": {
+    "cn": "伤害量220%",
+    "en": "220%",
+    "ja": "220%",
+    "kr": "220%"
+   }
+  },
+  "books": {
+   "2": "Curse of Doom 2",
+   "1": "Curse of Doom 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Double Shot": {
+  "cn": "双发射击",
+  "en": "Double Shot",
+  "class": "ranger",
+  "learnLevel": 2,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "发射2个弓箭，造成2次打击。",
+   "en": "Shoots two arrows quickly.",
+   "ja": "素早く矢を2本放ちます。",
+   "kr": "빠르게 화살 2발을 발사합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "2": {
+    "cn": "追加40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   },
+   "3": {
+    "cn": "追加80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   },
+   "4": {
+    "cn": "追加160%",
+    "en": "160% addition",
+    "ja": "160% 増加",
+    "kr": "160% 증가"
+   }
+  },
+  "books": {
+   "3": "Double Shot 3",
+   "1": "Double Shot 1",
+   "2": "Double Shot 2",
+   "4": "Double Shot 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "4": {
+    "cn": "蘑菇林 库林处合成（百发百中1/2/3p）",
+    "en": "Synthesize at 蘑菇林 库林 (百发百中1/2/3p)",
+    "ja": "キノコの森 クリン で合成（百发百中1/2/3p）",
+    "kr": "버섯 숲 쿠린에서 합성 (百发百中1/2/3p)"
+   }
+  },
+  "notes": {}
+ },
+ "Drowsiness": {
+  "cn": "疲乏无力",
+  "en": "Drowsiness",
+  "class": "warrior",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "砍击对方脚踝，并持续一定时间减缓动作。",
+   "en": "Deals only half amount of damage, but slows down the target's movement speed for a certain time.",
+   "ja": "ダメージは半分ですが、一定時間、対象の移動速度を低下させます。",
+   "kr": "데미지는 절반이지만 일정 시간 대상의 이동속도를 감소시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续5秒",
+    "en": "Half damage + slow",
+    "ja": "ダメージ半減 + 移動速度減少",
+    "kr": "데미지 절반 + 이동속도 감소"
+   },
+   "2": {
+    "cn": "持续6秒",
+    "en": "",
+    "ja": "6秒間持続",
+    "kr": "6초 지속"
+   }
+  },
+  "books": {
+   "1": "Drowsiness 1",
+   "2": "Drowsiness 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "2": {
+    "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
+    "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)",
+    "ja": "誓約者モビ で製作（Inherited Book of Knowledge x3 + 10,000 Gold）",
+    "kr": "서약자 모비에서 제작 (Inherited Book of Knowledge x3 + 10,000 Gold)"
+   }
+  },
+  "notes": {}
+ },
+ "Electric Imbue": {
+  "cn": "赋予闪电",
+  "en": "Electric Imbue",
+  "class": "breaker",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "以闪电魔力包裹全身，对攻击目标周边敌人也造成伤害。",
+   "en": "Wraps your body in electric power to protect yourself and damage enemies near your target.",
+   "ja": "電気の力で身を包み、自身を守りつつ対象の周囲の敵にダメージを与えます。",
+   "kr": "전기의 힘으로 몸을 감싸 자신을 보호하고 대상 주변의 적에게 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加1个目标",
+    "en": "+1 target",
+    "ja": "対象 +1",
+    "kr": "대상 +1"
+   },
+   "2": {
+    "cn": "追加2个目标",
+    "en": "+2 target",
+    "ja": "対象 +2",
+    "kr": "대상 +2"
+   },
+   "3": {
+    "cn": "追加3个目标",
+    "en": "+3 target",
+    "ja": "対象 +3",
+    "kr": "대상 +3"
+   },
+   "4": {
+    "cn": "追加4个目标",
+    "en": "+4 target",
+    "ja": "対象 +4",
+    "kr": "대상 +4"
+   }
+  },
+  "books": {
+   "2": "Electric Imbue 2",
+   "3": "Electric Imbue 3",
+   "1": "Electric Imbue 1",
+   "4": "Electric Imbue 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+    "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一のビリヤード / セピアルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 당구 / 세피아 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {
+   "cn": [
+    "减少30%从怪物受到的伤害",
+    "减少50%对敌人造成的伤害"
+   ],
+   "en": [
+    "30% less damage taken from monsters",
+    "50% less damage dealt to enemies"
+   ],
+   "ja": [
+    "モンスターから受けるダメージ 30% 減少",
+    "敵に与えるダメージ 50% 減少"
+   ],
+   "kr": [
+    "몬스터에게 받는 데미지 30% 감소",
+    "적에게 주는 데미지 50% 감소"
+   ]
+  }
+ },
+ "Elemental Cycle": {
+  "cn": "元素循环",
+  "en": "Elemental Cycle",
+  "class": "breaker",
+  "learnLevel": 15,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "以目前体力为比例恢复体力。",
+   "en": "Continuously recovers HP proportionate to current HP. Can be removed by Warrior's Hemorrhage. (Mana Cost: 10)",
+   "ja": "現在の体力に比例して継続的に体力を回復します。「出血」で解除される場合があります。（マナ消費: 10）",
+   "kr": "현재 체력에 비례하여 지속적으로 체력을 회복합니다. 「출혈」로 해제될 수 있습니다. (마나 소모: 10)"
+  },
+  "levels": {
+   "1": {
+    "cn": "3秒内效果持续",
+    "en": "3 seconds buff duration",
+    "ja": "バフ持続時間 3秒",
+    "kr": "버프 지속시간 3초"
+   },
+   "2": {
+    "cn": "5秒内效果持续",
+    "en": "5 seconds buff duration",
+    "ja": "バフ持続時間 5秒",
+    "kr": "버프 지속시간 5초"
+   },
+   "3": {
+    "cn": "7秒内效果持续",
+    "en": "7 seconds buff duration",
+    "ja": "バフ持続時間 7秒",
+    "kr": "버프 지속시간 7초"
+   }
+  },
+  "books": {
+   "2": "Elemental Cycle 2",
+   "3": "Elemental Cycle 3",
+   "1": "Elemental Cycle 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Elemental Release": {
+  "cn": "元素释放",
+  "en": "Elemental Release",
+  "class": "breaker",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "释放凝聚元素并对敌人赋予状态异常。",
+   "en": "Releases condensed elemental energy to inflict status effects. Effects vary by Cold or Electric Imbue.",
+   "ja": "凝縮した元素エネルギーを放ち、状態異常を与えます。効果は冷気付与・電気付与で異なります。",
+   "kr": "응축된 원소 에너지를 방출하여 상태이상을 부여합니다. 효과는 냉기 부여·전기 부여에 따라 달라집니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "寒气状态：移动速度减少20%、闪电状态：1.5秒内眩晕",
+    "en": "Cold: 20% movement SPD decrease / Electric: 1.5s stun",
+    "ja": "冷気: 移動速度 20% 減少 / 電気: 1.5秒 気絶",
+    "kr": "냉기: 이동속도 20% 감소 / 전기: 1.5초 기절"
+   },
+   "2": {
+    "cn": "寒气状态：移动速度减少25%、闪电状态：2秒内眩晕",
+    "en": "Cold: 25% movement SPD decrease / Electric: 2s stun",
+    "ja": "冷気: 移動速度 25% 減少 / 電気: 2秒 気絶",
+    "kr": "냉기: 이동속도 25% 감소 / 전기: 2초 기절"
+   },
+   "3": {
+    "cn": "寒气状态：移动速度减少40%、闪电状态：2.5秒内眩晕",
+    "en": "Cold: 40% movement SPD decrease / Electric: 2.5s stun",
+    "ja": "冷気: 移動速度 40% 減少 / 電気: 2.5秒 気絶",
+    "kr": "냉기: 이동속도 40% 감소 / 전기: 2.5초 기절"
+   }
+  },
+  "books": {
+   "2": "Elemental Release 2",
+   "1": "Elemental Release 1",
+   "3": "Elemental Release 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
+    "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)",
+    "ja": "誓約者モビ で製作（Inherited Book of Knowledge x3 + 10,000 Gold）",
+    "kr": "서약자 모비에서 제작 (Inherited Book of Knowledge x3 + 10,000 Gold)"
+   }
+  },
+  "notes": {}
+ },
+ "Ensnare": {
+  "cn": "圈套",
+  "en": "Ensnare",
+  "class": "ranger",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "设置陷阱，减弱目标速度。",
+   "en": "Places a trap to lower the target's movement speed.",
+   "ja": "罠を設置し、対象の移動速度を低下させます。",
+   "kr": "함정을 설치하여 대상의 이동속도를 감소시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "移动速度减少36%",
+    "en": "36% slowed",
+    "ja": "移動速度 36% 減少",
+    "kr": "이동속도 36% 감소"
+   },
+   "2": {
+    "cn": "移动速度减少48%",
+    "en": "48% slowed",
+    "ja": "移動速度 48% 減少",
+    "kr": "이동속도 48% 감소"
+   },
+   "3": {
+    "cn": "移动速度减少60%",
+    "en": "60% slowed",
+    "ja": "移動速度 60% 減少",
+    "kr": "이동속도 60% 감소"
+   }
+  },
+  "books": {
+   "2": "Ensnare 2",
+   "1": "Ensnare 1",
+   "3": "Ensnare 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
+    "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)",
+    "ja": "誓約者モビ で製作（Inherited Book of Knowledge x3 + 10,000 Gold）",
+    "kr": "서약자 모비에서 제작 (Inherited Book of Knowledge x3 + 10,000 Gold)"
+   }
+  },
+  "notes": {}
+ },
+ "Epiphany": {
+  "cn": "顿悟",
+  "en": "Epiphany",
+  "class": "magician",
+  "learnLevel": 45,
+  "type": "passive",
+  "crystal": "0",
+  "effect": {
+   "cn": " 特定技能可于顿悟后强化。已强化的技能将会受到追加魔力的影响。",
+   "en": "(Passive) Certain skills are awakened and powered up. Powered-up skills are affected by additional Mana.",
+   "ja": "（パッシブ）一部のスキルが覚醒して強化されます。強化されたスキルは追加のマナを消費します。",
+   "kr": "(패시브) 일부 스킬이 각성하여 강화됩니다. 강화된 스킬은 추가 마나의 영향을 받습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "强化守护祷告",
+    "en": "Power up Prayer of Protection",
+    "ja": "守護の祈り 強化",
+    "kr": "수호의 기원 강화"
+   },
+   "2": {
+    "cn": "强化光明疗愈",
+    "en": "Power up Light Healing",
+    "ja": "ライトヒーリング 強化",
+    "kr": "라이트힐링 강화"
+   },
+   "3": {
+    "cn": "强化护身盾牌及塞拉的祝福",
+    "en": "Power up Shield and Sara's Blessing",
+    "ja": "シールドとセーラの祝福 強化",
+    "kr": "쉴드와 세라의축복 강화"
+   }
+  },
+  "books": {
+   "1": "Epiphany 1",
+   "2": "Epiphany 2",
+   "3": "Epiphany 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "2": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "3": {
+    "cn": "公会商店兑换（公会币x150000）",
+    "en": "Exchange at Guild Shop (Guild Coin x150000)",
+    "ja": "ギルド商店 で交換（Guild Coin x150000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x150000)"
+   }
+  },
+  "notes": {}
+ },
+ "Fatal Attack": {
+  "cn": "致命一击",
+  "en": "Fatal Attack",
+  "class": "warrior",
+  "learnLevel": 30,
+  "type": "active",
+  "crystal": "4",
+  "effect": {
+   "cn": "瞄准要害致命一击。",
+   "en": "Causes a fatal attack against the target's fatal spot.",
+   "ja": "対象の急所に致命的な攻撃を与えます。",
+   "kr": "대상의 급소에 치명적인 공격을 가합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加100%",
+    "en": "100% Addition",
+    "ja": "100% 増加",
+    "kr": "100% 증가"
+   },
+   "2": {
+    "cn": "追加200%",
+    "en": "200% Addition",
+    "ja": "200% 増加",
+    "kr": "200% 증가"
+   },
+   "3": {
+    "cn": "追加300%",
+    "en": "300% Addition",
+    "ja": "300% 増加",
+    "kr": "300% 증가"
+   }
+  },
+  "books": {
+   "1": "Fatal Attack 1",
+   "2": "Fatal Attack 2",
+   "3": "Fatal Attack 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   },
+   "3": {
+    "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+    "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲",
+    "ja": "同一のクジラルーン3個を 庭園 デルピ で交換",
+    "kr": "동일한 고래 룬 3개를 정원 델피에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Fear": {
+  "cn": "恐怖",
+  "en": "Fear",
+  "class": "magician",
+  "learnLevel": 35,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使敌人陷入恐怖并逃跑。",
+   "en": "Strikes fear into the enemy, causing it to run away in fright.",
+   "ja": "敵に恐怖を与え、怯えて逃げ出させます。",
+   "kr": "적에게 공포를 주어 겁에 질려 달아나게 합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续4秒",
+    "en": "4 seconds",
+    "ja": "4秒",
+    "kr": "4초"
+   }
+  },
+  "books": {
+   "1": "Fear 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Firebolt": {
+  "cn": "火球",
+  "en": "Firebolt",
+  "class": "magician",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使用魔法召唤出小火球。",
+   "en": "Hurls a small fiery ball.",
+   "ja": "小さな火球を投げつけます。",
+   "kr": "작은 화염구를 던집니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成28伤害",
+    "en": "28 damage",
+    "ja": "ダメージ 28",
+    "kr": "데미지 28"
+   },
+   "2": {
+    "cn": "造成33伤害",
+    "en": "33 damage",
+    "ja": "ダメージ 33",
+    "kr": "데미지 33"
+   },
+   "3": {
+    "cn": "造成42伤害",
+    "en": "42 damage",
+    "ja": "ダメージ 42",
+    "kr": "데미지 42"
+   },
+   "4": {
+    "cn": "造成60伤害",
+    "en": "60 damage",
+    "ja": "ダメージ 60",
+    "kr": "데미지 60"
+   }
+  },
+  "books": {
+   "2": "Firebolt 2",
+   "1": "Firebolt 1",
+   "3": "Firebolt 3",
+   "4": "Firebolt 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+    "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)",
+    "ja": "ウディウィディ村 / ウディウォディ村 暴風戦場管理人 で交換（名誉项链x60）",
+    "kr": "우디위디 마을 / 우디워디 마을 폭풍 전장 관리인에서 교환 (名誉项链x60)"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Firestorm": {
+  "cn": "火焰风暴",
+  "en": "Firestorm",
+  "class": "magician",
+  "learnLevel": 30,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "以目标为中心，制造火焰风暴。",
+   "en": "Causes a wave of flame to be radiated outward from the target.",
+   "ja": "対象から外側へ炎の波を放ちます。",
+   "kr": "대상으로부터 바깥으로 화염의 파도를 방출합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成23伤害",
+    "en": "23 damage",
+    "ja": "ダメージ 23",
+    "kr": "데미지 23"
+   },
+   "2": {
+    "cn": "造成28伤害",
+    "en": "28 damage",
+    "ja": "ダメージ 28",
+    "kr": "데미지 28"
+   },
+   "3": {
+    "cn": "造成42伤害",
+    "en": "42 damage",
+    "ja": "ダメージ 42",
+    "kr": "데미지 42"
+   }
+  },
+  "books": {
+   "1": "Firestorm 1",
+   "2": "Firestorm 2",
+   "3": "Firestorm 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   },
+   "3": {
+    "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+    "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲",
+    "ja": "同一のクジラルーン3個を 庭園 デルピ で交換",
+    "kr": "동일한 고래 룬 3개를 정원 델피에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Flame Shock": {
+  "cn": "火花冲击",
+  "en": "Flame Shock",
+  "class": "magician",
+  "learnLevel": 2,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "造成火花冲击。",
+   "en": "Deals shock damage by the flame.",
+   "ja": "炎による衝撃ダメージを与えます。",
+   "kr": "화염에 의한 충격 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成12伤害",
+    "en": "12 damage",
+    "ja": "ダメージ 12",
+    "kr": "데미지 12"
+   },
+   "2": {
+    "cn": "造成16伤害",
+    "en": "16 damage",
+    "ja": "ダメージ 16",
+    "kr": "데미지 16"
+   },
+   "3": {
+    "cn": "造成24伤害",
+    "en": "24 damage",
+    "ja": "ダメージ 24",
+    "kr": "데미지 24"
+   },
+   "4": {
+    "cn": "造成40伤害",
+    "en": "40 damage",
+    "ja": "ダメージ 40",
+    "kr": "데미지 40"
+   }
+  },
+  "books": {
+   "3": "Flame Shock 3",
+   "1": "Flame Shock 1",
+   "2": "Flame Shock 2",
+   "4": "Flame Shock 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "4": {
+    "cn": "蘑菇林 库林处合成（空中悬浮秘籍1/2/3p）",
+    "en": "Synthesize at 蘑菇林 库林 (空中悬浮秘籍1/2/3p)",
+    "ja": "キノコの森 クリン で合成（空中悬浮秘籍1/2/3p）",
+    "kr": "버섯 숲 쿠린에서 합성 (空中悬浮秘籍1/2/3p)"
+   }
+  },
+  "notes": {}
+ },
+ "Flame of Kataru": {
+  "cn": "卡塔勒的火焰",
+  "en": "Flame of Kataru",
+  "class": "magician",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "周围半径4格内，施展火焰魔法。",
+   "en": "Calls down a pillar of fire to burn all enemies within 3 tiles.",
+   "ja": "火柱を呼び下ろし、3マス以内の敵をすべて焼きます。",
+   "kr": "불기둥을 불러내어 3칸 이내의 모든 적을 태웁니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成14伤害",
+    "en": "14 damage",
+    "ja": "ダメージ 14",
+    "kr": "데미지 14"
+   },
+   "2": {
+    "cn": "造成16伤害",
+    "en": "16 damage",
+    "ja": "ダメージ 16",
+    "kr": "데미지 16"
+   },
+   "3": {
+    "cn": "造成21伤害",
+    "en": "21 damage",
+    "ja": "ダメージ 21",
+    "kr": "데미지 21"
+   },
+   "4": {
+    "cn": "造成30伤害",
+    "en": "30 damage",
+    "ja": "ダメージ 30",
+    "kr": "데미지 30"
+   }
+  },
+  "books": {
+   "1": "Flame of Kataru 1",
+   "2": "Flame of Kataru 2",
+   "3": "Flame of Kataru 3",
+   "4": "Flame of Kataru 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+    "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一のビリヤード / セピアルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 당구 / 세피아 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Flare": {
+  "cn": "爆燃",
+  "en": "Flare",
+  "class": "magician",
+  "learnLevel": 15,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "对目标造成瞬间火焰伤害。",
+   "en": "Blasts the target with fire damage instantly.",
+   "ja": "対象に即座に火炎ダメージを与えます。",
+   "kr": "대상에게 즉시 화염 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成28伤害",
+    "en": "28 damage",
+    "ja": "ダメージ 28",
+    "kr": "데미지 28"
+   },
+   "2": {
+    "cn": "造成33伤害",
+    "en": "33 damage",
+    "ja": "ダメージ 33",
+    "kr": "데미지 33"
+   },
+   "3": {
+    "cn": "造成42伤害",
+    "en": "42 damage",
+    "ja": "ダメージ 42",
+    "kr": "데미지 42"
+   }
+  },
+  "books": {
+   "1": "Flare 1",
+   "2": "Flare 2",
+   "3": "Flare 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Forest Eye": {
+  "cn": "森林之眼",
+  "en": "Forest Eye",
+  "class": "ranger",
+  "learnLevel": 45,
+  "type": "active",
+  "crystal": "?",
+  "effect": {
+   "cn": "5秒内增加射程，并提升暴击伤害。",
+   "en": "Increases the weapon range and critical hit damage for 5 seconds.",
+   "ja": "5秒間、武器の射程とクリティカルダメージを増加させます。",
+   "kr": "5초 동안 무기 사거리와 크리티컬 데미지를 증가시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "暴击伤害追加提升10%",
+    "en": "10% additional critical hit damage",
+    "ja": "クリティカルダメージ 10% 追加",
+    "kr": "크리티컬 데미지 10% 추가"
+   },
+   "2": {
+    "cn": "暴击伤害追加提升30%",
+    "en": "30% additional critical hit damage",
+    "ja": "クリティカルダメージ 30% 追加",
+    "kr": "크리티컬 데미지 30% 추가"
+   },
+   "3": {
+    "cn": "暴击伤害追加提升50%",
+    "en": "50% additional critical hit damage",
+    "ja": "クリティカルダメージ 50% 追加",
+    "kr": "크리티컬 데미지 50% 추가"
+   }
+  },
+  "books": {
+   "1": "Forest Eye 1",
+   "2": "Forest Eye 2",
+   "3": "Forest Eye 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "2": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "3": {
+    "cn": "公会商店兑换（公会币x150000）",
+    "en": "Exchange at Guild Shop (Guild Coin x150000)",
+    "ja": "ギルド商店 で交換（Guild Coin x150000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x150000)"
+   }
+  },
+  "notes": {}
+ },
+ "Freezing Trap": {
+  "cn": "冰冻",
+  "en": "Freezing Trap",
+  "class": "magician",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "冰冻目标，造成不可移动效果。",
+   "en": "Freezes the target causing it to be frozen in place for a certain time. If frozen target is attacked, freezing could be broken.",
+   "ja": "対象を氷結させ、一定時間その場に凍結させます。凍結中の対象が攻撃されると解除される場合があります。",
+   "kr": "대상을 빙결시켜 일정 시간 그 자리에 얼립니다. 빙결된 대상이 공격받으면 해제될 수 있습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续4秒",
+    "en": "4 seconds",
+    "ja": "4秒",
+    "kr": "4초"
+   },
+   "2": {
+    "cn": "持续6秒",
+    "en": "6 seconds",
+    "ja": "6秒",
+    "kr": "6초"
+   },
+   "3": {
+    "cn": "持续8秒",
+    "en": "8 seconds",
+    "ja": "8秒",
+    "kr": "8초"
+   }
+  },
+  "books": {
+   "3": "Freezing Trap 3",
+   "2": "Freezing Trap 2",
+   "1": "Freezing Trap 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Harden Body": {
+  "cn": "锻炼体力",
+  "en": "Harden Body",
+  "class": "warrior",
+  "learnLevel": 30,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "锻炼体力，强化体力上限。",
+   "en": "Harden Body skill (details limited).",
+   "ja": "「体力鍛錬」スキル（詳細は未確認）。",
+   "kr": "「체력단련」스킬 (상세 미확인)."
+  },
+  "levels": {
+   "1": {
+    "cn": "体力增加4%",
+    "en": "Effect level 1",
+    "ja": "効果レベル 1",
+    "kr": "효과 레벨 1"
+   },
+   "2": {
+    "cn": "体力增加6%",
+    "en": "Effect level 2",
+    "ja": "効果レベル 2",
+    "kr": "효과 레벨 2"
+   }
+  },
+  "books": {
+   "1": "Harden Body 1",
+   "2": "Harden Body 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Healing Wave": {
+  "cn": "治愈波",
+  "en": "Healing Wave",
+  "class": "magician",
+  "learnLevel": 25,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "持续30秒施展治愈。",
+   "en": "Heals friendly target's health every 2 seconds over 30 seconds (Healing scales with INT).",
+   "ja": "30秒間、2秒ごとに味方の体力を回復します。（回復量はINTに比例）",
+   "kr": "30초 동안 2초마다 아군의 체력을 회복합니다. (회복량은 INT 비례)"
+  },
+  "levels": {
+   "1": {
+    "cn": "每2秒治愈3体力",
+    "en": "3 health",
+    "ja": "体力 3",
+    "kr": "체력 3"
+   },
+   "2": {
+    "cn": "每2秒治愈6体力",
+    "en": "6 health",
+    "ja": "体力 6",
+    "kr": "체력 6"
+   }
+  },
+  "books": {
+   "1": "Healing Wave 1",
+   "2": "Healing Wave 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Heavy Strike": {
+  "cn": "强击",
+  "en": "Heavy Strike",
+  "class": "warrior",
+  "learnLevel": 40,
+  "type": "active",
+  "crystal": "All",
+  "effect": {
+   "cn": "消耗所有水晶，造成强力一击，有一定机率造成沉默状态。",
+   "en": "Heavy single target strike.",
+   "ja": "単体への強力な一撃。",
+   "kr": "단일 대상에게 강력한 일격."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间30秒",
+    "en": "Heavy damage",
+    "ja": "強力なダメージ",
+    "kr": "강력한 데미지"
+   },
+   "2": {
+    "cn": "冷却时间25秒",
+    "en": "Heavier damage",
+    "ja": "さらに強力なダメージ",
+    "kr": "더 강력한 데미지"
+   }
+  },
+  "books": {
+   "2": "Heavy Strike 2",
+   "1": "Heavy Strike 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Hellfire": {
+  "cn": "炼狱火道",
+  "en": "Hellfire",
+  "class": "magician",
+  "learnLevel": 40,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使目标燃烧起炼狱之火。",
+   "en": "Ignites by drawing hellfire up from where the target stands.",
+   "ja": "対象の足元から獄炎を呼び出して燃やします。",
+   "kr": "대상이 서 있는 곳에서 지옥불을 끌어올려 태웁니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成33伤害",
+    "en": "33 damage",
+    "ja": "ダメージ 33",
+    "kr": "데미지 33"
+   },
+   "2": {
+    "cn": "造成40伤害",
+    "en": "40 damage",
+    "ja": "ダメージ 40",
+    "kr": "데미지 40"
+   }
+  },
+  "books": {
+   "1": "Hellfire 1",
+   "2": "Hellfire 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Hemorrhage": {
+  "cn": "出血",
+  "en": "Hemorrhage",
+  "class": "warrior",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "发动每次可造成伤害的攻击。",
+   "en": "Wounds the targets causing them to bleed.",
+   "ja": "対象に傷を負わせ、出血させます。",
+   "kr": "대상에게 상처를 입혀 출혈시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "每次造成2伤害",
+    "en": "2 damage per tick",
+    "ja": "毎秒ダメージ 2",
+    "kr": "초당 데미지 2"
+   },
+   "2": {
+    "cn": "每次造成4伤害",
+    "en": "4 damage per tick",
+    "ja": "毎秒ダメージ 4",
+    "kr": "초당 데미지 4"
+   },
+   "3": {
+    "cn": "每次造成8伤害",
+    "en": "8 damage per tick",
+    "ja": "毎秒ダメージ 8",
+    "kr": "초당 데미지 8"
+   }
+  },
+  "books": {
+   "3": "Hemorrhage 3",
+   "1": "Hemorrhage 1",
+   "2": "Hemorrhage 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Ice Lance": {
+  "cn": "冰矛",
+  "en": "Ice Lance",
+  "class": "magician",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "丢掷冰矛冷冻目标，使其陷入无法移动状态。",
+   "en": "Throws an ice lance at target, possibly freezing it.",
+   "ja": "対象に氷の槍を投げ、氷結させることがあります。",
+   "kr": "대상에게 얼음 창을 던져 빙결시킬 수 있습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "造成18伤害",
+    "en": "18 damage",
+    "ja": "ダメージ 18",
+    "kr": "데미지 18"
+   },
+   "2": {
+    "cn": "造成20伤害",
+    "en": "20 damage",
+    "ja": "ダメージ 20",
+    "kr": "데미지 20"
+   }
+  },
+  "books": {
+   "1": "Ice Lance 1",
+   "2": "Ice Lance 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Ice Prison": {
+  "cn": "冰牢",
+  "en": "Ice Prison",
+  "class": "magician",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "冰冻一定范围内的目标，并造成不可移动状态。",
+   "en": "Freezes targets within certain range (4 tiles).",
+   "ja": "一定範囲（4マス）の対象を氷結させます。",
+   "kr": "일정 범위(4칸)의 대상을 빙결시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续4秒",
+    "en": "Freezes 4 seconds",
+    "ja": "4秒間 氷結",
+    "kr": "4초 빙결"
+   },
+   "2": {
+    "cn": "持续6秒",
+    "en": "Freezes 6 seconds",
+    "ja": "6秒間 氷結",
+    "kr": "6초 빙결"
+   },
+   "3": {
+    "cn": "持续8秒",
+    "en": "Freezes 8 seconds",
+    "ja": "8秒間 氷結",
+    "kr": "8초 빙결"
+   }
+  },
+  "books": {
+   "2": "Ice Prison 2",
+   "1": "Ice Prison 1",
+   "3": "Ice Prison 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "契约者莫比处制作（传承的知识书 x3 + 10000金币）",
+    "en": "Craft at Pledger Moby (Inherited Book of Knowledge x3 + 10,000 Gold)",
+    "ja": "誓約者モビ で製作（Inherited Book of Knowledge x3 + 10,000 Gold）",
+    "kr": "서약자 모비에서 제작 (Inherited Book of Knowledge x3 + 10,000 Gold)"
+   }
+  },
+  "notes": {}
+ },
+ "Impact Shot": {
+  "cn": "强烈一击",
+  "en": "Impact Shot",
+  "class": "ranger",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "将力量灌注在弓箭上射向目标，造成伤害并陷入眩晕状态。",
+   "en": "Puts energy in an arrow to cause temporal impact on the target.",
+   "ja": "矢にエネルギーを込め、対象に一時的な衝撃を与えます。",
+   "kr": "화살에 에너지를 담아 대상에게 일시적인 충격을 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "2": {
+    "cn": "40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   },
+   "3": {
+    "cn": "80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   },
+   "4": {
+    "cn": "160%",
+    "en": "160% addition",
+    "ja": "160% 増加",
+    "kr": "160% 증가"
+   }
+  },
+  "books": {
+   "2": "Impact Shot 2",
+   "3": "Impact Shot 3",
+   "1": "Impact Shot 1",
+   "4": "Impact Shot 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Impact Training": {
+  "cn": "冲击锻炼",
+  "en": "Impact Training",
+  "class": "breaker",
+  "learnLevel": 25,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "于一定时间内免疫减益效果。免疫成功时，恢复水晶点数。",
+   "en": "Grants immunity to debuffs for a certain period. Restores Crystal Points upon successful resistance.",
+   "ja": "一定時間、弱体効果を無効化します。抵抗に成功するとクリスタルを回復します。",
+   "kr": "일정 시간 디버프를 무효화합니다. 저항에 성공하면 크리스탈을 회복합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "0.5秒内免疫",
+    "en": "0.5 seconds immunity",
+    "ja": "0.5秒間 無効",
+    "kr": "0.5초 무효"
+   },
+   "2": {
+    "cn": "1秒内免疫",
+    "en": "1.0 seconds immunity",
+    "ja": "1.0秒間 無効",
+    "kr": "1.0초 무효"
+   },
+   "3": {
+    "cn": "1.5秒内免疫",
+    "en": "1.5 seconds immunity",
+    "ja": "1.5秒間 無効",
+    "kr": "1.5초 무효"
+   }
+  },
+  "books": {
+   "2": "Impact Training 2",
+   "3": "Impact Training 3",
+   "1": "Impact Training 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Instinct Stimulus": {
+  "cn": "刺激本能",
+  "en": "Instinct Stimulus",
+  "class": "ranger",
+  "learnLevel": 30,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "刺激本能，增加暴击伤害量上限。",
+   "en": "Stimulates the caster's instinct to increase the maximum amount of crystals.",
+   "ja": "本能を刺激し、クリスタルの最大量を増加させます。",
+   "kr": "본능을 자극하여 크리스탈 최대량을 증가시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "水晶x1",
+    "en": "1 crystal",
+    "ja": "クリスタル 1",
+    "kr": "크리스탈 1"
+   }
+  },
+  "books": {
+   "1": "Instinct Stimulus 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Last Resistance": {
+  "cn": "最后抵抗",
+  "en": "Last Resistance",
+  "class": "warrior",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "一定时间内减少90%所受伤害量。",
+   "en": "Receive only 10% of the damage for a certain time.",
+   "ja": "一定時間、受けるダメージを10%のみにします。",
+   "kr": "일정 시간 받는 데미지를 10%만 받습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续5秒",
+    "en": "5 seconds",
+    "ja": "5秒",
+    "kr": "5초"
+   },
+   "2": {
+    "cn": "持续6秒",
+    "en": "6 seconds",
+    "ja": "6秒",
+    "kr": "6초"
+   }
+  },
+  "books": {
+   "1": "Last Resistance 1",
+   "2": "Last Resistance 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Leap": {
+  "cn": "跳跃",
+  "en": "Leap",
+  "class": "breaker",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "快速向前移动。",
+   "en": "Quickly dashes toward the facing direction.",
+   "ja": "向いている方向へ素早くダッシュします。",
+   "kr": "바라보는 방향으로 빠르게 대시합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间6秒",
+    "en": "6 seconds cooldown",
+    "ja": "クールタイム 6秒",
+    "kr": "재사용 대기시간 6초"
+   },
+   "2": {
+    "cn": "冷却时间5秒",
+    "en": "5 seconds cooldown",
+    "ja": "クールタイム 5秒",
+    "kr": "재사용 대기시간 5초"
+   },
+   "3": {
+    "cn": "冷却时间4秒",
+    "en": "4 seconds cooldown",
+    "ja": "クールタイム 4秒",
+    "kr": "재사용 대기시간 4초"
+   },
+   "4": {
+    "cn": "冷却时间3秒",
+    "en": "3 seconds cooldown",
+    "ja": "クールタイム 3秒",
+    "kr": "재사용 대기시간 3초"
+   }
+  },
+  "books": {
+   "4": "Leap 4",
+   "1": "Leap 1",
+   "2": "Leap 2",
+   "3": "Leap 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+    "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)",
+    "ja": "ウディウィディ村 / ウディウォディ村 暴風戦場管理人 で交換（名誉项链x60）",
+    "kr": "우디위디 마을 / 우디워디 마을 폭풍 전장 관리인에서 교환 (名誉项链x60)"
+   }
+  },
+  "notes": {}
+ },
+ "Light Healing": {
+  "cn": "光明疗愈",
+  "en": "Light Healing",
+  "class": "magician",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "恢复目标的体力。(智力从10点开始，每增加1点奇数智力，治疗量增加+1。)",
+   "en": "Heals a friendly target(Starting at 10 Int, each odd Int value increases Healing by +1.).",
+   "ja": "味方1人を回復します（INT 10から、奇数ごとに回復量+1）。",
+   "kr": "아군 1명을 회복합니다(INT 10부터 홀수마다 회복량 +1)."
+  },
+  "levels": {
+   "1": {
+    "cn": "恢复20体力",
+    "en": "Heals 20",
+    "ja": "体力 20 回復",
+    "kr": "체력 20 회복"
+   },
+   "2": {
+    "cn": "恢复30体力",
+    "en": "Heals 30",
+    "ja": "体力 30 回復",
+    "kr": "체력 30 회복"
+   },
+   "3": {
+    "cn": "恢复40体力",
+    "en": "Heals 40",
+    "ja": "体力 40 回復",
+    "kr": "체력 40 회복"
+   }
+  },
+  "books": {
+   "3": "Light Healing 3",
+   "1": "Light Healing 1",
+   "2": "Light Healing 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Meditation": {
+  "cn": "冥想",
+  "en": "Meditation",
+  "class": "magician",
+  "learnLevel": 15,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "增加魔力再生速度。",
+   "en": "Passive. Increases mana regeneration.",
+   "ja": "パッシブ。マナ回復量を増加させます。",
+   "kr": "패시브. 마나 회복량을 증가시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "魔力再生增加10",
+    "en": "+10",
+    "ja": "+10",
+    "kr": "+10"
+   },
+   "2": {
+    "cn": "魔力再生增加15",
+    "en": "+15",
+    "ja": "+15",
+    "kr": "+15"
+   }
+  },
+  "books": {
+   "2": "Meditation 2",
+   "1": "Meditation 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Multi Shot": {
+  "cn": "多重射击",
+  "en": "Multi Shot",
+  "class": "ranger",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "追加对其他目标发射弓箭。",
+   "en": "Shoots multiple targets.",
+   "ja": "複数の対象に矢を放ちます。",
+   "kr": "여러 대상에게 화살을 발사합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加1个目标",
+    "en": "1 additional target",
+    "ja": "対象 +1",
+    "kr": "대상 +1"
+   },
+   "2": {
+    "cn": "追加2个目标",
+    "en": "2 additional targets",
+    "ja": "対象 +2",
+    "kr": "대상 +2"
+   },
+   "3": {
+    "cn": "追加3个目标",
+    "en": "3 additional targets",
+    "ja": "対象 +3",
+    "kr": "대상 +3"
+   }
+  },
+  "books": {
+   "2": "Multi Shot 2",
+   "1": "Multi Shot 1",
+   "3": "Multi Shot 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+    "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一のビリヤード / セピアルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 당구 / 세피아 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Neutralize": {
+  "cn": "无效化",
+  "en": "Neutralize",
+  "class": "magician",
+  "learnLevel": 40,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "解除目标所有水晶。",
+   "en": "Remove all of the opponent's crystals.",
+   "ja": "相手のクリスタルをすべて除去します。",
+   "kr": "상대의 크리스탈을 모두 제거합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间80秒",
+    "en": "Cool time 80 seconds",
+    "ja": "クールタイム 80秒",
+    "kr": "재사용 대기시간 80초"
+   },
+   "2": {
+    "cn": "冷却时间70秒",
+    "en": "Cool time 70 seconds",
+    "ja": "クールタイム 70秒",
+    "kr": "재사용 대기시간 70초"
+   }
+  },
+  "books": {
+   "1": "Neutralize 1",
+   "2": "Neutralize 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Parry": {
+  "cn": "阻挡攻击",
+  "en": "Parry",
+  "class": "warrior",
+  "learnLevel": 5,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "有一定机率以武器阻挡攻击。",
+   "en": "Passive skill, blocks enemy attacks with a set probability.",
+   "ja": "パッシブスキル。一定確率で敵の攻撃をブロックします。",
+   "kr": "패시브 스킬. 일정 확률로 적의 공격을 막습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加1%",
+    "en": "1%",
+    "ja": "1%",
+    "kr": "1%"
+   },
+   "2": {
+    "cn": "追加2%",
+    "en": "2%",
+    "ja": "2%",
+    "kr": "2%"
+   },
+   "3": {
+    "cn": "追加4%",
+    "en": "4%",
+    "ja": "4%",
+    "kr": "4%"
+   }
+  },
+  "books": {
+   "3": "Parry 3",
+   "1": "Parry 1",
+   "2": "Parry 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Poisoning": {
+  "cn": "中毒",
+  "en": "Poisoning",
+  "class": "magician",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "对目标下毒，持续15秒造成伤害。",
+   "en": "Poisons the target causing damage over 15 seconds.",
+   "ja": "対象を毒状態にし、15秒間ダメージを与えます。",
+   "kr": "대상을 중독시켜 15초 동안 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "每次造成3伤害",
+    "en": "15 damage",
+    "ja": "ダメージ 15",
+    "kr": "데미지 15"
+   },
+   "2": {
+    "cn": "每次造成4伤害",
+    "en": "20 damage",
+    "ja": "ダメージ 20",
+    "kr": "데미지 20"
+   },
+   "3": {
+    "cn": "每次造成6伤害",
+    "en": "30 damage",
+    "ja": "ダメージ 30",
+    "kr": "데미지 30"
+   }
+  },
+  "books": {
+   "1": "Poisoning 1",
+   "2": "Poisoning 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Power Shot": {
+  "cn": "强力射击",
+  "en": "Power Shot",
+  "class": "ranger",
+  "learnLevel": 40,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "发射强烈一箭。",
+   "en": "Shoots a powerful arrow.",
+   "ja": "強力な矢を放ちます。",
+   "kr": "강력한 화살을 발사합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加100%",
+    "en": "Raise 100%",
+    "ja": "100% 上昇",
+    "kr": "100% 상승"
+   },
+   "2": {
+    "cn": "追加150%",
+    "en": "Raise 150%",
+    "ja": "150% 上昇",
+    "kr": "150% 상승"
+   }
+  },
+  "books": {
+   "1": "Power Shot 1",
+   "2": "Power Shot 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Prayer of Protection": {
+  "cn": "守护祷告",
+  "en": "Prayer of Protection",
+  "class": "magician",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "恢复目标的体力，并施展吸收伤害的护身盾牌。(守护祷告存在期间，免疫眩晕)",
+   "en": "Casts a weaker shield spell while at the same time healing a small amount.(While POP is active, immune to Stun.)",
+   "ja": "弱いシールドを張りつつ少量の体力を回復します。（守護の祈りが有効な間は気絶を無効化）",
+   "kr": "약한 실드를 두르며 소량의 체력을 회복합니다. (수호의 기원이 유지되는 동안 기절 무효)"
+  },
+  "levels": {
+   "1": {
+    "cn": "恢复15体力+吸收35伤害",
+    "en": "Heal 15, Shield 25",
+    "ja": "体力 15 回復 / シールド 25",
+    "kr": "체력 15 회복 / 쉴드 25"
+   },
+   "2": {
+    "cn": "恢复25体力+吸收55伤害",
+    "en": "Heal 25, Shield 55",
+    "ja": "体力 25 回復 / シールド 55",
+    "kr": "체력 25 회복 / 쉴드 55"
+   },
+   "3": {
+    "cn": "恢复35体力+吸收95伤害",
+    "en": "Heal 35, Shield 95",
+    "ja": "体力 35 回復 / シールド 95",
+    "kr": "체력 35 회복 / 쉴드 95"
+   }
+  },
+  "books": {
+   "1": "Prayer of Protection 1",
+   "2": "Prayer of Protection 2",
+   "3": "Prayer of Protection 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Rage": {
+  "cn": "暴怒",
+  "en": "Rage",
+  "class": "warrior",
+  "learnLevel": 15,
+  "type": "active",
+  "crystal": "3",
+  "effect": {
+   "cn": "使用时，持续6秒暴怒并提高暴击率。",
+   "en": "Enrages the caster to cause all attacks to be critical at a random probability.",
+   "ja": "自身を激昂させ、一定確率で攻撃がすべてクリティカルになります。",
+   "kr": "자신을 격앙시켜 일정 확률로 모든 공격이 크리티컬이 됩니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "55%",
+    "en": "+55% crit",
+    "ja": "クリティカル +55%",
+    "kr": "크리티컬 +55%"
+   }
+  },
+  "books": {
+   "1": "Rage 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Sara's Blessing": {
+  "cn": "塞拉的祝福",
+  "en": "Sara's Blessing",
+  "class": "magician",
+  "learnLevel": 35,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使用时，恢复周围半径8格内队友的体力。",
+   "en": "Heals party members within 8 tiles. Healing scales with INT.",
+   "ja": "8マス以内のパーティーメンバーを回復します。回復量はINTに比例します。",
+   "kr": "8칸 이내의 파티원을 회복합니다. 회복량은 INT 비례입니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "恢复20体力",
+    "en": "Heals 20",
+    "ja": "体力 20 回復",
+    "kr": "체력 20 회복"
+   },
+   "2": {
+    "cn": "恢复30体力",
+    "en": "Heals 30",
+    "ja": "体力 30 回復",
+    "kr": "체력 30 회복"
+   }
+  },
+  "books": {
+   "1": "Sara's Blessing 1",
+   "2": "Sara's Blessing 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Sharp Eye": {
+  "cn": "迅速反应",
+  "en": "Sharp Eye",
+  "class": "ranger",
+  "learnLevel": 15,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "提升反应度，提高暴击率。",
+   "en": "Passive. Increases critical rate by increasing the caster's senses.",
+   "ja": "パッシブ。感覚を高めてクリティカル率を上昇させます。",
+   "kr": "패시브. 감각을 높여 크리티컬 확률을 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "1%",
+    "en": "Increases 1%",
+    "ja": "1% 増加",
+    "kr": "1% 증가"
+   },
+   "2": {
+    "cn": "2%",
+    "en": "Increases 2%",
+    "ja": "2% 増加",
+    "kr": "2% 증가"
+   },
+   "3": {
+    "cn": "4%",
+    "en": "Increases 4%",
+    "ja": "4% 増加",
+    "kr": "4% 증가"
+   }
+  },
+  "books": {
+   "1": "Sharp Eye 1",
+   "2": "Sharp Eye 2",
+   "3": "Sharp Eye 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Shield": {
+  "cn": "护身盾牌",
+  "en": "Shield",
+  "class": "magician",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "召唤出吸收伤害的盾牌。",
+   "en": "Spell casts a shield to absorb damage.",
+   "ja": "ダメージを吸収するシールドを展開します。",
+   "kr": "데미지를 흡수하는 실드를 전개합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "吸收10伤害",
+    "en": "Absorbs 10",
+    "ja": "10 吸収",
+    "kr": "10 흡수"
+   },
+   "2": {
+    "cn": "吸收20伤害",
+    "en": "Absorbs 20",
+    "ja": "20 吸収",
+    "kr": "20 흡수"
+   },
+   "3": {
+    "cn": "吸收40伤害",
+    "en": "Absorbs 40",
+    "ja": "40 吸収",
+    "kr": "40 흡수"
+   },
+   "4": {
+    "cn": "吸收80伤害",
+    "en": "Absorbs 80",
+    "ja": "80 吸収",
+    "kr": "80 흡수"
+   }
+  },
+  "books": {
+   "3": "Shield 3",
+   "4": "Shield 4",
+   "1": "Shield 1",
+   "2": "Shield 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Shift": {
+  "cn": "切换方位",
+  "en": "Shift",
+  "class": "ranger",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "往目标的反方向快速移动。",
+   "en": "Draws the caster away quickly from the target.",
+   "ja": "対象から素早く自身を引き離します。",
+   "kr": "대상으로부터 자신을 빠르게 떼어냅니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间13秒",
+    "en": "Cooldown 13 seconds",
+    "ja": "クールタイム 13秒",
+    "kr": "재사용 대기시간 13초"
+   },
+   "2": {
+    "cn": "冷却时间12秒",
+    "en": "Cooldown 12 seconds",
+    "ja": "クールタイム 12秒",
+    "kr": "재사용 대기시간 12초"
+   }
+  },
+  "books": {
+   "2": "Shift 2",
+   "1": "Shift 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Shout of Calmness": {
+  "cn": "平静呐喊",
+  "en": "Shout of Calmness",
+  "class": "warrior",
+  "learnLevel": 35,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "解除恐怖状态，并在一定时间内处于免疫恐怖状态。",
+   "en": "Shout of Calmness skill (details limited).",
+   "ja": "「冷静な叫び」スキル（詳細は未確認）。",
+   "kr": "「냉정한 외침」스킬 (상세 미확인)."
+  },
+  "levels": {
+   "1": {
+    "cn": "免疫5秒，冷却时间90秒",
+    "en": "Effect level 1",
+    "ja": "効果レベル 1",
+    "kr": "효과 레벨 1"
+   },
+   "2": {
+    "cn": "免疫6秒，冷却时间80秒",
+    "en": "Effect level 2",
+    "ja": "効果レベル 2",
+    "kr": "효과 레벨 2"
+   }
+  },
+  "books": {
+   "1": "Shout of Calmness 1",
+   "2": "Shout of Calmness 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Silence": {
+  "cn": "沉默",
+  "en": "Silence",
+  "class": "magician",
+  "learnLevel": 30,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "一定时间内无法使用有害时间的技能。",
+   "en": "Stops target from casting for a certain amount of time.",
+   "ja": "一定時間、対象の詠唱を止めます。",
+   "kr": "일정 시간 대상의 시전을 막습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "3秒",
+    "en": "3 seconds",
+    "ja": "3秒",
+    "kr": "3초"
+   },
+   "2": {
+    "cn": "4秒",
+    "en": "4 seconds",
+    "ja": "4秒",
+    "kr": "4초"
+   }
+  },
+  "books": {
+   "1": "Silence 1",
+   "2": "Silence 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Sixth Sense": {
+  "cn": "预感",
+  "en": "Sixth Sense",
+  "class": "breaker",
+  "learnLevel": 35,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "以锻炼的感知预判并回避对方的攻击。",
+   "en": "Heightened Instincts allow evasion of enemy attacks.",
+   "ja": "研ぎ澄まされた本能で敵の攻撃を回避します。",
+   "kr": "날카로워진 본능으로 적의 공격을 회피합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "回避增加1",
+    "en": "1 evasion increase",
+    "ja": "回避 1 増加",
+    "kr": "회피 1 증가"
+   },
+   "2": {
+    "cn": "回避增加2",
+    "en": "2 evasion increase",
+    "ja": "回避 2 増加",
+    "kr": "회피 2 증가"
+   }
+  },
+  "books": {
+   "2": "Sixth Sense 2",
+   "1": "Sixth Sense 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Slam": {
+  "cn": "强力肘击",
+  "en": "Slam",
+  "class": "warrior",
+  "learnLevel": 15,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "用剑击伤对方，并造成伤害使其陷入眩晕状态。",
+   "en": "A strike with a sword that may stun the target for some time.",
+   "ja": "剣による一撃で、対象を一定時間気絶させることがあります。",
+   "kr": "검으로 일격을 가해 일정 시간 대상을 기절시킬 수 있습니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20%",
+    "en": "20% addition",
+    "ja": "20% 増加",
+    "kr": "20% 증가"
+   },
+   "2": {
+    "cn": "追加40%",
+    "en": "40% addition",
+    "ja": "40% 増加",
+    "kr": "40% 증가"
+   },
+   "3": {
+    "cn": "追加80%",
+    "en": "80% addition",
+    "ja": "80% 増加",
+    "kr": "80% 증가"
+   }
+  },
+  "books": {
+   "2": "Slam 2",
+   "3": "Slam 3",
+   "1": "Slam 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Soul Drain Shot": {
+  "cn": "灵魂射击",
+  "en": "Soul Drain Shot",
+  "class": "ranger",
+  "learnLevel": 30,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "将魔力灌入弓箭中，造成一定伤害并吸收体力。",
+   "en": "Enchants an arrow to deal a certain amount of damage to drain health from the target to the caster.",
+   "ja": "矢に魔力を込め、対象から体力を吸収して自身に移します。",
+   "kr": "화살에 마력을 담아 대상의 체력을 흡수해 자신에게 옮깁니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20",
+    "en": "20 addition",
+    "ja": "20 増加",
+    "kr": "20 증가"
+   },
+   "2": {
+    "cn": "追加40",
+    "en": "40 addition",
+    "ja": "40 増加",
+    "kr": "40 증가"
+   },
+   "3": {
+    "cn": "追加60",
+    "en": "60 addition",
+    "ja": "60 増加",
+    "kr": "60 증가"
+   }
+  },
+  "books": {
+   "1": "Soul Drain Shot 1",
+   "2": "Soul Drain Shot 2",
+   "3": "Soul Drain Shot 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   },
+   "3": {
+    "cn": "庭院 戴尔菲处：whale 掉落符文x3兑换",
+    "en": "Exchange 3 identical Whale runes at 庭院 戴尔菲",
+    "ja": "同一のクジラルーン3個を 庭園 デルピ で交換",
+    "kr": "동일한 고래 룬 3개를 정원 델피에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Stampede": {
+  "cn": "惊逃",
+  "en": "Stampede",
+  "class": "warrior",
+  "learnLevel": 35,
+  "type": "active",
+  "crystal": "1",
+  "effect": {
+   "cn": "使用时，持续10秒增加周围半径8格内队友的移动速度。",
+   "en": "Increases Party members movement speed by 19 within 8 tiles for a certain time.",
+   "ja": "一定時間、8マス以内のパーティーメンバーの移動速度を19上昇させます。",
+   "kr": "일정 시간 8칸 이내 파티원의 이동속도를 19 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间160秒",
+    "en": "Cooltime 180 seconds",
+    "ja": "クールタイム 180秒",
+    "kr": "재사용 대기시간 180초"
+   },
+   "2": {
+    "cn": "冷却时间140秒",
+    "en": "Cooltime 160 seconds",
+    "ja": "クールタイム 160秒",
+    "kr": "재사용 대기시간 160초"
+   }
+  },
+  "books": {
+   "1": "Stampede 1",
+   "2": "Stampede 2"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Stoneskin": {
+  "cn": "坚石皮肤",
+  "en": "Stoneskin",
+  "class": "ranger",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "持续3分钟增加防御力。",
+   "en": "Increases the friendly target's armor for a certain time.",
+   "ja": "一定時間、味方の防御力を上昇させます。",
+   "kr": "일정 시간 아군의 방어력을 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "防御力增加2",
+    "en": "2 armor",
+    "ja": "防御力 2",
+    "kr": "방어력 2"
+   },
+   "2": {
+    "cn": "防御力增加3",
+    "en": "3 armor",
+    "ja": "防御力 3",
+    "kr": "방어력 3"
+   },
+   "3": {
+    "cn": "防御力增加4",
+    "en": "4 armor",
+    "ja": "防御力 4",
+    "kr": "방어력 4"
+   }
+  },
+  "books": {
+   "1": "Stoneskin 1",
+   "2": "Stoneskin 2",
+   "3": "Stoneskin 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Stun": {
+  "cn": "麻痹",
+  "en": "Stun",
+  "class": "magician",
+  "learnLevel": 25,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "施履冲击，并持续一定时间陷入麻痹状态。",
+   "en": "Paralyzes the target for a certain time.",
+   "ja": "一定時間、対象を麻痺させます。",
+   "kr": "일정 시간 대상을 마비시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "持续2秒",
+    "en": "2 seconds",
+    "ja": "2秒",
+    "kr": "2초"
+   },
+   "2": {
+    "cn": "持续3秒",
+    "en": "3 seconds",
+    "ja": "3秒",
+    "kr": "3초"
+   }
+  },
+  "books": {
+   "2": "Stun 2",
+   "1": "Stun 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Sweeping Strikes": {
+  "cn": "强力横扫",
+  "en": "Sweeping Strikes",
+  "class": "warrior",
+  "learnLevel": 20,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "使用时，持续6秒对追加目标造成伤害。",
+   "en": "A sweeping attack that deals damage to additional targets. Also increases attack range.",
+   "ja": "周囲を薙ぎ払って追加の対象にダメージを与えます。攻撃範囲も広がります。",
+   "kr": "주변을 휩쓸어 추가 대상에게 데미지를 줍니다. 공격 범위도 넓어집니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加1个目标",
+    "en": "1 additional target",
+    "ja": "対象 +1",
+    "kr": "대상 +1"
+   },
+   "2": {
+    "cn": "追加2个目标",
+    "en": "2 additional target",
+    "ja": "対象 +2",
+    "kr": "대상 +2"
+   },
+   "3": {
+    "cn": "追加3个目标",
+    "en": "3 additional target",
+    "ja": "対象 +3",
+    "kr": "대상 +3"
+   },
+   "4": {
+    "cn": "追加4个目标",
+    "en": "4 additional target",
+    "ja": "対象 +4",
+    "kr": "대상 +4"
+   }
+  },
+  "books": {
+   "1": "Sweeping Strikes 1",
+   "2": "Sweeping Strikes 2",
+   "3": "Sweeping Strikes 3",
+   "4": "Sweeping Strikes 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：billiard/sephia 掉落符文x3兑换",
+    "en": "Exchange 3 identical Billiard/Sephia runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一のビリヤード / セピアルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 당구 / 세피아 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Swift": {
+  "cn": "俐落身手",
+  "en": "Swift",
+  "class": "ranger",
+  "learnLevel": 15,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "身体变得轻快，提高闪避率。",
+   "en": "Passive. Lightens the weight of your body to increase evasion rate.",
+   "ja": "パッシブ。体を軽くして回避率を上昇させます。",
+   "kr": "패시브. 몸을 가볍게 하여 회피율을 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "提高1%",
+    "en": "+1% increase",
+    "ja": "1% 増加",
+    "kr": "1% 증가"
+   }
+  },
+  "books": {
+   "1": "Swift 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Taunting Blow": {
+  "cn": "挑衅",
+  "en": "Taunting Blow",
+  "class": "warrior",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "2",
+  "effect": {
+   "cn": "对敌人发动挑衅攻击。技能等级越高，挑衅强度越高。",
+   "en": "Taunts the target to attack you, dealing slight damage.",
+   "ja": "対象を挑発して自分を攻撃させ、少量のダメージを与えます。",
+   "kr": "대상을 도발하여 자신을 공격하게 하고 소량의 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "挑衅强度提升",
+    "en": "As the skill level increases, so does the taunting strength.",
+    "ja": "スキルレベルが上がるほど挑発力も上昇します。",
+    "kr": "스킬 레벨이 오를수록 도발력도 상승합니다."
+   },
+   "2": {
+    "cn": "挑衅强度提升",
+    "en": "Increased taunting strength",
+    "ja": "挑発力 増加",
+    "kr": "도발력 증가"
+   }
+  },
+  "books": {
+   "2": "Taunting Blow 2",
+   "1": "Taunting Blow 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Teleport": {
+  "cn": "瞬间移动",
+  "en": "Teleport",
+  "class": "magician",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "向前方瞬间移动一定距离。",
+   "en": "Teleports the caster a certain distance in the direction they are facing.",
+   "ja": "向いている方向へ一定距離テレポートします。",
+   "kr": "바라보는 방향으로 일정 거리 순간이동합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间12秒",
+    "en": "Cooltime 12 seconds",
+    "ja": "クールタイム 12秒",
+    "kr": "재사용 대기시간 12초"
+   },
+   "2": {
+    "cn": "冷却时间11秒",
+    "en": "Cooltime 11 seconds",
+    "ja": "クールタイム 11秒",
+    "kr": "재사용 대기시간 11초"
+   },
+   "3": {
+    "cn": "冷却时间10秒",
+    "en": "Cooltime 10 seconds",
+    "ja": "クールタイム 10秒",
+    "kr": "재사용 대기시간 10초"
+   }
+  },
+  "books": {
+   "2": "Teleport 2",
+   "3": "Teleport 3",
+   "1": "Teleport 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波鲁波图腾）",
+    "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波鲁波图腾)",
+    "ja": "ウィングフリール島海岸 呪術師ドンゴ で交換（ウパルパトーテム）",
+    "kr": "윙프릴섬의 해변 주술사 동고에서 교환 (우파루파토템)"
+   }
+  },
+  "notes": {}
+ },
+ "Thorns": {
+  "cn": "尖刺藤蔓",
+  "en": "Thorns",
+  "class": "ranger",
+  "learnLevel": 5,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "持续2分钟每次被攻击时，反射一定伤害量。",
+   "en": "Reflects certain amount of damage received.",
+   "ja": "受けたダメージの一定量を反射します。",
+   "kr": "받은 데미지의 일정량을 반사합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "反射2伤害",
+    "en": "2 damage",
+    "ja": "ダメージ 2",
+    "kr": "데미지 2"
+   },
+   "2": {
+    "cn": "反射4伤害",
+    "en": "4 damage",
+    "ja": "ダメージ 4",
+    "kr": "데미지 4"
+   },
+   "3": {
+    "cn": "反射8伤害",
+    "en": "8 damage",
+    "ja": "ダメージ 8",
+    "kr": "데미지 8"
+   }
+  },
+  "books": {
+   "1": "Thorns 1",
+   "2": "Thorns 2",
+   "3": "Thorns 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+    "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)",
+    "ja": "ウディウィディ村 / ウディウォディ村 暴風戦場管理人 で交換（名誉项链x60）",
+    "kr": "우디위디 마을 / 우디워디 마을 폭풍 전장 관리인에서 교환 (名誉项链x60)"
+   }
+  },
+  "notes": {}
+ },
+ "Toughness": {
+  "cn": "强韧",
+  "en": "Toughness",
+  "class": "warrior",
+  "learnLevel": 15,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "锻炼身体，减少所受伤害。",
+   "en": "Passive skill. Decrease damage taken from all sources.",
+   "ja": "パッシブスキル。あらゆるダメージを軽減します。",
+   "kr": "패시브 스킬. 모든 원인으로 받는 데미지를 감소시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "2%",
+    "en": "2%",
+    "ja": "2%",
+    "kr": "2%"
+   },
+   "2": {
+    "cn": "4%",
+    "en": "4%",
+    "ja": "4%",
+    "kr": "4%"
+   },
+   "3": {
+    "cn": "6%",
+    "en": "6%",
+    "ja": "6%",
+    "kr": "6%"
+   }
+  },
+  "books": {
+   "1": "Toughness 1",
+   "2": "Toughness 2",
+   "3": "Toughness 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Weakness": {
+  "cn": "弱化防御",
+  "en": "Weakness",
+  "class": "ranger",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "弱化目标的防御力。",
+   "en": "Weakens the targets' armor.",
+   "ja": "対象の防御力を弱めます。",
+   "kr": "대상의 방어력을 약화시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "防御力减少2",
+    "en": "Decrease 2 armor",
+    "ja": "防御力 2 減少",
+    "kr": "방어력 2 감소"
+   },
+   "2": {
+    "cn": "防御力减少4",
+    "en": "Decrease 4 armor",
+    "ja": "防御力 4 減少",
+    "kr": "방어력 4 감소"
+   },
+   "3": {
+    "cn": "防御力减少8",
+    "en": "Decrease 8 armor",
+    "ja": "防御力 8 減少",
+    "kr": "방어력 8 감소"
+   }
+  },
+  "books": {
+   "2": "Weakness 2",
+   "1": "Weakness 1",
+   "3": "Weakness 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "羽妖岛海岸 咒术师东哥处兑换（乌波青铜铃铛）",
+    "en": "Exchange at 羽妖岛海岸 咒术师东哥 (乌波青铜铃铛)",
+    "ja": "ウィングフリール島海岸 呪術師ドンゴ で交換（ウパルパのブロンズ鈴）",
+    "kr": "윙프릴섬의 해변 주술사 동고에서 교환 (우파청동방울)"
+   }
+  },
+  "notes": {}
+ },
+ "Wild Charge": {
+  "cn": "疯狂冲刺",
+  "en": "Wild Charge",
+  "class": "warrior",
+  "learnLevel": 10,
+  "type": "active",
+  "crystal": "0",
+  "effect": {
+   "cn": "冲向范围内的目标，造成眩晕状态。",
+   "en": "Charges the target within a certain range causing a stun.",
+   "ja": "一定範囲の対象に突進し、気絶させます。",
+   "kr": "일정 범위의 대상에게 돌진하여 기절시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间15秒",
+    "en": "Cooltime 15 seconds",
+    "ja": "クールタイム 15秒",
+    "kr": "재사용 대기시간 15초"
+   },
+   "2": {
+    "cn": "冷却时间13秒",
+    "en": "Cooltime 13 seconds",
+    "ja": "クールタイム 13秒",
+    "kr": "재사용 대기시간 13초"
+   },
+   "3": {
+    "cn": "冷却时间11秒",
+    "en": "Cooltime 11 seconds",
+    "ja": "クールタイム 11秒",
+    "kr": "재사용 대기시간 11초"
+   },
+   "4": {
+    "cn": "冷却时间9秒",
+    "en": "Cooltime 9 seconds",
+    "ja": "クールタイム 9秒",
+    "kr": "재사용 대기시간 9초"
+   }
+  },
+  "books": {
+   "1": "Wild Charge 1",
+   "2": "Wild Charge 2",
+   "3": "Wild Charge 3",
+   "4": "Wild Charge 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "羽妖岛海岸 阅读家马尔处购买",
+    "en": "Buy from 阅读家马尔 at 羽妖岛海岸",
+    "ja": "ウィングフリール島海岸の読書家マルから購入",
+    "kr": "윙프릴섬의 해변의 독서가 말에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 暴风战场管理员处兑换（名誉项链x60）",
+    "en": "Exchange at 木林村/木木村 暴风战场管理员 (名誉项链x60)",
+    "ja": "ウディウィディ村 / ウディウォディ村 暴風戦場管理人 で交換（名誉项链x60）",
+    "kr": "우디위디 마을 / 우디워디 마을 폭풍 전장 관리인에서 교환 (名誉项链x60)"
+   },
+   "4": {
+    "cn": "石冠营地 神秘幻影研究家处：faith/illust 掉落符文x3兑换",
+    "en": "Exchange 3 identical Faith/Illust runes at 石冠营地 神秘幻影研究家",
+    "ja": "同一の信頼 / イラストルーン3個を クラウンロック駐屯地 神秘の幻影研究家 で交換",
+    "kr": "동일한 신뢰 / 일러스트 룬 3개를 크라운락 주둔지 신비한 환영 연구가에서 교환"
+   }
+  },
+  "notes": {}
+ },
+ "Wild Swing": {
+  "cn": "疯狂剑舞",
+  "en": "Wild Swing",
+  "class": "warrior",
+  "learnLevel": 2,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "强力砍击，造成追加伤害。",
+   "en": "Deals additional damage with a strong attack.",
+   "ja": "強力な攻撃で追加ダメージを与えます。",
+   "kr": "강력한 공격으로 추가 데미지를 줍니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "追加20%",
+    "en": "20% additional damage",
+    "ja": "ダメージ 20% 追加",
+    "kr": "데미지 20% 추가"
+   },
+   "2": {
+    "cn": "追加40%",
+    "en": "40% additional damage",
+    "ja": "ダメージ 40% 追加",
+    "kr": "데미지 40% 추가"
+   },
+   "3": {
+    "cn": "追加80%",
+    "en": "80% additional damage",
+    "ja": "ダメージ 80% 追加",
+    "kr": "데미지 80% 추가"
+   },
+   "4": {
+    "cn": "追加160%",
+    "en": "160% additional damage",
+    "ja": "ダメージ 160% 追加",
+    "kr": "데미지 160% 추가"
+   }
+  },
+  "books": {
+   "3": "Wild Swing 3",
+   "1": "Wild Swing 1",
+   "2": "Wild Swing 2",
+   "4": "Wild Swing 4"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "2": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "3": {
+    "cn": "木林村/木木村 阅读家拉尔处购买",
+    "en": "Buy from 阅读家拉尔 at 木林村/木木村",
+    "ja": "ウディウィディ村 / ウディウォディ村の読書家ラルから購入",
+    "kr": "우디위디 마을 / 우디워디 마을의 독서가 랄에게서 구매"
+   },
+   "4": {
+    "cn": "蘑菇林 库林处合成（双手活用武器秘籍1/2/3p）",
+    "en": "Synthesize at 蘑菇林 库林 (双手活用武器秘籍1/2/3p)",
+    "ja": "キノコの森 クリン で合成（双手活用武器秘籍1/2/3p）",
+    "kr": "버섯 숲 쿠린에서 합성 (双手活用武器秘籍1/2/3p)"
+   }
+  },
+  "notes": {}
+ },
+ "Will of Elemental": {
+  "cn": "强烈意志",
+  "en": "Will of Elemental",
+  "class": "warrior",
+  "learnLevel": 25,
+  "type": "passive",
+  "crystal": "",
+  "effect": {
+   "cn": "提高对所有元素的抵抗力。",
+   "en": "Will of Elemental skill (details limited).",
+   "ja": "「意志」スキル（詳細は未確認）。",
+   "kr": "「의지」스킬 (상세 미확인)."
+  },
+  "levels": {
+   "1": {
+    "cn": "抵抗+1",
+    "en": "Effect level 1",
+    "ja": "効果レベル 1",
+    "kr": "효과 레벨 1"
+   },
+   "2": {
+    "cn": "抵抗+2",
+    "en": "Effect level 2",
+    "ja": "効果レベル 2",
+    "kr": "효과 레벨 2"
+   }
+  },
+  "books": {
+   "2": "Will of Elemental 2",
+   "1": "Will of Elemental 1"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "主城 阅读家哈尔处购买",
+    "en": "Buy from 阅读家哈尔 at 主城",
+    "ja": "メインシティの読書家ハルから購入",
+    "kr": "메인시티의 독서가 할에게서 구매"
+   }
+  },
+  "notes": {}
+ },
+ "Ki Barrier": {
+  "cn": "气之帷幕",
+  "en": "Ki Barrier",
+  "class": "breaker",
+  "learnLevel": 25,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使HP上限增加10秒，并立即恢复HP",
+   "en": "Increases Max HP for 10 sec and instantly recovers HP.",
+   "ja": "10秒間、最大体力を増加させ、即座に体力を回復します。",
+   "kr": "10초 동안 최대 체력을 증가시키고 즉시 체력을 회복합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "HP 50",
+    "en": "HP 50",
+    "ja": "体力 50",
+    "kr": "체력 50"
+   },
+   "2": {
+    "cn": "HP 75",
+    "en": "HP 75",
+    "ja": "体力 75",
+    "kr": "체력 75"
+   },
+   "3": {
+    "cn": "HP 100",
+    "en": "HP 100",
+    "ja": "体力 100",
+    "kr": "체력 100"
+   }
+  },
+  "notes": {},
+  "books": {},
+  "extraSources": {}
+ },
+ "Upsurge": {
+  "cn": "激昂",
+  "en": "Upsurge",
+  "class": "breaker",
+  "learnLevel": 40,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "使用时，使周围半径8格内队友的暴击率提升5，持续5秒",
+   "en": "Increases the critical rate of party members in a radius of 8 tiles by 5 for 5 sec.",
+   "ja": "5秒間、8マス以内のパーティーメンバーのクリティカル率を5上昇させます。",
+   "kr": "5초 동안 8칸 이내 파티원의 크리티컬 확률을 5 상승시킵니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "冷却时间180秒",
+    "en": "180 seconds cooldown",
+    "ja": "クールタイム 180秒",
+    "kr": "재사용 대기시간 180초"
+   },
+   "2": {
+    "cn": "冷却时间160秒",
+    "en": "160 seconds cooldown",
+    "ja": "クールタイム 160秒",
+    "kr": "재사용 대기시간 160초"
+   }
+  },
+  "notes": {},
+  "books": {},
+  "extraSources": {}
+ },
+ "Air-Rending Kick": {
+  "cn": "破空脚",
+  "en": "Air-Rending Kick",
+  "class": "breaker",
+  "learnLevel": 45,
+  "type": "active",
+  "crystal": "",
+  "effect": {
+   "cn": "以强力回旋踢撼动空气，对远处的目标造成冲击。自身目前体力越低，伤害量越高",
+   "en": "Unleashes a powerful roundhouse kick that sends a shockwave through the air to strike a distant target. Deals more damage the lower your current HP.",
+   "ja": "強力な回し蹴りで衝撃波を放ち、遠くの対象を打ちます。現在の体力が低いほどダメージが増加します。",
+   "kr": "강력한 회축으로 충격파를 보내 멀리 있는 대상을 타격합니다. 현재 체력이 낮을수록 데미지가 증가합니다."
+  },
+  "levels": {
+   "1": {
+    "cn": "100%",
+    "en": "100%",
+    "ja": "100%",
+    "kr": "100%"
+   },
+   "2": {
+    "cn": "200%",
+    "en": "200%",
+    "ja": "200%",
+    "kr": "200%"
+   },
+   "3": {
+    "cn": "300%",
+    "en": "300%",
+    "ja": "300%",
+    "kr": "300%"
+   }
+  },
+  "notes": {
+   "cn": [
+    "赋予寒气：赋予麻痹减益效果",
+    "赋予闪电：赋予麻痹减益效果"
+   ],
+   "en": [
+    "Cold Imbue: Apply Stun",
+    "Electric Imbue: Apply Stun"
+   ],
+   "ja": [
+    "冷気付与: 気絶付与",
+    "電気付与: 気絶付与"
+   ],
+   "kr": [
+    "냉기 부여: 기절 부여",
+    "전기 부여: 기절 부여"
+   ]
+  },
+  "books": {
+   "1": "Air-Rending Kick 1",
+   "2": "Air-Rending Kick 2",
+   "3": "Air-Rending Kick 3"
+  },
+  "extraSources": {
+   "1": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "2": {
+    "cn": "公会商店兑换（公会币x100000）",
+    "en": "Exchange at Guild Shop (Guild Coin x100000)",
+    "ja": "ギルド商店 で交換（Guild Coin x100000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x100000)"
+   },
+   "3": {
+    "cn": "公会商店兑换（公会币x150000）",
+    "en": "Exchange at Guild Shop (Guild Coin x150000)",
+    "ja": "ギルド商店 で交換（Guild Coin x150000）",
+    "kr": "길드 상점에서 교환 (Guild Coin x150000)"
+   }
+  }
+ }
 }

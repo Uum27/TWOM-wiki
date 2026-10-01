@@ -89,7 +89,7 @@
       "Armor Enchant Scroll (D Class)"
     ]
   },
-  "BULLDOZER'S BROTHER": {
+  "BULLDOZER BROTHER": {
     "中文名": "凶猛猪大哥",
     "掉落物": [
       "Gold",
@@ -370,7 +370,7 @@
       "Weapon Enchant Scroll (C Class)",
       "Old Box",
       "Mystic Stone",
-      "Long Bow",
+      "Longbow",
       "Green Crystal"
     ]
   },
@@ -388,7 +388,7 @@
       "Weapon Enchant Scroll (C Class)",
       "Old Box",
       "Mystic Stone",
-      "Long Bow"
+      "Longbow"
     ]
   },
   "Mutant Woopa": {
@@ -408,7 +408,7 @@
       "Longsword",
       "Composite Bow",
       "Magician Staff",
-      "Breaker's Knuckle",
+      "Breaker’s Knuckle",
       "Slam 2",
       "Carnivalize 1",
       "Pet Crystal"
@@ -432,7 +432,7 @@
       "Woopa Bronze Bell",
       "Woopa Crystal Scale",
       "Woopa Roopa Totem",
-      "Woopa Roopa's Guard"
+      "Woopa-Roopa’s Guard"
     ]
   },
   "TURTLE Z": {
@@ -784,7 +784,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Cloak of Death",
-      "Cloak of Half Death"
+      "Cloak of Half-Death"
     ]
   },
   "OOHEEHEEK": {
@@ -811,7 +811,7 @@
       "Armor Enchant Scroll (B Class)",
       "Weapon Enchant Scroll (B Class)",
       "Cloak of Death",
-      "Cloak of Half Death"
+      "Cloak of Half-Death"
     ]
   },
   "Bloody Flower": {
@@ -1001,7 +1001,7 @@
       "Wingwing Boots"
     ]
   },
-  "Crystal Stone": {
+  "Crystal": {
     "中文名": "水晶",
     "掉落物": [
       "Crystal Dust",
@@ -1216,7 +1216,7 @@
       "Pet Crystal"
     ]
   },
-  "Treasure Chest": {
+  "Pirate Box": {
     "中文名": "海盗宝箱",
     "掉落物": [
       "Gold",
@@ -1989,7 +1989,7 @@
       "Clarity 2"
     ]
   },
-  "Suuk": {
+  "Suuuk": {
     "中文名": "嘶呃呃",
     "掉落物": [
       "Gold",
@@ -3115,7 +3115,7 @@
       "Wanderer's Quiver"
     ]
   },
-  "Fear of the Darkness": {
+  "Fear of Darkness": {
     "中文名": "暗黑恐惧",
     "掉落物": [
       "Gold",

@@ -2,280 +2,320 @@
   {
     "en": "Practice Sword",
     "cn": "练习用剑",
-    "kr": "",
+    "kr": "연습용검",
+    "ja": "練習用の剣",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Blunt Shortsword",
     "cn": "钝短剑",
-    "kr": "",
+    "kr": "무딘숏소드",
+    "ja": "鈍いショットソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Canine Ring",
     "cn": "臼齿戒指",
-    "kr": "",
+    "kr": "어금니고리",
+    "ja": "奥歯の輪",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Longsword",
     "cn": "长剑",
-    "kr": "",
+    "kr": "롱소드",
+    "ja": "ロングソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sharp Longsword",
     "cn": "锐利的长剑",
-    "kr": "",
+    "kr": "예리한롱소드",
+    "ja": "鋭いロングソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Katana",
     "cn": "武士刀",
-    "kr": "",
+    "kr": "카타나",
+    "ja": "刀",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Viking Sword",
     "cn": "维京剑",
-    "kr": "",
+    "kr": "바이킹검",
+    "ja": "バイキングソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Gladius",
     "cn": "罗马短剑",
-    "kr": "",
+    "kr": "글라디우스",
+    "ja": "グラディウス",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Rune Blade",
     "cn": "符文刃",
-    "kr": "",
+    "kr": "룬블레이드",
+    "ja": "ルーンブレイド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Darksteel Sword",
     "cn": "玄铁剑",
-    "kr": "",
+    "kr": "다크스틸소드",
+    "ja": "ダークスチールソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "War Sword",
     "cn": "战争之剑",
-    "kr": "",
+    "kr": "워소드",
+    "ja": "ウォーソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Kaisor Sword",
     "cn": "凯萨剑",
-    "kr": "",
+    "kr": "카이저소드",
+    "ja": "カイザーソード",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Rapier",
     "cn": "细剑",
-    "kr": "",
+    "kr": "레이피어",
+    "ja": "レイピア",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wooden Shortbow",
     "cn": "木质短弓",
-    "kr": "",
+    "kr": "우든숏보우",
+    "ja": "ウッドショットボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Composite Bow",
     "cn": "复合弓",
-    "kr": "",
+    "kr": "컴포짓보우",
+    "ja": "コンポジットボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Swirling Bow",
     "cn": "漩涡弓",
-    "kr": "",
+    "kr": "소용돌이활",
+    "ja": "渦巻き弓",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Great Bow",
     "cn": "巨弓",
-    "kr": "",
+    "kr": "그레이트보우",
+    "ja": "グレートボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Classic Bow",
     "cn": "角弓",
-    "kr": "",
+    "kr": "각궁",
+    "ja": "角弓",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Hunter Bow",
     "cn": "猎弓",
-    "kr": "",
+    "kr": "헌터보우",
+    "ja": "ハンターボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Horn Bow",
     "cn": "怒弓",
-    "kr": "",
+    "kr": "혼보우",
+    "ja": "ホーンボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Battle Bow",
     "cn": "斗弓",
-    "kr": "",
+    "kr": "배틀보우",
+    "ja": "バトルボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "War Bow",
     "cn": "战弓",
-    "kr": "",
+    "kr": "워보우",
+    "ja": "ウォーボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Dezoruba's Bow",
     "cn": "戴楚拜伊的弓",
-    "kr": "",
+    "kr": "데조르바의보우",
+    "ja": "デゾルバのボウ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Shadow Bow",
     "cn": "暗影弓",
-    "kr": "",
+    "kr": "샤도우보우",
+    "ja": "シャドウボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wooden Staff",
     "cn": "木杖",
-    "kr": "",
+    "kr": "나무지팡이",
+    "ja": "木の杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Oak Tree Staff",
     "cn": "桦树杖",
-    "kr": "",
+    "kr": "참나무지팡이",
+    "ja": "クヌギの杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Magician Staff",
     "cn": "魔法师法杖",
-    "kr": "",
+    "kr": "마법사지팡이",
+    "ja": "マジシャンの杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Woopa-Roopa's Staff",
     "cn": "族长法杖",
-    "kr": "",
+    "kr": "족장의지팡이",
+    "ja": "族長の杖",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Novice Shaman's Wand",
     "cn": "新手巫师法杖",
-    "kr": "",
+    "kr": "초보술사의봉",
+    "ja": "見習いマジシャンの棒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Shaman's Wand",
     "cn": "巫师法杖",
-    "kr": "",
+    "kr": "주술사의봉",
+    "ja": "呪術師の棒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Mystic Wand",
     "cn": "神秘巫师法杖",
-    "kr": "",
+    "kr": "신비술사의봉",
+    "ja": "ミステリーマジシャンの棒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Spiritual Wand",
     "cn": "神力法杖",
-    "kr": "",
+    "kr": "신들린지팡이",
+    "ja": "神懸りの杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wand of Chaos",
     "cn": "混沌法杖",
-    "kr": "",
+    "kr": "혼돈의지팡이",
+    "ja": "混沌の杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wand of Tranquility",
     "cn": "宁静法杖",
-    "kr": "",
+    "kr": "고요의지팡이",
+    "ja": "静寂の杖",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Hole of Silence",
     "cn": "沉默之穴",
-    "kr": "",
+    "kr": "침묵의홀",
+    "ja": "沈黙のホール",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Staff Struck by Lightning",
     "cn": "雷击木杖",
-    "kr": "",
+    "kr": "번개맞은나무",
+    "ja": "落雷した木",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Wooden Shield",
     "cn": "木盾",
-    "kr": "",
+    "kr": "우든쉴드",
+    "ja": "ウッドシールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Fungiskin Shield",
     "cn": "蘑菇盾牌",
-    "kr": "",
+    "kr": "펑기스킨쉴드",
+    "ja": "ファンキースキンシールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Round Shield",
     "cn": "圆盾",
-    "kr": "",
+    "kr": "라운드쉴드",
+    "ja": "ラウンドシールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Skull Shield",
     "cn": "骷髅盾",
-    "kr": "",
+    "kr": "스컬쉴드",
+    "ja": "スカルシールド",
     "color": "#39acf4",
     "type": "equip"
   },
@@ -283,720 +323,823 @@
     "en": "Ion Shield",
     "cn": "铁盾",
     "kr": "",
+    "ja": "",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Crystal Shield",
     "cn": "水晶盾",
-    "kr": "",
+    "kr": "수정쉴드",
+    "ja": "水晶シールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Tower Shield",
     "cn": "塔盾",
-    "kr": "",
+    "kr": "타워쉴드",
+    "ja": "タワーシールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Iron Covered Shield",
     "cn": "铁甲盾",
-    "kr": "",
+    "kr": "철갑쉴드",
+    "ja": "鋼鉄シールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Darksteel Shield",
     "cn": "玄铁盾",
-    "kr": "",
+    "kr": "다크스틸쉴드",
+    "ja": "ダークスチールシールド",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Spartan Shield",
     "cn": "斯巴达盾牌",
-    "kr": "",
+    "kr": "스파르탄쉴드",
+    "ja": "スパルタンシールド",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Bulldozer Cloak",
     "cn": "凶猛猪披风",
-    "kr": "",
+    "kr": "불도저망토",
+    "ja": "ブルドーザーマント",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Cloak of Health",
     "cn": "体力披风",
-    "kr": "",
+    "kr": "체력의망토",
+    "ja": "体力のマント",
     "color": "#6ece34",
     "type": "equip"
   },
   {
-    "en": "Cloak of Half Death",
+    "en": "Cloak of Half-Death",
     "cn": "濒死披风",
-    "kr": "",
+    "kr": "반죽음의망토",
+    "ja": "半死のマント",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Cloak of Death",
     "cn": "死亡披风",
-    "kr": "",
+    "kr": "죽음의망토",
+    "ja": "死のマント",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Passionate Cloak",
     "cn": "狂热披风",
-    "kr": "",
+    "kr": "열광의망토",
+    "ja": "熱狂のマント",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Sparkling Necklace",
     "cn": "预言项链",
-    "kr": "",
+    "kr": "예감의목걸이",
+    "ja": "予感のネックレス",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Dark Skull",
     "cn": "黑骷髅项链",
-    "kr": "",
+    "kr": "다크스컬",
+    "ja": "ダークスカル",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Pirate Necklace",
     "cn": "海盗项链",
-    "kr": "",
+    "kr": "해적의목걸이",
+    "ja": "海賊のネックレス",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Mother Nature",
     "cn": "大地之母项链",
-    "kr": "",
+    "kr": "대자연",
+    "ja": "大自然",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Pirate Ring",
     "cn": "海盗戒指",
-    "kr": "",
+    "kr": "해적의반지",
+    "ja": "海賊の指輪",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Alloy Ring",
     "cn": "合金戒指",
-    "kr": "",
+    "kr": "합금반지",
+    "ja": "合金指輪",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Guardian's Ring",
     "cn": "守护者戒指",
-    "kr": "",
+    "kr": "가디언의반지",
+    "ja": "ガーディアンの指輪",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Fungiskin Belt",
     "cn": "蘑菇腰带",
-    "kr": "",
+    "kr": "펑기스킨벨트",
+    "ja": "ファンキースキンベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Belt of Belief",
     "cn": "信念皮带",
-    "kr": "",
+    "kr": "신념의벨트",
+    "ja": "信念のベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Belt of Regeneration",
     "cn": "再生皮带",
-    "kr": "",
+    "kr": "재생의벨트",
+    "ja": "再生のベルト",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Otherworld Belt",
     "cn": "异界皮带",
-    "kr": "",
+    "kr": "이계의벨트",
+    "ja": "異世界のベルト",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Belt of Rough Roots",
     "cn": "粗糙根蔓皮带",
-    "kr": "",
+    "kr": "거친뿌리의벨트",
+    "ja": "荒れた根のベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Pledger's Belt",
     "cn": "契约者的皮带",
-    "kr": "",
+    "kr": "서약자의벨트",
+    "ja": "誓約者のベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Belt of Dry Magic",
     "cn": "契约者的皮带",
-    "kr": "",
+    "kr": "건조한마력의벨트",
+    "ja": "乾いた魔力のベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Strange Hat",
     "cn": "奇特帽子",
-    "kr": "",
+    "kr": "이상한모자",
+    "ja": "変な帽子",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Pirate Hat",
     "cn": "海盗帽",
-    "kr": "",
+    "kr": "해적모",
+    "ja": "海賊帽子",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Shaman's Hat",
     "cn": "巫师帽",
-    "kr": "",
+    "kr": "주술사모자",
+    "ja": "呪術師の帽子",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Eye of Beholder",
     "cn": "凝视者之眼",
-    "kr": "",
+    "kr": "주시자의눈",
+    "ja": "ウォッチャー",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bandana of the Blue Waterfall",
     "cn": "靛蓝瀑布头巾",
-    "kr": "",
+    "kr": "파란폭포의두건",
+    "ja": "青い滝のバンダナ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Helm of the Grey Boulder",
     "cn": "白岩头盔",
-    "kr": "",
+    "kr": "회색바위의투구",
+    "ja": "グレー岩の兜",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Cap of the Blue Forest",
     "cn": "丛林帽",
-    "kr": "",
+    "kr": "푸른숲의모자",
+    "ja": "青い森の帽子",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Frayed Robe",
     "cn": "粗布衣",
-    "kr": "",
+    "kr": "무명옷",
+    "ja": "コットン服",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Cotton Robe",
     "cn": "棉制长袍",
-    "kr": "",
+    "kr": "무명로브",
+    "ja": "コットンローブ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sturdy Leather Armor",
     "cn": "强化皮革盔甲",
-    "kr": "",
+    "kr": "강화가죽갑옷",
+    "ja": "強化した革の鎧",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bone Armor",
     "cn": "骨制盔甲",
-    "kr": "",
+    "kr": "뼈갑옷",
+    "ja": "骨の鎧",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Boiled Leather Armor",
     "cn": "加工皮革盔甲",
-    "kr": "",
+    "kr": "보일드레더아머",
+    "ja": "ボイルドレザーアーマー",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Mushroom Robe",
     "cn": "蘑菇长袍",
-    "kr": "",
+    "kr": "버섯 로브",
+    "ja": "キノコのローブ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "The Dead's Shroud",
     "cn": "亡者寿衣",
-    "kr": "",
+    "kr": "망자의수의",
+    "ja": "亡者の装束",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Lizard Leather Armor",
     "cn": "蜥蜴皮衣",
-    "kr": "",
+    "kr": "도마뱀가죽옷",
+    "ja": "トカゲの皮の服",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Charmed Robe",
     "cn": "咒术袍",
-    "kr": "",
+    "kr": "주술걸린옷",
+    "ja": "術にかかった服",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sturdy Yeti Armor",
     "cn": "雪人皮衣",
-    "kr": "",
+    "kr": "설인가죽옷",
+    "ja": "イエティの皮の服",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Highguard Armor",
     "cn": "高阶护卫盔甲",
-    "kr": "",
+    "kr": "하이가드갑옷",
+    "ja": "ハイガード鎧",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Expert Magician Robe",
     "cn": "专业魔法师袍",
-    "kr": "",
+    "kr": "전문마법사옷",
+    "ja": "プロマジシャンの服",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Lizard Leather Armor",
     "cn": "蜥蜴皮衣",
-    "kr": "",
+    "kr": "도마뱀가죽옷",
+    "ja": "トカゲの皮の服",
     "color": "#6ee129",
     "type": "equip"
   },
   {
     "en": "Armor of the Grey Boulder",
     "cn": "白岩盔甲",
-    "kr": "",
+    "kr": "회색바위의갑옷",
+    "ja": "グレー岩のアーマー",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Robe of the Blue Waterfall",
     "cn": "靛蓝瀑布长袍",
-    "kr": "",
+    "kr": "파란폭포의로브",
+    "ja": "青い滝のローブ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Light Armor of the Blue Forest",
     "cn": "丛林轻甲",
-    "kr": "",
+    "kr": "푸른숲의경갑",
+    "ja": "青い森のライトアーマー",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "World Tree Bark Armor",
     "cn": "世界树树皮盔甲",
-    "kr": "",
+    "kr": "세계수껍질갑옷",
+    "ja": "世界樹の皮の鎧",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "World Tree Branch Armor",
     "cn": "世界树树根盔甲",
-    "kr": "",
+    "kr": "세계수가지갑옷",
+    "ja": "世界樹の枝の鎧",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "World Tree Leaf Robe",
     "cn": "世界树树叶长袍",
-    "kr": "",
+    "kr": "세계수잎로브",
+    "ja": "世界樹の葉のローブ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "World Tree Robe",
     "cn": "世界树道服",
-    "kr": "",
+    "kr": "세계수도복",
+    "ja": "世界樹の道着",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sturdy Leather Gloves",
     "cn": "强化皮革手套",
-    "kr": "",
+    "kr": "강화가죽장갑",
+    "ja": "強化した革の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Power Gloves",
     "cn": "能量手套",
-    "kr": "",
+    "kr": "파워글러브",
+    "ja": "パワーグローブ",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "The Dead's Gloves",
     "cn": "亡者手套",
-    "kr": "",
+    "kr": "망자의장갑",
+    "ja": "亡者の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Oatwill's Leather Gloves",
     "cn": "欧特威尔的皮革手套",
-    "kr": "",
+    "kr": "오트윌의가죽장갑",
+    "ja": "オートウィルの革手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Pirate Gloves",
     "cn": "海盗手套",
-    "kr": "",
+    "kr": "해적의장갑",
+    "ja": "海賊の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Seruang's Heart",
     "cn": "赛乐亚之心",
-    "kr": "",
+    "kr": "세르앙의마음",
+    "ja": "セルアンの気持ち",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Desert Mercenary Gloves",
     "cn": "沙漠佣兵手套",
-    "kr": "",
+    "kr": "사막용병장갑",
+    "ja": "砂漠の傭兵の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Monk's Gloves",
     "cn": "修道士手套",
-    "kr": "",
+    "kr": "수도사의장갑",
+    "ja": "修道士の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Iron Golem's Gloves",
     "cn": "钢铁魔像手套",
-    "kr": "",
+    "kr": "강철골렘장갑",
+    "ja": "アイアンゴーレムの手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Scout Gloves",
     "cn": "童军手套",
-    "kr": "",
+    "kr": "스카우트장갑",
+    "ja": "スカウトの手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sage's Gloves",
     "cn": "贤者手套",
-    "kr": "",
+    "kr": "현인의장갑",
+    "ja": "賢者の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Chainstrike Gloves",
     "cn": "链击手套",
-    "kr": "",
+    "kr": "연속공격의장갑",
+    "ja": "連続攻撃の手袋",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Protector's Hand Skin",
     "cn": "护卫兵的手部护具",
-    "kr": "",
+    "kr": "수호병의손껍질",
+    "ja": "守護兵の手",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Illusionist's Gloves",
     "cn": "幻术师的手部护具",
-    "kr": "",
+    "kr": "환영술사의장갑",
+    "ja": "幻影術師の手袋",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Scale Boots",
     "cn": "鳞片鞋",
-    "kr": "",
+    "kr": "스케일부츠",
+    "ja": "スケールブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wingwing Boots",
     "cn": "飞天鞋",
-    "kr": "",
+    "kr": "윙깃부츠",
+    "ja": "ウィングブーツ",
     "color": "#bc71fc",
     "type": "equip"
   },
   {
     "en": "Savage Boots",
     "cn": "野蛮鞋",
-    "kr": "",
+    "kr": "야만 부츠",
+    "ja": "野蛮ブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Heavy Iron Boots",
     "cn": "钢铁鞋",
-    "kr": "",
+    "kr": "무쇠부츠",
+    "ja": "銑鉄のブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Snowy Field's Cursed Boots",
     "cn": "雪原诅咒长鞋",
-    "kr": "",
+    "kr": "설원의저주장화",
+    "ja": "雪原の呪いのブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Toxic Boots",
     "cn": "剧毒长鞋",
-    "kr": "",
+    "kr": "맹독의장화",
+    "ja": "猛毒のブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Sharkun Greaves",
     "cn": "夏库胫甲",
-    "kr": "",
+    "kr": "샤쿤그리브",
+    "ja": "シャークングリーブ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Monk's Boots",
     "cn": "修道士长鞋",
-    "kr": "",
+    "kr": "수도사의장화",
+    "ja": "修道僧のブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Shoes of Tranquility",
     "cn": "宁静鞋",
-    "kr": "",
+    "kr": "고요의신발",
+    "ja": "静寂の靴",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Titanium Boots",
     "cn": "钛合金鞋",
-    "kr": "",
+    "kr": "티타늄부츠",
+    "ja": "チタンブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Boots of Darkness",
     "cn": "暗黑鞋",
-    "kr": "",
+    "kr": "어둠의신발",
+    "ja": "闇の靴",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Leather Robe",
     "cn": "皮革道服",
-    "kr": "",
+    "kr": "가죽도복",
+    "ja": "革の道着",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Coral Robe",
     "cn": "珊瑚道服",
-    "kr": "",
+    "kr": "산호도복",
+    "ja": "サンゴの道着",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Combat Robe",
     "cn": "格斗道服",
-    "kr": "",
+    "kr": "격투도복",
+    "ja": "格闘用の道着",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Yellow Canola Robe",
     "cn": "油菜花道服",
-    "kr": "",
+    "kr": "노란유채도복",
+    "ja": "アブラナの道着",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Yellow Canola Hat",
     "cn": "油菜花帽",
-    "kr": "",
+    "kr": "노란유채의모자",
+    "ja": "アブラナの帽子",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Wooden Guard",
     "cn": "木制护身符",
-    "kr": "",
+    "kr": "목 호신부",
+    "ja": "木の御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Coral Guard",
     "cn": "珊瑚护身符",
-    "kr": "",
+    "kr": "산호 호신부",
+    "ja": "サンゴの御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
-    "en": "Woopa Roopa's Guard",
+    "en": "Woopa-Roopa’s Guard",
     "cn": "族长护身符",
-    "kr": "",
+    "kr": "족장의 호신부",
+    "ja": "族長の御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Purifying Guard",
     "cn": "净化护身符",
-    "kr": "",
+    "kr": "정화의 호신부",
+    "ja": "浄化の御守",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Frost Guard",
     "cn": "霜之护身符",
-    "kr": "",
+    "kr": "서리 호신부",
+    "ja": "霜の御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Storm Guard",
     "cn": "暴风护身符",
-    "kr": "",
+    "kr": "폭풍 호신부",
+    "ja": "嵐の御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Red Guard",
     "cn": "赤红护身符",
-    "kr": "",
+    "kr": "붉은 호신부",
+    "ja": "赤い御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Butterfly Guard",
     "cn": "蝴蝶护身符",
-    "kr": "",
+    "kr": "나비 호신부",
+    "ja": "蝶々の御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Crown Rock Guard",
     "cn": "皇冠岩护身符",
-    "kr": "",
+    "kr": "크라운락 호신부",
+    "ja": "クラウンロックの御守",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Relic of Infinity",
     "cn": "无极文物",
-    "kr": "",
+    "kr": "무극의 유물",
+    "ja": "武極の遺物",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Elemental Gloves",
     "cn": "元素手套",
-    "kr": "",
+    "kr": "원소장갑",
+    "ja": "元素の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Cloud Gloves",
     "cn": "云之手套",
-    "kr": "",
+    "kr": "구름의장갑",
+    "ja": "雲の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Lightning Gloves",
     "cn": "雷电手套",
-    "kr": "",
+    "kr": "번개장갑",
+    "ja": "稲妻の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bitter Cold Gloves",
     "cn": "严寒手套",
-    "kr": "",
+    "kr": "혹한의장갑",
+    "ja": "酷寒の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Chainstrike Gloves b",
     "cn": "连续攻击手套",
-    "kr": "",
+    "kr": "연속공격의장갑",
+    "ja": "連続攻撃の手袋",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Yellow Canola Boots",
     "cn": "油菜花长鞋",
-    "kr": "",
+    "kr": "노란유채의장화",
+    "ja": "アブラナのブーツ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Cloud Boots",
     "cn": "云之长鞋",
-    "kr": "",
+    "kr": "구름의장화",
+    "ja": "雲のブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bitter Cold Boots",
     "cn": "严寒长鞋",
-    "kr": "",
+    "kr": "혹한의장화",
+    "ja": "酷寒のブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Thule's Boots",
     "cn": "图勒长鞋",
-    "kr": "",
+    "kr": "툴레의장화",
+    "ja": "トゥーレのブーツ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Teal Fragment Belt",
     "cn": "青绿碎片腰带",
-    "kr": "",
+    "kr": "청록의파편벨트",
+    "ja": "青緑の欠片のベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wooden Tonfa",
     "cn": "木制拐棍",
-    "kr": "",
+    "kr": "목제 톤파",
+    "ja": "木製トンファー",
     "color": "#6ece34",
     "type": "equip"
   },
@@ -1004,55 +1147,63 @@
     "en": "Dull Knuckles",
     "cn": "钝指虎",
     "kr": "",
+    "ja": "",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bulldozer Tonfa",
     "cn": "凶猛猪拐棍",
-    "kr": "",
+    "kr": "불도저 톤파",
+    "ja": "ブルドーザートンファー",
     "color": "#39acf4",
     "type": "equip"
   },
   {
-    "en": "Breaker's Knuckle",
+    "en": "Breaker’s Knuckle",
     "cn": "武术家指虎",
-    "kr": "",
+    "kr": "무도가 너클",
+    "ja": "武闘家のナックル",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Shiny Knuckle",
     "cn": "闪耀指虎",
-    "kr": "",
+    "kr": "빛나는 너클",
+    "ja": "輝くナックル",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Bone Tonfa",
     "cn": "骨拐棍",
-    "kr": "",
+    "kr": "본 톤파",
+    "ja": "骨のトンファー",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Storm Whip",
     "cn": "暴风鞭",
-    "kr": "",
+    "kr": "폭풍 채찍",
+    "ja": "嵐の鞭",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Iron Fist",
     "cn": "铁之拳",
-    "kr": "",
+    "kr": "아이언 피스트",
+    "ja": "アイアンフィスト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Fang of Dusk",
     "cn": "黄昏之牙",
-    "kr": "",
+    "kr": "황혼의 송곳니",
+    "ja": "夕暮れの牙",
     "color": "#6ece34",
     "type": "equip"
   },
@@ -1060,1182 +1211,1351 @@
     "en": "Thundersteel Knuckles",
     "cn": "雷钢",
     "kr": "",
+    "ja": "",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "War Knuckle",
     "cn": "战斗指虎",
-    "kr": "",
+    "kr": "워 너클",
+    "ja": "ウォーナックル",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Shatter Fist",
     "cn": "粉碎之拳",
-    "kr": "",
+    "kr": "파쇄 주먹",
+    "ja": "破壊の拳",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Heavy Iron Gauntlet",
     "cn": "钢铁手套",
-    "kr": "",
+    "kr": "무쇠장갑",
+    "ja": "銑鉄の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
-    "en": "Long Bow",
+    "en": "Longbow",
     "cn": "长弓",
-    "kr": "",
+    "kr": "롱보우",
+    "ja": "ロングボウ",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Cold Imbue 4",
     "cn": "赋予寒气4",
-    "kr": "",
+    "kr": "냉기 부여4",
+    "ja": "冷気付与4",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Chainstrike 4",
     "cn": "连击4",
-    "kr": "",
+    "kr": "연격4",
+    "ja": "連撃4",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Leap 4",
     "cn": "跳跃4",
-    "kr": "",
+    "kr": "도약4",
+    "ja": "跳躍4",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Electric Imbue 2",
     "cn": "赋予闪电2",
-    "kr": "",
+    "kr": "전기 부여2",
+    "ja": "電気付与2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Electric Imbue 3",
     "cn": "赋予闪电3",
-    "kr": "",
+    "kr": "전기 부여3",
+    "ja": "電気付与3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Breaker's Strike 2",
     "cn": "武术一击2",
-    "kr": "",
+    "kr": "무도의 2격",
+    "ja": "武闘の二撃",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Breaker's Strike 3",
     "cn": "武术一击3",
-    "kr": "",
+    "kr": "무도의 3격",
+    "ja": "武闘の三撃",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Elemental Cycle 2",
     "cn": "元素循环2",
-    "kr": "",
+    "kr": "원소 순환2",
+    "ja": "元素循環2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Elemental Cycle 3",
     "cn": "元素循环3",
-    "kr": "",
+    "kr": "원소 순환3",
+    "ja": "元素循環3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Baekha's Strike 2",
     "cn": "白荷之拳2",
-    "kr": "",
+    "kr": "백하의 권2",
+    "ja": "ベクハの拳2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Baekha's Strike 3",
     "cn": "白荷之拳3",
-    "kr": "",
+    "kr": "백하의 권3",
+    "ja": "ベクハの拳3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Elemental Release 2",
     "cn": "元素释放2",
-    "kr": "",
+    "kr": "원소 방출2",
+    "ja": "元素放出2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Impact Training 2",
     "cn": "冲击锻炼2",
-    "kr": "",
+    "kr": "충격 단련2",
+    "ja": "衝撃鍛錬2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Impact Training 3",
     "cn": "冲击锻炼3",
-    "kr": "",
+    "kr": "충격 단련3",
+    "ja": "衝撃鍛錬3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Critical Insight 2",
     "cn": "要害洞察2",
-    "kr": "",
+    "kr": "급소간파2",
+    "ja": "急所見抜き2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Critical Insight 3",
     "cn": "要害洞察3",
-    "kr": "",
+    "kr": "급소간파3",
+    "ja": "急所見抜き3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sixth Sense 2",
     "cn": "预感2",
-    "kr": "",
+    "kr": "육감2",
+    "ja": "第六感2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Bull Rush 2",
     "cn": "急速冲刺2",
-    "kr": "",
+    "kr": "불러쉬2",
+    "ja": "ブルラッシュ2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Cure Poison 2",
     "cn": "治愈2",
-    "kr": "",
+    "kr": "큐어2",
+    "ja": "キュア2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flame Shock 3",
     "cn": "火花冲击3",
-    "kr": "",
+    "kr": "프레임쇼크3",
+    "ja": "フレームショック3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Double Shot 3",
     "cn": "双发射击3",
-    "kr": "",
+    "kr": "더블샷3",
+    "ja": "ダブルショット3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Shift 2",
     "cn": "切换方位2",
-    "kr": "",
+    "kr": "쉬프트2",
+    "ja": "シフト2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Wild Swing 3",
     "cn": "疯狂剑舞3",
-    "kr": "",
+    "kr": "와일드스윙3",
+    "ja": "ワイルドスイング3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Ice Prison 2",
     "cn": "冰牢2",
-    "kr": "",
+    "kr": "아이스프리즌2",
+    "ja": "アイスプリズン2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Parry 3",
     "cn": "阻挡攻击3",
-    "kr": "",
+    "kr": "무기막기3",
+    "ja": "武器ブロック3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Ensnare 2",
     "cn": "圈套2",
-    "kr": "",
+    "kr": "올가미2",
+    "ja": "罠2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Freezing Trap 3",
     "cn": "冰冻3",
-    "kr": "",
+    "kr": "결빙3",
+    "ja": "結氷3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Wild Charge 1",
     "cn": "疯狂冲刺1",
-    "kr": "",
+    "kr": "야성의 돌진1",
+    "ja": "野生の突進1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Taunting Blow 2",
     "cn": "挑衅2",
-    "kr": "",
+    "kr": "타운팅 블로우2",
+    "ja": "タウンティングブロウ2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Freezing Trap 2",
     "cn": "冰冻2",
-    "kr": "",
+    "kr": "결빙2",
+    "ja": "結氷2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Drowsiness 1",
     "cn": "疲乏无力1",
-    "kr": "",
+    "kr": "나른함1",
+    "ja": "鈍さ1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Teleport 2",
     "cn": "瞬间移动2",
-    "kr": "",
+    "kr": "텔레포트2",
+    "ja": "テレポート2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Concentrate 3",
     "cn": "全神贯注3",
-    "kr": "",
+    "kr": "집중3",
+    "ja": "集中3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Shield 3",
     "cn": "护身盾牌3",
-    "kr": "",
+    "kr": "쉴드3",
+    "ja": "シールド3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Hemorrhage 3",
     "cn": "出血3",
-    "kr": "",
+    "kr": "출혈3",
+    "ja": "出血3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Light Healing 3",
     "cn": "光明疗愈3",
-    "kr": "",
+    "kr": "라이트힐링3",
+    "ja": "ライトヒーリング3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flare 1",
     "cn": "爆燃1",
-    "kr": "",
+    "kr": "플레어1",
+    "ja": "フレア1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Firebolt 2",
     "cn": "火球2",
-    "kr": "",
+    "kr": "화이어볼트2",
+    "ja": "ファイアボルト2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Slam 2",
     "cn": "强力肘击2",
-    "kr": "",
+    "kr": "슬램2",
+    "ja": "スラム2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Carnivalize 1",
     "cn": "魔力转换1",
-    "kr": "",
+    "kr": "카니발라이즈1",
+    "ja": "カーニバルライズ1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sharp Eye 1",
     "cn": "迅速反应1",
-    "kr": "",
+    "kr": "예리한감각1",
+    "ja": "鋭い感覚1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Rage 1",
     "cn": "暴怒1",
-    "kr": "",
+    "kr": "분노1",
+    "ja": "怒り1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flare 2",
     "cn": "爆燃2",
-    "kr": "",
+    "kr": "플레어2",
+    "ja": "フレア2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Swift 1",
     "cn": "伶落身手1",
-    "kr": "",
+    "kr": "날렵함1",
+    "ja": "素早さ1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Toughness 1",
     "cn": "强韧1",
-    "kr": "",
+    "kr": "강인함1",
+    "ja": "強靭さ1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Toughness 2",
     "cn": "强韧2",
-    "kr": "",
+    "kr": "강인함2",
+    "ja": "強靭さ2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Healing Wave 1",
     "cn": "治愈波1",
-    "kr": "",
+    "kr": "치유의물결1",
+    "ja": "治癒の波1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Weakness 2",
     "cn": "弱化防御2",
-    "kr": "",
+    "kr": "약화2",
+    "ja": "弱化2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Meditation 2",
     "cn": "冥想2",
-    "kr": "",
+    "kr": "메디테이션2",
+    "ja": "メディテーション2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Prayer of Protection 1",
     "cn": "守护祷告1",
-    "kr": "",
+    "kr": "수호의 기원1",
+    "ja": "守護の祈り1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Ice Lance 1",
     "cn": "冰矛1",
-    "kr": "",
+    "kr": "아이스랜스1",
+    "ja": "アイスランス1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flame of Kataru 1",
     "cn": "卡塔勒的火焰1",
-    "kr": "",
+    "kr": "카타르의 불꽃1",
+    "ja": "カタルの炎1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sweeping Strikes 1",
     "cn": "强力横扫1",
-    "kr": "",
+    "kr": "휩쓸기1",
+    "ja": "席捲1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Curse of Doom 2",
     "cn": "破坏之咒2",
-    "kr": "",
+    "kr": "파괴의저주2",
+    "ja": "破壊の呪い2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stoneskin 1",
     "cn": "坚石皮肤1",
-    "kr": "",
+    "kr": "스톤스킨1",
+    "ja": "ストーンスキン1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Prayer of Protection 2",
     "cn": "守护祷告2",
-    "kr": "",
+    "kr": "수호의 기원2",
+    "ja": "守護の祈り2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Multi Shot 2",
     "cn": "多重射击2",
-    "kr": "",
+    "kr": "멀티샷2",
+    "ja": "マルチショット2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sweeping Strikes 2",
     "cn": "强力横扫2",
-    "kr": "",
+    "kr": "휩쓸기2",
+    "ja": "席捲2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Will of Elemental 2",
     "cn": "强烈意志2",
-    "kr": "",
+    "kr": "의지2",
+    "ja": "意志2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Harden Body 1",
     "cn": "锻炼体力1",
-    "kr": "",
+    "kr": "체력단련1",
+    "ja": "体力鍛錬1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Amplify Sense 2",
     "cn": "强化反应2",
-    "kr": "",
+    "kr": "감각의증폭2",
+    "ja": "感覚の増幅2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Will of Elemental 1",
     "cn": "强烈意志1",
-    "kr": "",
+    "kr": "의지1",
+    "ja": "意志1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stun 2",
     "cn": "麻痹2",
-    "kr": "",
+    "kr": "스턴2",
+    "ja": "スタン2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Firestorm 1",
     "cn": "火焰风暴1",
-    "kr": "",
+    "kr": "화염폭풍1",
+    "ja": "火炎暴風1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Ice Lance 2",
     "cn": "冰矛2",
-    "kr": "",
+    "kr": "아이스랜스2",
+    "ja": "アイスランス2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flame of Kataru 2",
     "cn": "卡塔勒的火焰2",
-    "kr": "",
+    "kr": "카타르의 불꽃2",
+    "ja": "カタルの炎2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stoneskin 2",
     "cn": "坚石皮肤2",
-    "kr": "",
+    "kr": "스톤스킨2",
+    "ja": "ストーンスキン2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Berserk 2",
     "cn": "狂暴2",
-    "kr": "",
+    "kr": "버서크2",
+    "ja": "バーサーカー2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stun 1",
     "cn": "麻痹1",
-    "kr": "",
+    "kr": "스턴1",
+    "ja": "スタン1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Healing Wave 2",
     "cn": "治愈波2",
-    "kr": "",
+    "kr": "치유의물결2",
+    "ja": "治癒の波2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Amplify Sense 1",
     "cn": "强化反应1",
-    "kr": "",
+    "kr": "감각의증폭1",
+    "ja": "感覚の増幅1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Last Resistance 1",
     "cn": "最后抵抗1",
-    "kr": "",
+    "kr": "최후의 저항1",
+    "ja": "最後の抵抗1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sweeping Strikes 3",
     "cn": "强力横扫3",
-    "kr": "",
+    "kr": "휩쓸기3",
+    "ja": "席捲3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Instinct Stimulus 1",
     "cn": "刺激本能1",
-    "kr": "",
+    "kr": "본능자극1",
+    "ja": "本能刺激1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Fatal Attack 1",
     "cn": "致命一击1",
-    "kr": "",
+    "kr": "치명적 일격1",
+    "ja": "致命的一撃1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Carnivalize 2",
     "cn": "魔力转换2",
-    "kr": "",
+    "kr": "카니발라이즈2",
+    "ja": "カーニバルライズ2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Multi Shot 1",
     "cn": "多重射击1",
-    "kr": "",
+    "kr": "멀티샷1",
+    "ja": "マルチショット1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sharp Eye 2",
     "cn": "迅速反应2",
-    "kr": "",
+    "kr": "예리한감각2",
+    "ja": "鋭い感覚2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Berserk 1",
     "cn": "狂暴1",
-    "kr": "",
+    "kr": "버서크1",
+    "ja": "バーサーカー1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Teleport 3",
     "cn": "瞬间移动3",
-    "kr": "",
+    "kr": "텔레포트3",
+    "ja": "テレポート3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Wild Charge 2",
     "cn": "疯狂冲刺2",
-    "kr": "",
+    "kr": "야성의 돌진2",
+    "ja": "野生の突進2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Impact Shot 2",
     "cn": "强烈一击2",
-    "kr": "",
+    "kr": "충격샷2",
+    "ja": "衝撃ショット2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Carnivalize 3",
     "cn": "魔力转换3",
-    "kr": "",
+    "kr": "카니발라이즈3",
+    "ja": "カーニバルライズ3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Toughness 3",
     "cn": "强韧3",
-    "kr": "",
+    "kr": "강인함3",
+    "ja": "強靭さ3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Impact Shot 3",
     "cn": "强烈一击3",
-    "kr": "",
+    "kr": "충격샷3",
+    "ja": "衝撃ショット3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sharp Eye 3",
     "cn": "迅速反应3",
-    "kr": "",
+    "kr": "예리한감각3",
+    "ja": "鋭い感覚3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Slam 3",
     "cn": "强力肘击3",
-    "kr": "",
+    "kr": "슬램3",
+    "ja": "スラム3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flare 3",
     "cn": "爆燃3",
-    "kr": "",
+    "kr": "플레어3",
+    "ja": "フレア3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Last Resistance 2",
     "cn": "最后抵抗2",
-    "kr": "",
+    "kr": "최후의 저항2",
+    "ja": "最後の抵抗2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stoneskin 3",
     "cn": "坚石皮肤3",
-    "kr": "",
+    "kr": "스톤스킨3",
+    "ja": "ストーンスキン3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Flame of Kataru 3",
     "cn": "卡塔勒的火焰3",
-    "kr": "",
+    "kr": "카타르의 불꽃3",
+    "ja": "カタルの炎3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Shield 4",
     "cn": "护身盾牌4",
-    "kr": "",
+    "kr": "쉴드4",
+    "ja": "シールド4",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Soul Drain Shot 1",
     "cn": "灵魂射击1",
-    "kr": "",
+    "kr": "소울드레인샷1",
+    "ja": "ソウルドレインショット1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Silence 1",
     "cn": "沉默1",
-    "kr": "",
+    "kr": "침묵1",
+    "ja": "沈黙1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Soul Drain Shot 2",
     "cn": "灵魂射击2",
-    "kr": "",
+    "kr": "소울드레인샷2",
+    "ja": "ソウルドレインショット2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Shout of Calmness 1",
     "cn": "平静呐喊1",
-    "kr": "",
+    "kr": "냉정한 외침1",
+    "ja": "冷静な叫び1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Clarity 1",
     "cn": "补充气力 1",
-    "kr": "",
+    "kr": "기력충전1",
+    "ja": "気力補充1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sara's Blessing 1",
     "cn": "塞拉的祝福1",
-    "kr": "",
+    "kr": "세라의축복1",
+    "ja": "セーラの祝福1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Shout of Calmness 2",
     "cn": "平静呐喊2",
-    "kr": "",
+    "kr": "냉정한 외침2",
+    "ja": "冷静な叫び2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Sara's Blessing 2",
     "cn": "塞拉的祝福2",
-    "kr": "",
+    "kr": "세라의축복2",
+    "ja": "セーラの祝福2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stampede 1",
     "cn": "惊逃1",
-    "kr": "",
+    "kr": "군중심리1",
+    "ja": "群衆心理1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Stampede 2",
     "cn": "惊逃2",
-    "kr": "",
+    "kr": "군중심리2",
+    "ja": "群衆心理2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Hellfire 1",
     "cn": "炼狱火道1",
-    "kr": "",
+    "kr": "지옥의불길1",
+    "ja": "地獄の炎1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Neutralize 1",
     "cn": "无效化1",
-    "kr": "",
+    "kr": "무효화1",
+    "ja": "無効化1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Heavy Strike 2",
     "cn": "强击2",
-    "kr": "",
+    "kr": "강타2",
+    "ja": "強打2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Neutralize 2",
     "cn": "无效化2",
-    "kr": "",
+    "kr": "무효화2",
+    "ja": "無効化2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Silence 2",
     "cn": "沉默2",
-    "kr": "",
+    "kr": "침묵2",
+    "ja": "沈黙2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Clarity 2",
     "cn": "补充气力2",
-    "kr": "",
+    "kr": "기력충전2",
+    "ja": "気力補充2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Hellfire 2",
     "cn": "炼狱火道2",
-    "kr": "",
+    "kr": "지옥의불길2",
+    "ja": "地獄の炎2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Power Shot 1",
     "cn": "强力射击1",
-    "kr": "",
+    "kr": "파워샷1",
+    "ja": "パワーショット1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Power Shot 2",
     "cn": "强力射击2",
-    "kr": "",
+    "kr": "파워샷2",
+    "ja": "パワーショット2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Heavy Strike 1",
     "cn": "强击1",
-    "kr": "",
+    "kr": "강타1",
+    "ja": "強打1",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Harden Body 2",
     "cn": "锻炼体力2",
-    "kr": "",
+    "kr": "체력단련2",
+    "ja": "体力鍛錬2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Fatal Attack 2",
     "cn": "致命一击2",
-    "kr": "",
+    "kr": "치명적 일격2",
+    "ja": "致命的一撃2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Prayer of Protection 3",
     "cn": "守护祷告3",
-    "kr": "",
+    "kr": "수호의 기원3",
+    "ja": "守護の祈り3",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Firestorm 2",
     "cn": "火焰风暴2",
-    "kr": "",
+    "kr": "화염폭풍2",
+    "ja": "火炎暴風2",
     "color": "#ff9329",
     "type": "skill"
   },
   {
     "en": "Execution Rune",
     "cn": "酷刑符文",
-    "kr": "",
+    "kr": "처형의룬",
+    "ja": "処刑のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Torture Rune",
     "cn": "审问符文",
-    "kr": "",
+    "kr": "고문의룬",
+    "ja": "拷問のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Bio Magic Power Rune",
     "cn": "生物魔力符文",
-    "kr": "",
+    "kr": "생체마력의룬",
+    "ja": "生体魔力のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Atonement Rune",
     "cn": "赎罪符文",
-    "kr": "",
+    "kr": "속죄의룬",
+    "ja": "贖罪のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Corruption Rune",
     "cn": "堕落符文",
-    "kr": "",
+    "kr": "타락의룬",
+    "ja": "堕落のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Mercy Rune",
     "cn": "慈悲符文",
-    "kr": "",
+    "kr": "자비의룬",
+    "ja": "慈悲のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Penitence Rune",
     "cn": "忏悔符文",
-    "kr": "",
+    "kr": "참회의룬",
+    "ja": "悔悛のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Resurrection Rune",
     "cn": "复活符文",
-    "kr": "",
+    "kr": "부활의룬",
+    "ja": "復活のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Box Flowing with Mana",
     "cn": "充满魔力的箱子",
-    "kr": "",
+    "kr": "마력이 흐르는 상자",
+    "ja": "魔力の流れる箱",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Pure Magic Orb",
     "cn": "纯净的魔力球",
-    "kr": "",
+    "kr": "순수한마력구체",
+    "ja": "純粋な魔力の球体",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Surge Cycle",
     "cn": "高压电车",
-    "kr": "",
+    "kr": "써지싸이클",
+    "ja": "サージサイクル",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Frost Iron Refining Tool",
     "cn": "冻铁提炼道具",
-    "kr": "",
+    "kr": "한철제련도구",
+    "ja": "寒鉄精錬道具",
     "color": "#6ece34",
     "type": "item"
   },
   {
     "en": "Swamp Treasure",
     "cn": "湿地宝物",
-    "kr": "",
+    "kr": "늪지의보물",
+    "ja": "沼地の宝物",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Maze Treasure",
     "cn": "迷宫宝物",
-    "kr": "",
+    "kr": "미궁의보물",
+    "ja": "迷宮の宝物",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Faded Ring",
     "cn": "褪色戒指",
-    "kr": "",
+    "kr": "빛바랜반지",
+    "ja": "色あせたリング",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Snowfield Altar Treasure",
     "cn": "雪原祭坛宝物",
-    "kr": "",
+    "kr": "설원제단의보물",
+    "ja": "雪原祭壇の宝物",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Broken Necklace",
     "cn": "毁坏的项链",
-    "kr": "",
+    "kr": "망가진목걸이",
+    "ja": "壊れたネックレス",
     "color": "#bc71fc",
     "type": "item"
   },
   {
     "en": "Caligo's Hands",
     "cn": "克里高的手",
-    "kr": "",
+    "kr": "칼리고의손",
+    "ja": "カリーゴの手",
     "color": "#e60f10",
     "type": "item"
   },
   {
     "en": "Magic Power Breath",
     "cn": "魔力之息",
-    "kr": "",
+    "kr": "마력의숨결",
+    "ja": "魔力の息吹",
     "color": "#bc71fc",
     "type": "item"
   },
   {
     "en": "Rune Piece",
     "cn": "符文碎片",
-    "kr": "",
+    "kr": "룬 조각",
+    "ja": "ルーンのかけら",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Broken Oath",
     "cn": "裂开的立约书",
-    "kr": "",
+    "kr": "금이 간 서약서",
+    "ja": "破れた誓約書",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Pure Knowledge",
     "cn": "纯净的知识",
-    "kr": "",
+    "kr": "순수한 지식",
+    "ja": "純粋な知識",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Five-Colored Leather",
     "cn": "五色皮革",
-    "kr": "",
+    "kr": "오색가죽",
+    "ja": "五色の革",
     "color": "#bc71fc",
     "type": "item"
   },
   {
     "en": "Ancient Crystal",
     "cn": "古代水晶",
-    "kr": "",
+    "kr": "고대의수정",
+    "ja": "古代の水晶",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Ancient Wood",
     "cn": "古代树木",
-    "kr": "",
+    "kr": "고대의나무",
+    "ja": "古代の木",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Design: Blackskull Armor",
     "cn": "设计图:黑骸盔甲",
-    "kr": "",
+    "kr": "도안:블랙스컬갑옷",
+    "ja": "図案:ブラックスカルの鎧",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Design: Spirit's Hat",
     "cn": "设计图:精灵帽",
-    "kr": "",
+    "kr": "도안:정령의모자",
+    "ja": "図案:精霊の帽子",
     "color": "#6ece34",
     "type": "item"
   },
   {
     "en": "Design: Blackjuno's Helmet",
     "cn": "设计图:黑黑朱诺头盔",
-    "kr": "",
+    "kr": "도안:블랙주노투구",
+    "ja": "図案:ブラックジュノ兜",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Design Snow-Flower Stem Hat",
     "cn": "设计图:雪花藤蔓帽",
-    "kr": "",
+    "kr": "도안:눈꽃줄기모자",
+    "ja": "図案:雪花の蔓の帽子",
     "color": "#6ece34",
     "type": "item"
   },
   {
     "en": "Design: Crystal Robe",
     "cn": "设计图:水晶长袍",
-    "kr": "",
+    "kr": "도안:수정로브",
+    "ja": "図案:水晶ローブ",
     "color": "#6ece34",
     "type": "item"
   },
   {
     "en": "Dezoruba's Design",
     "cn": "戴楚拜伊的设计图",
-    "kr": "",
+    "kr": "데조르바의도안",
+    "ja": "デゾルバの図案",
     "color": "#39acf4",
     "type": "item"
   },
   {
     "en": "Jode's Design",
     "cn": "佐德的设计图",
-    "kr": "",
+    "kr": "조드의도안",
+    "ja": "ゾードの図案",
     "color": "#6ece34",
     "type": "item"
   },
   {
     "en": "Leather Quiver",
     "cn": "皮革箭袋",
-    "kr": "",
+    "kr": "가죽 화살집",
+    "ja": "革の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Coral Quiver",
     "cn": "珊瑚箭袋",
-    "kr": "",
+    "kr": "산호 화살집",
+    "ja": "珊瑚の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Thorn Quiver",
     "cn": "荆棘箭袋",
-    "kr": "",
+    "kr": "가시 화살집",
+    "ja": "棘の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Venom Quiver",
     "cn": "剧毒箭袋",
-    "kr": "",
+    "kr": "맹독의 화살집",
+    "ja": "猛毒の矢筒",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Hunter's Quiver",
     "cn": "猎人箭袋",
-    "kr": "",
+    "kr": "사냥꾼의 화살집",
+    "ja": "狩人の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Stinger Quiver",
     "cn": "蜂刺箭袋",
-    "kr": "",
+    "kr": "벌침 화살집",
+    "ja": "蜂の針の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Scout's Belt",
     "cn": "童军腰带",
-    "kr": "",
+    "kr": "스카우트 띠",
+    "ja": "スカウトのベルト",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Frostbound Quiver",
     "cn": "寒霜箭袋",
-    "kr": "",
+    "kr": "서리 깃든 화살집",
+    "ja": "霜がおりた矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Wanderer's Quiver",
     "cn": "流浪者箭袋",
-    "kr": "",
+    "kr": "방랑자의 화살집",
+    "ja": "放浪者の矢筒",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Legacy of the Steel Wind",
     "cn": "钢铁之风的遗产",
-    "kr": "",
+    "kr": "강철 바람의 유산",
+    "ja": "鋼鉄の風の遺産",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Supremacy Rune",
     "cn": "霸道符文",
-    "kr": "",
+    "kr": "패도의 룬",
+    "ja": "覇道のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Giant's rune",
     "cn": "巨人符文",
-    "kr": "",
+    "kr": "거인의 룬",
+    "ja": "巨人のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Depredation rune",
     "cn": "抢夺符文",
-    "kr": "",
+    "kr": "강탈의 룬",
+    "ja": "強奪のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Judgment rune",
     "cn": "审判符文",
-    "kr": "",
+    "kr": "심판의 룬",
+    "ja": "審判のルーン",
     "color": "#ff9329",
     "type": "item"
   },
   {
     "en": "Berserker Boots",
     "cn": "狂战士鞋",
-    "kr": "",
+    "kr": "광전사의부츠",
+    "ja": "光戦士のブーツ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Burning Blade",
     "cn": "烈焰刃",
-    "kr": "",
+    "kr": "버닝블레이드",
+    "ja": "バーニングブレイド",
     "color": "#39acf4",
     "type": "equip"
   },
@@ -2243,76 +2563,87 @@
     "en": "Crown",
     "cn": "乌龟王冠",
     "kr": "",
+    "ja": "",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Gauntlets of Victory",
     "cn": "胜利金属手套",
-    "kr": "",
+    "kr": "승리의건틀릿",
+    "ja": "勝利のガントレット",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Gloves of Purification",
     "cn": "净化手套",
-    "kr": "",
+    "kr": "정화의장갑",
+    "ja": "浄化の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Gloves of the Forest Elf",
     "cn": "森林妖精手套",
-    "kr": "",
+    "kr": "숲요정의장갑",
+    "ja": "森妖精の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Hole of Destruction",
     "cn": "破坏之穴",
-    "kr": "",
+    "kr": "파괴의홀",
+    "ja": "破壊のホール",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Imperial Bow",
     "cn": "帝国弓",
-    "kr": "",
+    "kr": "임페리얼보우",
+    "ja": "インペリアルボウ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Light Engraving Shoes",
     "cn": "光雕鞋",
-    "kr": "",
+    "kr": "빛새김의신발",
+    "ja": "光刻みの靴",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Sea Boots",
     "cn": "海洋长鞋",
-    "kr": "",
+    "kr": "바다의장화",
+    "ja": "海のブーツ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Sea Gloves",
     "cn": "海洋手套",
-    "kr": "",
+    "kr": "바다의장갑",
+    "ja": "海の手袋",
     "color": "#6ece34",
     "type": "equip"
   },
   {
     "en": "Snowfield Tracer Boots",
     "cn": "雪原追踪者长鞋",
-    "kr": "",
+    "kr": "설원추적자장화",
+    "ja": "雪原追跡者のブーツ",
     "color": "#39acf4",
     "type": "equip"
   },
   {
     "en": "Unyielding",
     "cn": "不屈",
-    "kr": "",
+    "kr": "불굴",
+    "ja": "不屈",
     "color": "#39acf4",
     "type": "equip"
   }

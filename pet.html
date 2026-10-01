@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>宠物图鉴</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+body{background:#f0f2f5;padding:12px}
+.top-bar{display:flex;align-items:center;gap:6px;margin-bottom:8px;position:sticky;top:0;z-index:100;background:#f0f2f5;padding:6px 0}
+.search-box{flex:1;min-width:0;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.lang-btn,.page-btn,.type-btn{padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px}
+select.lang-btn{font-size:15px}
+#catBar.top-bar{position:static;background:transparent;margin-bottom:1px;display:flex;flex-wrap:wrap;gap:4px}
+.type-btn.active[data-cat="large"]{background:#3774AE;border-color:#3774AE;color:#fff}
+.type-btn.active[data-cat="small"]{background:#518B38;border-color:#518B38;color:#fff}
+.type-btn.active{background:#718ACC;color:#fff;border-color:#718ACC}
+/* 排序方向按钮：**只在「预览图」显示**（list 模式隐藏），靠这一排最右边，图标+文字（正序/倒序），开启倒序时高亮 */
+.type-btn.sort-btn{display:inline-flex;align-items:center;gap:4px;margin-left:auto}
+.type-btn.sort-btn svg{display:block;flex:0 0 auto}
+.type-btn.sort-btn.active{background:#4E9A8C;border-color:#4E9A8C;color:#fff}   /* 用青绿区分「开关」与「分类选中」 */
+/* PC：把按钮从页面最右挪到「网格面板右上角」正上方（网格面板在居中布局里，右边缘 = 50vw - 31px，
+   故 margin-right = (100vw - 24px)/2 - 31px = 50vw - 43px。仅 ≥1024 生效，平板/手机不动） */
+@media(min-width:1024px){ .type-btn.sort-btn{margin-right:calc(50vw - 43px)} }
+.page-btn{margin:0 4px}
+.pagination{text-align:center;margin:8px 0}
+.equip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:768px) and (max-width:1023px){.equip-grid{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media(min-width:1024px){.equip-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.equip-card{background:#D9E3EC;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;display:flex;flex-direction:column;padding:4px;gap:4px;border:1px solid #94A6BE}
+.equip-name{text-align:center;font-weight:bold;font-size:18px;padding:4px 4px;border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px;line-height:1.2}
+@media(min-width:1024px){.equip-name{font-size:20px;padding:6px 4px}}
+.equip-info-row{display:flex;padding:4px;gap:4px;align-items:flex-start}
+.equip-icon-col{width:34%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px}
+.equip-text-col{width:66%;display:flex;flex-direction:column;gap:4px;min-width:0;align-items:flex-start;justify-content:flex-start;padding-left:4px}   /* 标签右移 4px */
+.hex-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden}
+.hex-icon::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%)}
+.hex-icon::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 15px rgba(255,255,255,0.35),inset 0 0 25px rgba(255,255,255,0.15)}
+.hex-icon .star{position:absolute;width:8px;height:8px;z-index:1}
+.hex-icon .star::before{content:"";position:absolute;width:100%;height:2px;top:50%;left:0;transform:translateY(-50%);background:linear-gradient(to right,transparent,rgba(255,255,255,0.95),transparent)}
+.hex-icon .star::after{content:"";position:absolute;width:2px;height:100%;left:50%;top:0;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.95),transparent)}
+.hex-icon .star1{top:18%;left:15%}
+.hex-icon .star2{bottom:18%;right:15%}
+.hex-icon img{width:34px;height:34px;object-fit:contain}
+@media(min-width:1024px){.hex-icon{width:68px;height:68px}.hex-icon img{width:42px;height:42px}}
+/* 信息框：标签在上、职业图标在标签下面（与装备图鉴一致） */
+.tag-rarity{padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tag-job{display:flex;flex-wrap:wrap;align-items:center;gap:3px;min-height:20px}
+.tag-job img{width:20px;height:20px;object-fit:contain;display:block}
+.item-level{min-height:20px;font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:3px}
+/* 数值框：每项一行 */
+.equip-stats{background:#C6D4E4;padding:8px;border-radius:8px;margin-top:4px;min-height:40px}
+.stat-item{font-size:15px;font-weight:bold;text-align:left;padding:2px 0;color:#22334a}
+/* 获取途径弹窗 */
+.modal-backdrop{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999}
+.modal-content{background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3)}
+.modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+/* 弹窗标题文字色：与对应按钮色协调（同色系加深，白底清晰易读、不刺眼） */
+#modalTitle{ color:#355E9C }                                   /* 获取途径：蓝 */
+#rateModalTitle,#probModalTitle{ color:#2C7267 }                /* 获得概率：青绿 */
+#relicModalTitle{ color:#4E7A3C }                               /* 文物概率：深绿 */
+.modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px}
+.modal-desc div{padding:8px;border-radius:8px;margin:4px 0;background:#f5f7fa;text-align:left;word-break:break-word}
+.modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+.modal-content.source-modal{max-height:60%;display:flex;flex-direction:column}
+.modal-content.source-modal .modal-title{flex-shrink:0}
+.modal-content.source-modal .modal-desc{flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain}
+.modal-content.source-modal .modal-close{align-self:center;flex-shrink:0}
+/* 卡片底部操作行 + 获取途径按钮 */
+.card-actions{display:flex;gap:6px;margin-top:auto}
+.btn-source{flex:1;width:auto;margin:0;padding:8px 2px;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block;font-size:14px}
+.btn-source.disabled{background:#9AA7BC;cursor:default}
+/* 获得概率按钮（高级 / 稀有宠物） */
+.btn-prob{flex:1;padding:8px 2px;background:#4E9A8C;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;font-size:14px}
+@media(min-width:1024px){.btn-source,.btn-prob{padding:10px 6px;font-size:16px}}
+/* 获得概率弹窗（自适应、最大 80% × 60%） */
+.modal-content.prob-modal{width:fit-content;max-width:80%;height:auto;max-height:60%;display:flex;flex-direction:column;text-align:left}
+.modal-content.prob-modal .modal-title{flex-shrink:0;text-align:center}
+.modal-content.prob-modal .modal-close{align-self:center;flex-shrink:0}
+.prob-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:4px 0 12px;padding-right:4px}
+.prob-box{width:100%;background:#f5f7fa;border-radius:10px;padding:8px}
+.prob-box-name{text-align:center;font-weight:bold;font-size:17px;color:#3D4E68;padding:2px 4px 0}
+.prob-box-name::after{content:"";display:block;width:32px;height:3px;background:#718ACC;border-radius:2px;margin:6px auto 8px}
+.prob-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;table-layout:auto}
+.prob-table th{background:#e0e7f3;color:#3D4E68;padding:5px 8px;font-weight:bold;text-align:center}
+.prob-table td{padding:4px 8px;border-top:1px solid #eef2f7;text-align:center;color:#22334a}
+.prob-table td.prob-name{text-align:left}
+.prob-table tbody tr:nth-child(even) td{background:#f7f9fc}
+.prob-table td.prob-val{font-weight:bold;color:#3D4E68;white-space:nowrap}
+.prob-table tr.me td{background:#FFF1CC!important;color:#8a5a00}
+.prob-table tr.me td.prob-val{color:#8a5a00}
+/* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
+select.lang-btn{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:32px;
+  padding-left:8px;                  /* 左侧留白收紧（右侧需给箭头留位） */
+  text-align:center;text-align-last:center;   /* 仅文字居中，箭头仍靠右 */
+}
+/* ===== PET_PREVIEW_PATCH：预览图（纯图标网格，样式参考游戏内宠物一览）===== */
+.pv-grid{background:#C6D4E4;border-radius:12px;padding:10px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;
+  max-height:72vh;overflow-y:auto;align-content:start}
+.pv-grid .pv-cell{background:#F4F8FF;border-radius:10px;aspect-ratio:1/1;
+  border:2px solid transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:background .12s,border-color .12s,transform .12s}
+.pv-grid .pv-cell:hover{background:#FFE58A;border-color:#E8C33A;transform:translateY(-1px)}
+.pv-grid .pv-cell:active{background:#FFD54A;border-color:#D9A400}
+.pv-grid .pv-cell img{width:82%;height:82%;object-fit:contain;display:block;image-rendering:pixelated}
+.pv-grid .pv-cell.noimg{background:#E3EAF4}
+/* ===== PET_PREVIEW_DETAIL_PATCH：预览图 = 图标网格 + 宠物卡片（点图标就地换卡）+ 左右箭头翻宠物 =====
+   手机（<768px）：**上下排——卡片（收窄 250px）在最上面并吸顶跟随滚动**，网格满宽在下面自己滚（页面基本不用滚）；
+   PC/平板（≥768px）：左右分栏——左图标网格、右 sticky 卡片。
+   卡片两旁各一个箭头（.pv-arrow），占用两侧空白，用来翻「上一只/下一只」= 预览图的宠物排序。 */
+#itemGrid.pv-host{display:block}
+.pv-layout{display:flex;flex-direction:column;gap:10px}
+.pv-pane{min-width:0}
+/* 卡片 + 左右箭头成一组：order:-1 让它整体排到网格上面（手机），吸顶位置也在这一层 */
+.pv-detail-wrap{display:flex;align-items:center;justify-content:center;gap:8px;max-width:100%;
+  order:-1;align-self:center;position:sticky;top:54px;z-index:60}
+.pv-detail{display:block;flex:0 1 250px;min-width:0;max-width:250px}   /* 窄屏时卡片先缩，箭头不缩 */
+.pv-arrow{flex:0 0 auto;width:34px;height:56px;padding:0;border:1px solid #94A6BE;border-radius:10px;
+  background:#EAF1F8;color:#4D5A75;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .12s,border-color .12s,transform .12s}
+.pv-arrow svg{display:block}
+.pv-arrow:hover{background:#FFE58A;border-color:#E8C33A}
+.pv-arrow:active{background:#FFD54A;border-color:#D9A400;transform:scale(.96)}
+.pv-arrow:disabled{background:#E4EAF2;border-color:#C7D2DE;color:#A9B6C6;cursor:default;transform:none}
+.pv-cell.selected{background:#FFD54A;border-color:#D9A400}
+.pv-empty{background:#D9E3EC;border:1px dashed #94A6BE;border-radius:12px;
+  padding:22px 12px;text-align:center;color:#4D5A75;font-size:14px;font-weight:bold;line-height:1.5}
+/* 手机：卡片紧凑一档（卡片吃掉太多竖向空间的话，下面 322 格的网格就只剩一小条）
+   + 卡片横向收窄到 250px 居中（满宽 366px 时信息行右侧空一大块，显得太宽）
+   + 网格**一排固定 6 个**（与 PC 一致），格子按屏宽自适应缩小；网格仍满宽 */
+@media(max-width:767px){
+  .pv-detail .equip-card{padding:3px;gap:3px}
+  .pv-detail .equip-name{font-size:16px;padding:4px 2px}
+  .pv-detail .hex-icon{width:46px;height:46px}
+  .pv-detail .hex-icon img{width:28px;height:28px}
+  .pv-detail .hex-icon .star{width:6px;height:6px}
+  .pv-detail .item-level{font-size:13px;min-height:16px;margin-top:2px}
+  .pv-detail .equip-stats{display:grid;grid-template-columns:1fr 1fr;gap:0 6px;padding:6px;min-height:0}
+  .pv-detail .stat-item{font-size:14px;padding:1px 0}
+  .pv-detail .card-actions{gap:4px}
+  .pv-detail .btn-source,.pv-detail .btn-prob{padding:6px 2px;font-size:13px}
+  /* minmax(0,1fr)：强制 6 等分，不然图标的最小宽度会把格子撑开、挤成 5 列 */
+  .pv-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  /* 网格限高 = 视口 − 顶部搜索栏 − 卡片 − 留白（240px 是兜底下限，横屏矮屏也还能用） */
+  .pv-grid{max-height:max(240px, calc(100vh - 360px))}
+}
+@supports (max-height:100dvh){
+  @media(max-width:767px){ .pv-grid{max-height:max(240px, calc(100dvh - 360px))} }   /* 移动端地址栏伸缩时不至于溢出 */
+}
+@media(min-width:768px){
+  .pv-layout{flex-direction:row;gap:18px;align-items:flex-start;justify-content:center}
+  .pv-pane{flex:0 0 auto}
+  .pv-detail-wrap{order:0;align-self:auto;gap:10px;top:68px}
+  .pv-detail{flex:0 0 auto;max-width:none;max-height:88vh;overflow-y:auto}
+  .pv-arrow{width:36px;height:64px}
+  .pv-detail .equip-card{width:100%}
+  .pv-pane .pv-empty{width:420px}
+}
+/* 平板：网格收到 4 列、卡片区窄一点，避免挤到换行 */
+@media(min-width:768px) and (max-width:1023px){
+  .pv-grid{grid-template-columns:repeat(4,64px)}
+  .pv-detail{width:262px}
+}
+/* PC：6 列 68px 网格（与游戏内宠物一览一致）+ 右侧卡片 */
+@media(min-width:1024px){
+  .pv-grid{grid-template-columns:repeat(6,68px);justify-content:center;gap:10px;padding:12px;
+    max-width:520px;margin-left:auto;margin-right:auto}
+  .pv-detail{width:310px}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <input class="search-box" id="searchBox" placeholder="搜索宠物名 / 死亡一击 / 体力...">
+  <select class="lang-btn" id="langSelect"></select>
+</div>
+<button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
+<button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
+<button class="type-btn" onclick="location.href='gem.html'" data-nav="gem">宝石图鉴</button>
+<button class="type-btn active" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
+<button class="type-btn" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
+<button class="type-btn" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
+<div class="top-bar" id="catBar"></div>
+<div class="pagination" id="topPagination">
+  <button class="page-btn" id="firstTop">首页</button>
+  <button class="page-btn" id="prevTop">上一页</button>
+  <span class="page-jump" id="pageJumpTop"><span id="pageInfo">第 1 页</span><input class="page-jump-input" id="pageInputTop" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextTop">下一页</button>
+  <button class="page-btn" id="lastTop">尾页</button>
+</div>
+<div class="equip-grid" id="itemGrid">加载中...</div>
+<div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="firstBot">首页</button>
+  <button class="page-btn" id="prevBot">上一页</button>
+  <span class="page-jump" id="pageJumpBot"><span id="pageInfoBot">第 1 页</span><input class="page-jump-input" id="pageInputBot" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextBot">下一页</button>
+  <button class="page-btn" id="lastBot">尾页</button>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal-content source-modal">
+    <div class="modal-title" id="modalTitle">获取途径</div>
+    <div class="modal-desc" id="modalText"></div>
+    <button class="modal-close" id="modalClose" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="probModal">
+  <div class="modal-content prob-modal">
+    <div class="modal-title" id="probModalTitle">获得概率</div>
+    <div class="prob-body" id="probModalBody"></div>
+    <button class="modal-close" id="probModalClose" onclick="closeProbModal()">关闭</button>
+  </div>
+</div>
+
+<script>
+/* ===== 语言工具（内联，不依赖额外 js 文件；语言对照数据在 lang.json） ===== */
+var TWOM_LANG_OPTIONS=[["en","English"],["zh","中文"],["ja","日本語"],["ko","한국어"]];
+var TWOM_UI2CODE={en:"en",zh:"cn",ja:"ja",ko:"kr"};
+var TWOM_CODE2UI={en:"en",cn:"zh",ja:"ja",kr:"ko"};
+var TWOM_NAV={},TWOM_TXTJA={};
+function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"kr",ko:"kr"})[v]||"cn";}
+function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
+function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="kr"?"ko":"en";}
+function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomApplyLangData(L){TWOM_NAV=(L&&L.nav)||{};TWOM_TXTJA=(L&&L.txtJa)||{};RARITY_COLOR=(L&&L.rarityColor)||RARITY_COLOR;NPC_TEXT=(L&&L.npcText)||NPC_TEXT;twomUpdateNav();
+  var P=(L&&L.petLang)||{};Object.assign(T,P.T||{});Object.assign(CAT_LANG,P.catName||{});
+}
+function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
+function twomTxt(cn,lang){return lang==="ja"?(TWOM_TXTJA[cn]||cn):cn;}
+
+/* ===== NPC_LOCALIZE_PATCH：NPC 名跟随语言 =====
+   把文案里出现的官方 NPC 名（lang.json.npcText）换成当前语言的官方名。
+   注意只吃 npcText 这个**子集**：官方 NPC 表里还有一批与物品/称号/怪物名撞车的词
+   （Knight / Magic Stone / Forest / Pie / Guard …），整表替换会把 `Fallen Magic Stone`（物品）、
+   `Jewel Knight`（称号）里的词一起换掉。子集由 work/scripts/build_npc_text.py 生成。 */
+let NPC_TEXT = {};          /* ← lang.json 的 npcText */
+let _npcRes = null;
+function npcLocalize(text){
+  const s = String(text == null ? '' : text);
+  const ks = Object.keys(NPC_TEXT);
+  if(!s || !ks.length) return s;
+  if(!_npcRes){
+    const sorted = ks.slice().sort(function(a, b){ return b.length - a.length; });
+    _npcRes = new RegExp('\\b(' + sorted.map(function(k){ return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')\\b', 'g');
+  }
+  return s.replace(_npcRes, function(m){
+    const v = NPC_TEXT[m] || {};
+    return v[currentLang] || v.cn || v.en || m;
+  });
+}
+function twomUi(L,k,lang,vars){var o=((L&&L.ui)||{})[k];var s=o?(o[lang]||o.cn||o.en||k):k;return String(s).replace(/\{(\w+)\}/g,function(_,n){return (vars&&vars[n]!=null)?vars[n]:"";});}
+</script>
+<script>
+let currentLang = twomReadLang();
+let DATA = [], LANGDATA = null, filtered = [], page = 1, currentCat = "all";
+let PETPROB = null;   /* pet_prob_data.json：官方「流星棒的碎片」获得概率表 */
+
+/* 稀有度配色统一在 lang.json 的 rarityColor（名称字体用 .color，标签底色用 .bg）。
+   本页不再自带色表；数据里只需写 rarity 标签，颜色自动跟随。 */
+let RARITY_COLOR = {};
+function rcOf(r){
+  return RARITY_COLOR[r] || RARITY_COLOR["一般"] || { color:"#4D5A75", bg:"#474F6E" };  // 兜底：lang.json 未加载时
+}
+const ENABLE_SOURCE = false;   // 获取途径数据整理完成后改 true 即恢复按钮
+const PLACEHOLDER = '—';
+function ui(k, vars){ return twomUi(LANGDATA, k, currentLang, vars); }
+function rarityLabel(r){
+  if(!r) return '';
+  const o = (LANGDATA && LANGDATA.rarity && LANGDATA.rarity[r]) || null;
+  if(o) return o[currentLang] || o.cn || r;
+  return r;
+}
+/* 稀有度标签：无稀有度时不渲染（标签旁的占位横线一并去掉） */
+function rarityTag(r, bg){
+  const lbl = rarityLabel(r);
+  if(!lbl) return '';
+  return '<div class="tag-rarity" style="background:'+bg+'">'+escHtml(lbl)+'</div>';
+}
+function lvText(v){ return (v === null || v === undefined || v === '') ? PLACEHOLDER : ('Lv.' + v); }
+// 职业图标：all / 空 => 四个职业全显示（不写文字 "ALL"）
+const JOB_ICON = { warrior: 'job/warrior.png', magician: 'job/magician.png', ranger: 'job/ranger.png', breaker: 'job/breaker.png' };
+const JOB_ORDER = ['warrior','magician','ranger','breaker'];
+function classIconsHtml(list){
+  let jobs = Array.isArray(list) ? list.slice() : (list ? [list] : []);
+  jobs = jobs.map(function(x){ return String(x).toLowerCase().trim(); }).filter(Boolean);
+  if(!jobs.length || jobs.indexOf('all') >= 0) jobs = JOB_ORDER.slice();
+  const want = {};
+  jobs.forEach(function(j){ if(JOB_ICON[j]) want[j] = 1; });
+  const ordered = JOB_ORDER.filter(function(j){ return want[j]; });
+  if(!ordered.length) return '';
+  return '<div class="tag-job">' + ordered.map(function(j){
+    return '<img src="'+JOB_ICON[j]+'" alt="'+escAttr(j)+'" title="'+escAttr(j)+'" onerror="this.style.display=\'none\'">';
+  }).join('') + '</div>';
+}
+/* 获取途径按钮：ENABLE_SOURCE=false 时置灰禁用（弹窗代码保留，日后打开开关即可） */
+function sourceBtnHtml(it){
+  it = it || {};
+  const has = String(it.obtain || '').trim() || String(it.note || '').trim();
+  if(ENABLE_SOURCE && has){
+    return '<button class="btn-source" data-name="'+escAttr(it.name)+'" onclick="openSourceModal(this)">'+escHtml(t('source'))+'</button>';
+  }
+  return '<button class="btn-source disabled" disabled>'+escHtml(t('source'))+'</button>';
+}
+function statItem(label, v){
+  const val = (v === null || v === undefined || v === '') ? PLACEHOLDER : String(v);
+  return '<div class="stat-item">'+escHtml(label)+' '+escHtml(val)+'</div>';
+}
+/* 获取途径弹窗：上=哪里获取，下=时间/备注（样式与物品/装备图鉴一致） */
+function srcModalHtml(it){
+  it = it || {};
+  function rows(text){
+    const v = String(text || '').trim();
+    if(!v) return '<div style="cursor:default">'+PLACEHOLDER+'</div>';
+    const lines = v.split('\n').map(function(x){ return x.trim(); }).filter(function(x){ return x !== ''; });
+    if(!lines.length) return '<div style="cursor:default">'+PLACEHOLDER+'</div>';
+    return lines.map(function(x){ return '<div style="cursor:default">'+escHtml(npcLocalize(x))+'</div>'; }).join('');
+  }
+  function label(txt){
+    return '<div style="cursor:default;background:#f3f3f3;font-weight:bold;color:#4D5A75">'+escHtml(txt)+'</div>';
+  }
+  return label(ui('obtainWhere')) + rows(it.obtain) + label(ui('noteTime')) + rows(it.note);
+}
+
+const T = {};   /* ← lang.json 的 petLang.T（页面不再自带文案） */;
+function t(k){const o=T[k];return (o&&(o[currentLang]||o.cn))||k;}
+function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function getPerPage(){ if(window.innerWidth>=1024)return 20; if(window.innerWidth>=768)return 15; return 12; }
+
+const CAT_ORDER = ["preview","large","small"];   /* 「预览图」排在第一位 */   /* 顺序即标签顺序：大宠物 → 小宠物 → 预览图 */
+const CAT_LANG = {};   /* ← lang.json 的 petLang.catName（页面不再自带文案） */;
+const CAT_RARITY = { large:"稀有", small:"高级" };   // 大=稀有(蓝) / 小=高级(绿)
+let jumpSearchText = "";   /* 跳转时填进搜索框的文字（点「全部/分类」自动清掉） */
+let jumpExactKey = "";     /* 强跳转：点名称跳转时只显示这一只（内部键精确命中，不做模糊搜索） */
+function isJumpTarget(x){
+  if(!jumpExactKey) return true;
+  const k = String(jumpExactKey).toLowerCase().trim();
+  if(String(x.name).toLowerCase().trim() === k) return true;
+  const o = (LANGDATA && LANGDATA.pets && LANGDATA.pets[x.name]) || {};
+  const ns = [x.name, o.cn || "", o.en || "", o.ja || "", o.kr || ""]
+    .map(function(v){ return String(v || "").toLowerCase().trim(); }).filter(function(v){ return v !== ""; });
+  return ns.indexOf(k) >= 0;
+}
+let sortDesc = false;      /* 排序方向：false=正序（体力小→大，默认）；true=倒序（大→小）。「一般」与 Lv.0 无论正倒序都沉底 */
+function buildCatBar(){
+  const bar = document.getElementById('catBar');
+  if(!bar) return;
+  bar.innerHTML = '';
+  const b0 = document.createElement('button');
+  b0.className = 'type-btn' + (currentCat === 'all' ? ' active' : '');
+  b0.dataset.cat = 'all';
+  b0.innerText = CAT_LANG.all[currentLang] || CAT_LANG.all.cn;
+  b0.onclick = function(){ setCat('all'); };
+  bar.appendChild(b0);
+  CAT_ORDER.forEach(function(c){
+    const b = document.createElement('button');
+    b.className = 'type-btn' + (c === currentCat ? ' active' : '');
+    b.dataset.cat = c;
+    b.innerText = CAT_LANG[c][currentLang] || CAT_LANG[c].cn;
+    b.onclick = function(){ setCat(c); };
+    bar.appendChild(b);
+  });
+  /* 排序方向按钮：靠这一排最右边，点一下翻转（正序 ⇄ 倒序） */
+  const bs = document.createElement('button');
+  bs.className = 'type-btn sort-btn';
+  bs.id = 'sortBtn';
+  bs.onclick = toggleSort;
+  bar.appendChild(bs);
+  updateSortBtn();
+}
+/* 点「全部 / 分类」= 重置搜索框（残留关键词会把新分类的结果筛空） */
+function setCat(cat){
+  currentCat = cat;
+  jumpSearchText = "";
+  jumpExactKey = "";        /* 切分类/全部 -> 解除强跳转 */
+  const box = document.getElementById('searchBox');
+  if(box) box.value = "";
+  updateCatBar();
+  filterAndRender();
+}
+function updateCatBar(){
+  document.querySelectorAll('#catBar .type-btn').forEach(function(b){
+    const c = b.dataset.cat;
+    if(!c) return;                                     /* 排序按钮没有 data-cat，active 由 updateSortBtn 自己管 */
+    b.classList.toggle('active', c === currentCat);
+    if(CAT_LANG[c]) b.innerText = CAT_LANG[c][currentLang] || CAT_LANG[c].cn;
+  });
+  updateSortBtn();
+}
+/* 排序按钮：图标（正/倒的箭头方向）+ 当前方向文字；开启倒序时高亮 */
+function sortBtnIconHtml(){
+  return '<svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true"><path d="'
+    + (sortDesc ? 'M5 1 V13 M1.5 9.5 L5 13 L8.5 9.5' : 'M5 13 V1 M1.5 4.5 L5 1 L8.5 4.5')
+    + '" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+}
+function updateSortBtn(){
+  const b = document.getElementById('sortBtn');
+  if(!b) return;
+  /* 只在「预览图」里露出这个按钮：倒序只作用于预览图的排序，列表页保持原顺序不受影响 */
+  b.style.display = (currentCat === 'preview') ? '' : 'none';
+  b.classList.toggle('active', sortDesc);
+  b.title = t(sortDesc ? 'sortDesc' : 'sortAsc');
+  b.innerHTML = sortBtnIconHtml() + '<span>' + escHtml(t(sortDesc ? 'sortDesc' : 'sortAsc')) + '</span>';
+}
+/* 点一下倒序、再点一下正序（只在预览图生效；搜索框内容保留，页码回到第 1 页） */
+function toggleSort(){
+  sortDesc = !sortDesc;
+  updateSortBtn();
+  filterAndRender();
+}
+
+function dispName(name){
+  const o = (LANGDATA && LANGDATA.pets && LANGDATA.pets[name]) || null;
+  if(o){
+    if(currentLang === "en") return o.en || name;
+    return o[currentLang] || o.cn || name;
+  }
+  return name;
+}
+
+function filterAndRender(keepPage){
+  let list = DATA;
+  /* 「预览图」不按稀有度过滤（等价「全部」），只换渲染方式 */
+  if(currentCat !== 'all' && currentCat !== 'preview') list = list.filter(function(x){ return x.rarity === CAT_RARITY[currentCat]; });
+  const kw = document.getElementById('searchBox').value.toLowerCase().trim();
+  if(kw){
+    list = list.filter(function(x){
+      const o = (LANGDATA && LANGDATA.pets && LANGDATA.pets[x.name])||{};
+      // 可搜索：名称（四语）+ 死亡一击 + 体力 的数值
+      const hay = [x.name, o.cn||'', o.ja||'', o.kr||'', x.deadly, x.hp].join(' ').toLowerCase();
+      return hay.indexOf(kw)>=0;
+    });
+  }
+  if(jumpExactKey) list = list.filter(isJumpTarget);   /* 强跳转：只留跳转目标那一只 */
+  const coll = new Intl.Collator(twomLocale(currentLang));
+  /* 排序规则：
+       ⓪ 「一般」稀有度以及 Lv.0（等级缺失/占位）的宠物整体沉底
+       ① 体力从低到高
+       ② 同一体力内，按「死亡一击配对槽位」排：
+          小宠物(高级)槽位 = 自身死亡一击；大宠物(稀有/英雄/传说)槽位 = 死亡一击 - 1。
+          这样「死亡一击相差 1」的一小一大两只落进同一槽位，
+       ③ 同槽位时小宠物在前、大宠物在后 → 呈现「一个小的一个大的」
+       ④ 兜底：死亡一击升序 → 名称。 */
+  const BIG_RARITY = { '稀有': 1, '英雄': 1, '传说': 1 };   // 视为「大宠物」的稀有度
+  /* ⓪ 沉底组：「一般」稀有度 + Lv.0（等级缺失/占位） */
+  function tierRank(x){
+    if(x.rarity === '一般') return 1;
+    const lv = Number(x.level);
+    if(x.level === '' || x.level == null || isNaN(lv) || lv === 0) return 1;
+    return 0;
+  }
+  function hpNum(x){ const v = Number(x.hp); return (x.hp === '' || x.hp == null || isNaN(v)) ? Infinity : v; }
+  function isBigPet(x){ return !!BIG_RARITY[x.rarity]; }
+  function deadNum(x){ const v = Number(x.deadly); return (x.deadly === '' || x.deadly == null || isNaN(v)) ? Infinity : v; }
+  /* deadly 最多 1 位小数；相减后必须按 0.1 取整再比较，
+     否则 8.2 - 1 === 7.199999999999999 会比小宠物的 7.2 小，
+     导致配对里「大」被排到「小」前面（HP53 Aqua Shaman / HP58 Fairy Queen 的错法）。 */
+  function slotNum(x){ const v = deadNum(x); return (v === Infinity) ? Infinity : Math.round((v - (isBigPet(x) ? 1 : 0)) * 10) / 10; }
+  filtered = list.slice().sort(function(a,b){
+    const ta = tierRank(a), tb = tierRank(b);
+    if(ta !== tb) return ta - tb;                       // ⓪ 一般 / Lv.0 沉底（**不随正倒序翻转**，倒序时也不该把它们顶到最前）
+    /* 倒序只在「预览图」里生效（按钮也只在预览图显示），列表页永远保持原顺序 */
+    const dir = (sortDesc && currentCat === 'preview') ? -1 : 1;
+    const ha = hpNum(a), hb = hpNum(b);
+    if(ha !== hb) return ((ha - hb) || 0) * dir;        // ① 体力（正序：低→高）
+    const sa = slotNum(a), sb = slotNum(b);
+    if(sa !== sb) return ((sa - sb) || 0) * dir;        // ② 死亡一击配对槽位
+    const ra = isBigPet(a) ? 1 : 0, rb = isBigPet(b) ? 1 : 0;
+    if(ra !== rb) return (ra - rb) * dir;               // ③ 小在前，大在后
+    const da = deadNum(a), db = deadNum(b);
+    if(da !== db) return ((da - db) || 0) * dir;        // ④ 死亡一击升序
+    return (coll.compare(dispName(a.name), dispName(b.name)) || a.name.localeCompare(b.name)) * dir;
+  });
+  if(keepPage){ const total=Math.ceil(filtered.length/getPerPage()); if(page>total) page=Math.max(1,total); }
+  else page=1;
+  renderCards();
+}
+
+/* 单张宠物卡片（列表页与「预览图」右侧详情共用同一套版式） */
+function cardHtml(it){
+  const name = dispName(it.name);
+  const rc = rcOf(it.rarity);
+  const img = it.hasIcon ? '<img loading="lazy" src="'+escAttr(it.icon)+'" onerror="this.style.display=\'none\'">' : '';
+  /* 职业图标已按要求隐藏：所有宠物均为全职业通用，图标无信息量 */
+  return '<div class="equip-card item-card" data-name="'+escAttr(it.name)+'" data-cat-code="'+escAttr(it.catCode||'')+'">'
+    + '<div class="equip-name" style="color:'+rc.color+'">'+escHtml(name)+'</div>'
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col"><div class="hex-icon"><div class="star star1"></div><div class="star star2"></div>'+img+'</div><div class="item-level">'+escHtml(lvText(it.level))+'</div></div>'
+    +   '<div class="equip-text-col">'+rarityTag(it.rarity, rc.bg)+'</div>'
+    + '</div>'
+    + '<div class="equip-stats">'
+    +   statItem(ui('petExp'), it.exp) + statItem(ui('petCrit'), it.crit)
+    +   statItem(ui('petDeadly'), it.deadly) + statItem(ui('petHp'), it.hp)
+    + '</div>'
+    + '<div class="card-actions">'+sourceBtnHtml(it)+probBtnHtml(it)+'</div>'
+    + '</div>';
+}
+
+function renderCards(){
+  const grid = document.getElementById('itemGrid');
+  if(currentCat === 'preview'){ renderPreview(); return; }   /* PET_PREVIEW_PATCH */
+  grid.className = 'equip-grid';                            /* 从预览图切回卡片时恢复网格样式 */
+  setPaginationVisible(true);
+  updatePageInfo();
+  const perPage = getPerPage();
+  const items = filtered.slice((page-1)*perPage, page*perPage);
+  if(!items.length){ grid.innerHTML = "<div style='grid-column:1/-1;text-align:center;padding:20px'>"+t('noData')+"</div>"; return; }
+  grid.innerHTML = items.map(cardHtml).join('');
+}
+/* ===== PET_PREVIEW_PATCH：预览图（每个宠物只出图标）+ 宠物卡片 =====
+   点图标 → 就地换卡片，不离开预览图。卡片位置由 CSS 断点决定：
+   手机（<768px）卡片在网格上方并吸顶跟随滚动；PC/平板（≥768px）卡片在网格右侧。 */
+function setPaginationVisible(v){
+  ['topPagination','bottomPagination'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.style.display = v ? '' : 'none';
+  });
+}
+let pvSelected = '';                    /* 卡片里当前显示的宠物（切语言/重渲染后保持） */
+/* 预览图节点复用：切走再回来复用整块 DOM + 格子节点，图片不重新加载 */
+var pvLayoutNode = null, pvCellCache = {}, pvListSig = '';
+function pvCellNode(it){
+  var key = String(it.name);
+  var n = pvCellCache[key];
+  if(!n){
+    var tmp = document.createElement('div');
+    tmp.innerHTML = pvCellHtml(it);
+    n = tmp.firstChild;
+    if(n) pvCellCache[key] = n;
+  }
+  return n;
+}
+function pvCellHtml(it){
+  var nm = dispName(it.name);
+  var img = it.hasIcon ? '<img loading="lazy" decoding="async" src="'+escAttr(it.icon)+'" alt="">' : '';
+  var sel = (it.name === pvSelected) ? ' selected' : '';   /* 选中态直接烘进 HTML，重渲染后不掉 */
+  return '<div class="pv-cell'+(it.hasIcon?'':' noimg')+sel+'" data-name="'+escAttr(it.name)
+       + '" title="'+escAttr(nm)+'">'+img+'</div>';
+}
+/* 只同步格子高亮（不动卡片内容），分批渲染完成后再调一次 */
+function pvSyncSelected(){
+  var cells = document.querySelectorAll('#itemGrid .pv-cell');
+  for(var i=0;i<cells.length;i++){
+    cells[i].classList.toggle('selected', !!pvSelected && cells[i].dataset.name === pvSelected);
+  }
+}
+/* 格子分批渲染（与时装页同一套）：322 个格子一次性 innerHTML 也会卡，先出首屏后续分帧追加。
+   ⚠ 没有 requestAnimationFrame（用例桩 / 老浏览器）时同步一次跑完，结果完全一致。 */
+var PV_CHUNK = 120;
+var pvRenderSeq = 0;
+function pvFillGrid(){
+  var host = document.getElementById('pvGrid');
+  if(!host) return;
+  var list = filtered, i = 0, seq = ++pvRenderSeq;
+  var sig = (pvListSig = list.map(function(x){ return x.name; }).join('|'));
+  if(host.getAttribute && host.getAttribute('data-sig') === sig && host.children && host.children.length === list.length){
+    pvSyncSelected(); return;                        /* 列表没变 -> 一个格子都不重建 */
+  }
+  if(host.setAttribute) host.setAttribute('data-sig', sig);
+  while(host.firstChild) host.removeChild(host.firstChild);   /* 换列表：旧格子摘下（仍在缓存里） */
+  var raf = (typeof window !== 'undefined' && window.requestAnimationFrame) ? window.requestAnimationFrame : null;
+  if(!raf) return;                /* 老浏览器 / 无 rAF 环境（含用例桩）：renderPreview 已把格子预填进骨架，这里不用再补 */
+  function step(){
+    if(seq !== pvRenderSeq) return;                 /* 已经切走/重渲染 → 放弃这一轮 */
+    var box = document.getElementById('pvGrid');
+    if(!box) return;
+    var frag = document.createDocumentFragment();
+    var end = Math.min(i + PV_CHUNK, list.length);
+    for(; i < end; i++){
+      frag.appendChild(pvCellNode(list[i]));
+    }
+    box.appendChild(frag);
+    if(i < list.length){ if(raf) raf(step); else step(); }
+    else pvSyncSelected();
+  }
+  step();
+}
+function renderPreview(){
+  var grid = document.getElementById('itemGrid');
+  setPaginationVisible(false);
+  updatePageInfo();                       /* 保持分页数据同步（虽然被隐藏），切回卡片时不用重算 */
+  /* 先定卡片里放谁（沿用上次选中的；被筛选掉/搜不到就退回第一只），再烘进格子 HTML */
+  var names = filtered.map(function(x){ return x.name; });
+  if(names.indexOf(pvSelected) < 0) pvSelected = names[0] || '';
+  /* 有 requestAnimationFrame → 骨架留空、随后分帧填充；没有 → 直接预填（等价旧实现） */
+  var pvRaf = (typeof window !== 'undefined' && window.requestAnimationFrame) ? window.requestAnimationFrame : null;
+  var cells = pvRaf ? '' : filtered.map(pvCellHtml).join('');
+  grid.className = 'pv-host';
+  if(pvLayoutNode && filtered.length && grid.firstChild !== pvLayoutNode){
+    grid.innerHTML = '';
+    grid.appendChild(pvLayoutNode);                  /* 复用整块预览 DOM（含格子里的 img） */
+    paintPvDetail(pvSelected);
+    pvFillGrid();
+    return;
+  }
+  grid.innerHTML = '<div class="pv-layout">'
+    + '<div class="pv-pane">'
+    +   (filtered.length ? '<div class="pv-grid" id="pvGrid">'+cells+'</div>' : '<div class="pv-empty">'+escHtml(t('noData'))+'</div>')
+    + '</div>'
+    + '<div class="pv-detail-wrap">' + pvArrowHtml(-1)
+    +   '<div class="pv-detail" id="pvDetail"></div>' + pvArrowHtml(1)
+    + '</div>'
+    + '</div>';
+  paintPvDetail(pvSelected);
+  pvFillGrid();
+  pvLayoutNode = filtered.length ? grid.firstChild : null;   /* 记下整块布局，下次切回来直接复用 */
+}
+/* 左右箭头：在卡片两旁的空白处，用来翻「上一只/下一只」= 预览图当前的宠物排序 */
+function pvArrowHtml(delta){
+  var prev = delta < 0;
+  var key = prev ? 'prevPet' : 'nextPet';
+  var lbl = t(key);
+  /* 箭头用内联 SVG（不依赖字体里的 ◀▶ 字形，且颜色走 currentColor 跟着按钮变色） */
+  var path = prev ? 'M8.5 2.5 L3 10 L8.5 17.5' : 'M3.5 2.5 L9 10 L3.5 17.5';
+  return '<button class="pv-arrow ' + (prev ? 'pv-prev' : 'pv-next') + '" id="' + (prev ? 'pvPrev' : 'pvNext') + '"'
+    + ' type="button" title="' + escAttr(lbl) + '" aria-label="' + escAttr(lbl) + '"'
+    + ' onclick="pvStep(' + delta + ')">'
+    + '<svg viewBox="0 0 12 20" width="12" height="20" aria-hidden="true">'
+    + '<path d="' + path + '" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'
+    + '</svg></button>';
+}
+/* 卡片内容（选中项不在当前结果里 → 显示提示） */
+function pvDetailHtml(name){
+  var it = name ? DATA.find(function(x){ return x.name === name; }) : null;
+  return it ? cardHtml(it) : '<div class="pv-empty">'+escHtml(t('pickHint'))+'</div>';
+}
+function paintPvDetail(name){
+  var box = document.getElementById('pvDetail');
+  if(!box) return;
+  box.innerHTML = pvDetailHtml(name);
+  var cells = document.querySelectorAll('#itemGrid .pv-cell');
+  for(var i=0;i<cells.length;i++) cells[i].classList.toggle('selected', !!name && cells[i].dataset.name === name);
+  box.scrollTop = 0;
+  updatePvArrows();
+}
+/* 到头就置灰：第一只时左箭头禁用，最后一只时右箭头禁用（顺序 = filtered 的当前顺序） */
+function updatePvArrows(){
+  var names = filtered.map(function(x){ return x.name; });
+  var i = names.indexOf(pvSelected);
+  var p = document.getElementById('pvPrev'), n = document.getElementById('pvNext');
+  if(p) p.disabled = (i <= 0);
+  if(n) n.disabled = (i < 0 || i >= names.length - 1);
+}
+/* 点箭头 → 按预览图的排序往前/往后翻一只 */
+function pvStep(delta){
+  var names = filtered.map(function(x){ return x.name; });
+  var i = names.indexOf(pvSelected);
+  if(i < 0) i = 0; else i += delta;
+  if(i < 0 || i >= names.length) return;
+  showPvDetail(names[i]);
+  scrollPvCellIntoView(names[i]);
+}
+/* 翻页后把选中格滚进可视区（网格是独立滚动区，手动算偏移免得整页跟着跳） */
+function scrollPvCellIntoView(name){
+  var panel = document.querySelector('#itemGrid .pv-grid');
+  if(!panel || !panel.children || !panel.getBoundingClientRect) return;
+  var cell = null;
+  for(var i=0;i<panel.children.length;i++){
+    if(panel.children[i].dataset && panel.children[i].dataset.name === name){ cell = panel.children[i]; break; }
+  }
+  if(!cell || !cell.getBoundingClientRect) return;
+  var view = panel.clientHeight;
+  if(typeof view !== 'number' || !view) return;
+  var top = cell.getBoundingClientRect().top - panel.getBoundingClientRect().top + panel.scrollTop;
+  var h = cell.offsetHeight || 0;
+  if(top < panel.scrollTop) panel.scrollTop = Math.max(0, top - 6);
+  else if(top + h > panel.scrollTop + view) panel.scrollTop = top + h - view + 6;
+}
+/* 点图标 → 就地换卡片（名字对不上就不动，避免把已显示的卡片抹成空态） */
+function showPvDetail(name){
+  if(!name) return;
+  if(!DATA.some(function(x){ return x.name === name; })) return;
+  pvSelected = name;
+  paintPvDetail(name);
+}
+/* 跳转约定（回「全部」列表 + 搜索框填显示名 + 滚到该卡）：
+   预览图里的点按已改为就地换卡，这个函数保留下来以备后续需要「去列表看这一只」的入口。 */
+function jumpToPet(name){
+  var box = document.getElementById('searchBox');
+  currentCat = 'all';
+  jumpSearchText = dispName(name);
+  jumpExactKey = name;                       /* 强跳转：只留这一只 */
+  if(box) box.value = jumpSearchText;
+  updateCatBar();
+  filterAndRender();
+  var cards = document.querySelectorAll('#itemGrid .equip-card');
+  for(var i=0;i<cards.length;i++){
+    if(cards[i].dataset.name === name){
+      if(cards[i].scrollIntoView) cards[i].scrollIntoView({behavior:'smooth', block:'center'});
+      break;
+    }
+  }
+}
+/* 图标是 innerHTML 拼出来的 → 用事件委托，不逐个绑 */
+document.getElementById('itemGrid').addEventListener('click', function(ev){
+  var el = ev.target;
+  while(el && el !== this && !(el.classList && el.classList.contains('pv-cell'))) el = el.parentNode;
+  if(!el || el === this || !el.dataset || !el.dataset.name) return;
+  showPvDetail(el.dataset.name);
+});
+
+
+function openSourceModal(btn){
+  const nm = btn && btn.dataset ? btn.dataset.name : '';
+  const it = DATA.find(function(x){ return x.name === nm; }) || {};
+  const body = document.getElementById('modalText');
+  document.getElementById('modalTitle').innerText = t('source');
+  body.innerHTML = srcModalHtml(it);
+  document.getElementById('modal').style.display = 'flex';
+  body.scrollTop = 0;
+}
+function closeModal(){ document.getElementById('modal').style.display = 'none'; }
+function closeProbModal(){ document.getElementById('probModal').style.display = 'none'; }
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); closeProbModal(); } });
+
+/* ===== 获得概率（官方「流星棒的碎片」表，pet_prob_data.json）=====
+   只给 **高级 / 稀有** 且 **等级 > 0** 的宠物（用户口径：一般 = 小宠物=高级标签，稀有 = 大宠物=稀有标签；
+   Lv.0 的 Lucy / Oopsie 不显示）。整张表照官方列出，本宠物对应等级那一行高亮。 */
+/* 概率显示：官方这张表都是两位小数（15.25% / 5.05% / 3.10% / 10.70%），照原样显示 */
+function fmtProb(p){
+  const n = Number(p);
+  if(!isFinite(n)) return PLACEHOLDER;
+  return n.toFixed(2) + '%';
+}
+function petProbStage(it){  if(!it) return '';
+  const r = it.rarity;
+  if(r !== '高级' && r !== '稀有') return '';
+  const lv = Number(it.level);
+  if(!isFinite(lv) || lv <= 0) return '';        /* 0 级不显示概率表 */
+  return r;
+}
+function probBtnHtml(it){
+  if(!PETPROB || !petProbStage(it)) return '';
+  return '<button class="btn-prob" data-name="'+escAttr(it.name)+'" onclick="openProbModal(this)">'+escHtml(t('prob'))+'</button>';
+}
+function petProbTableHtml(it){
+  const P = PETPROB;
+  const cols = P.cols[currentLang] || P.cols.cn;
+  const grade = petProbStage(it);
+  const rows = P.rows.map(function(r){
+    const me = grade && r.grade === grade;
+    return '<tr' + (me ? ' class="me"' : '') + '>'
+      + '<td class="prob-name">'+escHtml(r[currentLang] || r.cn)+'</td>'
+      + '<td class="prob-val">'+fmtProb(r.p)+'</td></tr>';
+  }).join('');
+  return '<div class="prob-box">'
+    + '<div class="prob-box-name">'+escHtml(P.title[currentLang] || P.title.cn)+'</div>'
+    + '<table class="prob-table"><thead><tr><th>'+escHtml(cols[0])+'</th><th>'+escHtml(cols[1])+'</th></tr></thead>'
+    + '<tbody>'+rows+'</tbody></table></div>';
+}
+function openProbModal(btn){
+  if(!PETPROB) return;
+  const nm = btn && btn.dataset ? btn.dataset.name : '';
+  const it = DATA.find(function(x){ return x.name === nm; }) || {};
+  document.getElementById('probModalTitle').innerText = t('prob') + (nm ? ' \u00b7 ' + dispName(nm) : '');
+  document.getElementById('probModalBody').innerHTML = petProbTableHtml(it);
+  document.getElementById('probModal').style.display = 'flex';
+  document.getElementById('probModalBody').scrollTop = 0;
+}
+
+function updatePageInfo(){
+  const total = Math.ceil(filtered.length/getPerPage());
+  const s = t('page').replace('{now}',page).replace('{total}',total||1);
+  document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
+}
+function goPrev(){ if(page>1){page--;renderCards();} }
+function goNext(){ const total=Math.ceil(filtered.length/getPerPage()); if(page<total){page++;renderCards();window.scrollTo(0,0);} }
+function updateLangText(){
+  document.getElementById('searchBox').placeholder = t('search');
+  document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = t('prev');
+  document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = t('next');
+  document.getElementById('modalTitle').innerText = t('source');
+  document.getElementById('modalClose').innerText = t('close');
+  twomUpdateNav(currentLang);
+  updateCatBar();
+}
+
+async function init(){
+  try{
+    const [d, lg] = await Promise.all([fetch('pet_data.json').then(function(r){return r.json();}), fetch('lang.json').then(function(r){return r.json();})]);
+    DATA = Array.isArray(d)?d:[]; LANGDATA = lg; twomApplyLangData(lg);
+    try { PETPROB = await fetch('pet_prob_data.json').then(function(r){return r.json();}); } catch(e){ PETPROB = null; }
+  }catch(e){ DATA=[]; }
+  buildCatBar();
+  twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
+    currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
+    updateLangText(); filterAndRender(true);
+  });
+  document.getElementById('searchBox').addEventListener('input', function(){ jumpExactKey = ''; filterAndRender(); });
+  document.getElementById('prevTop').onclick = goPrev;
+  document.getElementById('nextTop').onclick = goNext;
+  document.getElementById('prevBot').onclick = goPrev;
+  document.getElementById('nextBot').onclick = goNext;
+  window.addEventListener('resize', function(){ renderCards(); });
+  updateLangText(); filterAndRender();
+}
+init();
+</script>
+<style>
+/* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
+/* PAGE_NAV_COMPACT_V5：桌面按钮仍为原尺寸(16px)，手机端只微收 1~2px，保证两位数页码仍在一排 */
+.page-jump{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.page-jump:hover > span{text-decoration:underline}
+.page-jump-input{display:none;width:66px;padding:6px 4px;border:1px solid #ccc;border-radius:8px;font-size:16px;text-align:center;font-family:inherit;-moz-appearance:textfield;appearance:textfield}
+.page-jump-input::-webkit-outer-spin-button,.page-jump-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.page-jump.editing .page-jump-input{display:inline-block}
+.page-jump.editing > span{display:none}
+.page-btn:disabled{opacity:.45}
+/* 分页栏改弹性单行：只为消除 HTML 空白造成的换行，不改按钮尺寸（尺寸仍用页面原有 .page-btn 规则）。
+   gap:4px 是补回原先元素间空白所占的宽度，让桌面观感与改动前一致。 */
+.pagination{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:4px}
+.pagination > *{flex:0 0 auto}
+.pagination .page-jump{white-space:nowrap}
+/* 手机端只微收一点（越窄越收，最小 14px；桌面 16px 保持不变） */
+@media(max-width:480px){
+  .pagination{gap:3px}
+  .pagination .page-btn{padding:7px;margin:0 3px;font-size:16px}
+  .page-jump-input{width:62px;font-size:16px;padding:5px 4px}
+}
+@media(max-width:400px){
+  .pagination{gap:2px}
+  .pagination .page-btn{padding:6px;margin:0 2px;font-size:15px}
+  .page-jump-input{width:58px;font-size:15px}
+}
+@media(max-width:340px){
+  .pagination{gap:1px}
+  .pagination .page-btn{padding:5px;margin:0 1px;font-size:14px}
+  .page-jump-input{width:52px;font-size:14px}
+}
+</style>
+<script>
+/* ===== PAGE_NAV_PATCH：首页 / 尾页 / 点击「第 x/y 页」输入页码（6 个图鉴页共用） =====
+   在各页原有脚本之后运行，复用其 page / filteredXxx / getPerPage / renderCards 或 render / updatePageInfo。 */
+(function(){
+  var JUMP_LABEL = {
+    cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
+    en:{first:"First",last:"Last",tip:"Click to enter a page number"},
+    ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
+    kr:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+  };
+  function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
+  function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }
+  function listOf(){
+    if(typeof filtered !== "undefined" && filtered) return filtered;
+    if(typeof filteredItems !== "undefined" && filteredItems) return filteredItems;
+    if(typeof filteredSkills !== "undefined" && filteredSkills) return filteredSkills;
+    return [];
+  }
+  function totalPages(){ return Math.max(1, Math.ceil(listOf().length / getPerPage())); }
+  function draw(){
+    if(typeof renderCards === "function") return renderCards();
+    if(typeof render === "function") return render();
+  }
+  function syncInfo(){ if(typeof updatePageInfo === "function") updatePageInfo(); }
+  function goTo(n){
+    var t = totalPages(), v = Math.min(Math.max(1, parseInt(n, 10) || 1), t);
+    if(v === page){ syncInfo(); return; }
+    page = v; draw(); syncInfo();
+  }
+  function refresh(){
+    var t = totalPages(), L = lbl();
+    [["Top","firstTop","lastTop"],["Bot","firstBot","lastBot"]].forEach(function(a){
+      var f = document.getElementById(a[1]), l = document.getElementById(a[2]);
+      if(f){ f.innerText = L.first; f.disabled = page <= 1; }
+      if(l){ l.innerText = L.last;  l.disabled = page >= t; }
+      var jw = document.getElementById("pageJump" + a[0]), inp = document.getElementById("pageInput" + a[0]);
+      if(jw) jw.title = L.tip;
+      if(inp){ inp.max = t; inp.title = L.tip; if(!jw || !jw.classList.contains("editing")) inp.value = page; }
+    });
+  }
+  function cancelEdit(jw, inp){ jw.classList.remove("editing"); inp.value = page; inp.blur(); syncInfo(); }
+  function commit(jw, inp){
+    if(!jw.classList.contains("editing")) return;
+    var v = parseInt(inp.value, 10);
+    jw.classList.remove("editing");
+    if(!isNaN(v)) goTo(v); else syncInfo();
+  }
+  function bindJump(sfx){
+    var jw = document.getElementById("pageJump" + sfx), inp = document.getElementById("pageInput" + sfx);
+    if(!jw || !inp) return;
+    jw.onclick = function(ev){
+      if(ev && ev.target === inp) return;
+      if(jw.classList.contains("editing")) return;
+      jw.classList.add("editing");
+      inp.value = page;
+      inp.focus(); try{ inp.select(); }catch(e){}
+    };
+    inp.onkeydown = function(e){
+      var k = e.key || "";
+      if(k === "Enter" || e.keyCode === 13){ e.preventDefault(); commit(jw, inp); inp.blur(); }
+      else if(k === "Escape" || e.keyCode === 27){ e.preventDefault(); cancelEdit(jw, inp); }
+    };
+    inp.onblur = function(){ commit(jw, inp); };
+  }
+  function bindBtn(id, fn){
+    var b = document.getElementById(id);
+    if(!b) return;
+    b.onclick = function(){ if(b.disabled) return; fn(); };
+  }
+  ["Top","Bot"].forEach(function(sfx){
+    bindJump(sfx);
+    bindBtn("first" + sfx, function(){ if(page > 1){ page = 1; draw(); syncInfo(); window.scrollTo(0,0); } });
+    bindBtn("last" + sfx,  function(){ var t = totalPages(); if(page < t){ page = t; draw(); syncInfo(); window.scrollTo(0,0); } });
+  });
+  // 包一层 updatePageInfo：每次刷新（含切语言）都同步按钮文案 / 输入框上下限
+  if(typeof updatePageInfo === "function"){
+    var _orig = updatePageInfo;
+    updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
+  }
+  refresh();
+})();
+</script>
+</body>
+</html>

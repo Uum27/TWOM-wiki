@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>时装图鉴</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft JhengHei",system-ui,sans-serif}
+body{background:#f0f2f5;padding:12px}
+.top-bar{display:flex;align-items:center;gap:6px;margin-bottom:8px;position:sticky;top:0;z-index:100;background:#f0f2f5;padding:6px 0}
+.search-box{flex:1;min-width:0;padding:8px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+.lang-btn,.page-btn,.type-btn{padding:8px;border:1px solid #ccc;background:#fff;border-radius:8px;white-space:nowrap;font-size:16px}
+select.lang-btn{font-size:15px}
+.type-btn.active{background:#718ACC;color:#fff;border-color:#718ACC}
+.page-btn{margin:0 4px}
+#catBar.top-bar{position:static;background:transparent;margin-bottom:1px;display:flex;flex-wrap:wrap;gap:4px}
+.pagination{text-align:center;margin:8px 0}
+.equip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:768px) and (max-width:1023px){.equip-grid{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media(min-width:1024px){.equip-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.equip-card{background:#D9E3EC;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);overflow:hidden;display:flex;flex-direction:column;padding:4px;gap:4px;border:1px solid #94A6BE}
+.equip-name{text-align:center;font-weight:bold;font-size:18px;padding:4px 4px;border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px;line-height:1.2}
+@media(min-width:1024px){.equip-name{font-size:20px;padding:6px 4px}}
+.equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.equip-icon-col{width:34%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px}
+.equip-text-col{width:66%;display:flex;flex-direction:column;gap:4px;min-width:0;padding-left:4px}   /* 标签/需求等级/职业图标 整体右移 4px */
+.hex-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden}
+.hex-icon::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%)}
+.hex-icon::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 15px rgba(255,255,255,0.35),inset 0 0 25px rgba(255,255,255,0.15)}
+.hex-icon .star{position:absolute;width:8px;height:8px;z-index:1}
+.hex-icon .star::before{content:"";position:absolute;width:100%;height:2px;top:50%;left:0;transform:translateY(-50%);background:linear-gradient(to right,transparent,rgba(255,255,255,0.95),transparent)}
+.hex-icon .star::after{content:"";position:absolute;width:2px;height:100%;left:50%;top:0;transform:translateX(-50%);background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.95),transparent)}
+.hex-icon .star1{top:18%;left:15%}
+.hex-icon .star2{bottom:18%;right:15%}
+.hex-icon img{width:34px;height:34px;object-fit:contain}
+@media(min-width:1024px){.hex-icon{width:68px;height:68px}.hex-icon img{width:42px;height:42px}}
+/* 信息框：右栏自上而下 = 稀有度标签 → 需求等级 → 职业图标（等级贴着职业图） */
+.tag-rarity{padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tag-job{display:flex;flex-wrap:wrap;align-items:center;gap:3px;min-height:20px}
+.tag-job img{width:20px;height:20px;object-fit:contain;display:block}
+.item-level{min-height:20px;font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:3px}
+/* 等级移到右栏后：靠底对齐，紧贴职业图标上方 */
+.equip-text-col .item-level{margin-top:auto;margin-bottom:-2px;text-align:left}
+/* 数值框：第一行固定「服装」，有体力才追加「体力」一行（每项一行） */
+.equip-stats{background:#C6D4E4;padding:8px;border-radius:8px;margin-top:4px;min-height:40px;position:relative}
+/* 宝石数值框右下角「不可交易」（红字）——框内文本照常换行占上方，右下角留出它的位置 */
+.equip-stats.has-notrade{padding-bottom:26px}
+.no-trade{position:absolute;right:8px;bottom:6px;color:#E60000;font-size:13px;font-weight:bold;line-height:1}
+/* 宝石：属性行（`力量 1 · 敏捷 1 · …`）字号略小；效果描述另起一行、更小一号 */
+.stat-item.gem-attrs{font-size:13px;font-weight:normal;color:#2F4A6B}
+.stat-item.gem-desc{font-size:12px;font-weight:normal;color:#3D4E68;line-height:1.35;padding-top:3px}
+.stat-item{font-size:15px;font-weight:bold;text-align:left;padding:2px 0;color:#22334a}
+.stat-title{color:#3D4E68}
+/* 获取途径弹窗 */
+.modal-backdrop{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999}
+.modal-content{background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3)}
+.modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+/* 弹窗标题文字色：与对应按钮色协调（同色系加深，白底清晰易读、不刺眼） */
+#modalTitle{ color:#355E9C }                                   /* 获取途径：蓝 */
+#rateModalTitle,#probModalTitle{ color:#2C7267 }                /* 获得概率：青绿 */
+#relicModalTitle{ color:#4E7A3C }                               /* 文物概率：深绿 */
+.modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px}
+.modal-desc div{padding:8px;border-radius:8px;margin:4px 0;background:#f5f7fa;text-align:center;word-break:break-word}   /* 获取途径正文居中 */
+.modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
+.modal-content.source-modal{max-height:60%;display:flex;flex-direction:column}
+.modal-content.source-modal .modal-title{flex-shrink:0}
+.modal-content.source-modal .modal-desc{flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain}
+.modal-content.source-modal .modal-close{align-self:center;flex-shrink:0}
+/* 卡片底部操作行 + 获取途径 / 获得概率按钮 */
+.card-actions{display:flex;gap:6px;margin-top:auto}
+.btn-source{flex:1;width:auto;margin:0;padding:8px 2px;background:#718ACC;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;display:block;font-size:14px}
+.btn-source.disabled{background:#9AA7BC;cursor:default}
+/* 获得概率按钮：样式与装备图鉴的「重置概率」一致 */
+.btn-prob{flex:1;padding:8px 2px;background:#4E9A8C;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;font-size:14px}
+/* 宝石专用第二排按钮：合成概率 / 加工概率 */
+.btn-craft{flex:1;padding:8px 2px;background:#7A6FA8;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;font-size:14px}
+.card-actions+.card-actions{margin-top:6px}
+@media(min-width:1024px){.card-actions .btn-source,.btn-prob,.btn-craft{padding:10px 6px;font-size:16px}}
+/* 合成/加工概率弹窗：小节纵向堆叠（表格比「箱子」宽） */
+/* 加工概率弹窗的「花费」行（标题下方）：按阶段 1=5 / 2=20 / 3=50 / 4=200 起源石 */
+.prob-cost{background:#f5f7fa;border-radius:10px;padding:6px 12px;margin:0 0 10px;
+  font-size:14px;color:#3D4E68;text-align:center;line-height:1.6}
+.prob-cost b{color:#22334a}
+.prob-boxes.stacked{display:block}
+.prob-boxes.stacked .prob-box{width:100%;max-width:100%;margin-bottom:10px}
+/* 获得概率弹窗（自适应大小，最大 80% × 60%，与装备图鉴一致） */
+.modal-content.prob-modal{width:fit-content;max-width:80%;height:auto;max-height:60%;display:flex;flex-direction:column;text-align:left}
+.modal-content.prob-modal .modal-title{flex-shrink:0;text-align:center}
+.modal-content.prob-modal .modal-close{align-self:center;flex-shrink:0}
+.prob-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:4px 0 12px;padding-right:4px}
+.prob-boxes{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+/* 二级箱子弹窗要盖在「获得概率」之上 */
+#boxModal{z-index:10001}
+.prob-boxes.single{justify-content:center}
+@media(min-width:768px){.prob-boxes{flex-wrap:nowrap}}
+.prob-box{flex:0 1 auto;width:240px;max-width:100%;background:#f5f7fa;border-radius:10px;padding:8px}
+/* 当前这件时装所在的箱子那块加一圈高亮 */
+.prob-box.is-target{box-shadow:0 0 0 2px #4E9A8C inset;background:#edf6f4}
+.prob-box-name{text-align:center;font-weight:bold;font-size:17px;color:#3D4E68;padding:2px 4px 0}
+.prob-box-name::after{content:"";display:block;width:32px;height:3px;background:#718ACC;border-radius:2px;margin:6px auto 8px}
+.prob-table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;table-layout:auto}
+.prob-table th{background:#e0e7f3;color:#3D4E68;padding:5px 8px;font-weight:bold;text-align:center}
+.prob-table td{padding:4px 8px;border-top:1px solid #eef2f7;text-align:center}
+.prob-table td.prob-name{text-align:left}
+.prob-table tbody tr:nth-child(even) td{background:#f7f9fc}
+.prob-table td.prob-val{font-weight:bold;color:#3D4E68;white-space:nowrap}
+/* 当前这件时装所在的那一行高亮 */
+.prob-table tr.me td{background:#FFF1CC!important;color:#8a5a00}
+.prob-table tr.me td.prob-val{color:#8a5a00}
+/* 官方「剛毅化身」表里的「等級」分组小标题行 */
+.prob-table tr.group td{background:#dfe7f5!important;color:#3D4E68;font-weight:bold;text-align:left;font-size:13px}
+/* 可点击的时装名 -> 跳转到该时装 */
+.prob-link{color:#3774AE;cursor:pointer;text-decoration:none}
+.prob-link:hover{text-decoration:underline}
+/* 「随机手套 / 随机长靴」这类行本身就是另一个箱子 -> 跳到自己那张表 */
+.prob-boxrow{color:#2E8B7A;font-weight:bold;cursor:pointer}
+.prob-boxrow:hover{text-decoration:underline}
+.prob-table tr.boxrow td{background:#EAF6F3!important}
+/* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
+select.lang-btn{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:32px;
+  padding-left:8px;                  /* 左侧留白收紧（右侧需给箭头留位） */
+  text-align:center;text-align-last:center;   /* 仅文字居中，箭头仍靠右 */
+}
+/* 排序方向按钮：**只在「预览图」显示**（list 模式隐藏），靠这一排最右边，正序/倒序 */
+.type-btn.sort-btn{display:inline-flex;align-items:center;gap:4px;margin-left:auto}
+.type-btn.sort-btn svg{display:block;flex:0 0 auto}
+.type-btn.sort-btn.active{background:#4E9A8C;border-color:#4E9A8C;color:#fff}
+/* PC：挪到「网格面板右上角」正上方（面板右边缘 = 50vw - 31px → margin-right = 50vw - 43px），仅 ≥1024 生效 */
+@media(min-width:1024px){ .type-btn.sort-btn{margin-right:calc(50vw - 43px)} }
+
+/* ===== COSTUME_PREVIEW_PATCH：预览图（图标网格 + 卡片 + 左右箭头翻件）=====
+   与宠物图鉴同款：手机（<768px）卡片（收窄 250px）在网格上面并吸顶；PC/平板（≥768px）左网格右卡片。
+   点图标 → 就地换卡；卡片两旁箭头 = 按当前排序翻「上一件/下一件」。 */
+#itemGrid.pv-host{display:block}
+.pv-layout{display:flex;flex-direction:column;gap:10px}
+.pv-pane{min-width:0}
+.pv-detail-wrap{display:flex;align-items:center;justify-content:center;gap:8px;max-width:100%;
+  order:-1;align-self:center;position:sticky;top:54px;z-index:60}
+.pv-detail{display:block;flex:0 1 250px;min-width:0;max-width:250px}
+.pv-arrow{flex:0 0 auto;width:34px;height:56px;padding:0;border:1px solid #94A6BE;border-radius:10px;
+  background:#EAF1F8;color:#4D5A75;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .12s,border-color .12s,transform .12s}
+.pv-arrow svg{display:block}
+.pv-arrow:hover{background:#FFE58A;border-color:#E8C33A}
+.pv-arrow:active{background:#FFD54A;border-color:#D9A400;transform:scale(.96)}
+.pv-arrow:disabled{background:#E4EAF2;border-color:#C7D2DE;color:#A9B6C6;cursor:default;transform:none}
+.pv-cell.selected{background:#FFD54A;border-color:#D9A400}
+.pv-empty{background:#D9E3EC;border:1px dashed #94A6BE;border-radius:12px;
+  padding:22px 12px;text-align:center;color:#4D5A75;font-size:14px;font-weight:bold;line-height:1.5}
+.pv-grid{background:#C6D4E4;border-radius:12px;padding:10px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;
+  max-height:72vh;overflow-y:auto;align-content:start}
+.pv-grid .pv-cell{background:#F4F8FF;border-radius:10px;aspect-ratio:1/1;
+  border:2px solid transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:background .12s,border-color .12s,transform .12s}
+.pv-grid .pv-cell:hover{background:#FFE58A;border-color:#E8C33A;transform:translateY(-1px)}
+.pv-grid .pv-cell:active{background:#FFD54A;border-color:#D9A400}
+.pv-grid .pv-cell img{width:82%;height:82%;object-fit:contain;display:block;image-rendering:pixelated}
+.pv-grid .pv-cell.noimg{background:#E3EAF4}
+/* 手机：卡片紧凑一档（时装卡片比宠物高）+ 卡片收窄 250px 居中 + 网格一排固定 6 个 */
+@media(max-width:767px){
+  .pv-detail .equip-name{font-size:16px;padding:4px 2px}
+  .pv-detail .hex-icon{width:46px;height:46px}
+  .pv-detail .hex-icon img{width:28px;height:28px}
+  .pv-detail .hex-icon .star{width:6px;height:6px}
+  .pv-detail .item-level{font-size:13px;min-height:16px}
+  .pv-detail .tag-rarity{font-size:12px;padding:2px 5px}
+  .pv-detail .tag-job img{width:18px;height:18px}
+  .pv-detail .equip-stats{padding:6px;min-height:0}
+  .pv-detail .stat-item{font-size:14px;padding:1px 0}
+  .pv-detail .stat-item.gem-attrs,.pv-detail .stat-item.gem-desc{font-size:12px}
+  .pv-detail .card-actions{gap:4px}
+  .pv-detail .btn-source,.pv-detail .btn-prob{padding:6px 2px;font-size:13px}
+  .pv-grid{grid-template-columns:repeat(6,minmax(0,1fr))}   /* minmax(0,1fr)：强制 6 等分，否则图标会把格子撑开 */
+  /* 限高 = 视口 − 顶部搜索栏 − 卡片 − 留白（时装卡片更高，减数用 430；470 是兜底下限的一半） */
+  .pv-grid{max-height:max(200px, calc(100vh - 430px))}
+}
+@supports (max-height:100dvh){
+  @media(max-width:767px){ .pv-grid{max-height:max(200px, calc(100dvh - 430px))} }
+}
+@media(min-width:768px){
+  .pv-layout{flex-direction:row;gap:18px;align-items:flex-start;justify-content:center}
+  .pv-pane{flex:0 0 auto}
+  .pv-detail-wrap{order:0;align-self:auto;gap:10px;top:68px}
+  .pv-detail{flex:0 0 auto;max-width:none;max-height:88vh;overflow-y:auto}
+  .pv-arrow{width:36px;height:64px}
+  .pv-detail .equip-card{width:100%}
+  .pv-pane .pv-empty{width:420px}
+}
+/* 平板：网格 4 列 + 卡片列窄一点；PC：固定 6 列 ×68px 且面板限宽 520 居中 */
+@media(min-width:768px) and (max-width:1023px){
+  .pv-grid{grid-template-columns:repeat(4,64px)}
+  .pv-detail{width:262px}
+}
+@media(min-width:1024px){
+  .pv-grid{grid-template-columns:repeat(6,68px);justify-content:center;gap:10px;padding:12px;
+    max-width:520px;margin-left:auto;margin-right:auto}
+  .pv-detail{width:310px}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <input class="search-box" id="searchBox" placeholder="搜索时装名...">
+  <select class="lang-btn" id="langSelect"></select>
+</div>
+<button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
+<button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
+<button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
+<button class="type-btn" onclick="location.href='gem.html'" data-nav="gem">宝石图鉴</button>
+<button class="type-btn" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
+<button class="type-btn active" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
+<button class="type-btn" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
+<div class="top-bar" id="catBar"></div>
+<div class="pagination" id="topPagination">
+  <button class="page-btn" id="firstTop">首页</button>
+  <button class="page-btn" id="prevTop">上一页</button>
+  <span class="page-jump" id="pageJumpTop"><span id="pageInfo">第 1 页</span><input class="page-jump-input" id="pageInputTop" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextTop">下一页</button>
+  <button class="page-btn" id="lastTop">尾页</button>
+</div>
+<div class="equip-grid" id="itemGrid">加载中...</div>
+<div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="firstBot">首页</button>
+  <button class="page-btn" id="prevBot">上一页</button>
+  <span class="page-jump" id="pageJumpBot"><span id="pageInfoBot">第 1 页</span><input class="page-jump-input" id="pageInputBot" type="number" min="1" step="1" inputmode="numeric"></span>
+  <button class="page-btn" id="nextBot">下一页</button>
+  <button class="page-btn" id="lastBot">尾页</button>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal-content source-modal">
+    <div class="modal-title" id="modalTitle">获取途径</div>
+    <div class="modal-desc" id="modalText"></div>
+    <button class="modal-close" id="modalClose" onclick="closeModal()">关闭</button>
+  </div>
+</div>
+<div class="modal-backdrop" id="probModal">
+  <div class="modal-content prob-modal">
+    <div class="modal-title" id="probModalTitle">获得概率</div>
+    <div class="prob-body" id="probModalBody"></div>
+    <button class="modal-close" id="probModalClose" onclick="closeProbModal()">关闭</button>
+  </div>
+</div>
+<!-- 二级弹窗：点箱子行（随机手套 / 随机长靴）时弹出该箱自己的概率表，盖在获得概率弹窗之上 -->
+<div class="modal-backdrop" id="boxModal">
+  <div class="modal-content prob-modal">
+    <div class="modal-title" id="boxModalTitle"></div>
+    <div class="prob-body" id="boxModalBody"></div>
+    <button class="modal-close" id="boxModalClose" onclick="closeBoxModal()">关闭</button>
+  </div>
+</div>
+
+<script>
+/* ===== 语言工具（内联，不依赖额外 js 文件；语言对照数据在 lang.json） ===== */
+var TWOM_LANG_OPTIONS=[["en","English"],["zh","中文"],["ja","日本語"],["ko","한국어"]];
+var TWOM_UI2CODE={en:"en",zh:"cn",ja:"ja",ko:"kr"};
+var TWOM_CODE2UI={en:"en",cn:"zh",ja:"ja",kr:"ko"};
+var TWOM_NAV={},TWOM_TXTJA={};
+function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"kr",ko:"kr"})[v]||"cn";}
+function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
+function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="kr"?"ko":"en";}
+function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomApplyLangData(L){TWOM_NAV=(L&&L.nav)||{};TWOM_TXTJA=(L&&L.txtJa)||{};RARITY_COLOR=(L&&L.rarityColor)||RARITY_COLOR;NPC_TEXT=(L&&L.npcText)||NPC_TEXT;twomUpdateNav();
+  var P=(L&&L.costumeLang)||{};Object.assign(T,P.T||{});Object.assign(CAT_LANG,P.catName||{});
+}
+function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
+function twomTxt(cn,lang){return lang==="ja"?(TWOM_TXTJA[cn]||cn):cn;}
+
+/* ===== NPC_LOCALIZE_PATCH：NPC 名跟随语言 =====
+   把文案里出现的官方 NPC 名（lang.json.npcText）换成当前语言的官方名。
+   注意只吃 npcText 这个**子集**：官方 NPC 表里还有一批与物品/称号/怪物名撞车的词
+   （Knight / Magic Stone / Forest / Pie / Guard …），整表替换会把 `Fallen Magic Stone`（物品）、
+   `Jewel Knight`（称号）里的词一起换掉。子集由 work/scripts/build_npc_text.py 生成。 */
+let NPC_TEXT = {};          /* ← lang.json 的 npcText */
+let _npcRes = null;
+function npcLocalize(text){
+  const s = String(text == null ? '' : text);
+  const ks = Object.keys(NPC_TEXT);
+  if(!s || !ks.length) return s;
+  if(!_npcRes){
+    const sorted = ks.slice().sort(function(a, b){ return b.length - a.length; });
+    _npcRes = new RegExp('\\b(' + sorted.map(function(k){ return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')\\b', 'g');
+  }
+  return s.replace(_npcRes, function(m){
+    const v = NPC_TEXT[m] || {};
+    return v[currentLang] || v.cn || v.en || m;
+  });
+}
+function twomUi(L,k,lang,vars){var o=((L&&L.ui)||{})[k];var s=o?(o[lang]||o.cn||o.en||k):k;return String(s).replace(/\{(\w+)\}/g,function(_,n){return (vars&&vars[n]!=null)?vars[n]:"";});}
+</script>
+<script>
+let currentLang = twomReadLang();
+let DATA = [], LANGDATA = null, filtered = [], page = 1, currentCat = "all", BASE = [];
+let GEMPROB = null;   /* gem_prob_data.json：官方「合成概率 / 加工概率」两张表 */
+let BOX_DATA = null;   // costume_box_data.json：官方「随机服装宝箱 A~M」完整概率表
+let jumpSearchText = '';   // 跳转时填进搜索框的文字（点「全部/分类」会连同用户输入一起清空）
+
+// 顺序：全部 → 武器 → 帽子 → 服装 → 手套 → 饰品 → 鞋子(含靴子) → 披风 → 宝石
+/* 预览图里的分类分段顺序（用户指定）：头 → 身 → 手 → 脚 → 饰品 → 披风 → 武器；宝石不参与预览 */
+const PREVIEW_CAT_ORDER = ['hat','cloth','gloves','shoes','accessory','cloak','weapon'];
+let sortDesc = false;    /* 排序方向（只在预览图生效；按钮也只在预览图显示） */
+/* 预览图里额外选的「部位筛选」（可多选；空数组 = 全部部位）。只在 currentCat==='preview' 时生效，
+   退出预览图不清空（下次进来还是上次那几个部位）。 */
+let previewCats = [];
+/* 「宝石」已独立成 gem.html（宝石图鉴），这里只留时装分类；preview = 预览图（非数据分类） */
+const CAT_ORDER = ["preview","weapon","hat","cloth","gloves","accessory","shoes","cloak"];   /* 「预览图」排在第一位 */
+const CAT_LANG = {};   /* ← lang.json 的 costumeLang.catName（页面不再自带文案） */;
+/* 稀有度配色统一在 lang.json 的 rarityColor（名称字体用 .color，标签底色用 .bg）。
+   本页不再自带色表；数据里只需写 rarity 标签，颜色自动跟随。 */
+let RARITY_COLOR = {};
+function rcOf(r){
+  return RARITY_COLOR[r] || RARITY_COLOR["一般"] || { color:"#4D5A75", bg:"#474F6E" };  // 兜底：lang.json 未加载时
+}
+const ENABLE_SOURCE = true;    // 2026-09-28 打开：官方 A~M 箱子概率已写入 obtain
+const PLACEHOLDER = '—';
+function ui(k, vars){ return twomUi(LANGDATA, k, currentLang, vars); }
+function rarityLabel(r){
+  if(!r) return '';
+  const o = (LANGDATA && LANGDATA.rarity && LANGDATA.rarity[r]) || null;
+  if(o) return o[currentLang] || o.cn || r;
+  return r;
+}
+/* 稀有度标签：无稀有度时不渲染（不显示占位符） */
+function rarityTag(r, bg){
+  const lbl = rarityLabel(r);
+  if(!lbl) return '';
+  return '<div class="tag-rarity" style="background:'+bg+'">'+escHtml(lbl)+'</div>';
+}
+function lvText(v){ return (v === null || v === undefined || v === '') ? PLACEHOLDER : ('Lv.' + v); }
+/* 需求等级：写在右侧栏「职业图标正上方」，文案取 lang.json 的 ui.reqLevel */
+function reqLvText(v){ return (v === null || v === undefined || v === '') ? PLACEHOLDER : (ui('reqLevel') + ' ' + v); }
+/* 卡片数值框的第一行固定文案「服装」。若日后改成「显示每张卡自己的分类」，
+   把这里换成 (CAT_LANG[x.cat]||{cn:'服装'}) 的当前语言值即可。 */
+function statsBoxTitle(){ const o = CAT_LANG.cloth; return o ? (o[currentLang] || o.cn) : '服装'; }
+/* 体力是否可显示：无体力 / 空 / 0 时不显示「体力」这一行（卡片本身照常显示）
+   体力支持 '7-10' 这类区间值，取其中最大的数判断 */
+function hasHp(x){
+  const v = (x && x.hp);
+  if(v === null || v === undefined) return false;
+  const s = String(v).trim();
+  if(s === '') return false;
+  const nums = s.match(/\d+(?:\.\d+)?/g);
+  if(!nums) return false;
+  for(let i = 0; i < nums.length; i++){ if(Number(nums[i]) > 0) return true; }
+  return false;
+}
+// 职业图标：all / 空 => 四个职业全显示（不写文字 "ALL"）
+const JOB_ICON = { warrior: 'job/warrior.png', magician: 'job/magician.png', ranger: 'job/ranger.png', breaker: 'job/breaker.png' };
+const JOB_ORDER = ['warrior','magician','ranger','breaker'];
+function classIconsHtml(list){
+  let jobs = Array.isArray(list) ? list.slice() : (list ? [list] : []);
+  jobs = jobs.map(function(x){ return String(x).toLowerCase().trim(); }).filter(Boolean);
+  if(!jobs.length || jobs.indexOf('all') >= 0) jobs = JOB_ORDER.slice();
+  const want = {};
+  jobs.forEach(function(j){ if(JOB_ICON[j]) want[j] = 1; });
+  const ordered = JOB_ORDER.filter(function(j){ return want[j]; });
+  if(!ordered.length) return '';
+  return '<div class="tag-job">' + ordered.map(function(j){
+    return '<img src="'+JOB_ICON[j]+'" alt="'+escAttr(j)+'" title="'+escAttr(j)+'" onerror="this.style.display=\'none\'">';
+  }).join('') + '</div>';
+}
+/* 获取途径按钮：ENABLE_SOURCE=false 时置灰禁用 */
+function sourceBtnHtml(it){
+  it = it || {};
+  const has = String(it.obtain || '').trim();
+  if(ENABLE_SOURCE && has){
+    return '<button class="btn-source" data-name="'+escAttr(it.name)+'" onclick="openSourceModal(this)">'+escHtml(t('source'))+'</button>';
+  }
+  return '<button class="btn-source disabled" disabled>'+escHtml(t('source'))+'</button>';
+}
+/* 获得概率按钮：只在这件时装属于某个「随机服装宝箱 A~M」时出现（与装备图鉴「重置概率」同理） */
+function probBtnHtml(it){
+  if(!it || !boxesOf(it.name).length) return '';
+  return '<button class="btn-prob" data-name="'+escAttr(it.name)+'" onclick="openProbModal(this)">'+escHtml(t('prob'))+'</button>';
+}
+/* 反查：这件时装出现在哪些箱子里 -> [{code, box, subs:[只含该时装所在子表]}] */
+function boxesOf(name){
+  if(!BOX_DATA || !BOX_DATA.boxes || !name) return [];
+  const out = [];
+  Object.keys(BOX_DATA.boxes).forEach(function(code){
+    const b = BOX_DATA.boxes[code] || {};
+    const inMain = (b.items || []).some(function(x){ return x.ref === name; });
+    const subs = (b.subs || []).filter(function(s){
+      return (s.items || []).some(function(x){ return x.ref === name; });
+    });
+    if(inMain || subs.length) out.push({code:code, box:b, subs:subs});
+  });
+  return out;
+}
+/* 概率显示：>=1% 一位小数；0.01~1% 两位；更小三位（与解析脚本一致） */
+function fmtProb(p){
+  const n = Number(p);
+  if(!isFinite(n)) return PLACEHOLDER;
+  if(n >= 1) return n.toFixed(1)+'%';
+  if(n >= 0.01) return n.toFixed(2)+'%';
+  return n.toFixed(3)+'%';
+}
+function boxNameText(o){ return (o && (o[currentLang] || o.cn || o.en)) || ''; }
+/* 箱子名的四语取自 costume_box_data.json（源头是官方「45_时装分类总表」/Itemstr） */
+function boxTitleByCode(code){
+  const b = BOX_DATA && BOX_DATA.boxes && BOX_DATA.boxes[code];
+  return b ? boxNameText(b.title) : ('Random Costume Box ' + code);
+}
+function boxTitleByName(en){
+  if(!BOX_DATA || !BOX_DATA.boxes) return en;
+  const codes = Object.keys(BOX_DATA.boxes);
+  for(let i=0;i<codes.length;i++){
+    const b = BOX_DATA.boxes[codes[i]] || {};
+    if(b.title && b.title.en === en) return boxNameText(b.title);
+    const subs = b.subs || [];
+    for(let j=0;j<subs.length;j++){
+      if(subs[j].title && subs[j].title.en === en) return boxNameText(subs[j].title);
+    }
+  }
+  return en;
+}
+/* 把句子里的箱子名换成当前语言（数据里存的是英文箱子名，整句翻译里也可能出现） */
+function locBoxNames(s){
+  return String(s)
+    .replace(/Random Costume Box\s*([A-M])\b/g, function(_, c){ return boxTitleByCode(c); })
+    .replace(/Costume Glove Box/g, boxTitleByName('Costume Glove Box'))
+    .replace(/Costume Boot Box/g, boxTitleByName('Costume Boot Box'))
+    .replace(/随机手套/g, boxTitleByName('Costume Glove Box'))
+    .replace(/随机长靴/g, boxTitleByName('Costume Boot Box'));
+}
+/* 获取途径每一行：① 有该语言的整句翻译就用它（lang.json.costumeLang.obtainText，
+   中文全量、模板句另带日/韩）② 否则只把箱子名换成当前语言，其余保持原文 */
+function locObtainLine(line){
+  const s = String(line);
+  const TBL = (LANGDATA && LANGDATA.costumeLang && LANGDATA.costumeLang.obtainText) || null;
+  const v = TBL ? TBL[s] : null;
+  if(v && v[currentLang]) return npcLocalize(locBoxNames(v[currentLang]));
+  return npcLocalize(locBoxNames(s));
+}
+/* 概率表：箱子里每一行。
+   kind=costume -> 可点击跳到那件时装的卡片；
+   kind=box（随机手套/随机长靴，本身是另一个箱子）-> 可点击弹出它自己的概率表；
+   kind=emote（如「今天的心情」是表情）和其它 -> 纯文本。 */
+function probRowCell(x){
+  if(x.kind === 'box' && x.toBox){
+    return '<span class="prob-boxrow" onclick="openBoxModal(\'' + escAttr(x.toBox) + '\')">'
+           + escHtml(boxNameText(x)) + ' \u25b8</span>';
+  }
+  if(x.kind === 'costume' && x.ref){
+    return '<span class="prob-link" data-name="' + escAttr(x.ref) + '" onclick="jumpToCostume(this)">'
+           + escHtml(boxNameText(x)) + '</span>';
+  }
+  return escHtml(boxNameText(x));
+}
+function probTableHtml(items, meName){
+  const rows = (items || []).map(function(x){
+    /* kind=group：官方「剛毅化身」表里的「等級」分组 → 渲染成一行小标题 */
+    if(x.kind === 'group'){
+      return '<tr class="group"><td colspan="2">' + escHtml(boxNameText(x)) + '</td></tr>';
+    }
+    const cls = [];
+    if(x.ref && x.ref === meName) cls.push('me');
+    if(x.kind === 'box') cls.push('boxrow');
+    return '<tr' + (cls.length ? ' class="' + cls.join(' ') + '"' : '') + '>'
+      + '<td class="prob-name">' + probRowCell(x) + '</td>'
+      + '<td class="prob-val">' + fmtProb(x.p) + '</td></tr>';
+  }).join('');
+  return '<table class="prob-table"><thead><tr><th>' + escHtml(t('probItem')) + '</th><th>'
+         + escHtml(t('probRate')) + '</th></tr></thead><tbody>' + rows + '</tbody></table>';
+}
+/* 一张箱子卡片（每个箱子各占一块，随机手套/随机长靴也各自独立成箱） */
+function probBoxHtml(id, title, items, meName, isTarget){
+  return '<div class="prob-box' + (isTarget ? ' is-target' : '') + '" id="probBox_' + escAttr(id) + '">'
+    + '<div class="prob-box-name">' + escHtml(boxNameText(title)) + '</div>'
+    + probTableHtml(items, meName) + '</div>';
+}
+function statItem(label, v){
+  const val = (v === null || v === undefined || v === '') ? PLACEHOLDER : String(v);
+  return '<div class="stat-item">'+escHtml(label)+' '+escHtml(val)+'</div>';
+}
+/* 属性名（力量/敏捷/智力…）取 lang.json.equipLang.attrName，与装备图鉴同一份，四语齐全：
+   力量/STR/力/힘、敏捷/DEX/敏捷/민첩、智力/INT/知力/지능 */
+function attrNameText(k){
+  const o = (LANGDATA && LANGDATA.equipLang && LANGDATA.equipLang.attrName) || {};
+
+  const v = o[k];
+  return v ? (v[currentLang] || v.cn || k) : k;
+}
+/* 附加属性行：数据里 bonus = {"str":2,"dex":2,...}，每项渲染成一行「属性名 数值」 */
+const BONUS_ORDER = ['str','dex','int','attack','armor','hp','mana'];
+function bonusHtml(it){
+  const b = (it && it.bonus) || null;
+  if(!b || typeof b !== 'object') return '';
+  const keys = Object.keys(b);
+  if(!keys.length) return '';
+  const ordered = BONUS_ORDER.filter(function(k){ return keys.indexOf(k) >= 0; })
+    .concat(keys.filter(function(k){ return BONUS_ORDER.indexOf(k) < 0; }));
+  return ordered.map(function(k){ return statItem(attrNameText(k), b[k]); }).join('');
+}
+/* 数值框内容：
+   普通时装 = 「服装」标题（+ 体力 + 附加属性）；
+   宝石     = 不写「服装」，改为「属性行 + 效果行」（属性行是 4 种属性变体，用 · 连成一行），
+              有「获得概率」的宝石（官方宝石箱里能开出来的）右下角再标一行红色「不可交易」。 */
+function statsBoxInner(it){
+  if(it && it.cat === 'gem') return gemStatsHtml(it) + gemNoTradeHtml(it);
+  return '<div class="stat-item stat-title">' + escHtml(statsBoxTitle()) + '</div>'
+       + (hasHp(it) ? statItem(ui('hp'), it.hp) : '')
+       + bonusHtml(it);
+}
+/* 宝石数值框 */
+/* 官方效果描述里写的是「按阶段递增的一串值」（如 暴击抗性 2/3/4/5、女神的祝福 8/9/10/11%）。
+   这里只留下**这颗宝石自己的那个值**：趁虚封锁 5 → 「受到攻击时提升暴击抗性5」，把 2/3/4 去掉。
+   ⚠ 精灵的敏捷有两组序列（暴击 1/2/3/4 + 移速 2/4/6/8%），用同一个下标替换，两组都取当前阶段的值。 */
+function gemDescText(g){
+  const d = (LANGDATA && LANGDATA.gemEffectDesc && LANGDATA.gemEffectDesc[g.effect]) || null;
+  if(!d) return '';
+  const s0 = d[currentLang] || d.cn || d.en || '';
+  const v = String(g.value);
+  const RE = /\d+(?:\.\d+)?(?:\s*\/\s*\d+(?:\.\d+)?)+/g;
+  const seqs = [];
+  s0.replace(RE, function(seq){ seqs.push(seq.split('/').map(function(x){ return x.trim(); })); return seq; });
+  if(!seqs.length) return s0;
+  /* 阶段下标 = value 在**第一段**序列里的位置；后面每段都用同一个下标
+     （精灵的敏捷有两组：暴击 1/2/3/4 + 移速 2/4/6/8%，必须按同一阶段取，否则会错位） */
+  let stage = -1;
+  for(let i = 0; i < seqs.length; i++){ const k = seqs[i].indexOf(v); if(k >= 0){ stage = k; break; } }
+  if(stage < 0) return s0;          /* value 不在这段描述里（数据对不上）→ 原样保留，不乱改 */
+  return s0.replace(RE, function(seq){
+    const arr = seq.split('/').map(function(x){ return x.trim(); });
+    return stage < arr.length ? arr[stage] : seq;
+  });
+}
+function gemStatsHtml(it){
+  const g = (it && it.gem) || null;
+  if(!g) return '';
+  const attrs = g.attrs || {};
+  const parts = BONUS_ORDER.filter(function(k){ return attrs[k] != null && attrs[k] !== ''; })
+    .map(function(k){ return attrNameText(k) + ' ' + attrs[k]; });
+  const o = (LANGDATA && LANGDATA.gemEffect && LANGDATA.gemEffect[g.effect]) || null;
+  const eff = o ? (o[currentLang] || o.cn || o.en) : String(g.effect || '');
+  const desc = gemDescText(g);   /* 官方描述（四语），已按本宝石的数值精简 */
+  return (parts.length ? '<div class="stat-item gem-attrs">' + escHtml(parts.join(' \u00b7 ')) + '</div>' : '')
+       + (eff ? '<div class="stat-item">' + escHtml(eff + ' ' + g.value) + '</div>' : '')
+       + (desc ? '<div class="stat-item gem-desc">' + escHtml(desc) + '</div>' : '');
+}
+/* 有「获得概率」按钮的宝石 = 官方宝石箱里能开出来的 → 右下角标红「不可交易」 */
+function gemHasProb(it){ return !!(it && it.cat === 'gem' && boxesOf(it.name).length); }
+function gemNoTradeHtml(it){
+  return gemHasProb(it) ? '<div class="no-trade">' + escHtml(t('noTrade')) + '</div>' : '';
+}
+
+/* ===== 官方两张宝石概率表（gem_prob_data.json）=====
+   合成概率 = 各阶段宝石合成率（全阶段通用一张表）；
+   加工概率 = 珠宝加工率（4 个阶段小节 × 20 行，当前宝石对应的行高亮）。
+   宝石卡片在「获取途径 / 获得概率」下面再排一行：合成概率 · 加工概率。
+   ⚠ 这一整块宝石逻辑（gemStatsHtml / gemCraftBtnsHtml / 合成·加工弹窗 / 宝石箱概率）在时装页已不再触发，
+      **但不要删** —— gem.html（宝石图鉴）由 work/scripts/build_gem_page.py 从本文件生成。 */
+const GEM_STAGE_BY_TYPE = { Obsidian: 1, Amethyst: 2, Sapphire: 3, Aquamarine: 4 };
+function gemStage(it){
+  const n = (it && it.name) || '';
+  for(const k in GEM_STAGE_BY_TYPE){ if(new RegExp('\\b' + k + '\\b').test(n)) return GEM_STAGE_BY_TYPE[k]; }
+  return 0;
+}
+function probStageLabel(n){
+  const m = (GEMPROB && GEMPROB.stageLabel) || null;
+  return m ? String(m[currentLang] || m.cn).replace('{n}', n) : ('阶段' + n);
+}
+function probUntrade(){
+  const u = (GEMPROB && GEMPROB.untradeable) || null;
+  return u ? (u[currentLang] || u.cn) : '\u65e0\u6cd5\u4ea4\u6613';
+}
+/* 官方这两张表都是整数百分比（87% / 5% / 100%），照原样显示（不走「获得概率」的 1 位小数格式） */
+function fmtProbInt(p){
+  const n = Number(p);
+  if(!isFinite(n)) return PLACEHOLDER;
+  return (n % 1 === 0 ? n : n.toFixed(1)) + '%';
+}
+function gemCraftBtnsHtml(it){
+  if(!GEMPROB || !it || it.cat !== 'gem') return '';
+  return '<div class="card-actions">'
+    + '<button class="btn-craft" data-name="'+escAttr(it.name)+'" onclick="openSynthModal()">'+escHtml(t('synthProb'))+'</button>'
+    + '<button class="btn-craft" data-name="'+escAttr(it.name)+'" onclick="openCraftModal(this)">'+escHtml(t('craftProb'))+'</button>'
+    + '</div>';
+}
+/* 合成概率：**按「合成阶段」拆成 3 张表**（阶段1 / 阶段2 / 阶段3 各占一块，与加工概率同一套 .prob-box 分块）。
+   每块的标题已经是阶段名了，所以表头里不再重复「合成阶段」这一列 —— 只留 材料数量 / 合成概率 / 合成结果。 */
+function synthSections(){
+  const tb = GEMPROB.synth, out = [];
+  tb.rows.forEach(function(r){
+    let sec = null;
+    for(let i = 0; i < out.length; i++){ if(out[i].stage === r.from){ sec = out[i]; break; } }
+    if(!sec){ sec = { stage: r.from, rows: [] }; out.push(sec); }
+    sec.rows.push(r);
+  });
+  return out;
+}
+function synthTableHtml(){
+  const tb = GEMPROB.synth, cols = tb.cols[currentLang] || tb.cols.cn;
+  const blocks = synthSections().map(function(sec){
+    const rows = sec.rows.map(function(r){
+      const res = r.to ? probStageLabel(r.to) + ' (' + probUntrade() + ')' : '\u2014';
+      return '<tr><td>' + r.qty + '</td>'
+           + '<td class="prob-val">' + fmtProbInt(r.p) + '</td><td>' + escHtml(res) + '</td></tr>';
+    }).join('');
+    return '<div class="prob-box">'
+      + '<div class="prob-box-name">' + escHtml(probStageLabel(sec.stage)) + '</div>'
+      + '<table class="prob-table"><thead><tr>'
+      + '<th>' + escHtml(cols[1]) + '</th><th>' + escHtml(cols[2]) + '</th><th>' + escHtml(cols[3]) + '</th>'
+      + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
+  }).join('');
+  /* 不再单独渲染 tb.title：弹窗大标题已经是「合成概率」，下面 3 块各有阶段名，
+     再插一个总标题会变成孤立的第 4 个块标题（与加工概率弹窗的版式保持一致）。 */
+  return '<div class="prob-boxes stacked">' + blocks + '</div>';
+}
+/* 加工（细工）一次的矿石消耗，按宝石阶段：1→5、2→20、3→50、4→200 起源石（官方表） */
+const CRAFT_COST_BY_STAGE = { 1: 5, 2: 20, 3: 50, 4: 200 };
+function craftCostHtml(stage){
+  const n = CRAFT_COST_BY_STAGE[stage];
+  if(!n) return '';                       /* 阶段未知（不是宝石 / 黑曜石以外）就不显示这一行 */
+  return '<div class="prob-cost">' + escHtml(t('craftCost')) + '：<b>' + escHtml(t('originStone')) + '</b> ×' + n + '</div>';
+}
+function craftTableHtml(it){
+  const c = GEMPROB.craft, cols = c.cols[currentLang] || c.cols.cn;
+  const g = (it && it.gem) || null;
+  const myStage = gemStage(it);
+  /* 只显示这颗宝石自己阶段的那一段（不列其它阶段，也不显示「概率总计」） */
+  const secs = c.sections.filter(function(s){ return !myStage || s.stage === myStage; });
+  const blocks = secs.map(function(sec){
+    const rows = sec.rows.map(function(r){
+      /* 高亮同一「效果」的 4 行（4 种属性变体）。按「效果 + 阶段」而不按数值：
+         官方加工页有笔误（阶段4「趁虚封锁 6」已按宝箱页/效果描述修正为 5），按数值比对容易漏高亮。 */
+      const me = g && g.effect === r.effect && sec.stage === myStage;
+      return '<tr' + (me ? ' class="me"' : '') + '>'
+           + '<td class="prob-name">' + escHtml(r[currentLang] || r.cn) + '</td>'
+           + '<td class="prob-val">' + fmtProbInt(r.p) + '</td>'
+           + '</tr>';
+    }).join('');
+    return '<div class="prob-box">'
+      + '<div class="prob-box-name">' + escHtml(probStageLabel(sec.stage)) + '</div>'
+      + '<table class="prob-table"><thead><tr><th>' + escHtml(cols[0]) + '</th><th>' + escHtml(cols[1]) + '</th></tr></thead>'
+      + '<tbody>' + rows + '</tbody></table></div>';
+  }).join('');
+  return craftCostHtml(myStage) + '<div class="prob-boxes stacked">' + blocks + '</div>';
+}
+function openSynthModal(){
+  if(!GEMPROB) return;
+  document.getElementById('probModalTitle').innerText = t('synthProb');
+  document.getElementById('probModalBody').innerHTML = synthTableHtml();
+  document.getElementById('probModal').style.display = 'flex';
+  document.getElementById('probModalBody').scrollTop = 0;
+  lockPageScroll(true);
+}
+function openCraftModal(btn){
+  if(!GEMPROB) return;
+  const nm = btn && btn.dataset ? btn.dataset.name : '';
+  const it = DATA.find(function(x){ return x.name === nm; }) || {};
+  document.getElementById('probModalTitle').innerText = t('craftProb') + (nm ? ' \u00b7 ' + dispName(nm) : '');
+  document.getElementById('probModalBody').innerHTML = craftTableHtml(it);
+  document.getElementById('probModal').style.display = 'flex';
+  document.getElementById('probModalBody').scrollTop = 0;
+  lockPageScroll(true);
+}
+
+/* 获取途径弹窗：只保留主标题，下面直接列内容（不再分「哪里获取 / 时间·备注」两段）；
+   箱子名跟随语言切换。 */
+function srcModalHtml(it){
+  it = it || {};
+  const v = String(it.obtain || '').trim();
+  const lines = v ? v.split('\n').map(function(x){ return x.trim(); }).filter(function(x){ return x !== ''; }) : [];
+  if(!lines.length) return '<div style="cursor:default">'+PLACEHOLDER+'</div>';
+  return lines.map(function(x){ return '<div style="cursor:default">'+escHtml(locObtainLine(x))+'</div>'; }).join('');
+}
+
+const T = {};   /* ← lang.json 的 costumeLang.T（页面不再自带文案） */;
+function t(k){const o=T[k];return (o&&(o[currentLang]||o.cn))||k;}
+function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function getPerPage(){ if(window.innerWidth>=1024)return 20; if(window.innerWidth>=768)return 15; return 12; }
+
+function dispName(name){
+  const o = (LANGDATA && LANGDATA.costumes && LANGDATA.costumes[name]) || null;
+  if(o){
+    if(currentLang === "en") return o.en || name;
+    return o[currentLang] || o.cn || name;
+  }
+  return name;
+}
+
+function buildCatBar(){
+  const bar = document.getElementById('catBar');
+  bar.innerHTML = '';
+  CAT_ORDER.forEach(function(c){
+    if(c !== 'preview' && !BASE.some(function(d){return d.cat===c;})) return;   /* 「预览图」不是数据里的 cat，直接放行 */
+    const b = document.createElement('button');
+    b.className = 'type-btn' + (c===currentCat?' active':'');
+    b.dataset.cat = c; b.innerText = CAT_LANG[c][currentLang]||CAT_LANG[c].cn;
+    /* 预览图模式下，点部位按钮 = 加/去该部位的筛选（多选，不清搜索框）；否则才是切分类 */
+    b.onclick = function(){
+      if(c === 'preview'){ togglePreview(); return; }
+      if(currentCat === 'preview'){ togglePreviewCat(c); return; }
+      clearSearchBox(); currentCat=c; updateCatBar(); filterAndRender();
+    };
+    bar.appendChild(b);
+  });
+  const b0 = document.createElement('button');
+  b0.className='type-btn'+(currentCat==='all'?' active':'');
+  b0.dataset.cat='all'; b0.innerText=CAT_LANG.all[currentLang]||CAT_LANG.all.cn;
+  /* 预览图模式下点「全部」= 清除部位筛选、仍留在预览图；列表模式下才是回到「全部」列表 */
+  b0.onclick=function(){
+    if(currentCat === 'preview'){ previewCats = []; updateCatBar(); filterAndRender(); return; }
+    clearSearchBox();currentCat='all';updateCatBar();filterAndRender();
+  };
+  bar.insertBefore(b0, bar.firstChild);
+  /* 排序方向按钮（正序 ⇄ 倒序）：**只在预览图显示**，作用于预览图的分段排序 */
+  const bs = document.createElement('button');
+  bs.className = 'type-btn sort-btn';
+  bs.id = 'sortBtn';
+  bs.onclick = toggleSort;
+  bar.appendChild(bs);
+  updateSortBtn();
+}
+function updateCatBar(){
+  document.querySelectorAll('#catBar .type-btn').forEach(function(b){
+    const c=b.dataset.cat;
+    if(!c) return;                                     /* 排序按钮没有 data-cat，active/显隐由 updateSortBtn 自己管 */
+    /* 预览图模式下：部位按钮表示「是否选中这个部位」，「全部」表示「一个部位都没选」 */
+    let on;
+    if(c === 'preview') on = (currentCat === 'preview');
+    else if(currentCat === 'preview') on = (c === 'all') ? (previewCats.length === 0) : (previewCats.indexOf(c) >= 0);
+    else on = (c === currentCat);
+    b.classList.toggle('active', on);
+    if(CAT_LANG[c]) b.innerText=CAT_LANG[c][currentLang]||CAT_LANG[c].cn;
+  });
+  updateSortBtn();
+}
+/* 「预览图」按钮 = 模式开关：再点一次退出预览图回到列表 */
+function togglePreview(){
+  currentCat = (currentCat === 'preview') ? 'all' : 'preview';
+  updateCatBar();
+  filterAndRender();
+}
+/* 预览图里的部位多选：点一次加入筛选、再点一次去掉（不清搜索框） */
+function togglePreviewCat(c){
+  const i = previewCats.indexOf(c);
+  if(i >= 0) previewCats.splice(i, 1); else previewCats.push(c);
+  updateCatBar();
+  filterAndRender();
+}
+/* 排序方向按钮：只在预览图露出；开启倒序时青绿高亮 + 图标朝下 */
+function sortBtnIconHtml(){
+  return '<svg viewBox="0 0 10 14" width="10" height="14" aria-hidden="true"><path d="'
+    + (sortDesc ? 'M5 1 V13 M1.5 9.5 L5 13 L8.5 9.5' : 'M5 13 V1 M1.5 4.5 L5 1 L8.5 4.5')
+    + '" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+}
+function updateSortBtn(){
+  const b = document.getElementById('sortBtn');
+  if(!b) return;
+  b.style.display = (currentCat === 'preview') ? '' : 'none';
+  b.classList.toggle('active', sortDesc);
+  b.title = t(sortDesc ? 'sortDesc' : 'sortAsc');
+  b.innerHTML = sortBtnIconHtml() + '<span>' + escHtml(t(sortDesc ? 'sortDesc' : 'sortAsc')) + '</span>';
+}
+function toggleSort(){
+  sortDesc = !sortDesc;
+  updateSortBtn();
+  filterAndRender();
+}
+
+function filterAndRender(keepPage){
+  let list = BASE.filter(function(x){ return !x.hidden; });   /* hidden = 宝石分类里那几个「宝箱」，数据保留但不显示 */
+  /* 「预览图」不按分类过滤（等价「全部」），但**宝石不参与预览**，只换渲染方式 */
+  if(currentCat === 'preview'){
+    list = list.filter(function(x){ return x.cat !== 'gem'; });
+    if(previewCats.length) list = list.filter(function(x){ return previewCats.indexOf(x.cat) >= 0; });
+  }
+  else if(currentCat!=='all') list = list.filter(function(x){return x.cat===currentCat;});
+  const kw = document.getElementById('searchBox').value.toLowerCase().trim();
+  if(kw){
+    const names = function(x){
+      const o = (LANGDATA && LANGDATA.costumes && LANGDATA.costumes[x.name])||{};
+      /* o.en 也要参与匹配：英文显示名不一定等于内部键（宝石名带 Ⅰ~Ⅳ、旧版名带 (old)），
+         否则英文下从「获得概率」跳转会搜不到自己。 */
+      return [x.name, o.cn||'', o.en||'', o.ja||'', o.kr||'']
+        .map(function(v){ return String(v).toLowerCase().trim(); })
+        .filter(function(v){ return v !== ''; });
+    };
+    /* 命中优先级：① 某个语言的名称与关键词「完全相同」（从「获得概率」跳过来就是这种，保证唯一）
+                   ② 否则退化为原来的子串匹配 */
+    const exact = list.filter(function(x){ return names(x).indexOf(kw) >= 0; });
+    list = exact.length ? exact : list.filter(function(x){ return names(x).join(' ').indexOf(kw) >= 0; });
+  }
+  if(jumpExactKey) list = list.filter(isJumpTarget);   /* 强跳转：只留跳转目标那一条 */
+  const coll = new Intl.Collator(twomLocale(currentLang));
+  /* 预览图：先按「头→身→手→脚→饰品→披风→武器」分段（用户指定，**分段顺序不随倒序翻转**），段内再按原规则；
+     列表页：先按「卡片高度」分组——有体力(两行)的排一起、没体力(一行)的排一起，这样同一行的卡片高度接近，不再参差。
+     倒序（sortDesc）只在预览图里生效。 */
+  const isPreview = (currentCat === 'preview');
+  const dir = (sortDesc && isPreview) ? -1 : 1;
+  const catRank = function(x){
+    const i = PREVIEW_CAT_ORDER.indexOf(x.cat);
+    return i < 0 ? PREVIEW_CAT_ORDER.length : i;      /* 不在名单里的排最后 */
+  };
+  filtered = list.slice().sort(function(a,b){
+    if(isPreview){
+      const ca = catRank(a), cb = catRank(b);
+      /* 倒序 = 整套翻过来（武器 → 披风 → 饰品 → 脚 → 手 → 身 → 头），分段顺序也乘 dir */
+      if(ca !== cb) return (ca - cb) * dir;
+    }
+    const ga = hasHp(a) ? 0 : 1, gb = hasHp(b) ? 0 : 1;
+    if(ga !== gb) return (ga - gb) * dir;
+    return (coll.compare(dispName(a.name), dispName(b.name)) || a.name.localeCompare(b.name)) * dir;
+  });
+  if(keepPage){ const total=Math.ceil(filtered.length/getPerPage()); if(page>total) page=Math.max(1,total); }
+  else page=1;
+  renderCards();
+}
+
+function renderCards(){
+  const grid = document.getElementById('itemGrid');
+  if(currentCat === 'preview'){ renderPreview(); return; }   /* COSTUME_PREVIEW_PATCH */
+  grid.className = 'equip-grid';                            /* 从预览图切回卡片时恢复网格样式 */
+  setPaginationVisible(true);
+  updatePageInfo();
+  const perPage = getPerPage();
+  const items = filtered.slice((page-1)*perPage, page*perPage);
+  if(!items.length){ grid.innerHTML = "<div style='grid-column:1/-1;text-align:center;padding:20px'>"+t('noData')+"</div>"; return; }
+  grid.innerHTML = items.map(cardHtml).join('');
+}
+
+/* 单件时装卡片（列表页与「预览图」卡片共用同一套版式） */
+function cardHtml(it){
+  const name = dispName(it.name);
+  const rc = rcOf(it.rarity);
+  const img = it.hasIcon ? '<img loading="lazy" src="'+escAttr(it.icon)+'" onerror="this.style.display=\'none\'">' : '';
+  const jobs = classIconsHtml(it.classes);
+  return '<div class="equip-card item-card" data-name="'+escAttr(it.name)+'" data-cat="'+escAttr(it.cat||'')+'" data-cat-code="'+escAttr(it.catCode||'')+'">'
+    + '<div class="equip-name" style="color:'+rc.color+'">'+escHtml(name)+'</div>'
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col"><div class="hex-icon"><div class="star star1"></div><div class="star star2"></div>'+img+'</div></div>'
+    +   '<div class="equip-text-col">'+rarityTag(it.rarity, rc.bg)
+    +      '<div class="item-level">'+escHtml(reqLvText(it.level))+'</div>'
+    +      jobs+'</div>'
+    + '</div>'
+    + '<div class="equip-stats'+(gemHasProb(it) ? ' has-notrade' : '')+'">' + statsBoxInner(it) + '</div>'
+    + '<div class="card-actions">'+sourceBtnHtml(it)+probBtnHtml(it)+'</div>'
+    + gemCraftBtnsHtml(it)
+    + '</div>';
+}
+
+/* ===== COSTUME_PREVIEW_PATCH：预览图（图标网格 + 卡片 + 左右箭头）=====
+   与宠物图鉴同一套 class 与交互：
+   手机 <768px 卡片在网格上面并吸顶；PC/平板 ≥768px 左网格右卡片；点图标就地换卡，箭头翻上一件/下一件。 */
+function setPaginationVisible(v){
+  ['topPagination','bottomPagination'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.style.display = v ? '' : 'none';
+  });
+}
+let pvSelected = '';                 /* 卡片里当前显示的那件时装（切语言/重渲染后保持） */
+/* 预览图节点复用：切走再回来复用整块 DOM + 格子节点，图片不重新加载 */
+var pvLayoutNode = null, pvCellCache = {}, pvListSig = '';
+function pvCellNode(it){
+  var key = String(it.name);
+  var n = pvCellCache[key];
+  if(!n){
+    var tmp = document.createElement('div');
+    tmp.innerHTML = pvCellHtml(it);
+    n = tmp.firstChild;
+    if(n) pvCellCache[key] = n;
+  }
+  return n;
+}
+function pvCellHtml(it){
+  var nm = dispName(it.name);
+  var img = it.hasIcon ? '<img loading="lazy" decoding="async" src="'+escAttr(it.icon)+'" alt="">' : '';
+  var sel = (it.name === pvSelected) ? ' selected' : '';    /* 选中态直接烘进 HTML，重渲染后不掉 */
+  return '<div class="pv-cell'+(it.hasIcon?'':' noimg')+sel+'" data-name="'+escAttr(it.name)
+       + '" title="'+escAttr(nm)+'">'+img+'</div>';
+}
+/* 只同步格子高亮（不动卡片内容），分批渲染完成后再调一次 */
+function pvSyncSelected(){
+  var cells = document.querySelectorAll('#itemGrid .pv-cell');
+  for(var i=0;i<cells.length;i++){
+    cells[i].classList.toggle('selected', !!pvSelected && cells[i].dataset.name === pvSelected);
+  }
+}
+/* 格子分批渲染：925 个格子一次性 innerHTML 会明显卡顿（浏览器要同时建 925 个节点并布局）。
+   改成先出首屏（PV_CHUNK 个），其余在后续动画帧里追加 —— 进入预览图几乎立刻可见。
+   ⚠ 没有 requestAnimationFrame（用例桩 / 老浏览器）时同步一次跑完，结果完全一致。 */
+var PV_CHUNK = 120;
+var pvRenderSeq = 0;
+function pvFillGrid(){
+  var host = document.getElementById('pvGrid');
+  if(!host) return;
+  var list = filtered, i = 0, seq = ++pvRenderSeq;
+  var sig = (pvListSig = list.map(function(x){ return x.name; }).join('|'));
+  if(host.getAttribute && host.getAttribute('data-sig') === sig && host.children && host.children.length === list.length){
+    pvSyncSelected(); return;                        /* 列表没变 -> 一个格子都不重建 */
+  }
+  if(host.setAttribute) host.setAttribute('data-sig', sig);
+  while(host.firstChild) host.removeChild(host.firstChild);   /* 换列表：旧格子摘下（仍在缓存里） */
+  var raf = (typeof window !== 'undefined' && window.requestAnimationFrame) ? window.requestAnimationFrame : null;
+  if(!raf) return;                /* 老浏览器 / 无 rAF 环境（含用例桩）：renderPreview 已把格子预填进骨架，这里不用再补 */
+  function step(){
+    if(seq !== pvRenderSeq) return;                 /* 已经切走/重渲染 → 放弃这一轮 */
+    var box = document.getElementById('pvGrid');
+    if(!box) return;
+    var frag = document.createDocumentFragment();
+    var end = Math.min(i + PV_CHUNK, list.length);
+    for(; i < end; i++){
+      frag.appendChild(pvCellNode(list[i]));
+    }
+    box.appendChild(frag);
+    if(i < list.length){ if(raf) raf(step); else step(); }
+    else pvSyncSelected();                          /* 全部渲染完再统一同步高亮 */
+  }
+  step();
+}
+function renderPreview(){
+  var grid = document.getElementById('itemGrid');
+  setPaginationVisible(false);
+  updatePageInfo();                    /* 保持分页数据同步（虽然被隐藏），切回卡片时不用重算 */
+  /* 先定卡片里放谁（沿用上次选中的；被筛选掉/搜不到就退回第一件），再烘进格子 HTML */
+  var names = filtered.map(function(x){ return x.name; });
+  if(names.indexOf(pvSelected) < 0) pvSelected = names[0] || '';
+  /* 有 requestAnimationFrame → 骨架留空、随后分帧填充；没有 → 直接预填（等价旧实现） */
+  var pvRaf = (typeof window !== 'undefined' && window.requestAnimationFrame) ? window.requestAnimationFrame : null;
+  var cells = pvRaf ? '' : filtered.map(pvCellHtml).join('');
+  grid.className = 'pv-host';
+  if(pvLayoutNode && filtered.length && grid.firstChild !== pvLayoutNode){
+    grid.innerHTML = '';
+    grid.appendChild(pvLayoutNode);                  /* 复用整块预览 DOM（含格子里的 img） */
+    paintPvDetail(pvSelected);
+    pvFillGrid();
+    return;
+  }
+  grid.innerHTML = '<div class="pv-layout">'
+    + '<div class="pv-pane">'
+    +   (filtered.length ? '<div class="pv-grid" id="pvGrid">'+cells+'</div>' : '<div class="pv-empty">'+escHtml(t('noData'))+'</div>')
+    + '</div>'
+    + '<div class="pv-detail-wrap">' + pvArrowHtml(-1)
+    +   '<div class="pv-detail" id="pvDetail"></div>' + pvArrowHtml(1)
+    + '</div>'
+    + '</div>';
+  paintPvDetail(pvSelected);
+  pvFillGrid();
+  pvLayoutNode = filtered.length ? grid.firstChild : null;   /* 记下整块布局，下次切回来直接复用 */
+}
+/* 左右箭头：在卡片两旁的空白处，用来翻「上一件/下一件」= 预览图当前的排序 */
+function pvArrowHtml(delta){
+  var prev = delta < 0;
+  var lbl = t(prev ? 'prevItem' : 'nextItem');
+  var path = prev ? 'M8.5 2.5 L3 10 L8.5 17.5' : 'M3.5 2.5 L9 10 L3.5 17.5';
+  return '<button class="pv-arrow ' + (prev ? 'pv-prev' : 'pv-next') + '" id="' + (prev ? 'pvPrev' : 'pvNext') + '"'
+    + ' type="button" title="' + escAttr(lbl) + '" aria-label="' + escAttr(lbl) + '"'
+    + ' onclick="pvStep(' + delta + ')">'
+    + '<svg viewBox="0 0 12 20" width="12" height="20" aria-hidden="true">'
+    + '<path d="' + path + '" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'
+    + '</svg></button>';
+}
+/* 卡片内容（选中项不在当前结果里 → 显示提示） */
+function pvDetailHtml(name){
+  var it = name ? BASE.find(function(x){ return x.name === name; }) : null;
+  return it ? cardHtml(it) : '<div class="pv-empty">'+escHtml(t('pickHint'))+'</div>';
+}
+function paintPvDetail(name){
+  var box = document.getElementById('pvDetail');
+  if(!box) return;
+  box.innerHTML = pvDetailHtml(name);
+  var cells = document.querySelectorAll('#itemGrid .pv-cell');
+  for(var i=0;i<cells.length;i++) cells[i].classList.toggle('selected', !!name && cells[i].dataset.name === name);
+  /* 注：分批渲染期间新格子还没建出来，所以 pvFillGrid() 结束后还会再调 pvSyncSelected() 补一次 */
+  box.scrollTop = 0;
+  updatePvArrows();
+}
+/* 到头就置灰：第一件时左箭头禁用，最后一件时右箭头禁用（顺序 = filtered 当前顺序） */
+function updatePvArrows(){
+  var names = filtered.map(function(x){ return x.name; });
+  var i = names.indexOf(pvSelected);
+  var p = document.getElementById('pvPrev'), n = document.getElementById('pvNext');
+  if(p) p.disabled = (i <= 0);
+  if(n) n.disabled = (i < 0 || i >= names.length - 1);
+}
+/* 点箭头 → 按预览图排序往前/往后翻一件 */
+function pvStep(delta){
+  var names = filtered.map(function(x){ return x.name; });
+  var i = names.indexOf(pvSelected);
+  if(i < 0) i = 0; else i += delta;
+  if(i < 0 || i >= names.length) return;
+  showPvDetail(names[i]);
+  scrollPvCellIntoView(names[i]);
+}
+/* 翻页后把选中格滚进可视区（网格是独立滚动区，手动算偏移免得整页跟着跳） */
+function scrollPvCellIntoView(name){
+  var panel = document.querySelector('#itemGrid .pv-grid');
+  if(!panel || !panel.children || !panel.getBoundingClientRect) return;
+  var cell = null;
+  for(var i=0;i<panel.children.length;i++){
+    if(panel.children[i].dataset && panel.children[i].dataset.name === name){ cell = panel.children[i]; break; }
+  }
+  if(!cell || !cell.getBoundingClientRect) return;
+  var view = panel.clientHeight;
+  if(typeof view !== 'number' || !view) return;
+  var top = cell.getBoundingClientRect().top - panel.getBoundingClientRect().top + panel.scrollTop;
+  var h = cell.offsetHeight || 0;
+  if(top < panel.scrollTop) panel.scrollTop = Math.max(0, top - 6);
+  else if(top + h > panel.scrollTop + view) panel.scrollTop = top + h - view + 6;
+}
+/* 点图标 → 就地换卡片（名字对不上就不动，避免把已显示的卡片抹成空态） */
+function showPvDetail(name){
+  if(!name) return;
+  if(!BASE.some(function(x){ return x.name === name; })) return;
+  pvSelected = name;
+  paintPvDetail(name);
+}
+/* 图标是 innerHTML 拼出来的 → 用事件委托，不逐个绑 */
+document.getElementById('itemGrid').addEventListener('click', function(ev){
+  var el = ev.target;
+  while(el && el !== this && !(el.classList && el.classList.contains('pv-cell'))) el = el.parentNode;
+  if(!el || el === this || !el.dataset || !el.dataset.name) return;
+  showPvDetail(el.dataset.name);
+});
+
+function openSourceModal(btn){
+  const nm = btn && btn.dataset ? btn.dataset.name : '';
+  const it = DATA.find(function(x){ return x.name === nm; }) || {};
+  const body = document.getElementById('modalText');
+  document.getElementById('modalTitle').innerText = t('source');
+  body.innerHTML = srcModalHtml(it);
+  document.getElementById('modal').style.display = 'flex';
+  body.scrollTop = 0;
+  lockPageScroll(true);
+}
+function closeModal(){ document.getElementById('modal').style.display = 'none'; syncBodyLock(); }
+/* 弹窗打开时锁住背景滚动（与物品/装备图鉴一致） */
+let pageScrollLocked = false;
+function lockPageScroll(lock){
+  if(lock === pageScrollLocked) return;
+  pageScrollLocked = lock;
+  if(lock){
+    const sw = window.innerWidth - document.documentElement.clientWidth;
+    const pr = parseFloat(getComputedStyle(document.body).paddingRight) || 0;
+    document.body.style.overflow = 'hidden';
+    if(sw > 0) document.body.style.paddingRight = (pr + sw) + 'px';
+  }else{
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+}
+/* 有任意一层弹窗开着就保持锁定（关闭二级箱子弹窗时不要解锁） */
+function syncBodyLock(){
+  const open = ['modal','probModal','boxModal'].some(function(id){
+    const el = document.getElementById(id);
+    return el && el.style && el.style.display === 'flex';
+  });
+  lockPageScroll(open);
+}
+/* 获得概率弹窗：列出该时装所属 A~M 箱子的完整概率表。
+   随机手套 / 随机长靴 本身就是「另一个箱子」，各自独立成一块并标出来源；
+   箱子里的每一件时装可点击跳转，箱子行可点击定位到它自己那张表。 */
+function openProbModal(btn){
+  const nm = btn && btn.dataset ? btn.dataset.name : '';
+  const list = boxesOf(nm);
+  if(!list.length) return;
+  document.getElementById('probModalTitle').innerText = t('prob') + ' · ' + dispName(nm);
+  const blocks = [];
+  list.forEach(function(g){
+    const inMain = (g.box.items || []).some(function(x){ return x.ref === nm; });
+    blocks.push(probBoxHtml(g.code, g.box.title, g.box.items, nm, inMain));
+    g.subs.forEach(function(sub){
+      blocks.push(probBoxHtml(sub.id, sub.title, sub.items, nm, true));
+    });
+  });
+  document.getElementById('probModalBody').innerHTML = '<div class="prob-boxes">' + blocks.join('') + '</div>';
+  document.getElementById('probModal').style.display = 'flex';
+  document.getElementById('probModalBody').scrollTop = 0;
+  lockPageScroll(true);
+}
+function closeProbModal(){ document.getElementById('probModal').style.display = 'none'; syncBodyLock(); }
+/* 一次关掉所有层级的弹窗（获取途径 / 获得概率 / 二级箱子弹窗） */
+function closeAllModals(){
+  ['modal', 'probModal', 'boxModal'].forEach(function(id){
+    const el = document.getElementById(id);
+    if(el) el.style.display = 'none';
+  });
+  lockPageScroll(false);
+}
+/* 点击概率表里的时装名 -> 关掉所有弹窗并定位到那件时装的卡片。
+   搜索框填入的是**当前语言的显示名**（搜索本身四语都能匹配），中文页就是中文名、日文页就是日文名。 */
+/* 强跳转：点名称跳转时只显示这一件（内部键精确命中，不做模糊搜索） */
+let jumpExactKey = '';
+function isJumpTarget(x){
+  if(!jumpExactKey) return true;
+  const k = String(jumpExactKey).toLowerCase().trim();
+  if(String(x.name).toLowerCase().trim() === k) return true;
+  const o = (LANGDATA && LANGDATA.costumes && LANGDATA.costumes[x.name]) || {};
+  const ns = [x.name, o.cn || '', o.en || '', o.ja || '', o.kr || '']
+    .map(function(v){ return String(v || '').toLowerCase().trim(); }).filter(function(v){ return v !== ''; });
+  return ns.indexOf(k) >= 0;
+}
+function jumpToCostume(el){
+  const nm = el && el.dataset ? el.dataset.name : '';
+  if(!nm) return;
+  closeAllModals();          // 二级箱子弹窗也要一起关掉，否则会盖着不动
+  currentCat = 'all';
+  updateCatBar();
+  jumpSearchText = dispName(nm);              // 记住这是跳转填的，切分类时要清掉
+  jumpExactKey = nm;                          // 强跳转：只留这一件
+  document.getElementById('searchBox').value = jumpSearchText;
+  filterAndRender();
+  window.scrollTo(0, 0);
+}
+/* 点「全部 / 分类」按钮时清空搜索框（跳转填的词和用户自己输入的都清，
+   否则残留关键词会把新分类的结果筛空） */
+function clearSearchBox(){
+  const box = document.getElementById('searchBox');
+  if(box) box.value = '';
+  jumpSearchText = '';
+  jumpExactKey = '';            /* 切分类/全部 -> 解除强跳转 */
+}
+/* 点击箱子行（随机手套 / 随机长靴）-> 弹出二级弹窗，显示该箱自己的完整概率表 */
+function findBoxById(id){
+  if(!BOX_DATA || !BOX_DATA.boxes) return null;
+  if(BOX_DATA.boxes[id]) return { title: BOX_DATA.boxes[id].title, items: BOX_DATA.boxes[id].items };
+  const codes = Object.keys(BOX_DATA.boxes);
+  for(let i=0;i<codes.length;i++){
+    const subs = BOX_DATA.boxes[codes[i]].subs || [];
+    for(let j=0;j<subs.length;j++){
+      if(subs[j].id === id) return { title: subs[j].title, items: subs[j].items };
+    }
+  }
+  return null;
+}
+function openBoxModal(id, fromName){
+  const b = findBoxById(id);
+  if(!b) return;
+  document.getElementById('boxModalTitle').innerText = boxNameText(b.title);
+  document.getElementById('boxModalBody').innerHTML =
+    '<div class="prob-boxes single">' + probBoxHtml(id, b.title, b.items, fromName || '', false) + '</div>';
+  document.getElementById('boxModal').style.display = 'flex';
+  document.getElementById('boxModalBody').scrollTop = 0;
+  lockPageScroll(true);
+}
+function closeBoxModal(){ document.getElementById('boxModal').style.display = 'none'; syncBodyLock(); }
+/* 兼容旧入口：只做定位（不再使用，保留以免外部调用报错） */
+function jumpToProbBox(id){
+  const el = document.getElementById('probBox_' + id);
+  const body = document.getElementById('probModalBody');
+  if(!el) return;
+  if(body && body.scrollTo) body.scrollTo({ top: (el.offsetTop || 0) - 8, behavior: 'smooth' });
+  if(el.classList) el.classList.add('is-target');
+}
+document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeModal(); closeProbModal(); closeBoxModal(); } });
+
+function updatePageInfo(){
+  const total = Math.ceil(filtered.length/getPerPage());
+  const s = t('page').replace('{now}',page).replace('{total}',total||1);
+  document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
+}
+function goPrev(){ if(page>1){page--;renderCards();} }
+function goNext(){ const total=Math.ceil(filtered.length/getPerPage()); if(page<total){page++;renderCards();window.scrollTo(0,0);} }
+
+function updateLangText(){
+  document.getElementById('searchBox').placeholder = t('search');
+  document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = t('prev');
+  document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = t('next');
+  document.getElementById('modalTitle').innerText = t('source');
+  document.getElementById('modalClose').innerText = t('close');
+  document.getElementById('probModalTitle').innerText = t('prob');
+  document.getElementById('probModalClose').innerText = t('close');
+  document.getElementById('boxModalClose').innerText = t('close');
+  updateCatBar(); twomUpdateNav(currentLang);
+}
+
+async function init(){
+  try{
+    const [d, lg, bx] = await Promise.all([
+      fetch('costume_data.json').then(function(r){return r.json();}),
+      fetch('lang.json').then(function(r){return r.json();}),
+      fetch('costume_box_data.json').then(function(r){return r.json();}).catch(function(){return null;})
+    ]);
+    DATA = Array.isArray(d)?d:[]; LANGDATA = lg; twomApplyLangData(lg); BOX_DATA = bx;
+    try { GEMPROB = await fetch('gem_prob_data.json').then(function(r){return r.json();}); } catch(e){ GEMPROB = null; }
+    // 「靴子」并入「鞋子」分类
+    DATA.forEach(function(x){ if(x.cat === 'boots') x.cat = 'shoes'; });
+    /* 「宝石」已搬到 gem.html：这里把宝石整类摘出去（连带「全部」也不会再出现宝石） */
+    BASE = DATA.filter(function(x){ return x.cat !== 'gem'; });   // 不再按体力过滤：所有时装都显示，仅隐藏「体力 0 / 体力 —」这一行
+  }catch(e){ DATA=[]; }
+  buildCatBar();
+  /* 接收图鉴任务页跳转来的参数（costume=英文名），定位到对应时装（强跳转：只留这一件） */
+  if(location.search.indexOf('costume=') >= 0){
+    try{
+      var cparams = new URLSearchParams(location.search);
+      var cname = decodeURIComponent(cparams.get('costume') || '').trim();
+      if(cname) jumpExactKey = cname;
+    }catch(e){}
+  }
+  twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
+    currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
+    updateLangText(); filterAndRender(true);
+  });
+  document.getElementById('searchBox').addEventListener('input', function(){ jumpExactKey = ''; filterAndRender(); });
+  document.getElementById('prevTop').onclick = goPrev;
+  document.getElementById('nextTop').onclick = goNext;
+  document.getElementById('prevBot').onclick = goPrev;
+  document.getElementById('nextBot').onclick = goNext;
+  window.addEventListener('resize', function(){ renderCards(); });
+  updateLangText(); filterAndRender();
+}
+init();
+</script>
+<style>
+/* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
+/* PAGE_NAV_COMPACT_V5：桌面按钮仍为原尺寸(16px)，手机端只微收 1~2px，保证两位数页码仍在一排 */
+.page-jump{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.page-jump:hover > span{text-decoration:underline}
+.page-jump-input{display:none;width:66px;padding:6px 4px;border:1px solid #ccc;border-radius:8px;font-size:16px;text-align:center;font-family:inherit;-moz-appearance:textfield;appearance:textfield}
+.page-jump-input::-webkit-outer-spin-button,.page-jump-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.page-jump.editing .page-jump-input{display:inline-block}
+.page-jump.editing > span{display:none}
+.page-btn:disabled{opacity:.45}
+/* 分页栏改弹性单行：只为消除 HTML 空白造成的换行，不改按钮尺寸（尺寸仍用页面原有 .page-btn 规则）。
+   gap:4px 是补回原先元素间空白所占的宽度，让桌面观感与改动前一致。 */
+.pagination{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:4px}
+.pagination > *{flex:0 0 auto}
+.pagination .page-jump{white-space:nowrap}
+/* 手机端只微收一点（越窄越收，最小 14px；桌面 16px 保持不变） */
+@media(max-width:480px){
+  .pagination{gap:3px}
+  .pagination .page-btn{padding:7px;margin:0 3px;font-size:16px}
+  .page-jump-input{width:62px;font-size:16px;padding:5px 4px}
+}
+@media(max-width:400px){
+  .pagination{gap:2px}
+  .pagination .page-btn{padding:6px;margin:0 2px;font-size:15px}
+  .page-jump-input{width:58px;font-size:15px}
+}
+@media(max-width:340px){
+  .pagination{gap:1px}
+  .pagination .page-btn{padding:5px;margin:0 1px;font-size:14px}
+  .page-jump-input{width:52px;font-size:14px}
+}
+</style>
+<script>
+/* ===== PAGE_NAV_PATCH：首页 / 尾页 / 点击「第 x/y 页」输入页码（6 个图鉴页共用） =====
+   在各页原有脚本之后运行，复用其 page / filteredXxx / getPerPage / renderCards 或 render / updatePageInfo。 */
+(function(){
+  var JUMP_LABEL = {
+    cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
+    en:{first:"First",last:"Last",tip:"Click to enter a page number"},
+    ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
+    kr:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+  };
+  function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
+  function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }
+  function listOf(){
+    if(typeof filtered !== "undefined" && filtered) return filtered;
+    if(typeof filteredItems !== "undefined" && filteredItems) return filteredItems;
+    if(typeof filteredSkills !== "undefined" && filteredSkills) return filteredSkills;
+    return [];
+  }
+  function totalPages(){ return Math.max(1, Math.ceil(listOf().length / getPerPage())); }
+  function draw(){
+    if(typeof renderCards === "function") return renderCards();
+    if(typeof render === "function") return render();
+  }
+  function syncInfo(){ if(typeof updatePageInfo === "function") updatePageInfo(); }
+  function goTo(n){
+    var t = totalPages(), v = Math.min(Math.max(1, parseInt(n, 10) || 1), t);
+    if(v === page){ syncInfo(); return; }
+    page = v; draw(); syncInfo();
+  }
+  function refresh(){
+    var t = totalPages(), L = lbl();
+    [["Top","firstTop","lastTop"],["Bot","firstBot","lastBot"]].forEach(function(a){
+      var f = document.getElementById(a[1]), l = document.getElementById(a[2]);
+      if(f){ f.innerText = L.first; f.disabled = page <= 1; }
+      if(l){ l.innerText = L.last;  l.disabled = page >= t; }
+      var jw = document.getElementById("pageJump" + a[0]), inp = document.getElementById("pageInput" + a[0]);
+      if(jw) jw.title = L.tip;
+      if(inp){ inp.max = t; inp.title = L.tip; if(!jw || !jw.classList.contains("editing")) inp.value = page; }
+    });
+  }
+  function cancelEdit(jw, inp){ jw.classList.remove("editing"); inp.value = page; inp.blur(); syncInfo(); }
+  function commit(jw, inp){
+    if(!jw.classList.contains("editing")) return;
+    var v = parseInt(inp.value, 10);
+    jw.classList.remove("editing");
+    if(!isNaN(v)) goTo(v); else syncInfo();
+  }
+  function bindJump(sfx){
+    var jw = document.getElementById("pageJump" + sfx), inp = document.getElementById("pageInput" + sfx);
+    if(!jw || !inp) return;
+    jw.onclick = function(ev){
+      if(ev && ev.target === inp) return;
+      if(jw.classList.contains("editing")) return;
+      jw.classList.add("editing");
+      inp.value = page;
+      inp.focus(); try{ inp.select(); }catch(e){}
+    };
+    inp.onkeydown = function(e){
+      var k = e.key || "";
+      if(k === "Enter" || e.keyCode === 13){ e.preventDefault(); commit(jw, inp); inp.blur(); }
+      else if(k === "Escape" || e.keyCode === 27){ e.preventDefault(); cancelEdit(jw, inp); }
+    };
+    inp.onblur = function(){ commit(jw, inp); };
+  }
+  function bindBtn(id, fn){
+    var b = document.getElementById(id);
+    if(!b) return;
+    b.onclick = function(){ if(b.disabled) return; fn(); };
+  }
+  ["Top","Bot"].forEach(function(sfx){
+    bindJump(sfx);
+    bindBtn("first" + sfx, function(){ if(page > 1){ page = 1; draw(); syncInfo(); window.scrollTo(0,0); } });
+    bindBtn("last" + sfx,  function(){ var t = totalPages(); if(page < t){ page = t; draw(); syncInfo(); window.scrollTo(0,0); } });
+  });
+  // 包一层 updatePageInfo：每次刷新（含切语言）都同步按钮文案 / 输入框上下限
+  if(typeof updatePageInfo === "function"){
+    var _orig = updatePageInfo;
+    updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
+  }
+  refresh();
+})();
+</script>
+</body>
+</html>

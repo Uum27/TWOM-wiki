@@ -4,7 +4,7 @@
     "job": "warrior",
     "name": "Rusty Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "老旧的剑",
     "name_kr": "",
     "level": "1",
     "attack": "1~3",
@@ -15,14 +15,15 @@
     "hit": "0",
     "icon": "Rusty Sword.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@"
+    "desc": "怪物掉落↓可点击↓:,@",
+    "name_ja": "古い剣"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Shiny Short Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "闪耀短剑",
     "name_kr": "",
     "level": "2",
     "attack": "4~8",
@@ -33,7 +34,8 @@
     "hit": "0",
     "Sharpness": "15",
     "icon": "Shiny Short Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "輝くショートソード"
   },
   {
     "type": "weapon",
@@ -49,7 +51,8 @@
     "int": "",
     "hit": "0~3",
     "icon": "Practice Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@树叶野猪,@凶猛树叶野猪,NPC武器商人:,赵侍"
+    "desc": "怪物掉落↓可点击↓:,@树叶野猪,@凶猛树叶野猪,NPC武器商人:,赵侍",
+    "name_ja": "練習用の剣"
   },
   {
     "type": "weapon",
@@ -65,14 +68,15 @@
     "int": "",
     "hit": "0",
     "icon": "Blunt Shortsword.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇,@花精灵,@黑蜘蛛,@剧毒蜘蛛,@洞窟蝙蝠"
+    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇,@花精灵,@黑蜘蛛,@剧毒蜘蛛,@洞窟蝙蝠",
+    "name_ja": "鈍いショットソード"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Patrol's Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "侦查队之剑",
     "name_kr": "",
     "level": "7",
     "attack": "4~12",
@@ -83,14 +87,15 @@
     "hit": "0",
     "Enchanted": "5",
     "icon": "Patrol's Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "偵察隊の剣"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Adventurer Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "冒险家剑",
     "name_kr": "",
     "level": "8",
     "attack": "4~12",
@@ -100,7 +105,8 @@
     "int": "",
     "hit": "0",
     "icon": "Adventurer Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の剣"
   },
   {
     "type": "weapon",
@@ -118,14 +124,15 @@
     "dex": "0~6",
     "icon": "Canine Tooth of Madness.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1"
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1",
+    "name_ja": "狂気の牙"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Woody Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "木剑",
     "name_kr": "",
     "level": "10",
     "attack": "4~12",
@@ -135,14 +142,15 @@
     "int": "",
     "hit": "0",
     "icon": "Woody Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "木刀"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Shiny Long Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "闪耀长剑",
     "name_kr": "",
     "level": "10",
     "attack": "5~20",
@@ -153,14 +161,15 @@
     "hit": "0",
     "Sharpness": "15",
     "icon": "Shiny Long Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "輝くロングソード"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Coral Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "珊瑚剑",
     "name_kr": "",
     "level": "12",
     "attack": "4~16",
@@ -170,14 +179,15 @@
     "int": "",
     "hit": "3",
     "icon": "Coral Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴの剣"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Dull Longsword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "钝长剑",
     "name_kr": "",
     "level": "14",
     "attack": "4~16",
@@ -187,7 +197,8 @@
     "int": "",
     "hit": "0",
     "icon": "Dull Longsword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鈍いロングソード"
   },
   {
     "type": "weapon",
@@ -203,14 +214,15 @@
     "int": "",
     "hit": "0~9",
     "icon": "Longsword.png",
-    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长,@白色骸骨"
+    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长,@白色骸骨",
+    "name_ja": "ロングソード"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Rusty Longsword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "生锈长剑",
     "name_kr": "",
     "level": "17",
     "attack": "4~20",
@@ -220,7 +232,8 @@
     "int": "",
     "hit": "0",
     "icon": "Rusty Longsword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "錆びたロングソード"
   },
   {
     "type": "weapon",
@@ -236,14 +249,15 @@
     "int": "",
     "hit": "0~9",
     "icon": "Sharp Longsword.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼怪,@黑色骸骨,@睡醒的库伊"
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@黑色骸骨,@睡醒的库伊",
+    "name_ja": "鋭いロングソード"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Scimitar",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "弯刀",
     "name_kr": "",
     "level": "20",
     "attack": "5~25",
@@ -253,7 +267,8 @@
     "int": "",
     "hit": "0",
     "icon": "Scimitar.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "シミター"
   },
   {
     "type": "weapon",
@@ -269,14 +284,15 @@
     "int": "",
     "hit": "0~13",
     "icon": "Katana.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师",
+    "name_ja": "刀"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Iron Sword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "铁剑",
     "name_kr": "",
     "level": "23",
     "attack": "6~30",
@@ -286,7 +302,8 @@
     "int": "",
     "hit": "0",
     "icon": "Iron Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "アイアンソード"
   },
   {
     "type": "weapon",
@@ -302,14 +319,15 @@
     "int": "",
     "hit": "0~12",
     "icon": "Viking Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
+    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20",
+    "name_ja": "バイキングソード"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Broadsword",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "阔剑",
     "name_kr": "",
     "level": "27",
     "attack": "7~35",
@@ -319,7 +337,8 @@
     "int": "",
     "hit": "0",
     "icon": "Broadsword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ブロードソード"
   },
   {
     "type": "weapon",
@@ -335,7 +354,8 @@
     "int": "",
     "hit": "0~11",
     "icon": "Gladius.png",
-    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸",
+    "name_ja": "グラディウス"
   },
   {
     "type": "weapon",
@@ -352,7 +372,8 @@
     "hit": "3~5",
     "icon": "Platinum Rapier.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X5,【古代血液】X5,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X5,【古代血液】X5,【赛乐亚之泪】X1",
+    "name_ja": "プラチナレイピア"
   },
   {
     "type": "weapon",
@@ -369,7 +390,8 @@
     "int": "",
     "hit": "0",
     "icon": "Gray Rapier.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "グレーのレイピア"
   },
   {
     "type": "weapon",
@@ -385,7 +407,8 @@
     "int": "",
     "hit": "0~11",
     "icon": "Rapier.png",
-    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色细剑】X1,【第4精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色细剑】X1,【第4精髓】X20",
+    "name_ja": "レイピア"
   },
   {
     "type": "weapon",
@@ -402,7 +425,8 @@
     "int": "",
     "hit": "0",
     "icon": "Short Blade.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ショットブレード"
   },
   {
     "type": "weapon",
@@ -419,7 +443,8 @@
     "hit": "0~12",
     "magic_resist": "0 or 2~18",
     "icon": "Rune Blade.png",
-    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【短刃】X1,【第4精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【短刃】X1,【第4精髓】X40",
+    "name_ja": "ルーンブレイド"
   },
   {
     "type": "weapon",
@@ -436,7 +461,8 @@
     "int": "",
     "hit": "0",
     "icon": "Steel Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鋼鉄の剣"
   },
   {
     "type": "weapon",
@@ -452,7 +478,8 @@
     "int": "",
     "hit": "0~12",
     "icon": "Darksteel Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【钢铁剑】X1,【第4精髓】X60"
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【钢铁剑】X1,【第4精髓】X60",
+    "name_ja": "ダークスチールソード"
   },
   {
     "type": "weapon",
@@ -469,7 +496,8 @@
     "int": "",
     "hit": "0",
     "icon": "Battle Sword.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "バトルソード"
   },
   {
     "type": "weapon",
@@ -485,7 +513,8 @@
     "int": "",
     "hit": "0~13",
     "icon": "War Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@湿地花怪,@理智之声,【组合书3】制作:,【战斗之剑】X1,【第5精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@湿地花怪,@理智之声,【组合书3】制作:,【战斗之剑】X1,【第5精髓】X20",
+    "name_ja": "ウォーソード"
   },
   {
     "type": "weapon",
@@ -502,7 +531,8 @@
     "int": "",
     "hit": "0",
     "icon": "Sabre.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "軍刀"
   },
   {
     "type": "weapon",
@@ -518,7 +548,8 @@
     "int": "",
     "hit": "0~13",
     "icon": "Kaisor Sword.png",
-    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【军刀】X1,【第5精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【军刀】X1,【第5精髓】X40",
+    "name_ja": "カイザーソード"
   },
   {
     "type": "weapon",
@@ -535,7 +566,8 @@
     "hit": "0~13",
     "icon": "Burning Blade.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器",
+    "name_ja": "バーニングブレイド"
   },
   {
     "type": "weapon",
@@ -552,14 +584,15 @@
     "hit": "0~13",
     "icon": "Guillotine.png",
     "rarity": "高级",
-    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1",
+    "name_ja": "ギロチン"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Blade",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "战刃",
     "name_kr": "",
     "level": "47",
     "attack": "9~63",
@@ -569,7 +602,8 @@
     "int": "",
     "hit": "0",
     "icon": "Blade.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ブレード"
   },
   {
     "type": "weapon",
@@ -586,7 +620,8 @@
     "hit": "0 or 7~10",
     "icon": "Edge of Oblivion.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10"
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10",
+    "name_ja": "忘却の先"
   },
   {
     "type": "weapon",
@@ -603,7 +638,8 @@
     "hit": "0~13",
     "icon": "Inquisition.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率"
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率",
+    "name_ja": "異端審問"
   },
   {
     "type": "weapon",
@@ -620,13 +656,14 @@
     "int": "",
     "hit": "0",
     "icon": "Cutlass.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "カットラス"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Sword of Fantasy (1~20LV)",
-    "name_cn": "梦幻武器(1~20LV)",
+    "name_cn": "梦幻之剑[Lv.1~Lv.20]",
     "name_kr": "",
     "level": "1",
     "attack": "5~20",
@@ -636,13 +673,14 @@
     "int": "",
     "hit": "0",
     "icon": "Sword of Fantasy (1~20LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック剣[1~20LV]"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Sword of Fantasy (21~30LV)",
-    "name_cn": "梦幻武器(21~30LV)",
+    "name_cn": "梦幻之剑[Lv.21~Lv.30]",
     "name_kr": "",
     "level": "21",
     "attack": "6~30",
@@ -652,13 +690,14 @@
     "int": "",
     "hit": "0~5",
     "icon": "Sword of Fantasy (21~30LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック剣[21~30LV]"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Sword of Fantasy (31~40LV)",
-    "name_cn": "梦幻武器(31~40LV)",
+    "name_cn": "梦幻之剑[Lv.31~Lv.40]",
     "name_kr": "",
     "level": "31",
     "attack": "9~45",
@@ -668,13 +707,14 @@
     "int": "",
     "hit": "0~6",
     "icon": "Sword of Fantasy (31~40LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック剣[31~40LV]"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Sword of Fantasy (41~50LV)",
-    "name_cn": "梦幻武器(41~50LV)",
+    "name_cn": "梦幻之剑[Lv.41~Lv.50]",
     "name_kr": "",
     "level": "41",
     "attack": "10~60",
@@ -684,13 +724,14 @@
     "int": "",
     "hit": "0~8",
     "icon": "Sword of Fantasy (41~50LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック剣[41~50LV]"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Locke's Sword (20~29 LV)",
-    "name_cn": "洛克剑(20~29 LV)",
+    "name_cn": "洛克的水晶剑[Lv.20~Lv.29]",
     "name_kr": "",
     "level": "20",
     "attack": "7~35",
@@ -700,13 +741,14 @@
     "int": "",
     "hit": "0",
     "icon": "Locke's Sword (20~29 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクの剣[20~29LV]"
   },
   {
     "type": "weapon",
     "job": "warrior",
     "name": "Locke's Sword (30~39 LV)",
-    "name_cn": "洛克剑(30~39 LV)",
+    "name_cn": "洛克的水晶剑[Lv.30~Lv.39]",
     "name_kr": "",
     "level": "30",
     "attack": "10~50",
@@ -716,7 +758,8 @@
     "int": "",
     "hit": "0",
     "icon": "Locke's Sword (30~39 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクの剣[30~39LV]"
   },
   {
     "type": "weapon",
@@ -739,7 +782,7 @@
     "job": "ranger",
     "name": "Worn Shortbow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "磨损短弓",
     "name_kr": "",
     "level": "1",
     "attack": "1~3",
@@ -749,14 +792,15 @@
     "int": "",
     "hit": "0",
     "icon": "Worn Shortbow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "すり切れたショートボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Shiny Short Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "闪耀短弓",
     "name_kr": "",
     "level": "2",
     "attack": "2~6",
@@ -767,14 +811,15 @@
     "hit": "0",
     "Sharpness: 15": "dex: 0",
     "icon": "Shiny Short Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "輝くショートボー"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Old Shortbow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "老旧短弓",
     "name_kr": "",
     "level": "4",
     "attack": "2~4",
@@ -784,13 +829,14 @@
     "int": "",
     "hit": "0",
     "icon": "Old Shortbow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古いショートボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Wooden Shortbow",
-    "name_cn": "木质短弓",
+    "name_cn": "木制短弓",
     "name_kr": "",
     "level": "5",
     "attack": "2~6",
@@ -800,14 +846,15 @@
     "int": "",
     "hit": "0~6",
     "icon": "Wooden Shortbow.png",
-    "desc": "怪物掉落↓可点击↓:,@凶猛树叶野猪"
+    "desc": "怪物掉落↓可点击↓:,@凶猛树叶野猪",
+    "name_ja": "ウッドショットボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Patrol's Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "侦查队之弓箭",
     "name_kr": "",
     "level": "7",
     "attack": "3~6",
@@ -819,14 +866,15 @@
     "Enchanted": "5",
     "dex": "0",
     "icon": "Patrol's Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "偵察隊の弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Adventurer Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "冒险家弓箭",
     "name_kr": "",
     "level": "8",
     "attack": "3~6",
@@ -836,14 +884,15 @@
     "int": "",
     "hit": "1",
     "icon": "Adventurer Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Woody Shortbow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "木弓",
     "name_kr": "",
     "level": "10",
     "attack": "2~6",
@@ -853,12 +902,13 @@
     "int": "",
     "hit": "0",
     "icon": "Woody Shortbow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "木弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
-    "name": "Long Bow",
+    "name": "Longbow",
     "name_cn": "长弓",
     "name_kr": "",
     "level": "10",
@@ -868,15 +918,16 @@
     "str": "",
     "int": "",
     "hit": "0~8",
-    "icon": "Long Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@乌波乌波"
+    "icon": "Longbow.png",
+    "desc": "怪物掉落↓可点击↓:,@乌波乌波",
+    "name_ja": "ロングボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Coral Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "珊瑚弓",
     "name_kr": "",
     "level": "12",
     "attack": "5~10",
@@ -886,14 +937,15 @@
     "int": "",
     "hit": "3",
     "icon": "Coral Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴの弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Worn Shortbow",
     "hide": true,
-    "name_cn": "",
+    "name_cn": "磨损短弓",
     "name_kr": "",
     "level": "14",
     "attack": "2~8",
@@ -903,7 +955,8 @@
     "int": "",
     "hit": "0",
     "icon": "Worn Shortbow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "すり切れたショートボウ"
   },
   {
     "type": "weapon",
@@ -920,14 +973,15 @@
     "hit": "0~12",
     "dex": "0~5",
     "icon": "Composite Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长"
+    "desc": "怪物掉落↓可点击↓:,@变种乌波,@乌波鲁波族长",
+    "name_ja": "コンポジットボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Light Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "轻型短弓",
     "name_kr": "",
     "level": "17",
     "attack": "4~12",
@@ -937,7 +991,8 @@
     "int": "",
     "hit": "0",
     "icon": "Light Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ライトボウ"
   },
   {
     "type": "weapon",
@@ -955,14 +1010,15 @@
     "dex": "0~5",
     "icon": "Swirling Bow.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@白色骷髅,@黑色骸骨,@睡醒的库伊,@惊喜宝箱"
+    "desc": "怪物掉落↓可点击↓:,@白色骷髅,@黑色骸骨,@睡醒的库伊,@惊喜宝箱",
+    "name_ja": "渦巻き弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Heavy Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "重型短弓",
     "name_kr": "",
     "level": "20",
     "attack": "4~16",
@@ -972,7 +1028,8 @@
     "int": "",
     "hit": "0",
     "icon": "Heavy Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ヘビーボウ"
   },
   {
     "type": "weapon",
@@ -989,14 +1046,15 @@
     "hit": "0~13",
     "dex": "0~6",
     "icon": "Great Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师",
+    "name_ja": "グレートボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Bone Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "骸骨弓",
     "name_kr": "",
     "level": "23",
     "attack": "4~20",
@@ -1006,7 +1064,8 @@
     "int": "",
     "hit": "0",
     "icon": "Bone Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ボーンボウ"
   },
   {
     "type": "weapon",
@@ -1023,14 +1082,15 @@
     "hit": "0~14",
     "dex": "0~8",
     "icon": "Classic Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
+    "desc": "怪物掉落↓可点击↓:,@咚咚,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20",
+    "name_ja": "角弓"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Flat Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "平弓",
     "name_kr": "",
     "level": "27",
     "attack": "3~21",
@@ -1040,7 +1100,8 @@
     "int": "",
     "hit": "0",
     "icon": "Flat Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "フラットボウ"
   },
   {
     "type": "weapon",
@@ -1057,7 +1118,8 @@
     "hit": "3~11",
     "dex": "0~8",
     "icon": "Hunter Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸",
+    "name_ja": "ハンターボウ"
   },
   {
     "type": "weapon",
@@ -1074,7 +1136,8 @@
     "int": "",
     "hit": "0",
     "icon": "Heavy Flat Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ヘビーフラットボウ"
   },
   {
     "type": "weapon",
@@ -1092,7 +1155,8 @@
     "dex": "3~4",
     "icon": "Wing's Wing.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC伍德:,【古代羽毛】X3,【古代皮革】X10,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC伍德:,【古代羽毛】X3,【古代皮革】X10,【赛乐亚之泪】X1",
+    "name_ja": "ウィングの翼"
   },
   {
     "type": "weapon",
@@ -1109,7 +1173,8 @@
     "hit": "0",
     "dex": "0~8",
     "icon": "Horn Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【重型平弓】X1,【第4精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【重型平弓】X1,【第4精髓】X20",
+    "name_ja": "ホーンボウ"
   },
   {
     "type": "weapon",
@@ -1126,7 +1191,8 @@
     "int": "",
     "hit": "0",
     "icon": "Light Hunting Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ライトハンティングボウ"
   },
   {
     "type": "weapon",
@@ -1144,14 +1210,15 @@
     "hp": "0 or 2~18",
     "dex": "0~9",
     "icon": "Battle Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【轻型猎弓】X1,【第4精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【轻型猎弓】X1,【第4精髓】X40",
+    "name_ja": "バトルボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Recurve Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "反曲弓",
     "name_kr": "",
     "level": "38",
     "attack": "4~32",
@@ -1161,7 +1228,8 @@
     "int": "",
     "hit": "0",
     "icon": "Recurve Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "しなった弓"
   },
   {
     "type": "weapon",
@@ -1180,7 +1248,8 @@
     "dex": "0 or 2~10",
     "icon": "Dezoruba's Bow.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【戴楚拜伊的设计图】X1,【第4精髓】X60,【第6精髓】X5"
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【戴楚拜伊的设计图】X1,【第4精髓】X60,【第6精髓】X5",
+    "name_ja": "デゾルバのボウ"
   },
   {
     "type": "weapon",
@@ -1197,7 +1266,8 @@
     "hit": "0",
     "dex": "0 or 3~11",
     "icon": "War Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@腐烂的布丁,@理智之声,【组合书3】制作:,【白蜡木弓】X1,【第5精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@轻微神经病,@腐烂的布丁,@理智之声,【组合书3】制作:,【白蜡木弓】X1,【第5精髓】X20",
+    "name_ja": "ウォーボウ"
   },
   {
     "type": "weapon",
@@ -1214,7 +1284,8 @@
     "int": "",
     "hit": "0",
     "icon": "Ashwood Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "アッシュウッドボウ"
   },
   {
     "type": "weapon",
@@ -1231,7 +1302,8 @@
     "int": "",
     "hit": "0",
     "icon": "Worn War Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "すり切れたウォーボウ"
   },
   {
     "type": "weapon",
@@ -1249,7 +1321,8 @@
     "move": "0~5%",
     "dex": "0 or 3~11",
     "icon": "Shadow Bow.png",
-    "desc": "怪物掉落↓可点击↓:,@大老鼠,@缉命者,@暴食者,【组合书3】制作:,【磨损战弓】X1,【第5精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@缉命者,@暴食者,【组合书3】制作:,【磨损战弓】X1,【第5精髓】X40",
+    "name_ja": "シャドウボウ"
   },
   {
     "type": "weapon",
@@ -1268,7 +1341,8 @@
     "dex": "0 or 3~11",
     "icon": "Imperial Bow.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器",
+    "name_ja": "インペリアルボウ"
   },
   {
     "type": "weapon",
@@ -1286,14 +1360,15 @@
     "move": "0~5%",
     "dex": "0 or 3~11",
     "icon": "Crow's Cry.png",
-    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1",
+    "name_ja": "カラスの鳴き声"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Maple Bow",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "枫叶弓",
     "name_kr": "",
     "level": "47",
     "attack": "5~45",
@@ -1303,7 +1378,8 @@
     "int": "",
     "hit": "0",
     "icon": "Maple Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "メイプルボウ"
   },
   {
     "type": "weapon",
@@ -1322,7 +1398,8 @@
     "dex": "0 or 7~10",
     "icon": "Corrupted Purity.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X20,【纯净的知识】X10"
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X20,【纯净的知识】X10",
+    "name_ja": "汚れた純粋さ"
   },
   {
     "type": "weapon",
@@ -1341,14 +1418,15 @@
     "dex": "6~14",
     "icon": "Fail-Not.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率"
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率",
+    "name_ja": "フェイルノット"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Long Battle Bow",
     "hide": true,
-    "name_cn": "长战弓",
+    "name_cn": "长斗弓",
     "name_kr": "",
     "level": "50",
     "attack": "9~54",
@@ -1358,13 +1436,14 @@
     "int": "",
     "hit": "0",
     "icon": "Long Battle Bow.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロングバトルボウ"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Locke's Bow (20~29 LV)",
-    "name_cn": "洛克弓(20~29 LV)",
+    "name_cn": "洛克的魔力弓[Lv.20~Lv.29]",
     "name_kr": "",
     "level": "20",
     "attack": "4~28",
@@ -1375,13 +1454,14 @@
     "hit": "0",
     "dex": "2",
     "icon": "Locke's Bow (20~29 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクのボウ[20~29LV]"
   },
   {
     "type": "weapon",
     "job": "ranger",
     "name": "Locke's Bow (30~39 LV)",
-    "name_cn": "洛克弓(30~39 LV)",
+    "name_cn": "洛克的魔力弓[Lv.30~Lv.39]",
     "name_kr": "",
     "level": "30",
     "attack": "5~35",
@@ -1392,7 +1472,8 @@
     "hit": "0",
     "dex": "0",
     "icon": "Locke's Bow (30~39 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクのボウ[30~39LV]"
   },
   {
     "type": "weapon",
@@ -1416,7 +1497,7 @@
     "job": "magician",
     "name": "Apprentice Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "实习木杖",
     "name_kr": "",
     "level": "1",
     "attack": "2~6",
@@ -1426,14 +1507,15 @@
     "int": "0",
     "hit": "",
     "icon": "Apprentice Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "見習いの杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Shiny Wooden Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "闪耀的木杖",
     "name_kr": "",
     "level": "2",
     "attack": "3~12",
@@ -1445,7 +1527,8 @@
     "Sharpness": "15",
     "mana": "0",
     "icon": "Shiny Wooden Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "輝く木の杖"
   },
   {
     "type": "weapon",
@@ -1461,14 +1544,15 @@
     "int": "0~6",
     "hit": "",
     "icon": "Wooden Staff.png",
-    "desc": "怪物掉落↓可点击↓:,@花精灵,@毒蘑菇,NPC武器商人:,赵侍"
+    "desc": "怪物掉落↓可点击↓:,@花精灵,@毒蘑菇,NPC武器商人:,赵侍",
+    "name_ja": "木の杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Patrol's Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "侦查队之杖",
     "name_kr": "",
     "level": "7",
     "attack": "3~15",
@@ -1480,14 +1564,15 @@
     "Enchanted": 5,
     "mana": "0",
     "icon": "Patrol's Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "偵察隊の杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Adventurer Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "冒险家法杖",
     "name_kr": "",
     "level": "8",
     "attack": "2~6",
@@ -1497,14 +1582,15 @@
     "int": "0~2",
     "hit": "",
     "icon": "Adventurer Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Short Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "短法杖",
     "name_kr": "",
     "level": "10",
     "attack": "3~12",
@@ -1514,13 +1600,14 @@
     "int": "1",
     "hit": "",
     "icon": "Short Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "短い杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Oak Tree Staff",
-    "name_cn": "桦树杖",
+    "name_cn": "栎树杖",
     "name_kr": "",
     "level": "10",
     "attack": "4~16",
@@ -1531,14 +1618,15 @@
     "hit": "",
     "mana": "0~6",
     "icon": "Oak Tree Staff.png",
-    "desc": "怪物掉落↓可点击↓:,@梦魔"
+    "desc": "怪物掉落↓可点击↓:,@梦魔",
+    "name_ja": "クヌギの杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Coral Cane",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "珊瑚法杖",
     "name_kr": "",
     "level": "12",
     "attack": "3~18",
@@ -1550,14 +1638,15 @@
     "mana_regen": "3",
     "mana": "0",
     "icon": "Coral Cane.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴの杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Cedar Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "杉木杖",
     "name_kr": "",
     "level": "14",
     "attack": "3~15",
@@ -1567,7 +1656,8 @@
     "int": "2",
     "hit": "",
     "icon": "Cedar Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "杉の杖"
   },
   {
     "type": "weapon",
@@ -1584,7 +1674,8 @@
     "hit": "",
     "mana": "0~8",
     "icon": "Magician Staff.png",
-    "desc": "怪物掉落↓可点击↓:,@变种乌波"
+    "desc": "怪物掉落↓可点击↓:,@变种乌波",
+    "name_ja": "マジシャンの杖"
   },
   {
     "type": "weapon",
@@ -1603,14 +1694,15 @@
     "mana": "0~9",
     "icon": "Woopa-Roopa's Staff.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@乌波鲁波族长,@幽灵魔法师"
+    "desc": "怪物掉落↓可点击↓:,@乌波鲁波族长,@幽灵魔法师",
+    "name_ja": "族長の杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Practice Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "练习用法杖",
     "name_kr": "",
     "level": "17",
     "attack": "3~18",
@@ -1620,14 +1712,15 @@
     "int": "2",
     "hit": "",
     "icon": "Practice Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "練習用の杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Chipped Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "碎裂的法杖",
     "name_kr": "",
     "level": "20",
     "attack": "4~20",
@@ -1637,7 +1730,8 @@
     "int": "3",
     "hit": "",
     "icon": "Chipped Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "欠けた杖"
   },
   {
     "type": "weapon",
@@ -1653,14 +1747,15 @@
     "int": "1~8",
     "hit": "",
     "icon": "Novice Shaman's Wand.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师"
+    "desc": "怪物掉落↓可点击↓:,@鬼魂,@幽灵魔法师",
+    "name_ja": "見習いマジシャンの棒"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Stone Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "石杖",
     "name_kr": "",
     "level": "23",
     "attack": "3~21",
@@ -1670,7 +1765,8 @@
     "int": "3",
     "hit": "",
     "icon": "Stone Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "石の杖"
   },
   {
     "type": "weapon",
@@ -1687,14 +1783,15 @@
     "hit": "",
     "mana": "0~15",
     "icon": "Shaman's Wand.png",
-    "desc": "怪物掉落↓可点击↓:,@东东,@叮叮,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20"
+    "desc": "怪物掉落↓可点击↓:,@东东,@叮叮,@丹丹,@双胞胎船长,箱子开启:,地下城宝物20",
+    "name_ja": "呪術師の棒"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Smooth Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "光滑法杖",
     "name_kr": "",
     "level": "27",
     "attack": "4~24",
@@ -1704,7 +1801,8 @@
     "int": "4",
     "hit": "",
     "icon": "Smooth Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "柔らかい杖"
   },
   {
     "type": "weapon",
@@ -1721,7 +1819,8 @@
     "hit": "",
     "mana": "0~16",
     "icon": "Mystic Wand.png",
-    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸",
+    "name_ja": "ミステリーマジシャンの棒"
   },
   {
     "type": "weapon",
@@ -1738,7 +1837,8 @@
     "int": "5",
     "hit": "",
     "icon": "Farmer Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "農夫の杖"
   },
   {
     "type": "weapon",
@@ -1757,7 +1857,8 @@
     "mana": "0",
     "icon": "Ancient Wand.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC伍德:,【古代树木】X1,【古代水晶】X1,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC伍德:,【古代树木】X1,【古代水晶】X1,【赛乐亚之泪】X1",
+    "name_ja": "古代の棒"
   },
   {
     "type": "weapon",
@@ -1774,7 +1875,8 @@
     "hit": "",
     "mana": "0 or 6~22",
     "icon": "Spiritual Wand.png",
-    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【农夫法杖】X1,【第4精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【农夫法杖】X1,【第4精髓】X20",
+    "name_ja": "神懸りの杖"
   },
   {
     "type": "weapon",
@@ -1791,13 +1893,14 @@
     "int": "6",
     "hit": "",
     "icon": "Ironhead Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鉄飾りの杖"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Wand of Chaos",
-    "name_cn": "混沌法杖",
+    "name_cn": "浑沌法杖",
     "name_kr": "",
     "level": "35",
     "attack": "5~40",
@@ -1809,7 +1912,8 @@
     "hp": "0 or 2~18",
     "mana": "0 or 11~27",
     "icon": "Wand of Chaos.png",
-    "desc": "怪物掉落↓可点击↓:,@布兹兹,@上古眼怪,@莫宝,【组合书2】制作:,【铁饰法杖】X1,【第4精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@布兹兹,@上古眼怪,@莫宝,【组合书2】制作:,【铁饰法杖】X1,【第4精髓】X40",
+    "name_ja": "混沌の杖"
   },
   {
     "type": "weapon",
@@ -1826,7 +1930,8 @@
     "int": "7",
     "hit": "",
     "icon": "Battle Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "戦闘杖"
   },
   {
     "type": "weapon",
@@ -1843,7 +1948,8 @@
     "hit": "",
     "mana": "0 or 16~32",
     "icon": "Wand of Tranquility.png",
-    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【战斗法杖】X1,【第4精髓】X60"
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,@白色瓦当卡,【组合书3】制作:,【战斗法杖】X1,【第4精髓】X60",
+    "name_ja": "静寂の杖"
   },
   {
     "type": "weapon",
@@ -1860,7 +1966,8 @@
     "int": "8",
     "hit": "",
     "icon": "Fisherman Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "漁師の杖"
   },
   {
     "type": "weapon",
@@ -1877,7 +1984,8 @@
     "hit": "",
     "mana": "0 or 20~36",
     "icon": "Hole of Silence.png",
-    "desc": "怪物掉落↓可点击↓:,@流浪者,@心声,@理智之声,@呱呱,【组合书3】制作:,【渔夫法杖】X1,【第5精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@流浪者,@心声,@理智之声,@呱呱,【组合书3】制作:,【渔夫法杖】X1,【第5精髓】X20",
+    "name_ja": "沈黙のホール"
   },
   {
     "type": "weapon",
@@ -1894,7 +2002,8 @@
     "int": "9",
     "hit": "",
     "icon": "Iron Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鋼鉄の杖"
   },
   {
     "type": "weapon",
@@ -1913,7 +2022,8 @@
     "mana": "0 or 24~40",
     "icon": "Staff Struck by Lightning.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@大老鼠,@坚固的宝箱怪,@暴食者,【组合书3】制作:,【钢铁法杖】X1,【第5精髓】X40,【第6精髓】X5"
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@坚固的宝箱怪,@暴食者,【组合书3】制作:,【钢铁法杖】X1,【第5精髓】X40,【第6精髓】X5",
+    "name_ja": "落雷した木"
   },
   {
     "type": "weapon",
@@ -1932,7 +2042,8 @@
     "mana": "0 or 28~44",
     "icon": "Hole of Destruction.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器",
+    "name_ja": "破壊のホール"
   },
   {
     "type": "weapon",
@@ -1950,14 +2061,15 @@
     "mana_regen": "0~5",
     "mana": "0 or 24~40",
     "icon": "Ritual Hall.png",
-    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1",
+    "name_ja": "儀式ホール"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Handcrafted Staff",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "手工法杖",
     "name_kr": "",
     "level": "47",
     "attack": "5~50",
@@ -1967,7 +2079,8 @@
     "int": "10",
     "hit": "",
     "icon": "Handcrafted Staff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "手作り杖"
   },
   {
     "type": "weapon",
@@ -1986,7 +2099,8 @@
     "mana": "0 or 34~41",
     "icon": "Efflorescence of Purity.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X10,【纯净的知识】X20"
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X10,【符文碎片】X10,【纯净的知识】X20",
+    "name_ja": "純粋の開花"
   },
   {
     "type": "weapon",
@@ -2005,14 +2119,15 @@
     "mana": "32~48",
     "icon": "Soul Eater.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率"
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率",
+    "name_ja": "ソウルイーター"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Quarterstaff",
     "hide": true,
-    "name_cn": "长棍",
+    "name_cn": "六尺棒",
     "name_kr": "",
     "level": "50",
     "attack": "5~40",
@@ -2022,13 +2137,14 @@
     "int": "11",
     "hit": "",
     "icon": "Quarterstaff.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "六尺棒"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Staff of Fantasy (1~20LV)",
-    "name_cn": "梦幻武器(1~20LV)",
+    "name_cn": "梦幻法杖[Lv.1~Lv.20]",
     "name_kr": "",
     "level": "1",
     "attack": "4~16",
@@ -2039,13 +2155,14 @@
     "hit": "",
     "mana": "0~12",
     "icon": "Staff of Fantasy (1~20LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック杖[1~20LV]"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Staff of Fantasy (21~30LV)",
-    "name_cn": "梦幻武器(21~30LV)",
+    "name_cn": "梦幻法杖[Lv.21~Lv.30]",
     "name_kr": "",
     "level": "21",
     "attack": "5~25",
@@ -2056,13 +2173,14 @@
     "hit": "",
     "mana": "0~18",
     "icon": "Staff of Fantasy (21~30LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック杖[21~30LV]"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Staff of Fantasy (31~40LV)",
-    "name_cn": "梦幻武器(31~40LV)",
+    "name_cn": "梦幻法杖[Lv.31~Lv.40]",
     "name_kr": "",
     "level": "31",
     "attack": "5~35",
@@ -2073,13 +2191,14 @@
     "hit": "",
     "mana": "0~25",
     "icon": "Staff of Fantasy (31~40LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック杖[31~40LV]"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Staff of Fantasy (41~50LV)",
-    "name_cn": "梦幻武器(41~50LV)",
+    "name_cn": "梦幻法杖[Lv.41~Lv.50]",
     "name_kr": "",
     "level": "41",
     "attack": "7~49",
@@ -2090,13 +2209,14 @@
     "hit": "",
     "mana": "0~33",
     "icon": "Staff of Fantasy (41~50LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ファンタスティック杖[41~50LV]"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Locke's Staff (20~29 LV)",
-    "name_cn": "洛克法杖(20~29 LV)",
+    "name_cn": "洛克的骨制法杖[Lv.20~Lv.29]",
     "name_kr": "",
     "level": "20",
     "attack": "4~28",
@@ -2107,13 +2227,14 @@
     "hit": "",
     "mana": "0",
     "icon": "Locke's Staff (20~29 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクのスタッフ[20~29LV]"
   },
   {
     "type": "weapon",
     "job": "magician",
     "name": "Locke's Staff (30~39 LV)",
-    "name_cn": "洛克法杖(30~39 LV)",
+    "name_cn": "洛克的骨制法杖[Lv.30~Lv.39]",
     "name_kr": "",
     "level": "30",
     "attack": "5~40",
@@ -2124,7 +2245,8 @@
     "hit": "",
     "mana": "0",
     "icon": "Locke's Staff (30~39 LV).png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ロクのスタッフ[30~39LV]"
   },
   {
     "type": "weapon",
@@ -2148,7 +2270,7 @@
     "job": "breaker",
     "name": "Rusty Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "破旧指虎",
     "name_kr": "",
     "level": "1",
     "attack": "?",
@@ -2158,14 +2280,15 @@
     "int": "?",
     "hit": "?",
     "icon": "Rusty Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古びたナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Knight Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "骑士指虎",
     "name_kr": "",
     "level": "1",
     "attack": "?",
@@ -2175,7 +2298,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Knight Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "騎士のナックル"
   },
   {
     "type": "weapon",
@@ -2191,14 +2315,15 @@
     "int": "0",
     "hit": "0",
     "icon": "Wooden Tonfa.png",
-    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍"
+    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍",
+    "name_ja": "木製トンファー"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Scout Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "侦查队指虎",
     "name_kr": "",
     "level": "7",
     "attack": "?",
@@ -2208,7 +2333,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Scout Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "偵察隊のナックル"
   },
   {
     "type": "weapon",
@@ -2224,7 +2350,8 @@
     "int": "0",
     "hit": "0",
     "icon": "Dull Knuckle.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地野猪,NPC武器商人:,赵侍"
+    "desc": "怪物掉落↓可点击↓:,@湿地野猪,NPC武器商人:,赵侍",
+    "name_ja": "錆びたナックル"
   },
   {
     "type": "weapon",
@@ -2241,14 +2368,15 @@
     "hit": "0",
     "icon": "Bulldozer Tonfa.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1,【坚韧皮革】X10"
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪大哥,蘑菇地NPC獠牙收集家:,【凶猛猪獠牙】X1,【坚韧皮革】X10",
+    "name_ja": "ブルドーザートンファー"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Training Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "修练指虎",
     "name_kr": "",
     "level": "10",
     "attack": "?",
@@ -2258,14 +2386,15 @@
     "int": "?",
     "hit": "?",
     "icon": "Training Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "修練のナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Coral Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "珊瑚指虎",
     "name_kr": "",
     "level": "12",
     "attack": "?",
@@ -2275,14 +2404,15 @@
     "int": "?",
     "hit": "?",
     "icon": "Coral Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴのナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Shadow Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "暗影指虎",
     "name_kr": "",
     "level": "14",
     "attack": "?",
@@ -2292,12 +2422,13 @@
     "int": "?",
     "hit": "?",
     "icon": "Shadow Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "影のナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
-    "name": "Breaker's Knuckle",
+    "name": "Breaker’s Knuckle",
     "name_cn": "武术家指虎",
     "name_kr": "",
     "level": "14",
@@ -2307,8 +2438,9 @@
     "str": "0",
     "int": "0",
     "hit": "0~6",
-    "icon": "Breaker's Knuckle.png",
-    "desc": "怪物掉落↓可点击↓:,@变种乌波"
+    "icon": "Breaker’s Knuckle.png",
+    "desc": "怪物掉落↓可点击↓:,@变种乌波",
+    "name_ja": "武闘家のナックル"
   },
   {
     "type": "weapon",
@@ -2324,14 +2456,15 @@
     "int": "0",
     "hit": "0~?",
     "icon": "Shiny Knuckle.png",
-    "desc": "怪物掉落↓可点击↓:,@无神的库伊,@想睡的库伊"
+    "desc": "怪物掉落↓可点击↓:,@无神的库伊,@想睡的库伊",
+    "name_ja": "輝くナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Worn-out Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "磨损指虎",
     "name_kr": "",
     "level": "17",
     "attack": "?",
@@ -2341,14 +2474,15 @@
     "int": "?",
     "hit": "?",
     "icon": "Worn-out Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "擦り減ったナックル"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Stone Tonfa",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "石制拐棍",
     "name_kr": "",
     "level": "20",
     "attack": "?",
@@ -2358,7 +2492,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Stone Tonfa.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "石のトンファー"
   },
   {
     "type": "weapon",
@@ -2374,14 +2509,15 @@
     "int": "0",
     "hit": "0~4",
     "icon": "Bone Tonfa.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼魂"
+    "desc": "怪物掉落↓可点击↓:,@鬼魂",
+    "name_ja": "骨のトンファー"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Iron Tonfa",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "铁制拐棍",
     "name_kr": "",
     "level": "23",
     "attack": "?",
@@ -2391,7 +2527,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Iron Tonfa.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鉄のトンファー"
   },
   {
     "type": "weapon",
@@ -2407,14 +2544,15 @@
     "int": "0",
     "hit": "0~12",
     "icon": "Storm Whip.png",
-    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@叮叮,箱子开启:,地下城宝物20"
+    "desc": "怪物掉落↓可点击↓:,@东东,@咚咚,@丹丹,@叮叮,箱子开启:,地下城宝物20",
+    "name_ja": "嵐の鞭"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Battle Knuckle",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "战场指虎",
     "name_kr": "",
     "level": "27",
     "attack": "?",
@@ -2424,7 +2562,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Battle Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "バトルナックル"
   },
   {
     "type": "weapon",
@@ -2440,7 +2579,8 @@
     "int": "0",
     "hit": "0~11",
     "icon": "Iron Fist.png",
-    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸"
+    "desc": "怪物掉落↓可点击↓:,@战斗木乃伊,@丧尸",
+    "name_ja": "アイアンフィスト"
   },
   {
     "type": "weapon",
@@ -2457,7 +2597,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Gray Tonfa.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "グレートンファー"
   },
   {
     "type": "weapon",
@@ -2474,7 +2615,8 @@
     "hit": "3~5",
     "icon": "Glacia.png",
     "rarity": "英雄",
-    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X2,【虚空之球】X2,【水晶碎片】X10,【赛乐亚之泪】X1"
+    "desc": "光绝神殿NPC史密德:,【冻铁矿石】X2,【虚空之球】X2,【水晶碎片】X10,【赛乐亚之泪】X1",
+    "name_ja": "グラシア"
   },
   {
     "type": "weapon",
@@ -2490,7 +2632,8 @@
     "int": "0",
     "hit": "0~11",
     "icon": "Stormbreaker.png",
-    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色拐棍】X1,【第4精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@毕吉吉,@沙墓,@不可思议,【组合书2】制作:,【灰色拐棍】X1,【第4精髓】X20",
+    "name_ja": "ストームブレーカー"
   },
   {
     "type": "weapon",
@@ -2507,7 +2650,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Rough Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "荒いナックル"
   },
   {
     "type": "weapon",
@@ -2523,7 +2667,8 @@
     "int": "0",
     "hit": "0~12",
     "icon": "Fang of Dusk.png",
-    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【粗糙指虎】X1,【第4精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@史戴斯,@嘶嘶嘶,@莫宝,【组合书2】制作:,【粗糙指虎】X1,【第4精髓】X40",
+    "name_ja": "夕暮れの牙"
   },
   {
     "type": "weapon",
@@ -2540,7 +2685,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Steel Tonfa.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鋼鉄のトンファー"
   },
   {
     "type": "weapon",
@@ -2556,7 +2702,8 @@
     "int": "0",
     "hit": "0~12",
     "icon": "Thundersteel.png",
-    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,【组合书3】制作:,【钢制拐棍】X1,【第4精髓】X60"
+    "desc": "怪物掉落↓可点击↓:,@沙漠刺客,@嘶呃呃,【组合书3】制作:,【钢制拐棍】X1,【第4精髓】X60",
+    "name_ja": "サンダースチール"
   },
   {
     "type": "weapon",
@@ -2573,7 +2720,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Steel Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鋼鉄のナックル"
   },
   {
     "type": "weapon",
@@ -2589,7 +2737,8 @@
     "int": "0",
     "hit": "0~13",
     "icon": "War Knuckle.png",
-    "desc": "怪物掉落↓可点击↓:,@心声,【组合书3】制作:,【钢铁指虎】X1,【第5精髓】X20"
+    "desc": "怪物掉落↓可点击↓:,@心声,【组合书3】制作:,【钢铁指虎】X1,【第5精髓】X20",
+    "name_ja": "ウォーナックル"
   },
   {
     "type": "weapon",
@@ -2606,7 +2755,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Chain Knuckle.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "鎖のナックル"
   },
   {
     "type": "weapon",
@@ -2622,7 +2772,8 @@
     "int": "0",
     "hit": "0~13",
     "icon": "Shatter Fist.png",
-    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【锁链指虎】X1,【第5精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@大老鼠,@暗黑魔像,@暴食者,【组合书3】制作:,【锁链指虎】X1,【第5精髓】X40",
+    "name_ja": "破壊の拳"
   },
   {
     "type": "weapon",
@@ -2638,7 +2789,8 @@
     "int": "0",
     "hit": "0~13",
     "icon": "Frost Claw.png",
-    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1"
+    "desc": "祭坛NPC图巴卡因:,【异教徒圣物】X50,【魔核】X1",
+    "name_ja": "霜の爪"
   },
   {
     "type": "weapon",
@@ -2655,14 +2807,15 @@
     "hit": "0~13",
     "icon": "Unyielding.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,箱子随机开启4职业武器",
+    "name_ja": "不屈"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Rune Tonfa",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "符文拐棍",
     "name_kr": "",
     "level": "47",
     "attack": "?",
@@ -2672,7 +2825,8 @@
     "int": "?",
     "hit": "?",
     "icon": "Rune Tonfa.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ルーントンファー"
   },
   {
     "type": "weapon",
@@ -2689,7 +2843,8 @@
     "hit": "0~13",
     "icon": "Abyssal Fragment.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10"
+    "desc": "怪物掉落↓可点击↓:,@书夜叉,@书架怪,@远古知识,图书库NPC研究者 艾迪亚:,【裂开的立约书】X20,【符文碎片】X10,【纯净的知识】X10",
+    "name_ja": "深淵の破片"
   },
   {
     "type": "weapon",
@@ -2706,14 +2861,15 @@
     "hit": "0~13",
     "icon": "Eternity.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率"
+    "desc": "怪物掉落↓可点击↓:,@伊鲁斯特,祭坛NPC梅森:,【魔力漩涡】X20,【魔核】X10,魔力之息概率合成魔力漩涡,使用【魔力卷轴】提升成功率",
+    "name_ja": "エタニティ"
   },
   {
     "type": "weapon",
     "job": "breaker",
     "name": "Tiger Fist",
     "hide": true,
-    "name_cn": "虎拳套",
+    "name_cn": "虎之拳",
     "name_kr": "",
     "level": "50",
     "attack": "?",
@@ -2722,14 +2878,15 @@
     "str": "?",
     "int": "?",
     "hit": "?",
-    "icon": "Tiger Fist.png"
+    "icon": "Tiger Fist.png",
+    "name_ja": "タイガーフィスト"
   },
   {
     "type": "armor",
     "job": "warrior,ranger,magician,breaker",
     "name": "Frog Suit",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "青蛙装",
     "name_kr": "",
     "level": "10",
     "armor": "3",
@@ -2745,14 +2902,15 @@
     "int": "",
     "dex": "",
     "icon": "Frog Suit.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "カエルウェア"
   },
   {
     "type": "armor",
     "job": "warrior,ranger,magician,breaker",
     "name": "Rudolf Costume",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "鲁道夫装",
     "name_kr": "",
     "level": "10",
     "armor": "5",
@@ -2768,14 +2926,15 @@
     "int": "",
     "dex": "",
     "icon": "Rudolf Costume.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "トナカイウェア"
   },
   {
     "type": "armor",
     "job": "warrior,ranger,magician,breaker",
     "name": "Santa Costume",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "圣诞老人装",
     "name_kr": "",
     "level": "10",
     "armor": "10",
@@ -2791,7 +2950,8 @@
     "int": "",
     "dex": "",
     "icon": "Santa Costume.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンタコスチューム"
   },
   {
     "type": "armor",
@@ -2813,7 +2973,8 @@
     "int": "",
     "dex": "",
     "icon": "Frayed Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍"
+    "desc": "怪物掉落↓可点击↓:,@树木圆圆,NPC武器商人:,赵侍",
+    "name_ja": "コットン服"
   },
   {
     "type": "armor",
@@ -2835,7 +2996,8 @@
     "int": "",
     "dex": "",
     "icon": "Leather Jacket.png",
-    "desc": "NPC武器商人:,赵侍"
+    "desc": "NPC武器商人:,赵侍",
+    "name_ja": "革の服"
   },
   {
     "type": "armor",
@@ -2857,7 +3019,8 @@
     "int": "",
     "dex": "",
     "icon": "Leather Armor.png",
-    "desc": "NPC武器商人:,赵侍"
+    "desc": "NPC武器商人:,赵侍",
+    "name_ja": "革の鎧"
   },
   {
     "type": "armor",
@@ -2879,7 +3042,8 @@
     "int": "",
     "dex": "",
     "icon": "Sturdy Leather Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@剧毒蜘蛛,@湿地花精灵"
+    "desc": "怪物掉落↓可点击↓:,@剧毒蜘蛛,@湿地花精灵",
+    "name_ja": "強化した革の鎧"
   },
   {
     "type": "armor",
@@ -2901,7 +3065,8 @@
     "int": "",
     "dex": "",
     "icon": "Woopa Scale Armor.png",
-    "desc": "沙滩NPC拉汀:,【乌波鲁波鳞片】X50"
+    "desc": "沙滩NPC拉汀:,【乌波鲁波鳞片】X50",
+    "name_ja": "ウパの鱗鎧"
   },
   {
     "type": "armor",
@@ -2923,7 +3088,8 @@
     "int": "",
     "dex": "",
     "icon": "Spider Silk Bone Armor.png",
-    "desc": "NPC麦伊斯特:,【加工的蜘蛛丝】X80,【骨头碎片】X80"
+    "desc": "NPC麦伊斯特:,【加工的蜘蛛丝】X80,【骨头碎片】X80",
+    "name_ja": "クモの糸の骨の鎧"
   },
   {
     "type": "armor",
@@ -2945,7 +3111,8 @@
     "int": "",
     "dex": "",
     "icon": "Sturdy Woopa Armor.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "強化ウパ鎧"
   },
   {
     "type": "armor",
@@ -2967,7 +3134,8 @@
     "int": "",
     "dex": "",
     "icon": "Bone Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@骸骨,@白色骸骨"
+    "desc": "怪物掉落↓可点击↓:,@骸骨,@白色骸骨",
+    "name_ja": "骨の鎧"
   },
   {
     "type": "armor",
@@ -2990,7 +3158,8 @@
     "dex": "",
     "lightning_Resist": "0~11",
     "icon": "Lizard Leather Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@蛇尾蜥蜴,@蛇蛇查德,@毒蜥"
+    "desc": "怪物掉落↓可点击↓:,@蛇尾蜥蜴,@蛇蛇查德,@毒蜥",
+    "name_ja": "トカゲの皮の服"
   },
   {
     "type": "armor",
@@ -3015,7 +3184,8 @@
     "set3": "3力量+5%速",
     "icon": "Armor of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2",
+    "name_ja": "グレー岩のアーマー"
   },
   {
     "type": "armor",
@@ -3038,7 +3208,8 @@
     "dex": "",
     "icon": "Blackskull Armor.png",
     "rarity": "稀有",
-    "desc": "NPC麦伊斯特:,【设计图:黑骸盔甲】X1,【黑色骸骨】X1,【雪人骨】X80"
+    "desc": "NPC麦伊斯特:,【设计图:黑骸盔甲】X1,【黑色骸骨】X1,【雪人骨】X80",
+    "name_ja": "ブラックスカル鎧"
   },
   {
     "type": "armor",
@@ -3060,7 +3231,8 @@
     "int": "",
     "dex": "",
     "icon": "Sturdy Yeti Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@高阶守卫,@黑黑朱诺,@黑天,@恶灵"
+    "desc": "怪物掉落↓可点击↓:,@高阶守卫,@黑黑朱诺,@黑天,@恶灵",
+    "name_ja": "イエティの皮の服"
   },
   {
     "type": "armor",
@@ -3082,7 +3254,8 @@
     "int": "",
     "dex": "",
     "icon": "Highguard Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@高阶守卫"
+    "desc": "怪物掉落↓可点击↓:,@高阶守卫",
+    "name_ja": "ハイガード鎧"
   },
   {
     "type": "armor",
@@ -3104,7 +3277,8 @@
     "int": "",
     "dex": "",
     "icon": "Scale Armor.png",
-    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X30,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X30"
+    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X30,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X30",
+    "name_ja": "スケールアーマー"
   },
   {
     "type": "armor",
@@ -3126,7 +3300,8 @@
     "int": "",
     "dex": "",
     "icon": "Scout Jerkin.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X100/【棉布料】X20,主城NPC史奇尼:,【厚实的皮革】X100/【棉布料】X20"
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【棉布料】X20,主城NPC史奇尼:,【厚实的皮革】X100/【棉布料】X20",
+    "name_ja": "スカウトチョッキ"
   },
   {
     "type": "armor",
@@ -3148,7 +3323,8 @@
     "int": "",
     "dex": "",
     "icon": "Steel Armor.png",
-    "desc": "枯原NPC吴瑙:,【铁矿石】X200/【强化剂】X50,卡塔勒山脉NPC高来莫:,【铁矿石】X200/【强化剂】X50"
+    "desc": "枯原NPC吴瑙:,【铁矿石】X200/【强化剂】X50,卡塔勒山脉NPC高来莫:,【铁矿石】X200/【强化剂】X50",
+    "name_ja": "スチールアーマー"
   },
   {
     "type": "armor",
@@ -3170,7 +3346,8 @@
     "int": "",
     "dex": "",
     "icon": "Dezoruba's Tunic.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】,主城NPC史奇尼:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】"
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】,主城NPC史奇尼:,【厚实的皮革】X200/【特殊棉布料】X30,【戴楚拜伊设计图】",
+    "name_ja": "デゾルバのチュニック"
   },
   {
     "type": "armor",
@@ -3192,7 +3369,8 @@
     "int": "",
     "dex": "",
     "icon": "Darksteel Armor.png",
-    "desc": "枯原NPC吴瑙:,【黑铁矿石】X100/【高级研磨剂】X30,卡塔勒山脉NPC高来莫:,【黑铁矿石】X100/【高级研磨剂】X30"
+    "desc": "枯原NPC吴瑙:,【黑铁矿石】X100/【高级研磨剂】X30,卡塔勒山脉NPC高来莫:,【黑铁矿石】X100/【高级研磨剂】X30",
+    "name_ja": "ダークスチールアーマー"
   },
   {
     "type": "armor",
@@ -3215,7 +3393,8 @@
     "dex": "",
     "icon": "Warlord Armor.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子",
+    "name_ja": "ウォーロードアーマー"
   },
   {
     "type": "armor",
@@ -3238,7 +3417,8 @@
     "dex": "",
     "set2": "体力5 命中2",
     "icon": "World Tree Bark Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5",
+    "name_ja": "世界樹の皮の鎧"
   },
   {
     "type": "armor",
@@ -3261,7 +3441,8 @@
     "dex": "",
     "icon": "Arbitrator's Armor.png",
     "rarity": "英雄",
-    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20",
+    "name_ja": "仲裁者の鎧"
   },
   {
     "type": "armor",
@@ -3283,7 +3464,8 @@
     "int": "",
     "dex": "",
     "icon": "Boiled Leather Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼怪,@坚固的宝箱怪"
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@坚固的宝箱怪",
+    "name_ja": "ボイルドレザーアーマー"
   },
   {
     "type": "armor",
@@ -3306,7 +3488,8 @@
     "set3": "3敏捷+5%速",
     "icon": "Light Armor of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2",
+    "name_ja": "青い森のライトアーマー"
   },
   {
     "type": "armor",
@@ -3328,7 +3511,8 @@
     "int": "",
     "dex": "",
     "icon": "Oatwill's Light Armor.png",
-    "desc": "NPC贝伊尔伦:,【盔甲碎片】X40,【破碎的魔法石】X20,【毒袋】X4,【元素结晶】X8"
+    "desc": "NPC贝伊尔伦:,【盔甲碎片】X40,【破碎的魔法石】X20,【毒袋】X4,【元素结晶】X8",
+    "name_ja": "オートウィルのライトアーマー"
   },
   {
     "type": "armor",
@@ -3351,7 +3535,8 @@
     "dex": "",
     "icon": "Wyvern Tunic.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子",
+    "name_ja": "ワイバーンチュニック"
   },
   {
     "type": "armor",
@@ -3374,7 +3559,8 @@
     "dex": "",
     "set2": "体力5 命中2",
     "icon": "World Tree Branch Armor.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5",
+    "name_ja": "世界樹の枝の鎧"
   },
   {
     "type": "armor",
@@ -3397,7 +3583,8 @@
     "dex": "",
     "icon": "Catcher's Light Armor.png",
     "rarity": "英雄",
-    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20",
+    "name_ja": "番人のライトアーマー"
   },
   {
     "type": "armor",
@@ -3419,7 +3606,8 @@
     "int": "",
     "dex": "",
     "icon": "Cotton Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@库伊"
+    "desc": "怪物掉落↓可点击↓:,@库伊",
+    "name_ja": "コットンローブ"
   },
   {
     "type": "armor",
@@ -3441,7 +3629,8 @@
     "int": "",
     "dex": "",
     "icon": "Novice Magician Robe.png",
-    "desc": "NPC武器商人:,赵侍"
+    "desc": "NPC武器商人:,赵侍",
+    "name_ja": "見習いマジシャンの服"
   },
   {
     "type": "armor",
@@ -3463,7 +3652,8 @@
     "int": "",
     "dex": "",
     "icon": "Apprentice Magician Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地野猪"
+    "desc": "怪物掉落↓可点击↓:,@湿地野猪",
+    "name_ja": "熟練マジシャンの服"
   },
   {
     "type": "armor",
@@ -3486,7 +3676,8 @@
     "dex": "",
     "icon": "Mushroom Robe.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇",
+    "name_ja": "マッシュルームローブ"
   },
   {
     "type": "armor",
@@ -3508,7 +3699,8 @@
     "int": "",
     "dex": "",
     "icon": "Expert Magician Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地圆圆"
+    "desc": "怪物掉落↓可点击↓:,@湿地圆圆",
+    "name_ja": "プロマジシャンの服"
   },
   {
     "type": "armor",
@@ -3530,7 +3722,8 @@
     "int": "",
     "dex": "",
     "icon": "Master Magician Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@无神的库伊"
+    "desc": "怪物掉落↓可点击↓:,@无神的库伊",
+    "name_ja": "上級マジシャンの服"
   },
   {
     "type": "armor",
@@ -3552,7 +3745,8 @@
     "int": "0~2",
     "dex": "",
     "icon": "The Dead's Shroud.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼怪,@凶残的船员"
+    "desc": "怪物掉落↓可点击↓:,@鬼怪,@凶残的船员",
+    "name_ja": "亡者の装束"
   },
   {
     "type": "armor",
@@ -3574,7 +3768,8 @@
     "int": "",
     "dex": "",
     "icon": "Charmed Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@小恶魔,@阿打,@暗黑小恶魔"
+    "desc": "怪物掉落↓可点击↓:,@小恶魔,@阿打,@暗黑小恶魔",
+    "name_ja": "術にかかった服"
   },
   {
     "type": "armor",
@@ -3597,7 +3792,8 @@
     "set3": "3智力+5%速",
     "icon": "Robe of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2",
+    "name_ja": "青い滝のローブ"
   },
   {
     "type": "armor",
@@ -3619,7 +3815,8 @@
     "int": "",
     "dex": "",
     "icon": "Crystal Robe.png",
-    "desc": "NPC古德:,【设计图:水晶长袍】X1,【赛乐亚之泪】X1,【水晶蜘蛛丝】X60"
+    "desc": "NPC古德:,【设计图:水晶长袍】X1,【赛乐亚之泪】X1,【水晶蜘蛛丝】X60",
+    "name_ja": "水晶ローブ"
   },
   {
     "type": "armor",
@@ -3641,7 +3838,8 @@
     "int": "",
     "dex": "",
     "icon": "Monk's Robe.png",
-    "desc": "主城NPC村村:,【棉布料】X100/【神圣线圈】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X100/【神圣线圈】X30"
+    "desc": "主城NPC村村:,【棉布料】X100/【神圣线圈】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X100/【神圣线圈】X30",
+    "name_ja": "修道士のローブ"
   },
   {
     "type": "armor",
@@ -3663,7 +3861,8 @@
     "int": "",
     "dex": "",
     "icon": "Sage's Robe.png",
-    "desc": "主城NPC村村:,【棉布料】X200/【魔法线团】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X200/【魔法线团】X20"
+    "desc": "主城NPC村村:,【棉布料】X200/【魔法线团】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X200/【魔法线团】X20",
+    "name_ja": "賢者のローブ"
   },
   {
     "type": "armor",
@@ -3685,7 +3884,8 @@
     "int": "",
     "dex": "",
     "icon": "Robe of Silence.png",
-    "desc": "主城NPC村村:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1"
+    "desc": "主城NPC村村:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X100/【魔法线团】X20,【佐德设计图】X1",
+    "name_ja": "ゾードのローブ"
   },
   {
     "type": "armor",
@@ -3708,7 +3908,8 @@
     "dex": "",
     "icon": "Scholar's Gown.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子",
+    "name_ja": "学者のガウン"
   },
   {
     "type": "armor",
@@ -3730,7 +3931,8 @@
     "int": "0~3",
     "set2": "体力5 智力2",
     "icon": "World Tree Leaf Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5",
+    "name_ja": "世界樹の葉のローブ"
   },
   {
     "type": "armor",
@@ -3753,7 +3955,8 @@
     "dex": "",
     "icon": "Historian's Shroud.png",
     "rarity": "英雄",
-    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20",
+    "name_ja": "記録者の経衣"
   },
   {
     "type": "armor",
@@ -3775,7 +3978,8 @@
     "int": "0",
     "dex": "",
     "icon": "Apprentice Breaker Robe.png",
-    "desc": "NPC武器商人:,赵侍"
+    "desc": "NPC武器商人:,赵侍",
+    "name_ja": "見習い武闘家の服"
   },
   {
     "type": "armor",
@@ -3797,7 +4001,8 @@
     "int": "0",
     "dex": "",
     "icon": "Leather Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@黑蜘蛛"
+    "desc": "怪物掉落↓可点击↓:,@黑蜘蛛",
+    "name_ja": "革の道着"
   },
   {
     "type": "armor",
@@ -3819,7 +4024,8 @@
     "int": "0",
     "dex": "",
     "icon": "Woopa Scale Robe.png",
-    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X80"
+    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X80",
+    "name_ja": "ウパの鱗の道着"
   },
   {
     "type": "armor",
@@ -3841,7 +4047,8 @@
     "int": "0",
     "dex": "",
     "icon": "Sturdy Woopa Robe.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "強化ウパの道着"
   },
   {
     "type": "armor",
@@ -3863,7 +4070,8 @@
     "int": "0",
     "dex": "",
     "icon": "Coral Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@凝视者,@白色骷髅"
+    "desc": "怪物掉落↓可点击↓:,@凝视者,@白色骷髅",
+    "name_ja": "サンゴの道着"
   },
   {
     "type": "armor",
@@ -3886,7 +4094,8 @@
     "dex": "",
     "icon": "Lighthouse Robe.png",
     "rarity": "稀有",
-    "desc": "灯塔2楼NPC工匠福克斯:,【水晶蜘蛛丝】X40,【古代皮革】X5,【精灵之尘】X5"
+    "desc": "灯塔2楼NPC工匠福克斯:,【水晶蜘蛛丝】X40,【古代皮革】X5,【精灵之尘】X5",
+    "name_ja": "灯台の道着"
   },
   {
     "type": "armor",
@@ -3909,7 +4118,8 @@
     "set3": "3力量+5%速",
     "icon": "Yellow Canola Robe.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2"
+    "desc": "怪物掉落↓可点击↓:,@堕落的森林守护者,【组合书2】制作:,【灵魂粉末】X25,【森林守护者印章】X5,【第6精髓】X2",
+    "name_ja": "アブラナの道着"
   },
   {
     "type": "armor",
@@ -3931,7 +4141,8 @@
     "int": "0",
     "dex": "",
     "icon": "Combat Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@小企鹅"
+    "desc": "怪物掉落↓可点击↓:,@小企鹅",
+    "name_ja": "格闘用の道着"
   },
   {
     "type": "armor",
@@ -3953,7 +4164,8 @@
     "int": "0",
     "dex": "",
     "icon": "Lightning Robe.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X100/【神圣线圈】X40,主城NPC史奇尼:,【厚实的皮革】X100/【神圣线圈】X40"
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【神圣线圈】X40,主城NPC史奇尼:,【厚实的皮革】X100/【神圣线圈】X40",
+    "name_ja": "稲妻の道着"
   },
   {
     "type": "armor",
@@ -3975,7 +4187,8 @@
     "int": "0",
     "dex": "",
     "icon": "Bitter Cold Robe.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X150/【魔法线团】X30,主城NPC史奇尼:,【厚实的皮革】X150/【魔法线团】X30"
+    "desc": "主城NPC姚班:,【厚实的皮革】X150/【魔法线团】X30,主城NPC史奇尼:,【厚实的皮革】X150/【魔法线团】X30",
+    "name_ja": "酷寒の道着"
   },
   {
     "type": "armor",
@@ -3997,7 +4210,8 @@
     "int": "0 or 2~4",
     "dex": "",
     "icon": "Thule's Robe.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X30,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X30"
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X30,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X30",
+    "name_ja": "トゥーレの道着"
   },
   {
     "type": "armor",
@@ -4020,7 +4234,8 @@
     "dex": "",
     "icon": "Oblivion Robe.png",
     "rarity": "稀有",
-    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子"
+    "desc": "石冠NPC白眉梅格洛斯:,【希望魔力精髓】X100,【石冠实验药瓶】X50,【古代魔法粉末】X20,【星星粉末】X20,【星星碎片】X20,箱子开启:,公会战领每日箱子",
+    "name_ja": "忘却の道着"
   },
   {
     "type": "armor",
@@ -4043,7 +4258,8 @@
     "dex": "",
     "set2": "体力5 命中2",
     "icon": "World Tree Robe.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇,庭院NPC【裴罗】制作:,【皇冠鸭蛋】X10,【魔力根茎】X60,【电子核心】X5",
+    "name_ja": "世界樹の道着"
   },
   {
     "type": "armor",
@@ -4066,14 +4282,15 @@
     "dex": "",
     "icon": "Apex Road.png",
     "rarity": "英雄",
-    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20"
+    "desc": "庭院NPC布尔:,【高压电车】X80,【古代核心】X20",
+    "name_ja": "頂点への道"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Bunny Rabbit",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "兔兔帽",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4090,7 +4307,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Bunny Rabbit.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ウサギの耳"
   },
   {
     "type": "hats",
@@ -4113,14 +4331,15 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Donguri Hat.png",
-    "desc": "NPC心动库伊:,【圆圆卡10/J/Q/K/A】X1"
+    "desc": "NPC心动库伊:,【圆圆卡10/J/Q/K/A】X1",
+    "name_ja": "マルマル帽子"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Kitty Cat",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "喵喵帽",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4137,7 +4356,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Kitty Cat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ネコ耳"
   },
   {
     "type": "hats",
@@ -4160,7 +4380,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Kooii Hat.png",
-    "desc": "NPC心动库伊:,【库伊卡10/J/Q/K/A】X1"
+    "desc": "NPC心动库伊:,【库伊卡10/J/Q/K/A】X1",
+    "name_ja": "クイの帽子"
   },
   {
     "type": "hats",
@@ -4190,7 +4411,7 @@
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Mask",
-    "name_cn": "兔子面具",
+    "name_cn": "面具[..]",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4207,14 +4428,15 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Mask.png",
-    "desc": "周年NPC活动"
+    "desc": "周年NPC活动",
+    "name_ja": "仮面[...]"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Poo",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "粉红大便帽",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4231,14 +4453,15 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Poo.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ソフトクリーム"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Raider Cap",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "入侵者帽",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4255,7 +4478,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Raider Cap.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "侵入者の帽子"
   },
   {
     "type": "hats",
@@ -4333,7 +4557,7 @@
     "job": "warrior,ranger,magician,breaker",
     "name": "Santa's Cool Hat",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "帅气圣诞老人帽",
     "name_kr": "",
     "level": "1",
     "armor": "2",
@@ -4350,14 +4574,15 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Santa's Cool Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "素敵なサンタ帽子"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Hard Hat",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "坚固的帽子",
     "name_kr": "",
     "level": "1",
     "armor": "1",
@@ -4374,7 +4599,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hard Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "堅い帽子"
   },
   {
     "type": "hats",
@@ -4397,7 +4623,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Old Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古い帽子"
   },
   {
     "type": "hats",
@@ -4420,7 +4647,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Pirate Hat.png",
-    "desc": "NPC食神宝箱:,【海盗卡10/J/Q/K/A】x1"
+    "desc": "NPC食神宝箱:,【海盗卡10/J/Q/K/A】x1",
+    "name_ja": "海賊帽子"
   },
   {
     "type": "hats",
@@ -4466,7 +4694,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Frog Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "カエル帽子"
   },
   {
     "type": "hats",
@@ -4521,7 +4750,7 @@
     "job": "warrior,ranger,magician,breaker",
     "name": "Brown Hat",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "咖啡绅士帽",
     "name_kr": "",
     "level": "10",
     "armor": "1",
@@ -4538,13 +4767,14 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Brown Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "茶色い帽子"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Raindeer Hat",
-    "name_cn": "麋鹿帽",
+    "name_cn": "驯鹿帽",
     "name_kr": "",
     "level": "10",
     "armor": "1",
@@ -4561,14 +4791,15 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Raindeer Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "子トナカイ帽子"
   },
   {
     "type": "hats",
     "job": "warrior,ranger,magician,breaker",
     "name": "Rudolph's Hat",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "鲁道夫帽",
     "name_kr": "",
     "level": "15",
     "armor": "1",
@@ -4585,7 +4816,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Rudolph's Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "トナカイ帽子"
   },
   {
     "type": "hats",
@@ -4608,7 +4840,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Woopa Scale Helmet.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ウパの鱗兜"
   },
   {
     "type": "hats",
@@ -4631,7 +4864,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Donguri Leaf Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "マルマル葉の帽子"
   },
   {
     "type": "hats",
@@ -4654,13 +4888,14 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Intensified Woopa Helmet.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "強化ウパ兜"
   },
   {
     "type": "hats",
     "job": "warrior,ranger",
     "name": "Blood-Flower Stem Hat",
-    "name_cn": "血花藤曼帽",
+    "name_cn": "血花藤蔓帽",
     "name_kr": "",
     "level": "22",
     "armor": "4",
@@ -4677,7 +4912,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Blood-Flower Stem Hat.png",
-    "desc": "NPC圣职者 燦:,【血花藤蔓】X1,【水晶蜘蛛丝】X20"
+    "desc": "NPC圣职者 燦:,【血花藤蔓】X1,【水晶蜘蛛丝】X20",
+    "name_ja": "血花の蔓の帽子"
   },
   {
     "type": "hats",
@@ -4700,7 +4936,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Bone Helmet.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "骨の兜"
   },
   {
     "type": "hats",
@@ -4725,13 +4962,14 @@
     "set3": "3力量+5%速",
     "icon": "Helm of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
+    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50",
+    "name_ja": "グレー岩の兜"
   },
   {
     "type": "hats",
     "job": "warrior,ranger",
     "name": "Snow-Flower Stem Hat",
-    "name_cn": "雪花藤曼帽",
+    "name_cn": "雪花藤蔓帽",
     "name_kr": "",
     "level": "26",
     "armor": "5",
@@ -4748,7 +4986,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Snow-Flower Stem Hat.png",
-    "desc": "NPC古德:,【设计图:雪花藤蔓帽】X1,【雪花藤蔓】X7,【水晶蜘蛛丝】X20"
+    "desc": "NPC古德:,【设计图:雪花藤蔓帽】X1,【雪花藤蔓】X7,【水晶蜘蛛丝】X20",
+    "name_ja": "雪花の蔓の帽子"
   },
   {
     "type": "hats",
@@ -4770,7 +5009,8 @@
     "int": "",
     "dex": "",
     "icon": "Blackjuno's Helmet.png",
-    "desc": "NPC麦伊斯特:,【设计图:黑黑朱诺头盔】X1,【黑黑朱诺利角】X1,【雪人骨】X80"
+    "desc": "NPC麦伊斯特:,【设计图:黑黑朱诺头盔】X1,【黑黑朱诺利角】X1,【雪人骨】X80",
+    "name_ja": "ブラックジュノ兜"
   },
   {
     "type": "hats",
@@ -4792,7 +5032,8 @@
     "int": "",
     "dex": "",
     "icon": "Hat of the Wind.png",
-    "desc": "主城NPC姚班:,【棉布料】X70/【风之线团】X20,主城NPC史奇尼:,【棉布料】X70/【风之线团】X20"
+    "desc": "主城NPC姚班:,【棉布料】X70/【风之线团】X20,主城NPC史奇尼:,【棉布料】X70/【风之线团】X20",
+    "name_ja": "風の帽子"
   },
   {
     "type": "hats",
@@ -4815,7 +5056,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Heavy Iron Helmet.png",
-    "desc": "枯原NPC吴瑙:,【铁矿石】X70/【研磨剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20"
+    "desc": "枯原NPC吴瑙:,【铁矿石】X70/【研磨剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20",
+    "name_ja": "銑鉄の兜"
   },
   {
     "type": "hats",
@@ -4838,7 +5080,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hat of Blitzkrieg.png",
-    "desc": "主城NPC姚班:,【棉布料】X70/【魔法线团】X20,主城NPC史奇尼:,【棉布料】X70/【魔法线团】X20"
+    "desc": "主城NPC姚班:,【棉布料】X70/【魔法线团】X20,主城NPC史奇尼:,【棉布料】X70/【魔法线团】X20",
+    "name_ja": "速戦即決の帽子"
   },
   {
     "type": "hats",
@@ -4860,7 +5103,8 @@
     "int": "",
     "dex": "",
     "icon": "Helmet of Bravery.png",
-    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X20/【强化剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20/【强化剂】X20"
+    "desc": "枯原NPC吴瑙:,【铁矿石】X100/【研磨剂】X20/【强化剂】X20,卡塔勒山脉NPC高来莫:,【铁矿石】X70/【研磨剂】X20/【强化剂】X20",
+    "name_ja": "勇猛の兜"
   },
   {
     "type": "hats",
@@ -4882,7 +5126,8 @@
     "int": "",
     "dex": "",
     "icon": "Darksteel Helmet.png",
-    "desc": "枯原NPC吴瑙:,【黑铁矿石】X70/【高级研磨剂】X20,卡塔勒山脉NPC高来莫:,【黑铁矿石】X70/【高级研磨剂】X20"
+    "desc": "枯原NPC吴瑙:,【黑铁矿石】X70/【高级研磨剂】X20,卡塔勒山脉NPC高来莫:,【黑铁矿石】X70/【高级研磨剂】X20",
+    "name_ja": "ダークスチール兜"
   },
   {
     "type": "hats",
@@ -4903,7 +5148,8 @@
     "int": "",
     "dex": "",
     "icon": "Dezoruba's Hat.png",
-    "desc": "主城NPC姚班:,【特殊棉布料】X70/【戴楚拜伊设计图】X1,主城NPC史奇尼:,【特殊棉布料】X70/【戴楚拜伊设计图】X1"
+    "desc": "主城NPC姚班:,【特殊棉布料】X70/【戴楚拜伊设计图】X1,主城NPC史奇尼:,【特殊棉布料】X70/【戴楚拜伊设计图】X1",
+    "name_ja": "デゾルバの帽子"
   },
   {
     "type": "hats",
@@ -4925,7 +5171,8 @@
     "int": "",
     "dex": "",
     "icon": "Warlord Helmet.png",
-    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20",
+    "name_ja": "ウォーロード兜"
   },
   {
     "type": "hats",
@@ -4947,7 +5194,8 @@
     "int": "",
     "dex": "",
     "icon": "Slaughterer Helm.png",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1",
+    "name_ja": "暗殺者の兜"
   },
   {
     "type": "hats",
@@ -4971,7 +5219,8 @@
     "hit": "0~7",
     "icon": "Authority Helm.png",
     "rarity": "英雄",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20",
+    "name_ja": "権能の兜"
   },
   {
     "type": "hats",
@@ -4994,7 +5243,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hair Feather.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ヘアフェザー"
   },
   {
     "type": "hats",
@@ -5019,7 +5269,8 @@
     "dex": "1",
     "icon": "Cap of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@毒液花,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
+    "desc": "怪物掉落↓可点击↓:,@毒液花,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50",
+    "name_ja": "青い森の帽子"
   },
   {
     "type": "hats",
@@ -5042,7 +5293,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Wanderer's Hat.png",
-    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20",
+    "name_ja": "放浪者の帽子"
   },
   {
     "type": "hats",
@@ -5065,7 +5317,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Blind Faith Helm.png",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1",
+    "name_ja": "盲信の帽子"
   },
   {
     "type": "hats",
@@ -5089,7 +5342,8 @@
     "spell_resist": "",
     "icon": "Chasing Helm.png",
     "rarity": "英雄",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【变色心脏】X2,【五色皮革】X20"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【变色心脏】X2,【五色皮革】X20",
+    "name_ja": "追跡の帽子"
   },
   {
     "type": "hats",
@@ -5112,7 +5366,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Magician Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "マジシャンの帽子"
   },
   {
     "type": "hats",
@@ -5135,7 +5390,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Eye of Beholder.png",
-    "desc": "怪物掉落↓可点击↓:,@凝视者,@暗黑凝视者,@巨无霸凝视者"
+    "desc": "怪物掉落↓可点击↓:,@凝视者,@暗黑凝视者,@巨无霸凝视者",
+    "name_ja": "ウォッチャー"
   },
   {
     "type": "hats",
@@ -5158,7 +5414,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Hat of Spirit.png",
-    "desc": "NPC古德:,【设计图:精灵帽】X1,【精灵之尘】X20,【水晶蜘蛛丝】X40"
+    "desc": "NPC古德:,【设计图:精灵帽】X1,【精灵之尘】X20,【水晶蜘蛛丝】X40",
+    "name_ja": "精霊の帽子"
   },
   {
     "type": "hats",
@@ -5181,7 +5438,8 @@
     "set3": "3智力+5%速",
     "icon": "Bandana of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@被感染的女王蜂,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
+    "desc": "怪物掉落↓可点击↓:,@被感染的女王蜂,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50",
+    "name_ja": "青い滝のバンダナ"
   },
   {
     "type": "hats",
@@ -5204,7 +5462,8 @@
     "dex": "",
     "lightning_Resist": "0~13",
     "icon": "Shaman's Hat.png",
-    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔"
+    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔",
+    "name_ja": "呪術師の帽子"
   },
   {
     "type": "hats",
@@ -5227,7 +5486,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Monk's Hat.png",
-    "desc": "主城NPC村村:,【棉布料】X70/【神圣线圈】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X70/【神圣线圈】X20"
+    "desc": "主城NPC村村:,【棉布料】X70/【神圣线圈】X20,沙墓峡谷NPC芙提普拉:,【棉布料】X70/【神圣线圈】X20",
+    "name_ja": "修道士の帽子"
   },
   {
     "type": "hats",
@@ -5250,12 +5510,13 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Sage's Eye.png",
-    "desc": "主城NPC村村:,【棉布料】X60/【魔法线团】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X60/【魔法线团】X30"
+    "desc": "主城NPC村村:,【棉布料】X60/【魔法线团】X30,沙墓峡谷NPC芙提普拉:,【棉布料】X60/【魔法线团】X30",
+    "name_ja": "賢者の目"
   },
   {
     "type": "hats",
     "job": "magician",
-    "name": "Hat of Tranquility",
+    "name": "Cap of Tranquility",
     "name_cn": "宁静帽",
     "name_kr": "",
     "level": "39",
@@ -5272,8 +5533,9 @@
     "int": "6~8",
     "dex": "",
     "spell_resist": "",
-    "icon": "Hat of Tranquility.png",
-    "desc": "主城NPC村村:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1"
+    "icon": "Cap of Tranquility.png",
+    "desc": "主城NPC村村:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1,沙墓峡谷NPC芙提普拉:,【特殊棉布料】X70/【魔法线团】X30,【佐德设计图】X1",
+    "name_ja": "静寂の帽子"
   },
   {
     "type": "hats",
@@ -5296,7 +5558,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Scholar Hat.png",
-    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【堕落的魔法石】X40,【第5精髓】X20",
+    "name_ja": "学者の帽子"
   },
   {
     "type": "hats",
@@ -5319,7 +5582,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Judge's Helm.png",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1",
+    "name_ja": "審問官の帽子"
   },
   {
     "type": "hats",
@@ -5343,7 +5607,8 @@
     "spell_resist": "",
     "icon": "Eyes of Mind.png",
     "rarity": "英雄",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【禁止阅览的实验日志】X2,【五色皮革】X20"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【禁止阅览的实验日志】X2,【五色皮革】X20",
+    "name_ja": "心の目"
   },
   {
     "type": "hats",
@@ -5366,7 +5631,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Breaker Hat.png",
-    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X50"
+    "desc": "沙滩NPC雷汀:,【乌波鲁波鳞片】X50",
+    "name_ja": "武闘家の帽子"
   },
   {
     "type": "hats",
@@ -5389,7 +5655,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Sturdy Woopa Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "強化ウパの帽子"
   },
   {
     "type": "hats",
@@ -5412,7 +5679,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Bone Hat.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "骨の帽子"
   },
   {
     "type": "hats",
@@ -5436,7 +5704,8 @@
     "set3": "3力量+5%速",
     "icon": "Yellow Canola Hat.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50"
+    "desc": "怪物掉落↓可点击↓:,@阿打打,森林NPC卡皮尔鲁斯:,【森林守护者印章】X50",
+    "name_ja": "アブラナの帽子"
   },
   {
     "type": "hats",
@@ -5460,7 +5729,8 @@
     "spell_resist": "",
     "icon": "Frostlight Bandana.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "",
+    "name_ja": "氷光のバンダナ"
   },
   {
     "type": "hats",
@@ -5483,13 +5753,14 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Cloud Bandana.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X70/【神圣线圈】X30,主城NPC史奇尼:,【厚实的皮革】X70/【神圣线圈】X30"
+    "desc": "主城NPC姚班:,【厚实的皮革】X70/【神圣线圈】X30,主城NPC史奇尼:,【厚实的皮革】X70/【神圣线圈】X30",
+    "name_ja": "雲のバンダナ"
   },
   {
     "type": "hats",
     "job": "breaker",
     "name": "Training Hat",
-    "name_cn": "修炼帽",
+    "name_cn": "修练帽",
     "name_kr": "",
     "level": "34",
     "armor": "7",
@@ -5506,7 +5777,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Training Hat.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X100/【魔法线团】X20,主城NPC史奇尼:,【厚实的皮革】X100/【魔法线团】X20"
+    "desc": "主城NPC姚班:,【厚实的皮革】X100/【魔法线团】X20,主城NPC史奇尼:,【厚实的皮革】X100/【魔法线团】X20",
+    "name_ja": "修練の帽子"
   },
   {
     "type": "hats",
@@ -5529,7 +5801,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Thule's Hat.png",
-    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X20,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X20"
+    "desc": "主城NPC姚班:,【厚实的皮革】X200/【沙漠结晶】X20,主城NPC史奇尼:,【厚实的皮革】X200/【沙漠结晶】X20",
+    "name_ja": "トゥーレの帽子"
   },
   {
     "type": "hats",
@@ -5552,7 +5825,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Belt of Strength.png",
-    "desc": "【组合书3】制作:,【堕落的魔法石】X30,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【堕落的魔法石】X30,【第5精髓】X20",
+    "name_ja": "力の紐"
   },
   {
     "type": "hats",
@@ -5575,7 +5849,8 @@
     "dex": "",
     "spell_resist": "",
     "icon": "Speed of Thought.png",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X10,【设计图:月光石装备】X1",
+    "name_ja": "思考の速度"
   },
   {
     "type": "hats",
@@ -5599,14 +5874,15 @@
     "spell_resist": "",
     "icon": "Realm of Void.png",
     "rarity": "英雄",
-    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20"
+    "desc": "鲁纳夫NPC亚德里安:,【加工过的月光石】X100,【设计图:月光石装备】X20,【破碎的臼齿】X2,【五色皮革】X20",
+    "name_ja": "無の領域"
   },
   {
     "type": "gloves",
     "job": "warrior,ranger,magician,breaker",
     "name": "Adventurer Gloves",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "冒险家手套",
     "name_kr": "",
     "level": "2",
     "armor": "1",
@@ -5622,14 +5898,15 @@
     "int": "",
     "dex": "",
     "icon": "Adventurer Gloves.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の手袋"
   },
   {
     "type": "gloves",
     "job": "warrior,ranger",
     "name": "Old Leather Gloves",
     "hide": true,
-    "name_cn": " ",
+    "name_cn": "老旧皮革手套",
     "name_kr": "",
     "level": "4",
     "armor": "1",
@@ -5645,13 +5922,14 @@
     "int": "",
     "dex": "",
     "icon": "Old Leather Gloves.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古い革の手袋"
   },
   {
     "type": "gloves",
     "job": "warrior,ranger,magician,breaker",
     "name": "Old Woolen Gloves",
-    "name_cn": "老旧皮革手套",
+    "name_cn": "老旧毛手套",
     "name_kr": "",
     "level": "5",
     "armor": "1",
@@ -5667,7 +5945,8 @@
     "int": "",
     "dex": "",
     "icon": "Old Woolen Gloves.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古い毛皮の手袋"
   },
   {
     "type": "gloves",
@@ -5689,7 +5968,8 @@
     "int": "",
     "dex": "",
     "icon": "Leather Gloves.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "革の手袋"
   },
   {
     "type": "gloves",
@@ -5711,7 +5991,8 @@
     "int": "",
     "dex": "",
     "icon": "Mitten.png",
-    "desc": "怪物掉落↓可点击↓:,@红螃蟹"
+    "desc": "怪物掉落↓可点击↓:,@红螃蟹",
+    "name_ja": "ミトン"
   },
   {
     "type": "gloves",
@@ -5734,7 +6015,8 @@
     "dex": "",
     "hit": "0~12",
     "icon": "Sturdy Leather Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@实验用乌波"
+    "desc": "怪物掉落↓可点击↓:,@实验用乌波",
+    "name_ja": "強化した革の手袋"
   },
   {
     "type": "gloves",
@@ -5757,7 +6039,8 @@
     "dex": "",
     "hit": "0~12",
     "icon": "Sturdy Leather Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@实验用乌波"
+    "desc": "怪物掉落↓可点击↓:,@实验用乌波",
+    "name_ja": "強化した革の手袋"
   },
   {
     "type": "gloves",
@@ -5779,7 +6062,8 @@
     "int": "",
     "dex": "",
     "icon": "Pirate Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@扫帚"
+    "desc": "怪物掉落↓可点击↓:,@扫帚",
+    "name_ja": "海賊の手袋"
   },
   {
     "type": "gloves",
@@ -5802,7 +6086,8 @@
     "dex": "",
     "rarity": "英雄",
     "icon": "Power Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@睡醒的库伊"
+    "desc": "怪物掉落↓可点击↓:,@睡醒的库伊",
+    "name_ja": "パワーグローブ"
   },
   {
     "type": "gloves",
@@ -5824,7 +6109,8 @@
     "int": "",
     "dex": "2~5",
     "icon": "Snake Leather Gloves.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ヘビ皮の手袋"
   },
   {
     "type": "gloves",
@@ -5847,7 +6133,8 @@
     "dex": "",
     "hit": "0~4",
     "icon": "Imp Warrior's Gauntlet.png",
-    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@嗜血蝙蝠"
+    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@嗜血蝙蝠",
+    "name_ja": "インプ戦士のガントレット"
   },
   {
     "type": "gloves",
@@ -5869,7 +6156,8 @@
     "int": "1~3",
     "dex": "",
     "icon": "The Dead's Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@惊喜宝箱"
+    "desc": "怪物掉落↓可点击↓:,@血光执念灵,@惊喜宝箱",
+    "name_ja": "亡者の手袋"
   },
   {
     "type": "gloves",
@@ -5891,7 +6179,8 @@
     "hit": "0~2",
     "dex": "",
     "icon": "Elemental Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@嗜血花"
+    "desc": "怪物掉落↓可点击↓:,@嗜血花",
+    "name_ja": "元素の手袋"
   },
   {
     "type": "gloves",
@@ -5913,7 +6202,8 @@
     "int": "0~4",
     "dex": "",
     "icon": "Seruang's Heart.png",
-    "desc": "怪物掉落↓可点击↓:,@瓦当卡老人"
+    "desc": "怪物掉落↓可点击↓:,@瓦当卡老人",
+    "name_ja": "セルアンの気持ち"
   },
   {
     "type": "gloves",
@@ -5936,7 +6226,8 @@
     "dex": "",
     "hit": "0~4",
     "icon": "Scale Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@暴怒的风精灵,@巨无霸凝视者"
+    "desc": "怪物掉落↓可点击↓:,@暴怒的风精灵,@巨无霸凝视者",
+    "name_ja": "スケール手袋"
   },
   {
     "type": "gloves",
@@ -5958,7 +6249,8 @@
     "int": "",
     "hit": "0~2",
     "icon": "Cloud Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@仙人掌蜂,@沙漠刺猬"
+    "desc": "怪物掉落↓可点击↓:,@仙人掌蜂,@沙漠刺猬",
+    "name_ja": "雲の手袋"
   },
   {
     "type": "gloves",
@@ -5981,7 +6273,8 @@
     "dex": "",
     "hit": "1~5",
     "icon": "Oatwill's Leather Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@精英小恶魔,@恶灵"
+    "desc": "怪物掉落↓可点击↓:,@精英小恶魔,@恶灵",
+    "name_ja": "オートウィルの革手袋"
   },
   {
     "type": "gloves",
@@ -6004,7 +6297,8 @@
     "dex": "",
     "hit": "0~5",
     "icon": "Heavy Iron Gauntlet.png",
-    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@石魔像,@僵尸"
+    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@石魔像,@僵尸",
+    "name_ja": "銑鉄の手袋"
   },
   {
     "type": "gloves",
@@ -6026,7 +6320,8 @@
     "int": "",
     "hit": "0~4",
     "icon": "Lightning Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@球怪"
+    "desc": "怪物掉落↓可点击↓:,@球怪",
+    "name_ja": "稲妻の手袋"
   },
   {
     "type": "gloves",
@@ -6048,7 +6343,8 @@
     "int": "",
     "dex": "2~6",
     "icon": "Desert Mercenary Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@祭坛清洁队,@液态怪"
+    "desc": "怪物掉落↓可点击↓:,@沙子圆圆,@沙漠凝视者,@祭坛清洁队,@液态怪",
+    "name_ja": "砂漠の傭兵の手袋"
   },
   {
     "type": "gloves",
@@ -6070,7 +6366,8 @@
     "int": "1~5",
     "dex": "",
     "icon": "Monk's Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@小青蛙,@剧毒石菇,@沉默灵魂"
+    "desc": "怪物掉落↓可点击↓:,@小青蛙,@剧毒石菇,@沉默灵魂",
+    "name_ja": "修道士の手袋"
   },
   {
     "type": "gloves",
@@ -6093,7 +6390,8 @@
     "dex": "",
     "hit": "0~5",
     "icon": "Iron Golem's Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@石像,@钢铁魔像,@暗黑朱诺"
+    "desc": "怪物掉落↓可点击↓:,@石像,@钢铁魔像,@暗黑朱诺",
+    "name_ja": "アイアンゴーレムの手袋"
   },
   {
     "type": "gloves",
@@ -6115,7 +6413,8 @@
     "int": "",
     "dex": "2~6",
     "icon": "Scout Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@滴水嘴兽,@机器人,@暗黑朱诺"
+    "desc": "怪物掉落↓可点击↓:,@滴水嘴兽,@机器人,@暗黑朱诺",
+    "name_ja": "スカウトの手袋"
   },
   {
     "type": "gloves",
@@ -6137,7 +6436,8 @@
     "int": "2~6",
     "dex": "",
     "icon": "Sage's Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@魔像,@法杖机器人,@暗黑朱诺"
+    "desc": "怪物掉落↓可点击↓:,@魔像,@法杖机器人,@暗黑朱诺",
+    "name_ja": "賢者の手袋"
   },
   {
     "type": "gloves",
@@ -6159,7 +6459,8 @@
     "int": "",
     "hit": "0 or 2~4",
     "icon": "Bitter Cold Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@暗黑滴水嘴兽"
+    "desc": "怪物掉落↓可点击↓:,@暗黑滴水嘴兽",
+    "name_ja": "酷寒の手袋"
   },
   {
     "type": "gloves",
@@ -6181,7 +6482,8 @@
     "int": "",
     "dex": "2~6",
     "icon": "Gloves of Darkness.png",
-    "desc": "【组合书3】制作:,【黑暗碎片】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【黑暗碎片】X40,【第5精髓】X20",
+    "name_ja": "闇の手袋"
   },
   {
     "type": "gloves",
@@ -6203,7 +6505,8 @@
     "int": "2~6",
     "dex": "",
     "icon": "Gloves of Tranquility.png",
-    "desc": "【组合书3】制作:,【灵魂石】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【灵魂石】X40,【第5精髓】X20",
+    "name_ja": "静寂の手袋"
   },
   {
     "type": "gloves",
@@ -6226,7 +6529,8 @@
     "dex": "",
     "hit": "0~7",
     "icon": "Titanium Gauntlet.png",
-    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第5精髓】X20",
+    "name_ja": "チタンガントレット"
   },
   {
     "type": "gloves",
@@ -6248,7 +6552,8 @@
     "int": "",
     "hit": "0 or 3~5",
     "icon": "Thule's Gloves.png",
-    "desc": "【组合书3】制作:,【石冠实验药瓶】X40,【第5精髓】X20"
+    "desc": "【组合书3】制作:,【石冠实验药瓶】X40,【第5精髓】X20",
+    "name_ja": "トゥーレの手袋"
   },
   {
     "type": "gloves",
@@ -6270,7 +6575,8 @@
     "int": "3~7",
     "dex": "",
     "icon": "Gloves of Purification.png",
-    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套",
+    "name_ja": "浄化の手袋"
   },
   {
     "type": "gloves",
@@ -6292,7 +6598,8 @@
     "int": "",
     "dex": "3~7",
     "icon": "Gloves of the Forest Elf.png",
-    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套",
+    "name_ja": "森妖精の手袋"
   },
   {
     "type": "gloves",
@@ -6315,7 +6622,8 @@
     "dex": "",
     "hit": "0~8",
     "icon": "Gauntlets of Victory.png",
-    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套",
+    "name_ja": "勝利のガントレット"
   },
   {
     "type": "gloves",
@@ -6337,7 +6645,8 @@
     "int": "",
     "hit": "0 or 3~5",
     "icon": "Sea Gloves.png",
-    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套"
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子随机开启4职业手套",
+    "name_ja": "海の手袋"
   },
   {
     "type": "gloves",
@@ -6361,7 +6670,8 @@
     "hit": "3~7",
     "icon": "Protector's Hand Skin.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10",
+    "name_ja": "守護兵の手"
   },
   {
     "type": "gloves",
@@ -6385,7 +6695,8 @@
     "hit": "0 or 2~4",
     "icon": "Chainstrike Gloves.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10"
+    "desc": "怪物掉落↓可点击↓:,@艾伊尤的护卫兵,NPC契约者 佩瑞:,【纯净的魔力球】X2,【阿克泰萌的角】X10",
+    "name_ja": "連続攻撃の手袋"
   },
   {
     "type": "gloves",
@@ -6456,13 +6767,14 @@
     "dmg": "20%",
     "icon": "Joma's Hands.png",
     "rarity": "传说",
-    "desc": "怪物掉落↓可点击↓:,@克里高,NPC利毕亚:,【克里高的手】X20,【魔核】X20,【设计图:月光石装备】X20,【第7精髓】X40"
+    "desc": "怪物掉落↓可点击↓:,@克里高,NPC利毕亚:,【克里高的手】X20,【魔核】X20,【设计图:月光石装备】X20,【第7精髓】X40",
+    "name_ja": "ジョマの掌"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Wingwing Boots",
-    "name_cn": "飞天鞋",
+    "name_cn": "飞天靴",
     "name_kr": "",
     "level": "1",
     "armor": "4",
@@ -6480,7 +6792,8 @@
     "move": "2%~18%",
     "icon": "Wingwing Boots.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@戴弗龙,箱子开启:,地下城宝物25"
+    "desc": "怪物掉落↓可点击↓:,@戴弗龙,箱子开启:,地下城宝物25",
+    "name_ja": "ウィングブーツ"
   },
   {
     "type": "shoes",
@@ -6503,13 +6816,14 @@
     "dex": "",
     "move": "",
     "icon": "Adventurer Shoes.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の靴"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Old Leather Shoes",
-    "name_cn": "老旧皮革长鞋",
+    "name_cn": "老旧皮革长靴",
     "name_kr": "",
     "level": "4",
     "armor": "1",
@@ -6526,7 +6840,8 @@
     "dex": "",
     "move": "",
     "icon": "Old Leather Shoes.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古い革の長靴"
   },
   {
     "type": "shoes",
@@ -6549,13 +6864,14 @@
     "dex": "",
     "move": "",
     "icon": "Old Woolen Shoes.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古い毛皮の靴"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger",
     "name": "Leather Shoes",
-    "name_cn": "皮革长鞋",
+    "name_cn": "皮革长靴",
     "name_kr": "",
     "level": "5",
     "armor": "2",
@@ -6572,13 +6888,14 @@
     "dex": "",
     "move": "",
     "icon": "Leather Shoes.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "革の長靴"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Boots of Speed",
-    "name_cn": "迅速长鞋",
+    "name_cn": "迅速长靴",
     "name_kr": "",
     "level": "5",
     "armor": "2",
@@ -6595,13 +6912,14 @@
     "dex": "",
     "move": "3%or5%",
     "icon": "Boots of Speed.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "迅速の長靴"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Savage Boots",
-    "name_cn": "野蛮鞋",
+    "name_cn": "野蛮靴",
     "name_kr": "",
     "level": "10",
     "armor": "2",
@@ -6618,7 +6936,8 @@
     "dex": "",
     "move": "6%",
     "icon": "Savage Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@乌鸦,@狐狸"
+    "desc": "怪物掉落↓可点击↓:,@乌鸦,@狐狸",
+    "name_ja": "野蛮ブーツ"
   },
   {
     "type": "shoes",
@@ -6641,13 +6960,14 @@
     "dex": "",
     "move": "7%~9%",
     "icon": "Shoes (ShukShuk).png",
-    "desc": "NPC咻咻:,【乌龟王冠】X1"
+    "desc": "NPC咻咻:,【乌龟王冠】X1",
+    "name_ja": "靴[シュッシュ]"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger,magician,breaker",
     "name": "Charmed Shoes",
-    "name_cn": "咒术鞋",
+    "name_cn": "咒术靴",
     "name_kr": "",
     "level": "21",
     "armor": "3",
@@ -6664,13 +6984,14 @@
     "dex": "",
     "move": "",
     "icon": "Charmed Shoes.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "術にかかった靴"
   },
   {
     "type": "shoes",
     "job": "warrior,ranger",
     "name": "Snake Leather Boots",
-    "name_cn": "蛇皮鞋",
+    "name_cn": "蛇皮靴",
     "name_kr": "",
     "level": "23",
     "armor": "4",
@@ -6687,13 +7008,14 @@
     "dex": "1~2",
     "move": "",
     "icon": "Snake Leather Boots.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "ヘビ皮のブーツ"
   },
   {
     "type": "shoes",
     "job": "warrior",
     "name": "Greaves of the Grey Boulder",
-    "name_cn": "白岩长鞋",
+    "name_cn": "白岩长靴",
     "name_kr": "",
     "level": "24",
     "armor": "6",
@@ -6711,13 +7033,14 @@
     "set3": "3力量 5%速",
     "icon": "Greaves of the Grey Boulder.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2",
+    "name_ja": "グレー岩の長靴"
   },
   {
     "type": "shoes",
     "job": "warrior",
     "name": "Scale Boots",
-    "name_cn": "鳞片鞋",
+    "name_cn": "鳞片靴",
     "name_kr": "",
     "level": "26",
     "armor": "5",
@@ -6734,7 +7057,8 @@
     "dex": "",
     "move": "",
     "icon": "Scale Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@木乃伊,@剧毒木乃伊"
+    "desc": "怪物掉落↓可点击↓:,@木乃伊,@剧毒木乃伊",
+    "name_ja": "スケールブーツ"
   },
   {
     "type": "shoes",
@@ -6757,7 +7081,8 @@
     "dex": "",
     "move": "",
     "icon": "Kataru Shoes.png",
-    "desc": "怪物掉落↓可点击↓:,@不死鸟,NPC提诺:,【凤凰之眼】X1"
+    "desc": "怪物掉落↓可点击↓:,@不死鸟,NPC提诺:,【凤凰之眼】X1",
+    "name_ja": "カタルシューズ"
   },
   {
     "type": "shoes",
@@ -6780,13 +7105,14 @@
     "dex": "",
     "move": "",
     "icon": "Desert Mercenary Boots.png",
-    "desc": "NPC凯伊洛:,【蜜蜂毒刺】X5"
+    "desc": "NPC凯伊洛:,【蜜蜂毒刺】X5",
+    "name_ja": "砂漠の傭兵の靴"
   },
   {
     "type": "shoes",
     "job": "warrior",
     "name": "Heavy Iron Boots",
-    "name_cn": "钢铁鞋",
+    "name_cn": "钢铁靴",
     "name_kr": "",
     "level": "29",
     "armor": "6",
@@ -6803,7 +7129,8 @@
     "dex": "",
     "move": "",
     "icon": "Heavy Iron Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼蛇,@熔岩扒手头目,@突变九头蛇"
+    "desc": "怪物掉落↓可点击↓:,@鬼蛇,@熔岩扒手头目,@突变九头蛇",
+    "name_ja": "銑鉄のブーツ"
   },
   {
     "type": "shoes",
@@ -6826,13 +7153,14 @@
     "dex": "",
     "move": "2~10%",
     "icon": "Sharkun Greaves.png",
-    "desc": "怪物掉落↓可点击↓:,@夏库,@突变的夏库,@祭坛守护者"
+    "desc": "怪物掉落↓可点击↓:,@夏库,@突变的夏库,@祭坛守护者",
+    "name_ja": "シャークングリーブ"
   },
   {
     "type": "shoes",
     "job": "warrior",
     "name": "Titanium Boots",
-    "name_cn": "钛合金鞋",
+    "name_cn": "钛合金靴",
     "name_kr": "",
     "level": "38",
     "armor": "7",
@@ -6849,7 +7177,8 @@
     "dex": "",
     "move": "",
     "icon": "Titanium Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@钛合金魔像,@灰天"
+    "desc": "怪物掉落↓可点击↓:,@钛合金魔像,@灰天",
+    "name_ja": "チタンブーツ"
   },
   {
     "type": "shoes",
@@ -6872,13 +7201,14 @@
     "dex": "0~5",
     "move": "",
     "icon": "Boots of Darkness.png",
-    "desc": "怪物掉落↓可点击↓:,@暗黑恐惧,@灰天"
+    "desc": "怪物掉落↓可点击↓:,@暗黑恐惧,@灰天",
+    "name_ja": "闇の靴"
   },
   {
     "type": "shoes",
     "job": "warrior",
     "name": "Berserker Boots",
-    "name_cn": "狂战士鞋",
+    "name_cn": "狂战士靴",
     "name_kr": "",
     "level": "44",
     "armor": "8",
@@ -6896,7 +7226,8 @@
     "move": "0 or 6%~14%",
     "icon": "Berserker Boots.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子",
+    "name_ja": "光戦士のブーツ"
   },
   {
     "type": "shoes",
@@ -6919,13 +7250,14 @@
     "dex": "",
     "move": "0 or 4~12%",
     "icon": "Forbidden Library Tracks.png",
-    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20",
+    "name_ja": "禁書庫の足跡"
   },
   {
     "type": "shoes",
     "job": "ranger",
     "name": "Boots of the Blue Forest",
-    "name_cn": "丛林长鞋",
+    "name_cn": "丛林长靴",
     "name_kr": "",
     "level": "24",
     "armor": "5",
@@ -6944,13 +7276,14 @@
     "set3": "3敏捷 5%速",
     "icon": "Boots of the Blue Forest.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2",
+    "name_ja": "青い森の長靴"
   },
   {
     "type": "shoes",
     "job": "ranger",
     "name": "Toxic Boots",
-    "name_cn": "剧毒长鞋",
+    "name_cn": "剧毒长靴",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -6967,13 +7300,14 @@
     "dex": "0~4",
     "move": "2~10%",
     "icon": "Toxic Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯,@祭坛守护者"
+    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯,@祭坛守护者",
+    "name_ja": "猛毒のブーツ"
   },
   {
     "type": "shoes",
     "job": "ranger",
     "name": "Snowfield Tracer Boots",
-    "name_cn": "雪原追踪者长鞋",
+    "name_cn": "雪原追踪者长靴",
     "name_kr": "",
     "level": "44",
     "armor": "7",
@@ -6991,7 +7325,8 @@
     "move": "0 or 6~14%",
     "icon": "Snowfield Tracer Boots.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子",
+    "name_ja": "雪原追跡者のブーツ"
   },
   {
     "type": "shoes",
@@ -7014,13 +7349,14 @@
     "dex": "0~5",
     "move": "0 or 4~12%",
     "icon": "Elven Overshoes.png",
-    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20",
+    "name_ja": "エルフの布靴"
   },
   {
     "type": "shoes",
     "job": "magician",
     "name": "Boots of the Blue Waterfall",
-    "name_cn": "靛蓝瀑布长鞋",
+    "name_cn": "靛蓝瀑布长靴",
     "name_kr": "",
     "level": "24",
     "armor": "4",
@@ -7038,13 +7374,14 @@
     "set3": "3智力 5%速",
     "icon": "Boots of the Blue Waterfall.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2",
+    "name_ja": "青い滝の長靴"
   },
   {
     "type": "shoes",
     "job": "magician",
     "name": "Monk's Boots",
-    "name_cn": "修道士长鞋",
+    "name_cn": "修道士长靴",
     "name_kr": "",
     "level": "29",
     "armor": "4",
@@ -7061,13 +7398,14 @@
     "dex": "",
     "move": "",
     "icon": "Monk's Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@风暴,@魔法小恶魔"
+    "desc": "怪物掉落↓可点击↓:,@风暴,@魔法小恶魔",
+    "name_ja": "修道僧のブーツ"
   },
   {
     "type": "shoes",
     "job": "magician",
     "name": "Snowy Field's Cursed Boots",
-    "name_cn": "雪原诅咒长鞋",
+    "name_cn": "雪原诅咒长靴",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -7084,7 +7422,8 @@
     "dex": "",
     "move": "2~10%",
     "icon": "Snowy Field's Cursed Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@雪球,@雪宝,@祭坛守护者"
+    "desc": "怪物掉落↓可点击↓:,@雪球,@雪宝,@祭坛守护者",
+    "name_ja": "雪原の呪いのブーツ"
   },
   {
     "type": "shoes",
@@ -7107,7 +7446,8 @@
     "dex": "",
     "move": "",
     "icon": "Shoes of Tranquility.png",
-    "desc": "怪物掉落↓可点击↓:,@怪鸟,@灰天"
+    "desc": "怪物掉落↓可点击↓:,@怪鸟,@灰天",
+    "name_ja": "静寂の靴"
   },
   {
     "type": "shoes",
@@ -7131,13 +7471,14 @@
     "move": "0 or 6%~14%",
     "icon": "Light Engraving Shoes.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子",
+    "name_ja": "光刻みの靴"
   },
   {
     "type": "shoes",
     "job": "magician",
     "name": "Determined Memory Boots",
-    "name_cn": "坚韧的记忆短鞋",
+    "name_cn": "坚韧的记忆短靴",
     "name_kr": "",
     "level": "46",
     "armor": "7",
@@ -7154,13 +7495,14 @@
     "dex": "",
     "move": "0 or 4~12%",
     "icon": "Determined Memory Boots.png",
-    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20",
+    "name_ja": "しぶとい記憶の短靴"
   },
   {
     "type": "shoes",
     "job": "breaker",
     "name": "Yellow Canola Boots",
-    "name_cn": "油菜花长鞋",
+    "name_cn": "油菜花长靴",
     "name_kr": "",
     "level": "24",
     "armor": "5",
@@ -7178,13 +7520,14 @@
     "set3": "3力量 5%速",
     "icon": "Yellow Canola Boots.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2"
+    "desc": "【组合书2】制作:,【被污染物资】X100,【灵魂粉末】X5,【森林守护者印章】X1,【第6精髓】X2",
+    "name_ja": "アブラナのブーツ"
   },
   {
     "type": "shoes",
     "job": "breaker",
     "name": "Cloud Boots",
-    "name_cn": "云之长鞋",
+    "name_cn": "云之长靴",
     "name_kr": "",
     "level": "29",
     "armor": "5",
@@ -7202,13 +7545,14 @@
     "class": "",
     "move": "",
     "icon": "Cloud Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@小蜘蛛,@不死鸟"
+    "desc": "怪物掉落↓可点击↓:,@小蜘蛛,@不死鸟",
+    "name_ja": "雲のブーツ"
   },
   {
     "type": "shoes",
     "job": "breaker",
     "name": "Bitter Cold Boots",
-    "name_cn": "严寒长鞋",
+    "name_cn": "严寒长靴",
     "name_kr": "",
     "level": "32",
     "armor": "5",
@@ -7226,13 +7570,14 @@
     "class": "",
     "move": "5~7%",
     "icon": "Bitter Cold Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯"
+    "desc": "怪物掉落↓可点击↓:,@乌勒,@乌勒布斯",
+    "name_ja": "酷寒のブーツ"
   },
   {
     "type": "shoes",
     "job": "breaker",
     "name": "Thule's Boots",
-    "name_cn": "图勒长鞋",
+    "name_cn": "图勒长靴",
     "name_kr": "",
     "level": "38",
     "armor": "6",
@@ -7250,13 +7595,14 @@
     "class": "",
     "move": "",
     "icon": "Thule's Boots.png",
-    "desc": "怪物掉落↓可点击↓:,@地雷"
+    "desc": "怪物掉落↓可点击↓:,@地雷",
+    "name_ja": "トゥーレのブーツ"
   },
   {
     "type": "shoes",
     "job": "breaker",
     "name": "Sea Boots",
-    "name_cn": "海洋长鞋",
+    "name_cn": "海洋长靴",
     "name_kr": "",
     "level": "44",
     "armor": "7",
@@ -7275,7 +7621,8 @@
     "move": "0 or 6~14%",
     "icon": "Sea Boots.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,箱子随机开启4职业鞋子",
+    "name_ja": "海のブーツ"
   },
   {
     "type": "shoes",
@@ -7298,7 +7645,8 @@
     "dex": "",
     "move": "0 or 6~10%",
     "icon": "Steps of Extremity.png",
-    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20"
+    "desc": "NPC研究院 艾迪亚:,【旧书签】X20,【撕裂的羊皮纸碎片】X20,【被污染的记忆】X20,【遗失的记忆】X20",
+    "name_ja": "極寒の歩み"
   },
   {
     "type": "shields",
@@ -7321,7 +7669,8 @@
     "dex": "",
     "block": "5",
     "icon": "Wooden Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇",
+    "name_ja": "ウッドシールド"
   },
   {
     "type": "shields",
@@ -7344,7 +7693,8 @@
     "dex": "",
     "block": "7",
     "icon": "Round Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@红螃蟹,@梦魔"
+    "desc": "怪物掉落↓可点击↓:,@红螃蟹,@梦魔",
+    "name_ja": "ラウンドシールド"
   },
   {
     "type": "shields",
@@ -7368,7 +7718,8 @@
     "block": "7",
     "icon": "Fungiskin Shield.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇",
+    "name_ja": "ファンキースキンシールド"
   },
   {
     "type": "shields",
@@ -7392,7 +7743,8 @@
     "block": "5",
     "icon": "Skull Shield.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@白色骷髅,@黑色骸骨"
+    "desc": "怪物掉落↓可点击↓:,@白色骷髅,@黑色骸骨",
+    "name_ja": "スカルシールド"
   },
   {
     "type": "shields",
@@ -7438,7 +7790,8 @@
     "dex": "",
     "block": "13",
     "icon": "Crystal Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@守护者雪怪,@高阶守卫"
+    "desc": "怪物掉落↓可点击↓:,@守护者雪怪,@高阶守卫",
+    "name_ja": "水晶シールド"
   },
   {
     "type": "shields",
@@ -7461,7 +7814,8 @@
     "dex": "",
     "block": "13",
     "icon": "Tower Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@鬼蛇,@熔岩扒手头目"
+    "desc": "怪物掉落↓可点击↓:,@鬼蛇,@熔岩扒手头目",
+    "name_ja": "タワーシールド"
   },
   {
     "type": "shields",
@@ -7484,7 +7838,8 @@
     "dex": "",
     "block": "15",
     "icon": "Iron Covered Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@布兹兹,@上古眼怪"
+    "desc": "怪物掉落↓可点击↓:,@布兹兹,@上古眼怪",
+    "name_ja": "鋼鉄シールド"
   },
   {
     "type": "shields",
@@ -7507,7 +7862,8 @@
     "dex": "",
     "block": "15",
     "icon": "Darksteel Shield.png",
-    "desc": "怪物掉落↓可点击↓:,@普斯斯兹斯,@沙沙沙"
+    "desc": "怪物掉落↓可点击↓:,@普斯斯兹斯,@沙沙沙",
+    "name_ja": "ダークスチールシールド"
   },
   {
     "type": "shields",
@@ -7531,7 +7887,8 @@
     "block": "15",
     "icon": "Spartan Shield.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@毕尔里欧德"
+    "desc": "怪物掉落↓可点击↓:,@毕尔里欧德",
+    "name_ja": "スパルタンシールド"
   },
   {
     "type": "belts",
@@ -7542,7 +7899,8 @@
     "level": "5",
     "armor": "1",
     "icon": "Leather Belt.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "革のベルト"
   },
   {
     "type": "belts",
@@ -7565,13 +7923,14 @@
     "dex": "",
     "block": "",
     "icon": "Fungiskin Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@毒蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@毒蘑菇",
+    "name_ja": "ファンキースキンベルト"
   },
   {
     "type": "belts",
     "job": "warrior,ranger,magician,breaker",
     "name": "Madgar's Belt",
-    "name_cn": "梅德格的腰带",
+    "name_cn": "梅德格的皮带",
     "name_kr": "",
     "level": "9",
     "armor": "2",
@@ -7588,7 +7947,8 @@
     "dex": "",
     "block": "",
     "icon": "Madgar's Belt.png",
-    "desc": "灯塔任务获取"
+    "desc": "灯塔任务获取",
+    "name_ja": "マドガーのベルト"
   },
   {
     "type": "belts",
@@ -7611,13 +7971,14 @@
     "dex": "",
     "block": "",
     "icon": "Heavy Leather Belt.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "強化革のベルト"
   },
   {
     "type": "belts",
     "job": "warrior,ranger,magician,breaker",
     "name": "Belt of Mana Regeneration",
-    "name_cn": "魔力再生腰带",
+    "name_cn": "魔力再生皮带",
     "name_kr": "",
     "level": "16",
     "armor": "2",
@@ -7635,7 +7996,8 @@
     "block": "",
     "icon": "Belt of Mana Regeneration.png",
     "rarity": "稀有",
-    "desc": "灯塔2楼NPC巴斯特尔:,【中级骨头设计图】携带一个,【骨头碎片】X10"
+    "desc": "灯塔2楼NPC巴斯特尔:,【中级骨头设计图】携带一个,【骨头碎片】X10",
+    "name_ja": "魔法再生ベルト"
   },
   {
     "type": "belts",
@@ -7659,12 +8021,13 @@
     "block": "",
     "icon": "Belt of Regeneration.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@哈哈"
+    "desc": "怪物掉落↓可点击↓:,@哈哈",
+    "name_ja": "再生のベルト"
   },
   {
     "type": "belts",
     "job": "warrior,ranger,magician,breaker",
-    "name": "Warrior's Belt",
+    "name": "Warrior’s Belt",
     "name_cn": "斗士的皮带",
     "name_kr": "",
     "level": "20",
@@ -7681,8 +8044,9 @@
     "int": "",
     "dex": "",
     "block": "",
-    "icon": "Warrior's Belt.png",
-    "desc": "【战场补给品】"
+    "icon": "Warrior’s Belt.png",
+    "desc": "【战场补给品】",
+    "name_ja": "闘士のベルト"
   },
   {
     "type": "belts",
@@ -7705,13 +8069,14 @@
     "dex": "",
     "block": "",
     "icon": "Belt of Belief.png",
-    "desc": "怪物掉落↓可点击↓:,@小妖精,@恶灵"
+    "desc": "怪物掉落↓可点击↓:,@小妖精,@恶灵",
+    "name_ja": "信念のベルト"
   },
   {
     "type": "belts",
     "job": "warrior,ranger,magician,breaker",
     "name": "Titanium Belt",
-    "name_cn": "钛合金腰带",
+    "name_cn": "钛合金皮带",
     "name_kr": "",
     "level": "36",
     "armor": "2",
@@ -7729,7 +8094,8 @@
     "block": "",
     "icon": "Titanium Belt.png",
     "rarity": "稀有",
-    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第4精髓】X40,【第6精髓】X10"
+    "desc": "【组合书3】制作:,【钛合金铸块】X40,【第4精髓】X40,【第6精髓】X10",
+    "name_ja": "チタンベルト"
   },
   {
     "type": "belts",
@@ -7750,13 +8116,14 @@
     "fire_resist": "",
     "set2": "体力5 命中2",
     "icon": "Belt of Rough Roots.png",
-    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
+    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次",
+    "name_ja": "荒れた根のベルト"
   },
   {
     "type": "belts",
     "job": "magician",
     "name": "Belt of Dry Magic",
-    "name_cn": "契约者的皮带",
+    "name_cn": "誓约者的皮带",
     "name_kr": "",
     "level": "40",
     "armor": "3",
@@ -7770,13 +8137,14 @@
     "hp_regen": "0~3",
     "set2": "体力5 智力2",
     "icon": "Belt of Dry Magic.png",
-    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
+    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次",
+    "name_ja": "乾いた魔力のベルト"
   },
   {
     "type": "belts",
     "job": "ranger",
     "name": "Pledger's Belt",
-    "name_cn": "契约者的皮带",
+    "name_cn": "誓约者的皮带",
     "name_kr": "",
     "level": "40",
     "armor": "3",
@@ -7790,7 +8158,8 @@
     "hp_regen": "0~3",
     "set2": "体力5 命中2",
     "icon": "Pledger's Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
+    "desc": "怪物掉落↓可点击↓:,@奥伯洛德,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次",
+    "name_ja": "誓約者のベルト"
   },
   {
     "type": "belts",
@@ -7810,7 +8179,8 @@
     "hp_regen": "0~3",
     "set2": "体力5 命中2",
     "icon": "Teal Fragment Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次"
+    "desc": "怪物掉落↓可点击↓:,@格鲁柯斯,NPC佩勒勒 抽奖:,【劣质的魔力水晶】X1 抽一次",
+    "name_ja": "青緑の欠片のベルト"
   },
   {
     "type": "belts",
@@ -7834,7 +8204,8 @@
     "block": "",
     "icon": "Otherworld Belt.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@克里高,【组合书3】制作:,【克里高的骨头】X30,【堕落的魔法石】X10,【完美黑暗】X3,箱子开启:,地下城宝物46/48/50"
+    "desc": "怪物掉落↓可点击↓:,@克里高,【组合书3】制作:,【克里高的骨头】X30,【堕落的魔法石】X10,【完美黑暗】X3,箱子开启:,地下城宝物46/48/50",
+    "name_ja": "異世界のベルト"
   },
   {
     "type": "cloaks",
@@ -7857,7 +8228,8 @@
     "dex": "",
     "block": "",
     "icon": "Cloak of Health.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "体力のマント"
   },
   {
     "type": "cloaks",
@@ -7880,7 +8252,8 @@
     "dex": "",
     "block": "",
     "icon": "Bulldozer Cloak.png",
-    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥"
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪少年,@凶猛猪大哥",
+    "name_ja": "ブルドーザーマント"
   },
   {
     "type": "cloaks",
@@ -7903,13 +8276,14 @@
     "dex": "",
     "block": "",
     "icon": "Adventurer Cloak.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者のマント"
   },
   {
     "type": "cloaks",
     "job": "warrior,ranger,magician,breaker",
     "name": "Cloak of Will",
-    "name_cn": "意志披风(1~5)",
+    "name_cn": "意志披风",
     "name_kr": "",
     "level": "8",
     "armor": "2",
@@ -7927,7 +8301,8 @@
     "block": "",
     "deadly": "0.2,0.4,0.6,0.8,1.0",
     "icon": "Cloak of Will.png",
-    "desc": "【组合书1】制作:,【宠物币】X2 一件"
+    "desc": "【组合书1】制作:,【宠物币】X2 一件",
+    "name_ja": "意志のマント"
   },
   {
     "type": "cloaks",
@@ -7950,12 +8325,13 @@
     "dex": "",
     "block": "",
     "icon": "Shaman Cloak.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "呪術師のマント"
   },
   {
     "type": "cloaks",
     "job": "warrior,ranger,magician,breaker",
-    "name": "Warrior's Cloak",
+    "name": "Warrior’s Cloak",
     "name_cn": "斗士的披风",
     "name_kr": "",
     "level": "20",
@@ -7972,13 +8348,14 @@
     "int": "",
     "dex": "",
     "block": "",
-    "icon": "Warrior's Cloak.png",
-    "desc": "【战场补给品】"
+    "icon": "Warrior’s Cloak.png",
+    "desc": "【战场补给品】",
+    "name_ja": "闘士のマント"
   },
   {
     "type": "cloaks",
     "job": "warrior,ranger,magician,breaker",
-    "name": "Cloak of Half Death",
+    "name": "Cloak of Half-Death",
     "name_cn": "濒死披风",
     "name_kr": "",
     "level": "20",
@@ -7996,9 +8373,10 @@
     "dex": "",
     "block": "",
     "deadly": "1.0",
-    "icon": "Cloak of Half Death.png",
+    "icon": "Cloak of Half-Death.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵,箱子开启:,地下城宝物20"
+    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵,箱子开启:,地下城宝物20",
+    "name_ja": "半死のマント"
   },
   {
     "type": "cloaks",
@@ -8023,7 +8401,8 @@
     "deadly": "1.0",
     "icon": "Cloak of Death.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵"
+    "desc": "怪物掉落↓可点击↓:,@嘻嘻,@呵呵",
+    "name_ja": "死のマント"
   },
   {
     "type": "cloaks",
@@ -8048,7 +8427,8 @@
     "deadly": "2.0",
     "icon": "Passionate Cloak.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子开启:,被污染的湿地宝箱"
+    "desc": "怪物掉落↓可点击↓:,@乌克波那,箱子开启:,被污染的湿地宝箱",
+    "name_ja": "熱狂のマント"
   },
   {
     "type": "necklaces",
@@ -8069,7 +8449,8 @@
     "dex": "",
     "icon": "Mother Nature.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@白发魔女,@魔女"
+    "desc": "怪物掉落↓可点击↓:,@白发魔女,@魔女",
+    "name_ja": "大自然"
   },
   {
     "type": "necklaces",
@@ -8090,7 +8471,8 @@
     "dex": "",
     "icon": "Sparkling Necklace.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@巨无霸毒蘑菇",
+    "name_ja": "予感のネックレス"
   },
   {
     "type": "necklaces",
@@ -8130,7 +8512,8 @@
     "fire_resist": "",
     "dex": "",
     "icon": "Adventurer Necklace.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者のネックレス"
   },
   {
     "type": "necklaces",
@@ -8150,7 +8533,8 @@
     "fire_resist": "0~5",
     "dex": "",
     "icon": "Coral Necklace.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴのネックレス"
   },
   {
     "type": "necklaces",
@@ -8171,7 +8555,8 @@
     "dex": "",
     "icon": "Dark Skull.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@黑色骸骨"
+    "desc": "怪物掉落↓可点击↓:,@黑色骸骨",
+    "name_ja": "ダークスカル"
   },
   {
     "type": "necklaces",
@@ -8191,7 +8576,8 @@
     "fire_resist": "",
     "dex": "",
     "icon": "Bone Necklace.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "骨のネックレス"
   },
   {
     "type": "necklaces",
@@ -8211,7 +8597,8 @@
     "fire_resist": "",
     "dex": "",
     "icon": "Raven Necklace.png",
-    "desc": ""
+    "desc": "",
+    "name_ja": "レイブンのネックレス"
   },
   {
     "type": "necklaces",
@@ -8231,13 +8618,14 @@
     "fire_resist": "",
     "dex": "",
     "icon": "Pirate Necklace.png",
-    "desc": "怪物掉落↓可点击↓:,@甲板长布朗卡"
+    "desc": "怪物掉落↓可点击↓:,@甲板长布朗卡",
+    "name_ja": "海賊のネックレス"
   },
   {
     "type": "necklaces",
     "job": "warrior,ranger,magician,breaker",
     "name": "Necklace of Will V",
-    "name_cn": "意志项链5",
+    "name_cn": "意志项链V",
     "name_kr": "",
     "level": "18",
     "armor": "1",
@@ -8252,7 +8640,8 @@
     "dex": "",
     "icon": "Necklace of Will V.png",
     "rarity": "稀有",
-    "desc": "【组合书1】制作:,【意志项链4】X2"
+    "desc": "【组合书1】制作:,【意志项链4】X2",
+    "name_ja": "意志のネックレス V"
   },
   {
     "type": "necklaces",
@@ -8273,7 +8662,8 @@
     "dex": "",
     "icon": "Golden Necklace.png",
     "rarity": "英雄",
-    "desc": "【组合书3】制作:,【名誉项链】X1/【古代币】X10,【第4精髓】X10/【第6精髓】X10,【第7精髓】X10"
+    "desc": "【组合书3】制作:,【名誉项链】X1/【古代币】X10,【第4精髓】X10/【第6精髓】X10,【第7精髓】X10",
+    "name_ja": "黄金のネックレス"
   },
   {
     "type": "necklaces",
@@ -8294,7 +8684,8 @@
     "str": "1~3",
     "icon": "Ouroboros.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20",
+    "name_ja": "ウロボロス"
   },
   {
     "type": "necklaces",
@@ -8315,7 +8706,8 @@
     "int": "1~3",
     "icon": "Rosario.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20",
+    "name_ja": "ロザリオ"
   },
   {
     "type": "necklaces",
@@ -8336,7 +8728,8 @@
     "dex": "1~3",
     "icon": "Intruder.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20",
+    "name_ja": "侵入者"
   },
   {
     "type": "necklaces",
@@ -8357,7 +8750,8 @@
     "str": "1~3",
     "icon": "Equinox.png",
     "rarity": "英雄",
-    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20"
+    "desc": "怪物掉落↓可点击↓:,@巴瑟拉夫,2个毁坏的项链制作,NPC白眉梅格洛斯:,【毁坏项链】X2/【星星粉末】X20,【古代魔法粉末】X20/【星星碎片】X20",
+    "name_ja": "イークウィノックス"
   },
   {
     "type": "rings",
@@ -8378,7 +8772,8 @@
     "int": "",
     "icon": "Canine Ring.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪少年"
+    "desc": "怪物掉落↓可点击↓:,@凶猛猪,@凶猛猪少年",
+    "name_ja": "奥歯の輪"
   },
   {
     "type": "rings",
@@ -8399,7 +8794,8 @@
     "int": "",
     "icon": "Ring of Ancient.png",
     "rarity": "稀有",
-    "desc": ""
+    "desc": "",
+    "name_ja": "古代の指輪"
   },
   {
     "type": "rings",
@@ -8420,13 +8816,14 @@
     "int": "",
     "icon": "Coral Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "",
+    "name_ja": "サンゴの指輪"
   },
   {
     "type": "rings",
     "job": "warrior,ranger,magician,breaker",
     "name": "Guardian's Ring",
-    "name_cn": "守护者戒指",
+    "name_cn": "守护者的戒指",
     "name_kr": "",
     "level": "10",
     "armor": "2",
@@ -8441,7 +8838,8 @@
     "int": "",
     "icon": "Guardian's Ring.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔,箱子开启:,地下城宝物30"
+    "desc": "怪物掉落↓可点击↓:,@守护者小恶魔,箱子开启:,地下城宝物30",
+    "name_ja": "ガーディアンの指輪"
   },
   {
     "type": "rings",
@@ -8462,7 +8860,8 @@
     "int": "",
     "icon": "Bone Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "",
+    "name_ja": "骨の指輪"
   },
   {
     "type": "rings",
@@ -8483,13 +8882,14 @@
     "dex": "2",
     "icon": "Ring of Soul.png",
     "rarity": "",
-    "desc": "灯塔任务获取"
+    "desc": "灯塔任务获取",
+    "name_ja": "魂のリング"
   },
   {
     "type": "rings",
     "job": "warrior,ranger,magician,breaker",
     "name": "Ring of Virgin",
-    "name_cn": "纯净戒指",
+    "name_cn": "纯洁戒指",
     "name_kr": "",
     "level": "12",
     "armor": "1",
@@ -8504,7 +8904,8 @@
     "int": "2",
     "icon": "Ring of Virgin.png",
     "rarity": "",
-    "desc": "灯塔任务获取"
+    "desc": "灯塔任务获取",
+    "name_ja": "女性のリング"
   },
   {
     "type": "rings",
@@ -8525,7 +8926,8 @@
     "int": "",
     "icon": "Adventurer Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "",
+    "name_ja": "冒険者の指輪"
   },
   {
     "type": "rings",
@@ -8546,7 +8948,8 @@
     "int": "",
     "icon": "Kamakee Ring.png",
     "rarity": "",
-    "desc": ""
+    "desc": "",
+    "name_ja": "カーの指輪"
   },
   {
     "type": "rings",
@@ -8567,7 +8970,8 @@
     "int": "",
     "icon": "Pirate Ring.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@海盗宝箱,@海盗幽灵,@海盗骸骨,@宝箱怪,@甲板长布朗卡"
+    "desc": "怪物掉落↓可点击↓:,@海盗宝箱,@海盗幽灵,@海盗骸骨,@宝箱怪,@甲板长布朗卡",
+    "name_ja": "海賊の指輪"
   },
   {
     "type": "rings",
@@ -8577,7 +8981,7 @@
     "name_kr": "",
     "level": "18",
     "armor": "1",
-    "hp": "0~10",
+    "hp": "0~13",
     "mana": "",
     "mana_regen": "",
     "cri": "0~2",
@@ -8588,7 +8992,8 @@
     "int": "",
     "icon": "Critical Ring of Will.png",
     "rarity": "",
-    "desc": "【宠物币】X5"
+    "desc": "【宠物币】X5",
+    "name_ja": "意志のクリティカルリング"
   },
   {
     "type": "rings",
@@ -8598,18 +9003,19 @@
     "name_kr": "",
     "level": "18",
     "armor": "1",
-    "hp": "20~31",
+    "hp": "19~35",
     "mana": "",
     "mana_regen": "",
     "cri": "",
-    "magic_resist": "0~6",
+    "magic_resist": "0~10",
     "ice_resist": "",
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
     "icon": "HP Ring of Will.png",
     "rarity": "",
-    "desc": "【宠物币】X5"
+    "desc": "【宠物币】X5",
+    "name_ja": "意志の体力リング"
   },
   {
     "type": "rings",
@@ -8619,7 +9025,7 @@
     "name_kr": "",
     "level": "18",
     "armor": "1",
-    "hp": "0~10",
+    "hp": "0~13",
     "mana": "",
     "mana_regen": "",
     "cri": "",
@@ -8630,7 +9036,8 @@
     "int": "0~4",
     "icon": "Magic Power Ring of Will.png",
     "rarity": "",
-    "desc": "【宠物币】X5"
+    "desc": "【宠物币】X5",
+    "name_ja": "意志の魔力リング"
   },
   {
     "type": "rings",
@@ -8651,7 +9058,8 @@
     "int": "0~5",
     "icon": "Ring of Promise.png",
     "rarity": "",
-    "desc": "【组合书2】制作:,【魔力卷轴】X2,【高级魔力药水】X60,【第3精髓】X40"
+    "desc": "【组合书2】制作:,【魔力卷轴】X2,【高级魔力药水】X60,【第3精髓】X40",
+    "name_ja": "約束の指輪"
   },
   {
     "type": "rings",
@@ -8672,7 +9080,8 @@
     "int": "",
     "icon": "Alloy Ring.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@艾普"
+    "desc": "怪物掉落↓可点击↓:,@艾普",
+    "name_ja": "合金指輪"
   },
   {
     "type": "rings",
@@ -8693,7 +9102,8 @@
     "deadly": "1.0",
     "icon": "Radiant Paradox of Omnipotence.png",
     "rarity": "英雄",
-    "desc": "公会副本4~5阶段"
+    "desc": "公会副本4~5阶段",
+    "name_ja": "輝く全能の逆説"
   },
   {
     "type": "rings",
@@ -8714,7 +9124,8 @@
     "int": "0~8",
     "icon": "Endless Arrogance of Omniscience.png",
     "rarity": "英雄",
-    "desc": "公会副本4~5阶段"
+    "desc": "公会副本4~5阶段",
+    "name_ja": "終わりなき全知の傲慢"
   },
   {
     "type": "rings",
@@ -8735,7 +9146,8 @@
     "int": "",
     "icon": "Eternal Paradox of Immortality.png",
     "rarity": "英雄",
-    "desc": "公会副本4~5阶段"
+    "desc": "公会副本4~5阶段",
+    "name_ja": "永遠の不死身の矛盾"
   },
   {
     "type": "rings",
@@ -8756,7 +9168,8 @@
     "int": "",
     "icon": "Archangel.png",
     "rarity": "稀有",
-    "desc": "【组合书2】制作:,【魔力符文】X20,【第4精髓】X40,【第6精髓】X10"
+    "desc": "【组合书2】制作:,【魔力符文】X20,【第4精髓】X40,【第6精髓】X10",
+    "name_ja": "大天使"
   },
   {
     "type": "rings",
@@ -8777,7 +9190,8 @@
     "int": "",
     "icon": "Purified Ring of Strength.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50",
+    "name_ja": "浄化された力のリング"
   },
   {
     "type": "rings",
@@ -8798,12 +9212,13 @@
     "int": "4~6",
     "icon": "Ring of Life Revival.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50",
+    "name_ja": "命蘇生のリング"
   },
   {
     "type": "rings",
     "job": "breaker",
-    "name": "Pioneer's Ring",
+    "name": "Pioneer’s Ring",
     "name_cn": "开拓命运之戒",
     "name_kr": "",
     "level": "40",
@@ -8817,15 +9232,16 @@
     "hp_regen": "",
     "fire_resist": "",
     "int": "",
-    "icon": "Pioneer's Ring.png",
+    "icon": "Pioneer’s Ring.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50"
+    "desc": "怪物掉落↓可点击↓:,@魔女迪尔林,@悲黑,NPC塞托斯:,【褪色戒指】X2,【迷宫币】X100,【特殊魔法布料】X50",
+    "name_ja": "運命開拓の指輪"
   },
   {
     "type": "rings",
     "job": "warrior,ranger",
-    "name": "Paradox of Omnipotence(SB)",
-    "name_cn": "全能悖论(无法交易)",
+    "name": "Paradox of Omnipotence",
+    "name_cn": "全能悖论",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8840,13 +9256,14 @@
     "int": "",
     "icon": "Paradox of Omnipotence.png",
     "rarity": "稀有",
-    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20",
+    "name_ja": "全能の逆説"
   },
   {
     "type": "rings",
     "job": "magician",
-    "name": "Arrogance of Omniscience(SB)",
-    "name_cn": "万能傲慢(无法交易)",
+    "name": "Arrogance of Omniscience",
+    "name_cn": "万能傲慢",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8861,13 +9278,14 @@
     "int": "0~7",
     "icon": "Arrogance of Omniscience.png",
     "rarity": "稀有",
-    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20",
+    "name_ja": "全知の傲慢"
   },
   {
     "type": "rings",
     "job": "breaker",
-    "name": "Paradox of Immortality(SB)",
-    "name_cn": "不死矛盾(无法交易)",
+    "name": "Paradox of Immortality",
+    "name_cn": "不死矛盾",
     "name_kr": "",
     "level": "44",
     "armor": "3",
@@ -8882,7 +9300,8 @@
     "int": "",
     "icon": "Paradox of Immortality.png",
     "rarity": "稀有",
-    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20"
+    "desc": "公会副本2~5阶段:,【普罗埃塔碎片】X20",
+    "name_ja": "不死身の矛盾"
   },
   {
     "type": "charms",
@@ -8901,7 +9320,8 @@
     "int": "1",
     "icon": "Wooden Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@花精灵"
+    "desc": "怪物掉落↓可点击↓:,@花精灵",
+    "name_ja": "木の御守"
   },
   {
     "type": "charms",
@@ -8920,12 +9340,13 @@
     "int": "2",
     "icon": "Coral Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@梦魔"
+    "desc": "怪物掉落↓可点击↓:,@梦魔",
+    "name_ja": "サンゴの御守"
   },
   {
     "type": "charms",
     "job": "breaker",
-    "name": "Woopa Roopa's Guard",
+    "name": "Woopa-Roopa’s Guard",
     "name_cn": "族长护身符",
     "name_kr": "",
     "level": "12",
@@ -8937,9 +9358,10 @@
     "magic_resist": "",
     "move": "?",
     "int": "?",
-    "icon": "Woopa Roopa's Guard.png",
+    "icon": "Woopa-Roopa’s Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@乌波鲁波族长"
+    "desc": "怪物掉落↓可点击↓:,@乌波鲁波族长",
+    "name_ja": "族長の御守"
   },
   {
     "type": "charms",
@@ -8958,7 +9380,8 @@
     "int": "2~4",
     "icon": "Purifying Guard.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@白魔鬼,@777尾狐"
+    "desc": "怪物掉落↓可点击↓:,@白魔鬼,@777尾狐",
+    "name_ja": "浄化の御守"
   },
   {
     "type": "charms",
@@ -8977,7 +9400,8 @@
     "int": "3~4",
     "icon": "Frost Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@风精灵,@阿打"
+    "desc": "怪物掉落↓可点击↓:,@风精灵,@阿打",
+    "name_ja": "霜の御守"
   },
   {
     "type": "charms",
@@ -8996,7 +9420,8 @@
     "int": "2~4",
     "icon": "Storm Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@龙卷风,@暗黑风暴"
+    "desc": "怪物掉落↓可点击↓:,@龙卷风,@暗黑风暴",
+    "name_ja": "嵐の御守"
   },
   {
     "type": "charms",
@@ -9015,7 +9440,8 @@
     "int": "3~5",
     "icon": "Red Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@山猪,@熔岩扒手班长"
+    "desc": "怪物掉落↓可点击↓:,@山猪,@熔岩扒手班长",
+    "name_ja": "赤い御守"
   },
   {
     "type": "charms",
@@ -9034,7 +9460,8 @@
     "int": "4~6",
     "icon": "Butterfly Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@亚勒凯"
+    "desc": "怪物掉落↓可点击↓:,@亚勒凯",
+    "name_ja": "蝶々の御守"
   },
   {
     "type": "charms",
@@ -9053,7 +9480,8 @@
     "int": "4~7",
     "icon": "Crown Rock Guard.png",
     "rarity": "",
-    "desc": "怪物掉落↓可点击↓:,@夏库图斯,@夏库鲁斯"
+    "desc": "怪物掉落↓可点击↓:,@夏库图斯,@夏库鲁斯",
+    "name_ja": "クラウンロックの御守"
   },
   {
     "type": "charms",
@@ -9072,7 +9500,8 @@
     "int": "5~6 or ?",
     "icon": "Relic of Infinity.png",
     "rarity": "稀有",
-    "desc": "怪物掉落↓可点击↓:,@阿克泰萌"
+    "desc": "怪物掉落↓可点击↓:,@阿克泰萌",
+    "name_ja": "武極の遺物"
   },
   {
     "type": "",
@@ -9109,7 +9538,8 @@
     "move": "",
     "ice_resist": "",
     "icon": "Leather Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇"
+    "desc": "怪物掉落↓可点击↓:,@湿地蘑菇",
+    "name_ja": "革の矢筒"
   },
   {
     "type": "quivers",
@@ -9126,7 +9556,8 @@
     "move": "",
     "ice_resist": "",
     "icon": "Coral Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@梦魔"
+    "desc": "怪物掉落↓可点击↓:,@梦魔",
+    "name_ja": "珊瑚の矢筒"
   },
   {
     "type": "quivers",
@@ -9143,7 +9574,8 @@
     "move": "",
     "ice_resist": "",
     "icon": "Thorn Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@布莱斯特,@彩霞枯花"
+    "desc": "怪物掉落↓可点击↓:,@布莱斯特,@彩霞枯花",
+    "name_ja": "棘の矢筒"
   },
   {
     "type": "quivers",
@@ -9160,7 +9592,8 @@
     "move": "??%",
     "ice_resist": "",
     "icon": "Venom Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@蛇尾查德"
+    "desc": "怪物掉落↓可点击↓:,@蛇尾查德",
+    "name_ja": "猛毒の矢筒"
   },
   {
     "type": "quivers",
@@ -9177,7 +9610,8 @@
     "move": "",
     "ice_resist": "",
     "icon": "Hunter's Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@巨无霸蜘蛛,@火鸟"
+    "desc": "怪物掉落↓可点击↓:,@巨无霸蜘蛛,@火鸟",
+    "name_ja": "狩人の矢筒"
   },
   {
     "type": "quivers",
@@ -9194,7 +9628,8 @@
     "move": "",
     "ice_resist": "",
     "icon": "Stinger Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@变异工蜂,@被感染的女王蜂"
+    "desc": "怪物掉落↓可点击↓:,@变异工蜂,@被感染的女王蜂",
+    "name_ja": "蜂の針の矢筒"
   },
   {
     "type": "quivers",
@@ -9211,7 +9646,8 @@
     "move": "??%",
     "ice_resist": "",
     "icon": "Scout's Belt.png",
-    "desc": "怪物掉落↓可点击↓:,@粗犷梦魇,@多利"
+    "desc": "怪物掉落↓可点击↓:,@粗犷梦魇,@多利",
+    "name_ja": "スカウトのベルト"
   },
   {
     "type": "quivers",
@@ -9228,7 +9664,8 @@
     "move": "??%",
     "ice_resist": "??",
     "icon": "Frostbound Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@雪宝,@盲从者"
+    "desc": "怪物掉落↓可点击↓:,@雪宝,@盲从者",
+    "name_ja": "霜がおりた矢筒"
   },
   {
     "type": "quivers",
@@ -9245,7 +9682,8 @@
     "move": "??%",
     "ice_resist": "",
     "icon": "Wanderer's Quiver.png",
-    "desc": "怪物掉落↓可点击↓:,@莫提,@监督官"
+    "desc": "怪物掉落↓可点击↓:,@莫提,@监督官",
+    "name_ja": "放浪者の矢筒"
   },
   {
     "type": "quivers",
@@ -9262,7 +9700,8 @@
     "move": "??%",
     "ice_resist": "",
     "icon": "Legacy of the Steel Wind.png",
-    "desc": "怪物掉落↓可点击↓:,@索尔里奇"
+    "desc": "怪物掉落↓可点击↓:,@索尔里奇",
+    "name_ja": "鋼鉄の風の遺産"
   },
   {
     "attack": "",
@@ -9292,7 +9731,8 @@
     "level": "52",
     "rarity": "高级",
     "icon": "Mana-Infused Armor.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "マナが宿った鎧"
   },
   {
     "attack": "",
@@ -9322,7 +9762,8 @@
     "level": "52",
     "rarity": "高级",
     "icon": "Mana-Infused Light Armor.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "マナが宿ったライトアーマー"
   },
   {
     "attack": "",
@@ -9352,7 +9793,8 @@
     "level": "52",
     "rarity": "高级",
     "icon": "Mana-Infused Robe.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "マナが宿ったローブ"
   },
   {
     "attack": "",
@@ -9377,12 +9819,13 @@
     "type": "armor",
     "job": "breaker",
     "name": "Mana-Infused Martial Arts Garb",
-    "name_cn": "蕴含魔力的武术服",
+    "name_cn": "蕴含魔力的道服",
     "name_kr": "",
     "level": "52",
     "rarity": "高级",
     "icon": "Mana-Infused Martial Arts Garb.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "マナが宿った道着"
   },
   {
     "attack": "",
@@ -9412,7 +9855,8 @@
     "level": "52",
     "rarity": "高级",
     "icon": "Mighty Mana Belt.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "強大なマナのベルト"
   },
   {
     "attack": "",
@@ -9442,7 +9886,8 @@
     "level": "52",
     "rarity": "高级",
     "icon": "Swift Mana Belt.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "迅速なマナのベルト"
   },
   {
     "attack": "",
@@ -9467,12 +9912,13 @@
     "type": "belts",
     "job": "magician",
     "name": "Condensed Mana Belt",
-    "name_cn": "浓缩魔力腰带",
+    "name_cn": "凝聚魔力腰带",
     "name_kr": "",
     "level": "52",
     "rarity": "高级",
     "icon": "Condensed Mana Belt.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "凝縮されたマナのベルト"
   },
   {
     "attack": "",
@@ -9497,12 +9943,13 @@
     "type": "belts",
     "job": "breaker",
     "name": "Surging Mana Belt",
-    "name_cn": "涌动魔力腰带",
+    "name_cn": "激荡魔力腰带",
     "name_kr": "",
     "level": "52",
     "rarity": "高级",
     "icon": "Surging Mana Belt.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,精炼魔力 x30,微弱的亡魂 x10,魔力果实 x10",
+    "name_ja": "激動するマナのベルト"
   },
   {
     "attack": "13~78",
@@ -9532,7 +9979,8 @@
     "level": "52",
     "rarity": "稀有",
     "icon": "Sharur.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,短弯刀 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：短弯刀＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,短弯刀 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：短弯刀＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换",
+    "name_ja": "シャルール"
   },
   {
     "attack": "8~64",
@@ -9562,7 +10010,8 @@
     "level": "52",
     "rarity": "稀有",
     "icon": "Imhullu.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,长战弓 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：长战弓＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,长战弓 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：长战弓＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换",
+    "name_ja": "イムフル"
   },
   {
     "attack": "6~78",
@@ -9592,7 +10041,8 @@
     "level": "52",
     "rarity": "稀有",
     "icon": "Shimati.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,长棍 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：长棍＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,长棍 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：长棍＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换",
+    "name_ja": "シーマティー"
   },
   {
     "attack": "7~70",
@@ -9622,6 +10072,7 @@
     "level": "52",
     "rarity": "稀有",
     "icon": "Kudurru.png",
-    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,虎拳套 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：虎拳套＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换"
+    "desc": "获取途径↓可点击↓:,#阿德拉 处兑换：,虎拳套 x1,精炼魔力 x1000,微弱的亡魂 x10,魔力果实 x10,鲜明的亡魂 x5,丰硕的魔力果实 x10,#出处：虎拳套＝NPC商店50级白板；精炼魔力＝污染魔力 x1 + 3000金兑换",
+    "name_ja": "クドゥル"
   }
 ]

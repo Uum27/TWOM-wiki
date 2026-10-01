@@ -114,7 +114,7 @@ body{background:#f0f2f5;padding:12px}
 
 .equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
 .equip-icon-col{ width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px }
-.equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px}
+.equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px;padding-left:4px}   /* 标签右移 4px */
 
 .hex-icon{ width:50px;height:50px;display:flex;align-items:center;justify-content:center; clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%); background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden; }
 .hex-icon::before{ content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%); }
@@ -130,7 +130,9 @@ body{background:#f0f2f5;padding:12px}
 .tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
 .item-level{ font-size:17px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:5px }
 @media(min-width:1024px){.item-level{font-size:19px}}
-.tag-job{ background:#D9E3EC;border-radius:6px;width:fit-content;padding:3px;display:flex;align-items:center;gap:1px;flex-wrap:wrap }
+/* 职业图标：尺寸与排布和时装图鉴一致（20px 图标 + 3px 间距），一行放得下 4 个职业 */
+.tag-job{ display:flex;flex-wrap:nowrap;align-items:center;gap:3px;min-height:20px;width:fit-content }
+.tag-job img{ width:20px;height:20px;object-fit:contain;display:block }
 .equip-stats{ background:#C6D4E4;padding:8px 4px;border-radius:8px;margin-top:4px }
 .stat-item{ font-size:15px;font-weight:bold;text-align:left;padding:2px 0 }
 @media(min-width:1024px){.stat-item{font-size:17px}}
@@ -139,16 +141,63 @@ body{background:#f0f2f5;padding:12px}
 @media(min-width:1024px){.btn-source{padding:10px;font-size:16px}}
 
 /* 卡片底部操作行 */
-.card-actions{ display:flex;gap:6px;margin-top:auto }
-.card-actions .btn-source{ flex:1;width:auto;margin:0;padding:7px 2px;font-size:14px }
-.btn-reset{ flex:1;padding:7px 2px;background:#4E9A8C;color:#F8EFF3;border:none;border-radius:10px;font-weight:bold;cursor:pointer;font-size:14px }
-@media(min-width:1024px){ .card-actions .btn-source,.btn-reset{padding:10px 6px;font-size:16px} }
+.card-actions{ display:flex;gap:6px;margin-top:auto;align-items:stretch }
+/* 一排按钮（获取途径 / 获得概率 / 文物概率 / 重置概率）：文字**单行不换行 + 垂直居中**，
+   这样同一排里各按钮的文字上下对齐（按钮高度不一致时也不会错位）。 */
+.card-actions .btn-source,
+.card-actions .btn-reset,
+.card-actions .btn-rate,
+.card-actions .btn-relic{
+  flex:1 1 0;width:auto;min-width:0;margin:0;
+  padding:7px 2px;font-size:14px;line-height:1.3;
+  white-space:nowrap;display:flex;align-items:center;justify-content:center;
+  border:none;border-radius:10px;font-weight:bold;cursor:pointer;color:#F8EFF3;
+}
+.btn-reset{ background:#ECBC5C }   /* 重置概率：调淡的暖黄 */
+.btn-rate{ background:#4E9A8C }    /* 获得概率：绿（不变） */
+.btn-relic{ background:#9DC48A }   /* 文物概率：淡蓝绿偏黄 */
+.card-actions .btn-reset{ color:#6B4E16 }   /* 淡黄底配深琥珀字，清晰不刺眼 */
+/* 各档位字号/内边距都按「最宽的语言（日文 14em）+ 该列数下卡片最窄时的可用宽度」反推，
+   保证一排三个按钮永远单行放得下（模型见 _smoke/harness_equipbtn.js）；
+   选择器必须写成 .card-actions .btn-*，否则盖不住上面那条共用规则。 */
+@media(min-width:481px) and (max-width:767px){ .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:8px 2px;font-size:13px} }
+@media(min-width:768px){ .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:10px 2px;font-size:14px} }
+@media(min-width:1120px){ .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:10px 2px;font-size:16px} }
+
+/* 手机端：卡片更窄，一排 3 个 4 字按钮要放得下 → 收窄页面/卡片内边距并逐档缩小字号（文字始终单行居中） */
+@media(max-width:480px){
+  body{ padding:8px }
+  .equip-grid{ gap:8px }
+  .equip-card{ padding:2px }
+  .card-actions{ gap:3px }
+}
+/* 字号档位按「最宽的语言（日文 14em / 韩文 13.8em）+ 0 内边距 + 3px 间距」推到刚好放得下：
+   见 _smoke/harness_equipbtn.js 的字宽模型（320~1024px 全区间 × 四语言 × 各种按钮组合） */
+@media(min-width:416px) and (max-width:480px){
+  .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:6px 0;font-size:13px}
+}
+@media(min-width:388px) and (max-width:415px){
+  .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:6px 0;font-size:12px}
+}
+@media(min-width:360px) and (max-width:387px){
+  .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:6px 0;font-size:11px}
+}
+@media(min-width:332px) and (max-width:359px){
+  .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:6px 0;font-size:10px}
+}
+@media(max-width:331px){
+  .card-actions .btn-source,.card-actions .btn-reset,.card-actions .btn-rate,.card-actions .btn-relic{padding:6px 0;font-size:9px}
+}
 
 /* 重置概率弹窗（自适应大小，最大 80% × 60%） */
 .modal-content.reset-modal{ width:fit-content;max-width:80%;height:auto;max-height:60%;display:flex;flex-direction:column;text-align:left }
 .modal-content.reset-modal .modal-title{ flex-shrink:0 }
 .modal-content.reset-modal .modal-close{ align-self:center;flex-shrink:0 }
 .reset-body{ flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:4px 0 12px;padding-right:4px }
+/* 重置消耗（标题下方一行）：起源石 ×N · 重置的古书 ×N，按 装备类型/要求等级/阶级 分档 */
+.reset-cost{ background:#f5f7fa;border-radius:10px;padding:6px 12px;margin:0 0 10px;
+  font-size:14px;color:#3D4E68;text-align:center;line-height:1.6 }
+.reset-cost b{ color:#22334a }
 .reset-stats{ display:flex;flex-wrap:wrap;justify-content:center;gap:10px }
 @media(min-width:768px){ .reset-stats{ flex-wrap:nowrap } }
 .reset-stat{ flex:0 1 auto;width:240px;max-width:100%;background:#f5f7fa;border-radius:10px;padding:8px }
@@ -163,8 +212,12 @@ body{background:#f0f2f5;padding:12px}
 .modal-backdrop{ position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;justify-content:center;align-items:center;z-index:9999 }
 .modal-content{ background:#fff;width:80%;max-width:380px;padding:20px;border-radius:16px;text-align:center;box-shadow:0 0 20px rgba(0,0,0,0.3) }
 .modal-title{font-size:18px;font-weight:bold;margin-bottom:12px;color:#333}
+/* 弹窗标题文字色：与对应按钮色协调（同色系加深，白底清晰易读、不刺眼） */
+#modalTitle{ color:#355E9C }                                   /* 获取途径：蓝 */
+#rateModalTitle,#probModalTitle{ color:#2C7267 }                /* 获得概率：青绿 */
+#relicModalTitle{ color:#4E7A3C }                               /* 文物概率：深绿 */
 .modal-desc{font-size:15px;color:#3D4E68;line-height:1.6;margin-bottom:16px;min-height:60px;}
-.modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; }
+.modal-desc div{ padding:8px; border-radius:8px; cursor:pointer; margin:4px 0; background:#f5f7fa; text-align:center; }   /* 获取途径正文居中 */
 .modal-desc div:hover{ background:#e0e7ff; }
 .item-link{ color:#3774AE;text-decoration:underline;cursor:pointer }
 .modal-close{padding:7px 16px;background:#5c6bc0;color:#fff;border:none;border-radius:10px;font-weight:bold;cursor:pointer}
@@ -174,17 +227,32 @@ body{background:#f0f2f5;padding:12px}
 .modal-content.source-modal .modal-title{ flex-shrink:0 }
 .modal-content.source-modal .modal-desc{ flex:1 1 auto;overflow-y:auto;overscroll-behavior:contain }
 .modal-content.source-modal .modal-close{ align-self:center;flex-shrink:0 }
+/* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
+select.lang-btn{
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+  padding-right:32px;
+  padding-left:8px;                  /* 左侧留白收紧（右侧需给箭头留位） */
+  text-align:center;text-align-last:center;   /* 仅文字居中，箭头仍靠右 */
+}
 </style>
 </head>
 
 <body>
 <div class="top-bar">
   <input class="search-box" placeholder="搜索名称/属性..." id="searchBox">
-  <button class="lang-btn" id="langBtn">中文/EN/한국어</button>
+  <select class="lang-btn" id="langSelect"></select>
 </div>
 <button class="type-btn" onclick="location.href='index.html'" data-nav="monster">怪物图鉴</button>
+<button class="type-btn active" onclick="location.href='equip.html'" data-nav="equip">装备图鉴</button>
 <button class="type-btn" onclick="location.href='items.html'" data-nav="item">物品图鉴</button>
 <button class="type-btn" onclick="location.href='skills.html'" data-nav="skill">技能图鉴</button>
+<button class="type-btn" onclick="location.href='gem.html'" data-nav="gem">宝石图鉴</button>
+<button class="type-btn" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
+<button class="type-btn" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
+<button class="type-btn" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
 <div class="top-bar" id="jobBar">
   <button class="type-btn active" data-job="all">全部职业</button>
   <button class="type-btn" data-job="warrior">战士</button>
@@ -208,15 +276,19 @@ body{background:#f0f2f5;padding:12px}
 <button class="type-btn" data-type="charms">护身符</button>
 </div>
 <div class="pagination" id="topPagination">
+  <button class="page-btn" id="firstTop">首页</button>
   <button class="page-btn" id="prevTop">上一页</button>
-  <span id="pageInfo">第 1 页</span>
+  <span class="page-jump" id="pageJumpTop"><span id="pageInfo">第 1 页</span><input class="page-jump-input" id="pageInputTop" type="number" min="1" step="1" inputmode="numeric"></span>
   <button class="page-btn" id="nextTop">下一页</button>
+  <button class="page-btn" id="lastTop">尾页</button>
 </div>
 <div class="equip-grid" id="equipGrid">加载中...</div>
 <div class="pagination" id="bottomPagination">
+  <button class="page-btn" id="firstBot">首页</button>
   <button class="page-btn" id="prevBot">上一页</button>
-  <span id="pageInfoBot">第 1 页</span>
+  <span class="page-jump" id="pageJumpBot"><span id="pageInfoBot">第 1 页</span><input class="page-jump-input" id="pageInputBot" type="number" min="1" step="1" inputmode="numeric"></span>
   <button class="page-btn" id="nextBot">下一页</button>
+  <button class="page-btn" id="lastBot">尾页</button>
 </div>
 <div class="modal-backdrop" id="modal">
   <div class="modal-content source-modal">
@@ -232,168 +304,80 @@ body{background:#f0f2f5;padding:12px}
     <button class="modal-close" id="resetModalClose" onclick="closeResetModal()">关闭</button>
   </div>
 </div>
+<!-- 获得概率（官方「选项机率」页：意志之体力/暴击/魔力戒指）：复用 reset-* 的样式 -->
+<div class="modal-backdrop" id="relicModal">
+  <div class="modal-content reset-modal">
+    <div class="modal-title" id="relicModalTitle">文物概率</div>
+    <div class="reset-body" id="relicModalBody"></div>
+    <button class="modal-close" id="relicModalClose" onclick="closeRelicModal()">关闭</button>
+  </div>
+</div>
+<div class="modal-backdrop" id="rateModal">
+  <div class="modal-content reset-modal">
+    <div class="modal-title" id="rateModalTitle">获得概率</div>
+    <div class="reset-body" id="rateModalBody"></div>
+    <button class="modal-close" id="rateModalClose" onclick="closeRateModal()">关闭</button>
+  </div>
+</div>
 
 <script>
-let currentLang = (()=>{ try{ const v = localStorage.getItem("twom-lang"); return (v==="en"||v==="kr") ? v : "cn"; }catch(e){ return "cn"; } })();
-const typeLangMap = {
-  all: {
-    cn: "全部",
-    en: "All",
-    kr: "전체"
-  },
-  weapon: {
-    cn: "武器",
-    en: "Weapons",
-    kr: "무기"
-  },
-  armor: {
-    cn: "盔甲",
-    en: "Armor",
-    kr: "갑옷"
-  },
-  hats: {
-    cn: "帽子",
-    en: "Hats",
-    kr: "모자"
-  },
-  belts: {
-    cn: "腰带",
-    en: "Belts",
-    kr: "벨트"
-  },
-  gloves: {
-    cn: "手套",
-    en: "Gloves",
-    kr: "장갑"
-  },
-  shoes: {
-    cn: "鞋子",
-    en: "Shoes",
-    kr: "신발"
-  },
-  cloaks: {
-    cn: "披风",
-    en: "Cloaks",
-    kr: "망토"
-  },
-  necklaces: {
-    cn: "项链",
-    en: "Necklaces",
-    kr: "목걸이"
-  },
-  rings: {
-    cn: "戒指",
-    en: "Rings",
-    kr: "반지"
-  },
-  shields: {
-    cn: "盾牌",
-    en: "Shields",
-    kr: "방패"
-  },
-  quivers: {
-    cn: "箭袋",
-    en: "Quivers",
-    kr: "화살통"
-  },
-  charms: {
-    cn: "护身符",
-    en: "Charms",
-    kr: "부적"
-  }
-};
-const jobLangMap = {
-
-  all:{
-    cn:"全部职业",
-    en:"All Jobs",
-    kr:"전체 직업"
-  },
-
-  warrior:{
-    cn:"战士",
-    en:"Warrior",
-    kr:"전사"
-  },
-
-  ranger:{
-    cn:"弓手",
-    en:"Ranger",
-    kr:"궁수"
-  },
-
-  magician:{
-    cn:"法师",
-    en:"Magician",
-    kr:"마법사"
-  },
-
-  breaker:{
-    cn:"武术家",
-    en:"Breaker",
-    kr:"무도가"
-  }
-
-};
+/* ===== 语言工具（内联，不依赖额外 js 文件；语言对照数据在 lang.json） ===== */
+var TWOM_LANG_OPTIONS=[["en","English"],["zh","中文"],["ja","日本語"],["ko","한국어"]];
+var TWOM_UI2CODE={en:"en",zh:"cn",ja:"ja",ko:"kr"};
+var TWOM_CODE2UI={en:"en",cn:"zh",ja:"ja",kr:"ko"};
+var TWOM_NAV={},TWOM_TXTJA={};
+function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"kr",ko:"kr"})[v]||"cn";}
+function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
+function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="kr"?"ko":"en";}
+function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomApplyLangData(L){
+  TWOM_NAV=(L&&L.nav)||{};
+  TWOM_TXTJA=(L&&L.txtJa)||{};
+  rarityConfig=(L&&L.rarityColor)||rarityConfig;
+  /* 语言文案唯一来源 = lang.json：equipLang + 顶层 rarity */
+  var E=(L&&L.equipLang)||{};
+  typeLangMap = E.typeName || {};
+  jobLangMap  = E.jobName  || {};
+  langConfig.searchPlaceholder = E.searchPlaceholder || {};
+  langConfig.pageText          = E.pageText          || {};
+  langConfig.btnText           = E.btnText           || {};
+  langConfig.attrName          = E.attrName          || {};
+  langConfig.job               = E.jobName           || {};
+  langConfig.setValue          = E.setValue          || {};
+  langConfig.rarity            = (L&&L.rarity)       || {};
+  twomUpdateNav();
+}
+function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
+function twomTxt(cn,lang){return lang==="ja"?(TWOM_TXTJA[cn]||cn):cn;}
+function twomUi(L,k,lang,vars){var o=((L&&L.ui)||{})[k];var s=o?(o[lang]||o.cn||o.en||k):k;return String(s).replace(/\{(\w+)\}/g,function(_,n){return (vars&&vars[n]!=null)?vars[n]:"";});}
+</script>
+<script>
+let currentLang = twomReadLang();
+let typeLangMap = {};   /* ← lang.json 的 equipLang.typeName（页面不再自带文案） */
+let jobLangMap  = {};   /* ← lang.json 的 equipLang.jobName  */
 function updateJobButtonsLang() {
-
   document.querySelectorAll('#jobBar .type-btn').forEach(btn => {
-
-    const job = btn.dataset.job;
-
-    if(jobLangMap[job]) {
-      btn.innerText = jobLangMap[job][currentLang];
-    }
-
+    const o = jobLangMap[btn.dataset.job];
+    if(o) btn.innerText = o[currentLang] || o.cn || o.en || btn.innerText;
   });
-
 }
 function updateTypeButtonsLang() {
-
   document.querySelectorAll('#typeBar .type-btn').forEach(btn => {
-
-    const type = btn.dataset.type;
-
-    if(typeLangMap[type]) {
-      btn.innerText = typeLangMap[type][currentLang];
-    }
-
+    const o = typeLangMap[btn.dataset.type];
+    if(o) btn.innerText = o[currentLang] || o.cn || o.en || btn.innerText;
   });
-
 }
-const langConfig = {
-  searchPlaceholder:{cn:"搜索名称/属性...",en:"Search name/attr...",kr:"이름/속성 검색..."},
-  pageText:{cn:"第 {now}/{total} 页",en:"Page {now}/{total}",kr:"페이지 {now}/{total}"},
-  btnText:{
-    prev:{cn:"上一页",en:"Prev",kr:"이전"}, next:{cn:"下一页",en:"Next",kr:"다음"},
-    source:{cn:"获取途径",en:"Source",kr:"획득 경로"}, close:{cn:"关闭",en:"Close",kr:"닫기"},
-    modalTitle:{cn:"获取途径",en:"Source",kr:"획득 경로"}, noData:{cn:"暂无装备数据",en:"No data",kr:"데이터 없음"},
-    noAttr:{cn:"无属性",en:"No attr",kr:"속성 없음"},
-    reset:{cn:"重置概率",en:"Reset Rate",kr:"확률 초기화"},
-    resetTitle:{cn:"重置概率",en:"Reset Rate",kr:"확률 초기화"},
-    resetValue:{cn:"数值",en:"Value",kr:"수치"},
-    resetRate:{cn:"概率",en:"Rate",kr:"확률"}
-  },
-  attrName:{
-    attack:{cn:"攻击力",en:"ATTACK",kr:""}, armor:{cn:"防御力",en:"ARMOR",kr:""},
-    speed:{cn:"攻速",en:"SPEED",kr:""}, block:{cn:"阻挡",en:"block",kr:""},
-    hp:{cn:"体力",en:"HP",kr:""}, mana:{cn:"魔力",en:"MANA",kr:""},
-    hp_regen:{cn:"体力回复",en:"HP Regen",kr:""}, mana_regen:{cn:"魔力回复",en:"MANA Regen",kr:""},
-    str:{cn:"力量",en:"STR",kr:""}, dex:{cn:"敏捷",en:"DEX",kr:""}, precision:{cn:"精密",en:"Precision",kr:""}, int:{cn:"智力",en:"INT",kr:""},
-    hit:{cn:"命中",en:"Hit",kr:""}, cri:{cn:"暴击",en:"Cri",kr:""},
-    deadly:{cn:"致死一击",en:"Deadly",kr:""}, move:{cn:"移动速度",en:"Move",kr:""},
-    ice_resist:{cn:"冰抗",en:"Ice Res",kr:""}, fire_resist:{cn:"火抗",en:"Fire Res",kr:""},
-    lightning_Resist:{cn:"雷抗",en:"light Res",kr:""},magic_resist:{cn:"属性抗性",en:"Magic Res",kr:""},
-    set2:{cn:"2件套",en:"2SET",kr:""}, set3:{cn:"3件套",en:"3SET",kr:""}
-  },
-  rarity:{ "一般":{cn:"一般",en:"Normal",kr:"일반"}, "高级":{cn:"高级",en:"Advanced",kr:"고급"}, "稀有":{cn:"稀有",en:"Rare",kr:"희귀"}, "英雄":{cn:"英雄",en:"Heroic",kr:"영웅"}, "传说":{cn:"传说",en:"Legendary",kr:"전설"} },
-  job:{ "warrior":{cn:"战士",en:"warrior",kr:""}, "magician":{cn:"法师",en:"magician",kr:""}, "ranger":{cn:"游侠",en:"ranger",kr:""}, "breaker":{cn:"武术家",en:"breaker",kr:""}, "all":{cn:"通用",en:"All",kr:""} }
-};
+/* 语言文案全部来自 lang.json 的 equipLang / rarity（在此只声明空壳，加载后填充） */
+let langConfig = { searchPlaceholder:{}, pageText:{}, btnText:{}, attrName:{}, job:{}, rarity:{}, setValue:{} };
 
 let page = 1;
 let allItems = [];
 let filteredItems = [];
 let resetMap = {};
+let relicMap = {};   /* 文物选项概率（equipment_data/relic_rate.json），按装备中文名索引 */
+/* 获得概率（官方选项机率页）：rateMap 键 = 装备数据的 name_cn；rateCols = 四语列名 */
+let rateMap = {};
+let rateCols = {};
 let nameMap = {};
 let cnToEnMap = {};
 let dropMap = {};
@@ -447,62 +431,39 @@ const statKeys = [
   "set3"
 ];
 
-// 套装属性值三语（数据里的值内嵌中文，显示层翻译；两个属性之间统一用 +）
-const SET_VALUE_CN = {
-  "3力量 5%速": "3力量+5%速", "3敏捷 5%速": "3敏捷+5%速", "3智力 5%速": "3智力+5%速",
-  "体力5 命中2": "体力5+命中2", "体力5 智力2": "体力5+智力2"
-};
-const SET_VALUE_EN = {
-  "3力量+5%速": "3STR+5%Move", "3敏捷+5%速": "3DEX+5%Move", "3智力+5%速": "3INT+5%Move",
-  "3力量 5%速": "3STR+5%Move", "3敏捷 5%速": "3DEX+5%Move", "3智力 5%速": "3INT+5%Move",
-  "体力5 命中2": "HP5+Hit2", "体力5 智力2": "HP5+INT2"
-};
+;
 function statValueText(k, v){
   const s = String(v).replace(/ to /g,"~");
+  /* 2件套/3件套 的属性值：文案表在 lang.json 的 equipLang.setValue（四语齐全） */
   if(k === "set2" || k === "set3"){
-    if(currentLang === "cn") return SET_VALUE_CN[s] || s;
-    if(SET_VALUE_EN[s]) return SET_VALUE_EN[s];
-    return s.replace(/体力/g,"HP").replace(/魔力/g,"MANA").replace(/力量/g,"STR")
-            .replace(/敏捷/g,"DEX").replace(/智力/g,"INT").replace(/命中/g,"Hit")
-            .replace(/暴击/g,"Cri").replace(/移动速度/g,"Move").replace(/移速/g,"Move").replace(/速/g,"Move");
+    const m = langConfig.setValue && langConfig.setValue[s];
+    if(m) return m[currentLang] || m.cn || m.en || s;
+    return s;
   }
   return s;
 }
 
-const rarityConfig = {
-  "一般":{color:"#4D5A75",bg:"#474F6E"}, "高级":{color:"#518B38",bg:"#328300"},
-  "稀有":{color:"#3774AE",bg:"#0068A9"}, "英雄":{color:"#733A9D",bg:"#69329B"},
-  "传说":{color:"#E7696C",bg:"#E60000"}
-};
 
-// 导航按钮三语
-const navLang = {
-  monster: {cn:"怪物图鉴", en:"Monsters", kr:"몬스터 도감"},
-  equip:   {cn:"装备图鉴", en:"Equipment", kr:"장비 도감"},
-  item:    {cn:"物品图鉴", en:"Items", kr:"아이템 도감"},
-  skill:   {cn:"技能图鉴", en:"Skills", kr:"스킬 도감"}
-};
+/* 稀有度配色统一在 lang.json 的 rarityColor（名称字体用 .color，标签底色用 .bg） */
+let rarityConfig = {};
 
-function updateNavLang(){
-  document.querySelectorAll('[data-nav]').forEach(btn=>{
-    const k = btn.dataset.nav;
-    if(navLang[k]) btn.innerText = navLang[k][currentLang];
-  });
-}
+// 导航按钮（改用公共库）
+function updateNavLang(){ twomUpdateNav(currentLang); }
 
 function tr(key, type){
   const o = langConfig[type]?.[key];
-  return o?.[currentLang] || o?.cn || key;
+  return o?.[currentLang] || twomTxt(o?.cn, currentLang) || o?.cn || key;
 }
 
 function updateLangText(){
   document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
   document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
   document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = tr('next','btnText');
-  document.getElementById('langBtn').innerText = {cn:"中文/EN/한국어",en:"CN/English/한국어",kr:"중국어/EN/한국어"}[currentLang];
   document.getElementById('modalTitle').innerText = tr('modalTitle','btnText');
   document.querySelector('.modal-close').innerText = tr('close','btnText');
   document.getElementById('resetModalClose').innerText = tr('close','btnText');
+  document.getElementById('rateModalClose').innerText = tr('close','btnText');
+  document.getElementById('relicModalClose').innerText = tr('close','btnText');
   updateNavLang();
 }
 
@@ -510,15 +471,6 @@ function updatePageInfo(){
   const total = Math.ceil(filteredItems.length / getPerPage());
   const s = langConfig.pageText[currentLang].replace("{now}",page).replace("{total}",total||1);
   document.getElementById('pageInfo').innerText = document.getElementById('pageInfoBot').innerText = s;
-}
-
-function toggleLang(){
-  currentLang = currentLang==="cn" ? "en" : currentLang==="en" ? "kr" : "cn";
-  try{ localStorage.setItem("twom-lang", currentLang); }catch(e){}
-  updateLangText();
-  updateTypeButtonsLang();
-  updateJobButtonsLang();
-  renderCards();
 }
 
 function doSearch(){ filterAndRender(document.getElementById('searchBox').value.toLowerCase().trim()); }
@@ -550,6 +502,7 @@ function filterAndRender(keyword=""){
     list = list.filter(item=>{
       const name = (item.name_cn||item.name||"").toLowerCase();
       const nameEn = (item.name||"").toLowerCase();
+      const nameJa = (item.name_ja||"").toLowerCase();
       const nameKr = (item.name_kr||"").toLowerCase();
       let attrStr = "";
 
@@ -591,7 +544,7 @@ if(k === "precision") alias = "精准";
   `;
 
 });
-      const all = [name,nameEn,nameKr, String(item.level||""), attrStr].join(" ").toLowerCase();
+      const all = [name,nameEn,nameJa,nameKr, String(item.level||""), attrStr].join(" ").toLowerCase();
       return all.includes(keyword);
     });
   }
@@ -600,6 +553,10 @@ if(k === "precision") alias = "精准";
   renderCards();
 }
 
+function clearSearchBox(){
+  const box = document.getElementById('searchBox');
+  if(box) box.value = "";
+}
 function setType(t){
   currentType = t;
 
@@ -612,6 +569,8 @@ function setType(t){
       );
     });
 
+  // 点分类按钮 = 重置搜索框（残留关键词会把新分类的结果筛空）
+  clearSearchBox();
   doSearch();
 }
 
@@ -630,6 +589,7 @@ function setJob(job){
 
     });
 
+  clearSearchBox();
   doSearch();
 
 }
@@ -659,17 +619,49 @@ async function loadMyJson(){
     resetMap = {};
   }
 
+  // 加载「文物概率」数据（官方概率公示页：24 件武器的文物选项）
+  try {
+    const res = await fetch("equipment_data/relic_rate.json");
+    const rl = await res.json();
+    relicMap = rl.equips || {};
+  } catch(e) {
+    console.log("load relic fail", e);
+    relicMap = {};
+  }
+
+  // 加载「获得概率」数据（官方选项机率页：意志之三枚戒指）
+  try {
+    const res = await fetch("equipment_data/option_rate.json");
+    const rd = await res.json();
+    rateMap = rd.rings || {};
+    rateCols = rd.cols || {};   /* 官方列名（备用，页面表头改用站点 resetValue/resetRate 文案）*/
+  } catch(e) {
+    console.log("load rate fail", e);
+    rateMap = {};
+  }
+
   // 加载语言数据（获取途径弹窗怪物名/材料名本地化）
+  let langData = {};
   try {
     const res = await fetch("lang.json");
-    const lang = await res.json();
-    nameMap = lang.nameMap || {};
-    dropMap = lang.dropMap || {};
+    langData = await res.json();
+    nameMap = langData.nameMap || {};
+    dropMap = langData.dropMap || {};
   } catch(e) {
     console.log("load lang fail", e);
     nameMap = {};
     dropMap = {};
   }
+  // 语言对照（lang.json：nav / ui / 装备 ja 名等）
+  twomApplyLangData(langData);
+  const eqTab = langData.equips || {};
+  items.forEach(function(it){
+    const x = eqTab[it.name]; if(!x) return;
+    if(x.ja && !it.name_ja) it.name_ja = x.ja;
+    if(x.kr && !it.name_kr) it.name_kr = x.kr;
+    if(x.cn && !String(it.name_cn||"").trim()) it.name_cn = x.cn;
+  });
+  // 界面词日文补齐（lang.json.txtJa）
   cnToEnMap = {};
   for(const en in nameMap){
     const v = nameMap[en];
@@ -720,8 +712,12 @@ async function loadMyJson(){
   filteredItems = [...allItems];
   
   // 清除可能的搜索和分类状态
+  // 注意：必须限定在 #typeBar / #jobBar 内。若用 '.type-btn' 会把
+  // 导航栏([data-nav]) 与 职业栏([data-job]) 的 active 一并清掉，
+  // 表现为「点进装备图鉴后 顶部导航与『全部职业』的蓝底消失」。
   currentType = "all";
-  document.querySelectorAll('.type-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.type === "all"));
+  document.querySelectorAll('#typeBar .type-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.type === "all"));
+  document.querySelectorAll('#jobBar .type-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.job === "all"));
   document.getElementById('searchBox').value = "";
 
   // 先更新界面文字（不渲染）
@@ -753,12 +749,14 @@ function renderCards(){
     const name =
   currentLang === "cn"
     ? (item.name_cn || item.name)
+    : currentLang === "ja"
+    ? (item.name_ja || item.name)
     : currentLang === "kr"
     ? (item.name_kr || item.name)
     : item.name;
     const rarityKey = item.rarity || "高级";
     const rarity = tr(rarityKey,'rarity');
-    const rc = rarityConfig[rarityKey] || rarityConfig["高级"];
+    const rc = rarityConfig[rarityKey] || rarityConfig["高级"] || { color:"#4D5A75", bg:"#474F6E" };
     const jobIconMap = { "warrior":"job/warrior.png","magician":"job/magician.png","ranger":"job/ranger.png","breaker":"job/breaker.png"};
     let jobIconsHtml = "";
     let jobs = Array.isArray(item.job) ? item.job : (typeof item.job=="string"&&item.job.includes(",") ? item.job.split(",").map(x=>x.trim()) : item.job ? [item.job] : []);
@@ -772,7 +770,7 @@ function renderCards(){
   jobIconsHtml += `
     <img
       src="${src}"
-      style="width:20px;height:20px;object-fit:contain;margin:2px"
+      style="width:20px;height:20px;object-fit:contain"
       alt="${tr(j,'job')}"
     >
   `;
@@ -801,19 +799,28 @@ function renderCards(){
     const resetBtn = resetMap[nameCnKey]
       ? `<button class="btn-reset" onclick="openResetModal('${nameCnKey.replace(/'/g,"\\'")}')">${tr('reset','btnText')}</button>`
       : "";
+    /* 获得概率：排在「获取途径」右边（官方选项机率页里有数据的装备才出） */
+    const rateBtn = rateMap[nameCnKey]
+      ? `<button class="btn-rate" onclick="openRateModal('${nameCnKey.replace(/'/g,"\\'")}')">${tr('rate','btnText')}</button>`
+      : "";
+    /* 文物概率：官方概率公示页里有数据的装备才出。与「获取途径 / 重置概率」同一排。 */
+    const relicBtn = relicMap[nameCnKey]
+      ? `<button class="btn-relic" onclick="openRelicModal('${nameCnKey.replace(/'/g,"\\'")}')">${tr('relic','btnText')}</button>`
+      : "";
     
     const card = document.createElement("div");
     card.className = "equip-card";
     card.dataset.name = item.name || "";
     card.dataset.nameCn = item.name_cn || "";
     card.dataset.nameEn = item.name || "";
+    card.dataset.nameJa = item.name_ja || "";
     card.dataset.nameKr = item.name_kr || "";
     card.innerHTML = `
       <div class="equip-name" style="color:${rc.color}">${name}</div>
       <div class="equip-info-row">
         <div class="equip-icon-col">
           <div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img loading="lazy" src="equip_icons/${icon}" onerror="this.src='equip_icons/default.png'"></div>
-          <div class="item-level">Lv ${item.level||1}</div>
+          <div class="item-level">Lv.${item.level||1}</div>
         </div>
         <div class="equip-text-col">
           <div class="tag-rarity" style="background:${rc.bg}">${rarity}</div>
@@ -823,6 +830,8 @@ function renderCards(){
       <div class="equip-stats">${statsHtml}</div>
       <div class="card-actions">
         ${sourceBtn}
+        ${rateBtn}
+        ${relicBtn}
         ${resetBtn}
       </div>
     `;
@@ -838,8 +847,9 @@ function jumpToEquipFromUrl(){
 
   // 在全部可见装备中查找
   const index = allItems.findIndex(item => {
-    const names = [item.name, item.name_cn, item.name, item.name_kr].join(" ").toLowerCase();
-    return names.includes(equipName);
+    /* 强跳转：只认完全同名，不再子串模糊匹配 */
+    const names = [item.name, item.name_cn, item.name_ja, item.name_kr].filter(Boolean).map(v=>String(v).toLowerCase().trim());
+    return names.indexOf(equipName) >= 0;
   });
 
   if(index === -1){
@@ -861,6 +871,7 @@ function jumpToEquipFromUrl(){
       const stored = [
   card.dataset.name,
   card.dataset.nameCn,
+  card.dataset.nameJa,
   card.dataset.nameKr
 ]
 .join(" ")
@@ -921,6 +932,10 @@ function openModal(d, ctxName){
       let prefix = t;
       if (currentLang === "en") {
         prefix = t.indexOf("怪物掉落") === 0 ? "Monster drops (clickable):" : "Source (clickable):";
+      } else if (currentLang === "ja") {
+        prefix = t.indexOf("怪物掉落") === 0 ? "モンスターのドロップ（クリック可）：" : "入手方法（クリック可）：";
+      } else if (currentLang === "kr") {
+        prefix = t.indexOf("怪物掉落") === 0 ? "몬스터 드롭 (클릭 가능):" : "획득 경로 (클릭 가능):";
       }
 
       return `
@@ -941,7 +956,7 @@ function openModal(d, ctxName){
       const disp = en ? ((nameMap[en] && (nameMap[en][currentLang] || nameMap[en].en)) || monster) : monster;
 
       return `
-        <div onclick="goMonster('${monster.replace(/'/g,"\\'")}')">
+        <div onclick="goMonster('${disp.replace(/'/g,"\\'")}')">
           ${disp}
         </div>
       `;
@@ -1013,11 +1028,13 @@ function aliasDisplayName(hit){
     const eq = equipIndex[hit.en];
     if(!eq) return hit.en;
     if(currentLang === "en") return eq.name;
+    if(currentLang === "ja") return eq.name_ja || eq.name;
     if(currentLang === "kr") return eq.name_kr || eq.name;
     return eq.name_cn || eq.name;
   }
   const v = dropMap[hit.en] || {};
   if(currentLang === "en") return v.en || hit.en;
+  if(currentLang === "ja") return v.ja || v.en || hit.en;
   if(currentLang === "kr") return v.kr || v.en || hit.en;
   return v.cn || hit.en;
 }
@@ -1073,6 +1090,7 @@ function linkifyEquipText(text, ctxName){
       const eq = plainEquipIndex[m];
       if(!eq) return m;
       if(currentLang === "en") return eq.name || m;
+      if(currentLang === "ja") return eq.name_ja || eq.name || m;
       if(currentLang === "kr") return eq.name_kr || eq.name || m;
       return eq.name_cn || m;
     });
@@ -1083,11 +1101,39 @@ function linkifyEquipText(text, ctxName){
   return out;
 }
 
+/* 跳转助手：把「英文键或任意语言的名字」解析成当前语言的显示名，找不到就原样返回 */
+function locKeyOf(map, v){
+  const s = String(v == null ? '' : v).trim();
+  if(!s || !map) return null;
+  if(map[s]) return s;
+  const low = s.toLowerCase();
+  const ks = Object.keys(map);
+  for(let i = 0; i < ks.length; i++){
+    const o = map[ks[i]] || {};
+    const cand = [ks[i], o.cn, o.en, o.ja, o.kr];
+    for(let j = 0; j < cand.length; j++){
+      if(String(cand[j] || '').toLowerCase() === low) return ks[i];
+    }
+  }
+  return null;
+}
+
+/* 跳转统一传「当前语言的名称」 */
+function equipDispName(name){
+  const eq = (typeof equipIndex !== 'undefined' && equipIndex) ? equipIndex[name] : null;
+  if(!eq) return name;
+  if(currentLang === "ja") return eq.name_ja || eq.name || name;
+  if(currentLang === "kr") return eq.name_kr || eq.name || name;
+  if(currentLang === "en") return eq.name || name;
+  return eq.name_cn || eq.name || name;
+}
 function goItem(name){
-  location.href = `items.html?item=${encodeURIComponent(name)}`;
+  const k = locKeyOf(dropMap, name);
+  const disp = k ? (dropMap[k][currentLang] || dropMap[k].en || dropMap[k].cn || k) : name;
+  location.href = `items.html?item=${encodeURIComponent(disp)}`;
 }
 function goEquip(name){
-  location.href = `equip.html?equip=${encodeURIComponent(name)}`;
+  location.href = `equip.html?equip=${encodeURIComponent(equipDispName(name))}`;
 }
 
 function goMonster(name){
@@ -1102,6 +1148,30 @@ function goMonster(name){
 function closeModal(){ document.getElementById("modal").style.display="none"; lockPageScroll(false); }
 
 // 重置概率弹窗
+/* 重置消耗（官方表）：
+   武器            → Lv23-29 所有 84/1 · Lv30-39 所有 168/2 · Lv40+ 一般/高级 252/3 · 稀有 504/6 · 英雄 1260/15
+   盔甲/头/手/脚   → 同上，但 Lv40+ 英雄是 840/10
+   返回 [起源石, 重置的古书]；官方表只给了这两大类，其它类型返回 null（不显示消耗行）。
+   等级 <23 的低级装备（重置表里有 6 件 21/22 级）按最低档 84/1 处理。 */
+function resetCostOf(item){
+  if(!item) return null;
+  const isWeapon = item.type === "weapon";
+  if(!isWeapon && ["armor","hats","gloves","shoes"].indexOf(item.type) < 0) return null;
+  const lv = parseInt(item.level, 10) || 0;
+  const rar = item.rarity || "";                 /* 空 = 一般 */
+  if(lv < 30) return [84, 1];
+  if(lv < 40) return [168, 2];
+  if(rar === "稀有") return [504, 6];
+  if(rar === "英雄") return isWeapon ? [1260, 15] : [840, 10];
+  return [252, 3];                               /* Lv40+ 一般、高级 */
+}
+function resetCostHtml(item){
+  const c = resetCostOf(item);
+  if(!c) return "";
+  return `<div class="reset-cost">${tr('resetCost','btnText')}：`
+       + `<b>${tr('originStone','btnText')}</b> ×${c[0]} · `
+       + `<b>${tr('resetBook','btnText')}</b> ×${c[1]}</div>`;
+}
 function openResetModal(nameCn){
   const data = resetMap[nameCn];
   if(!data) return;
@@ -1111,13 +1181,15 @@ function openResetModal(nameCn){
   if(item){
     titleName = currentLang === "cn"
       ? (item.name_cn || item.name)
+      : currentLang === "ja"
+      ? (item.name_ja || item.name)
       : currentLang === "kr"
       ? (item.name_kr || item.name)
       : item.name;
   }
   document.getElementById("resetModalTitle").innerText = tr('resetTitle','btnText') + " · " + titleName;
 
-  document.getElementById("resetModalBody").innerHTML = `<div class="reset-stats">` + data.stats.map(st => {
+  document.getElementById("resetModalBody").innerHTML = resetCostHtml(item) + `<div class="reset-stats">` + data.stats.map(st => {
     const sname = langConfig.attrName[st.key] ? tr(st.key,'attrName') : st.name;
     const rows = st.rows.map(r => `<tr><td class="reset-val">${r[0]}</td><td>${r[1]}%</td></tr>`).join("");
     return `<div class="reset-stat">
@@ -1135,7 +1207,69 @@ function openResetModal(nameCn){
 }
 function closeResetModal(){ document.getElementById("resetModal").style.display="none"; lockPageScroll(false); }
 
-document.getElementById('langBtn').onclick = toggleLang;
+/* ===== 获得概率（官方「选项机率」页：意志之体力/暴击/魔力戒指）=====
+   来源 equipment_data/option_rate.json；表结构与「重置概率」一致（选项名 + 数值/概率），
+   所以直接复用 .reset-stats/.reset-stat/.reset-table 那套样式。概率按官方原文显示（位数不丢）。 */
+function closeRateModal(){ document.getElementById("rateModal").style.display="none"; lockPageScroll(false); }
+function openRateModal(nameCn){
+  const data = rateMap[nameCn];
+  if(!data) return;
+  /* 表头直接用站点「重置概率」那套文案（数值 / 概率），与弹窗样式保持同一口径 */
+  const colVal = tr('resetValue','btnText');
+  const colRate = tr('resetRate','btnText');
+  const titleName = data.name
+    ? (data.name[currentLang] || data.name.cn || nameCn)
+    : nameCn;
+  document.getElementById("rateModalTitle").innerText = tr('rateTitle','btnText') + " · " + titleName;
+  document.getElementById("rateModalBody").innerHTML = `<div class="reset-stats">` + data.stats.map(st => {
+    const sname = (st.opt && (st.opt[currentLang] || st.opt.cn)) || "";
+    const rows = st.rows.map(r => `<tr><td class="reset-val">${r[0]}</td><td>${r[1]}</td></tr>`).join("");
+    return `<div class="reset-stat">
+      <div class="reset-stat-name">${sname}</div>
+      <table class="reset-table">
+        <thead><tr><th>${colVal}</th><th>${colRate}</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join("") + `</div>`;
+  document.getElementById("rateModal").style.display = "flex";
+  document.getElementById("rateModalBody").scrollTop = 0;
+  lockPageScroll(true);
+}
+
+/* ===== 文物概率（官方概率公示页 lim.com2us.com：24 件武器的文物选项）=====
+   来源 equipment_data/relic_rate.json；选项名用 equipLang.attrName（key: str/cri/hit/dex/int/mana/mana_regen/move），
+   概率按官方原文保留位数；表结构与「重置概率」一致 → 复用 .reset-stats/.reset-stat/.reset-table 样式。 */
+function closeRelicModal(){ document.getElementById("relicModal").style.display="none"; lockPageScroll(false); }
+function openRelicModal(nameCn){
+  const data = relicMap[nameCn];
+  if(!data) return;
+  const colVal = tr('resetValue','btnText');
+  const colRate = tr('resetRate','btnText');
+  const titleName = data.name
+    ? (data.name[currentLang] || data.name.cn || nameCn)
+    : nameCn;
+  document.getElementById("relicModalTitle").innerText = tr('relicTitle','btnText') + " · " + titleName;
+  document.getElementById("relicModalBody").innerHTML = `<div class="reset-stats">` + data.stats.map(st => {
+    const sname = langConfig.attrName[st.key] ? tr(st.key,'attrName') : (st.raw || st.key);
+    const rows = st.rows.map(r => `<tr><td class="reset-val">${r[0]}</td><td>${r[1]}</td></tr>`).join("");
+    return `<div class="reset-stat">
+      <div class="reset-stat-name">${sname}</div>
+      <table class="reset-table">
+        <thead><tr><th>${colVal}</th><th>${colRate}</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join("") + `</div>`;
+  document.getElementById("relicModal").style.display = "flex";
+  document.getElementById("relicModalBody").scrollTop = 0;
+  lockPageScroll(true);
+}
+
+twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
+  currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
+  updateLangText(); updateTypeButtonsLang(); updateJobButtonsLang(); renderCards();
+});
 document.getElementById('searchBox').addEventListener('input', doSearch);
 document.getElementById('prevTop').onclick = goPrev;
 document.getElementById('nextTop').onclick = goNext;
@@ -1185,6 +1319,120 @@ window.addEventListener('resize', () => {
 
 });
 loadMyJson();
+</script>
+<style>
+/* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
+/* PAGE_NAV_COMPACT_V5：桌面按钮仍为原尺寸(16px)，手机端只微收 1~2px，保证两位数页码仍在一排 */
+.page-jump{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;user-select:none;-webkit-user-select:none}
+.page-jump:hover > span{text-decoration:underline}
+.page-jump-input{display:none;width:66px;padding:6px 4px;border:1px solid #ccc;border-radius:8px;font-size:16px;text-align:center;font-family:inherit;-moz-appearance:textfield;appearance:textfield}
+.page-jump-input::-webkit-outer-spin-button,.page-jump-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.page-jump.editing .page-jump-input{display:inline-block}
+.page-jump.editing > span{display:none}
+.page-btn:disabled{opacity:.45}
+/* 分页栏改弹性单行：只为消除 HTML 空白造成的换行，不改按钮尺寸（尺寸仍用页面原有 .page-btn 规则）。
+   gap:4px 是补回原先元素间空白所占的宽度，让桌面观感与改动前一致。 */
+.pagination{display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:4px}
+.pagination > *{flex:0 0 auto}
+.pagination .page-jump{white-space:nowrap}
+/* 手机端只微收一点（越窄越收，最小 14px；桌面 16px 保持不变） */
+@media(max-width:480px){
+  .pagination{gap:3px}
+  .pagination .page-btn{padding:7px;margin:0 3px;font-size:16px}
+  .page-jump-input{width:62px;font-size:16px;padding:5px 4px}
+}
+@media(max-width:400px){
+  .pagination{gap:2px}
+  .pagination .page-btn{padding:6px;margin:0 2px;font-size:15px}
+  .page-jump-input{width:58px;font-size:15px}
+}
+@media(max-width:340px){
+  .pagination{gap:1px}
+  .pagination .page-btn{padding:5px;margin:0 1px;font-size:14px}
+  .page-jump-input{width:52px;font-size:14px}
+}
+</style>
+<script>
+/* ===== PAGE_NAV_PATCH：首页 / 尾页 / 点击「第 x/y 页」输入页码（6 个图鉴页共用） =====
+   在各页原有脚本之后运行，复用其 page / filteredXxx / getPerPage / renderCards 或 render / updatePageInfo。 */
+(function(){
+  var JUMP_LABEL = {
+    cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
+    en:{first:"First",last:"Last",tip:"Click to enter a page number"},
+    ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
+    kr:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+  };
+  function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
+  function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }
+  function listOf(){
+    if(typeof filtered !== "undefined" && filtered) return filtered;
+    if(typeof filteredItems !== "undefined" && filteredItems) return filteredItems;
+    if(typeof filteredSkills !== "undefined" && filteredSkills) return filteredSkills;
+    return [];
+  }
+  function totalPages(){ return Math.max(1, Math.ceil(listOf().length / getPerPage())); }
+  function draw(){
+    if(typeof renderCards === "function") return renderCards();
+    if(typeof render === "function") return render();
+  }
+  function syncInfo(){ if(typeof updatePageInfo === "function") updatePageInfo(); }
+  function goTo(n){
+    var t = totalPages(), v = Math.min(Math.max(1, parseInt(n, 10) || 1), t);
+    if(v === page){ syncInfo(); return; }
+    page = v; draw(); syncInfo();
+  }
+  function refresh(){
+    var t = totalPages(), L = lbl();
+    [["Top","firstTop","lastTop"],["Bot","firstBot","lastBot"]].forEach(function(a){
+      var f = document.getElementById(a[1]), l = document.getElementById(a[2]);
+      if(f){ f.innerText = L.first; f.disabled = page <= 1; }
+      if(l){ l.innerText = L.last;  l.disabled = page >= t; }
+      var jw = document.getElementById("pageJump" + a[0]), inp = document.getElementById("pageInput" + a[0]);
+      if(jw) jw.title = L.tip;
+      if(inp){ inp.max = t; inp.title = L.tip; if(!jw || !jw.classList.contains("editing")) inp.value = page; }
+    });
+  }
+  function cancelEdit(jw, inp){ jw.classList.remove("editing"); inp.value = page; inp.blur(); syncInfo(); }
+  function commit(jw, inp){
+    if(!jw.classList.contains("editing")) return;
+    var v = parseInt(inp.value, 10);
+    jw.classList.remove("editing");
+    if(!isNaN(v)) goTo(v); else syncInfo();
+  }
+  function bindJump(sfx){
+    var jw = document.getElementById("pageJump" + sfx), inp = document.getElementById("pageInput" + sfx);
+    if(!jw || !inp) return;
+    jw.onclick = function(ev){
+      if(ev && ev.target === inp) return;
+      if(jw.classList.contains("editing")) return;
+      jw.classList.add("editing");
+      inp.value = page;
+      inp.focus(); try{ inp.select(); }catch(e){}
+    };
+    inp.onkeydown = function(e){
+      var k = e.key || "";
+      if(k === "Enter" || e.keyCode === 13){ e.preventDefault(); commit(jw, inp); inp.blur(); }
+      else if(k === "Escape" || e.keyCode === 27){ e.preventDefault(); cancelEdit(jw, inp); }
+    };
+    inp.onblur = function(){ commit(jw, inp); };
+  }
+  function bindBtn(id, fn){
+    var b = document.getElementById(id);
+    if(!b) return;
+    b.onclick = function(){ if(b.disabled) return; fn(); };
+  }
+  ["Top","Bot"].forEach(function(sfx){
+    bindJump(sfx);
+    bindBtn("first" + sfx, function(){ if(page > 1){ page = 1; draw(); syncInfo(); window.scrollTo(0,0); } });
+    bindBtn("last" + sfx,  function(){ var t = totalPages(); if(page < t){ page = t; draw(); syncInfo(); window.scrollTo(0,0); } });
+  });
+  // 包一层 updatePageInfo：每次刷新（含切语言）都同步按钮文案 / 输入框上下限
+  if(typeof updatePageInfo === "function"){
+    var _orig = updatePageInfo;
+    updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
+  }
+  refresh();
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,1039 @@
+{
+ "source": {
+  "synth": "https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_gem_chest_5_zh-hant.html",
+  "craft": "https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/jewelry_zh-hant.html"
+ },
+ "note": "官方概率页直出。合成概率页韩文版缺失（403）→ kr 按站内约定拼写；加工概率页列出的宝石名以官方原文为准（与宝箱页的持有者/宝石对应关系不一致，未做改写）；「无法交易 / Soulbound / 取引不可 / 거래불가」沿用站内 noTrade 用词；**已修正官方笔误：加工概率阶段4「趁虚封锁 6」→ 5（与宝箱页及效果描述 2/3/4/5 一致）**。",
+ "stageLabel": {
+  "cn": "阶段{n}",
+  "en": "Lv. {n}",
+  "ja": "{n}段階",
+  "kr": "{n}단계"
+ },
+ "untradeable": {
+  "cn": "无法交易",
+  "en": "Soulbound",
+  "ja": "取引不可",
+  "kr": "거래불가"
+ },
+ "synth": {
+  "title": {
+   "cn": "各阶段宝石合成概率",
+   "en": "Gem Combination Rate per Level",
+   "ja": "各段階の宝石の合成率",
+   "kr": "각 단계 보석 합성 확률"
+  },
+  "cols": {
+   "cn": [
+    "合成阶段",
+    "材料数量",
+    "合成概率",
+    "合成结果"
+   ],
+   "en": [
+    "Combination Level",
+    "Material Qty",
+    "Combination Rate",
+    "Combination Result"
+   ],
+   "ja": [
+    "合成段階",
+    "素材数量",
+    "合成率",
+    "合成結果"
+   ],
+   "kr": [
+    "합성단계",
+    "재료 수량",
+    "합성 확률",
+    "합성 결과"
+   ]
+  },
+  "rows": [
+   {
+    "from": 1,
+    "qty": 3,
+    "p": 87.0,
+    "to": 1
+   },
+   {
+    "from": 1,
+    "qty": 3,
+    "p": 12.0,
+    "to": 2
+   },
+   {
+    "from": 1,
+    "qty": 3,
+    "p": 1.0,
+    "to": 3
+   },
+   {
+    "from": 2,
+    "qty": 3,
+    "p": 87.0,
+    "to": 2
+   },
+   {
+    "from": 2,
+    "qty": 3,
+    "p": 12.0,
+    "to": 3
+   },
+   {
+    "from": 2,
+    "qty": 3,
+    "p": 1.0,
+    "to": 4
+   },
+   {
+    "from": 3,
+    "qty": 3,
+    "p": 88.0,
+    "to": 3
+   },
+   {
+    "from": 3,
+    "qty": 3,
+    "p": 12.0,
+    "to": 4
+   },
+   {
+    "from": 3,
+    "qty": 3,
+    "p": 0.0,
+    "to": 0
+   }
+  ]
+ },
+ "craft": {
+  "cols": {
+   "cn": [
+    "宝石名称",
+    "加工概率",
+    "概率总计"
+   ],
+   "en": [
+    "Gem name",
+    "Craft rate",
+    "Total rate"
+   ],
+   "ja": [
+    "宝石名",
+    "細工成功率",
+    "合計確率"
+   ],
+   "kr": [
+    "보석명",
+    "세공확률",
+    "확률 합"
+   ]
+  },
+  "sections": [
+   {
+    "stage": 1,
+    "total": 100,
+    "rows": [
+     {
+      "cn": "西普奈尔的蓝宝石 (力量1, 女神的祝福 8)",
+      "en": "Syphnel's Sapphire (STR1, Goddess's Blessing 8)",
+      "ja": "シフネルのサファイア (力1, 女神の祝福 8)",
+      "kr": "시프넬의사파이어 (힘1, 여신의축복 8)",
+      "stat": "str",
+      "attr": 1,
+      "effect": "goddessBlessing",
+      "value": 8,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的蓝宝石 (灵敏1, 女神的祝福 8)",
+      "en": "Syphnel's Sapphire (DEX1, Goddess's Blessing 8)",
+      "ja": "シフネルのサファイア (敏捷1, 女神の祝福 8)",
+      "kr": "시프넬의사파이어 (민첩1, 여신의축복 8)",
+      "stat": "dex",
+      "attr": 1,
+      "effect": "goddessBlessing",
+      "value": 8,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的蓝宝石 (智能1, 女神的祝福 8)",
+      "en": "Syphnel's Sapphire (INT1, Goddess's Blessing 8)",
+      "ja": "シフネルのサファイア (知能1, 女神の祝福 8)",
+      "kr": "시프넬의사파이어 (지능1, 여신의축복 8)",
+      "stat": "int",
+      "attr": 1,
+      "effect": "goddessBlessing",
+      "value": 8,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的蓝宝石 (体力10, 女神的祝福 8)",
+      "en": "Syphnel's Sapphire (HP10, Goddess's Blessing 8)",
+      "ja": "シフネルのサファイア (体力10, 女神の祝福 8)",
+      "kr": "시프넬의사파이어 (체력10, 여신의축복 8)",
+      "stat": "hp",
+      "attr": 10,
+      "effect": "goddessBlessing",
+      "value": 8,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蓝宝石 (力量1, 精灵的敏捷 1)",
+      "en": "Serain's Sapphire (STR1, Fairy's Agility 1)",
+      "ja": "セレインのサファイア (力1, 妖精の機敏さ 1)",
+      "kr": "세레인의사파이어 (힘1, 요정의기민함 1)",
+      "stat": "str",
+      "attr": 1,
+      "effect": "fairyAgility",
+      "value": 1,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蓝宝石 (灵敏1, 精灵的敏捷 1)",
+      "en": "Serain's Sapphire (DEX1, Fairy's Agility 1)",
+      "ja": "セレインのサファイア (敏捷1, 妖精の機敏さ 1)",
+      "kr": "세레인의사파이어 (민첩1, 요정의기민함 1)",
+      "stat": "dex",
+      "attr": 1,
+      "effect": "fairyAgility",
+      "value": 1,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蓝宝石 (智能1, 精灵的敏捷 1)",
+      "en": "Serain's Sapphire (INT1, Fairy's Agility 1)",
+      "ja": "セレインのサファイア (知能1, 妖精の機敏さ 1)",
+      "kr": "세레인의사파이어 (지능1, 요정의기민함 1)",
+      "stat": "int",
+      "attr": 1,
+      "effect": "fairyAgility",
+      "value": 1,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蓝宝石 (体力10, 精灵的敏捷 1)",
+      "en": "Serain's Sapphire (HP10, Fairy's Agility 1)",
+      "ja": "セレインのサファイア (体力10, 妖精の機敏さ 1)",
+      "kr": "세레인의사파이어 (체력10, 요정의기민함 1)",
+      "stat": "hp",
+      "attr": 10,
+      "effect": "fairyAgility",
+      "value": 1,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黑曜岩 (力量1, 肾上腺素 2)",
+      "en": "Serain's Obsidian (STR1, Adrenaline 2)",
+      "ja": "セレインの黒曜石 (力1, アドレナリン 2)",
+      "kr": "세레인의흑요석 (힘1, 아드레날린 2)",
+      "stat": "str",
+      "attr": 1,
+      "effect": "adrenaline",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黑曜岩 (灵敏1, 肾上腺素 2)",
+      "en": "Serain's Obsidian (DEX1, Adrenaline 2)",
+      "ja": "セレインの黒曜石 (敏捷1, アドレナリン 2)",
+      "kr": "세레인의흑요석 (민첩1, 아드레날린 2)",
+      "stat": "dex",
+      "attr": 1,
+      "effect": "adrenaline",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黑曜岩 (智能1, 肾上腺素 2)",
+      "en": "Serain's Obsidian (INT1, Adrenaline 2)",
+      "ja": "セレインの黒曜石 (知能1, アドレナリン 2)",
+      "kr": "세레인의흑요석 (지능1, 아드레날린 2)",
+      "stat": "int",
+      "attr": 1,
+      "effect": "adrenaline",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黑曜岩 (体力10, 肾上腺素 2)",
+      "en": "Serain's Obsidian (HP10, Adrenaline 2)",
+      "ja": "セレインの黒曜石 (体力10, アドレナリン 2)",
+      "kr": "세레인의흑요석 (체력10, 아드레날린 2)",
+      "stat": "hp",
+      "attr": 10,
+      "effect": "adrenaline",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黑曜岩 (力量1, 英雄之力 3)",
+      "en": "Wingfil's Obsidian (STR1, Hero's Strength 3)",
+      "ja": "ウィングフリールの黒曜石 (力1, ヒーローの力 3)",
+      "kr": "윙프릴의흑요석 (힘1, 영웅의힘 3)",
+      "stat": "str",
+      "attr": 1,
+      "effect": "heroStrength",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黑曜岩 (灵敏1, 英雄之力 3)",
+      "en": "Wingfil's Obsidian (DEX1, Hero's Strength 3)",
+      "ja": "ウィングフリールの黒曜石 (敏捷1, ヒーローの力 3)",
+      "kr": "윙프릴의흑요석 (민첩1, 영웅의힘 3)",
+      "stat": "dex",
+      "attr": 1,
+      "effect": "heroStrength",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黑曜岩 (智能1, 英雄之力 3)",
+      "en": "Wingfil's Obsidian (INT1, Hero's Strength 3)",
+      "ja": "ウィングフリールの黒曜石 (知能1, ヒーローの力 3)",
+      "kr": "윙프릴의흑요석 (지능1, 영웅의힘 3)",
+      "stat": "int",
+      "attr": 1,
+      "effect": "heroStrength",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黑曜岩 (体力10, 英雄之力 3)",
+      "en": "Wingfil's Obsidian (HP10, Hero's Strength 3)",
+      "ja": "ウィングフリールの黒曜石 (体力10, ヒーローの力 3)",
+      "kr": "윙프릴의흑요석 (체력10, 영웅의힘 3)",
+      "stat": "hp",
+      "attr": 10,
+      "effect": "heroStrength",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蓝宝石 (力量1, 趁虚封锁 2)",
+      "en": "Wingfil's Sapphire (STR1, Sealing the Crack 2)",
+      "ja": "ウィングフリールのサファイア (力1, 隙のなさ 2)",
+      "kr": "윙프릴의사파이어 (힘1, 빈틈봉쇄 2)",
+      "stat": "str",
+      "attr": 1,
+      "effect": "sealingCrack",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蓝宝石 (灵敏1, 趁虚封锁 2)",
+      "en": "Wingfil's Sapphire (DEX1, Sealing the Crack 2)",
+      "ja": "ウィングフリールのサファイア (敏捷1, 隙のなさ 2)",
+      "kr": "윙프릴의사파이어 (민첩1, 빈틈봉쇄 2)",
+      "stat": "dex",
+      "attr": 1,
+      "effect": "sealingCrack",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蓝宝石 (智能1, 趁虚封锁 2)",
+      "en": "Wingfil's Sapphire (INT1, Sealing the Crack 2)",
+      "ja": "ウィングフリールのサファイア (知能1, 隙のなさ 2)",
+      "kr": "윙프릴의사파이어 (지능1, 빈틈봉쇄 2)",
+      "stat": "int",
+      "attr": 1,
+      "effect": "sealingCrack",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蓝宝石 (体力10, 趁虚封锁 2)",
+      "en": "Wingfil's Sapphire (HP10, Sealing the Crack 2)",
+      "ja": "ウィングフリールのサファイア (体力10, 隙のなさ 2)",
+      "kr": "윙프릴의사파이어 (체력10, 빈틈봉쇄 2)",
+      "stat": "hp",
+      "attr": 10,
+      "effect": "sealingCrack",
+      "value": 2,
+      "p": 5.0
+     }
+    ]
+   },
+   {
+    "stage": 2,
+    "total": 100,
+    "rows": [
+     {
+      "cn": "西普奈尔的黄宝石 (力量 2, 女神的祝福 9)",
+      "en": "Syphnel's Topaz (STR 2, Goddess's Blessing 9)",
+      "ja": "シフネルのトパーズ (力 2, 女神の祝福 9)",
+      "kr": "시프넬의토파즈 (힘 2, 여신의축복 9)",
+      "stat": "str",
+      "attr": 2,
+      "effect": "goddessBlessing",
+      "value": 9,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黄宝石 (灵敏 2, 女神的祝福 9)",
+      "en": "Syphnel's Topaz (DEX 2, Goddess's Blessing 9)",
+      "ja": "シフネルのトパーズ (敏捷 2, 女神の祝福 9)",
+      "kr": "시프넬의토파즈 (민첩 2, 여신의축복 9)",
+      "stat": "dex",
+      "attr": 2,
+      "effect": "goddessBlessing",
+      "value": 9,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黄宝石 (智能 2, 女神的祝福 9)",
+      "en": "Syphnel's Topaz (INT 2, Goddess's Blessing 9)",
+      "ja": "シフネルのトパーズ (知能 2, 女神の祝福 9)",
+      "kr": "시프넬의토파즈 (지능 2, 여신의축복 9)",
+      "stat": "int",
+      "attr": 2,
+      "effect": "goddessBlessing",
+      "value": 9,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黄宝石 (体力 20, 女神的祝福 9)",
+      "en": "Syphnel's Topaz (HP 20, Goddess's Blessing 9)",
+      "ja": "シフネルのトパーズ (体力 20, 女神の祝福 9)",
+      "kr": "시프넬의토파즈 (체력 20, 여신의축복 9)",
+      "stat": "hp",
+      "attr": 20,
+      "effect": "goddessBlessing",
+      "value": 9,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的红宝石 (力量 2, 精灵的敏捷 2)",
+      "en": "Serain's Ruby (STR 2, Fairy's Agility 2)",
+      "ja": "セレインのルビー (力 2, 妖精の機敏さ 2)",
+      "kr": "세레인의루비 (힘 2, 요정의기민함 2)",
+      "stat": "str",
+      "attr": 2,
+      "effect": "fairyAgility",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的红宝石 (灵敏 2, 精灵的敏捷 2)",
+      "en": "Serain's Ruby (DEX 2, Fairy's Agility 2)",
+      "ja": "セレインのルビー (敏捷 2, 妖精の機敏さ 2)",
+      "kr": "세레인의루비 (민첩 2, 요정의기민함 2)",
+      "stat": "dex",
+      "attr": 2,
+      "effect": "fairyAgility",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的红宝石 (智能 2, 精灵的敏捷 2)",
+      "en": "Serain's Ruby (INT 2, Fairy's Agility 2)",
+      "ja": "セレインのルビー (知能 2, 妖精の機敏さ 2)",
+      "kr": "세레인의루비 (지능 2, 요정의기민함 2)",
+      "stat": "int",
+      "attr": 2,
+      "effect": "fairyAgility",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的红宝石 (体力 20, 精灵的敏捷 2)",
+      "en": "Serain's Ruby (HP 20, Fairy's Agility 2)",
+      "ja": "セレインのルビー (体力 20, 妖精の機敏さ 2)",
+      "kr": "세레인의루비 (체력 20, 요정의기민함 2)",
+      "stat": "hp",
+      "attr": 20,
+      "effect": "fairyAgility",
+      "value": 2,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的绿宝石 (力量 2, 肾上腺素 3)",
+      "en": "Serain's Emerald (STR 2, Adrenaline 3)",
+      "ja": "セレインのエメラルド (力 2, アドレナリン 3)",
+      "kr": "세레인의에메랄드 (힘 2, 아드레날린 3)",
+      "stat": "str",
+      "attr": 2,
+      "effect": "adrenaline",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的绿宝石 (灵敏 2, 肾上腺素 3)",
+      "en": "Serain's Emerald (DEX 2, Adrenaline 3)",
+      "ja": "セレインのエメラルド (敏捷 2, アドレナリン 3)",
+      "kr": "세레인의에메랄드 (민첩 2, 아드레날린 3)",
+      "stat": "dex",
+      "attr": 2,
+      "effect": "adrenaline",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的绿宝石 (智能 2, 肾上腺素 3)",
+      "en": "Serain's Emerald (INT 2, Adrenaline 3)",
+      "ja": "セレインのエメラルド (知能 2, アドレナリン 3)",
+      "kr": "세레인의에메랄드 (지능 2, 아드레날린 3)",
+      "stat": "int",
+      "attr": 2,
+      "effect": "adrenaline",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的绿宝石 (体力 20, 肾上腺素 3)",
+      "en": "Serain's Emerald (HP 20, Adrenaline 3)",
+      "ja": "セレインのエメラルド (体力 20, アドレナリン 3)",
+      "kr": "세레인의에메랄드 (체력 20, 아드레날린 3)",
+      "stat": "hp",
+      "attr": 20,
+      "effect": "adrenaline",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (力量 2, 英雄之力 4)",
+      "en": "Wingfil's Ruby (STR 2, Hero's Strength 4)",
+      "ja": "ウィングフリールのルビー (力 2, ヒーローの力 4)",
+      "kr": "윙프릴의루비 (힘 2, 영웅의힘 4)",
+      "stat": "str",
+      "attr": 2,
+      "effect": "heroStrength",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (灵敏 2, 英雄之力 4)",
+      "en": "Wingfil's Ruby (DEX 2, Hero's Strength 4)",
+      "ja": "ウィングフリールのルビー (敏捷 2, ヒーローの力 4)",
+      "kr": "윙프릴의루비 (민첩 2, 영웅의힘 4)",
+      "stat": "dex",
+      "attr": 2,
+      "effect": "heroStrength",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (智能 2, 英雄之力 4)",
+      "en": "Wingfil's Ruby (INT 2, Hero's Strength 4)",
+      "ja": "ウィングフリールのルビー (知能 2, ヒーローの力 4)",
+      "kr": "윙프릴의루비 (지능 2, 영웅의힘 4)",
+      "stat": "int",
+      "attr": 2,
+      "effect": "heroStrength",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (体力 20, 英雄之力 4)",
+      "en": "Wingfil's Ruby (HP 20, Hero's Strength 4)",
+      "ja": "ウィングフリールのルビー (体力 20, ヒーローの力 4)",
+      "kr": "윙프릴의루비 (체력 20, 영웅의힘 4)",
+      "stat": "hp",
+      "attr": 20,
+      "effect": "heroStrength",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的紫水晶 (力量 2, 趁虚封锁 3)",
+      "en": "Wingfil's Amethyst (STR 2, Sealing the Crack 3)",
+      "ja": "ウィングフリールのアメシスト (力 2, 隙のなさ 3)",
+      "kr": "윙프릴의자수정 (힘 2, 빈틈봉쇄 3)",
+      "stat": "str",
+      "attr": 2,
+      "effect": "sealingCrack",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的紫水晶 (灵敏 2, 趁虚封锁 3)",
+      "en": "Wingfil's Amethyst (DEX 2, Sealing the Crack 3)",
+      "ja": "ウィングフリールのアメシスト (敏捷 2, 隙のなさ 3)",
+      "kr": "윙프릴의자수정 (민첩 2, 빈틈봉쇄 3)",
+      "stat": "dex",
+      "attr": 2,
+      "effect": "sealingCrack",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的紫水晶 (智能 2, 趁虚封锁 3)",
+      "en": "Wingfil's Amethyst (INT 2, Sealing the Crack 3)",
+      "ja": "ウィングフリールのアメシスト (知能 2, 隙のなさ 3)",
+      "kr": "윙프릴의자수정 (지능 2, 빈틈봉쇄 3)",
+      "stat": "int",
+      "attr": 2,
+      "effect": "sealingCrack",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的紫水晶 (体力 20, 趁虚封锁 3)",
+      "en": "Wingfil's Amethyst (HP 20, Sealing the Crack 3)",
+      "ja": "ウィングフリールのアメシスト (体力 20, 隙のなさ 3)",
+      "kr": "윙프릴의자수정 (체력 20, 빈틈봉쇄 3)",
+      "stat": "hp",
+      "attr": 20,
+      "effect": "sealingCrack",
+      "value": 3,
+      "p": 5.0
+     }
+    ]
+   },
+   {
+    "stage": 3,
+    "total": 100,
+    "rows": [
+     {
+      "cn": "西普奈尔的黑曜岩 (力量 3, 女神的祝福 10)",
+      "en": "Syphnel's Obsidian (STR 3, Goddess's Blessing 10)",
+      "ja": "シフネルの黒曜石 (力 3, 女神の祝福 10)",
+      "kr": "시프넬의흑요석 (힘 3, 여신의축복 10)",
+      "stat": "str",
+      "attr": 3,
+      "effect": "goddessBlessing",
+      "value": 10,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黑曜岩 (灵敏 3, 女神的祝福 10)",
+      "en": "Syphnel's Obsidian (DEX 3, Goddess's Blessing 10)",
+      "ja": "シフネルの黒曜石 (敏捷 3, 女神の祝福 10)",
+      "kr": "시프넬의흑요석 (민첩 3, 여신의축복 10)",
+      "stat": "dex",
+      "attr": 3,
+      "effect": "goddessBlessing",
+      "value": 10,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黑曜岩 (智能 3, 女神的祝福 10)",
+      "en": "Syphnel's Obsidian (INT 3, Goddess's Blessing 10)",
+      "ja": "シフネルの黒曜石 (知能 3, 女神の祝福 10)",
+      "kr": "시프넬의흑요석 (지능 3, 여신의축복 10)",
+      "stat": "int",
+      "attr": 3,
+      "effect": "goddessBlessing",
+      "value": 10,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的黑曜岩 (体力 30, 女神的祝福 10)",
+      "en": "Syphnel's Obsidian (HP 30, Goddess's Blessing 10)",
+      "ja": "シフネルの黒曜石 (体力 30, 女神の祝福 10)",
+      "kr": "시프넬의흑요석 (체력 30, 여신의축복 10)",
+      "stat": "hp",
+      "attr": 30,
+      "effect": "goddessBlessing",
+      "value": 10,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的紫水晶 (力量 3, 精灵的敏捷 3)",
+      "en": "Serain's Amethyst (STR 3, Fairy's Agility 3)",
+      "ja": "セレインのアメシスト (力 3, 妖精の機敏さ 3)",
+      "kr": "세레인의자수정 (힘 3, 요정의기민함 3)",
+      "stat": "str",
+      "attr": 3,
+      "effect": "fairyAgility",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的紫水晶 (灵敏 3, 精灵的敏捷 3)",
+      "en": "Serain's Amethyst (DEX 3, Fairy's Agility 3)",
+      "ja": "セレインのアメシスト (敏捷 3, 妖精の機敏さ 3)",
+      "kr": "세레인의자수정 (민첩 3, 요정의기민함 3)",
+      "stat": "dex",
+      "attr": 3,
+      "effect": "fairyAgility",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的紫水晶 (智能 3, 精灵的敏捷 3)",
+      "en": "Serain's Amethyst (INT 3, Fairy's Agility 3)",
+      "ja": "セレインのアメシスト (知能 3, 妖精の機敏さ 3)",
+      "kr": "세레인의자수정 (지능 3, 요정의기민함 3)",
+      "stat": "int",
+      "attr": 3,
+      "effect": "fairyAgility",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的紫水晶 (体力 30, 精灵的敏捷 3)",
+      "en": "Serain's Amethyst (HP 30, Fairy's Agility 3)",
+      "ja": "セレインのアメシスト (体力 30, 妖精の機敏さ 3)",
+      "kr": "세레인의자수정 (체력 30, 요정의기민함 3)",
+      "stat": "hp",
+      "attr": 30,
+      "effect": "fairyAgility",
+      "value": 3,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黄宝石 (力量 3, 肾上腺素 4)",
+      "en": "Serain's Topaz (STR 3, Adrenaline 4)",
+      "ja": "セレインのトパーズ (力 3, アドレナリン 4)",
+      "kr": "세레인의토파즈 (힘 3, 아드레날린 4)",
+      "stat": "str",
+      "attr": 3,
+      "effect": "adrenaline",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黄宝石 (灵敏 3, 肾上腺素 4)",
+      "en": "Serain's Topaz (DEX 3, Adrenaline 4)",
+      "ja": "セレインのトパーズ (敏捷 3, アドレナリン 4)",
+      "kr": "세레인의토파즈 (민첩 3, 아드레날린 4)",
+      "stat": "dex",
+      "attr": 3,
+      "effect": "adrenaline",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黄宝石 (智能 3, 肾上腺素 4)",
+      "en": "Serain's Topaz (INT 3, Adrenaline 4)",
+      "ja": "セレインのトパーズ (知能 3, アドレナリン 4)",
+      "kr": "세레인의토파즈 (지능 3, 아드레날린 4)",
+      "stat": "int",
+      "attr": 3,
+      "effect": "adrenaline",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的黄宝石 (体力 30, 肾上腺素 4)",
+      "en": "Serain's Topaz (HP 30, Adrenaline 4)",
+      "ja": "セレインのトパーズ (体力 30, アドレナリン 4)",
+      "kr": "세레인의토파즈 (체력 30, 아드레날린 4)",
+      "stat": "hp",
+      "attr": 30,
+      "effect": "adrenaline",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (力量 3, 英雄之力 5)",
+      "en": "Wingfil's Emerald (STR 3, Hero's Strength 5)",
+      "ja": "ウィングフリールのエメラルド (力 3, ヒーローの力 5)",
+      "kr": "윙프릴의에메랄드 (힘 3, 영웅의힘 5)",
+      "stat": "str",
+      "attr": 3,
+      "effect": "heroStrength",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (灵敏 3, 英雄之力 5)",
+      "en": "Wingfil's Emerald (DEX 3, Hero's Strength 5)",
+      "ja": "ウィングフリールのエメラルド (敏捷 3, ヒーローの力 5)",
+      "kr": "윙프릴의에메랄드 (민첩 3, 영웅의힘 5)",
+      "stat": "dex",
+      "attr": 3,
+      "effect": "heroStrength",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (智能 3, 英雄之力 5)",
+      "en": "Wingfil's Emerald (INT 3, Hero's Strength 5)",
+      "ja": "ウィングフリールのエメラルド (知能 3, ヒーローの力 5)",
+      "kr": "윙프릴의에메랄드 (지능 3, 영웅의힘 5)",
+      "stat": "int",
+      "attr": 3,
+      "effect": "heroStrength",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的红宝石 (体力 30, 英雄之力 5)",
+      "en": "Wingfil's Emerald (HP 30, Hero's Strength 5)",
+      "ja": "ウィングフリールのエメラルド (体力 30, ヒーローの力 5)",
+      "kr": "윙프릴의에메랄드 (체력 30, 영웅의힘 5)",
+      "stat": "hp",
+      "attr": 30,
+      "effect": "heroStrength",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黄宝石 (力量 3, 趁虚封锁 4)",
+      "en": "Wingfril's Topaz (STR 3, Sealing the Crack 4)",
+      "ja": "ウィングフリールのトパーズ (力 3, 隙のなさ 4)",
+      "kr": "윙프릴의토파즈 (힘 3, 빈틈봉쇄 4)",
+      "stat": "str",
+      "attr": 3,
+      "effect": "sealingCrack",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黄宝石 (灵敏 3, 趁虚封锁 4)",
+      "en": "Wingfril's Topaz (DEX 3, Sealing the Crack 4)",
+      "ja": "ウィングフリールのトパーズ (敏捷 3, 隙のなさ 4)",
+      "kr": "윙프릴의토파즈 (민첩 3, 빈틈봉쇄 4)",
+      "stat": "dex",
+      "attr": 3,
+      "effect": "sealingCrack",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黄宝石 (智能 3, 趁虚封锁 4)",
+      "en": "Wingfril's Topaz (INT 3, Sealing the Crack 4)",
+      "ja": "ウィングフリールのトパーズ (知能 3, 隙のなさ 4)",
+      "kr": "윙프릴의토파즈 (지능 3, 빈틈봉쇄 4)",
+      "stat": "int",
+      "attr": 3,
+      "effect": "sealingCrack",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的黄宝石 (体力 30, 趁虚封锁 4)",
+      "en": "Wingfril's Topaz (HP 30, Sealing the Crack 4)",
+      "ja": "ウィングフリールのトパーズ (体力 30, 隙のなさ 4)",
+      "kr": "윙프릴의토파즈 (체력 30, 빈틈봉쇄 4)",
+      "stat": "hp",
+      "attr": 30,
+      "effect": "sealingCrack",
+      "value": 4,
+      "p": 5.0
+     }
+    ]
+   },
+   {
+    "stage": 4,
+    "total": 100,
+    "rows": [
+     {
+      "cn": "西普奈尔的石榴石 (力量 4, 女神的祝福 11)",
+      "en": "Syphnel's Garnet (STR 4, Goddess's Blessing 11)",
+      "ja": "シフネルのガーネット (力 4, 女神の祝福 11)",
+      "kr": "시프넬의가넷 (힘 4, 여신의축복 11)",
+      "stat": "str",
+      "attr": 4,
+      "effect": "goddessBlessing",
+      "value": 11,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的石榴石 (灵敏 4, 女神的祝福 11)",
+      "en": "Syphnel's Garnet (DEX 4, Goddess's Blessing 11)",
+      "ja": "シフネルのガーネット (敏捷 4, 女神の祝福 11)",
+      "kr": "시프넬의가넷 (민첩 4, 여신의축복 11)",
+      "stat": "dex",
+      "attr": 4,
+      "effect": "goddessBlessing",
+      "value": 11,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的石榴石 (智能 4, 女神的祝福 11)",
+      "en": "Syphnel's Garnet (INT 4, Goddess's Blessing 11)",
+      "ja": "シフネルのガーネット (知能 4, 女神の祝福 11)",
+      "kr": "시프넬의가넷 (지능 4, 여신의축복 11)",
+      "stat": "int",
+      "attr": 4,
+      "effect": "goddessBlessing",
+      "value": 11,
+      "p": 5.0
+     },
+     {
+      "cn": "西普奈尔的石榴石 (体力 40, 女神的祝福 11)",
+      "en": "Syphnel's Garnet (HP 40, Goddess's Blessing 11)",
+      "ja": "シフネルのガーネット (体力 40, 女神の祝福 11)",
+      "kr": "시프넬의가넷 (체력 40, 여신의축복 11)",
+      "stat": "hp",
+      "attr": 40,
+      "effect": "goddessBlessing",
+      "value": 11,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的石榴石 (力量 4, 精灵的敏捷 4)",
+      "en": "Serain's Garnet (STR 4, Fairy's Agility 4)",
+      "ja": "セレインのガーネット (力 4, 妖精の機敏さ 4)",
+      "kr": "세레인의가넷 (힘 4, 요정의기민함 4)",
+      "stat": "str",
+      "attr": 4,
+      "effect": "fairyAgility",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的石榴石 (灵敏 4, 精灵的敏捷 4)",
+      "en": "Serain's Garnet (DEX 4, Fairy's Agility 4)",
+      "ja": "セレインのガーネット (敏捷 4, 妖精の機敏さ 4)",
+      "kr": "세레인의가넷 (민첩 4, 요정의기민함 4)",
+      "stat": "dex",
+      "attr": 4,
+      "effect": "fairyAgility",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的石榴石 (智能 4, 精灵的敏捷 4)",
+      "en": "Serain's Garnet (INT 4, Fairy's Agility 4)",
+      "ja": "セレインのガーネット (知能 4, 妖精の機敏さ 4)",
+      "kr": "세레인의가넷 (지능 4, 요정의기민함 4)",
+      "stat": "int",
+      "attr": 4,
+      "effect": "fairyAgility",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的石榴石 (体力 40, 精灵的敏捷 4)",
+      "en": "Serain's Garnet (HP 40, Fairy's Agility 4)",
+      "ja": "セレインのガーネット (体力 40, 妖精の機敏さ 4)",
+      "kr": "세레인의가넷 (체력 40, 요정의기민함 4)",
+      "stat": "hp",
+      "attr": 40,
+      "effect": "fairyAgility",
+      "value": 4,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蛋白石 (力量 4, 肾上腺素 5)",
+      "en": "Serain's Opal (STR 4, Adrenaline 5)",
+      "ja": "セレインのオパール (力 4, アドレナリン 5)",
+      "kr": "세레인의오팔 (힘 4, 아드레날린 5)",
+      "stat": "str",
+      "attr": 4,
+      "effect": "adrenaline",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蛋白石 (灵敏 4, 肾上腺素 5)",
+      "en": "Serain's Opal (DEX 4, Adrenaline 5)",
+      "ja": "セレインのオパール (敏捷 4, アドレナリン 5)",
+      "kr": "세레인의오팔 (민첩 4, 아드레날린 5)",
+      "stat": "dex",
+      "attr": 4,
+      "effect": "adrenaline",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蛋白石 (智能 4, 肾上腺素 5)",
+      "en": "Serain's Opal (INT 4, Adrenaline 5)",
+      "ja": "セレインのオパール (知能 4, アドレナリン 5)",
+      "kr": "세레인의오팔 (지능 4, 아드레날린 5)",
+      "stat": "int",
+      "attr": 4,
+      "effect": "adrenaline",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "赛勒殷的蛋白石 (体力 40, 肾上腺素 5)",
+      "en": "Serain's Opal (HP 40, Adrenaline 5)",
+      "ja": "セレインのオパール (体力 40, アドレナリン 5)",
+      "kr": "세레인의오팔 (체력 40, 아드레날린 5)",
+      "stat": "hp",
+      "attr": 40,
+      "effect": "adrenaline",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的石榴石 (力量 4, 英雄之力 6)",
+      "en": "Wingfril's Garnet (STR 4, Hero's Strength 6)",
+      "ja": "ウィングフリールのガーネット (力 4, ヒーローの力 6)",
+      "kr": "윙프릴의가넷 (힘 4, 영웅의힘 6)",
+      "stat": "str",
+      "attr": 4,
+      "effect": "heroStrength",
+      "value": 6,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的石榴石 (灵敏 4, 英雄之力 6)",
+      "en": "Wingfril's Garnet (DEX 4, Hero's Strength 6)",
+      "ja": "ウィングフリールのガーネット (敏捷 4, ヒーローの力 6)",
+      "kr": "윙프릴의가넷 (민첩 4, 영웅의힘 6)",
+      "stat": "dex",
+      "attr": 4,
+      "effect": "heroStrength",
+      "value": 6,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的石榴石 (智能 4, 英雄之力 6)",
+      "en": "Wingfril's Garnet (INT 4, Hero's Strength 6)",
+      "ja": "ウィングフリールのガーネット (知能 4, ヒーローの力 6)",
+      "kr": "윙프릴의가넷 (지능 4, 영웅의힘 6)",
+      "stat": "int",
+      "attr": 4,
+      "effect": "heroStrength",
+      "value": 6,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的石榴石 (体力 40, 英雄之力 6)",
+      "en": "Wingfril's Garnet (HP 40, Hero's Strength 6)",
+      "ja": "ウィングフリールのガーネット (体力 40, ヒーローの力 6)",
+      "kr": "윙프릴의가넷 (체력 40, 영웅의힘 6)",
+      "stat": "hp",
+      "attr": 40,
+      "effect": "heroStrength",
+      "value": 6,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蛋白石 (力量 4, 趁虚封锁 5)",
+      "en": "Wingfril's Opal (STR 4, Sealing the Crack 5)",
+      "ja": "ウィングフリールのオパール (力 4, 隙のなさ 5)",
+      "kr": "윙프릴의오팔 (힘 4, 빈틈봉쇄 5)",
+      "stat": "str",
+      "attr": 4,
+      "effect": "sealingCrack",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蛋白石 (灵敏 4, 趁虚封锁 5)",
+      "en": "Wingfril's Opal (DEX 4, Sealing the Crack 5)",
+      "ja": "ウィングフリールのオパール (敏捷 4, 隙のなさ 5)",
+      "kr": "윙프릴의오팔 (민첩 4, 빈틈봉쇄 5)",
+      "stat": "dex",
+      "attr": 4,
+      "effect": "sealingCrack",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蛋白石 (智能 4, 趁虚封锁 5)",
+      "en": "Wingfril's Opal (INT 4, Sealing the Crack 5)",
+      "ja": "ウィングフリールのオパール (知能 4, 隙のなさ 5)",
+      "kr": "윙프릴의오팔 (지능 4, 빈틈봉쇄 5)",
+      "stat": "int",
+      "attr": 4,
+      "effect": "sealingCrack",
+      "value": 5,
+      "p": 5.0
+     },
+     {
+      "cn": "羽妖的蛋白石 (体力 40, 趁虚封锁 5)",
+      "en": "Wingfril's Opal (HP 40, Sealing the Crack 5)",
+      "ja": "ウィングフリールのオパール (体力 40, 隙のなさ 5)",
+      "kr": "윙프릴의오팔 (체력 40, 빈틈봉쇄 5)",
+      "stat": "hp",
+      "attr": 40,
+      "effect": "sealingCrack",
+      "value": 5,
+      "p": 5.0
+     }
+    ]
+   }
+  ]
+ }
+}

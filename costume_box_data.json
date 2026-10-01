@@ -1,0 +1,4842 @@
+{
+ "source": "https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/  (随机服装宝箱 概率公示) | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html",
+ "note": "官方概率公示页解析结果；p 为该表内的百分比（子表内为子表自身概率）；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；2026-09-29 加入官方 lim.com2us.com「隨機服裝寶箱」8 个活动页（100100~100800）：XMAS 聖誕鐘聲 / HALLOWEEN 不給糖就搗蛋！/ PAJAMA 睡衣派對 / FESTIVAL 慶典、盛宴、宴會！(服裝) / FOREST 森林青草香 / MOON 青雲赤月 / FRIENDS 原野好友 / STAGE 音樂舞台。官方 ja 标题为「번역 필요」→ 箱名 ja 用站内约定译名（100100 取同名道具官方 ja）；道具名取站点 lang.json.costumes 现名，站内没有的（聖誕鐘聲整箱）保留官方名、ref 为空。",
+ "boxes": {
+  "A": {
+   "title": {
+    "cn": "随机服装宝箱 A",
+    "en": "Random Costume Box A",
+    "ja": "ランダムコスチュームBOX(A)",
+    "kr": "랜덤코스튬상자 A"
+   },
+   "items": [
+    {
+     "cn": "时尚墨镜",
+     "en": "Fashionable Sunglasses",
+     "ja": "ファッションサングラス",
+     "kr": "패션선글라스",
+     "ref": "Fashionable Sunglasses",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.6
+    },
+    {
+     "cn": "帅气眼镜",
+     "en": "Hipster Sunglasses",
+     "ja": "おしゃれサングラス",
+     "kr": "멋쟁이선글라스",
+     "ref": "Hipster Sunglasses",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.6
+    },
+    {
+     "cn": "防尘口罩",
+     "en": "Dustproof Mask",
+     "ja": "防塵マスク",
+     "kr": "방진마스크",
+     "ref": "Dustproof Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.6
+    },
+    {
+     "cn": "虎克船长眼罩",
+     "en": "Cap. Hook's Eye Patch",
+     "ja": "フック船長の眼帯",
+     "kr": "후쿠선장의안대",
+     "ref": "Cap. Hook's Eye Patch",
+     "kind": "costume",
+     "toBox": null,
+     "p": 5.0
+    },
+    {
+     "cn": "斗笠",
+     "en": "Conical Hat",
+     "ja": "笠",
+     "kr": "삿갓",
+     "ref": "Conical Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "安全第一",
+     "en": "Safety First",
+     "ja": "安全第一",
+     "kr": "안전제일",
+     "ref": "Safety First",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "通便器",
+     "en": "Plunger",
+     "ja": "ラバーカップ",
+     "kr": "뚫어뻥",
+     "ref": "Plunger",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "狐狸耳朵",
+     "en": "Fox Ears",
+     "ja": "狐耳",
+     "kr": "여우귀",
+     "ref": "Fox Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 5.0
+    },
+    {
+     "cn": "随机手套",
+     "en": "Costume Glove Box",
+     "ja": "コスチューム手袋ボックス",
+     "kr": "랜덤코스튬장갑",
+     "ref": "Costume Glove Box",
+     "kind": "box",
+     "toBox": "GLOVE",
+     "p": 10.0
+    },
+    {
+     "cn": "随机长靴",
+     "en": "Costume Boot Box",
+     "ja": "コスチューム靴ボックス",
+     "kr": "랜덤코스튬장화",
+     "ref": "Costume Boot Box",
+     "kind": "box",
+     "toBox": "BOOT",
+     "p": 10.0
+    },
+    {
+     "cn": "今天的心情",
+     "en": "Today's Mood",
+     "ja": "今日の気分",
+     "kr": "오늘의기분",
+     "ref": null,
+     "kind": "emote",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "里艾尔的头盔",
+     "en": "Riel's Hat",
+     "ja": "リエルの兜",
+     "kr": "리엘의투구",
+     "ref": "Riel's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "里艾尔的盔甲",
+     "en": "Riel's Armor",
+     "ja": "リエルの鎧",
+     "kr": "리엘의갑옷",
+     "ref": "Riel's Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "里艾尔的金属手套",
+     "en": "Riel's Gauntlet",
+     "ja": "リエルのガントレット",
+     "kr": "리엘의건틀릿",
+     "ref": "Riel's Gauntlet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "里艾尔的长靴",
+     "en": "Riel's Boots",
+     "ja": "リエルのブーツ",
+     "kr": "리엘의부츠",
+     "ref": "Riel's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾伊尤的帽子",
+     "en": "Ayo's Hat",
+     "ja": "アイヨの帽子",
+     "kr": "아이요의모자",
+     "ref": "Ayo's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾伊尤的衣服",
+     "en": "Ayo's Clothing",
+     "ja": "アイヨの服",
+     "kr": "아이요의옷",
+     "ref": "Ayo's Clothing",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾伊尤的手套",
+     "en": "Ayo's Gloves",
+     "ja": "アイヨの手袋",
+     "kr": "아이요의장갑",
+     "ref": "Ayo's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾伊尤的鞋子",
+     "en": "Ayo's Boots",
+     "ja": "アイヨの靴",
+     "kr": "아이요의신발",
+     "ref": "Ayo's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "盖尔的帽子",
+     "en": "Geul's Hat",
+     "ja": "ゲオルの帽子",
+     "kr": "게올의모자",
+     "ref": "Geul's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "盖尔的长袍",
+     "en": "Geul's Robe",
+     "ja": "ゲオルのローブ",
+     "kr": "게올의로브",
+     "ref": "Geul's Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "盖尔的手套",
+     "en": "Geul's Gloves",
+     "ja": "ゲオルの手袋",
+     "kr": "게올의장갑",
+     "ref": "Geul's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "盖尔的鞋子",
+     "en": "Geul's Boots",
+     "ja": "ゲオルの靴",
+     "kr": "게올의신발",
+     "ref": "Geul's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": [
+    {
+     "id": "GLOVE",
+     "title": {
+      "cn": "随机手套",
+      "en": "Costume Glove Box",
+      "ja": "コスチューム手袋ボックス",
+      "kr": "랜덤코스튬장갑"
+     },
+     "items": [
+      {
+       "cn": "红色手套",
+       "en": "Red Gloves",
+       "ja": "手袋(レッド)",
+       "kr": "빨강장갑",
+       "ref": "Red Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 15.0
+      },
+      {
+       "cn": "黄色手套",
+       "en": "Yellow Gloves",
+       "ja": "手袋(イエロー)",
+       "kr": "노랑장갑",
+       "ref": "Yellow Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "蓝色手套",
+       "en": "Blue Gloves",
+       "ja": "手袋(ブルー)",
+       "kr": "파랑장갑",
+       "ref": "Blue Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 14.9
+      },
+      {
+       "cn": "绿色手套",
+       "en": "Green Gloves",
+       "ja": "手袋(グリーン)",
+       "kr": "녹색장갑",
+       "ref": "Green Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "粉红手套",
+       "en": "Pink Gloves",
+       "ja": "手袋(ピンク)",
+       "kr": "분홍장갑",
+       "ref": "Pink Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "紫色手套",
+       "en": "Purple Gloves",
+       "ja": "手袋(バイオレット)",
+       "kr": "보라장갑",
+       "ref": "Purple Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "褐色手套",
+       "en": "Brown Gloves",
+       "ja": "手袋(ブラウン)",
+       "kr": "갈색장갑",
+       "ref": "Brown Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "灰色手套",
+       "en": "Grey Gloves",
+       "ja": "手袋(グレー)",
+       "kr": "회색장갑",
+       "ref": "Grey Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "橘色手套",
+       "en": "Orange Gloves",
+       "ja": "手袋(オレンジ)",
+       "kr": "주황장갑",
+       "ref": "Orange Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "米白手套",
+       "en": "Beige Gloves",
+       "ja": "手袋(ベージュ)",
+       "kr": "베이지장갑",
+       "ref": "Beige Gloves",
+       "kind": "costume",
+       "toBox": null,
+       "p": 0.1
+      }
+     ]
+    },
+    {
+     "id": "BOOT",
+     "title": {
+      "cn": "随机长靴",
+      "en": "Costume Boot Box",
+      "ja": "コスチューム靴ボックス",
+      "kr": "랜덤코스튬장화"
+     },
+     "items": [
+      {
+       "cn": "红色鞋子",
+       "en": "Red Boots",
+       "ja": "靴(レッド)",
+       "kr": "빨강신발",
+       "ref": "Red Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 15.0
+      },
+      {
+       "cn": "黄色鞋子",
+       "en": "Yellow Boots",
+       "ja": "靴(イエロー)",
+       "kr": "노랑신발",
+       "ref": "Yellow Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "蓝色鞋子",
+       "en": "Blue Boots",
+       "ja": "靴(ブルー)",
+       "kr": "파랑신발",
+       "ref": "Blue Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 14.9
+      },
+      {
+       "cn": "绿色鞋子",
+       "en": "Green Boots",
+       "ja": "靴(グリーン)",
+       "kr": "녹색신발",
+       "ref": "Green Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "粉红鞋子",
+       "en": "Pink Boots",
+       "ja": "靴(ピンク)",
+       "kr": "분홍신발",
+       "ref": "Pink Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "紫色鞋子",
+       "en": "Purple Boots",
+       "ja": "靴(バイオレット)",
+       "kr": "보라신발",
+       "ref": "Purple Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "褐色鞋子",
+       "en": "Brown Boots",
+       "ja": "靴(ブラウン)",
+       "kr": "갈색신발",
+       "ref": "Brown Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "灰色鞋子",
+       "en": "Grey Boots",
+       "ja": "靴(グレー)",
+       "kr": "회색신발",
+       "ref": "Grey Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "橘色鞋子",
+       "en": "Orange Boots",
+       "ja": "靴(オレンジ)",
+       "kr": "주황신발",
+       "ref": "Orange Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 10.0
+      },
+      {
+       "cn": "米白鞋子",
+       "en": "Beige Boots",
+       "ja": "靴(ベージュ)",
+       "kr": "베이지신발",
+       "ref": "Beige Boots",
+       "kind": "costume",
+       "toBox": null,
+       "p": 0.1
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "title": {
+    "cn": "随机服装宝箱 B",
+    "en": "Random Costume Box B",
+    "ja": "ランダムコスチュームBOX(B)",
+    "kr": "랜덤코스튬상자 B"
+   },
+   "items": [
+    {
+     "cn": "红色蝴蝶结",
+     "en": "Red Ribbon",
+     "ja": "赤いリボン",
+     "kr": "빨강리본띠",
+     "ref": "Red Ribbon",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "白色针织帽",
+     "en": "White Furry Beanie",
+     "ja": "白いニット帽",
+     "kr": "하양털비니",
+     "ref": "White Furry Beanie",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "黑色针织帽",
+     "en": "Black Furry Beanie",
+     "ja": "黒いニット帽",
+     "kr": "검정털비니",
+     "ref": "Black Furry Beanie",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "红色蘑菇帽",
+     "en": "Red Mushroom Hat",
+     "ja": "赤いキノコ帽子",
+     "kr": "빨강버섯모자",
+     "ref": "Red Mushroom Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "头顶重石",
+     "en": "Stone Head",
+     "ja": "石頭",
+     "kr": "돌머리",
+     "ref": "Stone Head",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "扒手口罩",
+     "en": "Thief Mask",
+     "ja": "盗賊マスク",
+     "kr": "도적단마스크",
+     "ref": "Thief Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "可爱鸭鸭帽",
+     "en": "Duck Hood",
+     "ja": "アヒルフード",
+     "kr": "귀여운오리",
+     "ref": "Duck Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "大声一点！",
+     "en": "Pump It Up!",
+     "ja": "声上げろ！",
+     "kr": "소리높여!",
+     "ref": "Pump It Up!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "狂战士",
+     "en": "Berserker",
+     "ja": "狂戦士",
+     "kr": "광전사",
+     "ref": "Berserker",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "精灵",
+     "en": "Fairy",
+     "ja": "妖精",
+     "kr": "요정",
+     "ref": "Fairy",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "黑魔法师",
+     "en": "Warlock",
+     "ja": "黒魔術師",
+     "kr": "흑마법사",
+     "ref": "Warlock",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "C": {
+   "title": {
+    "cn": "随机服装宝箱 C",
+    "en": "Random Costume Box C",
+    "ja": "ランダムコスチュームBOX(C)",
+    "kr": "랜덤코스튬상자 C"
+   },
+   "items": [
+    {
+     "cn": "葫芦瓶肩饰",
+     "en": "Gourd Bottle Lamp",
+     "ja": "ひょうたん背中飾り",
+     "kr": "호리병등장식",
+     "ref": "Gourd Bottle Lamp",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "无限孵化装置",
+     "en": "Infinite Incubator",
+     "ja": "無限ふ化装置",
+     "kr": "무한부화장치",
+     "ref": "Infinite Incubator",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "红宝石王冠",
+     "en": "Ruby Crown",
+     "ja": "ルビークラウン",
+     "kr": "루비왕관",
+     "ref": "Ruby Crown",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "洞窟蝙蝠帽",
+     "en": "Cave Bat Hat",
+     "ja": "洞窟コウモリ帽子",
+     "kr": "동굴박쥐모자",
+     "ref": "Cave Bat Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "白色蝴蝶结丝巾",
+     "en": "White Ribbon Scarf",
+     "ja": "白いリボンスカーフ",
+     "kr": "하양리본스카프",
+     "ref": "White Ribbon Scarf",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "红色爱心眼镜",
+     "en": "Red Hearts",
+     "ja": "赤いハート",
+     "kr": "빨강하트뿅뿅",
+     "ref": "Red Hearts",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "贵妇帽",
+     "en": "Duchess Hat",
+     "ja": "貴婦人の帽子",
+     "kr": "귀부인의모자",
+     "ref": "Duchess Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "刺猬连帽衫",
+     "en": "Porcupine Hood",
+     "ja": "ハリーフード",
+     "kr": "고슴이후드",
+     "ref": "Porcupine Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "天使羽翼",
+     "en": "Angel Wings",
+     "ja": "天使の翼",
+     "kr": "천사의날개",
+     "ref": "Angel Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "精灵羽翼",
+     "en": "Fairy Wings",
+     "ja": "妖精の羽根",
+     "kr": "요정의날개",
+     "ref": "Fairy Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "恶魔的羽翼",
+     "en": "Devil Wings",
+     "ja": "悪魔の翼",
+     "kr": "악마의날개",
+     "ref": "Devil Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "D": {
+   "title": {
+    "cn": "随机服装宝箱 D",
+    "en": "Random Costume Box D",
+    "ja": "ランダムコスチュームBOX(D)",
+    "kr": "랜덤코스튬상자 D"
+   },
+   "items": [
+    {
+     "cn": "黄色蝴蝶结",
+     "en": "Yellow Ribbon",
+     "ja": "黄色いリボン",
+     "kr": "노랑리본띠",
+     "ref": "Yellow Ribbon",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "红色宽沿绅士帽",
+     "en": "Red Fedora",
+     "ja": "赤いフェドラ",
+     "kr": "빨강페도라",
+     "ref": "Red Fedora",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "蓝色宽沿绅士帽",
+     "en": "Blue Fedora",
+     "ja": "青いフェドラ",
+     "kr": "파랑페도라",
+     "ref": "Blue Fedora",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "暗黑蝙蝠肩饰",
+     "en": "Dark Bat Back Accessory",
+     "ja": "暗黒コウモリ背中飾り",
+     "kr": "암흑박쥐등장식",
+     "ref": "Dark Bat Back Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "绿宝石王冠",
+     "en": "Emerald Crown",
+     "ja": "エメラルドクラウン",
+     "kr": "에메랄드왕관",
+     "ref": "Emerald Crown",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "粉红蝴蝶结丝巾",
+     "en": "Pink Ribbon Scarf",
+     "ja": "ピンクのリボンスカーフ",
+     "kr": "분홍리본스카프",
+     "ref": "Pink Ribbon Scarf",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "地狱恶魔角",
+     "en": "Devil Horns",
+     "ja": "地獄の悪魔の角",
+     "kr": "지옥악마뿔",
+     "ref": "Devil Horns",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "龟壳盾牌",
+     "en": "Turtle Shell Shield",
+     "ja": "甲羅の盾",
+     "kr": "거북껍질방패",
+     "ref": "Turtle Shell Shield",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "愤怒",
+     "en": "Rage",
+     "ja": "怒り",
+     "kr": "분노",
+     "ref": "Rage",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "迅速",
+     "en": "Speedy",
+     "ja": "迅速",
+     "kr": "신속",
+     "ref": "Speedy",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "恐怖",
+     "en": "Fear",
+     "ja": "恐怖",
+     "kr": "공포",
+     "ref": "Fear",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "E": {
+   "title": {
+    "cn": "随机服装宝箱 E",
+    "en": "Random Costume Box E",
+    "ja": "ランダムコスチュームBOX(E)",
+    "kr": "랜덤코스튬상자 E"
+   },
+   "items": [
+    {
+     "cn": "蓝色蝴蝶结",
+     "en": "Blue Ribbon",
+     "ja": "青いリボン",
+     "kr": "파랑리본띠",
+     "ref": "Blue Ribbon",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "百合发箍",
+     "en": "Lily Hairband",
+     "ja": "百合ヘアバンド",
+     "kr": "백합머리끈",
+     "ref": "Lily Hairband",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "粉红兔兔帽",
+     "en": "Pink Bunny Ear Hat",
+     "ja": "ピンクうさミミ帽子",
+     "kr": "핑크토끼귀모자",
+     "ref": "Pink Bunny Ear Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "薄荷兔兔帽",
+     "en": "Yellow-Green Bunny Ear Hat",
+     "ja": "薄緑うさミミ帽子",
+     "kr": "연두토끼귀모자",
+     "ref": "Yellow-Green Bunny Ear Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "蝴蝶翅膀饰品",
+     "en": "Butterfly Wing Decorations",
+     "ja": "蝶々羽デコ",
+     "kr": "나비날개장식",
+     "ref": "Butterfly Wing Decorations",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "史莱姆肩饰",
+     "en": "Slime Back Accessory",
+     "ja": "スライム背中飾り",
+     "kr": "슬라임등장식",
+     "ref": "Slime Back Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "防毒面具",
+     "en": "Gas Mask",
+     "ja": "ガスマスク",
+     "kr": "방독면",
+     "ref": "Gas Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "库乌的红连帽衫",
+     "en": "Kuu's Red Hood",
+     "ja": "クウの赤いフード",
+     "kr": "쿠우의빨강후드",
+     "ref": "Kuu's Red Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "德洛尔的帽子",
+     "en": "Droll's Hat",
+     "ja": "ドロㇽの帽子",
+     "kr": "드롤의모자",
+     "ref": "Droll's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "亚比克的帽子",
+     "en": "Abik's Hat",
+     "ja": "アビクの帽子",
+     "kr": "아비크의모자",
+     "ref": "Abik's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "海尼亚的帽子",
+     "en": "Hannia's Hat",
+     "ja": "ハニアの帽子",
+     "kr": "해니아의모자",
+     "ref": "Hannia's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "F": {
+   "title": {
+    "cn": "随机服装宝箱 F",
+    "en": "Random Costume Box F",
+    "ja": "ランダムコスチュームBOX(F)",
+    "kr": "랜덤코스튬상자 F"
+   },
+   "items": [
+    {
+     "cn": "蓝色蘑菇帽",
+     "en": "Blue Mushroom Hat",
+     "ja": "青いキノコ帽子",
+     "kr": "파랑버섯모자",
+     "ref": "Blue Mushroom Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "绿色蝴蝶结",
+     "en": "Green Ribbon",
+     "ja": "緑色のリボン",
+     "kr": "초록리본띠",
+     "ref": "Green Ribbon",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "蓝宝石王冠",
+     "en": "Sapphire Crown",
+     "ja": "サファイアクラウン",
+     "kr": "사파이어왕관",
+     "ref": "Sapphire Crown",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "黑色蝴蝶结丝巾",
+     "en": "Black Ribbon Scarf",
+     "ja": "黒いリボンスカーフ",
+     "kr": "검정리본스카프",
+     "ref": "Black Ribbon Scarf",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "足球肩饰",
+     "en": "Soccer Ball Back Decoration",
+     "ja": "サッカーボール背中飾り",
+     "kr": "축구공등장식",
+     "ref": "Soccer Ball Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "冰淇淋肩饰",
+     "en": "Ice Cream Back Decoration",
+     "ja": "アイスクリーム背中飾り",
+     "kr": "아이스크림등장식",
+     "ref": "Ice Cream Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "炸弹帽",
+     "en": "Boom!",
+     "ja": "ドカン！",
+     "kr": "펑!",
+     "ref": "Boom!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "小巧翅膀",
+     "en": "Tiny Wings",
+     "ja": "ちっちゃい翼",
+     "kr": "앙증맞은날개",
+     "ref": "Tiny Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "德洛尔的重甲",
+     "en": "Droll's Chest Armor",
+     "ja": "ドロルの重鎧",
+     "kr": "드롤의중갑",
+     "ref": "Droll's Chest Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "亚比克的盔甲",
+     "en": "Abik's Armor",
+     "ja": "アビクの鎧",
+     "kr": "아비크의갑옷",
+     "ref": "Abik's Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "海尼亚的长袍",
+     "en": "Hania's Robe",
+     "ja": "ハニアのローブ",
+     "kr": "해니아의로브",
+     "ref": "Hania's Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "G": {
+   "title": {
+    "cn": "随机服装宝箱 G",
+    "en": "Random Costume Box G",
+    "ja": "ランダムコスチュームBOX(G)",
+    "kr": "랜덤코스튬상자 G"
+   },
+   "items": [
+    {
+     "cn": "黑角饰品",
+     "en": "Black Horn Accessory",
+     "ja": "黒角アクセサリー",
+     "kr": "검은뿔장식",
+     "ref": "Black Horn Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "绿色蝴蝶结发饰",
+     "en": "Green Ribbon Hair Accessory",
+     "ja": "緑色のリボン髪飾り",
+     "kr": "초록리본머리장식",
+     "ref": "Green Ribbon Hair Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "探险家护目镜",
+     "en": "Explorer's Goggle",
+     "ja": "探検家のゴーグル",
+     "kr": "탐험가의고글",
+     "ref": "Explorer's Goggle",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "红色蝴蝶结肩饰",
+     "en": "Red Ribbon Back Decoration",
+     "ja": "赤いリボン背中飾り",
+     "kr": "빨강리본등장식",
+     "ref": "Red Ribbon Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "红色救生圈",
+     "en": "Red Life Belt",
+     "ja": "赤い救命浮輪",
+     "kr": "빨강구명튜브",
+     "ref": "Red Life Belt",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "蓝色救生圈",
+     "en": "Blue Life Belt",
+     "ja": "青い救命浮輪",
+     "kr": "파랑구명튜브",
+     "ref": "Blue Life Belt",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "八爪鱼帽",
+     "en": "Squid Hat",
+     "ja": "イカ帽子",
+     "kr": "오징어모자",
+     "ref": "Squid Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "僵尸帽",
+     "en": "Jiangshi Hat",
+     "ja": "キョンシー帽子",
+     "kr": "강시모자",
+     "ref": "Jiangshi Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "海盗王",
+     "en": "Pirate King",
+     "ja": "海賊王",
+     "kr": "해적왕",
+     "ref": "Pirate King",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "狙击手",
+     "en": "Sniper",
+     "ja": "スナイパー",
+     "kr": "스나이퍼",
+     "ref": "Sniper",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "海尼亚",
+     "en": "Hania",
+     "ja": "ハニア",
+     "kr": "해니아",
+     "ref": "Hania",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "H": {
+   "title": {
+    "cn": "随机服装宝箱 H",
+    "en": "Random Costume Box H",
+    "ja": "ランダムコスチュームBOX(H)",
+    "kr": "랜덤코스튬상자 H"
+   },
+   "items": [
+    {
+     "cn": "兔兔耳朵",
+     "en": "Rabbit Ear",
+     "ja": "うさ耳",
+     "kr": "토끼귀",
+     "ref": "Rabbit Ear",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "玫瑰花饰品",
+     "en": "Rose Decoration",
+     "ja": "バラの髪飾り",
+     "kr": "장미꽃장식",
+     "ref": "Rose Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "女仆装",
+     "en": "Maid Costume",
+     "ja": "メイド服",
+     "kr": "메이드복",
+     "ref": "Maid Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "白色发箍",
+     "en": "White Hairband",
+     "ja": "白いヘアバンド",
+     "kr": "하얀헤어밴드",
+     "ref": "White Hairband",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "海盗装",
+     "en": "Pirate Costume",
+     "ja": "海賊服",
+     "kr": "해적의상",
+     "ref": "Pirate Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "海盗头巾",
+     "en": "Pirate Bandana",
+     "ja": "海賊バンダナ",
+     "kr": "해적두건",
+     "ref": "Pirate Bandana",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "马头",
+     "en": "Horse Head",
+     "ja": "馬の頭",
+     "kr": "말머리",
+     "ref": "Horse Head",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "熊熊连帽衫",
+     "en": "Bear Hood",
+     "ja": "クマさんフード",
+     "kr": "곰돌이후드",
+     "ref": "Bear Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "抢夺",
+     "en": "Depredation",
+     "ja": "強奪",
+     "kr": "강탈",
+     "ref": "Depredation",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "全神贯注",
+     "en": "Concentration",
+     "ja": "集中",
+     "kr": "집중",
+     "ref": "Concentration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "海尼亚II",
+     "en": "Hania II",
+     "ja": "ハニアII",
+     "kr": "해니아II",
+     "ref": "Hania II",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "I": {
+   "title": {
+    "cn": "随机服装宝箱 I",
+    "en": "Random Costume Box I",
+    "ja": "ランダムコスチュームBOX(I)",
+    "kr": "랜덤코스튬상자 I"
+   },
+   "items": [
+    {
+     "cn": "纯净的头巾",
+     "en": "Bandana of Purity",
+     "ja": "純粋な頭巾",
+     "kr": "순수의두건",
+     "ref": "Bandana of Purity",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "纯净长袍",
+     "en": "Robe of Purity",
+     "ja": "純粋なローブ",
+     "kr": "순수의로브",
+     "ref": "Robe of Purity",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "黄色蝴蝶结肩饰",
+     "en": "Yellow Ribbon Back Decoration",
+     "ja": "黄色いリボンの背中飾り",
+     "kr": "노랑리본등장식",
+     "ref": "Yellow Ribbon Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "百合花冠",
+     "en": "Lily Circlet",
+     "ja": "百合の冠",
+     "kr": "백합화관",
+     "ref": "Lily Circlet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "夏季运动服",
+     "en": "Summer Sportswear",
+     "ja": "夏用ジャージ",
+     "kr": "여름운동복",
+     "ref": "Summer Sportswear",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "毛毛发饰",
+     "en": "Downy Hair Accessory",
+     "ja": "綿の髪飾り",
+     "kr": "솜털머리장식",
+     "ref": "Downy Hair Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "蓝色拳击手装",
+     "en": "Blue Fighter Costume",
+     "ja": "青い格闘家の衣装",
+     "kr": "파란격투가의상",
+     "ref": "Blue Fighter Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "纸袋",
+     "en": "Paper Bag",
+     "ja": "紙袋",
+     "kr": "종이봉투",
+     "ref": "Paper Bag",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "杰米洛的头盔",
+     "en": "Jamiro's Helm",
+     "ja": "ジャミロのかぶと",
+     "kr": "자미로의투구",
+     "ref": "Jamiro's Helm",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "杰米洛的衣服",
+     "en": "Jamiro's Clothes",
+     "ja": "ジャミロの衣服",
+     "kr": "자미로의의복",
+     "ref": "Jamiro's Clothes",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "杰米洛的手套",
+     "en": "Jamiro's Gloves",
+     "ja": "ジャミロの手袋",
+     "kr": "자미로의장갑",
+     "ref": "Jamiro's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "杰米洛的长靴",
+     "en": "Jamiro's Boots",
+     "ja": "ジャミロのブーツ",
+     "kr": "자미로의장화",
+     "ref": "Jamiro's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "J": {
+   "title": {
+    "cn": "随机服装宝箱 J",
+    "en": "Random Costume Box J",
+    "ja": "ランダムコスチュームBOX(J)",
+    "kr": "랜덤코스튬상자 J"
+   },
+   "items": [
+    {
+     "cn": "灰色蝴蝶结发夹",
+     "en": "Gray Ribbon Hairpin",
+     "ja": "グレーリボンヘアピン",
+     "kr": "회색리본머리핀",
+     "ref": "Gray Ribbon Hairpin",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "幸运的四叶草",
+     "en": "Lucky Four-Leaf Clover",
+     "ja": "幸運の四つ葉クローバー",
+     "kr": "행운의네잎클로버",
+     "ref": "Lucky Four-Leaf Clover",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "嫩芽头饰",
+     "en": "Sprout Hair Accessory",
+     "ja": "新芽髪飾り",
+     "kr": "새싹머리장식",
+     "ref": "Sprout Hair Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "巡逻队铁制盔甲",
+     "en": "Patrol's Metal Armor",
+     "ja": "パトロールのメタルよろい",
+     "kr": "순찰대철제갑옷",
+     "ref": "Patrol's Metal Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "罪犯服装",
+     "en": "Prisoner Costume",
+     "ja": "囚人衣装",
+     "kr": "죄수의상",
+     "ref": "Prisoner Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "绿色蝴蝶结肩饰",
+     "en": "Green Ribbon Back Decoration",
+     "ja": "緑いリボン背中飾り",
+     "kr": "초록리본등장식",
+     "ref": "Green Ribbon Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "优秀连帽衫",
+     "en": "Superior Hood",
+     "ja": "優越のフッド",
+     "kr": "우월의후드",
+     "ref": "Superior Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "优秀长袍",
+     "en": "Superior Robe",
+     "ja": "優越のローブ",
+     "kr": "우월의로브",
+     "ref": "Superior Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "罗杰的铁头盔",
+     "en": "Roger's Rugby Helmet",
+     "ja": "ロジャーのヘルメット",
+     "kr": "로저의철투구",
+     "ref": "Roger's Rugby Helmet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "罗杰的比赛服装",
+     "en": "Roger's Rugby Uniform",
+     "ja": "ロジャーの試合衣装",
+     "kr": "로저의경기의상",
+     "ref": "Roger's Rugby Uniform",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "罗杰的手套",
+     "en": "Roger's Rugby Gloves",
+     "ja": "ロジャーのグローブ",
+     "kr": "로저의장갑",
+     "ref": "Roger's Rugby Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "罗杰的长靴",
+     "en": "Roger's Rugby Shoes",
+     "ja": "ロジャーのブーツ",
+     "kr": "로저의장화",
+     "ref": "Roger's Rugby Shoes",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "K": {
+   "title": {
+    "cn": "随机服装宝箱 K",
+    "en": "Random Costume Box K",
+    "ja": "ランダムコスチュームBOX(K)",
+    "kr": "랜덤코스튬상자 K"
+   },
+   "items": [
+    {
+     "cn": "蓝色蝴蝶结发饰",
+     "en": "Blue Ribbon Hair Accessory",
+     "ja": "青色のリボン髪飾り",
+     "kr": "파랑리본머리장식",
+     "ref": "Blue Ribbon Hair Accessory",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "狂野双角",
+     "en": "Wild Horn",
+     "ja": "野生の角",
+     "kr": "야성의뿔",
+     "ref": "Wild Horn",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "红色拳击手装",
+     "en": "Red Warrior Costume",
+     "ja": "格闘家衣装(赤)",
+     "kr": "빨강격투가의상",
+     "ref": "Red Warrior Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "旅人服装",
+     "en": "Traveler Costume",
+     "ja": "旅人の服",
+     "kr": "여행자의상",
+     "ref": "Traveler Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "兴奋库伊肩饰",
+     "en": "Excited Kooii Back Decoration",
+     "ja": "わくわくクイ背中飾り",
+     "kr": "꺄아쿠이등장식",
+     "ref": "Excited Kooii Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "蓝色蝴蝶结肩饰",
+     "en": "Blue Ribbon Back Decoration",
+     "ja": "青いリボン背中飾り",
+     "kr": "파랑리본등장식",
+     "ref": "Blue Ribbon Back Decoration",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "羊咩咩连帽衫",
+     "en": "Sheep Hood",
+     "ja": "羊のフード",
+     "kr": "양머리후드",
+     "ref": "Sheep Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "红色传统服装",
+     "en": "Red Traditional Costume",
+     "ja": "伝統衣装(赤)",
+     "kr": "빨강전통의상",
+     "ref": "Red Traditional Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "埃尔利安的头盔",
+     "en": "Elian's Helm",
+     "ja": "エリアンのヘルメット",
+     "kr": "엘리안의투구",
+     "ref": "Elian's Helm",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "伊奈斯的连帽衫",
+     "en": "Ines' Hood",
+     "ja": "イネスのフード",
+     "kr": "이네스의후드",
+     "ref": "Ines' Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾特娜的环饰",
+     "en": "Etna's Circlet",
+     "ja": "エトナのかんむり",
+     "kr": "에트나의서클릿",
+     "ref": "Etna's Circlet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "L": {
+   "title": {
+    "cn": "随机服装宝箱 L",
+    "en": "Random Costume Box L",
+    "ja": "ランダムコスチュームBOX(L)",
+    "kr": "랜덤코스튬상자 L"
+   },
+   "items": [
+    {
+     "cn": "华丽的帽子",
+     "en": "Fancy Hat",
+     "ja": "派手な帽子",
+     "kr": "화려한모자",
+     "ref": "Fancy Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.6
+    },
+    {
+     "cn": "厨师帽",
+     "en": "Cook Hat",
+     "ja": "クック帽子",
+     "kr": "요리사모자",
+     "ref": "Cook Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "三眼龙帽子",
+     "en": "3-Eye Lizard Hat",
+     "ja": "サードアイドラゴン帽子",
+     "kr": "삼안룡모자",
+     "ref": "3-Eye Lizard Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "绿色传统服装",
+     "en": "Green Traditional Costume",
+     "ja": "緑色の伝統衣装",
+     "kr": "녹색전통의상",
+     "ref": "Green Traditional Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "VR眼镜",
+     "en": "VR Goggles",
+     "ja": "VRゴーグル",
+     "kr": "VR고글",
+     "ref": "VR Goggles",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "魔法板",
+     "en": "Magic Board",
+     "ja": "魔法ボード",
+     "kr": "마법보드",
+     "ref": "Magic Board",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "海军帽",
+     "en": "Marine Hat",
+     "ja": "マリン帽子",
+     "kr": "해군모자",
+     "ref": "Marine Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "海军服装",
+     "en": "Marine Costume",
+     "ja": "マリン衣装",
+     "kr": "해군의상",
+     "ref": "Marine Costume",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "埃尔利安的手套",
+     "en": "Elian's Gloves",
+     "ja": "エリアンの手袋",
+     "kr": "엘리안의장갑",
+     "ref": "Elian's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "伊奈斯的手腕保护套",
+     "en": "Ines' Hand Protector",
+     "ja": "イネスの手首サポーター",
+     "kr": "이네스의손보호대",
+     "ref": "Ines' Hand Protector",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾特娜的棉手套",
+     "en": "Etna's Cotton Gloves",
+     "ja": "エトナのコットン手袋",
+     "kr": "에트나의면장갑",
+     "ref": "Etna's Cotton Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "埃尔利安的长靴",
+     "en": "Elian's Boots",
+     "ja": "エリアンのブーツ",
+     "kr": "엘리안의장화",
+     "ref": "Elian's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "伊奈斯的长靴",
+     "en": "Ines' Boots",
+     "ja": "イネスのブーツ",
+     "kr": "이네스의장화",
+     "ref": "Ines' Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾特娜的魔法鞋",
+     "en": "Etna's Magic Shoes",
+     "ja": "エトナの魔法靴",
+     "kr": "에트나의마법신발",
+     "ref": "Etna's Magic Shoes",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "埃尔利安的盔甲",
+     "en": "Elian's Armor",
+     "ja": "エリアンの鎧",
+     "kr": "엘리안의갑옷",
+     "ref": "Elian's Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "伊奈斯的轻甲",
+     "en": "Ines' Light Armor",
+     "ja": "イネスのライトアーマー",
+     "kr": "이네스의경갑",
+     "ref": "Ines' Light Armor",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "艾特娜的长袍",
+     "en": "Etna's Robe",
+     "ja": "エトナのローブ",
+     "kr": "에트나의로브",
+     "ref": "Etna's Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "M": {
+   "title": {
+    "cn": "随机服装宝箱 M",
+    "en": "Random Costume Box M",
+    "ja": "ランダムコスチュームBOX(M)",
+    "kr": "랜덤코스튬상자 M"
+   },
+   "items": [
+    {
+     "cn": "小鱼面具",
+     "en": "Fish Mask",
+     "ja": "魚のマスク",
+     "kr": "물고기마스크",
+     "ref": "Fish Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.8
+    },
+    {
+     "cn": "编织帽",
+     "en": "Straw Hat",
+     "ja": "麦わら帽子",
+     "kr": "밀짚모자",
+     "ref": "Straw Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "温暖毛帽",
+     "en": "Warm Fur Hat",
+     "ja": "暖かい毛帽子",
+     "kr": "따뜻한털모자",
+     "ref": "Warm Fur Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.7
+    },
+    {
+     "cn": "战斗头盔",
+     "en": "Combat Helmet",
+     "ja": "戦闘ヘルメット",
+     "kr": "전투헬멧",
+     "ref": "Combat Helmet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "煎蛋",
+     "en": "Fried Egg",
+     "ja": "目玉焼き",
+     "kr": "계란프라이",
+     "ref": "Fried Egg",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "角框眼镜",
+     "en": "Horn-rimmed Glasses",
+     "ja": "伊達メガネ",
+     "kr": "뿔테안경",
+     "ref": "Horn-rimmed Glasses",
+     "kind": "costume",
+     "toBox": null,
+     "p": 15.5
+    },
+    {
+     "cn": "死神连帽衫",
+     "en": "Reaper's Hood",
+     "ja": "死神のフード",
+     "kr": "사신의후드",
+     "ref": "Reaper's Hood",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "自行车帽",
+     "en": "Bike Helmet",
+     "ja": "バイクヘルメット",
+     "kr": "바이크헬멧",
+     "ref": "Bike Helmet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.0
+    },
+    {
+     "cn": "宝石骑士",
+     "en": "Jewel Knight",
+     "ja": "宝石の騎士",
+     "kr": "보석의기사",
+     "ref": "Jewel Knight",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "追踪者",
+     "en": "Tracker",
+     "ja": "追跡者",
+     "kr": "추적자",
+     "ref": "Tracker",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    },
+    {
+     "cn": "火焰魔法师",
+     "en": "Flame Magician",
+     "ja": "火炎の魔法使い",
+     "kr": "화염마법사",
+     "ref": "Flame Magician",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.1
+    }
+   ],
+   "subs": []
+  },
+  "HERO_GEM": {
+   "title": {
+    "cn": "英雄的宝石宝箱",
+    "en": "Hero Gem Box",
+    "ja": "英雄の宝石箱",
+    "kr": "영웅의보석상자"
+   },
+   "items": [
+    {
+     "ref": "Syphnel's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "西普奈尔的黑曜岩(阶段1) · 力量 1",
+     "en": "Syphnel's ObsidianⅠ · STR 1",
+     "ja": "シフネルの黒曜石(1段階) · 力 1",
+     "kr": "시프넬의흑요석 (1단계) · 힘 1"
+    },
+    {
+     "ref": "Syphnel's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "西普奈尔的黑曜岩(阶段1) · 敏捷 1",
+     "en": "Syphnel's ObsidianⅠ · DEX 1",
+     "ja": "シフネルの黒曜石(1段階) · 敏捷 1",
+     "kr": "시프넬의흑요석 (1단계) · 민첩 1"
+    },
+    {
+     "ref": "Syphnel's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "西普奈尔的黑曜岩(阶段1) · 智力 1",
+     "en": "Syphnel's ObsidianⅠ · INT 1",
+     "ja": "シフネルの黒曜石(1段階) · 知力 1",
+     "kr": "시프넬의흑요석 (1단계) · 지능 1"
+    },
+    {
+     "ref": "Syphnel's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "西普奈尔的黑曜岩(阶段1) · 体力 10",
+     "en": "Syphnel's ObsidianⅠ · HP 10",
+     "ja": "シフネルの黒曜石(1段階) · 体力 10",
+     "kr": "시프넬의흑요석 (1단계) · 체력 10"
+    },
+    {
+     "ref": "Serain's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "赛勒殷的黑曜岩(阶段1) · 力量 1",
+     "en": "Serain's ObsidianⅠ · STR 1",
+     "ja": "セレインの黒曜石(1段階) · 力 1",
+     "kr": "세레인의흑요석 (1단계) · 힘 1"
+    },
+    {
+     "ref": "Serain's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "赛勒殷的黑曜岩(阶段1) · 敏捷 1",
+     "en": "Serain's ObsidianⅠ · DEX 1",
+     "ja": "セレインの黒曜石(1段階) · 敏捷 1",
+     "kr": "세레인의흑요석 (1단계) · 민첩 1"
+    },
+    {
+     "ref": "Serain's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "赛勒殷的黑曜岩(阶段1) · 智力 1",
+     "en": "Serain's ObsidianⅠ · INT 1",
+     "ja": "セレインの黒曜石(1段階) · 知力 1",
+     "kr": "세레인의흑요석 (1단계) · 지능 1"
+    },
+    {
+     "ref": "Serain's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "赛勒殷的黑曜岩(阶段1) · 体力 10",
+     "en": "Serain's ObsidianⅠ · HP 10",
+     "ja": "セレインの黒曜石(1段階) · 体力 10",
+     "kr": "세레인의흑요석 (1단계) · 체력 10"
+    },
+    {
+     "ref": "Roberto's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "罗贝勒托的黑曜岩(阶段1) · 力量 1",
+     "en": "Roberto's ObsidianⅠ · STR 1",
+     "ja": "ロベルトの黒曜石(1段階) · 力 1",
+     "kr": "로베르토의흑요석 (1단계) · 힘 1"
+    },
+    {
+     "ref": "Roberto's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "罗贝勒托的黑曜岩(阶段1) · 敏捷 1",
+     "en": "Roberto's ObsidianⅠ · DEX 1",
+     "ja": "ロベルトの黒曜石(1段階) · 敏捷 1",
+     "kr": "로베르토의흑요석 (1단계) · 민첩 1"
+    },
+    {
+     "ref": "Roberto's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "罗贝勒托的黑曜岩(阶段1) · 智力 1",
+     "en": "Roberto's ObsidianⅠ · INT 1",
+     "ja": "ロベルトの黒曜石(1段階) · 知力 1",
+     "kr": "로베르토의흑요석 (1단계) · 지능 1"
+    },
+    {
+     "ref": "Roberto's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "罗贝勒托的黑曜岩(阶段1) · 体力 10",
+     "en": "Roberto's ObsidianⅠ · HP 10",
+     "ja": "ロベルトの黒曜石(1段階) · 体力 10",
+     "kr": "로베르토의흑요석 (1단계) · 체력 10"
+    },
+    {
+     "ref": "Wingfril's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "羽妖的黑曜岩(阶段1) · 力量 1",
+     "en": "Wingfril's ObsidianⅠ · STR 1",
+     "ja": "ウィングフリールの黒曜石(1段階) · 力 1",
+     "kr": "윙프릴의흑요석 (1단계) · 힘 1"
+    },
+    {
+     "ref": "Wingfril's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "羽妖的黑曜岩(阶段1) · 敏捷 1",
+     "en": "Wingfril's ObsidianⅠ · DEX 1",
+     "ja": "ウィングフリールの黒曜石(1段階) · 敏捷 1",
+     "kr": "윙프릴의흑요석 (1단계) · 민첩 1"
+    },
+    {
+     "ref": "Wingfril's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "羽妖的黑曜岩(阶段1) · 智力 1",
+     "en": "Wingfril's ObsidianⅠ · INT 1",
+     "ja": "ウィングフリールの黒曜石(1段階) · 知力 1",
+     "kr": "윙프릴의흑요석 (1단계) · 지능 1"
+    },
+    {
+     "ref": "Wingfril's Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "羽妖的黑曜岩(阶段1) · 体力 10",
+     "en": "Wingfril's ObsidianⅠ · HP 10",
+     "ja": "ウィングフリールの黒曜石(1段階) · 体力 10",
+     "kr": "윙프릴의흑요석 (1단계) · 체력 10"
+    },
+    {
+     "ref": "Kanos' Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "卡诺斯的黑曜岩(阶段1) · 力量 1",
+     "en": "Kanos' ObsidianⅠ · STR 1",
+     "ja": "カノスの黒曜石(1段階) · 力 1",
+     "kr": "카노스의흑요석 (1단계) · 힘 1"
+    },
+    {
+     "ref": "Kanos' Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "卡诺斯的黑曜岩(阶段1) · 敏捷 1",
+     "en": "Kanos' ObsidianⅠ · DEX 1",
+     "ja": "カノスの黒曜石(1段階) · 敏捷 1",
+     "kr": "카노스의흑요석 (1단계) · 민첩 1"
+    },
+    {
+     "ref": "Kanos' Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "卡诺斯的黑曜岩(阶段1) · 智力 1",
+     "en": "Kanos' ObsidianⅠ · INT 1",
+     "ja": "カノスの黒曜石(1段階) · 知力 1",
+     "kr": "카노스의흑요석 (1단계) · 지능 1"
+    },
+    {
+     "ref": "Kanos' Obsidian I",
+     "p": 3.75,
+     "kind": "costume",
+     "cn": "卡诺斯的黑曜岩(阶段1) · 体力 10",
+     "en": "Kanos' ObsidianⅠ · HP 10",
+     "ja": "カノスの黒曜石(1段階) · 体力 10",
+     "kr": "카노스의흑요석 (1단계) · 체력 10"
+    },
+    {
+     "ref": "Syphnel's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "西普奈尔的紫水晶(阶段2) · 力量 2",
+     "en": "Syphnel's AmethystⅡ · STR 2",
+     "ja": "シフネルのアメシスト(2段階) · 力 2",
+     "kr": "시프넬의자수정 (2단계) · 힘 2"
+    },
+    {
+     "ref": "Syphnel's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "西普奈尔的紫水晶(阶段2) · 敏捷 2",
+     "en": "Syphnel's AmethystⅡ · DEX 2",
+     "ja": "シフネルのアメシスト(2段階) · 敏捷 2",
+     "kr": "시프넬의자수정 (2단계) · 민첩 2"
+    },
+    {
+     "ref": "Syphnel's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "西普奈尔的紫水晶(阶段2) · 智力 2",
+     "en": "Syphnel's AmethystⅡ · INT 2",
+     "ja": "シフネルのアメシスト(2段階) · 知力 2",
+     "kr": "시프넬의자수정 (2단계) · 지능 2"
+    },
+    {
+     "ref": "Syphnel's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "西普奈尔的紫水晶(阶段2) · 体力 20",
+     "en": "Syphnel's AmethystⅡ · HP 20",
+     "ja": "シフネルのアメシスト(2段階) · 体力 20",
+     "kr": "시프넬의자수정 (2단계) · 체력 20"
+    },
+    {
+     "ref": "Serain's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "赛勒殷的紫水晶(阶段2) · 力量 2",
+     "en": "Serain's AmethystⅡ · STR 2",
+     "ja": "セレインのアメシスト(2段階) · 力 2",
+     "kr": "세레인의자수정 (2단계) · 힘 2"
+    },
+    {
+     "ref": "Serain's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "赛勒殷的紫水晶(阶段2) · 敏捷 2",
+     "en": "Serain's AmethystⅡ · DEX 2",
+     "ja": "セレインのアメシスト(2段階) · 敏捷 2",
+     "kr": "세레인의자수정 (2단계) · 민첩 2"
+    },
+    {
+     "ref": "Serain's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "赛勒殷的紫水晶(阶段2) · 智力 2",
+     "en": "Serain's AmethystⅡ · INT 2",
+     "ja": "セレインのアメシスト(2段階) · 知力 2",
+     "kr": "세레인의자수정 (2단계) · 지능 2"
+    },
+    {
+     "ref": "Serain's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "赛勒殷的紫水晶(阶段2) · 体力 20",
+     "en": "Serain's AmethystⅡ · HP 20",
+     "ja": "セレインのアメシスト(2段階) · 体力 20",
+     "kr": "세레인의자수정 (2단계) · 체력 20"
+    },
+    {
+     "ref": "Roberto's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "罗贝勒托的紫水晶(阶段2) · 力量 2",
+     "en": "Roberto's AmethystⅡ · STR 2",
+     "ja": "ロベルトのアメシスト(2段階) · 力 2",
+     "kr": "로베르토의자수정 (2단계) · 힘 2"
+    },
+    {
+     "ref": "Roberto's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "罗贝勒托的紫水晶(阶段2) · 敏捷 2",
+     "en": "Roberto's AmethystⅡ · DEX 2",
+     "ja": "ロベルトのアメシスト(2段階) · 敏捷 2",
+     "kr": "로베르토의자수정 (2단계) · 민첩 2"
+    },
+    {
+     "ref": "Roberto's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "罗贝勒托的紫水晶(阶段2) · 智力 2",
+     "en": "Roberto's AmethystⅡ · INT 2",
+     "ja": "ロベルトのアメシスト(2段階) · 知力 2",
+     "kr": "로베르토의자수정 (2단계) · 지능 2"
+    },
+    {
+     "ref": "Roberto's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "罗贝勒托的紫水晶(阶段2) · 体力 20",
+     "en": "Roberto's AmethystⅡ · HP 20",
+     "ja": "ロベルトのアメシスト(2段階) · 体力 20",
+     "kr": "로베르토의자수정 (2단계) · 체력 20"
+    },
+    {
+     "ref": "Wingfril's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "羽妖的紫水晶(阶段2) · 力量 2",
+     "en": "Wingfril's AmethystⅡ · STR 2",
+     "ja": "ウィングフリールのアメシスト(2段階) · 力 2",
+     "kr": "윙프릴의자수정 (2단계) · 힘 2"
+    },
+    {
+     "ref": "Wingfril's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "羽妖的紫水晶(阶段2) · 敏捷 2",
+     "en": "Wingfril's AmethystⅡ · DEX 2",
+     "ja": "ウィングフリールのアメシスト(2段階) · 敏捷 2",
+     "kr": "윙프릴의자수정 (2단계) · 민첩 2"
+    },
+    {
+     "ref": "Wingfril's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "羽妖的紫水晶(阶段2) · 智力 2",
+     "en": "Wingfril's AmethystⅡ · INT 2",
+     "ja": "ウィングフリールのアメシスト(2段階) · 知力 2",
+     "kr": "윙프릴의자수정 (2단계) · 지능 2"
+    },
+    {
+     "ref": "Wingfril's Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "羽妖的紫水晶(阶段2) · 体力 20",
+     "en": "Wingfril's AmethystⅡ · HP 20",
+     "ja": "ウィングフリールのアメシスト(2段階) · 体力 20",
+     "kr": "윙프릴의자수정 (2단계) · 체력 20"
+    },
+    {
+     "ref": "Kanos' Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "卡诺斯的紫水晶(阶段2) · 力量 2",
+     "en": "Kanos' AmethystⅡ · STR 2",
+     "ja": "カノスのアメシスト(2段階) · 力 2",
+     "kr": "카노스의자수정 (2단계) · 힘 2"
+    },
+    {
+     "ref": "Kanos' Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "卡诺斯的紫水晶(阶段2) · 敏捷 2",
+     "en": "Kanos' AmethystⅡ · DEX 2",
+     "ja": "カノスのアメシスト(2段階) · 敏捷 2",
+     "kr": "카노스의자수정 (2단계) · 민첩 2"
+    },
+    {
+     "ref": "Kanos' Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "卡诺斯的紫水晶(阶段2) · 智力 2",
+     "en": "Kanos' AmethystⅡ · INT 2",
+     "ja": "カノスのアメシスト(2段階) · 知力 2",
+     "kr": "카노스의자수정 (2단계) · 지능 2"
+    },
+    {
+     "ref": "Kanos' Amethyst II",
+     "p": 1.0,
+     "kind": "costume",
+     "cn": "卡诺斯的紫水晶(阶段2) · 体力 20",
+     "en": "Kanos' AmethystⅡ · HP 20",
+     "ja": "カノスのアメシスト(2段階) · 体力 20",
+     "kr": "카노스의자수정 (2단계) · 체력 20"
+    },
+    {
+     "ref": "Syphnel's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "西普奈尔的蓝宝石(阶段3) · 力量 3",
+     "en": "Syphnel's SapphireⅢ · STR 3",
+     "ja": "シフネルのサファイア(3段階) · 力 3",
+     "kr": "시프넬의사파이어 (3단계) · 힘 3"
+    },
+    {
+     "ref": "Syphnel's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "西普奈尔的蓝宝石(阶段3) · 敏捷 3",
+     "en": "Syphnel's SapphireⅢ · DEX 3",
+     "ja": "シフネルのサファイア(3段階) · 敏捷 3",
+     "kr": "시프넬의사파이어 (3단계) · 민첩 3"
+    },
+    {
+     "ref": "Syphnel's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "西普奈尔的蓝宝石(阶段3) · 智力 3",
+     "en": "Syphnel's SapphireⅢ · INT 3",
+     "ja": "シフネルのサファイア(3段階) · 知力 3",
+     "kr": "시프넬의사파이어 (3단계) · 지능 3"
+    },
+    {
+     "ref": "Syphnel's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "西普奈尔的蓝宝石(阶段3) · 体力 30",
+     "en": "Syphnel's SapphireⅢ · HP 30",
+     "ja": "シフネルのサファイア(3段階) · 体力 30",
+     "kr": "시프넬의사파이어 (3단계) · 체력 30"
+    },
+    {
+     "ref": "Serain's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "赛勒殷的蓝宝石(阶段3) · 力量 3",
+     "en": "Serain's SapphireⅢ · STR 3",
+     "ja": "セレインのサファイア(3段階) · 力 3",
+     "kr": "세레인의사파이어 (3단계) · 힘 3"
+    },
+    {
+     "ref": "Serain's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "赛勒殷的蓝宝石(阶段3) · 敏捷 3",
+     "en": "Serain's SapphireⅢ · DEX 3",
+     "ja": "セレインのサファイア(3段階) · 敏捷 3",
+     "kr": "세레인의사파이어 (3단계) · 민첩 3"
+    },
+    {
+     "ref": "Serain's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "赛勒殷的蓝宝石(阶段3) · 智力 3",
+     "en": "Serain's SapphireⅢ · INT 3",
+     "ja": "セレインのサファイア(3段階) · 知力 3",
+     "kr": "세레인의사파이어 (3단계) · 지능 3"
+    },
+    {
+     "ref": "Serain's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "赛勒殷的蓝宝石(阶段3) · 体力 30",
+     "en": "Serain's SapphireⅢ · HP 30",
+     "ja": "セレインのサファイア(3段階) · 体力 30",
+     "kr": "세레인의사파이어 (3단계) · 체력 30"
+    },
+    {
+     "ref": "Roberto's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "罗贝勒托的蓝宝石(阶段3) · 力量 3",
+     "en": "Roberto's SapphireⅢ · STR 3",
+     "ja": "ロベルトのサファイア(3段階) · 力 3",
+     "kr": "로베르토의사파이어 (3단계) · 힘 3"
+    },
+    {
+     "ref": "Roberto's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "罗贝勒托的蓝宝石(阶段3) · 敏捷 3",
+     "en": "Roberto's SapphireⅢ · DEX 3",
+     "ja": "ロベルトのサファイア(3段階) · 敏捷 3",
+     "kr": "로베르토의사파이어 (3단계) · 민첩 3"
+    },
+    {
+     "ref": "Roberto's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "罗贝勒托的蓝宝石(阶段3) · 智力 3",
+     "en": "Roberto's SapphireⅢ · INT 3",
+     "ja": "ロベルトのサファイア(3段階) · 知力 3",
+     "kr": "로베르토의사파이어 (3단계) · 지능 3"
+    },
+    {
+     "ref": "Roberto's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "罗贝勒托的蓝宝石(阶段3) · 体力 30",
+     "en": "Roberto's SapphireⅢ · HP 30",
+     "ja": "ロベルトのサファイア(3段階) · 体力 30",
+     "kr": "로베르토의사파이어 (3단계) · 체력 30"
+    },
+    {
+     "ref": "Wingfril's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "羽妖的蓝宝石(阶段3) · 力量 3",
+     "en": "Wingfril's SapphireⅢ · STR 3",
+     "ja": "ウィングフリールのサファイア(3段階) · 力 3",
+     "kr": "윙프릴의사파이어 (3단계) · 힘 3"
+    },
+    {
+     "ref": "Wingfril's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "羽妖的蓝宝石(阶段3) · 敏捷 3",
+     "en": "Wingfril's SapphireⅢ · DEX 3",
+     "ja": "ウィングフリールのサファイア(3段階) · 敏捷 3",
+     "kr": "윙프릴의사파이어 (3단계) · 민첩 3"
+    },
+    {
+     "ref": "Wingfril's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "羽妖的蓝宝石(阶段3) · 智力 3",
+     "en": "Wingfril's SapphireⅢ · INT 3",
+     "ja": "ウィングフリールのサファイア(3段階) · 知力 3",
+     "kr": "윙프릴의사파이어 (3단계) · 지능 3"
+    },
+    {
+     "ref": "Wingfril's Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "羽妖的蓝宝石(阶段3) · 体力 30",
+     "en": "Wingfril's SapphireⅢ · HP 30",
+     "ja": "ウィングフリールのサファイア(3段階) · 体力 30",
+     "kr": "윙프릴의사파이어 (3단계) · 체력 30"
+    },
+    {
+     "ref": "Kanos' Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "卡诺斯的蓝宝石(阶段3) · 力量 3",
+     "en": "Kanos' SapphireⅢ · STR 3",
+     "ja": "カノスのサファイア(3段階) · 力 3",
+     "kr": "카노스의사파이어 (3단계) · 힘 3"
+    },
+    {
+     "ref": "Kanos' Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "卡诺斯的蓝宝石(阶段3) · 敏捷 3",
+     "en": "Kanos' SapphireⅢ · DEX 3",
+     "ja": "カノスのサファイア(3段階) · 敏捷 3",
+     "kr": "카노스의사파이어 (3단계) · 민첩 3"
+    },
+    {
+     "ref": "Kanos' Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "卡诺斯的蓝宝石(阶段3) · 智力 3",
+     "en": "Kanos' SapphireⅢ · INT 3",
+     "ja": "カノスのサファイア(3段階) · 知力 3",
+     "kr": "카노스의사파이어 (3단계) · 지능 3"
+    },
+    {
+     "ref": "Kanos' Sapphire III",
+     "p": 0.23,
+     "kind": "costume",
+     "cn": "卡诺斯的蓝宝石(阶段3) · 体力 30",
+     "en": "Kanos' SapphireⅢ · HP 30",
+     "ja": "カノスのサファイア(3段階) · 体力 30",
+     "kr": "카노스의사파이어 (3단계) · 체력 30"
+    },
+    {
+     "ref": "Syphnel's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "西普奈尔的海蓝宝石(阶段4) · 力量 4",
+     "en": "Syphnel's AquamarineⅣ · STR 4",
+     "ja": "シフネルのアクアマリン(4段階) · 力 4",
+     "kr": "시프넬의아쿠아마린 (4단계) · 힘 4"
+    },
+    {
+     "ref": "Syphnel's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "西普奈尔的海蓝宝石(阶段4) · 敏捷 4",
+     "en": "Syphnel's AquamarineⅣ · DEX 4",
+     "ja": "シフネルのアクアマリン(4段階) · 敏捷 4",
+     "kr": "시프넬의아쿠아마린 (4단계) · 민첩 4"
+    },
+    {
+     "ref": "Syphnel's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "西普奈尔的海蓝宝石(阶段4) · 智力 4",
+     "en": "Syphnel's AquamarineⅣ · INT 4",
+     "ja": "シフネルのアクアマリン(4段階) · 知力 4",
+     "kr": "시프넬의아쿠아마린 (4단계) · 지능 4"
+    },
+    {
+     "ref": "Syphnel's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "西普奈尔的海蓝宝石(阶段4) · 体力 40",
+     "en": "Syphnel's AquamarineⅣ · HP 40",
+     "ja": "シフネルのアクアマリン(4段階) · 体力 40",
+     "kr": "시프넬의아쿠아마린 (4단계) · 체력 40"
+    },
+    {
+     "ref": "Serain's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "赛勒殷的海蓝宝石(阶段4) · 力量 4",
+     "en": "Serain's AquamarineⅣ · STR 4",
+     "ja": "セレインのアクアマリン(4段階) · 力 4",
+     "kr": "세레인의아쿠아마린 (4단계) · 힘 4"
+    },
+    {
+     "ref": "Serain's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "赛勒殷的海蓝宝石(阶段4) · 敏捷 4",
+     "en": "Serain's AquamarineⅣ · DEX 4",
+     "ja": "セレインのアクアマリン(4段階) · 敏捷 4",
+     "kr": "세레인의아쿠아마린 (4단계) · 민첩 4"
+    },
+    {
+     "ref": "Serain's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "赛勒殷的海蓝宝石(阶段4) · 智力 4",
+     "en": "Serain's AquamarineⅣ · INT 4",
+     "ja": "セレインのアクアマリン(4段階) · 知力 4",
+     "kr": "세레인의아쿠아마린 (4단계) · 지능 4"
+    },
+    {
+     "ref": "Serain's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "赛勒殷的海蓝宝石(阶段4) · 体力 40",
+     "en": "Serain's AquamarineⅣ · HP 40",
+     "ja": "セレインのアクアマリン(4段階) · 体力 40",
+     "kr": "세레인의아쿠아마린 (4단계) · 체력 40"
+    },
+    {
+     "ref": "Roberto's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "罗贝勒托的海蓝宝石(阶段4) · 力量 4",
+     "en": "Roberto's AquamarineⅣ · STR 4",
+     "ja": "ロベルトのアクアマリン(4段階) · 力 4",
+     "kr": "로베르토의아쿠아마린 (4단계) · 힘 4"
+    },
+    {
+     "ref": "Roberto's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "罗贝勒托的海蓝宝石(阶段4) · 敏捷 4",
+     "en": "Roberto's AquamarineⅣ · DEX 4",
+     "ja": "ロベルトのアクアマリン(4段階) · 敏捷 4",
+     "kr": "로베르토의아쿠아마린 (4단계) · 민첩 4"
+    },
+    {
+     "ref": "Roberto's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "罗贝勒托的海蓝宝石(阶段4) · 智力 4",
+     "en": "Roberto's AquamarineⅣ · INT 4",
+     "ja": "ロベルトのアクアマリン(4段階) · 知力 4",
+     "kr": "로베르토의아쿠아마린 (4단계) · 지능 4"
+    },
+    {
+     "ref": "Roberto's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "罗贝勒托的海蓝宝石(阶段4) · 体力 40",
+     "en": "Roberto's AquamarineⅣ · HP 40",
+     "ja": "ロベルトのアクアマリン(4段階) · 体力 40",
+     "kr": "로베르토의아쿠아마린 (4단계) · 체력 40"
+    },
+    {
+     "ref": "Wingfril's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "羽妖的海蓝宝石(阶段4) · 力量 4",
+     "en": "Wingfril's AquamarineⅣ · STR 4",
+     "ja": "ウィングフリールのアクアマリン(4段階) · 力 4",
+     "kr": "윙프릴의아쿠아마린 (4단계) · 힘 4"
+    },
+    {
+     "ref": "Wingfril's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "羽妖的海蓝宝石(阶段4) · 敏捷 4",
+     "en": "Wingfril's AquamarineⅣ · DEX 4",
+     "ja": "ウィングフリールのアクアマリン(4段階) · 敏捷 4",
+     "kr": "윙프릴의아쿠아마린 (4단계) · 민첩 4"
+    },
+    {
+     "ref": "Wingfril's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "羽妖的海蓝宝石(阶段4) · 智力 4",
+     "en": "Wingfril's AquamarineⅣ · INT 4",
+     "ja": "ウィングフリールのアクアマリン(4段階) · 知力 4",
+     "kr": "윙프릴의아쿠아마린 (4단계) · 지능 4"
+    },
+    {
+     "ref": "Wingfril's Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "羽妖的海蓝宝石(阶段4) · 体力 40",
+     "en": "Wingfril's AquamarineⅣ · HP 40",
+     "ja": "ウィングフリールのアクアマリン(4段階) · 体力 40",
+     "kr": "윙프릴의아쿠아마린 (4단계) · 체력 40"
+    },
+    {
+     "ref": "Kanos' Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "卡诺斯的海蓝宝石(阶段4) · 力量 4",
+     "en": "Kanos' AquamarineⅣ · STR 4",
+     "ja": "カノスのアクアマリン(4段階) · 力 4",
+     "kr": "카노스의아쿠아마린 (4단계) · 힘 4"
+    },
+    {
+     "ref": "Kanos' Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "卡诺斯的海蓝宝石(阶段4) · 敏捷 4",
+     "en": "Kanos' AquamarineⅣ · DEX 4",
+     "ja": "カノスのアクアマリン(4段階) · 敏捷 4",
+     "kr": "카노스의아쿠아마린 (4단계) · 민첩 4"
+    },
+    {
+     "ref": "Kanos' Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "卡诺斯的海蓝宝石(阶段4) · 智力 4",
+     "en": "Kanos' AquamarineⅣ · INT 4",
+     "ja": "カノスのアクアマリン(4段階) · 知力 4",
+     "kr": "카노스의아쿠아마린 (4단계) · 지능 4"
+    },
+    {
+     "ref": "Kanos' Aquamarine IV",
+     "p": 0.03,
+     "kind": "costume",
+     "cn": "卡诺斯的海蓝宝石(阶段4) · 体力 40",
+     "en": "Kanos' AquamarineⅣ · HP 40",
+     "ja": "カノスのアクアマリン(4段階) · 体力 40",
+     "kr": "카노스의아쿠아마린 (4단계) · 체력 40"
+    }
+   ],
+   "subs": []
+  },
+  "CONCH": {
+   "title": {
+    "cn": "海螺的故事",
+    "en": "Conch's Story",
+    "ja": "ホラガイの物語",
+    "kr": "소라고둥의이야기"
+   },
+   "items": [
+    {
+     "cn": "墨水沐浴",
+     "en": "Ink Shower",
+     "ja": "墨シャワー",
+     "kr": "먹물샤워",
+     "ref": "Ink Shower",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.4
+    },
+    {
+     "cn": "翡翠浪涛",
+     "en": "Jade-colored Wave",
+     "ja": "青緑色の波",
+     "kr": "옥빛물결",
+     "ref": "Jade-colored Wave",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.5
+    },
+    {
+     "cn": "珍珠之歌",
+     "en": "Pearl's Song",
+     "ja": "真珠の歌",
+     "kr": "진주의노래",
+     "ref": "Pearl's Song",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.5
+    },
+    {
+     "cn": "如何聆听海岸的声音",
+     "en": "How to Listen to the Shore",
+     "ja": "海岸の音を聞く方法",
+     "kr": "해안가를듣는법",
+     "ref": "How to Listen to the Shore",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.5
+    },
+    {
+     "cn": "如何聆听深海的声音",
+     "en": "How to Listen to the Deep Sea",
+     "ja": "深海の音を聞く方法",
+     "kr": "심해를듣는법",
+     "ref": "How to Listen to the Deep Sea",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.5
+    },
+    {
+     "cn": "水光流星雨",
+     "en": "Water-colored Meteor Shower",
+     "ja": "水色の流星群",
+     "kr": "물빛의유성우",
+     "ref": "Water-colored Meteor Shower",
+     "kind": "costume",
+     "toBox": null,
+     "p": 14.5
+    },
+    {
+     "cn": "鳀鱼之乱",
+     "en": "Anchovy's Rebellion",
+     "ja": "カタクチイワシの反乱",
+     "kr": "멸치의반란",
+     "ref": "Anchovy's Rebellion",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.55
+    },
+    {
+     "cn": "雨的睫毛",
+     "en": "Rain's Eyelashes",
+     "ja": "雨のまつげ",
+     "kr": "비의속눈썹",
+     "ref": "Rain's Eyelashes",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.55
+    },
+    {
+     "cn": "风向",
+     "en": "Wind's Direction",
+     "ja": "風の方向",
+     "kr": "바람의방향",
+     "ref": "Wind's Direction",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "海底不灭",
+     "en": "Immortality in the Sea",
+     "ja": "海の中の不滅",
+     "kr": "바닷속불멸",
+     "ref": "Immortality in the Sea",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "浪涛的心愿",
+     "en": "Wave's Wish",
+     "ja": "波の念願",
+     "kr": "파도의염원",
+     "ref": "Wave's Wish",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "梦的形态",
+     "en": "Dream's Formation",
+     "ja": "夢の形",
+     "kr": "꿈의형태",
+     "ref": "Dream's Formation",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "HERO_ITEM": {
+   "title": {
+    "cn": "刚毅化身",
+    "en": "Indomitable Hero",
+    "ja": "不屈の権化",
+    "kr": "불굴의화신"
+   },
+   "items": [
+    {
+     "cn": "一般",
+     "en": "Common",
+     "ja": "コモン",
+     "kr": "일반",
+     "ref": null,
+     "kind": "group",
+     "toBox": null,
+     "p": null
+    },
+    {
+     "cn": "向导猫帽子",
+     "en": "Guide Cat Hat",
+     "ja": "ガイドねこ帽子",
+     "kr": "길안내고양이모자",
+     "ref": "Guide Cat Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "迷路猫帽子",
+     "en": "Stray Cat Hat",
+     "ja": "迷いねこ帽子",
+     "kr": "길잃은고양이모자",
+     "ref": "Stray Cat Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "铸铁锅",
+     "en": "Iron Pot",
+     "ja": "銑鉄鍋",
+     "kr": "무쇠냄비",
+     "ref": "Iron Pot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "煎锅",
+     "en": "Frying Pan",
+     "ja": "フライパン",
+     "kr": "프라이냄비",
+     "ref": "Frying Pan",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "蓝色三角蝴蝶结",
+     "en": "Blue Triangle Ribbon",
+     "ja": "青い三角リボン",
+     "kr": "파랑삼각리본",
+     "ref": "Blue Triangle Ribbon",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "蓝色夏季T恤",
+     "en": "Blue Summer T-Shirt",
+     "ja": "夏の青いトップ",
+     "kr": "파랑여름티셔츠",
+     "ref": "Blue Summer T-Shirt",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "橘色夏季T恤",
+     "en": "Orange Summer T-Shirt",
+     "ja": "夏のオレンジ色のトップ",
+     "kr": "주황여름티셔츠",
+     "ref": "Orange Summer T-Shirt",
+     "kind": "costume",
+     "toBox": null,
+     "p": 12.3
+    },
+    {
+     "cn": "高级",
+     "en": "Uncommon",
+     "ja": "アンコモン",
+     "kr": "고급",
+     "ref": null,
+     "kind": "group",
+     "toBox": null,
+     "p": null
+    },
+    {
+     "cn": "密探眼镜",
+     "en": "Secret Agent Glasses",
+     "ja": "シークレットエージェント眼鏡",
+     "kr": "비밀요원안경",
+     "ref": "Secret Agent Glasses",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "极限运动护目镜",
+     "en": "Extreme Goggles",
+     "ja": "エクストリームゴーグル",
+     "kr": "익스트림고글",
+     "ref": "Extreme Goggles",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "稀有",
+     "en": "Rare",
+     "ja": "レア",
+     "kr": "레어",
+     "ref": null,
+     "kind": "group",
+     "toBox": null,
+     "p": null
+    },
+    {
+     "cn": "火焰魔力帽子",
+     "en": "Flame Magic Hat",
+     "ja": "炎の魔法帽子",
+     "kr": "불꽃마력모자",
+     "ref": "Flame Magic Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "英雄",
+     "en": "Heroic",
+     "ja": "エピック",
+     "kr": "영웅",
+     "ref": null,
+     "kind": "group",
+     "toBox": null,
+     "p": null
+    },
+    {
+     "cn": "埃尔利安的翅膀",
+     "en": "Elian's Wings",
+     "ja": "エリアンの翼",
+     "kr": "엘리안의날개",
+     "ref": "Elian's Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "伊奈斯的弓架",
+     "en": "Ines' Bow",
+     "ja": "イネスの弓スタンド",
+     "kr": "이네스의활걸이",
+     "ref": "Ines' Bow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "艾特娜的翅膀",
+     "en": "Etna's Wings",
+     "ja": "エトナの翼",
+     "kr": "에트나의날개",
+     "ref": "Etna's Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "德洛尔的手套",
+     "en": "Droll's Gloves",
+     "ja": "ドロルの手袋",
+     "kr": "드롤의장갑",
+     "ref": "Droll's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "亚比克的手套",
+     "en": "Abik's Gloves",
+     "ja": "アビクの手袋",
+     "kr": "아비크의장갑",
+     "ref": "Abik's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "海尼亚的袖套",
+     "en": "Hannia's Gloves",
+     "ja": "ハニアの手袋",
+     "kr": "해니아의손덮개",
+     "ref": "Hannia's Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "德洛尔的军靴",
+     "en": "Droll's Boots",
+     "ja": "ドロルの軍用靴",
+     "kr": "드롤의군화",
+     "ref": "Droll's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "亚比克的长靴",
+     "en": "Abik's Boots",
+     "ja": "アビクのブーツ",
+     "kr": "아비크의장화",
+     "ref": "Abik's Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    },
+    {
+     "cn": "海尼亚布鞋",
+     "en": "Hania's Cloth Shoes",
+     "ja": "ハニアの布靴",
+     "kr": "해니아의천신발",
+     "ref": "Hania's Cloth Shoes",
+     "kind": "costume",
+     "toBox": null,
+     "p": 0.2
+    }
+   ],
+   "subs": []
+  },
+  "IMO_CAFE": {
+   "title": {
+    "cn": "IMO CAFE",
+    "en": "IMO CAFE",
+    "ja": "IMO CAFE",
+    "kr": "IMO CAFE 코스튬"
+   },
+   "items": [
+    {
+     "cn": "奶盖猫",
+     "en": "Fluffy Cat",
+     "ja": "ふわふわラテねこ",
+     "kr": "밀크폼 고양이",
+     "ref": "Fluffy Cat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "卡士达布丁",
+     "en": "Custard Pudding",
+     "ja": "カスタードプリン",
+     "kr": "커스터드 푸딩",
+     "ref": "Custard Pudding",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "蓝莓果冻",
+     "en": "Blueberry Jelly",
+     "ja": "ブルーベリーゼリー",
+     "kr": "블루베리 젤리",
+     "ref": "Blueberry Jelly",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "一壶咖啡",
+     "en": "Coffee Pot",
+     "ja": "コーヒーポット",
+     "kr": "커피 한 주전자",
+     "ref": "Coffee Pot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "一杯拿铁",
+     "en": "A Cup of Latte",
+     "ja": "カフェラテを一杯",
+     "kr": "라떼 한 잔",
+     "ref": "A Cup of Latte",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.6
+    },
+    {
+     "cn": "巧克力百汇",
+     "en": "Chocolate Parfait",
+     "ja": "チョコパフェ",
+     "kr": "초코초코 파르페",
+     "ref": "Chocolate Parfait",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.6
+    },
+    {
+     "cn": "草莓鲜奶油蛋糕",
+     "en": "Strawberry Shortcake",
+     "ja": "いちごのショートケーキ",
+     "kr": "딸기 생크림 케이크",
+     "ref": "Strawberry Shortcake",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.6
+    },
+    {
+     "cn": "莫希托",
+     "en": "Mojito",
+     "ja": "モヒート",
+     "kr": "모히또",
+     "ref": "Mojito",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.6
+    },
+    {
+     "cn": "搅拌奶油中",
+     "en": "Mixing Coffee Creamer",
+     "ja": "ミルクをまぜます",
+     "kr": "프림 섞는 중",
+     "ref": "Mixing Coffee Creamer",
+     "kind": "costume",
+     "toBox": null,
+     "p": 3.6
+    },
+    {
+     "cn": "当啷！",
+     "en": "Clink!",
+     "ja": "がちゃん！",
+     "kr": "쨍그랑!",
+     "ref": "Clink!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    },
+    {
+     "cn": "打翻冰淇淋",
+     "en": "Slushy Ice Cream",
+     "ja": "べちゃっとアイス",
+     "kr": "철퍽 아이스크림",
+     "ref": "Slushy Ice Cream",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    },
+    {
+     "cn": "薄荷巧克力冰淇淋",
+     "en": "Mint Chocolate Ice Cream",
+     "ja": "ミントチョコアイス",
+     "kr": "민트초코 아이스크림",
+     "ref": "Mint Chocolate Ice Cream",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    },
+    {
+     "cn": "巧克力软糖冰淇淋",
+     "en": "Chocolate Ice Cream",
+     "ja": "チョコアイス",
+     "kr": "초코퍼지 아이스크림",
+     "ref": "Chocolate Ice Cream",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    },
+    {
+     "cn": "草莓冰淇淋",
+     "en": "Strawberry Ice Cream",
+     "ja": "いちごアイス",
+     "kr": "딸기 아이스크림",
+     "ref": "Strawberry Ice Cream",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    },
+    {
+     "cn": "牛奶冰淇淋",
+     "en": "Milk Ice Cream",
+     "ja": "ミルクアイス",
+     "kr": "우유 아이스크림",
+     "ref": "Milk Ice Cream",
+     "kind": "costume",
+     "toBox": null,
+     "p": 13.0
+    }
+   ],
+   "subs": []
+  },
+  "XMAS": {
+   "title": {
+    "cn": "圣诞钟声",
+    "en": "Chiming Bells of Christmas",
+    "ja": "聖誕の鐘音",
+    "kr": "성탄의 종소리"
+   },
+   "items": [
+    {
+     "cn": "快递员的帽子",
+     "en": "Delivery Courier's Hat",
+     "ja": "プレゼント配達員の帽子",
+     "kr": "선물 배달꾼의 모자",
+     "ref": "Delivery Courier's Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.4
+    },
+    {
+     "cn": "圣诞之星",
+     "en": "Christmas Star",
+     "ja": "聖誕の星",
+     "kr": "성탄의 별",
+     "ref": "Christmas Star",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.4
+    },
+    {
+     "cn": "圣诞钟声",
+     "en": "Chiming Bells of Christmas",
+     "ja": "聖誕の鐘音",
+     "kr": "성탄의 종소리",
+     "ref": "Chiming Bells of Christmas",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.4
+    },
+    {
+     "cn": "快递员的制服",
+     "en": "Courier's Uniform",
+     "ja": "プレゼント配達員のユニフォーム",
+     "kr": "선물 배달꾼의 유니폼",
+     "ref": "Courier's Uniform",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.4
+    },
+    {
+     "cn": "圣诞果实",
+     "en": "Christmas Berries",
+     "ja": "聖誕の実",
+     "kr": "성탄의 열매",
+     "ref": "Christmas Berries",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.4
+    },
+    {
+     "cn": "圣诞树枝",
+     "en": "Christmas Branches",
+     "ja": "聖誕の枝",
+     "kr": "성탄의 나뭇가지",
+     "ref": "Christmas Branches",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "快递员的保暖手套",
+     "en": "Courier's Insulated Gloves",
+     "ja": "プレゼント配達員の防寒グローブ",
+     "kr": "선물 배달꾼의 보온장갑",
+     "ref": "Courier's Insulated Gloves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "圣诞叶子",
+     "en": "Christmas Leaves",
+     "ja": "聖誕の葉っぱ",
+     "kr": "성탄의 잎사귀",
+     "ref": "Christmas Leaves",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "圣诞树干",
+     "en": "Christmas Stems",
+     "ja": "聖誕の茎",
+     "kr": "성탄의 줄기",
+     "ref": "Christmas Stems",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "快递员的羽绒靴",
+     "en": "Courier's Padded Boots",
+     "ja": "プレゼント配達員のダウンブーツ",
+     "kr": "선물 배달꾼의 패딩부츠",
+     "ref": "Courier's Padded Boots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "圣诞树根",
+     "en": "Christmas Roots",
+     "ja": "聖誕の根",
+     "kr": "성탄의 뿌리",
+     "ref": "Christmas Roots",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "圣诞花瓣",
+     "en": "Christmas Petals",
+     "ja": "聖誕の花びら",
+     "kr": "성탄의 꽃잎",
+     "ref": "Christmas Petals",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.5
+    },
+    {
+     "cn": "圣诞树快乐！",
+     "en": "Merry Treesmas!",
+     "ja": "メリーツリースマス！",
+     "kr": "메리 트리스마스!",
+     "ref": "Merry Treesmas!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "圣诞红的祝福",
+     "en": "Poinsettia Blessings",
+     "ja": "ポインセチアの祝福",
+     "kr": "포인세티아의 축복",
+     "ref": "Poinsettia Blessings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "我手中的糖果",
+     "en": "Candy in My Hand",
+     "ja": "キャンディーを持つ手",
+     "kr": "내 손에 캔디",
+     "ref": "Candy in My Hand",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "希望的钟声",
+     "en": "Chiming Bells of Hope",
+     "ja": "希望の鐘音",
+     "kr": "희망의 종소리",
+     "ref": "Chiming Bells of Hope",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "快递员的口袋",
+     "en": "Courier's Satchel",
+     "ja": "プレゼント配達員の袋",
+     "kr": "선물 배달꾼의 주머니",
+     "ref": "Courier's Satchel",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "圣诞快乐！",
+     "en": "Merry Christmas!",
+     "ja": "メリークリスマス！",
+     "kr": "메리 크리스마스!",
+     "ref": "Merry Christmas!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "HALLOWEEN": {
+   "title": {
+    "cn": "不给糖就捣蛋！",
+    "en": "Trick or Treat",
+    "ja": "トリック・オア・トリート",
+    "kr": "Trick or Treat"
+   },
+   "items": [
+    {
+     "cn": "南瓜：平静！",
+     "en": "Pumpkin: Peace",
+     "ja": "かぼちゃ：平穏！",
+     "kr": "호박: 평온!",
+     "ref": "Pumpkin: Peace",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "地狱哨兵",
+     "en": "Underworld Guard",
+     "ja": "あの世の門番",
+     "kr": "저승의 파수꾼",
+     "ref": "Underworld Guard",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "白布的主人",
+     "en": "Bedsheet Body",
+     "ja": "白い布の主",
+     "kr": "하얀 천의 주인",
+     "ref": "Bedsheet Body",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "浣熊面具",
+     "en": "Raccoon Mask",
+     "ja": "タヌキの仮面",
+     "kr": "너구리 가면",
+     "ref": "Raccoon Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "吸血鬼面具",
+     "en": "Vampire Mask",
+     "ja": "吸血鬼の仮面",
+     "kr": "흡혈귀 가면",
+     "ref": "Vampire Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "科学怪人面具",
+     "en": "Frankenstein Mask",
+     "ja": "フランケンシュタインの仮面",
+     "kr": "프랑켄슈타인 가면",
+     "ref": "Frankenstein Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "地狱使者面具",
+     "en": "Reaper Mask",
+     "ja": "死神の仮面",
+     "kr": "저승사자 가면",
+     "ref": "Reaper Mask",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "南瓜：忧郁！",
+     "en": "Pumpkin: Sad",
+     "ja": "かぼちゃ：悲しみ！",
+     "kr": "호박: 우울!",
+     "ref": "Pumpkin: Sad",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "南瓜：幸福！",
+     "en": "Pumpkin: Happy",
+     "ja": "かぼちゃ：幸せ！",
+     "kr": "호박: 행복!",
+     "ref": "Pumpkin: Happy",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "白布的秘密",
+     "en": "Bedsheet Secret",
+     "ja": "白い布の秘密",
+     "kr": "하얀 천의 비밀",
+     "ref": "Bedsheet Secret",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.6
+    },
+    {
+     "cn": "阴森森",
+     "en": "Whoo-oo-oo",
+     "ja": "ゾクゾク",
+     "kr": "으시시",
+     "ref": "Whoo-oo-oo",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "惊悚悚",
+     "en": "Meow-oo-oo",
+     "ja": "ゾゾゾ",
+     "kr": "오소소",
+     "ref": "Meow-oo-oo",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "软绵绵玩偶服",
+     "en": "Fluffy Puppet Wear",
+     "ja": "ふわふわ着ぐるみ",
+     "kr": "폭신한 인형옷",
+     "ref": "Fluffy Puppet Wear",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "厚实玩偶服",
+     "en": "Padded Puppet Wear",
+     "ja": "厚い着ぐるみ",
+     "kr": "도톰한 인형옷",
+     "ref": "Padded Puppet Wear",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "糊里糊涂猫咪",
+     "en": "Patched Kitty",
+     "ja": "猫のボロボロ着ぐるみ(顔)",
+     "kr": "얼기설기 고양이",
+     "ref": "Patched Kitty",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "糊里糊涂小狗",
+     "en": "Patched Puppy",
+     "ja": "犬のボロボロ着ぐるみ(顔)",
+     "kr": "얼기설기 강아지",
+     "ref": "Patched Puppy",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.5
+    },
+    {
+     "cn": "南瓜糖果",
+     "en": "Pumpkin Candy",
+     "ja": "パンプキンキャンディ",
+     "kr": "펌킨 캔디",
+     "ref": "Pumpkin Candy",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.0
+    },
+    {
+     "cn": "南瓜饼干",
+     "en": "Pumpkin Cookie",
+     "ja": "パンプキンクッキー",
+     "kr": "펌킨 쿠키",
+     "ref": "Pumpkin Cookie",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.0
+    },
+    {
+     "cn": "南瓜派",
+     "en": "Pumpkin Pie",
+     "ja": "パンプキンパイ",
+     "kr": "펌킨 파이",
+     "ref": "Pumpkin Pie",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.0
+    },
+    {
+     "cn": "恶魔拉",
+     "en": "Devira",
+     "ja": "デビラ",
+     "kr": "데비라",
+     "ref": "Devira",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "南瓜国王",
+     "en": "PumpKing",
+     "ja": "パンプキング",
+     "kr": "펌프킹",
+     "ref": "PumpKing",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "南瓜女王",
+     "en": "PumpQueen",
+     "ja": "パンプクイーン",
+     "kr": "펌프퀸",
+     "ref": "PumpQueen",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "PAJAMA": {
+   "title": {
+    "cn": "睡衣派对",
+    "en": "Pajama Party",
+    "ja": "パジャマパーティー",
+    "kr": "파자마 파티"
+   },
+   "items": [
+    {
+     "cn": "整整洁的枕头",
+     "en": "Neat Pillow",
+     "ja": "綺麗な枕",
+     "kr": "단정한 베개",
+     "ref": "Neat Pillow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.7
+    },
+    {
+     "cn": "皱巴巴的枕头",
+     "en": "Squishy Pillow",
+     "ja": "しわしわの枕",
+     "kr": "구겨진 베개",
+     "ref": "Squishy Pillow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.7
+    },
+    {
+     "cn": "温馨的棕色睡衣",
+     "en": "Brown Pajama",
+     "ja": "ふわふわブラウンパジャマ",
+     "kr": "포근한 갈색 잠옷",
+     "ref": "Brown Pajama",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "清绿色睡衣",
+     "en": "Green Pajama",
+     "ja": "爽やかなグリーンパジャマ",
+     "kr": "싱그러운 녹색 잠옷",
+     "ref": "Green Pajama",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "艳黄色睡衣",
+     "en": "Yellow Pajama",
+     "ja": "華麗なイエローパジャマ",
+     "kr": "화사한 노란색 잠옷",
+     "ref": "Yellow Pajama",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "森林狐狸帽",
+     "en": "Foxy Hat",
+     "ja": "森の中のキツネ帽子",
+     "kr": "숲 속 여우 모자",
+     "ref": "Foxy Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "森林小熊帽",
+     "en": "Teddy Hat",
+     "ja": "森の中のクマ帽子",
+     "kr": "숲 속 곰돌이 모자",
+     "ref": "Teddy Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "陨石上的恐龙帽",
+     "en": "Dino Hat",
+     "ja": "隕石の上の恐竜帽子",
+     "kr": "운석 위 공룡 모자",
+     "ref": "Dino Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "荷叶上的青蛙帽",
+     "en": "Froggy Hat",
+     "ja": "ハスの葉のカエル帽子",
+     "kr": "연잎 위 개구리 모자",
+     "ref": "Froggy Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "鸭鸭帽",
+     "en": "Tweety Hat",
+     "ja": "ひよこ帽子",
+     "kr": "삐약이 모자",
+     "ref": "Tweety Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "哔哔帽",
+     "en": "Quacky Hat",
+     "ja": "ぴよぴよ帽子",
+     "kr": "삑삑이 모자",
+     "ref": "Quacky Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 7.8
+    },
+    {
+     "cn": "完美的黑暗",
+     "en": "Full Darkness",
+     "ja": "完璧な闇",
+     "kr": "완벽한 어둠",
+     "ref": "Full Darkness",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.6
+    },
+    {
+     "cn": "完美的帷幕",
+     "en": "Full Cover",
+     "ja": "完璧なカーテン",
+     "kr": "완벽한 장막",
+     "ref": "Full Cover",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.6
+    },
+    {
+     "cn": "清新的枕头",
+     "en": "Green Pillow",
+     "ja": "爽やかな枕",
+     "kr": "싱그러운 베개",
+     "ref": "Green Pillow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.6
+    },
+    {
+     "cn": "充满爱意的枕头",
+     "en": "Lovely Pillow",
+     "ja": "愛情たっぷり枕",
+     "kr": "애정 가득 베개",
+     "ref": "Lovely Pillow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 2.6
+    },
+    {
+     "cn": "柔软的斑纹睡衣",
+     "en": "Spotted Pajama",
+     "ja": "ふわふわ牛柄パジャマ",
+     "kr": "폭신한 얼룩무늬 잠옷",
+     "ref": "Spotted Pajama",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "活泼的小狗",
+     "en": "Puppy Hat",
+     "ja": "元気なワンちゃん",
+     "kr": "활발한 강아지",
+     "ref": "Puppy Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "敏捷的兔子",
+     "en": "Bunny Hat",
+     "ja": "素早いうさぎ",
+     "kr": "날렵한 토끼",
+     "ref": "Bunny Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "慢吞吞的乳牛",
+     "en": "Moo Moo Hat",
+     "ja": "のんきなホルスタイン",
+     "kr": "느긋한 얼룩소",
+     "ref": "Moo Moo Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "FESTIVAL": {
+   "title": {
+    "cn": "庆典、盛宴、宴会！(服装)",
+    "en": "Festival, Feast, and Banquet! (Costume)",
+    "ja": "祝祭・饗宴・宴会！(コスチューム)",
+    "kr": "축제, 향연, 연회"
+   },
+   "items": [
+    {
+     "cn": "伪装：礼物",
+     "en": "Camo: Gift",
+     "ja": "偽装：プレゼント",
+     "kr": "위장: 선물",
+     "ref": "Camo: Gift",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "白天小丑",
+     "en": "Daylight Pierrot",
+     "ja": "真昼のピエロ",
+     "kr": "한낮의 삐에로",
+     "ref": "Daylight Pierrot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "暮光庆典",
+     "en": "Twilight Festival",
+     "ja": "夕暮れの祝祭",
+     "kr": "황혼의 축제",
+     "ref": "Twilight Festival",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "白天庆典",
+     "en": "Daylight Festival",
+     "ja": "真昼の祝祭",
+     "kr": "한낮의 축제",
+     "ref": "Daylight Festival",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "深夜庆典",
+     "en": "Midnight Festival",
+     "ja": "真夜中の祝祭",
+     "kr": "한밤의 축제",
+     "ref": "Midnight Festival",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "头顶上的生日",
+     "en": "Birthday on Top",
+     "ja": "バースデーハット",
+     "kr": "머리 위 생일",
+     "ref": "Birthday on Top",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "粉红色大象喇叭",
+     "en": "Pink Elephant Trumpet",
+     "ja": "ピンクの巻き笛",
+     "kr": "분홍색 코끼리 나팔",
+     "ref": "Pink Elephant Trumpet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "天蓝色大象喇叭",
+     "en": "Blue Elephant Trumpet",
+     "ja": "空色の巻き笛",
+     "kr": "하늘색 코끼리 나팔",
+     "ref": "Blue Elephant Trumpet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 9.5
+    },
+    {
+     "cn": "端庄的问候",
+     "en": "Neat Bow",
+     "ja": "エレガントな挨拶",
+     "kr": "단정한 인사",
+     "ref": "Neat Bow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "优雅的问候",
+     "en": "Graceful Bow",
+     "ja": "優雅な挨拶",
+     "kr": "우아한 인사",
+     "ref": "Graceful Bow",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "飘逸的挂旗",
+     "en": "Fluttering Garland",
+     "ja": "はためくガーランド",
+     "kr": "팔랑팔랑 가랜드",
+     "ref": "Fluttering Garland",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "清爽小丑",
+     "en": "Cheery Pierrot",
+     "ja": "爽やかピエロ",
+     "kr": "상큼한 삐에로",
+     "ref": "Cheery Pierrot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "暮光小丑",
+     "en": "Twilight Pierrot",
+     "ja": "夕暮れのピエロ",
+     "kr": "황혼의 삐에로",
+     "ref": "Twilight Pierrot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "闷闷不乐的小丑帽",
+     "en": "Sad Clown Hat",
+     "ja": "悲しいピエロの帽子",
+     "kr": "시무룩한 광대 모자",
+     "ref": "Sad Clown Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "活泼的小丑帽",
+     "en": "Bubbly Clown Hat",
+     "ja": "元気なピエロの帽子",
+     "kr": "활발한 광대 모자",
+     "ref": "Bubbly Clown Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "一闪一闪！硄！",
+     "en": "Sparkle! Boom!",
+     "ja": "キラキラ～ボンッ！",
+     "kr": "번쩍번쩍 쾅!",
+     "ref": "Sparkle! Boom!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "一闪一闪！砰！",
+     "en": "Twinkle! Pop!",
+     "ja": "キラキラ～パーン！",
+     "kr": "반짝반짝 펑!",
+     "ref": "Twinkle! Pop!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "FOREST": {
+   "title": {
+    "cn": "森林青草香",
+    "en": "Green Scent",
+    "ja": "森の草の香り",
+    "kr": "숲속 풀내음"
+   },
+   "items": [
+    {
+     "cn": "树叶披风",
+     "en": "Leaf Cape",
+     "ja": "葉っぱのマント",
+     "kr": "나뭇잎 망토",
+     "ref": "Leaf Cape",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.5
+    },
+    {
+     "cn": "叶片耳饰",
+     "en": "Leafy Ears",
+     "ja": "草の耳",
+     "kr": "풀잎귀",
+     "ref": "Leafy Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.4
+    },
+    {
+     "cn": "铃兰花",
+     "en": "Lily Bell",
+     "ja": "鈴蘭",
+     "kr": "은방울",
+     "ref": "Lily Bell",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.4
+    },
+    {
+     "cn": "绒球蒲公英",
+     "en": "Pompom Dandelion",
+     "ja": "ぽんぽんタンポポ",
+     "kr": "폼폼 민들레",
+     "ref": "Pompom Dandelion",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.4
+    },
+    {
+     "cn": "一束菊花",
+     "en": "Mum Bouquet",
+     "ja": "菊の髪飾り",
+     "kr": "국화 한 다발",
+     "ref": "Mum Bouquet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.5
+    },
+    {
+     "cn": "一束绣球花",
+     "en": "Hydrangeas Bouquet",
+     "ja": "アジサイの髪飾り",
+     "kr": "수국 한 다발",
+     "ref": "Hydrangeas Bouquet",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.5
+    },
+    {
+     "cn": "树下的蘑菇",
+     "en": "Tree Mushroom",
+     "ja": "木の下のキノコ",
+     "kr": "나무 아래 버섯",
+     "ref": "Tree Mushroom",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.4
+    },
+    {
+     "cn": "头顶上的向日葵",
+     "en": "Sunflower Topper",
+     "ja": "頭の上のヒマワリ",
+     "kr": "머리 위 해바라기",
+     "ref": "Sunflower Topper",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.4
+    },
+    {
+     "cn": "四叶幸运草花冠",
+     "en": "Four-Leaf Clover Crown",
+     "ja": "四つ葉のクローバーの花冠",
+     "kr": "네잎 클로버 화관",
+     "ref": "Four-Leaf Clover Crown",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.5
+    },
+    {
+     "cn": "蘑菇长袍",
+     "en": "Mushroom Robe",
+     "ja": "キノコのローブ",
+     "kr": "버섯 로브",
+     "ref": "Mushroom Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "叶片长袍",
+     "en": "Leaf Robe",
+     "ja": "草のローブ",
+     "kr": "풀잎 로브",
+     "ref": "Leaf Robe",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "沼泽中的蘑菇",
+     "en": "Swamp Mushroom",
+     "ja": "沼地のキノコ",
+     "kr": "늪지 속 버섯",
+     "ref": "Swamp Mushroom",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "头顶上的蘑菇",
+     "en": "Mushroom Topper",
+     "ja": "頭の上のキノコ",
+     "kr": "머리 위 버섯",
+     "ref": "Mushroom Topper",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "向日葵草帽",
+     "en": "Sunflower Grass Hat",
+     "ja": "ヒマワリの葉っぱ帽子",
+     "kr": "해바라기 풀모자",
+     "ref": "Sunflower Grass Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "拉佛拉西亚",
+     "en": "Rafflesia",
+     "ja": "ラフレシア",
+     "kr": "라플라시아",
+     "ref": "Rafflesia",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "森林的秘密",
+     "en": "Forest's Secret",
+     "ja": "森の秘密",
+     "kr": "숲 속의 비밀",
+     "ref": "Forest's Secret",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "跳跳青蛙",
+     "en": "Bouncy Frog",
+     "ja": "ぴょこっとカエル",
+     "kr": "폴짝 개굴",
+     "ref": "Bouncy Frog",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "露珠青蛙",
+     "en": "Dewy Frog",
+     "ja": "露とカエル",
+     "kr": "이슬 개굴",
+     "ref": "Dewy Frog",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "MOON": {
+   "title": {
+    "cn": "青云赤月",
+    "en": "Blue Cloud & Red Moon",
+    "ja": "青雲赤月",
+    "kr": "청운적월"
+   },
+   "items": [
+    {
+     "cn": "玉珠姿态",
+     "en": "Jade Grace",
+     "ja": "翡翠玉飾り",
+     "kr": "옥구슬 자태",
+     "ref": "Jade Grace",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "金铃姿态",
+     "en": "Golden Bell Grace",
+     "ja": "金鈴飾り",
+     "kr": "금방울 자태",
+     "ref": "Golden Bell Grace",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "熄灭的封印",
+     "en": "Faded Seal",
+     "ja": "弱まった封印",
+     "kr": "사그라든 봉인",
+     "ref": "Faded Seal",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "漆黑丸子头",
+     "en": "Black Hairpin",
+     "ja": "漆黒のお団子",
+     "kr": "흑모교자",
+     "ref": "Black Hairpin",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "赤花丸子头",
+     "en": "Red Flower Hairpin",
+     "ja": "赤花のお団子",
+     "kr": "적화교자",
+     "ref": "Red Flower Hairpin",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "绿云帽",
+     "en": "Green Cloud Hat",
+     "ja": "雲帽(緑)",
+     "kr": "녹운모",
+     "ref": "Green Cloud Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "青云帽",
+     "en": "Blue Cloud Hat",
+     "ja": "雲帽(青)",
+     "kr": "청운모",
+     "ref": "Blue Cloud Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "紫冠帽",
+     "en": "Purple Official Hat",
+     "ja": "冠帽(紫)",
+     "kr": "자관모",
+     "ref": "Purple Official Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "黑冠帽",
+     "en": "Black Official Hat",
+     "ja": "冠帽(黒)",
+     "kr": "흑관모",
+     "ref": "Black Official Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "赤冠帽",
+     "en": "Red Official Hat",
+     "ja": "冠帽(赤)",
+     "kr": "적관모",
+     "ref": "Red Official Hat",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.2
+    },
+    {
+     "cn": "金花羽衣",
+     "en": "Golden Flower Wings",
+     "ja": "金花の羽衣",
+     "kr": "금화의 날개옷",
+     "ref": "Golden Flower Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "青云羽衣",
+     "en": "Blue Cloud Wings",
+     "ja": "青雲の羽衣",
+     "kr": "청운의 날개옷",
+     "ref": "Blue Cloud Wings",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "仙女之花",
+     "en": "Fairy’s Blossom",
+     "ja": "天女の花",
+     "kr": "선녀의 꽃",
+     "ref": "Fairy’s Blossom",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "赤花结",
+     "en": "Red Flower Knot",
+     "ja": "赤花の組みひも",
+     "kr": "적화매듭",
+     "ref": "Red Flower Knot",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "赤花血凤",
+     "en": "Crimson Seal",
+     "ja": "赤花の血鳳",
+     "kr": "적화혈봉",
+     "ref": "Crimson Seal",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "赤月挟笠",
+     "en": "Red Moon Cap",
+     "ja": "赤月の黒笠",
+     "kr": "적월협립",
+     "ref": "Red Moon Cap",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "FRIENDS": {
+   "title": {
+    "cn": "原野好友",
+    "en": "Wild Friends",
+    "ja": "ワイルドフレンズ",
+    "kr": "와일드프렌즈"
+   },
+   "items": [
+    {
+     "cn": "小鲁的尾巴",
+     "en": "Nuri’s Tail",
+     "ja": "ヌリの尻尾",
+     "kr": "누리의 꼬리",
+     "ref": "Nuri’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "小鲁的耳朵",
+     "en": "Nuri’s Ears",
+     "ja": "ヌリの耳",
+     "kr": "누리의 귀",
+     "ref": "Nuri’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "玛鲁的尾巴",
+     "en": "Maru’s Tail",
+     "ja": "マルの尻尾",
+     "kr": "마루의 꼬리",
+     "ref": "Maru’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "玛鲁的耳朵",
+     "en": "Maru’s Ears",
+     "ja": "マルの耳",
+     "kr": "마루의 귀",
+     "ref": "Maru’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "萨迪的尾巴",
+     "en": "Sandy’s Tail",
+     "ja": "センディーの尻尾",
+     "kr": "샌디의 꼬리",
+     "ref": "Sandy’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "萨迪的耳朵",
+     "en": "Sandy’s Ears",
+     "ja": "センディーの耳",
+     "kr": "샌디의 귀",
+     "ref": "Sandy’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "诺瓦的尾巴",
+     "en": "Nova’s Tail",
+     "ja": "ノヴァの尻尾",
+     "kr": "노바의 꼬리",
+     "ref": "Nova’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "诺瓦的耳朵",
+     "en": "Nova’s Ears",
+     "ja": "ノヴァの耳",
+     "kr": "노바의 귀",
+     "ref": "Nova’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 10.0
+    },
+    {
+     "cn": "摩卡的尾巴",
+     "en": "Moka’s Tail",
+     "ja": "モカの尻尾",
+     "kr": "모카의 꼬리",
+     "ref": "Moka’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "摩卡的耳朵",
+     "en": "Moka’s Ears",
+     "ja": "モカの耳",
+     "kr": "모카의 귀",
+     "ref": "Moka’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "安珀的尾巴",
+     "en": "Amber’s Tail",
+     "ja": "エンバーの尻尾",
+     "kr": "앰버의 꼬리",
+     "ref": "Amber’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "安珀的耳朵",
+     "en": "Amber’s Ears",
+     "ja": "エンバーの耳",
+     "kr": "앰버의 귀",
+     "ref": "Amber’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "阿尔卡的尾巴",
+     "en": "Arca’s Tail",
+     "ja": "アルカの尻尾",
+     "kr": "아르카의 꼬리",
+     "ref": "Arca’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "阿尔卡的耳朵",
+     "en": "Arca’s Ears",
+     "ja": "アルカの耳",
+     "kr": "아르카의 귀",
+     "ref": "Arca’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "奈布鲁的尾巴",
+     "en": "Neblu’s Tail",
+     "ja": "ネーブルの尻尾",
+     "kr": "네블루의 꼬리",
+     "ref": "Neblu’s Tail",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "内布鲁的耳朵",
+     "en": "Neblu’s Ears",
+     "ja": "ネーブルの耳",
+     "kr": "네블루의 귀",
+     "ref": "Neblu’s Ears",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  },
+  "STAGE": {
+   "title": {
+    "cn": "音乐舞台",
+    "en": "Music Station",
+    "ja": "ミュージックステーション",
+    "kr": "뮤직스테이션"
+   },
+   "items": [
+    {
+     "cn": "摇滚T恤",
+     "en": "Rock 'n' Roll T-Shirt",
+     "ja": "ロックンロールTシャツ",
+     "kr": "락앤롤 티셔츠",
+     "ref": "Rock 'n' Roll T-Shirt",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.85
+    },
+    {
+     "cn": "钢琴连身裙",
+     "en": "Piano Dress",
+     "ja": "ピアノワンピース",
+     "kr": "피아노 원피스",
+     "ref": "Piano Dress",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.85
+    },
+    {
+     "cn": "乌克丽丽",
+     "en": "Ukulele",
+     "ja": "ウクレレ",
+     "kr": "우쿨렐레",
+     "ref": "Ukulele",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "木吉他",
+     "en": "Acoustic Guitar",
+     "ja": "アコースティックギター",
+     "kr": "통기타",
+     "ref": "Acoustic Guitar",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "激昂跃动的钢琴",
+     "en": "Rocking Piano",
+     "ja": "アップテンポなピアノ",
+     "kr": "요동치는 피아노",
+     "ref": "Rocking Piano",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "轻盈摇曳的钢琴",
+     "en": "Flowing Piano",
+     "ja": "テンポ良いピアノ",
+     "kr": "찰랑이는 피아노",
+     "ref": "Flowing Piano",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "蓝色耳机",
+     "en": "Blue Headset",
+     "ja": "ブルーのヘッドセット",
+     "kr": "블루 헤드셋",
+     "ref": "Blue Headset",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "绿色耳机",
+     "en": "Green Headset",
+     "ja": "グリーンのヘッドセット",
+     "kr": "그린 헤드셋",
+     "ref": "Green Headset",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "粉红耳机",
+     "en": "Pink Headset",
+     "ja": "ピンクのヘッドセット",
+     "kr": "핑크 헤드셋",
+     "ref": "Pink Headset",
+     "kind": "costume",
+     "toBox": null,
+     "p": 8.9
+    },
+    {
+     "cn": "蓝色电吉他",
+     "en": "Blue Electric Guitar",
+     "ja": "ブルーのエレキギター",
+     "kr": "블루 일렉기타",
+     "ref": "Blue Electric Guitar",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "粉红电吉他",
+     "en": "Pink Electric Guitar",
+     "ja": "ピンクのエレキギター",
+     "kr": "핑크 일렉기타",
+     "ref": "Pink Electric Guitar",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "绿色电吉他",
+     "en": "Green Electric Guitar",
+     "ja": "グリーンのエレキギター",
+     "kr": "그린 일렉기타",
+     "ref": "Green Electric Guitar",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "轻快进行曲",
+     "en": "Upbeat March",
+     "ja": "軽快な行進",
+     "kr": "경쾌한 행진",
+     "ref": "Upbeat March",
+     "kind": "costume",
+     "toBox": null,
+     "p": 4.0
+    },
+    {
+     "cn": "放声高歌！",
+     "en": "Sing It Loud!",
+     "ja": "声高らかに！",
+     "kr": "목청 높여!",
+     "ref": "Sing It Loud!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "轻声哼唱",
+     "en": "Little Hum",
+     "ja": "ハミング",
+     "kr": "작은 흥얼거림",
+     "ref": "Little Hum",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "五线谱上的自由",
+     "en": "Musical Freedom",
+     "ja": "五線紙の自由",
+     "kr": "오선지의 자유",
+     "ref": "Musical Freedom",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    },
+    {
+     "cn": "调高音量！",
+     "en": "Volume Up!",
+     "ja": "ボリュームアップ！",
+     "kr": "볼륨 업!",
+     "ref": "Volume Up!",
+     "kind": "costume",
+     "toBox": null,
+     "p": 1.0
+    }
+   ],
+   "subs": []
+  }
+ },
+ "sources": [
+  {
+   "key": "100100",
+   "code": "XMAS",
+   "label": "圣诞钟声",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100100?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100100&pageSize=300"
+  },
+  {
+   "key": "100200",
+   "code": "HALLOWEEN",
+   "label": "不给糖就捣蛋！",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100200?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100200&pageSize=300"
+  },
+  {
+   "key": "100300",
+   "code": "PAJAMA",
+   "label": "睡衣派对",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100300?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100300&pageSize=300"
+  },
+  {
+   "key": "100400",
+   "code": "FESTIVAL",
+   "label": "庆典、盛宴、宴会！(服装)",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100400?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100400&pageSize=300"
+  },
+  {
+   "key": "100500",
+   "code": "FOREST",
+   "label": "森林青草香",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100500?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100500&pageSize=300"
+  },
+  {
+   "key": "100600",
+   "code": "MOON",
+   "label": "青云赤月",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100600?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100600&pageSize=300"
+  },
+  {
+   "key": "100700",
+   "code": "FRIENDS",
+   "label": "原野好友",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100700?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100700&pageSize=300"
+  },
+  {
+   "key": "100800",
+   "code": "STAGE",
+   "label": "音乐舞台",
+   "page": "https://lim.com2us.com/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/100800?lang=zh-hant",
+   "api": "https://lim.com2us.com/lootviewer/api/v2/LootBox/5960bb5afe064cdfbc9063dedc97f646ccf5346cdb4a9636c19810330d95ce1a/content?sig=&key=100800&pageSize=300"
+  }
+ ]
+}
