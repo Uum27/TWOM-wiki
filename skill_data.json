@@ -1816,7 +1816,7 @@
   "class": "ranger",
   "learnLevel": 45,
   "type": "active",
-  "crystal": "?",
+  "crystal": "",
   "effect": {
    "cn": "5秒内增加射程，并提升暴击伤害。",
    "en": "Increases the weapon range and critical hit damage for 5 seconds.",

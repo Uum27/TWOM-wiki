@@ -1,7 +1,12 @@
 [
   {
     "zone": "Woody-Weedy Forest,Woody-Wordy Forest",
-    "desc": "欢迎使用魔法世界Wiki,制作人:Uum,如果你有任何问题,请联系QQ:810026494/Kakao:Uum27",
+    "desc": {
+      "cn": "欢迎使用魔法世界Wiki,制作人:Uum,如果你有任何问题,请联系QQ:810026494/Kakao:Uum27",
+      "en": "Welcome to the World of Magic Wiki! Producer: Uum. If you have any questions, please contact QQ: 810026494 / Kakao: Uum27",
+      "ja": "魔法世界Wikiへようこそ。制作：Uum。ご質問があれば QQ:810026494 / Kakao:Uum27 までご連絡ください。",
+      "kr": "마법세계 위키에 오신 것을 환영합니다. 제작자: Uum. 문의 사항이 있으시면 QQ:810026494 / Kakao:Uum27 로 연락해 주세요."
+    },
     "name": "Kooii",
     "level": "2",
     "notes": "-",

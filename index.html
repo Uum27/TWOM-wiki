@@ -293,20 +293,24 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   .drops img{width:24px;height:24px;}
 }
 /* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
-select.lang-btn{
-  -webkit-appearance:none;-moz-appearance:none;appearance:none;
-  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' fill='none' stroke='%234D5A75' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:right 14px center;
-  padding-right:32px;
-  padding-left:8px;                  /* 左侧留白收紧（右侧需给箭头留位） */
-  text-align:center;text-align-last:center;   /* 仅文字居中，箭头仍靠右 */
-}
+
+/* 语言切换：自定义点击下拉（PC/手机一致，替代原生 select） */
+.lang-dd{position:relative;display:inline-block;vertical-align:middle}
+.lang-dd-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:104px;padding:8px 12px;border:1px solid #ccc;background:#fff;border-radius:8px;font-size:15px;line-height:1;color:#3D4E68;white-space:nowrap;cursor:pointer;font-family:inherit}
+.lang-dd-btn:hover{border-color:#94A6BE;background:#F7FAFD}
+.lang-dd.open .lang-dd-btn{border-color:#94A6BE;background:#F7FAFD}
+.lang-dd-caret{width:0;height:0;border-left:4.5px solid transparent;border-right:4.5px solid transparent;border-top:6px solid #4D5A75;transition:transform .15s}
+.lang-dd.open .lang-dd-caret{transform:rotate(180deg)}
+.lang-dd-menu{display:none;position:absolute;top:calc(100% + 4px);right:0;min-width:100%;background:#fff;border:1px solid #B9C4D4;border-radius:8px;box-shadow:0 8px 22px rgba(34,44,62,.18);padding:4px;z-index:300}
+.lang-dd.open .lang-dd-menu{display:block}
+.lang-dd-item{padding:8px 14px;border-radius:6px;font-size:15px;line-height:1.2;color:#3D4E68;white-space:nowrap;text-align:center;cursor:pointer}
+.lang-dd-item:hover{background:#EAF1F8}
+.lang-dd-item.active{background:#EDF0F4;font-weight:600}
 </style>
 
 <div class="top-bar">
   <input class="search-box" placeholder="搜索名字/等级/地图/物品">
-  <select class="lang-btn" id="langSelect"></select>
+  <span class="lang-dd" id="langSelect"></span>
 </div>
 
 <div style="margin-bottom:6px;">
@@ -370,7 +374,41 @@ var TWOM_NAV={},TWOM_TXTJA={};
 function twomReadLang(){var v="";try{v=localStorage.getItem("twom-lang")||"";}catch(e){}return ({en:"en",cn:"cn",zh:"cn",ja:"ja",kr:"kr",ko:"kr"})[v]||"cn";}
 function twomWriteLang(c){try{localStorage.setItem("twom-lang",TWOM_CODE2UI[c]||"zh");}catch(e){}}
 function twomLocale(c){return c==="cn"?"zh-Hans":c==="ja"?"ja":c==="kr"?"ko":"en";}
-function twomFillLangSelect(sel,lang,onPick){if(!sel)return;sel.innerHTML=TWOM_LANG_OPTIONS.map(function(o){return '<option value="'+o[0]+'">'+o[1]+"</option>";}).join("");sel.value=TWOM_CODE2UI[lang]||"zh";sel.onchange=function(){onPick(sel.value);};}
+function twomFillLangSelect(sel,lang,onPick){
+  if(!sel) return;
+  var cur = TWOM_CODE2UI[lang] || "zh";
+  var curLabel = "中文";
+  for(var i=0;i<TWOM_LANG_OPTIONS.length;i++){ if(TWOM_LANG_OPTIONS[i][0]===cur) curLabel=TWOM_LANG_OPTIONS[i][1]; }
+  if(sel.classList) sel.classList.add("lang-dd");
+  sel.innerHTML = '<button type="button" class="lang-dd-btn" aria-haspopup="listbox" aria-expanded="false">'
+    + '<span class="lang-dd-cur">' + curLabel + '</span><span class="lang-dd-caret"></span></button>'
+    + '<div class="lang-dd-menu" role="listbox">'
+    + TWOM_LANG_OPTIONS.map(function(o){ return '<div class="lang-dd-item' + (o[0]===cur?' active':'') + '" role="option" data-code="' + o[0] + '">' + o[1] + '</div>'; }).join("")
+    + '</div>';
+  if(!sel.querySelector) return;   /* 无 DOM 环境（用例桩）跳过交互绑定 */
+  var btn = sel.querySelector(".lang-dd-btn");
+  var menu = sel.querySelector(".lang-dd-menu");
+  if(!btn || !menu) return;
+  var items = menu.querySelectorAll(".lang-dd-item");
+  btn.onclick = function(ev){ if(ev&&ev.stopPropagation) ev.stopPropagation(); var on = sel.classList.toggle("open"); btn.setAttribute("aria-expanded", on?"true":"false"); };
+  for(var j=0;j<items.length;j++){ (function(it){
+    it.onclick = function(ev){
+      if(ev&&ev.stopPropagation) ev.stopPropagation();
+      for(var k=0;k<items.length;k++) items[k].classList.remove("active");
+      it.classList.add("active");
+      var curEl = sel.querySelector(".lang-dd-cur"); if(curEl) curEl.innerText = it.innerText;
+      sel.classList.remove("open"); btn.setAttribute("aria-expanded","false");
+      if(typeof onPick === "function") onPick(it.getAttribute("data-code"));
+    };
+  })(items[j]); }
+  if(!twomFillLangSelect._outsideBound){
+    twomFillLangSelect._outsideBound = 1;
+    document.addEventListener("click", function(){
+      var open = document.querySelectorAll(".lang-dd.open");
+      for(var k=0;k<open.length;k++){ open[k].classList.remove("open"); var b=open[k].querySelector(".lang-dd-btn"); if(b) b.setAttribute("aria-expanded","false"); }
+    });
+  }
+}
 function twomApplyLangData(L){TWOM_NAV=(L&&L.nav)||{};TWOM_TXTJA=(L&&L.txtJa)||{};twomUpdateNav();}
 function twomUpdateNav(lang){lang=lang||(typeof currentLang!=="undefined"?currentLang:"cn");document.querySelectorAll("[data-nav]").forEach(function(b){var o=TWOM_NAV[b.dataset.nav];if(o)b.innerText=o[lang]||o.cn||o.en;});}
 function twomTxt(cn,lang){return lang==="ja"?(TWOM_TXTJA[cn]||cn):cn;}
@@ -1037,7 +1075,11 @@ if(kw.startsWith("@")){
 
   const target = kw.slice(1).trim();
 
-  const descList = (m.desc || "")
+  /* desc 支持四语对象（如库伊的说明）与纯字符串两种形态 */
+  const mDesc = (m.desc && typeof m.desc === "object")
+    ? (m.desc[currentLang] || m.desc.cn || m.desc.en || "")
+    : (m.desc || "");
+  const descList = mDesc
     .split(/[\n,]/)
     .map(x => x.trim().replace(/^@/, ""));
 
@@ -1193,7 +1235,10 @@ if(m.revive?.trim()){
       cardClass += " boss-type";
     }
 
-    let descHtml = m.desc || ''
+    /* desc 支持四语对象（如库伊的说明）与纯字符串两种形态 */
+    let descHtml = (m.desc && typeof m.desc === "object")
+      ? (m.desc[currentLang] || m.desc.cn || m.desc.en || '')
+      : (m.desc || '')
     if(isBossType && descHtml) {
       const parts = descHtml.split(',').filter(p=>p.trim())
       if(parts.length > 1) {
