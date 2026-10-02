@@ -167,6 +167,13 @@ body{background:#f0f2f5;padding:12px}
 .src-item{ color:#3774AE;cursor:pointer;text-decoration:underline }
 .src-sep{ color:#999;margin:0 3px }
 .src-text{ color:#666 }
+/* 材料连写「百发百中1/2/3p」在切语言时拆成 3 个独立可点条目（1p / 2p / 3p）。
+   整组允许换行（不加 nowrap，避免长名撑破弹窗）；每个「名称 + 箭头」用 src-unit
+   绑成不可分割的一对，防止箭头被挤到下一行。 */
+.src-unit{ display:inline-block;white-space:nowrap }
+.src-jump{ display:inline-block;width:1em;height:1em;vertical-align:-0.14em;margin-left:3px;color:#8FA2BA;cursor:pointer }
+.src-jump:hover{ color:#4E9A8C }
+.src-jump svg{ display:block;width:100%;height:100% }
 /* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
 
 /* 语言切换：自定义点击下拉（PC/手机一致，替代原生 select） */
@@ -315,7 +322,6 @@ let filteredSkills = [];
 let dropMap = {};
 let nameMap = {};
 let bookMonsters = {};
-let itemCnIndex = {};
 let currentClass = "all";
 
 function getPerPage(){
@@ -345,56 +351,148 @@ function pick(v){
 
 function monsterDisplayName(en){
   const m = nameMap[en] || {};
-  return m[currentLang] || m.cn || en;
+  /* ⚠ 回退链不能落到 m.cn：落到中文会让英/日/韩界面露出中文怪物名。
+     缺当前语言时统一回退英文。nameMap 原先有 75 条缺 ja，
+     已由 work/scripts/backfill_monster_ja.py 用客户端 Monsterstr 表回填 73 条；
+     仅 Mimic / Sandbag（客户端表里没有）仍回退英文。 */
+  return m[currentLang] || m.en || en;
+}
+
+/* ===== 来源文案里的 NPC / 地名本地化 =====
+   `skill_data.json` 的 extraSources 各语言值里，NPC 与地名常直接沿用中文
+   （如中文「阅读家拉尔」「羽妖岛海岸」出现在 en/ja/kr 文案中）。
+   这里按 lang.skillsLang.srcNameMap 把中文片段替换成当前语言的写法。
+   ⚠ 必须按「片段长度倒序」替换：否则「木林村」会被「村」类短片段先啃掉。 */
+let srcNameList = [];   // [{cn, alt:[...], by:{lang:txt}}]  按 cn 长度降序
+let srcNameVer = 0;     // 给缓存用的版本号
+
+function srcNameBuild(map){
+  srcNameList = Object.keys(map || {}).map(function(cn){
+    const o = map[cn] || {};
+    return { cn: cn, by: o };
+  }).sort(function(a, b){ return b.cn.length - a.cn.length; });
+  srcNameVer++;
+}
+
+/* 把一段文案里的中文 NPC/地名换成当前语言；其他语言值原样返回 */
+function localizeSrcText(text){
+  const s = String(text == null ? "" : text);
+  if(!s || currentLang === "cn" || !srcNameList.length) return s;
+  let out = s;
+  for(let i = 0; i < srcNameList.length; i++){
+    const it = srcNameList[i];
+    if(out.indexOf(it.cn) < 0) continue;
+    const rep = it.by[currentLang] || it.by.en || it.cn;
+    if(rep === it.cn) continue;
+    out = out.split(it.cn).join(rep);
+  }
+  return out;
+}
+
+/* 反向：把当前语言写法的 NPC/地名还原成中文，便于在本地化后的文案里继续做跳转匹配 */
+function srcNameToCn(text){
+  const s = String(text == null ? "" : text);
+  if(!s || currentLang === "cn" || !srcNameList.length) return s;
+  let out = s;
+  for(let i = 0; i < srcNameList.length; i++){
+    const it = srcNameList[i];
+    const rep = it.by[currentLang] || it.by.en || it.cn;
+    if(!rep || rep === it.cn) continue;
+    if(out.indexOf(rep) < 0) continue;
+    out = out.split(rep).join(it.cn);
+  }
+  return out;
 }
 
 // 来源文案中的怪物名 -> 可点击（faith/illust/billiard/sephia/whale）
 const EXTRA_MONSTERS = [
   ["faith", "Faith"], ["illust", "Illust"], ["billiard", "Billiard"], ["sephia", "Sephia"], ["whale", "Platanista"]
 ];
+/* 跳转小箭头（与图鉴任务的材料卡同一枚，走 currentColor） */
+const JUMP_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M9 7h8v8"/></svg>';
+
+/* 把「英文键 / 任意语言名」解析成当前语言的显示名；未收录则回退到传入原文 */
+function srcItemDisplay(base, lang){
+  if(!base) return "";
+  const k = locKeyOf(dropMap, base);
+  if(!k) return base;
+  const m = dropMap[k] || {};
+  if(lang === "en") return m.en || k;
+  if(lang === "ja") return m.ja || m.en || k;
+  if(lang === "kr") return m.kr || m.en || k;
+  return m.cn || m.en || k;
+}
+
+/* 单个材料 -> 可点跳转项（未收录 dropMap 就退化为纯文本，不造死链） */
+function srcItemHtml(base){
+  const k = locKeyOf(dropMap, base);
+  if(!k) return `<span class="src-text">${base}</span>`;
+  const disp = srcItemDisplay(base, currentLang);
+  const oc = `goItem('${disp.replace(/'/g,"\\'")}')`;
+  /* 名称与箭头绑成一对（inline-block + nowrap），换行时不会把箭头甩到下一行 */
+  return `<span class="src-unit"><span class="src-item" onclick="${oc}">${disp}</span>`
+       + `<span class="src-jump" title="${tr('jumpTip','skillText')}" onclick="${oc}">${JUMP_SVG}</span></span>`;
+}
+
+/* 括号内材料解析（返回数组，每项字段）：
+     { base, suffix, sep, en }
+     base/suffix = 材料名与数量后缀；en = dropMap 键（未收录为 null）
+     sep  = 该项【前面】要插的分隔符（"/ " / " + "），空串表示不加；
+     isSep = true 表示这一项本身就是纯分隔符（用于「按 / 切分」的情形）
+   ① 「名称1/2/3p」这类连写 —— 无论切换到哪种语言，都拆成 1p / 2p / 3p 三个独立可点条目
+      （英文等语言括号里仍写中文时也照拆，显示名按当前语言取 dropMap 对应条目）；
+   ② 其余情况按 / + ＋ 与换行拆分，保留原有数量后缀。 */
+function expandSkillMaterials(text){
+  const s = String(text).trim();
+  const m = s.match(/^(.+?)\s*(\d+)\s*\/\s*(\d+)\s*\/\s*(\d+)\s*p$/i);
+  if(m){
+    const pre = m[1].trim(), sfx = "p";
+    const out = [];
+    [m[2], m[3], m[4]].forEach((n, i)=>{
+      const label = pre + n + sfx;
+      out.push({ base: label, suffix: "", sep: i ? "/" : "", isSep: false, en: locKeyOf(dropMap, label) || null });
+    });
+    return out;
+  }
+  const out = [];
+  s.split(/([\n/+＋])/).forEach(tk=>{
+    if(tk === "/"){ out.push({ isSep: true, sep: "/", base: "", suffix: "", en: null }); return; }
+    if(tk === "\n" || tk === "+" || tk === "＋"){ out.push({ isSep: true, sep: " + ", base: "", suffix: "", en: null }); return; }
+    if(!tk || !tk.trim()) return;
+    const t = tk.trim();
+    const q = t.match(/^(.*?)(\s*[xX×]\s*[\d,]+)\s*$/);
+    const base = (q ? q[1] : t).trim();
+    const suffix = q ? q[2] : "";
+    out.push({ base: base, suffix: suffix, sep: "", isSep: false, en: locKeyOf(dropMap, base) || null });
+  });
+  return out;
+}
+
 function linkifySourceText(text){
-  let out = text;
+  /* 先把「当前语言写法的 NPC/地名」还原成中文原文，
+     这样括号里的材料名（可能已被上层本地化）与 dropMap 的匹配逻辑保持一致。
+     ⚠ 还原只用于「查表定位」，显示名仍由 srcItemDisplay 按当前语言输出。 */
+  const raw = String(text);
+  let out = raw;
   EXTRA_MONSTERS.forEach(([alias, en])=>{
     const re = new RegExp("\\b" + alias + "\\b", "gi");
     const disp = monsterDisplayName(en);
-    const cn = (nameMap[en] && nameMap[en].cn) || en;
     out = out.replace(re, `<span class="src-monster" onclick="goMonster('${disp.replace(/'/g,"\\'")}')">${disp}</span>`);
   });
-  // 括号内兑换/合成材料 -> 物品图鉴（如 乌波水晶鳞片、名誉项链x60、百发百中1/2/3p）
-  out = out.replace(/（([^）]+)）/g, (full, inner)=>{
-    const parts = expandSkillMaterials(inner);
+  // 括号内兑换/合成材料 -> 物品图鉴
+  out = out.replace(/[（(]([^）)]+)[）)]/g, (full, inner)=>{
+    const parts = expandSkillMaterials(srcNameToCn(inner));
     if(!parts.some(p=>p.en)) return full;
+    /* 每个条目由 srcItemHtml 输出「名称 + 箭头」的 src-unit 对（不可分割），
+       条目之间放分隔符；整段允许自然换行，长名不会撑破弹窗。 */
     const html = parts.map(p=>{
-      if(p.sep) return p.sep;
-      const name = p.en
-        ? `<span class="src-item" onclick="goItem('${itemDisplayName(p.en).replace(/'/g,"\\'")}')">${itemDisplayName(p.en)}</span>`
-        : p.base;
-      return name + p.suffix;
+      if(p.isSep) return `<span class="src-sep">${p.sep}</span>`;
+      const pre = p.sep ? `<span class="src-sep">${p.sep}</span>` : "";
+      return pre + srcItemHtml(p.base) + p.suffix;
     }).join("");
     return "（" + html + "）";
   });
   return out.replace(/\n/g, " ");
-}
-
-// 括号内材料：「名称1/2/3p」展开；普通内容按换行或 / 拆分并保留原数量
-function expandSkillMaterials(text){
-  const s = String(text);
-  const m = s.match(/^(.+?)(\d+)\/(\d+)\/(\d+)(p?)$/);
-  if(m){
-    return [m[1] + m[2] + m[5], m[1] + m[3] + m[5], m[1] + m[4] + m[5]]
-      .map((n, i)=>({ base: n, suffix: "", sep: i ? "/" : "", en: itemCnIndex[n] || null }));
-  }
-  const out = [];
-  s.split(/([\n/+＋])/).forEach(tk=>{
-    if(tk === "/"){ out.push({ sep: "/" }); return; }
-    if(tk === "\n" || tk === "+" || tk === "＋"){ out.push({ sep: " + " }); return; }
-    if(!tk) return;
-    const q = tk.match(/^(.*?)(\s*[xX×]\s*\d+)\s*$/);
-    const base = (q ? q[1] : tk).trim();
-    const suffix = q ? q[2] : "";
-    out.push({ base: base, suffix: suffix, sep: "", en: itemCnIndex[base] || null });
-  });
-  return out;
 }
 
 function itemDisplayName(en){
@@ -598,7 +696,7 @@ function openSourceModal(key){
       const cn = (nameMap[mn] && nameMap[mn].cn) || mn;
       return `<span class="src-monster" onclick="goMonster('${disp.replace(/'/g,"\\'")}')">${disp}</span>`;
     });
-    if(extra) parts.push(`<span class="src-text">${linkifySourceText(npcLocalize(extra))}</span>`);
+    if(extra) parts.push(`<span class="src-text">${linkifySourceText(npcLocalize(localizeSrcText(extra)))}</span>`);
     const srcHtml = parts.length ? parts.join('<span class="src-sep">/</span>') : `<span class="src-text">—</span>`;
     const colon = currentLang === "cn" ? "：" : ": ";
     return `<div class="source-row"><span class="source-name">${bookName}</span><span class="source-src">${colon}${srcHtml}</span></div>`;
@@ -693,6 +791,8 @@ async function loadData(){
   }
   dropMap = lang.dropMap || {};
   nameMap = lang.nameMap || {};
+  // 来源文案里的 NPC/地名（中文 -> 四语）映射表
+  srcNameBuild((lang.skillsLang && lang.skillsLang.srcNameMap) || {});
   // 语言对照（lang.json：nav / ui / 技能 ja 名等）
   twomApplyLangData(lang);
   const sk = lang.skills || {};
@@ -702,14 +802,6 @@ async function loadData(){
     if(x.ja && !s.ja) s.ja = x.ja;
     if(x.kr && !s.kr) s.kr = x.kr;
   });
-  
-  // 物品中文名索引（获取途径括号里的兑换/合成材料）
-  itemCnIndex = {};
-  for(const en in dropMap){
-    const cn = ((dropMap[en] && dropMap[en].cn) || "").trim();
-    if(cn.length < 2 || en === "-") continue;
-    if(!itemCnIndex[cn]) itemCnIndex[cn] = en;
-  }
 
   // 技能书 -> 掉落怪物
   Object.keys(drops).forEach(monster=>{

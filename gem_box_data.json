@@ -1,0 +1,737 @@
+{
+  "note": "extracted for gem.html —— 只保留与宝石相关的箱子概率表。源表 costume_box_data.json 的 source/note 见下方原文的摘抄。\n原文 note：官方概率公示页解析结果；p 为该表内的百分比（子表内为子表自身概率）；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；CONCH / HERO_ITEM / IMO_CAFE 三个箱子来自官方「世界魔術」同一页的三个 tab（各四语官方版），HERO_ITEM 的 kind=group 伪行表示页面上的「等級」分组；2026-09-29 加入官方 lim.com2us.com「隨機服裝寶箱」8 个活动页（100100~100800）：XMAS 聖誕鐘聲 / HALLOWEEN 不給糖就搗蛋！/ PAJAMA 睡衣派對 / FESTIVAL 慶典、盛宴、宴會！(服裝) / FOREST 森林青草香 / MOON 青雲赤月 / FRIENDS 原野好友 / STAGE 音樂舞台。官方 ja 标题为「번역 필요」→ 箱名 ja 用站内约定译名（100100 取同名道具官方 ja）；道具名取站点 lang.json.costumes 现名，站内没有的（聖誕鐘聲整箱）保留官方名、ref 为空。",
+  "source": "https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/  (随机服装宝箱 概率公示) | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_tw_tab_8.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/worldofmagic_zh-hant_item_1.html | https://hive-fn.qpyou.cn/markup/img/tf/worldofmagic/combine_book_zh-hant.html",
+  "boxes": {
+    "HERO_GEM": {
+      "title": {
+        "cn": "英雄的宝石宝箱",
+        "en": "Hero Gem Box",
+        "ja": "英雄の宝石箱",
+        "kr": "영웅의보석상자"
+      },
+      "items": [
+        {
+          "ref": "Syphnel's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "西普奈尔的黑曜岩(阶段1) · 力量 1",
+          "en": "Syphnel's ObsidianⅠ · STR 1",
+          "ja": "シフネルの黒曜石(1段階) · 力 1",
+          "kr": "시프넬의흑요석 (1단계) · 힘 1"
+        },
+        {
+          "ref": "Syphnel's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "西普奈尔的黑曜岩(阶段1) · 敏捷 1",
+          "en": "Syphnel's ObsidianⅠ · DEX 1",
+          "ja": "シフネルの黒曜石(1段階) · 敏捷 1",
+          "kr": "시프넬의흑요석 (1단계) · 민첩 1"
+        },
+        {
+          "ref": "Syphnel's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "西普奈尔的黑曜岩(阶段1) · 智力 1",
+          "en": "Syphnel's ObsidianⅠ · INT 1",
+          "ja": "シフネルの黒曜石(1段階) · 知力 1",
+          "kr": "시프넬의흑요석 (1단계) · 지능 1"
+        },
+        {
+          "ref": "Syphnel's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "西普奈尔的黑曜岩(阶段1) · 体力 10",
+          "en": "Syphnel's ObsidianⅠ · HP 10",
+          "ja": "シフネルの黒曜石(1段階) · 体力 10",
+          "kr": "시프넬의흑요석 (1단계) · 체력 10"
+        },
+        {
+          "ref": "Serain's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "赛勒殷的黑曜岩(阶段1) · 力量 1",
+          "en": "Serain's ObsidianⅠ · STR 1",
+          "ja": "セレインの黒曜石(1段階) · 力 1",
+          "kr": "세레인의흑요석 (1단계) · 힘 1"
+        },
+        {
+          "ref": "Serain's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "赛勒殷的黑曜岩(阶段1) · 敏捷 1",
+          "en": "Serain's ObsidianⅠ · DEX 1",
+          "ja": "セレインの黒曜石(1段階) · 敏捷 1",
+          "kr": "세레인의흑요석 (1단계) · 민첩 1"
+        },
+        {
+          "ref": "Serain's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "赛勒殷的黑曜岩(阶段1) · 智力 1",
+          "en": "Serain's ObsidianⅠ · INT 1",
+          "ja": "セレインの黒曜石(1段階) · 知力 1",
+          "kr": "세레인의흑요석 (1단계) · 지능 1"
+        },
+        {
+          "ref": "Serain's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "赛勒殷的黑曜岩(阶段1) · 体力 10",
+          "en": "Serain's ObsidianⅠ · HP 10",
+          "ja": "セレインの黒曜石(1段階) · 体力 10",
+          "kr": "세레인의흑요석 (1단계) · 체력 10"
+        },
+        {
+          "ref": "Roberto's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "罗贝勒托的黑曜岩(阶段1) · 力量 1",
+          "en": "Roberto's ObsidianⅠ · STR 1",
+          "ja": "ロベルトの黒曜石(1段階) · 力 1",
+          "kr": "로베르토의흑요석 (1단계) · 힘 1"
+        },
+        {
+          "ref": "Roberto's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "罗贝勒托的黑曜岩(阶段1) · 敏捷 1",
+          "en": "Roberto's ObsidianⅠ · DEX 1",
+          "ja": "ロベルトの黒曜石(1段階) · 敏捷 1",
+          "kr": "로베르토의흑요석 (1단계) · 민첩 1"
+        },
+        {
+          "ref": "Roberto's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "罗贝勒托的黑曜岩(阶段1) · 智力 1",
+          "en": "Roberto's ObsidianⅠ · INT 1",
+          "ja": "ロベルトの黒曜石(1段階) · 知力 1",
+          "kr": "로베르토의흑요석 (1단계) · 지능 1"
+        },
+        {
+          "ref": "Roberto's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "罗贝勒托的黑曜岩(阶段1) · 体力 10",
+          "en": "Roberto's ObsidianⅠ · HP 10",
+          "ja": "ロベルトの黒曜石(1段階) · 体力 10",
+          "kr": "로베르토의흑요석 (1단계) · 체력 10"
+        },
+        {
+          "ref": "Wingfril's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "羽妖的黑曜岩(阶段1) · 力量 1",
+          "en": "Wingfril's ObsidianⅠ · STR 1",
+          "ja": "ウィングフリールの黒曜石(1段階) · 力 1",
+          "kr": "윙프릴의흑요석 (1단계) · 힘 1"
+        },
+        {
+          "ref": "Wingfril's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "羽妖的黑曜岩(阶段1) · 敏捷 1",
+          "en": "Wingfril's ObsidianⅠ · DEX 1",
+          "ja": "ウィングフリールの黒曜石(1段階) · 敏捷 1",
+          "kr": "윙프릴의흑요석 (1단계) · 민첩 1"
+        },
+        {
+          "ref": "Wingfril's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "羽妖的黑曜岩(阶段1) · 智力 1",
+          "en": "Wingfril's ObsidianⅠ · INT 1",
+          "ja": "ウィングフリールの黒曜石(1段階) · 知力 1",
+          "kr": "윙프릴의흑요석 (1단계) · 지능 1"
+        },
+        {
+          "ref": "Wingfril's Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "羽妖的黑曜岩(阶段1) · 体力 10",
+          "en": "Wingfril's ObsidianⅠ · HP 10",
+          "ja": "ウィングフリールの黒曜石(1段階) · 体力 10",
+          "kr": "윙프릴의흑요석 (1단계) · 체력 10"
+        },
+        {
+          "ref": "Kanos' Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "卡诺斯的黑曜岩(阶段1) · 力量 1",
+          "en": "Kanos' ObsidianⅠ · STR 1",
+          "ja": "カノスの黒曜石(1段階) · 力 1",
+          "kr": "카노스의흑요석 (1단계) · 힘 1"
+        },
+        {
+          "ref": "Kanos' Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "卡诺斯的黑曜岩(阶段1) · 敏捷 1",
+          "en": "Kanos' ObsidianⅠ · DEX 1",
+          "ja": "カノスの黒曜石(1段階) · 敏捷 1",
+          "kr": "카노스의흑요석 (1단계) · 민첩 1"
+        },
+        {
+          "ref": "Kanos' Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "卡诺斯的黑曜岩(阶段1) · 智力 1",
+          "en": "Kanos' ObsidianⅠ · INT 1",
+          "ja": "カノスの黒曜石(1段階) · 知力 1",
+          "kr": "카노스의흑요석 (1단계) · 지능 1"
+        },
+        {
+          "ref": "Kanos' Obsidian I",
+          "p": 3.75,
+          "kind": "gem",
+          "cn": "卡诺斯的黑曜岩(阶段1) · 体力 10",
+          "en": "Kanos' ObsidianⅠ · HP 10",
+          "ja": "カノスの黒曜石(1段階) · 体力 10",
+          "kr": "카노스의흑요석 (1단계) · 체력 10"
+        },
+        {
+          "ref": "Syphnel's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "西普奈尔的紫水晶(阶段2) · 力量 2",
+          "en": "Syphnel's AmethystⅡ · STR 2",
+          "ja": "シフネルのアメシスト(2段階) · 力 2",
+          "kr": "시프넬의자수정 (2단계) · 힘 2"
+        },
+        {
+          "ref": "Syphnel's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "西普奈尔的紫水晶(阶段2) · 敏捷 2",
+          "en": "Syphnel's AmethystⅡ · DEX 2",
+          "ja": "シフネルのアメシスト(2段階) · 敏捷 2",
+          "kr": "시프넬의자수정 (2단계) · 민첩 2"
+        },
+        {
+          "ref": "Syphnel's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "西普奈尔的紫水晶(阶段2) · 智力 2",
+          "en": "Syphnel's AmethystⅡ · INT 2",
+          "ja": "シフネルのアメシスト(2段階) · 知力 2",
+          "kr": "시프넬의자수정 (2단계) · 지능 2"
+        },
+        {
+          "ref": "Syphnel's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "西普奈尔的紫水晶(阶段2) · 体力 20",
+          "en": "Syphnel's AmethystⅡ · HP 20",
+          "ja": "シフネルのアメシスト(2段階) · 体力 20",
+          "kr": "시프넬의자수정 (2단계) · 체력 20"
+        },
+        {
+          "ref": "Serain's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "赛勒殷的紫水晶(阶段2) · 力量 2",
+          "en": "Serain's AmethystⅡ · STR 2",
+          "ja": "セレインのアメシスト(2段階) · 力 2",
+          "kr": "세레인의자수정 (2단계) · 힘 2"
+        },
+        {
+          "ref": "Serain's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "赛勒殷的紫水晶(阶段2) · 敏捷 2",
+          "en": "Serain's AmethystⅡ · DEX 2",
+          "ja": "セレインのアメシスト(2段階) · 敏捷 2",
+          "kr": "세레인의자수정 (2단계) · 민첩 2"
+        },
+        {
+          "ref": "Serain's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "赛勒殷的紫水晶(阶段2) · 智力 2",
+          "en": "Serain's AmethystⅡ · INT 2",
+          "ja": "セレインのアメシスト(2段階) · 知力 2",
+          "kr": "세레인의자수정 (2단계) · 지능 2"
+        },
+        {
+          "ref": "Serain's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "赛勒殷的紫水晶(阶段2) · 体力 20",
+          "en": "Serain's AmethystⅡ · HP 20",
+          "ja": "セレインのアメシスト(2段階) · 体力 20",
+          "kr": "세레인의자수정 (2단계) · 체력 20"
+        },
+        {
+          "ref": "Roberto's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "罗贝勒托的紫水晶(阶段2) · 力量 2",
+          "en": "Roberto's AmethystⅡ · STR 2",
+          "ja": "ロベルトのアメシスト(2段階) · 力 2",
+          "kr": "로베르토의자수정 (2단계) · 힘 2"
+        },
+        {
+          "ref": "Roberto's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "罗贝勒托的紫水晶(阶段2) · 敏捷 2",
+          "en": "Roberto's AmethystⅡ · DEX 2",
+          "ja": "ロベルトのアメシスト(2段階) · 敏捷 2",
+          "kr": "로베르토의자수정 (2단계) · 민첩 2"
+        },
+        {
+          "ref": "Roberto's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "罗贝勒托的紫水晶(阶段2) · 智力 2",
+          "en": "Roberto's AmethystⅡ · INT 2",
+          "ja": "ロベルトのアメシスト(2段階) · 知力 2",
+          "kr": "로베르토의자수정 (2단계) · 지능 2"
+        },
+        {
+          "ref": "Roberto's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "罗贝勒托的紫水晶(阶段2) · 体力 20",
+          "en": "Roberto's AmethystⅡ · HP 20",
+          "ja": "ロベルトのアメシスト(2段階) · 体力 20",
+          "kr": "로베르토의자수정 (2단계) · 체력 20"
+        },
+        {
+          "ref": "Wingfril's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "羽妖的紫水晶(阶段2) · 力量 2",
+          "en": "Wingfril's AmethystⅡ · STR 2",
+          "ja": "ウィングフリールのアメシスト(2段階) · 力 2",
+          "kr": "윙프릴의자수정 (2단계) · 힘 2"
+        },
+        {
+          "ref": "Wingfril's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "羽妖的紫水晶(阶段2) · 敏捷 2",
+          "en": "Wingfril's AmethystⅡ · DEX 2",
+          "ja": "ウィングフリールのアメシスト(2段階) · 敏捷 2",
+          "kr": "윙프릴의자수정 (2단계) · 민첩 2"
+        },
+        {
+          "ref": "Wingfril's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "羽妖的紫水晶(阶段2) · 智力 2",
+          "en": "Wingfril's AmethystⅡ · INT 2",
+          "ja": "ウィングフリールのアメシスト(2段階) · 知力 2",
+          "kr": "윙프릴의자수정 (2단계) · 지능 2"
+        },
+        {
+          "ref": "Wingfril's Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "羽妖的紫水晶(阶段2) · 体力 20",
+          "en": "Wingfril's AmethystⅡ · HP 20",
+          "ja": "ウィングフリールのアメシスト(2段階) · 体力 20",
+          "kr": "윙프릴의자수정 (2단계) · 체력 20"
+        },
+        {
+          "ref": "Kanos' Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "卡诺斯的紫水晶(阶段2) · 力量 2",
+          "en": "Kanos' AmethystⅡ · STR 2",
+          "ja": "カノスのアメシスト(2段階) · 力 2",
+          "kr": "카노스의자수정 (2단계) · 힘 2"
+        },
+        {
+          "ref": "Kanos' Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "卡诺斯的紫水晶(阶段2) · 敏捷 2",
+          "en": "Kanos' AmethystⅡ · DEX 2",
+          "ja": "カノスのアメシスト(2段階) · 敏捷 2",
+          "kr": "카노스의자수정 (2단계) · 민첩 2"
+        },
+        {
+          "ref": "Kanos' Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "卡诺斯的紫水晶(阶段2) · 智力 2",
+          "en": "Kanos' AmethystⅡ · INT 2",
+          "ja": "カノスのアメシスト(2段階) · 知力 2",
+          "kr": "카노스의자수정 (2단계) · 지능 2"
+        },
+        {
+          "ref": "Kanos' Amethyst II",
+          "p": 1.0,
+          "kind": "gem",
+          "cn": "卡诺斯的紫水晶(阶段2) · 体力 20",
+          "en": "Kanos' AmethystⅡ · HP 20",
+          "ja": "カノスのアメシスト(2段階) · 体力 20",
+          "kr": "카노스의자수정 (2단계) · 체력 20"
+        },
+        {
+          "ref": "Syphnel's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "西普奈尔的蓝宝石(阶段3) · 力量 3",
+          "en": "Syphnel's SapphireⅢ · STR 3",
+          "ja": "シフネルのサファイア(3段階) · 力 3",
+          "kr": "시프넬의사파이어 (3단계) · 힘 3"
+        },
+        {
+          "ref": "Syphnel's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "西普奈尔的蓝宝石(阶段3) · 敏捷 3",
+          "en": "Syphnel's SapphireⅢ · DEX 3",
+          "ja": "シフネルのサファイア(3段階) · 敏捷 3",
+          "kr": "시프넬의사파이어 (3단계) · 민첩 3"
+        },
+        {
+          "ref": "Syphnel's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "西普奈尔的蓝宝石(阶段3) · 智力 3",
+          "en": "Syphnel's SapphireⅢ · INT 3",
+          "ja": "シフネルのサファイア(3段階) · 知力 3",
+          "kr": "시프넬의사파이어 (3단계) · 지능 3"
+        },
+        {
+          "ref": "Syphnel's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "西普奈尔的蓝宝石(阶段3) · 体力 30",
+          "en": "Syphnel's SapphireⅢ · HP 30",
+          "ja": "シフネルのサファイア(3段階) · 体力 30",
+          "kr": "시프넬의사파이어 (3단계) · 체력 30"
+        },
+        {
+          "ref": "Serain's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "赛勒殷的蓝宝石(阶段3) · 力量 3",
+          "en": "Serain's SapphireⅢ · STR 3",
+          "ja": "セレインのサファイア(3段階) · 力 3",
+          "kr": "세레인의사파이어 (3단계) · 힘 3"
+        },
+        {
+          "ref": "Serain's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "赛勒殷的蓝宝石(阶段3) · 敏捷 3",
+          "en": "Serain's SapphireⅢ · DEX 3",
+          "ja": "セレインのサファイア(3段階) · 敏捷 3",
+          "kr": "세레인의사파이어 (3단계) · 민첩 3"
+        },
+        {
+          "ref": "Serain's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "赛勒殷的蓝宝石(阶段3) · 智力 3",
+          "en": "Serain's SapphireⅢ · INT 3",
+          "ja": "セレインのサファイア(3段階) · 知力 3",
+          "kr": "세레인의사파이어 (3단계) · 지능 3"
+        },
+        {
+          "ref": "Serain's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "赛勒殷的蓝宝石(阶段3) · 体力 30",
+          "en": "Serain's SapphireⅢ · HP 30",
+          "ja": "セレインのサファイア(3段階) · 体力 30",
+          "kr": "세레인의사파이어 (3단계) · 체력 30"
+        },
+        {
+          "ref": "Roberto's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "罗贝勒托的蓝宝石(阶段3) · 力量 3",
+          "en": "Roberto's SapphireⅢ · STR 3",
+          "ja": "ロベルトのサファイア(3段階) · 力 3",
+          "kr": "로베르토의사파이어 (3단계) · 힘 3"
+        },
+        {
+          "ref": "Roberto's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "罗贝勒托的蓝宝石(阶段3) · 敏捷 3",
+          "en": "Roberto's SapphireⅢ · DEX 3",
+          "ja": "ロベルトのサファイア(3段階) · 敏捷 3",
+          "kr": "로베르토의사파이어 (3단계) · 민첩 3"
+        },
+        {
+          "ref": "Roberto's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "罗贝勒托的蓝宝石(阶段3) · 智力 3",
+          "en": "Roberto's SapphireⅢ · INT 3",
+          "ja": "ロベルトのサファイア(3段階) · 知力 3",
+          "kr": "로베르토의사파이어 (3단계) · 지능 3"
+        },
+        {
+          "ref": "Roberto's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "罗贝勒托的蓝宝石(阶段3) · 体力 30",
+          "en": "Roberto's SapphireⅢ · HP 30",
+          "ja": "ロベルトのサファイア(3段階) · 体力 30",
+          "kr": "로베르토의사파이어 (3단계) · 체력 30"
+        },
+        {
+          "ref": "Wingfril's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "羽妖的蓝宝石(阶段3) · 力量 3",
+          "en": "Wingfril's SapphireⅢ · STR 3",
+          "ja": "ウィングフリールのサファイア(3段階) · 力 3",
+          "kr": "윙프릴의사파이어 (3단계) · 힘 3"
+        },
+        {
+          "ref": "Wingfril's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "羽妖的蓝宝石(阶段3) · 敏捷 3",
+          "en": "Wingfril's SapphireⅢ · DEX 3",
+          "ja": "ウィングフリールのサファイア(3段階) · 敏捷 3",
+          "kr": "윙프릴의사파이어 (3단계) · 민첩 3"
+        },
+        {
+          "ref": "Wingfril's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "羽妖的蓝宝石(阶段3) · 智力 3",
+          "en": "Wingfril's SapphireⅢ · INT 3",
+          "ja": "ウィングフリールのサファイア(3段階) · 知力 3",
+          "kr": "윙프릴의사파이어 (3단계) · 지능 3"
+        },
+        {
+          "ref": "Wingfril's Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "羽妖的蓝宝石(阶段3) · 体力 30",
+          "en": "Wingfril's SapphireⅢ · HP 30",
+          "ja": "ウィングフリールのサファイア(3段階) · 体力 30",
+          "kr": "윙프릴의사파이어 (3단계) · 체력 30"
+        },
+        {
+          "ref": "Kanos' Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "卡诺斯的蓝宝石(阶段3) · 力量 3",
+          "en": "Kanos' SapphireⅢ · STR 3",
+          "ja": "カノスのサファイア(3段階) · 力 3",
+          "kr": "카노스의사파이어 (3단계) · 힘 3"
+        },
+        {
+          "ref": "Kanos' Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "卡诺斯的蓝宝石(阶段3) · 敏捷 3",
+          "en": "Kanos' SapphireⅢ · DEX 3",
+          "ja": "カノスのサファイア(3段階) · 敏捷 3",
+          "kr": "카노스의사파이어 (3단계) · 민첩 3"
+        },
+        {
+          "ref": "Kanos' Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "卡诺斯的蓝宝石(阶段3) · 智力 3",
+          "en": "Kanos' SapphireⅢ · INT 3",
+          "ja": "カノスのサファイア(3段階) · 知力 3",
+          "kr": "카노스의사파이어 (3단계) · 지능 3"
+        },
+        {
+          "ref": "Kanos' Sapphire III",
+          "p": 0.23,
+          "kind": "gem",
+          "cn": "卡诺斯的蓝宝石(阶段3) · 体力 30",
+          "en": "Kanos' SapphireⅢ · HP 30",
+          "ja": "カノスのサファイア(3段階) · 体力 30",
+          "kr": "카노스의사파이어 (3단계) · 체력 30"
+        },
+        {
+          "ref": "Syphnel's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "西普奈尔的海蓝宝石(阶段4) · 力量 4",
+          "en": "Syphnel's AquamarineⅣ · STR 4",
+          "ja": "シフネルのアクアマリン(4段階) · 力 4",
+          "kr": "시프넬의아쿠아마린 (4단계) · 힘 4"
+        },
+        {
+          "ref": "Syphnel's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "西普奈尔的海蓝宝石(阶段4) · 敏捷 4",
+          "en": "Syphnel's AquamarineⅣ · DEX 4",
+          "ja": "シフネルのアクアマリン(4段階) · 敏捷 4",
+          "kr": "시프넬의아쿠아마린 (4단계) · 민첩 4"
+        },
+        {
+          "ref": "Syphnel's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "西普奈尔的海蓝宝石(阶段4) · 智力 4",
+          "en": "Syphnel's AquamarineⅣ · INT 4",
+          "ja": "シフネルのアクアマリン(4段階) · 知力 4",
+          "kr": "시프넬의아쿠아마린 (4단계) · 지능 4"
+        },
+        {
+          "ref": "Syphnel's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "西普奈尔的海蓝宝石(阶段4) · 体力 40",
+          "en": "Syphnel's AquamarineⅣ · HP 40",
+          "ja": "シフネルのアクアマリン(4段階) · 体力 40",
+          "kr": "시프넬의아쿠아마린 (4단계) · 체력 40"
+        },
+        {
+          "ref": "Serain's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "赛勒殷的海蓝宝石(阶段4) · 力量 4",
+          "en": "Serain's AquamarineⅣ · STR 4",
+          "ja": "セレインのアクアマリン(4段階) · 力 4",
+          "kr": "세레인의아쿠아마린 (4단계) · 힘 4"
+        },
+        {
+          "ref": "Serain's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "赛勒殷的海蓝宝石(阶段4) · 敏捷 4",
+          "en": "Serain's AquamarineⅣ · DEX 4",
+          "ja": "セレインのアクアマリン(4段階) · 敏捷 4",
+          "kr": "세레인의아쿠아마린 (4단계) · 민첩 4"
+        },
+        {
+          "ref": "Serain's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "赛勒殷的海蓝宝石(阶段4) · 智力 4",
+          "en": "Serain's AquamarineⅣ · INT 4",
+          "ja": "セレインのアクアマリン(4段階) · 知力 4",
+          "kr": "세레인의아쿠아마린 (4단계) · 지능 4"
+        },
+        {
+          "ref": "Serain's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "赛勒殷的海蓝宝石(阶段4) · 体力 40",
+          "en": "Serain's AquamarineⅣ · HP 40",
+          "ja": "セレインのアクアマリン(4段階) · 体力 40",
+          "kr": "세레인의아쿠아마린 (4단계) · 체력 40"
+        },
+        {
+          "ref": "Roberto's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "罗贝勒托的海蓝宝石(阶段4) · 力量 4",
+          "en": "Roberto's AquamarineⅣ · STR 4",
+          "ja": "ロベルトのアクアマリン(4段階) · 力 4",
+          "kr": "로베르토의아쿠아마린 (4단계) · 힘 4"
+        },
+        {
+          "ref": "Roberto's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "罗贝勒托的海蓝宝石(阶段4) · 敏捷 4",
+          "en": "Roberto's AquamarineⅣ · DEX 4",
+          "ja": "ロベルトのアクアマリン(4段階) · 敏捷 4",
+          "kr": "로베르토의아쿠아마린 (4단계) · 민첩 4"
+        },
+        {
+          "ref": "Roberto's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "罗贝勒托的海蓝宝石(阶段4) · 智力 4",
+          "en": "Roberto's AquamarineⅣ · INT 4",
+          "ja": "ロベルトのアクアマリン(4段階) · 知力 4",
+          "kr": "로베르토의아쿠아마린 (4단계) · 지능 4"
+        },
+        {
+          "ref": "Roberto's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "罗贝勒托的海蓝宝石(阶段4) · 体力 40",
+          "en": "Roberto's AquamarineⅣ · HP 40",
+          "ja": "ロベルトのアクアマリン(4段階) · 体力 40",
+          "kr": "로베르토의아쿠아마린 (4단계) · 체력 40"
+        },
+        {
+          "ref": "Wingfril's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "羽妖的海蓝宝石(阶段4) · 力量 4",
+          "en": "Wingfril's AquamarineⅣ · STR 4",
+          "ja": "ウィングフリールのアクアマリン(4段階) · 力 4",
+          "kr": "윙프릴의아쿠아마린 (4단계) · 힘 4"
+        },
+        {
+          "ref": "Wingfril's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "羽妖的海蓝宝石(阶段4) · 敏捷 4",
+          "en": "Wingfril's AquamarineⅣ · DEX 4",
+          "ja": "ウィングフリールのアクアマリン(4段階) · 敏捷 4",
+          "kr": "윙프릴의아쿠아마린 (4단계) · 민첩 4"
+        },
+        {
+          "ref": "Wingfril's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "羽妖的海蓝宝石(阶段4) · 智力 4",
+          "en": "Wingfril's AquamarineⅣ · INT 4",
+          "ja": "ウィングフリールのアクアマリン(4段階) · 知力 4",
+          "kr": "윙프릴의아쿠아마린 (4단계) · 지능 4"
+        },
+        {
+          "ref": "Wingfril's Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "羽妖的海蓝宝石(阶段4) · 体力 40",
+          "en": "Wingfril's AquamarineⅣ · HP 40",
+          "ja": "ウィングフリールのアクアマリン(4段階) · 体力 40",
+          "kr": "윙프릴의아쿠아마린 (4단계) · 체력 40"
+        },
+        {
+          "ref": "Kanos' Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "卡诺斯的海蓝宝石(阶段4) · 力量 4",
+          "en": "Kanos' AquamarineⅣ · STR 4",
+          "ja": "カノスのアクアマリン(4段階) · 力 4",
+          "kr": "카노스의아쿠아마린 (4단계) · 힘 4"
+        },
+        {
+          "ref": "Kanos' Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "卡诺斯的海蓝宝石(阶段4) · 敏捷 4",
+          "en": "Kanos' AquamarineⅣ · DEX 4",
+          "ja": "カノスのアクアマリン(4段階) · 敏捷 4",
+          "kr": "카노스의아쿠아마린 (4단계) · 민첩 4"
+        },
+        {
+          "ref": "Kanos' Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "卡诺斯的海蓝宝石(阶段4) · 智力 4",
+          "en": "Kanos' AquamarineⅣ · INT 4",
+          "ja": "カノスのアクアマリン(4段階) · 知力 4",
+          "kr": "카노스의아쿠아마린 (4단계) · 지능 4"
+        },
+        {
+          "ref": "Kanos' Aquamarine IV",
+          "p": 0.03,
+          "kind": "gem",
+          "cn": "卡诺斯的海蓝宝石(阶段4) · 体力 40",
+          "en": "Kanos' AquamarineⅣ · HP 40",
+          "ja": "カノスのアクアマリン(4段階) · 体力 40",
+          "kr": "카노스의아쿠아마린 (4단계) · 체력 40"
+        }
+      ],
+      "subs": []
+    }
+  }
+}

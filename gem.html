@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!-- ⚠ 宝石图鉴是**独立标签模块**：本文件直接维护，**不再**由 work/scripts/build_gem_page.py 从 costume.html 生成
+     （那个脚本已停用，它按「从预览图 CSS 注释一路裁到 style 结束标签」的方式裁剪，
+     会把后插入的 .lang-dd 样式一起删掉 —— 语言下拉就是这么没的）。
+     数据来源：gem_data.json（宝石条目） + gem_box_data.json（宝石箱子概率） + gem_prob_data.json（合成/加工概率） + lang.json（多语文案，全站共用）。
+     语言切换：右上角自定义下拉 .lang-dd，与其余 7 个图鉴页同一套交互与样式（点击展开 / 选中收起 / 默认高亮当前语言）。 -->
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -41,7 +46,7 @@ body{background:#f0f2f5;padding:12px}
 .item-level{min-height:20px;font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:3px}
 /* 等级移到右栏后：靠底对齐，紧贴职业图标上方 */
 .equip-text-col .item-level{margin-top:auto;margin-bottom:-2px;text-align:left}
-/* 数值框：第一行固定「服装」，有体力才追加「体力」一行（每项一行） */
+/* 数值框：宝石 = 属性行 + 效果行（+ 右下角「不可交易」） */
 .equip-stats{background:#C6D4E4;padding:8px;border-radius:8px;margin-top:4px;min-height:40px;position:relative}
 /* 宝石数值框右下角「不可交易」（红字）——框内文本照常换行占上方，右下角留出它的位置 */
 .equip-stats.has-notrade{padding-bottom:26px}
@@ -94,7 +99,7 @@ body{background:#f0f2f5;padding:12px}
 .prob-boxes.single{justify-content:center}
 @media(min-width:768px){.prob-boxes{flex-wrap:nowrap}}
 .prob-box{flex:0 1 auto;width:240px;max-width:100%;background:#f5f7fa;border-radius:10px;padding:8px}
-/* 当前这件时装所在的箱子那块加一圈高亮 */
+/* 当前这颗宝石所在的箱子那块加一圈高亮 */
 .prob-box.is-target{box-shadow:0 0 0 2px #4E9A8C inset;background:#edf6f4}
 .prob-box-name{text-align:center;font-weight:bold;font-size:17px;color:#3D4E68;padding:2px 4px 0}
 .prob-box-name::after{content:"";display:block;width:32px;height:3px;background:#718ACC;border-radius:2px;margin:6px auto 8px}
@@ -104,21 +109,19 @@ body{background:#f0f2f5;padding:12px}
 .prob-table td.prob-name{text-align:left}
 .prob-table tbody tr:nth-child(even) td{background:#f7f9fc}
 .prob-table td.prob-val{font-weight:bold;color:#3D4E68;white-space:nowrap}
-/* 当前这件时装所在的那一行高亮 */
+/* 当前这颗宝石所在的那一行高亮 */
 .prob-table tr.me td{background:#FFF1CC!important;color:#8a5a00}
 .prob-table tr.me td.prob-val{color:#8a5a00}
 /* 官方「剛毅化身」表里的「等級」分组小标题行 */
 .prob-table tr.group td{background:#dfe7f5!important;color:#3D4E68;font-weight:bold;text-align:left;font-size:13px}
-/* 可点击的时装名 -> 跳转到该时装 */
+/* 可点击的宝石名 -> 跳转到那颗宝石 */
 .prob-link{color:#3774AE;cursor:pointer;text-decoration:none}
 .prob-link:hover{text-decoration:underline}
 /* 「随机手套 / 随机长靴」这类行本身就是另一个箱子 -> 跳到自己那张表 */
 .prob-boxrow{color:#2E8B7A;font-weight:bold;cursor:pointer}
 .prob-boxrow:hover{text-decoration:underline}
 .prob-table tr.boxrow td{background:#EAF6F3!important}
-/* 语言下拉框：原生箭头无法调整位置，改为自定义箭头并往左收一些 */
-
-/* 语言切换：自定义点击下拉（PC/手机一致，替代原生 select） */
+/* 语言切换：自定义点击下拉（PC/手机一致，替代原生 select）—— 与其余 7 个图鉴页同一套样式，不要删 */
 .lang-dd{position:relative;display:inline-block;vertical-align:middle}
 .lang-dd-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:104px;padding:8px 12px;border:1px solid #ccc;background:#fff;border-radius:8px;font-size:15px;line-height:1;color:#3D4E68;white-space:nowrap;cursor:pointer;font-family:inherit}
 .lang-dd-btn:hover{border-color:#94A6BE;background:#F7FAFD}
@@ -130,7 +133,7 @@ body{background:#f0f2f5;padding:12px}
 .lang-dd-item{padding:8px 14px;border-radius:6px;font-size:15px;line-height:1.2;color:#3D4E68;white-space:nowrap;text-align:center;cursor:pointer}
 .lang-dd-item:hover{background:#EAF1F8}
 .lang-dd-item.active{background:#EDF0F4;font-weight:600}
-</style></style>
+</style>
 </head>
 <body>
 <div class="top-bar">
@@ -145,6 +148,7 @@ body{background:#f0f2f5;padding:12px}
 <button class="type-btn" onclick="location.href='pet.html'" data-nav="pet">宠物图鉴</button>
 <button class="type-btn" onclick="location.href='costume.html'" data-nav="costume">时装图鉴</button>
 <button class="type-btn" onclick="location.href='collection.html'" data-nav="collection">图鉴任务</button>
+<div class="top-bar" id="catBar"></div>
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="firstTop">首页</button>
   <button class="page-btn" id="prevTop">上一页</button>
@@ -260,15 +264,12 @@ function twomUi(L,k,lang,vars){var o=((L&&L.ui)||{})[k];var s=o?(o[lang]||o.cn||
 let currentLang = twomReadLang();
 let DATA = [], LANGDATA = null, filtered = [], page = 1, currentCat = "all", BASE = [];
 let GEMPROB = null;   /* gem_prob_data.json：官方「合成概率 / 加工概率」两张表 */
-let BOX_DATA = null;   // costume_box_data.json：官方「随机服装宝箱 A~M」完整概率表
+let BOX_DATA = null;   // gem_box_data.json：只保留与宝石相关的箱子概率表（现在只有 HERO_GEM 英雄宝石箱）
 let jumpSearchText = '';   // 跳转时填进搜索框的文字（点「全部/分类」会连同用户输入一起清空）
 
-// 顺序：全部 → 武器 → 帽子 → 服装 → 手套 → 饰品 → 鞋子(含靴子) → 披风 → 宝石
-/* 预览图里额外选的「部位筛选」（可多选；空数组 = 全部部位）。只在 currentCat==='preview' 时生效，
-   退出预览图不清空（下次进来还是上次那几个部位）。 */
 let previewCats = [];
-/* 宝石图鉴只有「宝石」一个分类，不需要分类栏 */
-/* 宝石图鉴无分类栏，不需要分类文案表 */
+/* 宝石图鉴的分类 = 按图标形状（buildCatBar 里实现），不用时装的 CAT_ORDER */
+/* 宝石图鉴分类文案在 lang.json 的 gemLang.catName / shapeName（buildCatBar 里直接读） */
 /* 稀有度配色统一在 lang.json 的 rarityColor（名称字体用 .color，标签底色用 .bg）。
    本页不再自带色表；数据里只需写 rarity 标签，颜色自动跟随。 */
 let RARITY_COLOR = {};
@@ -317,12 +318,12 @@ function sourceBtnHtml(it){
   }
   return '<button class="btn-source disabled" disabled>'+escHtml(t('source'))+'</button>';
 }
-/* 获得概率按钮：只在这件时装属于某个「随机服装宝箱 A~M」时出现（与装备图鉴「重置概率」同理） */
+/* 获得概率按钮：只在这颗宝石出现在某个宝石箱（英雄宝石箱）里时才渲染（与装备图鉴「重置概率」同理） */
 function probBtnHtml(it){
   if(!it || !boxesOf(it.name).length) return '';
   return '<button class="btn-prob" data-name="'+escAttr(it.name)+'" onclick="openProbModal(this)">'+escHtml(t('prob'))+'</button>';
 }
-/* 反查：这件时装出现在哪些箱子里 -> [{code, box, subs:[只含该时装所在子表]}] */
+/* 反查：这颗宝石出现在哪些箱子里 -> [{code, box, subs:[只含该宝石所在子表]}] */
 function boxesOf(name){
   if(!BOX_DATA || !BOX_DATA.boxes || !name) return [];
   const out = [];
@@ -345,7 +346,7 @@ function fmtProb(p){
   return n.toFixed(3)+'%';
 }
 function boxNameText(o){ return (o && (o[currentLang] || o.cn || o.en)) || ''; }
-/* 箱子名的四语取自 costume_box_data.json（源头是官方「45_时装分类总表」/Itemstr） */
+/* 箱子名的四语取自 gem_box_data.json（源头是官方宝石箱概率公示页） */
 function boxTitleByCode(code){
   const b = BOX_DATA && BOX_DATA.boxes && BOX_DATA.boxes[code];
   return b ? boxNameText(b.title) : ('Random Costume Box ' + code);
@@ -372,17 +373,22 @@ function locBoxNames(s){
     .replace(/随机手套/g, boxTitleByName('Costume Glove Box'))
     .replace(/随机长靴/g, boxTitleByName('Costume Boot Box'));
 }
-/* 获取途径每一行：① 有该语言的整句翻译就用它（lang.json.costumeLang.obtainText，
-   中文全量、模板句另带日/韩）② 否则只把箱子名换成当前语言，其余保持原文 */
+/* 获取途径每一行：① 有该语言的整句翻译就用它 —— **宝石页读 lang.json 的 gemLang.obtainText**
+   （由 work/scripts/build_gem_independent_data.py 从宝石条目自身用到的那几句抽取出来，不再依赖 costumeLang）；
+   取不到再退回 costumeLang.obtainText（兜底，正常情况下不会走到）② 否则只把箱子名换成当前语言，其余保持原文 */
+function gemObtainTable(){
+  return (LANGDATA && LANGDATA.gemLang && LANGDATA.gemLang.obtainText)
+      || (LANGDATA && LANGDATA.costumeLang && LANGDATA.costumeLang.obtainText) || null;
+}
 function locObtainLine(line){
   const s = String(line);
-  const TBL = (LANGDATA && LANGDATA.costumeLang && LANGDATA.costumeLang.obtainText) || null;
+  const TBL = gemObtainTable();
   const v = TBL ? TBL[s] : null;
   if(v && v[currentLang]) return npcLocalize(locBoxNames(v[currentLang]));
   return npcLocalize(locBoxNames(s));
 }
 /* 概率表：箱子里每一行。
-   kind=costume -> 可点击跳到那件时装的卡片；
+   kind=gem -> 可点击跳到那颗宝石的卡片；
    kind=box（随机手套/随机长靴，本身是另一个箱子）-> 可点击弹出它自己的概率表；
    kind=emote（如「今天的心情」是表情）和其它 -> 纯文本。 */
 function probRowCell(x){
@@ -390,8 +396,8 @@ function probRowCell(x){
     return '<span class="prob-boxrow" onclick="openBoxModal(\'' + escAttr(x.toBox) + '\')">'
            + escHtml(boxNameText(x)) + ' \u25b8</span>';
   }
-  if(x.kind === 'costume' && x.ref){
-    return '<span class="prob-link" data-name="' + escAttr(x.ref) + '" onclick="jumpToCostume(this)">'
+  if(x.kind === 'gem' && x.ref){
+    return '<span class="prob-link" data-name="' + escAttr(x.ref) + '" onclick="jumpToGem(this)">'
            + escHtml(boxNameText(x)) + '</span>';
   }
   return escHtml(boxNameText(x));
@@ -615,13 +621,49 @@ function dispName(name){
   return name;
 }
 
-/* 宝石图鉴只有一个分类 → 不做分类栏（updateCatBar 保留成空函数，updateLangText 会调它） */
-function buildCatBar(){}
-function updateCatBar(){}
+/* 宝石图鉴分类：按**图标形状**分 3 类（1=菱形 2=正方形 3=三角形，数据字段 gem_data.json 的 gemShape），另加「全部」 */
+const GEM_SHAPES = ["1","2","3"];
+function gemCatLang(){ return (LANGDATA && LANGDATA.gemLang && LANGDATA.gemLang.catName) || {}; }
+function gemShapeName(k){
+  const o = (LANGDATA && LANGDATA.gemLang && LANGDATA.gemLang.shapeName && LANGDATA.gemLang.shapeName[k]) || {};
+  return o[currentLang] || o.cn || o.en || "";
+}
+function buildCatBar(){
+  const bar = document.getElementById('catBar');
+  if(!bar) return;
+  bar.innerHTML = '';
+  const L = gemCatLang();
+  const label = function(k){ const o = L[k] || {}; return o[currentLang] || o.cn || o.en || k; };
+  GEM_SHAPES.forEach(function(c){
+    if(!BASE.some(function(d){ return String(d.gemShape) === c; })) return;   /* 该形状没有可见宝石就不出按钮 */
+    const b = document.createElement('button');
+    b.className = 'type-btn' + (String(currentCat) === c ? ' active' : '');
+    b.dataset.cat = c; b.innerText = label(c); b.title = gemShapeName(c);   /* title 提示该类是什么形状 */
+    b.onclick = function(){ clearSearchBox(); currentCat = c; updateCatBar(); filterAndRender(); };
+    bar.appendChild(b);
+  });
+  const b0 = document.createElement('button');
+  b0.className = 'type-btn' + (currentCat === 'all' ? ' active' : '');
+  b0.dataset.cat = 'all'; b0.innerText = label('all');
+  b0.onclick = function(){ clearSearchBox(); currentCat = 'all'; updateCatBar(); filterAndRender(); };
+  bar.insertBefore(b0, bar.firstChild);
+}
+function updateCatBar(){
+  /* 切语言时要把按钮文案一起换掉（分类名 + 形状 title），否则会留在上一次的语言上 */
+  const L = gemCatLang();
+  document.querySelectorAll('#catBar .type-btn').forEach(function(b){
+    const c = b.dataset.cat;
+    if(!c) return;
+    b.classList.toggle('active', String(currentCat) === c);
+    const o = L[c] || {};
+    b.innerText = o[currentLang] || o.cn || o.en || (c === 'all' ? '全部' : c);
+    if(c !== 'all') b.title = gemShapeName(c);
+  });
+}
 
 function filterAndRender(keepPage){
   let list = BASE.filter(function(x){ return !x.hidden; });   /* hidden = 宝箱 + 旧版宝石，数据保留但不显示 */
-  if(currentCat !== 'all') list = list.filter(function(x){ return x.cat === currentCat; });
+  if(currentCat !== 'all') list = list.filter(function(x){ return String(x.gemShape) === currentCat; });   /* 按图标形状：1=菱形 2=正方形 3=三角形 */
   const kw = document.getElementById('searchBox').value.toLowerCase().trim();
   if(kw){
     const names = function(x){
@@ -715,9 +757,8 @@ function syncBodyLock(){
   });
   lockPageScroll(open);
 }
-/* 获得概率弹窗：列出该时装所属 A~M 箱子的完整概率表。
-   随机手套 / 随机长靴 本身就是「另一个箱子」，各自独立成一块并标出来源；
-   箱子里的每一件时装可点击跳转，箱子行可点击定位到它自己那张表。 */
+/* 获得概率弹窗：列出这颗宝石所属箱子（现在只有「英雄宝石箱」）的完整概率表。
+   箱子里的每一颗宝石可点击跳转。 */
 function openProbModal(btn){
   const nm = btn && btn.dataset ? btn.dataset.name : '';
   const list = boxesOf(nm);
@@ -745,7 +786,7 @@ function closeAllModals(){
   });
   lockPageScroll(false);
 }
-/* 点击概率表里的时装名 -> 关掉所有弹窗并定位到那件时装的卡片。
+/* 点击概率表里的宝石名 -> 关掉所有弹窗并定位到那颗宝石的卡片。
    搜索框填入的是**当前语言的显示名**（搜索本身四语都能匹配），中文页就是中文名、日文页就是日文名。 */
 /* 强跳转：点名称跳转时只显示这一件（内部键精确命中，不做模糊搜索） */
 let jumpExactKey = '';
@@ -758,7 +799,7 @@ function isJumpTarget(x){
     .map(function(v){ return String(v || '').toLowerCase().trim(); }).filter(function(v){ return v !== ''; });
   return ns.indexOf(k) >= 0;
 }
-function jumpToCostume(el){
+function jumpToGem(el){
   const nm = el && el.dataset ? el.dataset.name : '';
   if(!nm) return;
   closeAllModals();          // 二级箱子弹窗也要一起关掉，否则会盖着不动
@@ -835,17 +876,27 @@ function updateLangText(){
 async function init(){
   try{
     const [d, lg, bx] = await Promise.all([
-      fetch('costume_data.json').then(function(r){return r.json();}),
+      fetch('gem_data.json').then(function(r){return r.json();}),            /* 宝石条目（已从时装表拆出） */
       fetch('lang.json').then(function(r){return r.json();}),
-      fetch('costume_box_data.json').then(function(r){return r.json();}).catch(function(){return null;})
+      fetch('gem_box_data.json').then(function(r){return r.json();}).catch(function(){return null;})   /* 宝石箱子概率 */
     ]);
-    /* 数据源仍是 costume_data.json（宝石的箱子里程碑/概率表都挂在同一份数据上），这里只取宝石 */
+    /* 数据源是 gem_data.json（自己的一份，不再读 costume_data.json）；容错：万一拿到整份时装表也只留宝石 */
     DATA = (Array.isArray(d)?d:[]).filter(function(x){ return x.cat === 'gem'; });
     LANGDATA = lg; twomApplyLangData(lg); BOX_DATA = bx;
     try { GEMPROB = await fetch('gem_prob_data.json').then(function(r){return r.json();}); } catch(e){ GEMPROB = null; }
     BASE = DATA;   // 隐藏项（宝箱 / 旧版宝石）在 filterAndRender 里滤掉
   }catch(e){ DATA=[]; }
   buildCatBar();
+  /* 接收其它页跳转来的参数：优先 gem.html?gem=<英文名>，兼容老链接 gem.html?costume=<英文名>
+     （强跳转：只留目标那一颗）。图鉴任务页对宝石类材料已经从这里进：gem.html?gem=<英文名> */
+  const qs = String(location.search || '');
+  if(qs.indexOf('gem=') >= 0 || qs.indexOf('costume=') >= 0){
+    try{
+      var cparams = new URLSearchParams(qs);
+      var cname = decodeURIComponent((cparams.get('gem') || cparams.get('costume') || '') + '').trim();
+      if(cname) jumpExactKey = cname;
+    }catch(e){}
+  }
   twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
     currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
     updateLangText(); filterAndRender(true);

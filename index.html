@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>TWOM Wiki</title>
@@ -223,6 +225,60 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   flex-shrink:0;
   object-fit: contain;
 }
+/* ===== DROP_TIP_PATCH：掉落物「小预览图」浮层 =====
+   与图鉴任务（collection.html）的 .mat-tip 用同一套类名与视觉，肉眼完全一致：
+     装备 / 技能 = 完整信息卡（图标 + 名称 + 等级 + 品质 + 属性）；
+     符文 / 材料 = 轻量卡（图标 + 名称）；两类右下角都有「跳转」图标去对应图鉴。
+   触发方式也对齐：桌面悬停（160ms 延时）/ 手机单击名称，点外部或滚动即消失。
+   ⚠ 只改展示与跳转：掉落条目、数量、概率一律沿用 monster_drops.json。 */
+.mat-tip{position:fixed;z-index:210;display:none;pointer-events:none;max-width:86vw;--tip-hex-img:70%}
+.mat-tip.show{display:block;pointer-events:auto}
+.mat-tip .tip-card{background:rgba(217,227,236,0.92);border:1px solid #94A6BE;border-radius:12px;position:relative;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);padding:6px;width:150px;overflow:hidden}
+.mat-tip .tip-card.tip-equip{width:200px}
+@media(min-width:1024px){
+  .mat-tip .tip-card{width:220px}
+  .mat-tip .tip-card.tip-equip{width:300px}
+}
+.mat-tip .tl-body{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.mat-tip .tl-name{overflow-wrap:anywhere}
+.mat-tip .equip-name,.mat-tip .stat-item{overflow-wrap:anywhere;word-break:break-word}
+.mat-tip .tag-rarity.adv{background:#E9F4E6;color:#518B38;border:1px solid #B7D9AE}
+.mat-tip .equip-name{text-align:center;font-weight:bold;font-size:16px;padding:3px 4px;line-height:1.2;
+  border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;
+  background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px}
+.mat-tip .equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.mat-tip .equip-icon-col{width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px}
+.mat-tip .hex-icon{width:52px;height:52px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  background:#EDF0F4;border:2px solid #94A6BE;border-radius:8px}
+.mat-tip .hex-icon img{width:var(--tip-hex-img,76%);height:var(--tip-hex-img,76%);object-fit:contain}
+.mat-tip .item-level{font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1}
+.mat-tip .equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px;padding-left:4px}
+.mat-tip .tag-rarity{padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content}
+.mat-tip .tag-job{display:flex;align-items:center;gap:3px;min-height:20px;width:fit-content}
+.mat-tip .tag-job img{width:20px;height:20px;object-fit:contain}
+.mat-tip .equip-stats{background:#C6D4E4;padding:6px;border-radius:8px;margin-top:4px;position:relative;padding-right:24px}
+.mat-tip .stat-item{font-size:13px;font-weight:bold;text-align:left;padding:1px 0}
+/* 属性框右下角的「跳转」图标：半透明圆底，pointer-events:auto 才能点 */
+.mat-tip .tip-jump{position:absolute;right:5px;bottom:5px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(34,44,62,0.55);color:#fff;cursor:pointer;pointer-events:auto;
+  box-shadow:0 1px 3px rgba(0,0,0,0.35);transition:background .15s}
+.mat-tip .tip-jump:hover{background:rgba(34,44,62,0.85)}
+.mat-tip .tip-jump svg{display:block}
+.mat-tip .tip-light{display:flex;gap:8px;align-items:flex-start;padding:2px}
+.mat-tip .tip-light .tl-icon{position:relative;width:48px;height:48px;flex:0 0 48px;background:#EDF0F4;
+  border:1px solid #B9C4D4;border-radius:6px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.mat-tip .tip-light .tl-icon img{width:88%;height:88%;object-fit:contain}
+.mat-tip .tip-light .tl-name{font-size:14px;font-weight:bold;color:#22334a;line-height:1.3}
+.mat-tip .tip-light .tl-desc{font-size:12px;color:#3D4E68;margin-top:3px;line-height:1.35}
+/* 符文卡的「属性框」（= 物品图鉴那张卡片的 .item-note 文案）：与 items.html 同款取色 */
+.mat-tip .item-note{font-size:13px;color:#3D4E68;line-height:1.55;text-align:left;padding:2px 4px;overflow-wrap:anywhere}
+.mat-tip .item-note .item-link{color:#3774AE;text-decoration:underline;cursor:pointer}
+/* 掉落行：名称可点（手型光标提示，不加下划线），悬停/选中反馈对齐图鉴任务的材料格 */
+.drop-link{cursor:pointer;text-decoration:none}
+.drops > div{position:relative;border-radius:6px;transition:background .15s,box-shadow .15s}
+.drops > div:hover{background:#EDF0F4}
+.drops > div.sel{outline:2px solid #4E9A8C;outline-offset:-2px;box-shadow:0 0 0 2px rgba(78,154,140,0.35)}
 
 .revive{
   grid-area:revive;
@@ -267,6 +323,25 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   box-shadow: 0 0 4px rgba(143, 140, 140, 0.1) !important;
   background: #f7f3f3 !important;
 }
+
+/* ===== 防「单击卡片 → 文本全选并闪烁」（方案 1） ===== */
+/* 卡片是纯展示 + 点击交互，不是可读文本块：禁用原生文本选择，
+   避免单击/双击/微拖时浏览器建立选区高亮（用户感知为「全选 + 闪一下」）。
+   说明文字 .desc 例外，保留可选可复制。 */
+.card {
+  -webkit-user-select: none;
+  user-select: none;
+}
+.card .desc,
+.card .desc * {
+  -webkit-user-select: text;
+  user-select: text;
+}
+/* 卡片内的图片/图标不该被拖拽或长按弹出「保存图片」菜单 */
+.card img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
 .card.boss-type {
   border: 2px solid #e2ca81 !important;
   box-shadow: 0 0 8px rgba(156, 145, 45, 0.4) !important;
@@ -307,6 +382,8 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 .lang-dd-item:hover{background:#EAF1F8}
 .lang-dd-item.active{background:#EDF0F4;font-weight:600}
 </style>
+</head>
+<body>
 
 <div class="top-bar">
   <input class="search-box" placeholder="搜索名字/等级/地图/物品">
@@ -823,9 +900,9 @@ const zoneGroups = {
     en: "Hunting Ground (Easy)", ja: "狩猟場（簡単）", kr: "사냥터 (쉬움)",
     zones: ["Bitum Wetland (Easy)", "Sinar Plains (Easy)"],
     maps: [
-      { cn: "比图姆湿地", en: "Bitum Wetland", ja: "ビトゥム湿地", kr: "",
+      { cn: "比图姆湿地", en: "Bitum Wetland", ja: "ビトゥム湿地", kr: "비툼 습지",
         imgs: { cn: "maps/cn/比图姆湿地.webp", en: "maps/cn/比图姆湿地.webp", ja: "maps/cn/比图姆湿地.webp", kr: "maps/cn/比图姆湿地.webp" } },
-      { cn: "希纳尔平原", en: "Sinar Plains", ja: "ビトゥム湿地", kr: "",
+      { cn: "希纳尔平原", en: "Sinar Plains", ja: "シナール平野", kr: "시나르 평야",
         imgs: { cn: "maps/cn/希纳尔平原.webp", en: "maps/cn/希纳尔平原.webp", ja: "maps/cn/希纳尔平原.webp", kr: "maps/cn/希纳尔平原.webp" } }
     ]
   },
@@ -833,9 +910,9 @@ const zoneGroups = {
     en: "Hunting Ground (Hard)", ja: "狩猟場（困難）", kr: "사냥터 (어려움)",
     zones: ["Bitum Wetland (Hard)", "Sinar Plains (Hard)"],
     maps: [
-      { cn: "比图姆湿地", en: "Bitum Wetland", ja: "ビトゥム湿地", kr: "",
+      { cn: "比图姆湿地", en: "Bitum Wetland", ja: "ビトゥム湿地", kr: "비툼 습지",
         imgs: { cn: "maps/cn/比图姆湿地.webp", en: "maps/cn/比图姆湿地.webp", ja: "maps/cn/比图姆湿地.webp", kr: "maps/cn/比图姆湿地.webp" } },
-      { cn: "希纳尔平原", en: "Sinar Plains", ja: "ビトゥム湿地", kr: "",
+      { cn: "希纳尔平原", en: "Sinar Plains", ja: "シナール平野", kr: "시나르 평야",
         imgs: { cn: "maps/cn/希纳尔平原.webp", en: "maps/cn/希纳尔平原.webp", ja: "maps/cn/希纳尔平原.webp", kr: "maps/cn/希纳尔平原.webp" } }
     ]
   }
@@ -1105,151 +1182,524 @@ function goNext(){
   if(page<total){ page++; render(); window.scrollTo(0,0); }
 }
 
-// ========== 渲染 ==========
-function render(){
-  const box = document.getElementById('cardBox')
-  let html = ''
+// ========== 掉落物「小预览图」浮层（DROP_TIP_PATCH）==========
+// 交互与视觉对齐图鉴任务（collection.html 的 .mat-tip）：桌面悬停延时显示 / 手机单击显示，
+//   装备·技能 = 完整信息卡（图标 + 名称 + 等级 + 品质/职业标签 + 属性），
+//   符文·材料 = 轻量卡（图标 + 名称）；两类右下角都有跳转图标，去各自对应的图鉴。
+// ⚠ 只负责展示与跳转：掉落条目、数量、概率一律沿用 monster_drops.json，一行不动。
+const RUNE_NAMES = new Set([
+  "Mercy Rune", "Penitence Rune", "Resurrection Rune", "Execution Rune", "Torture Rune", "Bio Magic Power Rune",
+  "Corruption Rune", "Atonement Rune", "Supremacy Rune", "Giant's rune", "Depredation rune", "Judgment rune"
+]);
+/* ⚠ 符文卡的「属性框」= 物品图鉴（items.html）里那张符文卡片正文（.item-note）：
+     「{来源地点} x3 兑换：<可兑换技能>」；宝箱符文前面再加「由 <宝箱> 随机开出；」。
+     文案与映射与 items.html 的 RUNE_EXCHANGE / RUNE_WHERE_LANG / ui(runeExchange/fromBox) 保持一致，
+     全部走 lang.json 取四语，切语言即跟随。仅在浮层里展示，不改任何数据。 */
+const DRUNE_EXCHANGE = {
+  "Mercy Rune":           { where: "石冠营地 神秘幻影研究家", book: "Wild Charge 4" },
+  "Penitence Rune":       { where: "石冠营地 神秘幻影研究家", book: "Impact Shot 4" },
+  "Resurrection Rune":    { where: "石冠营地 神秘幻影研究家", book: "Firebolt 4" },
+  "Atonement Rune":       { where: "石冠营地 神秘幻影研究家", book: "Breaker's Strike 4" },
+  "Execution Rune":       { where: "石冠营地 神秘幻影研究家", book: "Sweeping Strikes 4" },
+  "Torture Rune":         { where: "石冠营地 神秘幻影研究家", book: "Multi Shot 3" },
+  "Bio Magic Power Rune": { where: "石冠营地 神秘幻影研究家", book: "Flame of Kataru 4" },
+  "Corruption Rune":      { where: "石冠营地 神秘幻影研究家", book: "Electric Imbue 4" },
+  "Supremacy Rune":       { where: "庭院 戴尔菲", book: "Baekha's Strike 4", fromBox: true },
+  "Giant's rune":         { where: "庭院 戴尔菲", book: "Fatal Attack 3", fromBox: true },
+  "Depredation rune":     { where: "庭院 戴尔菲", book: "Soul Drain Shot 3", fromBox: true },
+  "Judgment rune":        { where: "庭院 戴尔菲", book: "Firestorm 3", fromBox: true }
+};
+const DRUNE_BOX = "Box Flowing with Mana";   /* 开出宝箱符文的那个箱子（与 items.html 同名） */
+const DSTAT_KEYS = ["precision","attack","armor","speed","block","hp","mana","hp_regen","mana_regen",
+                    "hit","cri","str","dex","int","deadly","ice_resist","fire_resist","magic_resist","lightning_Resist","move"];
+const DJOB_ICON = {warrior:"job/warrior.png", magician:"job/magician.png", ranger:"job/ranger.png",
+                   breaker:"job/breaker.png", all:"job/all.png"};
+const DTIP_DELAY = 160, DTIP_HIDE = 220;   /* 与图鉴任务同值：悬停延时 / 移出宽限期 */
+const DJUMP_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" '
+  + 'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+  + '<path d="M6 18 V9 a4 4 0 0 1 4 -4 H18"></path><path d="M13 2 L18 5 L13 8"></path></svg>';
+/* 「查看详情」四语文案 */
+const DJUMP_TITLE = {cn:"查看详情", en:"View details", ja:"詳細を見る", kr:"자세히 보기"};
+const DSKILL_TYPE = {active:{cn:"主动",en:"Active",ja:"アクティブ",kr:"액티브"},
+                     passive:{cn:"被动",en:"Passive",ja:"パッシブ",kr:"패시브"}};
 
-  // 当前地区地图
-if(page === 1 && currentGroup !== "all" && zoneGroups[currentGroup]){
+function dEsc(s){
+  return String(s == null ? "" : s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+/* 目标图鉴名（lang.json 的 nav） */
+function dNavLabel(key){
+  const o = TWOM_NAV[key];
+  return o ? (o[currentLang] || o.cn || o.en || "") : "";
+}
+function dPick(o){ return o ? (o[currentLang] || o.cn || o.en || "") : ""; }
 
-  const mapData = zoneGroups[currentGroup];
+/* ---- 掉落属于哪一类：装备 / 技能 / 符文 / 材料 ----
+   技能书带等级数字（Ensnare 2 = 二级「圈套」），所以连「去掉等级」的基础名一起比对 */
+function dBase(s){ return String(s).replace(/\s*\d+$/, ""); }
+function dropClassOf(en, nm){
+  if(equipNames.has(en) || equipNames.has(nm)) return "equip";
+  if(skillNames.has(en) || skillNames.has(nm) || skillNames.has(dBase(en)) || skillNames.has(dBase(nm))) return "skill";
+  if(RUNE_NAMES.has(en) || RUNE_NAMES.has(nm)) return "rune";
+  return "mat";
+}
 
-const mapName =
-  currentLang === "cn"
-    ? currentGroup
-    : (mapData[currentLang] || mapData.en || currentGroup);
-
-let mapsHtml = "";
-
-if(mapExpanded){
-
-  (mapData.maps || []).forEach(m => {
-
-    const mapSrc = m.imgs?.[currentLang] || "";
-
-    mapsHtml += `
-
-      <div class="single-map">
-
-        <div class="map-subtitle">
-          ${m[currentLang] || m.en}
-        </div>
-
-        ${mapSrc ? `<img
-      src="${mapSrc}"
-      loading="lazy"
-   >` : ""}
-
-      </div>
-
-    `;
-
+/* ---- 装备 / 技能明细：首次要看浮层时才拉（懒加载，不拖慢首屏） ---- */
+let dEquipIdx = null, dSkillIdx = null, dSkillBookIdx = null, dExtraLoading = false;
+function dLoadExtras(){
+  if(dExtraLoading) return;
+  dExtraLoading = true;
+  Promise.all([
+    fetch("equipment_data/all_equip.json").then(r => r.json()).catch(() => null),
+    fetch("skill_data.json").then(r => r.json()).catch(() => null)
+  ]).then(function(a){
+    dEquipIdx = {};
+    (a[0] || []).forEach(function(e){
+      [e.name, e.name_cn, e.name_ja, e.name_kr].forEach(function(v){
+        if(!v) return;
+        const k = dNorm(v);
+        if(!dEquipIdx[k] || (dEquipIdx[k].hide && !e.hide)) dEquipIdx[k] = e;   /* 隐藏条目让位给可见条目 */
+      });
+    });
+    dSkillIdx = {};
+    dSkillBookIdx = {};        /* 技能书名 -> [技能, 等级]，按等级精确匹配用 */
+    const sd = a[1] || {};
+    Object.keys(sd).forEach(function(k){
+      const s = sd[k]; s.__key = k;
+      /* ⚠ 除了技能名（键 / cn / en），还要登记 **books 里的技能书名**：
+         极少数技能的技能书与技能本身不同名，例如「治愈」（Cure）的技能书叫
+         Cure Poison 1 / Cure Poison 2。掉落表登记的是技能书名，不登记它就会 MISS，
+         浮层降级成「物品图鉴」轻量卡（中文下曾被「nm 去掉数字 -> 治愈」蒙对，
+         切到 en/ja/kr 后 name 变成 Cure Poison 2 / キュア2 / 큐어2，就再也对不上了）。
+         ⚠⚠ 但同一个书名可能被**多个**技能登记（武术一/二/三级都写了 Breaker's Strike 2），
+         所以不能只按「先到先得」塞进 dSkillIdx —— 那样 Breaker's Strike 2 会跳到「武术1击」。
+         做法：书名同时进 dSkillIdx（兜底）与 dSkillBookIdx（带等级，精确匹配优先）。 */
+      const names = [k, s.cn, s.en];
+      const books = s.books || {};
+      Object.keys(books).forEach(function(lv){
+        const bk = books[lv];
+        if(!bk) return;
+        names.push(bk);
+        const bkk = dNorm(bk);
+        if(!dSkillBookIdx[bkk]) dSkillBookIdx[bkk] = [];
+        dSkillBookIdx[bkk].push({ sk: s, lv: parseInt(lv, 10) || 0 });
+      });
+      names.forEach(function(v){
+        if(!v) return;
+        const kk = dNorm(v);
+        if(!dSkillIdx[kk]) dSkillIdx[kk] = s;
+      });
+    });
+    dRefreshTip();   /* 浮层还开着的话，补上明细重画 */
   });
-
 }
-
-html += `
-
-<div class="map-card" id="topMapCard">
-
-  <div
-  class="map-title"
-  onclick="toggleMap()"
-  style="cursor:pointer"
->
-  ${mapName}
-  ${mapExpanded ? "▲" : "▼"}
-</div>
-
-  ${mapsHtml}
-
-</div>
-
-`;
+/* 技能/装备名里引号写法不统一（Breaker's Strike vs Breaker’s Strike），比名前先归一化 */
+function dNorm(s){
+  return String(s == null ? "" : s).replace(/[\u2019\u02BC]/g, "'").trim().toLowerCase();
 }
-
-  updatePageInfo()
-  const perPage = getPerPage();
-    const list = filtered.slice((page-1)*perPage, page*perPage)
-
-  list.forEach(m => {
-    if(!m) return
-    const name = tr(lang.nameMap, m.name)
-    const zone = tr(lang.zoneMap, m.zone)
-    const dropHtml = (drops[m.name]?.掉落物||[]).map(raw => {
-    const qm = String(raw).match(/^(.*?)\s+x(\d+)$/i);
-    const i = qm ? qm[1] : raw;
-    const qty = qm ? " ×" + qm[2] : "";
-    const itemName = tr(lang.dropMap,i);   // 中文名
-    const showName = itemName + qty;
-    const isEquip = equipNames.has(i) || equipNames.has(itemName);
-    const isSkill = skillNames.has(i) || skillNames.has(itemName);
-
-  if (isEquip) {
-    // 装备：显示为可点击，跳装备图鉴
-    return `
-    <div>
-      <img loading="lazy" src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goEquip('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
-    </div>`;
-  } else if (isSkill) {
-    // 技能：可点击，跳技能图鉴（去掉名称末尾等级数字）
-    const skillBase = itemName.replace(/\s*\d+$/, "");
-    return `
-    <div>
-      <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goSkill('${skillBase.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
-    </div>`;
-  } else {
-    // 其他物品：可点击，跳物品图鉴
-    return `
-    <div>
-      <img src="drop_icons/${i}.png" onerror="this.style.display='none'">
-      <span class="drop-link" onclick="goItem('${itemName.replace(/'/g,"\\'")}')" style="cursor:pointer">${showName}</span>
-    </div>`;
+/* 罗马数字：少数技能在图鉴里是一卡一级且用 I/II/III 命名（Breaker's Strike 2 -> Breaker's Strike II） */
+const DROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+function dRoman(n){ return DROMAN[n] || String(n); }
+/* 查表顺序：整名 -> 去掉等级的基础名 -> 基础名 + 罗马数字（对应分级单独成卡的情况） */
+function dropFind(en, nm){
+  const NE = dNorm(en), NN = dNorm(nm);
+  const cls = dropClassOf(en, nm);
+  let hit = null;
+  if(cls === "equip" && dEquipIdx) hit = dEquipIdx[NE] || dEquipIdx[NN] || null;
+  if(cls === "skill" && dSkillIdx){
+    const bE = dNorm(dBase(en)), bN = dNorm(dBase(nm));
+    const lv = parseInt((String(nm).match(/(\d+)$/) || String(en).match(/(\d+)$/) || [])[1], 10) || 0;
+    hit = dSkillIdx[NE] || dSkillIdx[NN] || dSkillIdx[bE] || dSkillIdx[bN] || null;
+    /* ⚠ 技能书名优先**消歧**：同一个书名可能被多个技能登记。
+       Breaker's Strike 2 同时出现在「武术1击」和「武术2击」的 books 里，两者登记的等级都是 2，
+       光靠等级分不开。可靠信号是**技能中文名里的数字**（武术1击/武术2击/武术3击 与书名尾号一一对应）。
+       ⚠⚠ 不能只看 nm：日文 nm 是「武闘の二撃」，用的是汉字「二」没有阿拉伯数字，
+       只看 nm 会退化成「按等级取第一个」→ 误命中武术1击。所以数字要综合 en / nm 两边取。 */
+    if(lv && dSkillBookIdx){
+      const digitsOf = function(x){ const m = String(x == null ? "" : x).match(/\d+/g); return m ? m.join(",") : ""; };
+      /* en 是语言无关的（Breaker's Strike 2），优先用它取数字；en 没数字再退回 nm */
+      const enDigits = digitsOf(en);
+      const nmDigits = digitsOf(nm);
+      const wantNum = enDigits || nmDigits;   /* 例："2" */
+      const hitExact = function(key){
+        const list = dSkillBookIdx[key];
+        if(!list || !list.length) return null;
+        if(wantNum){
+          /* 技能名里的数字与书名尾号一致的那个（武术2击 的数字是 2） */
+          const byNum = list.filter(function(o){ return digitsOf(o.sk.cn) === wantNum; });
+          if(byNum.length) return byNum[0].sk;
+        }
+        const byName = list.filter(function(o){ return o.sk.cn && (dNorm(o.sk.cn) === NN || dNorm(o.sk.cn) === bN); });
+        if(byName.length) return byName[0].sk;
+        const exact = list.filter(function(o){ return o.lv === lv; });
+        return (exact[0] || list[0]).sk;
+      };
+      hit = hitExact(NE) || hitExact(NN) || hit;
+    }
+    /* 分级单独成卡的情况：Breaker's Strike 2 -> Breaker’s Strike II（英文加罗马数字最稳，
+       中文名可能带「一/二」差异，例如「武术一击2」对「武术2击」）；引号差异已由 dNorm 抹平 */
+    if(!hit && lv){
+      /* 索引键统一走过 dNorm（小写化），所以拼出来的罗马数字也要 lowercase 才能命中 */
+      const roman = dRoman(lv).toLowerCase();
+      hit = dSkillIdx[(bE + " " + roman).trim()] || dSkillIdx[(bN + " " + roman).trim()]
+         || dSkillIdx[(dNorm(dBase(NE)) + " " + roman).trim()] || null;
+    }
   }
-}).join('')
-
-    let reviveText = ""
-if(m.revive?.trim()){
-  reviveText = translateReviveTime(m.revive);
+  return { cls:cls, hit:hit || null };
 }
-    const img = `monsters_images/${m.name}.png`
-    let badge = ""
-    let isBossType = false
-    const note = (m.notes||"").trim()
-    let cardClass = 'card';
+/* 跳转名必须能在目标图鉴里对得上，才不会出现「跳过去啥也没有」 */
+function equipJumpName(eq){
+  const f = {cn:"name_cn", ja:"name_ja", kr:"name_kr", en:"name"}[currentLang];
+  return eq[f] || eq.name_cn || eq.name || "";
+}
+function itemJumpName(en, nm){ return nm || en; }
 
-    if(note.includes("Raid Boss")) {
-      badge = `<div class="badge">Raid Boss</div>`;
-      isBossType = true;
-      cardClass += " boss-type raid-boss";
-    } else if(note.includes("Mini-Boss")) {
-      badge = `<div class="badge">Mini Boss</div>`;
-      isBossType = true;
-      cardClass += " boss-type";
-    } else if(note.includes("Boss")) {
-      badge = `<div class="badge">Boss</div>`;
-      isBossType = true;
-      cardClass += " boss-type";
+/* ---- 卡片骨架（与图鉴任务的 tipCardHtml 同款）：右下角跳转图标 ---- */
+function dJumpIcon(url){
+  if(!url) return "";
+  return '<div class="tip-jump" data-url="' + dEsc(url) + '" onclick="dTipJump(event,this)"'
+    + ' title="' + dEsc(DJUMP_TITLE[currentLang] || DJUMP_TITLE.cn) + '" aria-label="open detail">'
+    + DJUMP_SVG + '</div>';
+}
+function dShell(cardCls, inner, url){
+  return '<div class="tip-card ' + cardCls + '">' + inner + dJumpIcon(url) + '</div>';
+}
+function dRarity(lv, rarity){
+  if(rarity && rarity !== "一般") return rarity;
+  return (parseInt(lv, 10) || 0) > 10 ? "高级" : "一般";
+}
+function dJobHtml(job){
+  const list = Array.isArray(job) ? job : (job ? String(job).split(",") : []);
+  const jobs = list.length ? list : ["all"];
+  let out = "";
+  jobs.forEach(function(j){
+    j = String(j).trim().toLowerCase();
+    out += '<img src="' + dEsc(DJOB_ICON[j] || "job/all.png") + '" alt="' + dEsc(j) + '">';
+  });
+  return out;
+}
+/* 装备卡：名称（品质色）+ 等级 + 品质标签 + 职业图标 + 属性表 */
+function dEquipCard(eq, nm){
+  const lv = parseInt(eq.level, 10) || 1;
+  const key = dRarity(lv, eq.rarity);
+  const rc = (lang.rarityColor || {})[key] || {color:"#4D5A75", bg:"#474F6E"};
+  const rar = (((lang.rarity || {})[key]) || {})[currentLang] || key;
+  const adv = key === "高级";
+  const bgStyle = adv ? "" : ' style="background:' + dEsc(rc.bg) + '"';
+  let stats = "";
+  DSTAT_KEYS.forEach(function(k){
+    const v = eq[k];
+    if(v == null || v === "" || v === "0") return;
+    const an = ((lang.equipLang || {}).attrName || {})[k];
+    const nm2 = typeof an === "string" ? an : (an ? (an[currentLang] || an.cn || an.en || k) : k);
+    stats += '<div class="stat-item">' + dEsc(nm2) + ": " + dEsc(String(v)) + "</div>";
+  });
+  if(!stats) stats = '<div class="stat-item">—</div>';
+  const inner = '<div class="equip-name" style="color:' + dEsc(rc.color) + '">' + dEsc(nm) + "</div>"
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col">'
+    +     '<div class="hex-icon"><img src="equip_icons/' + dEsc(eq.icon || "") + '" alt=""'
+    +       ' onerror="this.style.display=\'none\'"></div>'
+    +     '<div class="item-level">Lv.' + dEsc(String(lv)) + "</div>"
+    +   "</div>"
+    +   '<div class="equip-text-col">'
+    +     '<div class="tag-rarity' + (adv ? " adv" : "") + '"' + bgStyle + '>' + dEsc(rar) + "</div>"
+    +     '<div class="tag-job">' + dJobHtml(eq.job) + "</div>"
+    +   "</div>"
+    + "</div>"
+    + '<div class="equip-stats">' + stats + "</div>";
+  return dShell("tip-equip", inner, "equip.html?equip=" + encodeURIComponent(equipJumpName(eq)));
+}
+/* 技能卡：整张技能（含所有等级效果），和装备同款外壳 */
+function dSkillCard(sk, nm, en){
+  const lv = parseInt(sk.learnLevel, 10) || 1;
+  const key = dRarity(lv, sk.rarity);
+  const rc = (lang.rarityColor || {})[key] || {color:"#4D5A75", bg:"#474F6E"};
+  const rar = (((lang.rarity || {})[key]) || {})[currentLang] || key;
+  const adv = key === "高级";
+  const bgStyle = adv ? "" : ' style="background:' + dEsc(rc.bg) + '"';
+  const tp = DSKILL_TYPE[sk.type] || DSKILL_TYPE.active;
+  let stats = '<div class="stat-item">' + dEsc(dPick(sk.effect) || "") + "</div>";
+  const lvls = sk.levels || {};
+  Object.keys(lvls).forEach(function(k){
+    stats += '<div class="stat-item">Lv.' + dEsc(k) + ": " + dEsc(dPick(lvls[k]) || "") + "</div>";
+  });
+  const inner = '<div class="equip-name" style="color:' + dEsc(rc.color) + '">' + dEsc(nm) + "</div>"
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col">'
+    +     '<div class="hex-icon"><img src="drop_icons/' + dEsc(en) + '.png" alt=""'
+    +       ' onerror="this.style.display=\'none\'"></div>'
+    +     '<div class="item-level">Lv.' + dEsc(String(lv)) + "</div>"
+    +   "</div>"
+    +   '<div class="equip-text-col">'
+    +     '<div class="tag-rarity' + (adv ? " adv" : "") + '"' + bgStyle + '>' + dEsc(rar) + "</div>"
+    +     '<div class="tag-job">' + dJobHtml(sk.class) + "</div>"
+    +     '<div class="tag-rarity" style="background:#D8E2EE;color:#3D4E68">' + dEsc(tp[currentLang] || tp.cn) + "</div>"
+    +   "</div>"
+    + "</div>"
+    + '<div class="equip-stats">' + stats + "</div>";
+  return dShell("tip-equip", inner, "skills.html?skill=" + encodeURIComponent(sk.cn || sk.__key || en));
+}
+/* 轻量卡（材料 / 缺明细的兜底）：图标 + 名称 + 目标图鉴名 */
+function dLightCard(en, nm, navKey){
+  const sub = dNavLabel(navKey);
+  return dShell("", '<div class="tip-light">'
+    + '<div class="tl-icon"><img src="drop_icons/' + dEsc(en) + '.png" alt=""'
+    +   ' onerror="this.style.display=\'none\'"></div>'
+    + '<div class="tl-body"><div class="tl-name">' + dEsc(nm) + "</div>"
+    + (sub ? '<div class="tl-desc">' + dEsc(sub) + "</div>" : "")
+    + "</div></div>", "items.html?item=" + encodeURIComponent(itemJumpName(en, nm)));
+}
+/* lang.json 的 ui 文案（可带 {占位符}），按当前语言取 */
+function dUI(key, vars){
+  const o = (lang.ui || {})[key];
+  let s = o ? (o[currentLang] || o.cn || o.en || "") : "";
+  if(vars) Object.keys(vars).forEach(function(k){ s = s.split("{" + k + "}").join(vars[k]); });
+  return s;
+}
+/* 符文卡（完整卡）：正文 = 物品图鉴符文卡片那张「属性框」文案
+   「{来源地点} x3 兑换：<技能>」；宝箱符文前置「由 <宝箱> 随机开出；」。全部随语言切换。 */
+function dRuneCard(en, nm){
+  const info = DRUNE_EXCHANGE[en] || null;
+  const rc = (lang.rarityColor || {})["一般"] || {color:"#4D5A75", bg:"#474F6E"};
+  let note = "";
+  if(info){
+    const where = ((lang.itemsLang || {}).runeWhere || {})[info.where];
+    const whereTxt = where ? dPick(where) : info.where;
+    const skillNm = tr(lang.dropMap, info.book);
+    const skillLink = '<span class="item-link" data-url="skills.html?skill='
+      + encodeURIComponent(skillNm) + '" onclick="dTipJump(event,this)">' + dEsc(skillNm) + "</span>";
+    const exchange = dEsc(dUI("runeExchange", { where: whereTxt }));
+    if(info.fromBox){
+      const boxNm = tr(lang.dropMap, DRUNE_BOX);
+      const boxLink = '<span class="item-link" data-url="items.html?item='
+        + encodeURIComponent(boxNm) + '" onclick="dTipJump(event,this)">' + dEsc(boxNm) + "</span>";
+      note = dUI("fromBox", { box: boxLink }) + exchange + skillLink;
+    } else {
+      note = exchange + skillLink;
     }
+  }
+  const body = note ? '<div class="item-note">' + note + "</div>" : '<div class="item-note">—</div>';
+  const inner = '<div class="equip-name" style="color:' + dEsc(rc.color) + '">' + dEsc(nm) + "</div>"
+    + '<div class="equip-info-row">'
+    +   '<div class="equip-icon-col">'
+    +     '<div class="hex-icon"><img src="drop_icons/' + dEsc(en) + '.png" alt=""'
+    +       ' onerror="this.style.display=\'none\'"></div>'
+    +   "</div>"
+    +   '<div class="equip-text-col">'
+    +     '<div class="tag-rarity" style="background:' + dEsc(rc.bg) + '">' + dEsc((((lang.rarity || {})["一般"]) || {})[currentLang] || "一般") + "</div>"
+    +     '<div class="tag-job"></div>'
+    +   "</div>"
+    + "</div>"
+    + body;
+  return dShell("tip-equip", inner, "items.html?item=" + encodeURIComponent(itemJumpName(en, nm)));
+}
+/* 单条掉落 -> 预览图内容（按类型给卡；明细没到位前先给轻量卡，加载完自动补全） */
+function dTipHtml(en, qty){
+  const nm = tr(lang.dropMap, en);
+  const f = dropFind(en, nm);
+  /* 明细里查不到的（极少数登记为装备/技能但图鉴里没有的条目）降级成物品卡，副标题与跳转都写「物品图鉴」，避免跳空 */
+  if(f.cls === "equip") return f.hit ? dEquipCard(f.hit, nm) : dLightCard(en, nm, "item");
+  if(f.cls === "skill") return f.hit ? dSkillCard(f.hit, nm, en) : dLightCard(en, nm, "item");
+  if(f.cls === "rune")  return dRuneCard(en, nm);
+  return dLightCard(en, nm, "item");
+}
+/* ---- 一行掉落：图标 + 名称（+数量），data 上挂英文原名给浮层用 ---- */
+function dropRowHtml(raw){
+  const s = String(raw);
+  const qm = s.match(/^(.*?)\s+x(\d+)$/i);
+  const en = (qm ? qm[1] : s).trim();
+  const qty = qm ? " ×" + qm[2] : "";
+  const nm = tr(lang.dropMap, en);
+  return '<div class="drop-row" data-drop="' + dEsc(en) + '" data-qty="' + dEsc(qm ? qm[2] : "") + '">'
+    + '<img loading="lazy" src="drop_icons/' + dEsc(en) + '.png" alt="" onerror="this.style.display=\'none\'">'
+    + '<span class="drop-link">' + dEsc(nm + qty) + '</span></div>';
+}
 
-    /* desc 支持四语对象（如库伊的说明）与纯字符串两种形态 */
-    let descHtml = (m.desc && typeof m.desc === "object")
-      ? (m.desc[currentLang] || m.desc.cn || m.desc.en || '')
-      : (m.desc || '')
-    if(isBossType && descHtml) {
-      const parts = descHtml.split(',').filter(p=>p.trim())
-      if(parts.length > 1) {
-        descHtml = `<div>${parts[0].trim()}</div><div>${parts.slice(1).join(',').trim()}</div>`
-      } else {
-        descHtml = `<div>${descHtml}</div><div></div>`
-      }
+/* ---- 浮层：显示 / 定位 / 隐藏（与图鉴任务同逻辑） ---- */
+let dtipNode = null, dtipInner = null, dtipTimer = null, dtipHide = null,
+    dtipKey = null, dtipBox = null, dtipLast = null, dtipSel = null;
+function dEnsureTip(){
+  if(dtipNode) return dtipNode;
+  dtipNode = document.createElement("div");
+  dtipNode.className = "mat-tip";
+  dtipInner = document.createElement("div");
+  if(dtipNode.appendChild) dtipNode.appendChild(dtipInner);
+  (document.body || document.documentElement).appendChild(dtipNode);
+  return dtipNode;
+}
+function dPlaceTip(box){
+  const r = (box && box.getBoundingClientRect) ? box.getBoundingClientRect() : null;
+  if(!r || !dtipNode) return;
+  const vw = window.innerWidth || 1024, vh = window.innerHeight || 800;
+  const pw = dtipNode.offsetWidth || 200, ph = dtipNode.offsetHeight || 120;
+  let left = r.right + 8;                                  /* 优先右侧 */
+  if(left + pw > vw - 4) left = r.left - pw - 8;           /* 右边越界 -> 左侧 */
+  if(left < 4) left = Math.max(4, Math.min(r.left, vw - pw - 4));
+  let top = r.top + r.height / 2 - ph / 2;                 /* 垂直居中并夹在视口内 */
+  const maxTop = vh - ph - 4;
+  if(top > maxTop) top = Math.max(4, maxTop);
+  if(top < 4) top = 4;
+  dtipNode.style.left = left + "px";
+  dtipNode.style.top = top + "px";
+}
+function dShowTip(box){
+  if(!box) return;
+  const en = box.getAttribute ? box.getAttribute("data-drop") : "";
+  if(!en) return;
+  const qty = box.getAttribute ? box.getAttribute("data-qty") : "";
+  const nd = dEnsureTip();
+  const ck = String(en) + "|" + String(qty || "");
+  if(dtipInner && dtipKey !== ck){
+    dtipInner.innerHTML = dTipHtml(en, qty);
+    dtipKey = ck;
+  }
+  if(!dEquipIdx && !dSkillIdx) dLoadExtras();   /* 明细还没就位：先画轻量卡，到货后自动补全 */
+  nd.classList.add("show");
+  dtipBox = box; dtipLast = box;
+  dPlaceTip(box);
+}
+/* 装备/技能明细到位后，若浮层还开着就重画一次（补上完整卡片） */
+function dRefreshTip(){
+  if(!dtipInner || !dtipBox) return;
+  if(!dtipNode || !dtipNode.classList.contains("show")) return;
+  const en = dtipBox.getAttribute ? dtipBox.getAttribute("data-drop") : "";
+  if(!en) return;
+  const qty = dtipBox.getAttribute ? dtipBox.getAttribute("data-qty") : "";
+  dtipInner.innerHTML = dTipHtml(en, qty);
+  dPlaceTip(dtipBox);
+}
+function dHideTip(clearSel){
+  if(dtipTimer){ clearTimeout(dtipTimer); dtipTimer = null; }
+  if(dtipHide){ clearTimeout(dtipHide); dtipHide = null; }
+  if(dtipNode) dtipNode.classList.remove("show");
+  dtipBox = null; dtipLast = null;
+  if(clearSel) dClearSel();
+}
+function dSetSel(box){
+  if(dtipSel && dtipSel.classList) dtipSel.classList.remove("sel");
+  dtipSel = box || null;
+  if(dtipSel && dtipSel.classList) dtipSel.classList.add("sel");
+}
+function dClearSel(){
+  if(dtipSel && dtipSel.classList) dtipSel.classList.remove("sel");
+  dtipSel = null;
+}
+function dTipJump(ev, el){
+  if(ev && ev.stopPropagation) ev.stopPropagation();
+  if(ev && ev.preventDefault) ev.preventDefault();
+  const g = el && el.getAttribute ? el.getAttribute.bind(el) : function(){ return ""; };
+  const u = g("data-url") || g("data-tipjump") || "";
+  if(u) location.href = u;
+}
+/* 切语言后重建（否则文案不跟随） */
+function dResetTip(){ dtipKey = null; dHideTip(true); }
+function initDropTip(){
+  if(!document.addEventListener) return;
+  /* 桌面：悬停延时显示；移到浮层上保持；移出后给一段宽限期 */
+  document.addEventListener("mouseover", function(ev){
+    const t = ev && ev.target;
+    if(!t || !t.closest) return;
+    const row = t.closest(".drop-row");
+    if(row){
+      if(dtipHide){ clearTimeout(dtipHide); dtipHide = null; }
+      if(row === dtipBox) return;
+      if(dtipTimer) clearTimeout(dtipTimer);
+      dtipTimer = setTimeout(function(){ dShowTip(row); }, DTIP_DELAY);
+      return;
     }
+    if(dtipNode && dtipNode.contains && dtipNode.contains(t)){
+      if(dtipHide){ clearTimeout(dtipHide); dtipHide = null; }
+      if(dtipTimer){ clearTimeout(dtipTimer); dtipTimer = null; }
+      if(!dtipNode.classList.contains("show") && dtipLast) dShowTip(dtipLast);
+      return;
+    }
+    if(dtipTimer){ clearTimeout(dtipTimer); dtipTimer = null; }
+    if(dtipBox && !dtipHide){
+      dtipHide = setTimeout(function(){ dHideTip(false); dtipHide = null; }, DTIP_HIDE);
+    }
+  }, false);
+  /* 手机：单击名称弹出并高亮；点浮层/条目以外 -> 消失并取消高亮 */
+  document.addEventListener("click", function(ev){
+    const t = ev && ev.target;
+    const row = (t && t.closest) ? t.closest(".drop-row") : null;
+    if(row){ dSetSel(row); dShowTip(row); return; }
+    if(dtipNode && t && dtipNode.contains && dtipNode.contains(t)) return;
+    dHideTip(true);
+  }, false);
+  if(window.addEventListener){
+    window.addEventListener("resize", function(){ dHideTip(false); }, false);
+    window.addEventListener("scroll", function(){ dHideTip(false); }, true);
+  }
+}
 
-    html += `
+// ========== 渲染 ==========
+/* ---------------------------------------------------------------
+   卡片 DOM 节点复用（方案 3）
+   原实现每次都 `box.innerHTML = html` 整体重建 —— 任意一次翻页/搜索/
+   切区域/切语言都会把全部卡片节点丢弃重建，导致：
+     · 选区（若正持有）被强制折叠；
+     · 焦点回退 body；
+     · 图片重新走一遍 load（闪烁）；
+     · 紧接着 fitMonsterNames() 改字号 → 强制重排。
+   改为：按怪物 key 复用节点，只更新变化的文本/属性；列表与语言都没变
+   时直接早退（一个节点都不动）。
+   ⚠ 缓存有上限（MC_CACHE_MAX），避免长时间翻页后 DOM 无限增长。
+   --------------------------------------------------------------- */
+var mcCardCache = Object.create(null);   // key -> 卡片 DOM 节点（离屏保留）
+var mcCacheMax = 320;
+var mcCacheKeys = [];                    // FIFO，用于超额淘汰
+var mcLastSig = '';                      // 上一次渲染的「列表+语言」签名
 
+function mcResetCache(){
+  mcCardCache = Object.create(null);
+  mcCacheKeys = [];
+  mcLastSig = '';
+}
+
+/* 渲染签名：同一批数据 + 同一语言 → 完全不必重建 */
+function mcListSig(list){
+  var parts = [];
+  for(var i = 0; i < list.length; i++){ parts.push(list[i] ? list[i].name : ''); }
+  return parts.join('|') + '#' + currentLang;
+}
+
+/* 新建一张卡片节点（只在缓存未命中时执行） */
+function mcBuildCard(m){
+  var name = tr(lang.nameMap, m.name);
+  var zone = tr(lang.zoneMap, m.zone);
+  var dropHtml = (drops[m.name]?.掉落物||[]).map(function(raw){ return dropRowHtml(raw); }).join('');
+  var reviveText = "";
+  if(m.revive?.trim()){ reviveText = translateReviveTime(m.revive); }
+  var img = `monsters_images/${m.name}.png`;
+  var badge = "";
+  var isBossType = false;
+  var note = (m.notes||"").trim();
+  var cardClass = 'card';
+  if(note.includes("Raid Boss")) {
+    badge = `<div class="badge">Raid Boss</div>`;
+    isBossType = true; cardClass += " boss-type raid-boss";
+  } else if(note.includes("Mini-Boss")) {
+    badge = `<div class="badge">Mini Boss</div>`;
+    isBossType = true; cardClass += " boss-type";
+  } else if(note.includes("Boss")) {
+    badge = `<div class="badge">Boss</div>`;
+    isBossType = true; cardClass += " boss-type";
+  }
+  /* desc 支持四语对象（如库伊的说明）与纯字符串两种形态 */
+  var descHtml = (m.desc && typeof m.desc === "object")
+    ? (m.desc[currentLang] || m.desc.cn || m.desc.en || '')
+    : (m.desc || '');
+  if(isBossType && descHtml) {
+    var parts = descHtml.split(',').filter(function(p){ return p.trim(); });
+    if(parts.length > 1) {
+      descHtml = `<div>${parts[0].trim()}</div><div>${parts.slice(1).join(',').trim()}</div>`;
+    } else {
+      descHtml = `<div>${descHtml}</div><div></div>`;
+    }
+  }
+  var tmp = document.createElement('div');
+  tmp.innerHTML = `
     <div class="${cardClass}" data-monster="${m.name}" data-monster-cn="${lang.nameMap[m.name]?.cn || ''}" data-monster-ja="${lang.nameMap[m.name]?.ja || ''}">
       <div class="avatar">
         <img loading="lazy" src="${img}" onerror="this.src='monsters_images/default.png'">
@@ -1258,13 +1708,7 @@ if(m.revive?.trim()){
       <div class="info">
         <div class="name">${name}</div>
         <div class="level">Lv.${m.level||'?'}</div>
-        <div
-  class="zone"
-  onclick="openMonsterMap('${m.zone.replace(/'/g,"\\'")}')"
-  style="cursor:pointer"
->
-  ${zone}
-</div>
+        <div class="zone" onclick="openMonsterMap('${m.zone.replace(/'/g,"\\'")}')" style="cursor:pointer">${zone}</div>
       </div>
       <div class="revive">
         <div class="exp">EXP: ${m.exp||'?'}</div>
@@ -1273,15 +1717,116 @@ if(m.revive?.trim()){
       </div>
       <div class="drops">${dropHtml}</div>
       <div class="desc">${descHtml}</div>
-    </div>`
-  })
-  box.innerHTML = html
+    </div>`;
+  return tmp.firstElementChild;
+}
+
+/* 取节点：命中缓存直接复用（保留已有 DOM 身份、选区、已加载图片）
+   ⚠⚠ 缓存键必须带语言（`name@lang`）：卡片里的名称/区域/掉落物/说明都是
+   按 currentLang 渲染的，若只按 name 缓存，切语言时签名虽然变了、但这里会
+   命中旧语言的节点直接返回，导致「语言切了、卡片文案不跟随」。
+   带上语言后，切换语言等价于换一套 key → 未命中 → 用新语言重建。 */
+function mcCardNode(m){
+  var key = m.name + '@' + currentLang;
+  var n = mcCardCache[key];
+  if(n) return n;
+  n = mcBuildCard(m);
+  mcCardCache[key] = n;
+  mcCacheKeys.push(key);
+  if(mcCacheKeys.length > mcCacheMax){          /* FIFO 淘汰，防止无限增长 */
+    var old = mcCacheKeys.shift();
+    if(old !== key) delete mcCardCache[old];
+  }
+  return n;
+}
+
+/* 地图卡也做节点复用（只有一个，按签名决定是否重建 innerHTML） */
+var mcMapNode = null;
+
+function mcMapSignature(){
+  if(page !== 1 || currentGroup === "all" || !zoneGroups[currentGroup]) return '';
+  var md = zoneGroups[currentGroup];
+  return currentGroup + '#' + currentLang + '#' + (mapExpanded ? '1' : '0') + '#' + (md.maps || []).length;
+}
+
+function mcMapCard(){
+  var mapData = zoneGroups[currentGroup];
+  var mapName = currentLang === "cn"
+    ? currentGroup
+    : (mapData[currentLang] || mapData.en || currentGroup);
+
+  var mapsHtml = "";
+  if(mapExpanded){
+    (mapData.maps || []).forEach(function(m){
+      var mapSrc = (m.imgs && m.imgs[currentLang]) || "";
+      mapsHtml += `
+      <div class="single-map">
+        <div class="map-subtitle">${m[currentLang] || m.en}</div>
+        ${mapSrc ? `<img src="${mapSrc}" loading="lazy">` : ""}
+      </div>
+    `;
+    });
+  }
+
+  if(!mcMapNode){
+    mcMapNode = document.createElement('div');
+    mcMapNode.className = 'map-card';
+    mcMapNode.id = 'topMapCard';
+  }
+  mcMapNode.innerHTML = `
+  <div class="map-title" onclick="toggleMap()" style="cursor:pointer">
+  ${mapName}
+  ${mapExpanded ? "▲" : "▼"}
+</div>
+  ${mapsHtml}
+`;
+  return mcMapNode;
+}
+
+function render(){
+  const box = document.getElementById('cardBox')
+
+  updatePageInfo()
+  const perPage = getPerPage();
+  const list = filtered.slice((page-1)*perPage, page*perPage)
+
+  /* 渲染签名：列表 + 语言 + 地图卡状态。三者都没变 → 一个节点都不动，只补样式就返回。 */
+  const sig = mcListSig(list) + '|@' + mcMapSignature();
+  if(sig === mcLastSig){
+    colorizeDrops();
+    fitMonsterNames();
+    return;
+  }
+  mcLastSig = sig;
+
+  /* 用 DocumentFragment 组装：只有列表顺序/内容真的变了才会走到这里 */
+  const frag = document.createDocumentFragment();
+
+  // 当前地区地图
+  if(mcMapSignature()){
+    frag.appendChild(mcMapCard());
+  }
+
+  list.forEach(function(m){
+    if(!m) return;
+    frag.appendChild(mcCardNode(m));
+  });
+
+  /* replaceChildren 一次性换入：不产生 innerHTML 重解析，
+     已缓存的卡片节点保持 DOM 身份（图片、选区、游戏内滚动位置都不受影响）。 */
+  if(box.replaceChildren){
+    box.replaceChildren(frag);
+  }else{
+    while(box.firstChild) box.removeChild(box.firstChild);
+    box.appendChild(frag);
+  }
+
   colorizeDrops();
   fitMonsterNames();
 }
 
 function colorizeDrops() {
-  document.querySelectorAll('.drops div').forEach(el => {
+  document.querySelectorAll('.drops div.drop-row').forEach(el => {
     const txt = el.textContent.trim().replace(/\s+×\d+$/, "");
     el.style.color = '';
     el.style.fontWeight = 'normal';
@@ -1292,19 +1837,33 @@ function colorizeDrops() {
 }
 
 // 怪物名过长时自动缩小字号（最多两行），避免溢出到掉落表
+/* ⚠ 原实现是「读 scrollHeight → 写 fontSize」交替，每循环一次都会强制重排
+   （layout thrashing）。改为两阶段：先把每个名字按候选字号批量写入并读回
+   尺寸（写入后浏览器只在读取时做一次布局），再统一写最终字号。 */
 function fitMonsterNames(){
   const base = window.innerWidth >= 1024 ? 20 : 18;
-  document.querySelectorAll('.card .info .name').forEach(el=>{
+  const els = document.querySelectorAll('.card .info .name');
+  const finals = [];
+
+  for(let i = 0; i < els.length; i++){
+    const el = els[i];
     let size = base;
+    // 先按 base 设置一次，后续只测高度
     el.style.fontSize = size + 'px';
-    for(let i = 0; i < 8; i++){
+    for(let k = 0; k < 8; k++){
       const limit = size * 1.15 * 2 + 2;
       if(el.scrollHeight <= limit) break;
       size = Math.max(11, size - 1);
       el.style.fontSize = size + 'px';
       if(size <= 11) break;
     }
-  });
+    finals.push(size);
+  }
+
+  for(let i = 0; i < els.length; i++){
+    const px = finals[i] + 'px';
+    if(els[i].style.fontSize !== px) els[i].style.fontSize = px;
+  }
 }
 
 function scrollToMap(){
@@ -1519,6 +2078,13 @@ Promise.all([
  "Mitten","Thundersteel","Woopa Roopa's Staff",
  "进阶魔法师袍","疯狂獠牙","乌龟王冠","高级魔法师袍","连指手套","雷钢","族长法杖"
 ].forEach(n => equipNames.add(n));
+/* DROP_TIP_PATCH：技能书带等级数字（Ensnare 2 = 二级「圈套」），把「去掉等级」的基础名也登记进来，
+   这样同一技能的其它等级也能认出是技能 -> 弹出整张技能卡 */
+(() => {
+  const bases = [];
+  skillNames.forEach(n => { const b = String(n).replace(/\s*\d+$/, ""); if(b && b !== n) bases.push(b); });
+  bases.forEach(n => skillNames.add(n));
+})();
   buildGroupButtons();
   updateLangBtnText();
   updateSearchPlaceholder();
@@ -1532,9 +2098,11 @@ Promise.all([
 // 事件
 twomFillLangSelect(document.getElementById('langSelect'), currentLang, function(code){
   currentLang = TWOM_UI2CODE[code]; twomWriteLang(currentLang);
+  dResetTip();   /* DROP_TIP_PATCH：切语言后浮层按新语言重建 */
   buildGroupButtons(); updateSearchPlaceholder(); updatePrevNextBtn(); updateNavLang(); updateZonePanel(); render();
   fitMonsterNames();
 });
+initDropTip();   /* DROP_TIP_PATCH：掉落物小预览图浮层（事件委托，卡片重渲染后依然生效） */
 document.querySelector('.search-box').addEventListener('input', doSearch)
 document.getElementById('prevTop').onclick = goPrev
 document.getElementById('nextTop').onclick = goNext
@@ -1673,3 +2241,5 @@ window.addEventListener('resize', () => {
   refresh();
 })();
 </script>
+</body>
+</html>

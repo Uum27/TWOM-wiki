@@ -49,24 +49,26 @@
   "crystal": "",
   "effect": {
    "cn": "发动一击砍伤敌人，造成强大的伤害。目标对象数量越少，造成的伤害则越强。",
-   "en": ""
+   "en": "Slows down the enemy for a while by slashing the enemy's ankle.",
+   "ja": "相手の足首を攻撃して、しばらく動きを遅くする。",
+   "kr": "상대방의 발목을 베어 잠시동안 느려지게 만듦."
   },
   "levels": {
    "1": {
     "cn": "追加300%",
-    "en": "",
+    "en": "300% additional damage",
     "ja": "300% 追加",
     "kr": "300% 추가"
    },
    "2": {
     "cn": "追加350%",
-    "en": "",
+    "en": "350% additional damage",
     "ja": "350% 追加",
     "kr": "350% 추가"
    },
    "3": {
     "cn": "追加400%",
-    "en": "",
+    "en": "400% additional damage",
     "ja": "400% 追加",
     "kr": "400% 추가"
    }
@@ -934,18 +936,20 @@
   "crystal": "",
   "effect": {
    "cn": "治疗毒、麻痹及恐怖状态。",
-   "en": ""
+   "en": "Cures poison, stun, and fear state.",
+   "ja": "毒、スタン、恐怖状態を治療。",
+   "kr": "독, 스턴, 공포상태를 치료함."
   },
   "levels": {
    "1": {
     "cn": "冷却时间30秒",
-    "en": "",
+    "en": "30 seconds cooldown",
     "ja": "クールタイム 30秒",
     "kr": "재사용 대기시간 30초"
    },
    "2": {
     "cn": "冷却时间25秒",
-    "en": "",
+    "en": "25 seconds cooldown",
     "ja": "クールタイム 25秒",
     "kr": "재사용 대기시간 25초"
    }
@@ -1100,7 +1104,7 @@
    },
    "2": {
     "cn": "持续6秒",
-    "en": "",
+    "en": "Lasts for 6 seconds",
     "ja": "6秒間持続",
     "kr": "6초 지속"
    }

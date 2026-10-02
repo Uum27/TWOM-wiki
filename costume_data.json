@@ -362,7 +362,8 @@
   "obtain": "Event giveaways. Usually coupon codes.",
   "desc": "Cool time 5 seconds. You can obtain a Lv. 1-2 Gem.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Aegis's Chrome Armor",
@@ -7140,7 +7141,8 @@
   "obtain": "Premium Shop for 1,500 Platinum",
   "desc": "Cool time 5 seconds. You can obtain one obtain 1 Gem with a certain chance.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Hipster Sunglasses",
@@ -8178,7 +8180,8 @@
    },
    "effect": "sealingCrack",
    "value": 3
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Kanos' Aquamarine IV",
@@ -8203,7 +8206,8 @@
    },
    "effect": "sealingCrack",
    "value": 5
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Kanos' Obsidian I",
@@ -8228,7 +8232,8 @@
    },
    "effect": "sealingCrack",
    "value": 2
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Kanos' Sapphire III",
@@ -8253,7 +8258,8 @@
    },
    "effect": "sealingCrack",
    "value": 4
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Kingdom Knight Shoes",
@@ -12505,7 +12511,8 @@
    },
    "effect": "adrenaline",
    "value": 3
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Roberto's Aquamarine IV",
@@ -12530,7 +12537,8 @@
    },
    "effect": "adrenaline",
    "value": 5
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Roberto's Obsidian I",
@@ -12555,7 +12563,8 @@
    },
    "effect": "adrenaline",
    "value": 2
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Roberto's Sapphire III",
@@ -12580,7 +12589,8 @@
    },
    "effect": "adrenaline",
    "value": 4
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Rock 'n' Roll T-Shirt",
@@ -13185,7 +13195,8 @@
    },
    "effect": "fairyAgility",
    "value": 2
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Serain's Amethyst (old)",
@@ -13206,7 +13217,8 @@
   "desc": "Forged into Serain's Sapphire",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Serain's Aquamarine IV",
@@ -13231,7 +13243,8 @@
    },
    "effect": "fairyAgility",
    "value": 4
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Serain's Emerald",
@@ -13252,7 +13265,8 @@
   "desc": "An emerald once held by Serain. Forged into Roberto's Amethyst",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Serain's Gem Chest",
@@ -13267,7 +13281,8 @@
   "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
   "desc": "",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Serain's Gem Chest II",
@@ -13282,7 +13297,8 @@
   "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
   "desc": "Cool time 5 seconds. You can obtain one between Serain's Obsidian (old), Serain's Emerald, and Serain's Topaz with a fixed chance.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Serain's Obsidian I",
@@ -13307,7 +13323,8 @@
    },
    "effect": "fairyAgility",
    "value": 1
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Serain's Obsidian (old)",
@@ -13328,7 +13345,8 @@
   "desc": "An obsidian once held by Serain. Forged into Roberto's Obsidian",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Serain's Ruby",
@@ -13349,7 +13367,8 @@
   "desc": "A ruby once held by Serain. Forged into Serain's Amethyst",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Serain's Sapphire III",
@@ -13374,7 +13393,8 @@
    },
    "effect": "fairyAgility",
    "value": 3
-  }
+  },
+  "gemShape": 2
  },
  {
   "name": "Serain's Sapphire (old)",
@@ -13395,7 +13415,8 @@
   "desc": "A Sapphire once held by Serain. Forged into Serain's Obsidian",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Serain's Sapphire Box",
@@ -13410,7 +13431,8 @@
   "obtain": "Purchase from Premium Shop for 1000 Platinum",
   "desc": "A box.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Serain's Topaz",
@@ -13431,7 +13453,8 @@
   "desc": "Forged into Roberto's Sapphire",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 2
  },
  {
   "name": "Seraphic's Crest",
@@ -15203,7 +15226,8 @@
    },
    "effect": "goddessBlessing",
    "value": 9
-  }
+  },
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Amethyst (old)",
@@ -15221,7 +15245,8 @@
   "desc": "An amethyst once held by Syphnel. Forged into Syphnel's Obsidian III",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Aquamarine IV",
@@ -15246,7 +15271,8 @@
    },
    "effect": "goddessBlessing",
    "value": 11
-  }
+  },
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Emerald",
@@ -15264,7 +15290,8 @@
   "desc": "An emerald once held by Syphnel. Forged into Syphnel's Obsidian II",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Gem Chest",
@@ -15279,7 +15306,8 @@
   "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
   "desc": "",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Obsidian",
@@ -15297,7 +15325,8 @@
   "desc": "An obsidian gem once held by Syphnel. Forged into Syphnel's Sapphire",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Obsidian I",
@@ -15322,7 +15351,8 @@
    },
    "effect": "goddessBlessing",
    "value": 8
-  }
+  },
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Ruby",
@@ -15340,7 +15370,8 @@
   "desc": "A ruby once held by Syphnel. Forged into Syphnel's Obsidian I",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Sapphire III",
@@ -15365,7 +15396,8 @@
    },
    "effect": "goddessBlessing",
    "value": 10
-  }
+  },
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Sapphire (old)",
@@ -15386,7 +15418,8 @@
   "desc": "A sapphire once held by Syphnel. Forged into Syphnel's Obsidian IV",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Sapphire Box",
@@ -15401,7 +15434,8 @@
   "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
   "desc": "A box.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Syphnel's Topaz",
@@ -15419,7 +15453,8 @@
   "desc": "A beautiful topaz once held by Syphnel. Forged into Syphnel's Amethyst",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Tangerine Sailor School Uniform",
@@ -17124,7 +17159,8 @@
    },
    "effect": "heroStrength",
    "value": 4
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Aquamarine IV",
@@ -17149,7 +17185,8 @@
    },
    "effect": "heroStrength",
    "value": 6
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Ear",
@@ -17186,7 +17223,8 @@
   "desc": "Forged into Wingfril's Sapphire",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Gem Chest",
@@ -17201,7 +17239,8 @@
   "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
   "desc": "Cool time 5 seconds. You can obtain one between Wingfril's Obsidian (old), Wingfril's Ruby, Wingfril's Emerald and with a fixed chance.",
   "boxes": [],
-  "hidden": true
+  "hidden": true,
+  "gemShape": 1
  },
  {
   "name": "Wingfril's Obsidian I",
@@ -17226,7 +17265,8 @@
    },
    "effect": "heroStrength",
    "value": 3
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Obsidian (old)",
@@ -17244,7 +17284,8 @@
   "desc": "An obsidian found in the island of Wingfril.",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Ruby",
@@ -17262,7 +17303,8 @@
   "desc": "A Ruby found in the island of Wingfril. Forged into Wingfril's Amethyst",
   "boxes": [],
   "tag": "otherSource",
-  "hidden": true
+  "hidden": true,
+  "gemShape": 3
  },
  {
   "name": "Wingfril's Sapphire III",
@@ -17287,7 +17329,8 @@
    },
    "effect": "heroStrength",
    "value": 5
-  }
+  },
+  "gemShape": 3
  },
  {
   "name": "Wings of Splendor",

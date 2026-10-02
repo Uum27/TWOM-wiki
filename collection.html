@@ -541,7 +541,8 @@ function buildTipHtml(iid, qty){
       name: tipNameOf(it, null) || nm, icon: cos.icon || itemIcon(iid), level: lvC,
       rarity: tipRarityKey(lvC, cos.rarity),
       stats: [[tipLabel("level"), lvC], [tipLabel("hp"), cos.hp], [tipLabel("part"), catTxt]],
-      jumpUrl: "costume.html?costume=" + encodeURIComponent(cos.name)
+      /* 宝石（cos.cat==='gem'）已经独立成「宝石图鉴」标签页，跳过去才找得到；其余时装仍跳时装图鉴 */
+      jumpUrl: (cos.cat === "gem" ? "gem.html?gem=" : "costume.html?costume=") + encodeURIComponent(cos.name)
     });
   }
   /* ---- 材料/物品类：轻量浮层（名称 + 描述，没有描述就只有名称和图标） ---- */
@@ -957,7 +958,7 @@ init();
     cn:{first:"首页",last:"尾页",tip:"点击可输入页码"},
     en:{first:"First",last:"Last",tip:"Click to enter a page number"},
     ja:{first:"最初へ",last:"最後へ",tip:"クリックしてページ番号を入力"},
-    ko:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
+    kr:{first:"처음",last:"마지막",tip:"클릭하여 페이지 번호 입력"}
   };
   function langOf(){ return (typeof currentLang !== "undefined" && currentLang) ? currentLang : "cn"; }
   function lbl(){ return JUMP_LABEL[langOf()] || JUMP_LABEL.cn; }

@@ -1,0 +1,956 @@
+[
+  {
+    "name": "Adventurer Gem Box",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Adventurer Gem Box.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "Event giveaways. Usually coupon codes.",
+    "desc": "Cool time 5 seconds. You can obtain a Lv. 1-2 Gem.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Hero Gem Box",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Hero Gem Box.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "Premium Shop for 1,500 Platinum",
+    "desc": "Cool time 5 seconds. You can obtain one obtain 1 Gem with a certain chance.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Kanos' Amethyst II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Kanos' Amethyst II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 2,
+        "dex": 2,
+        "int": 2,
+        "hp": 20
+      },
+      "effect": "sealingCrack",
+      "value": 3
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Kanos' Aquamarine IV",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Kanos' Aquamarine IV.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 4,
+        "dex": 4,
+        "int": 4,
+        "hp": 40
+      },
+      "effect": "sealingCrack",
+      "value": 5
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Kanos' Obsidian I",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Kanos' Obsidian I.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "hp": 10
+      },
+      "effect": "sealingCrack",
+      "value": 2
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Kanos' Sapphire III",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Kanos' Sapphire III.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 3,
+        "dex": 3,
+        "int": 3,
+        "hp": 30
+      },
+      "effect": "sealingCrack",
+      "value": 4
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Roberto's Amethyst II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Roberto's Amethyst II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 2,
+        "dex": 2,
+        "int": 2,
+        "hp": 20
+      },
+      "effect": "adrenaline",
+      "value": 3
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Roberto's Aquamarine IV",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Roberto's Aquamarine IV.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 4,
+        "dex": 4,
+        "int": 4,
+        "hp": 40
+      },
+      "effect": "adrenaline",
+      "value": 5
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Roberto's Obsidian I",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Roberto's Obsidian I.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "hp": 10
+      },
+      "effect": "adrenaline",
+      "value": 2
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Roberto's Sapphire III",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Roberto's Sapphire III.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 3,
+        "dex": 3,
+        "int": 3,
+        "hp": 30
+      },
+      "effect": "adrenaline",
+      "value": 4
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Amethyst II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Amethyst II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 2,
+        "dex": 2,
+        "int": 2,
+        "hp": 20
+      },
+      "effect": "fairyAgility",
+      "value": 2
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Amethyst (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Amethyst (old).png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "Forged into Serain's Sapphire",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Aquamarine IV",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Aquamarine IV.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 4,
+        "dex": 4,
+        "int": 4,
+        "hp": 40
+      },
+      "effect": "fairyAgility",
+      "value": 4
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Emerald",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Emerald.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "An emerald once held by Serain. Forged into Roberto's Amethyst",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Gem Chest",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Gem Chest.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
+    "desc": "",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Serain's Gem Chest II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Gem Chest II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
+    "desc": "Cool time 5 seconds. You can obtain one between Serain's Obsidian (old), Serain's Emerald, and Serain's Topaz with a fixed chance.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Serain's Obsidian I",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Obsidian I.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "hp": 10
+      },
+      "effect": "fairyAgility",
+      "value": 1
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Obsidian (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Obsidian (old).png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "An obsidian once held by Serain. Forged into Roberto's Obsidian",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Ruby",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Ruby.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A ruby once held by Serain. Forged into Serain's Amethyst",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Sapphire III",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Sapphire III.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 3,
+        "dex": 3,
+        "int": 3,
+        "hp": 30
+      },
+      "effect": "fairyAgility",
+      "value": 3
+    },
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Sapphire (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Sapphire (old).png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A Sapphire once held by Serain. Forged into Serain's Obsidian",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Serain's Sapphire Box",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Sapphire Box.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "Purchase from Premium Shop for 1000 Platinum",
+    "desc": "A box.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Serain's Topaz",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Serain's Topaz.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "Forged into Roberto's Sapphire",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 2
+  },
+  {
+    "name": "Syphnel's Amethyst II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Amethyst II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 2,
+        "dex": 2,
+        "int": 2,
+        "hp": 20
+      },
+      "effect": "goddessBlessing",
+      "value": 9
+    },
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Amethyst (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Amethyst (old).png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "An amethyst once held by Syphnel. Forged into Syphnel's Obsidian III",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Aquamarine IV",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Aquamarine IV.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 4,
+        "dex": 4,
+        "int": 4,
+        "hp": 40
+      },
+      "effect": "goddessBlessing",
+      "value": 11
+    },
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Emerald",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Emerald.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "An emerald once held by Syphnel. Forged into Syphnel's Obsidian II",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Gem Chest",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Gem Chest.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
+    "desc": "",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Obsidian",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Obsidian.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "An obsidian gem once held by Syphnel. Forged into Syphnel's Sapphire",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Obsidian I",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Obsidian I.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "hp": 10
+      },
+      "effect": "goddessBlessing",
+      "value": 8
+    },
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Ruby",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Ruby.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A ruby once held by Syphnel. Forged into Syphnel's Obsidian I",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Sapphire III",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Sapphire III.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 3,
+        "dex": 3,
+        "int": 3,
+        "hp": 30
+      },
+      "effect": "goddessBlessing",
+      "value": 10
+    },
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Sapphire (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Sapphire (old).png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "magician",
+      "ranger",
+      "warrior",
+      "breaker"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A sapphire once held by Syphnel. Forged into Syphnel's Obsidian IV",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Sapphire Box",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Sapphire Box.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
+    "desc": "A box.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Syphnel's Topaz",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Syphnel's Topaz.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A beautiful topaz once held by Syphnel. Forged into Syphnel's Amethyst",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Wingfril's Amethyst II",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Amethyst II.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 2,
+        "dex": 2,
+        "int": 2,
+        "hp": 20
+      },
+      "effect": "heroStrength",
+      "value": 4
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Aquamarine IV",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Aquamarine IV.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 4,
+        "dex": 4,
+        "int": 4,
+        "hp": 40
+      },
+      "effect": "heroStrength",
+      "value": 6
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Emerald",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Emerald.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "Forged into Wingfril's Sapphire",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Gem Chest",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Gem Chest.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": null,
+    "classes": [],
+    "hp": null,
+    "obtain": "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop",
+    "desc": "Cool time 5 seconds. You can obtain one between Wingfril's Obsidian (old), Wingfril's Ruby, Wingfril's Emerald and with a fixed chance.",
+    "boxes": [],
+    "hidden": true,
+    "gemShape": 1
+  },
+  {
+    "name": "Wingfril's Obsidian I",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Obsidian I.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 1,
+        "dex": 1,
+        "int": 1,
+        "hp": 10
+      },
+      "effect": "heroStrength",
+      "value": 3
+    },
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Obsidian (old)",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Obsidian (old).png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box\nTrade Aerr Wingfril's Obsidian Ticket for a Wingfril's Obsidian with a stat of your choice",
+    "desc": "An obsidian found in the island of Wingfril.",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Ruby",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Ruby.png",
+    "hasIcon": true,
+    "rarity": "一般",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "hp": null,
+    "obtain": "Open Hero Gem Box",
+    "desc": "A Ruby found in the island of Wingfril. Forged into Wingfril's Amethyst",
+    "boxes": [],
+    "tag": "otherSource",
+    "hidden": true,
+    "gemShape": 3
+  },
+  {
+    "name": "Wingfril's Sapphire III",
+    "cat": "gem",
+    "catCode": "宝",
+    "icon": "costume_icons/Wingfril's Sapphire III.png",
+    "hasIcon": true,
+    "rarity": "高级",
+    "level": 8,
+    "classes": [
+      "all"
+    ],
+    "obtain": "Open Hero Gem Box",
+    "desc": "",
+    "boxes": [],
+    "gem": {
+      "attrs": {
+        "str": 3,
+        "dex": 3,
+        "int": 3,
+        "hp": 30
+      },
+      "effect": "heroStrength",
+      "value": 5
+    },
+    "gemShape": 3
+  }
+]

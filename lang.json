@@ -3,342 +3,410 @@
         "Kooii": {
             "cn": "库伊",
             "en": "Kooii",
-            "kr": "쿠이"
+            "kr": "쿠이",
+            "ja": "クイ"
         },
         "Bramble Donguri": {
             "cn": "树木圆圆",
             "en": "Bramble Donguri",
-            "kr": "나무동그리"
+            "kr": "나무동그리",
+            "ja": "木マルマル"
         },
         "Leaf Boar": {
             "cn": "树叶野猪",
             "en": "Leaf Boar",
-            "kr": "성난잎맷돼지"
+            "kr": "성난잎맷돼지",
+            "ja": "葉イノシシ"
         },
         "Angry Leaf Boar": {
             "cn": "凶猛树叶野猪",
             "en": "Angry Leaf Boar",
-            "kr": "나뭇잎맷돼지"
+            "kr": "나뭇잎맷돼지",
+            "ja": "怒葉イノシシ"
         },
         "Bulldozer Jr.": {
             "cn": "凶猛猪",
             "en": "Bulldozer Jr.",
-            "kr": "불도저주니어"
+            "kr": "불도저주니어",
+            "ja": "ブルドーザージュニア"
         },
         "BULLDOZER": {
             "cn": "凶猛猪少年",
             "en": "BULLDOZER",
-            "kr": "불도저"
+            "kr": "불도저",
+            "ja": "ブルドーザー"
         },
         "BULLDOZER BROTHER": {
             "cn": "凶猛猪大哥",
             "en": "BULLDOZER BROTHER",
-            "kr": "불도저형님"
+            "kr": "불도저형님",
+            "ja": "ブルドーザー兄貴"
         },
         "Swamp Mushroom": {
             "cn": "湿地蘑菇",
             "en": "Swamp Mushroom",
-            "kr": "늪지버섯돌이"
+            "kr": "늪지버섯돌이",
+            "ja": "沼地ダケ"
         },
         "Flower Elemental": {
             "cn": "花精灵",
             "en": "Flower Elemental",
-            "kr": "꽃정령"
+            "kr": "꽃정령",
+            "ja": "花精霊"
         },
         "Swamp Boar": {
             "cn": "湿地野猪",
             "en": "Swamp Boar",
-            "kr": "늪지멧돼지"
+            "kr": "늪지멧돼지",
+            "ja": "沼地イノシシ"
         },
         "Swamp Spider": {
             "cn": "黑蜘蛛",
             "en": "Swamp Spider",
-            "kr": "검은거미"
+            "kr": "검은거미",
+            "ja": "黒いクモ"
         },
         "Poisonous Spider": {
             "cn": "剧毒蜘蛛",
             "en": "Poisonous Spider",
-            "kr": "맹독거미"
+            "kr": "맹독거미",
+            "ja": "猛毒クモ"
         },
         "White Spider": {
             "cn": "剑斗士蜘蛛",
             "en": "White Spider",
-            "kr": "검투사거미"
+            "kr": "검투사거미",
+            "ja": "剣闘士クモ"
         },
         "FUNGUS KING": {
             "cn": "巨无霸蘑菇",
             "en": "FUNGUS KING",
-            "kr": "대왕버섯돌이"
+            "kr": "대왕버섯돌이",
+            "ja": "大王ダケ"
         },
         "Cave Mushroom": {
             "cn": "洞窟蘑菇",
             "en": "Cave Mushroom",
-            "kr": "늪지버섯"
+            "kr": "늪지버섯",
+            "ja": "洞窟ダケ"
         },
         "Poisonous Mushroom": {
             "cn": "毒蘑菇",
             "en": "Poisonous Mushroom",
-            "kr": "독버섯돌이"
+            "kr": "독버섯돌이",
+            "ja": "毒ダケ"
         },
         "Mushroom Flower": {
             "cn": "湿地花精灵",
             "en": "Mushroom Flower",
-            "kr": "슾지꽃정령"
+            "kr": "슾지꽃정령",
+            "ja": "沼地花精霊"
         },
         "Cave Bat": {
             "cn": "洞窟蝙蝠",
             "en": "Cave Bat",
-            "kr": "동굴박쥐"
+            "kr": "동굴박쥐",
+            "ja": "洞窟コウモリ"
         },
         "White Bat": {
             "cn": "白金蝙蝠",
             "en": "White Bat",
-            "kr": "백금박쥐"
+            "kr": "백금박쥐",
+            "ja": "白金コウモリ"
         },
         "POISON FUNGUS KING": {
             "cn": "巨无霸毒蘑菇",
             "en": "POISON FUNGUS KING",
-            "kr": "독왕버섯돌이"
+            "kr": "독왕버섯돌이",
+            "ja": "毒王ダケ"
         },
         "Bottle": {
             "cn": "瓶子",
             "en": "Bottle",
-            "kr": "유리병"
+            "kr": "유리병",
+            "ja": "ガラス瓶"
         },
         "Red Crab": {
             "cn": "红螃蟹",
             "en": "Red Crab",
-            "kr": "레드크랩"
+            "kr": "레드크랩",
+            "ja": "レッドクラップ"
         },
         "Sandman": {
             "cn": "梦魔",
             "en": "Sandman",
-            "kr": "샌드맨"
+            "kr": "샌드맨",
+            "ja": "サンドマン"
         },
         "Woopa": {
             "cn": "乌波乌波",
             "en": "Woopa",
-            "kr": "우파우파"
+            "kr": "우파우파",
+            "ja": "ウパウパ"
         },
         "Roopa": {
             "cn": "乌波鲁波",
             "en": "Roopa",
-            "kr": "우파루파"
+            "kr": "우파루파",
+            "ja": "ウパルパ"
         },
         "Mutant Woopa": {
             "cn": "变种乌波",
             "en": "Mutant Woopa",
-            "kr": "변종우파"
+            "kr": "변종우파",
+            "ja": "変異ウパ"
         },
         "CHIEF WOOPAROOPA": {
             "cn": "乌波鲁波族长",
             "en": "CHIEF WOOPAROOPA",
-            "kr": "우파루파족장"
+            "kr": "우파루파족장",
+            "ja": "ウパルパ族長"
         },
         "TURTLE Z": {
             "cn": "狂睡乌龟",
             "en": "TURTLE Z",
-            "kr": "안졸려도자라"
+            "kr": "안졸려도자라",
+            "ja": "噛むなガメ"
         },
         "TURTLE ZZZ": {
             "cn": "爱困乌龟",
             "en": "TURTLE ZZZ",
-            "kr": "졸리면자라"
+            "kr": "졸리면자라",
+            "ja": "噛めガメ"
         },
         "Testing Woopa": {
             "cn": "实验用乌波",
             "en": "Testing Woopa",
-            "kr": "실험용우파"
+            "kr": "실험용우파",
+            "ja": "実験用ウパ"
         },
         "Marsh Donguri": {
             "cn": "湿地圆圆",
             "en": "Marsh Donguri",
-            "kr": "슾지동그리"
+            "kr": "슾지동그리",
+            "ja": "沼地マルマル"
         },
         "RECLUSE": {
             "cn": "隐士",
             "en": "RECLUSE",
-            "kr": "은둔자"
+            "kr": "은둔자",
+            "ja": "隠遁者"
         },
         "Underground Spider": {
             "cn": "地底蜘蛛",
             "en": "Underground Spider",
-            "kr": "지하거미"
+            "kr": "지하거미",
+            "ja": "地下クモ"
         },
         "Skeleton": {
             "cn": "骸骨",
             "en": "Skeleton",
-            "kr": "해골"
+            "kr": "해골",
+            "ja": "骸骨"
         },
         "MADGAR": {
             "cn": "梅德格",
             "en": "MADGAR",
-            "kr": "매드가"
+            "kr": "매드가",
+            "ja": "マドガ"
         },
         "Gray Skeleton": {
             "cn": "白色骸骨",
             "en": "Gray Skeleton",
-            "kr": "회색회골"
+            "kr": "회색회골",
+            "ja": "グレー骸骨"
         },
         "SMALL SKELETON": {
             "cn": "小骸骨",
             "en": "SMALL SKELETON",
-            "kr": "왜소한해골"
+            "kr": "왜소한해골",
+            "ja": "華奢な骸骨"
         },
         "BLACKSKULL": {
             "cn": "黑色骸骨",
             "en": "BLACKSKULL",
-            "kr": "블랙스컬"
+            "kr": "블랙스컬",
+            "ja": "ブラックスケル"
         },
         "Beholder": {
             "cn": "凝视者",
             "en": "Beholder",
-            "kr": "주시자"
+            "kr": "주시자",
+            "ja": "ウォッチャー"
         },
         "Drunken Kooii": {
             "cn": "无神的库伊",
             "en": "Drunken Kooii",
-            "kr": "눈풀린쿠이"
+            "kr": "눈풀린쿠이",
+            "ja": "へらへらクイ"
         },
         "Ghost": {
             "cn": "鬼怪",
             "en": "Ghost",
-            "kr": "고스트"
+            "kr": "고스트",
+            "ja": "ゴースト"
         },
         "Sleepy Kooii": {
             "cn": "想睡的库伊",
             "en": "Sleepy Kooii",
-            "kr": "졸린쿠이"
+            "kr": "졸린쿠이",
+            "ja": "おねむクイ"
         },
         "WHITESKULL": {
             "cn": "白色骷髅",
             "en": "WHITESKULL",
-            "kr": "화이트스컬"
+            "kr": "화이트스컬",
+            "ja": "ホワイトスケル"
         },
         "AWAKEN KOOII": {
             "cn": "睡醒的库伊",
             "en": "AWAKEN KOOII",
-            "kr": "잠깬쿠이"
+            "kr": "잠깬쿠이",
+            "ja": "お目覚めクイ"
         },
         "Snaketail Lizard": {
             "cn": "蛇尾蜥蜴",
             "en": "Snaketail Lizard",
-            "kr": "뱀꼬리도마뱀"
+            "kr": "뱀꼬리도마뱀",
+            "ja": "蛇の尻尾トカゲ"
         },
         "SNAKEZARD": {
             "cn": "蛇尾查德",
             "en": "SNAKEZARD",
-            "kr": "스네이크자드"
+            "kr": "스네이크자드",
+            "ja": "スネークザード"
         },
         "Dark Beholder": {
             "cn": "暗黑凝视者",
             "en": "Dark Beholder",
-            "kr": "어둠의주시자"
+            "kr": "어둠의주시자",
+            "ja": "闇のウォッチャー"
         },
         "Spector": {
             "cn": "鬼魂",
             "en": "Spector",
-            "kr": "스팩터"
+            "kr": "스팩터",
+            "ja": "スペクター"
         },
         "Imp": {
             "cn": "小恶魔",
             "en": "Imp",
-            "kr": "임프"
+            "kr": "임프",
+            "ja": "インプ"
         },
         "EEHEEHEE": {
             "cn": "嘻嘻",
             "en": "EEHEEHEE",
-            "kr": "이히히"
+            "kr": "이히히",
+            "ja": "イヒヒ"
         },
         "OOHEEHEEK": {
             "cn": "哈哈",
             "en": "OOHEEHEEK",
-            "kr": "우히힉"
+            "kr": "우히힉",
+            "ja": "ウヒヒ"
         },
         "OOHEHE": {
             "cn": "呵呵",
             "en": "OOHEHE",
-            "kr": "우헤헤"
+            "kr": "우헤헤",
+            "ja": "ウヘヘ"
         },
         "Bloody Flower": {
             "cn": "嗜血花",
             "en": "Bloody Flower",
-            "kr": "흡혈꽃"
+            "kr": "흡혈꽃",
+            "ja": "吸血花"
         },
         "Bloody Mind": {
             "cn": "血光执念灵",
             "en": "Bloody Mind",
-            "kr": "핏빛사념체"
+            "kr": "핏빛사념체",
+            "ja": "血色邪念体"
         },
         "Dan Dan": {
             "cn": "丹丹",
             "en": "Dan Dan",
-            "kr": "단단"
+            "kr": "단단",
+            "ja": "ユルユル"
         },
         "Ding Ding": {
             "cn": "叮叮",
             "en": "Ding Ding",
-            "kr": "딩딩"
+            "kr": "딩딩",
+            "ja": "ユレユレ"
         },
         "Dong Dong": {
             "cn": "东东",
             "en": "Dong Dong",
-            "kr": "동동"
+            "kr": "동동",
+            "ja": "フワフワ"
         },
         "Dung Dung": {
             "cn": "咚咚",
             "en": "Dung Dung",
-            "kr": "동동"
+            "kr": "동동",
+            "ja": "ユラユラ"
         },
         "GUARDIAN IMP": {
             "cn": "守护者小恶魔",
             "en": "GUARDIAN IMP",
-            "kr": "가디언임프"
+            "kr": "가디언임프",
+            "ja": "ガーディアンインプ"
         },
         "Mummy": {
             "cn": "木乃伊",
             "en": "Mummy",
-            "kr": "미이라"
+            "kr": "미이라",
+            "ja": "ミイラ"
         },
         "Elite Imp": {
             "cn": "精英小恶魔",
             "en": "Elite Imp",
-            "kr": "엘리트임프"
+            "kr": "엘리트임프",
+            "ja": "エリートインプ"
         },
         "Mummy Fighter": {
             "cn": "战斗木乃伊",
             "en": "Mummy Fighter",
-            "kr": "전투미이라"
+            "kr": "전투미이라",
+            "ja": "戦闘ミイラ"
         },
         "DEVILANG": {
             "cn": "戴弗龙",
             "en": "DEVILANG",
-            "kr": "데블랑"
+            "kr": "데블랑",
+            "ja": "デブラン"
         },
         "Broom": {
             "cn": "扫帚",
             "en": "Broom",
-            "kr": "빗자루"
+            "kr": "빗자루",
+            "ja": "ほうき"
         },
         "SWEEPER": {
             "cn": "清洁组艾干净",
             "en": "SWEEPER",
-            "kr": "청소부깔끄미"
+            "kr": "청소부깔끄미",
+            "ja": "清掃屋キレイ"
         },
         "Pirate Box": {
             "cn": "海盗宝箱",
             "en": "Pirate Box",
-            "kr": "미믹주니어"
+            "kr": "미믹주니어",
+            "ja": "海賊箱"
         },
         "Pirate Skeleton": {
             "cn": "海盗骸骨",
             "en": "Pirate Skeleton",
-            "kr": "해적해골"
+            "kr": "해적해골",
+            "ja": "海賊骸骨"
         },
         "Pirate Ghost": {
             "cn": "海盗幽灵",
             "en": "Pirate Ghost",
-            "kr": "해적유령"
+            "kr": "해적유령",
+            "ja": "海賊幽霊"
         },
         "Mimic": {
             "cn": "宝箱怪",
@@ -348,7 +416,8 @@
         "BOATSWAIN BRANKA": {
             "cn": "甲板长布朗卡",
             "en": "BOATSWAIN BRANKA",
-            "kr": "갑판장블랑카"
+            "kr": "갑판장블랑카",
+            "ja": "甲板長ブランカ"
         },
         "Continent Bulldozer": {
             "cn": "大陆凶猛猪",
@@ -617,7 +686,8 @@
         "Suuuk": {
             "cn": "嘶呃呃",
             "en": "Suuuk",
-            "kr": "스으윽"
+            "kr": "스으윽",
+            "ja": "ササッ"
         },
         "SHAAACK": {
             "cn": "沙沙沙",
@@ -898,7 +968,8 @@
         "Fear of Darkness": {
             "cn": "暗黑恐惧",
             "en": "Fear of Darkness",
-            "kr": "어둠의공포"
+            "kr": "어둠의공포",
+            "ja": "闇の恐怖"
         },
         "Gatekeeper": {
             "cn": "守门人",
@@ -915,7 +986,8 @@
         "Crystal": {
             "cn": "水晶",
             "en": "Crystal",
-            "kr": "윙정령"
+            "kr": "윙정령",
+            "ja": "水晶"
         },
         "Yeti": {
             "cn": "雪怪",
@@ -1292,7 +1364,8 @@
         "Shiny Crystal": {
             "cn": "闪亮水晶",
             "en": "Shiny Crystal",
-            "kr": "수정"
+            "kr": "수정",
+            "ja": "光り輝く水晶"
         },
         "Papillio": {
             "cn": "帕毕里欧",
@@ -1816,13 +1889,13 @@
             "ja": "フラウナ"
         },
         "OverBloom (Easy)": {
-            "cn": "极盛开华体(简单)",
+            "cn": "极盛开花体(简单)",
             "en": "OverBloom (Easy)",
             "kr": "오버블룸(Easy)",
             "ja": "オーバーブルーム"
         },
         "OverBloom (Hard)": {
-            "cn": "极盛开华体(困难)",
+            "cn": "极盛开花体(困难)",
             "en": "OverBloom (Hard)",
             "kr": "오버블룸(Hard)",
             "ja": "オーバーブルーム"
@@ -2379,8 +2452,8 @@
         "Armor Enchant Scroll (D Class)": {
             "cn": "盔甲卷轴(D级)",
             "en": "Armor Enchant Scroll (D Class)",
-            "kr": "갑옷마법서",
-            "ja": "鎧の魔法の書"
+            "kr": "갑옷 마법서(D 등급)",
+            "ja": "鎧の魔法の書(D級)"
         },
         "Mushroom Spore": {
             "cn": "蘑菇孢子",
@@ -2427,8 +2500,8 @@
         "Weapon Enchant Scroll (D Class)": {
             "cn": "武器卷轴(D级)",
             "en": "Weapon Enchant Scroll (D Class)",
-            "kr": "무기마법서",
-            "ja": "武器の魔法の書"
+            "kr": "무기 마법서(D 등급)",
+            "ja": "武器の魔法の書(D級)"
         },
         "Double Shot 3": {
             "cn": "双发射击3",
@@ -2709,14 +2782,14 @@
         "Armor Enchant Scroll (C Class)": {
             "cn": "盔甲卷轴(C级)",
             "en": "Armor Enchant Scroll (C Class)",
-            "kr": "갑옷마법서",
-            "ja": "鎧の魔法の書"
+            "kr": "갑옷 마법서(C 등급)",
+            "ja": "鎧の魔法の書(C級)"
         },
         "Weapon Enchant Scroll (C Class)": {
             "cn": "武器卷轴(C级)",
             "en": "Weapon Enchant Scroll (C Class)",
-            "kr": "무기마법서",
-            "ja": "武器の魔法の書"
+            "kr": "무기 마법서(C 등급)",
+            "ja": "武器の魔法の書(C級)"
         },
         "Dried Soil": {
             "cn": "干燥土壤",
@@ -2853,8 +2926,8 @@
         "Armor Enchant Scroll (A Class)": {
             "cn": "盔甲卷轴(A级)",
             "en": "Armor Enchant Scroll (A Class)",
-            "kr": "갑옷마법서",
-            "ja": "鎧の魔法の書"
+            "kr": "갑옷 마법서(A 등급)",
+            "ja": "鎧の魔法の書(A級)"
         },
         "Crown": {
             "cn": "乌龟王冠",
@@ -2876,8 +2949,8 @@
         "Weapon Enchant Scroll (A Class)": {
             "cn": "武器卷轴(A级)",
             "en": "Weapon Enchant Scroll (A Class)",
-            "kr": "무기마법서",
-            "ja": "武器の魔法の書"
+            "kr": "무기 마법서(A 등급)",
+            "ja": "武器の魔法の書(A級)"
         },
         "Adventurer's Bag": {
             "cn": "探险家包包",
@@ -3014,14 +3087,14 @@
         "Armor Enchant Scroll (B Class)": {
             "cn": "盔甲卷轴(B级)",
             "en": "Armor Enchant Scroll (B Class)",
-            "kr": "갑옷마법서",
-            "ja": "鎧の魔法の書"
+            "kr": "갑옷 마법서(B 등급)",
+            "ja": "鎧の魔法の書(B級)"
         },
         "Weapon Enchant Scroll (B Class)": {
             "cn": "武器卷轴(B级)",
             "en": "Weapon Enchant Scroll (B Class)",
-            "kr": "무기마법서",
-            "ja": "武器の魔法の書"
+            "kr": "무기 마법서(B 등급)",
+            "ja": "武器の魔法の書(B級)"
         },
         "Ancient Treasure": {
             "cn": "古代宝藏",
@@ -4504,14 +4577,14 @@
         "Armor Enchant Scroll (S Class)": {
             "cn": "盔甲卷轴(S级)",
             "en": "Armor Enchant Scroll (S Class)",
-            "kr": "갑옷마법서",
-            "ja": "鎧の魔法の書"
+            "kr": "갑옷 마법서(S 등급)",
+            "ja": "鎧の魔法の書(S級)"
         },
         "Weapon Enchant Scroll (S Class)": {
             "cn": "武器卷轴(S级)",
             "en": "Weapon Enchant Scroll (S Class)",
-            "kr": "무기마법서",
-            "ja": "武器の魔法の書"
+            "kr": "무기 마법서(S 등급)",
+            "ja": "武器の魔法の書(S級)"
         },
         "Mother Nature": {
             "cn": "大地之母项链",
@@ -5192,7 +5265,7 @@
             "ja": "クラウンダックの卵"
         },
         "Frozen Crystal": {
-            "cn": "冷却的结晶碎片",
+            "cn": "冷却的结晶",
             "en": "Frozen Crystal",
             "kr": "냉각된결정",
             "ja": "冷却された結晶"
@@ -6278,13 +6351,13 @@
             "cn": "武器卷轴(SS级)",
             "en": "Weapon Enchant Scroll (SS Class)",
             "kr": "무기 마법서(SS 등급)",
-            "ja": "武器の魔法の書"
+            "ja": "武器の魔法の書(SS級)"
         },
         "Armor Enchant Scroll (SS Class)": {
             "cn": "盔甲卷轴(SS级)",
             "en": "Armor Enchant Scroll (SS Class)",
             "kr": "갑옷 마법서(SS 등급)",
-            "ja": "鎧の魔法の書"
+            "ja": "鎧の魔法の書(SS級)"
         },
         "Coilram's Horn": {
             "cn": "科伊拉姆之角",
@@ -22296,6 +22369,12 @@
                     "en": "Req Lv:",
                     "ja": "必要Lv:",
                     "kr": "요구 Lv:"
+                },
+                "jumpTip": {
+                    "cn": "前往物品图鉴",
+                    "en": "Open in Item Wiki",
+                    "ja": "アイテム図鑑へ",
+                    "kr": "아이템 도감으로"
                 }
             }
         },
@@ -22329,6 +22408,146 @@
                 "en": "Breaker",
                 "ja": "武術家",
                 "kr": "무도가"
+            }
+        },
+        "srcNameMap": {
+            "木林村": {
+                "cn": "木林村",
+                "en": "Woody Weedy Village",
+                "ja": "ウディウィディ村",
+                "kr": "우디위디 마을"
+            },
+            "木木村": {
+                "cn": "木木村",
+                "en": "Woody Wordy Village",
+                "ja": "ウディウォディ村",
+                "kr": "우디워디 마을"
+            },
+            "阅读家拉尔": {
+                "cn": "阅读家拉尔",
+                "en": "Reader Lal",
+                "ja": "読書家ラル",
+                "kr": "독서가 랄"
+            },
+            "阅读家马尔": {
+                "cn": "阅读家马尔",
+                "en": "Reader Mal",
+                "ja": "読書家マル",
+                "kr": "독서가 말"
+            },
+            "阅读家哈尔": {
+                "cn": "阅读家哈尔",
+                "en": "Reader Hal",
+                "ja": "読書家ハル",
+                "kr": "독서가 할"
+            },
+            "羽妖岛海岸": {
+                "cn": "羽妖岛海岸",
+                "en": "Wingfril Island Beach",
+                "ja": "ウィングフリール島海岸",
+                "kr": "윙프릴섬의 해변"
+            },
+            "主城": {
+                "cn": "主城",
+                "en": "Main City",
+                "ja": "メインシティ",
+                "kr": "메인시티"
+            },
+            "石冠营地": {
+                "cn": "石冠营地",
+                "en": "Crown Rock Camp",
+                "ja": "クラウンロック駐屯地",
+                "kr": "크라운락 주둔지"
+            },
+            "神秘幻影研究家": {
+                "cn": "神秘幻影研究家",
+                "en": "Secret Phantom Researcher",
+                "ja": "神秘の幻影研究家",
+                "kr": "신비한 환영 연구가"
+            },
+            "庭院": {
+                "cn": "庭院",
+                "en": "Morphosis Garden",
+                "ja": "庭園",
+                "kr": "정원"
+            },
+            "戴尔菲": {
+                "cn": "戴尔菲",
+                "en": "Delphie",
+                "ja": "デルピ",
+                "kr": "델피"
+            },
+            "暴风战场管理员": {
+                "cn": "暴风战场管理员",
+                "en": "Battlefield Manager",
+                "ja": "暴風戦場管理人",
+                "kr": "폭풍 전장 관리인"
+            },
+            "名誉项链": {
+                "cn": "名誉项链",
+                "en": "Pendant of Honor",
+                "ja": "名誉のペンダント",
+                "kr": "명예의팬던트"
+            },
+            "咒术师东哥": {
+                "cn": "咒术师东哥",
+                "en": "Shaman Dongo",
+                "ja": "呪術師ドンゴ",
+                "kr": "주술사 동고"
+            },
+            "蘑菇林": {
+                "cn": "蘑菇林",
+                "en": "Mushroom Forest",
+                "ja": "キノコの森",
+                "kr": "버섯 숲"
+            },
+            "库林": {
+                "cn": "库林",
+                "en": "Kurin",
+                "ja": "クリン",
+                "kr": "쿠린"
+            },
+            "乌波水晶鳞片": {
+                "cn": "乌波水晶鳞片",
+                "en": "Woopa Crystal Scale",
+                "ja": "ウパの水晶鱗",
+                "kr": "우파수정비늘"
+            },
+            "百发百中": {
+                "cn": "百发百中",
+                "en": "Bull's-Eye",
+                "ja": "百発百中ショット",
+                "kr": "백발백중샷"
+            },
+            "空中悬浮秘籍": {
+                "cn": "空中悬浮秘籍",
+                "en": "About Levitation",
+                "ja": "空中浮揚について",
+                "kr": "공중부양에대해"
+            },
+            "双手活用武器秘籍": {
+                "cn": "双手活用武器秘籍",
+                "en": "The Way of Two Hands",
+                "ja": "両手活用武器の秘訣",
+                "kr": "양손활용무기비급"
+            },
+            "乌波鲁波图腾": {
+                "cn": "乌波鲁波图腾",
+                "en": "Woopa Roopa Totem",
+                "ja": "ウパルパトーテム",
+                "kr": "우파루파토템"
+            },
+            "乌波青铜铃铛": {
+                "cn": "乌波青铜铃铛",
+                "en": "Woopa Bronze Bell",
+                "ja": "ウパルパのブロンズ鈴",
+                "kr": "우파청동방울"
+            },
+            "誓约者 莫比": {
+                "cn": "誓约者 莫比",
+                "en": "Pledger Moby",
+                "ja": "誓約者モビ",
+                "kr": "서약자 모비"
             }
         }
     },
@@ -22814,6 +23033,84 @@
                 "en": "Gemstone",
                 "ja": "起源の石",
                 "kr": "기원석"
+            }
+        },
+        "catName": {
+            "all": {
+                "cn": "全部",
+                "en": "All",
+                "ja": "すべて",
+                "kr": "전체"
+            },
+            "1": {
+                "cn": "宝石1",
+                "en": "Gem 1",
+                "ja": "宝石1",
+                "kr": "보석1"
+            },
+            "2": {
+                "cn": "宝石2",
+                "en": "Gem 2",
+                "ja": "宝石2",
+                "kr": "보석2"
+            },
+            "3": {
+                "cn": "宝石3",
+                "en": "Gem 3",
+                "ja": "宝石3",
+                "kr": "보석3"
+            }
+        },
+        "shapeName": {
+            "1": {
+                "cn": "菱形",
+                "en": "Rhombus",
+                "ja": "菱形",
+                "kr": "마름모"
+            },
+            "2": {
+                "cn": "正方形",
+                "en": "Square",
+                "ja": "正方形",
+                "kr": "정사각형"
+            },
+            "3": {
+                "cn": "三角形",
+                "en": "Triangle",
+                "ja": "三角形",
+                "kr": "삼각형"
+            }
+        },
+        "obtainText": {
+            "Event giveaways. Usually coupon codes.": {
+                "cn": "活动赠品，通常是兑换码。",
+                "ja": "イベント配布。多くはクーポンコード。",
+                "kr": "이벤트 배포. 보통 쿠폰 코드."
+            },
+            "Open Hero Gem Box": {
+                "cn": "开启英雄的宝石宝箱",
+                "ja": "英雄の宝石箱 を開封",
+                "kr": "영웅의보석상자 개봉"
+            },
+            "Premium Shop for 1,500 Platinum": {
+                "cn": "商城售价 1,500 白金",
+                "ja": "ショップ価格 1,500 プラチナ",
+                "kr": "상점 가격 1,500 플래티넘"
+            },
+            "Purchase from Premium Shop for 1000 Platinum": {
+                "cn": "在商城花 1000 白金购买",
+                "ja": "ショップで 1000 プラチナ で購入",
+                "kr": "상점에서 1000 플래티넘(으)로 구매"
+            },
+            "THIS ITEM HAS BEEN RETIRED FROM THE Premium Shop": {
+                "cn": "该物品已从商城下架",
+                "ja": "このアイテムはショップでの販売を終了しました",
+                "kr": "이 아이템은 상점에서 판매가 종료되었습니다"
+            },
+            "Trade Aerr Wingfril's Obsidian Ticket for a Wingfril's Obsidian with a stat of your choice": {
+                "cn": "用 Aerr 的 Wingfril 黑曜石兑换券换取自选属性的 Wingfril 黑曜石",
+                "ja": "Aerr の Wingfril 黒曜石チケットを、好きなステータスの Wingfril 黒曜石と交換",
+                "kr": "Aerr의 Wingfril 흑요석 티켓을 원하는 능력치의 Wingfril 흑요석과 교환"
             }
         }
     },

@@ -567,7 +567,10 @@ let pvSelected = '';                    /* 卡片里当前显示的宠物（切�
 /* 预览图节点复用：切走再回来复用整块 DOM + 格子节点，图片不重新加载 */
 var pvLayoutNode = null, pvCellCache = {}, pvListSig = '';
 function pvCellNode(it){
-  var key = String(it.name);
+  /* ⚠⚠ 缓存键必须带 currentLang：格子的 title 烘了 dispName(it.name)（随语言变），
+     若只按 name 做键，切语言时会复用到旧语言的格子节点 → title 停留在旧语言。
+     （2026-10-02 修复，与 index.html 的 mcCardNode 同源问题） */
+  var key = String(it.name) + '@' + currentLang;
   var n = pvCellCache[key];
   if(!n){
     var tmp = document.createElement('div');
@@ -599,7 +602,9 @@ function pvFillGrid(){
   var host = document.getElementById('pvGrid');
   if(!host) return;
   var list = filtered, i = 0, seq = ++pvRenderSeq;
-  var sig = (pvListSig = list.map(function(x){ return x.name; }).join('|'));
+  /* ⚠ 签名同样要带语言：否则切语言时 data-sig 未变 → 整个网格被判定「列表没变」直接早退，
+     连格子都不重建（比命中旧节点更彻底的不跟随）。 */
+  var sig = (pvListSig = list.map(function(x){ return x.name; }).join('|') + '#' + currentLang);
   if(host.getAttribute && host.getAttribute('data-sig') === sig && host.children && host.children.length === list.length){
     pvSyncSelected(); return;                        /* 列表没变 -> 一个格子都不重建 */
   }

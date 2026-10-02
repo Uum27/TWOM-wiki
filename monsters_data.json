@@ -3807,7 +3807,7 @@
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Sprout (Easy)",
     "level": "?",
@@ -3819,7 +3819,7 @@
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Sprout (Hard)",
     "level": "?",
@@ -3831,7 +3831,7 @@
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "Flouna (Easy)",
     "level": "?",
@@ -3843,7 +3843,7 @@
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "Flouna (Hard)",
     "level": "?",
@@ -3855,7 +3855,7 @@
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Easy)",
+    "zone": "Sinar Plains (Easy)",
     "desc": "",
     "name": "OverBloom (Easy)",
     "level": "?",
@@ -3863,11 +3863,11 @@
     "image local": "monsters images/OverBloom (Easy).png",
     "hp": "9",
     "exp": "?",
-    "中文名": "极盛开华体(简单)",
+    "中文名": "极盛开花体(简单)",
     "revive": ""
   },
   {
-    "zone": "Bitum Wetland (Hard)",
+    "zone": "Sinar Plains (Hard)",
     "desc": "",
     "name": "OverBloom (Hard)",
     "level": "?",
@@ -3875,11 +3875,11 @@
     "image local": "monsters images/OverBloom (Hard).png",
     "hp": "9",
     "exp": "?",
-    "中文名": "极盛开华体(困难)",
+    "中文名": "极盛开花体(困难)",
     "revive": ""
   },
   {
-    "zone": "Sinar Plains (Easy)",
+    "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Revenant (Easy)",
     "level": "?",
@@ -3891,7 +3891,7 @@
     "revive": "100%亡灵气息"
   },
   {
-    "zone": "Sinar Plains (Hard)",
+    "zone": "Bitum Wetland (Hard)",
     "desc": "",
     "name": "Revenant (Hard)",
     "level": "?",
@@ -3903,7 +3903,7 @@
     "revive": "100%亡灵气息"
   },
   {
-    "zone": "Sinar Plains (Easy)",
+    "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Grudgebound Revenant (Easy)",
     "level": "?",
@@ -3915,7 +3915,7 @@
     "revive": "100%亡灵气息"
   },
   {
-    "zone": "Sinar Plains (Hard)",
+    "zone": "Bitum Wetland (Hard)",
     "desc": "",
     "name": "Grudgebound Revenant (Hard)",
     "level": "?",
@@ -3927,7 +3927,7 @@
     "revive": "100%亡灵气息"
   },
   {
-    "zone": "Sinar Plains (Easy)",
+    "zone": "Bitum Wetland (Easy)",
     "desc": "",
     "name": "Hate-Tainted Revenant (Easy)",
     "level": "?",
@@ -3939,7 +3939,7 @@
     "revive": "100%亡灵气息"
   },
   {
-    "zone": "Sinar Plains (Hard)",
+    "zone": "Bitum Wetland (Hard)",
     "desc": "",
     "name": "Hate-Tainted Revenant (Hard)",
     "level": "?",
