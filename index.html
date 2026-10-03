@@ -22,11 +22,19 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 .type-btn.active{ background:#718ACC;color:#fff;border-color:#718ACC }
 /* ===== NAV_CAT_SPLIT：顶部页面标签([data-nav]) 与页内分类按钮 视觉分层 —— 阶段1 顶栏 =====
    顶栏 = 大号药丸 tab（白底 + 蓝灰边 + 悬停黄），8 个一组、页面级切换。
-   字号仍 16px（与原版一致）；左右 padding 12px（不是 14px，见上方注释①）。
-   margin-bottom:6px：顶栏按钮是 body 裸按钮，换行后上下两行原本 vGap=0 紧贴（注释②）。
+   ⚠ min-width:88px（不是固定 width）：
+     · 中文 4 个标签文字都是 4 字(64px) -> 按钮被 min-width 兜到 88px，
+       420px 视口实测每行 4 个（与页面原版一致）；
+     · 英文/日文/韩文文字更长 -> 按钮按内容自动变宽，每行自然变 3 个，
+       且**文字完整显示**（无 max-width/overflow，不会被省略号截断）。
+     不用固定 width 是因为用户要求「中文 4 个、其它语言 3 个但要显示全文字」，
+     而页面切语言时不写 DOM 语言标记（html lang 恒为 zh-CN），纯 CSS 无法按语言分支。
+   margin-bottom:6px：顶栏按钮是 body 裸按钮，换行后上下两行原本 vGap=0 紧贴。
    ⚠ 必须放在 .type-btn.active 那一行之后：[data-nav](0,2,0) 与它同优先级、靠后者胜。 */
 .type-btn{cursor:pointer}
-.type-btn[data-nav]{padding:8px 12px;margin-bottom:6px;border-radius:999px;background:#fff;border-color:#94A6BE;color:#3D4E68;font-weight:500}
+.type-btn[data-nav]{min-width:88px;padding:8px 12px;margin-bottom:6px;box-sizing:border-box;
+border-radius:999px;background:#fff;border-color:#94A6BE;color:#3D4E68;font-weight:500;
+white-space:nowrap;text-align:center}
 .type-btn[data-nav]:hover{background:#FFE58A;border-color:#E8C33A;color:#22334A}
 .type-btn.active[data-nav]{background:#718ACC;border-color:#3774AE;color:#fff}
 /* ===== NAV_CAT_SPLIT：页内分类按钮（小号方角 chip）—— 阶段2 分类栏 =====
