@@ -20,6 +20,23 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
 }
 .page-btn{margin:0 4px}
 .type-btn.active{ background:#718ACC;color:#fff;border-color:#718ACC }
+/* ===== NAV_CAT_SPLIT：顶部页面标签([data-nav]) 与页内分类按钮 视觉分层 —— 阶段1 顶栏 =====
+   顶栏 = 大号药丸 tab（白底 + 蓝灰边 + 悬停黄），8 个一组、页面级切换。
+   字号仍 16px（与原版一致，手机端每行能放几个按钮不变）。
+   ⚠ 必须放在 .type-btn.active 那一行之后：[data-nav](0,2,0) 与它同优先级、靠后者胜。 */
+.type-btn{cursor:pointer}
+.type-btn[data-nav]{padding:8px 14px;border-radius:999px;background:#fff;border-color:#94A6BE;color:#3D4E68;font-weight:500}
+.type-btn[data-nav]:hover{background:#FFE58A;border-color:#E8C33A;color:#22334A}
+.type-btn.active[data-nav]{background:#718ACC;border-color:#3774AE;color:#fff}
+/* ===== NAV_CAT_SPLIT：页内分类按钮（小号方角 chip）—— 阶段2 分类栏 =====
+   :not([data-nav]) = 排除顶部标签；:not(.active) = **active 态一律沿用页面原有规则**
+     （含 pet 的 [data-cat=large] #3774AE / [data-cat=small] #518B38 / 排序按钮青绿 #4E9A8C），
+     本段只改「未选中」的几何与配色。
+   分类栏容器（body 直接子元素）补 margin-top，与顶栏拉开呼吸。 */
+.type-btn:not([data-nav]):not(.active):not([id="sortBtn"]){padding:5px 12px;font-size:14px;border-radius:6px;background:#fff;border-color:#C9D4E0;color:#4D5A75}
+.type-btn:not([data-nav]):not(.active):not([id="sortBtn"]):hover{background:#F7FAFD;border-color:#94A6BE}
+body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,body > #zonePanel{margin-top:10px}
+
 
 .zone-bar {
   display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px;
@@ -33,6 +50,18 @@ body{padding:8px;background:#f9f9f9;font-size:16px;}
   background:#408cdd;
   color:#fff;
   border-color:#007aff}
+/* ===== NAV_CAT_SPLIT：怪物图鉴区域按钮(.zone-btn) 并入 chip 体系 —— index.html 专用 =====
+   只补 cursor/hover 并把 active 色归一到全站主色；**不动它的 flex:1 1 auto 铺排**
+   （43 个按钮的折叠铺排是设计好的，改了会掉版）。
+   ⚠ 间距另设一条并加 !important：#zonePanel 内已有
+     `.zone-panel.open .zone-bar{display:flex;margin-top:6px;margin-bottom:0}`，
+     与本条特异性同为 (0,3,0)、且位置更靠后 -> 会把 10px 盖成 6px（实测过）。
+     这里只覆盖 margin-top，不动 display / margin-bottom。 */
+.zone-btn{cursor:pointer;transition:background .12s,border-color .12s}
+.zone-btn:hover{background:#F7FAFD;border-color:#94A6BE}
+.zone-btn.active{background:#718ACC;border-color:#3774AE;color:#fff}
+.zone-panel.open .zone-bar{margin-top:10px !important}
+
 
 /* 区域筛选折叠栏 */
 .zone-panel{margin-bottom:8px;text-align:center}

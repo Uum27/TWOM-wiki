@@ -276,18 +276,28 @@ body{background:#f0f2f5;padding:12px}
 /* ===== 排序方向按钮（正序/倒序）：浮在网格框内右上角 =====
    从分类栏挪进网格容器：位置语义更贴切（它只作用于预览图排序），也省掉分类栏一行横向空间。
 
-   ⚠⚠ 两个坑（都实测踩过）：
+   ⚠⚠ 三个坑（都实测踩过）：
    1) 不能挂进 .pv-grid —— 那是 display:grid，绝对定位的子元素**仍会被排进隐式网格流**，
       实测按钮被推到屏幕外（btnRect.left=-235px）。必须挂在 .pv-pane（普通块级流）下。
-   2) .pv-pane 是 flex 容器、可能比 .pv-grid 宽（grid 有 max-width 居中留白），
-      直接贴 pane 右边会偏到网格右侧之外（实测 rightGap=690px）。
-      → 让 pane 收缩成「包裹住 grid」的宽度：inline-block + vertical-align:top。 */
+   2) .pv-pane 可能比 .pv-grid 宽，直接贴 pane 右边会偏到网格右侧之外
+      （实测 rightGap=690px）。→ 让 pane 宽度**等于 grid**（下面 width:100% + grid 去掉居中）。
+   3) ⚠⚠ **不能用 display:inline-block 让 pane「收缩到内容」**（曾用，实测是 bug）：
+      inline-block 的宽度 = fit-content(内容最大宽度)，会**随格子总数变化**——
+      实测未筛选 925 格时 pane=549px，点分类后 168 格时 pane=461px，网格框肉眼可见变窄。
+      正确做法：pane 保持块级 + width:100%，把「限宽 760px + 水平居中」从 grid 移到 pane 上，
+      这样 pane 宽度恒定、grid 填满 pane，筛选前后视觉宽度一致。 */
 .pv-pane{position:relative}
-/* ⚠ 必须用 !important 压过页面本体 @media(min-width:768px) 里的 `.pv-pane{flex:0 0 auto}`：
-   那条规则在本体样式区、出现在本段之后，同优先级会覆盖 display:inline-block。
-   同时给 max-width:100% 防止 grid 较宽时 pane 被撑开。 */
-.pv-pane{display:inline-block !important;vertical-align:top;max-width:100%}
-.pv-pane .sort-btn{position:absolute;top:10px;right:10px;z-index:5;
+/* 宽度恒定 = 限宽 760 + 居中，从 grid 挪到 pane 承担（见上方坑 3）。
+   同时清掉本体 @media(min-width:768px) 里的 `flex:0 0 auto`（那条是 inline-block 时代的遗留，
+   现在 pane 靠 width:100% 定宽，flex 拉伸反而会盖掉 width）。 */
+.pv-pane{width:100%;max-width:760px;margin:0 auto;flex:0 1 auto !important}
+.pv-pane .pv-grid{max-width:none;margin-left:0;margin-right:0}
+/* 排序按钮距网格右边框的距离（2026-10-03 从 10px 调整为 36px：按钮贴死右上角显得挤，
+   左移后与第一行格子之间留出呼吸，视觉上更协调）。
+   抽成变量便于按断点微调；改这里两页同步生效。 */
+.pv-pane{--pv-sort-right:36px}
+@media(max-width:767px){ .pv-pane{--pv-sort-right:12px} }
+.pv-pane .sort-btn{position:absolute;top:10px;right:var(--pv-sort-right);z-index:5;
   display:inline-flex;align-items:center;gap:4px;
   /* ⚠⚠ 必须清掉本体 .type-btn.sort-btn 的两个 margin：
      `margin-left:auto` 会让绝对定位元素偏移（实测按钮跑到 left=-8），
@@ -304,7 +314,32 @@ body{background:#f0f2f5;padding:12px}
 .pv-pane .sort-btn svg{display:block}
 /* 网格顶部留出按钮的位置（按钮绝对定位，不占流） */
 .pv-pane .pv-grid{padding-top:36px}
-@media(max-width:767px){ .pv-pane{width:100%} .pv-pane .pv-grid{padding-top:36px} }
+/* 手机端：pane 满宽（不限 760），并给右上角的排序按钮让位 */
+@media(max-width:767px){ .pv-pane{width:100%;max-width:none} .pv-pane .pv-grid{padding-top:36px} }
+
+/* ===== 网格槽位恒定：滚动条占位必须「永远存在」=====
+   ⚠⚠ 这是「各分类格子尺寸不一致」的根因（2026-10-03 实测定位）：
+   .pv-grid 是 `overflow-y:auto`。条目多的分类（帽子 301 件）撑出**竖滚动条**，
+   滚动条吃掉 15px 内容宽度；条目少的（武器 80 件）装得下就**没有**滚动条。
+   同样是 8 等分，格子宽度就差 `15px ÷ 8 ≈ 1.87px`：
+
+     窗口 1024px -> 帽子/衣服/披风 cell=58.88（有滚动条）
+                  -> 武器/手套/饰品/鞋 cell=60.75（无滚动条）
+     窗口  900px -> 帽子/衣服/披风 cell=51.63
+                  -> 武器/手套/饰品/鞋 cell=53.50
+
+   宽屏（≥1280）时所有分类都溢出、都显示滚动条 -> 看起来一致，掩盖了这个问题。
+
+   解法：`scrollbar-gutter:stable` 让滚动条槽位**恒定占位**（哪怕当前不溢出也留出），
+   这样 clientWidth 与格子宽度只取决于容器宽度，与「该分类有多少条目」完全无关。
+   统一后各分类一律等于**溢出态**（= 帽子那一档）的尺寸，即用户指定的基准。
+   渐进增强：不支持该属性的浏览器退化为原行为，不报错。 */
+.pv-grid{scrollbar-gutter:stable}
+/* 旧浏览器兜底：overflow-y 从 auto 改 scroll，强制常驻滚动条槽位（宽度一致但会多一条轨道）。
+   仅在不支持 scrollbar-gutter 时启用 —— 用 @supports 隔离，避免双份占位。 */
+@supports not (scrollbar-gutter:stable){
+  .pv-grid{overflow-y:scroll}
+}
 
 /* ===== PC/平板（≥768px）预览图网格：单排 8 格 ===== */
 @media(min-width:768px){
@@ -314,6 +349,31 @@ body{background:#f0f2f5;padding:12px}
   .pv-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;padding:12px;
     max-width:760px;margin-left:auto;margin-right:auto}
 }
+/* ⚠ 单元格尺寸的「唯一真源」：固定 --pv-cell 宽高并让格子占满该尺寸。
+   1fr 等分在「容器宽度被滚动条/边框差值影响」时会产生 ±1~2px 的分类间差异；
+   改成固定尺寸后，格子宽高由这一个变量决定，任何分类、任何窗口宽度都完全相同，
+   也顺带彻底杜绝了「拉伸变形」（aspect-ratio 只在宽度确定时才等于 1:1）。
+   尺寸阶梯（桌面 82 / 窄桌面 56 / 手机 46）按各断点的容器宽推导，视觉密度接近原值。 */
+.pv-grid{--pv-cell:82px}
+@media(max-width:1279px){ .pv-grid{--pv-cell:72px} }
+@media(max-width:1023px){ .pv-grid{--pv-cell:58px} }
+@media(max-width:900px) { .pv-grid{--pv-cell:52px} }
+@media(max-width:820px) { .pv-grid{--pv-cell:44px} }
+@media(max-width:767px) {
+  /* 手机端原本是 6 格；格子固定 46px，容器不足时仍由 grid 自动换行，不溢出 */
+  .pv-grid{--pv-cell:46px}
+}
+/* 8（或 6）等宽固定尺寸；minmax(var(--pv-cell),var(--pv-cell)) 而不是 repeat(8,1fr)：
+   1fr 会把容器宽度均分，一旦容器宽度不是 8 的整数倍就会产生小数误差。 */
+@media(min-width:768px){
+  .pv-grid{grid-template-columns:repeat(8,minmax(var(--pv-cell),var(--pv-cell)))}
+}
+@media(max-width:767px){
+  .pv-grid{grid-template-columns:repeat(6,minmax(var(--pv-cell),var(--pv-cell)))}
+}
+/* 格子：宽高都锁定为 --pv-cell，图片按比例缩放 —— 1:1 恒成立，不会被拉伸 */
+.pv-grid .pv-cell{width:var(--pv-cell);height:var(--pv-cell);aspect-ratio:auto}
+.pv-grid .pv-cell img{width:82%;height:82%}
 
 </style>
 </head>
@@ -1745,9 +1805,30 @@ function catLabelOf(it){
   return o ? (o[currentLang] || o.cn || it.cat || '') : (it.catCode || it.cat || '');
 }
 function statLabelOf(it){
-  /* 等级已在图标下方以 Lv.N 单独显示，属性框里不重复「需求等级」行。
-     体力缺失（如 hp=null）时该行自动跳过。 */
-  return [[ui('hp'), it.hp], [catLabelOf(it), '']];
+  /* 行序与卡片 statsBoxInner 一致：「体力」+ 附加属性行（bonus）。
+     等级已在图标下方以 Lv.N 单独显示，属性框里不重复「需求等级」行。
+     ⚠ bonus 不能漏：全站 945 件可见时装里只有 6 件传说时装带 bonus
+       （Sword of Truth{str:2} / Crown of Omniscience{cri:1} / Robe+Staff of Omnipotence 等），
+       漏掉它们时浮层只剩「体力」一行，看起来就是"属性显示不全"。
+       排序沿用页面既有 BONUS_ORDER，键名经 attrNameText() 取四语文案。 */
+  var rows = [];
+  /* ⚠ hp 为空就整行不出现（2026-10-03）。
+     数据里确实存在 hp 缺失的时装（如 20th Anniversary Party Balloon），
+     若照样 push [标签, null]，共享渲染层会走「只有标签、无值」的分支，
+     显示成一个孤零零的「体力」—— 用户看到的就是「时装本身没有体力，
+     浮层却写着体力」。所以这里在数据层就跳过，分类行仍保留。 */
+  if(it && it.hp !== null && it.hp !== undefined && it.hp !== ''){
+    rows.push([ui('hp'), it.hp]);
+  }
+  var b = (it && it.bonus) || null;
+  if(b && typeof b === 'object'){
+    var keys = Object.keys(b);
+    var ordered = BONUS_ORDER.filter(function(k){ return keys.indexOf(k) >= 0; })
+      .concat(keys.filter(function(k){ return BONUS_ORDER.indexOf(k) < 0; }));
+    ordered.forEach(function(k){ rows.push([attrNameText(k), b[k]]); });
+  }
+  rows.push([catLabelOf(it), '']);
+  return rows;
 }
 /* 跳转 = 回「全部」列表 + 强跳转只留这一件（页面已有 ?costume= 解析与 isJumpTarget 四语名匹配）
    宝石（cat==='gem'）已独立成宝石图鉴标签页，跳宝石页才找得到 */
