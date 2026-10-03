@@ -177,6 +177,115 @@ body{background:#f0f2f5;padding:12px}
 .lang-dd-item{padding:8px 14px;border-radius:6px;font-size:15px;line-height:1.2;color:#3D4E68;white-space:nowrap;text-align:center;cursor:pointer}
 .lang-dd-item:hover{background:#EAF1F8}
 .lang-dd-item.active{background:#EDF0F4;font-weight:600}
+/* ===== PV_MINI_TIP：预览图小预览浮层（样式对齐 collection.html 的 .mat-tip）=====
+   单击预览图格子 → 就地弹出该条目的小预览图（图鉴任务掉落表同款）；
+   浮层右下角的转弯箭头 → 跳回该条目在「全部·分类」列表里的卡片。
+   类名统一用 .pv-tip 前缀，与 collection 的 .mat-tip 完全隔离，两套互不影响。 */
+.pv-tip{position:fixed;z-index:210;display:none;pointer-events:none;max-width:86vw;
+  --tip-hex-img:70%}   /* 图标框内图片缩放：用户微调只改这一处 */
+.pv-tip.show{display:block;pointer-events:auto}
+/* 卡片面用近乎不透明（92%），保留浮层感同时保证属性文字清晰 */
+.pv-tip .tip-card{background:rgba(217,227,236,0.92);border:1px solid #94A6BE;border-radius:12px;position:relative;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);padding:6px;width:150px;overflow:hidden}
+.pv-tip .tip-card.tip-equip{width:200px}
+@media(min-width:1024px){
+  .pv-tip .tip-card{width:220px}
+  .pv-tip .tip-card.tip-equip{width:300px}
+}
+/* 文本不超边界：允许折行、禁止横向溢出 */
+.pv-tip .tl-body{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.pv-tip .tl-name{overflow-wrap:anywhere}
+.pv-tip .equip-name,.pv-tip .stat-item{overflow-wrap:anywhere;word-break:break-word}
+.pv-tip .equip-name{text-align:center;font-weight:bold;font-size:16px;padding:3px 4px;line-height:1.2;
+  border-top:2px solid #b9cad6;border-bottom:2px solid #b9cad6;
+  background:linear-gradient(100deg,#c1ceda,#E7F7FF,#c1ceda);border-radius:8px}
+.pv-tip .equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
+.pv-tip .equip-icon-col{width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px}
+/* 图标框：与页面本体 .hex-icon 完全同款——clip-path 切出六边形 + 深蓝渐变底 + position:relative（星标角标要定位）。
+   ⚠ 不要写 border-radius/border：六边形靠 clip-path 成形，加圆角/边框会被切出缺口。
+   ⚠ 不要写 aspect-ratio：clip-path 用百分比坐标，宽高必须相等才能保持正六边形，所以写死 52×52。 */
+.pv-tip .hex-icon{width:52px;height:52px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;
+  clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%);
+  background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden}
+/* 六边形尺寸随卡片宽度缩放（与本体 68/56/46 三档呼应）：宽卡片 56、平板 52、手机 46 */
+.pv-tip .tip-card.tip-equip .hex-icon{width:56px;height:56px}
+.pv-tip .tip-card.tip-equip .hex-icon .star{width:8px;height:8px}
+/* object-fit:contain + 外层 flex 居中：只等比缩放图片本体，不变形、不偏移、不越界 */
+.pv-tip .hex-icon img{width:var(--tip-hex-img,70%);height:var(--tip-hex-img,70%);object-fit:contain}
+/* 星标角标：本体 .hex-icon .star 的同款（浮层 HTML 里也带这两个角标） */
+.pv-tip .hex-icon .star{position:absolute;width:6px;height:6px;z-index:1}
+.pv-tip .item-level{font-size:15px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1}
+.pv-tip .equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px;padding-left:4px}
+.pv-tip .tag-rarity{padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content}
+/* 「高级」标签（本身为高级）：绿色文字 + 浅绿底，保证在 92% 底色上仍可读 */
+.pv-tip .tag-rarity.adv{background:#E9F4E6;color:#518B38;border:1px solid #B7D9AE}
+.pv-tip .equip-stats{background:#C6D4E4;padding:6px;border-radius:8px;margin-top:4px;position:relative;padding-right:24px}
+.pv-tip .stat-item{font-size:13px;font-weight:bold;text-align:left;padding:1px 0}
+/* 属性框内右下角的「跳转详情」转弯箭头：半透明圆底，pointer-events:auto 使其可点
+   （.pv-tip.show 整体已设 auto，这里显式写上以兼容 stopPropagation 逻辑） */
+.pv-tip .tip-jump{position:absolute;right:5px;bottom:5px;width:20px;height:20px;display:flex;align-items:center;justify-content:center;
+  border-radius:50%;background:rgba(34,44,62,0.55);color:#fff;cursor:pointer;pointer-events:auto;
+  box-shadow:0 1px 3px rgba(0,0,0,0.35);transition:background .15s}
+.pv-tip .tip-jump:hover{background:rgba(34,44,62,0.85)}
+.pv-tip .tip-jump svg{display:block}
+/* 数值缺失时的占位样式（与卡片一致） */
+.pv-tip .stat-item.ph{color:#8A97AB}
+/* 小预览浮层打开时，被点中的格子加一圈描边（区分于 .selected 的卡片选中态） */
+.pv-cell.pv-tip-sel{outline:2px solid #4E9A8C;outline-offset:-2px;box-shadow:0 0 0 2px rgba(78,154,140,0.35)}
+/* ===== 手机端（<768px）不展示预览图的卡片 =====
+   单击格子已改为弹小预览图（.pv-tip），浮层自身居中定位、不依赖这张卡片，
+   所以窄屏直接隐藏 .pv-detail-wrap（卡片 + 左右箭头），让 .pv-grid 占满整屏。
+   PC/平板（≥768px）保持左右分栏不变。 */
+@media(max-width:767px){
+  .pv-detail-wrap{display:none}
+  /* 卡片让出的竖向空间还给网格：限高从「视口−卡片」放宽到接近整屏 */
+  .pv-grid{max-height:calc(100vh - 170px)}
+}
+@supports (max-height:100dvh){
+  @media(max-width:767px){ .pv-grid{max-height:calc(100dvh - 170px)} }
+}
+/* ===== 排序方向按钮（正序/倒序）：浮在网格框内右上角 =====
+   从分类栏挪进网格容器：位置语义更贴切（它只作用于预览图排序），也省掉分类栏一行横向空间。
+
+   ⚠⚠ 两个坑（都实测踩过）：
+   1) 不能挂进 .pv-grid —— 那是 display:grid，绝对定位的子元素**仍会被排进隐式网格流**，
+      实测按钮被推到屏幕外（btnRect.left=-235px）。必须挂在 .pv-pane（普通块级流）下。
+   2) .pv-pane 是 flex 容器、可能比 .pv-grid 宽（grid 有 max-width 居中留白），
+      直接贴 pane 右边会偏到网格右侧之外（实测 rightGap=690px）。
+      → 让 pane 收缩成「包裹住 grid」的宽度：inline-block + vertical-align:top。 */
+.pv-pane{position:relative}
+/* ⚠ 必须用 !important 压过页面本体 @media(min-width:768px) 里的 `.pv-pane{flex:0 0 auto}`：
+   那条规则在本体样式区、出现在本段之后，同优先级会覆盖 display:inline-block。
+   同时给 max-width:100% 防止 grid 较宽时 pane 被撑开。 */
+.pv-pane{display:inline-block !important;vertical-align:top;max-width:100%}
+.pv-pane .sort-btn{position:absolute;top:10px;right:10px;z-index:5;
+  display:inline-flex;align-items:center;gap:4px;
+  /* ⚠⚠ 必须清掉本体 .type-btn.sort-btn 的两个 margin：
+     `margin-left:auto` 会让绝对定位元素偏移（实测按钮跑到 left=-8），
+     `margin-right:calc(50vw - 43px)` 是给分类栏里「靠最右」用的 hack，
+     在绝对定位下同样会把它拽偏。一律归零，让 top/right 说了算。 */
+  margin:0 !important;
+  padding:4px 10px;border:1px solid #94A6BE;border-radius:8px;
+  background:rgba(234,241,248,0.94);color:#4D5A75;
+  font-size:13px;line-height:1;cursor:pointer;
+  box-shadow:0 1px 4px rgba(0,0,0,0.18);
+  transition:background .12s,border-color .12s}
+.pv-pane .sort-btn:hover{background:#FFE58A;border-color:#E8C33A}
+.pv-pane .sort-btn.active{background:#4E9A8C;border-color:#4E9A8C;color:#fff}
+.pv-pane .sort-btn svg{display:block}
+/* 网格顶部留出按钮的位置（按钮绝对定位，不占流） */
+.pv-pane .pv-grid{padding-top:36px}
+@media(max-width:767px){ .pv-pane{width:100%} .pv-pane .pv-grid{padding-top:36px} }
+
+/* ===== PC/平板（≥768px）预览图网格：单排 8 格 ===== */
+@media(min-width:768px){
+  .pv-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:8px}
+}
+@media(min-width:1024px){
+  .pv-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:10px;padding:12px;
+    max-width:760px;margin-left:auto;margin-right:auto}
+}
+
 </style>
 </head>
 <body>
@@ -389,6 +498,9 @@ function isJumpTarget(x){
   return ns.indexOf(k) >= 0;
 }
 let sortDesc = false;      /* 排序方向：false=正序（体力小→大，默认）；true=倒序（大→小）。「一般」与 Lv.0 无论正倒序都沉底 */
+/* 排序方向按钮的模块级引用（2026-10-03）：buildCatBar 创建它之后并未入 DOM，
+   getElementById 取不到，先存这里，updateSortBtn / pvMountSortBtn 再用它。 */
+var pvSortBtn = null;
 function buildCatBar(){
   const bar = document.getElementById('catBar');
   if(!bar) return;
@@ -407,13 +519,28 @@ function buildCatBar(){
     b.onclick = function(){ setCat(c); };
     bar.appendChild(b);
   });
-  /* 排序方向按钮：靠这一排最右边，点一下翻转（正序 ⇄ 倒序） */
+  /* 排序方向按钮：2026-10-03 从分类栏挪进网格框内右上角（.pv-pane 绝对定位），
+     位置语义更贴切（它只作用于预览图排序），也省掉分类栏一行横向空间。
+     节点照旧在这里建（updateSortBtn 要求它已存在），由 pvMountSortBtn 挂进 .pv-pane。 */
   const bs = document.createElement('button');
   bs.className = 'type-btn sort-btn';
   bs.id = 'sortBtn';
   bs.onclick = toggleSort;
-  bar.appendChild(bs);
+  pvSortBtn = bs;            /* 存模块级引用：此时还没入 DOM，getElementById 取不到 */
   updateSortBtn();
+}
+/* 把排序按钮挂到网格容器 .pv-pane 内（幂等）。buildCatBar 先于 renderPreview 执行，
+   所以首次进入预览图时按钮还没进 DOM，这里补挂；renderPreview 重建布局后会再调一次。 */
+function pvMountSortBtn(){
+  const b = pvSortBtn || document.getElementById('sortBtn');
+  /* 挂在 .pv-pane（grid 的父容器）下，**不能**挂进 .pv-grid：
+     .pv-grid 是 display:grid，绝对定位的子元素**仍会被排进隐式网格流**，
+     实测按钮被推到屏幕外（btnRect.left=-235px）。pane 是普通块级流，定位稳定。
+  */
+  const pane = document.querySelector('#itemGrid .pv-pane');
+  if(!b || !pane) return;
+  if(b.parentNode === pane) return;
+  pane.appendChild(b);
 }
 /* 点「全部 / 分类」= 重置搜索框（残留关键词会把新分类的结果筛空） */
 function setCat(cat){
@@ -441,7 +568,9 @@ function sortBtnIconHtml(){
     + '" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
 function updateSortBtn(){
-  const b = document.getElementById('sortBtn');
+  /* 2026-10-03：排序按钮已移出分类栏，buildCatBar 里创建后未入 DOM，
+     getElementById 取不到 —— 回退用模块级 pvSortBtn 引用。 */
+  const b = document.getElementById('sortBtn') || pvSortBtn;
   if(!b) return;
   /* 只在「预览图」里露出这个按钮：倒序只作用于预览图的排序，列表页保持原顺序不受影响 */
   b.style.display = (currentCat === 'preview') ? '' : 'none';
@@ -466,6 +595,8 @@ function dispName(name){
 }
 
 function filterAndRender(keepPage){
+  /* 结果集要换了：先收起小预览浮层（否则浮层内容停留在被过滤掉的旧条目上） */
+  if(window.pvTipReset) window.pvTipReset();
   let list = DATA;
   /* 「预览图」不按稀有度过滤（等价「全部」），只换渲染方式 */
   if(currentCat !== 'all' && currentCat !== 'preview') list = list.filter(function(x){ return x.rarity === CAT_RARITY[currentCat]; });
@@ -655,6 +786,8 @@ function renderPreview(){
     + '</div>';
   paintPvDetail(pvSelected);
   pvFillGrid();
+  /* 排序按钮浮在网格框内右上角：布局建好后挂进 .pv-pane（幂等） */
+  if(typeof pvMountSortBtn === 'function') pvMountSortBtn();
   pvLayoutNode = filtered.length ? grid.firstChild : null;   /* 记下整块布局，下次切回来直接复用 */
 }
 /* 左右箭头：在卡片两旁的空白处，用来翻「上一只/下一只」= 预览图当前的宠物排序 */
@@ -726,7 +859,8 @@ function showPvDetail(name){
   paintPvDetail(name);
 }
 /* 跳转约定（回「全部」列表 + 搜索框填显示名 + 滚到该卡）：
-   预览图里的点按已改为就地换卡，这个函数保留下来以备后续需要「去列表看这一只」的入口。 */
+   小预览浮层右下角的跳转按钮走 URL（pet.html?pet=名称），由 applyUrlJump() 落地成同样的强跳转状态；
+   这个函数保留给页面内可能出现的「去列表看这一只」入口。 */
 function jumpToPet(name){
   var box = document.getElementById('searchBox');
   currentCat = 'all';
@@ -743,7 +877,9 @@ function jumpToPet(name){
     }
   }
 }
-/* 图标是 innerHTML 拼出来的 → 用事件委托，不逐个绑 */
+/* 预览图区：单击格子 = 弹小预览图（pv_mini_tip.js 的全局委托）
+   + 右侧卡片跟随切换到该条目（PC/平板左右分栏需要；手机端不显示右侧卡片，
+   showPvDetail 只改内部选中态，视觉上无副作用）。 */
 document.getElementById('itemGrid').addEventListener('click', function(ev){
   var el = ev.target;
   while(el && el !== this && !(el.classList && el.classList.contains('pv-cell'))) el = el.parentNode;
@@ -844,9 +980,30 @@ async function init(){
   document.getElementById('prevBot').onclick = goPrev;
   document.getElementById('nextBot').onclick = goNext;
   window.addEventListener('resize', function(){ renderCards(); });
+  /* 支持 ?pet=<内部键>（预览图小预览浮层的跳转按钮）：切回「全部」+ 强跳转只留这一只 */
+  applyUrlJump();
   updateLangText(); filterAndRender();
 }
 init();
+/* 从 URL 读 ?pet= 落到强跳转状态（isJumpTarget 会在 name/四语名里匹配）。
+   参数用内部键 it.name 而非显示名：切语言后链接依然有效。 */
+function applyUrlJump(){
+  var q = '';
+  try{ q = (window.location.search || ''); }catch(e){ q = ''; }
+  if(!q) return;
+  var mKey = /[?&]pet=([^&]*)/.exec(q);
+  if(!mKey) return;
+  var nm = '';
+  try{ nm = decodeURIComponent(mKey[1] || ''); }catch(e){ nm = mKey[1] || ''; }
+  nm = String(nm).trim();
+  if(!nm) return;
+  var box = document.getElementById('searchBox');
+  currentCat = 'all';
+  jumpSearchText = nm;
+  jumpExactKey = nm;
+  if(box) box.value = nm;
+  updateCatBar();
+}
 </script>
 <style>
 /* ===== PAGE_NAV_PATCH：分页「首页/尾页 + 点击页码输入」 ===== */
@@ -961,6 +1118,251 @@ init();
   }
   refresh();
 })();
+/* ===== PV_MINI_TIP_JS：预览图小预览浮层（宠物图鉴 / 时装图鉴共用）=====
+   交互：单击预览图格子 → 弹出该条目的小预览图；浮层右下角转弯箭头 → 跳回该条目在「全部」列表里的卡片。
+   样式与行为对齐 collection.html 的 .mat-tip（同一套观感），但用 .pv-tip 前缀隔离，两套互不干扰。
+
+   宿主页需提供（两页现有代码已全部具备，无需改动）：
+     currentLang                     当前语言
+     filtered                        当前结果集（与预览图格子顺序一致）
+     escAttr(x) / escHtml(x)         转义
+     dispName(en)                    按语言取显示名
+     rcOf(rarity)                    -> {color, bg}
+     rarityLabel(rarity)             稀有度本地化文案
+     ui(key)                         四语 UI 文案
+     catLabelOf(item)                分类本地化名（仅时装用；宠物传空串）
+     statLabelOf(item)               -> [[标签,值],...]  属性行
+     jumpUrlOf(item)                 跳转 URL（回「全部」列表并定位到该卡）
+   */
+(function(){
+  'use strict';
+  if(typeof window === 'undefined') return;
+
+  var TIP_DELAY = 160;        /* 悬停延时显示（与图鉴任务一致） */
+  var TIP_HIDE_DELAY = 220;   /* 移出格子与浮层之间的宽限期，给鼠标跨越间隙的时间 */
+  var tipNode = null, tipInner = null, tipTimer = null, hideTimer = null;
+  var tipName = null, tipCell = null, selCell = null, tipLastCell = null;
+  var inited = false;
+
+  function ensureTip(){
+    if(tipNode) return tipNode;
+    tipNode = document.createElement('div');
+    tipNode.className = 'pv-tip';
+    tipInner = document.createElement('div');
+    if(tipNode.appendChild) tipNode.appendChild(tipInner);
+    var host = document.body || document.documentElement;
+    if(host && host.appendChild) host.appendChild(tipNode);
+    return tipNode;
+  }
+
+  /* 本地化小标签（无值时返回 null，由调用方决定是否显示） */
+  function cellOf(name){
+    if(!name) return null;
+    var list = (typeof filtered !== 'undefined' && filtered) ? filtered : [];
+    for(var i=0; i<list.length; i++){
+      if(list[i] && list[i].name === name) return list[i];
+    }
+    return null;
+  }
+
+  /* 卡片 HTML：结构与 collection.html 的 tipCardHtml 一致（名称/图标/等级/稀有度/属性框+跳转） */
+  function tipCardHtml(o){
+    var key = o.rarity || '';
+    var rc = (typeof rcOf === 'function') ? (rcOf(key) || {}) : {};
+    var rar = (typeof rarityLabel === 'function') ? (rarityLabel(key) || key) : key;
+    var adv = (key === '高级') ? ' adv' : '';
+    var bgStyle = (key === '高级') ? '' : ' style="background:' + escAttr(rc.bg || '#474F6E') + '"';
+    var color = rc.color || '#4D5A75';
+    var stats = '';
+    (o.stats || []).forEach(function(s){
+      if(!s) return;
+      var hasLbl = s[0] !== '' && s[0] !== null && s[0] !== undefined;
+      var hasVal = !(s[1] === '' || s[1] === null || s[1] === undefined);
+      /* 标签与值都缺 -> 整行跳过；有标签无值 -> 只显示标签（不当成0/空值）；
+         有值无标签 -> 只显示值；两者都有 -> 「标签: 值」 */
+      if(!hasLbl && !hasVal) return;
+      var txt = hasLbl && hasVal ? (s[0] + ': ' + s[1]) : (hasLbl ? String(s[0]) : String(s[1]));
+      var ph = (!hasVal && hasLbl) ? ' ph' : '';
+      stats += '<div class="stat-item' + ph + '">' + escHtml(txt) + '</div>';
+    });
+    if(!stats) stats = '<div class="stat-item ph">—</div>';
+    var jumpIcon = '';
+    if(o.jumpUrl){
+      jumpIcon = '<div class="tip-jump" data-url="' + escAttr(o.jumpUrl) + '" onclick="pvTipJump(event,this)"'
+        + ' title="' + escAttr(pvTipJumpTitle()) + '" aria-label="open detail">'
+        + '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+        + '<path d="M6 18 V9 a4 4 0 0 1 4 -4 H18"/>'
+        + '<path d="M13 2 L18 5 L13 8"/>'
+        + '</svg></div>';
+    }
+    return '<div class="tip-card tip-equip">'
+      + '<div class="equip-name" style="color:' + escAttr(color) + '">' + escHtml(o.name) + '</div>'
+      + '<div class="equip-info-row">'
+      +   '<div class="equip-icon-col">'
+      +     '<div class="hex-icon"><div class="star star1"></div><div class="star star2"></div><img src="' + escAttr(o.icon) + '" alt=""'
+      +       ' onerror="this.style.display=\'none\'"></div>'
+      +     '<div class="item-level">Lv.' + escHtml(String(o.level === null || o.level === undefined || o.level === '' ? '—' : o.level)) + '</div>'
+      +   '</div>'
+      +   '<div class="equip-text-col">'
+      +     '<div class="tag-rarity' + adv + '"' + bgStyle + '>' + escHtml(rar) + '</div>'
+      +   '</div>'
+      + '</div>'
+      + '<div class="equip-stats">' + stats + jumpIcon + '</div>'
+      + '</div>';
+  }
+
+  /* 从当前结果集里取条目并生成浮层内容 */
+  function buildTipHtml(name){
+    var it = cellOf(name);
+    if(!it) return '<div class="tip-card"><div class="tip-light"><div class="tl-name">—</div></div></div>';
+    var nm = (typeof dispName === 'function') ? (dispName(it.name) || it.name) : it.name;
+    return tipCardHtml({
+      name: nm,
+      icon: it.hasIcon ? it.icon : '',
+      level: it.level,
+      rarity: it.rarity,
+      stats: (typeof statLabelOf === 'function') ? statLabelOf(it) : [],
+      jumpUrl: (typeof jumpUrlOf === 'function') ? jumpUrlOf(it) : ''
+    });
+  }
+
+  /* 定位：优先放右侧，越界改左侧；垂直居中并夹在视口内 */
+  function placeTip(cell){
+    var r = (cell && cell.getBoundingClientRect) ? cell.getBoundingClientRect() : null;
+    if(!r || !tipNode) return;
+    var vw = (typeof window !== 'undefined' && window.innerWidth) || 1024;
+    var vh = (typeof window !== 'undefined' && window.innerHeight) || 800;
+    var pw = tipNode.offsetWidth || 262, ph = tipNode.offsetHeight || 120;
+    var left = r.right + 8;
+    if(left + pw > vw - 4) left = r.left - pw - 8;
+    if(left < 4) left = Math.max(4, Math.min(r.left, vw - pw - 4));
+    var top = r.top + r.height / 2 - ph / 2;
+    var maxTop = vh - ph - 4;
+    if(top > maxTop) top = Math.max(4, maxTop);
+    if(top < 4) top = 4;
+    tipNode.style.left = left + 'px';
+    tipNode.style.top = top + 'px';
+  }
+
+  function showTip(cell){
+    if(!cell) return;
+    var name = cell.getAttribute ? cell.getAttribute('data-name') : '';
+    if(!name) return;
+    var nd = ensureTip();
+    if(tipInner && tipName !== name){
+      tipInner.innerHTML = buildTipHtml(name);
+      tipName = name;
+    }
+    nd.classList.add('show');
+    tipCell = cell;
+    tipLastCell = cell;
+    placeTip(cell);
+  }
+
+  function hideTip(clearSel){
+    if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+    if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+    if(tipNode) tipNode.classList.remove('show');
+    tipCell = null;
+    tipLastCell = null;
+    if(clearSel) setSelCell(null);
+  }
+
+  function setSelCell(cell){
+    if(selCell && selCell.classList) selCell.classList.remove('pv-tip-sel');
+    selCell = cell || null;
+    if(selCell && selCell.classList) selCell.classList.add('pv-tip-sel');
+  }
+  function clearSelCell(){ setSelCell(null); }
+
+  /* 跳转按钮：stopPropagation 避免被 document 的 click 当成「外部点击」把浮层关掉 */
+  function pvTipJumpTitle(){
+    var m = {cn:'查看该条目卡片', en:'View card', ja:'カードを見る', kr:'카드 보기'};
+    return m[currentLang] || m.cn;
+  }
+  function pvTipJump(ev, el){
+    if(ev && ev.stopPropagation) ev.stopPropagation();
+    if(ev && ev.preventDefault) ev.preventDefault();
+    var u = el && el.getAttribute ? el.getAttribute('data-url') : '';
+    hideTip(true);
+    if(u) location.href = u;
+  }
+
+  /* 事件绑定一次即可（全局委托，切分类/切语言都不用重绑） */
+  function initPvTip(){
+    if(inited || !document.addEventListener) return;
+    inited = true;
+    /* 桌面端：悬停延时显示；移到浮层上保持；移出后宽限期再销毁 */
+    document.addEventListener('mouseover', function(ev){
+      var t = ev && ev.target;
+      if(!t || !t.closest) return;
+      var cell = t.closest('.pv-cell');
+      if(cell){
+        if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+        if(cell === tipCell) return;
+        if(tipTimer) clearTimeout(tipTimer);
+        tipTimer = setTimeout(function(){ showTip(cell); }, TIP_DELAY);
+        return;
+      }
+      if(tipNode && tipNode.contains && tipNode.contains(t)){
+        if(hideTimer){ clearTimeout(hideTimer); hideTimer = null; }
+        if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+        if(!tipNode.classList.contains('show') && tipLastCell) showTip(tipLastCell);
+        return;
+      }
+      if(tipTimer){ clearTimeout(tipTimer); tipTimer = null; }
+      if(tipCell && !hideTimer){
+        hideTimer = setTimeout(function(){ hideTip(false); hideTimer = null; }, TIP_HIDE_DELAY);
+      }
+    }, false);
+    /* 手机端：单击显示并高亮；点浮层/条目外 -> 消失并取消高亮 */
+    document.addEventListener('click', function(ev){
+      var t = ev && ev.target;
+      if(t && t.closest && t.closest('.tip-jump')) return;   /* 跳转按钮自己处理 */
+      var cell = (t && t.closest) ? t.closest('.pv-cell') : null;
+      if(cell){ setSelCell(cell); showTip(cell); return; }
+      hideTip(true);
+    }, false);
+    if(window.addEventListener){
+      window.addEventListener('resize', function(){ hideTip(false); }, false);
+      window.addEventListener('scroll', function(){ hideTip(false); }, true);
+    }
+  }
+
+  /* 供宿主页在切分类/切语言/重渲染前调用：藏掉浮层，避免残留旧语言的浮层 */
+  function pvTipReset(){
+    hideTip(true);
+    if(tipNode && tipNode.classList) tipNode.classList.remove('show');
+    tipName = null;
+  }
+
+  /* 暴露全局接口（宿主页与用例通过它取/调） */
+  window.pvTipInit = initPvTip;
+  window.pvTipShow = showTip;
+  window.pvTipHide = hideTip;
+  window.pvTipReset = pvTipReset;
+  window.pvTipClearSel = clearSelCell;
+  window.pvTipJump = pvTipJump;
+  window.pvTipJumpTitle = pvTipJumpTitle;
+  window.pvTipNode = function(){ return tipNode; };
+})();
+
+/* ===== PV_MINI_TIP_HOST：预览图小预览浮层的本页适配 =====
+   共享逻辑在 pv_mini_tip.js（与 collection.html 的 .mat-tip 同款样式）；
+   本段只提供「属性行 / 跳转 URL」两处本页数据映射。 */
+function catLabelOf(it){ return ''; }          /* 宠物无分类标签 */
+function statLabelOf(it){
+  return [[ui('petExp'), it.exp], [ui('petCrit'), it.crit],
+          [ui('petDeadly'), it.deadly], [ui('petHp'), it.hp]];
+}
+/* 跳转 = 回到「全部」列表 + 强跳转只留这一张卡。
+   参数用内部键 it.name（英文原名）而不是 dispName()：isJumpTarget 正是按 x.name 精确匹配，
+   且切语言后链接依然有效（显示名会随语言变，链接会失效）。 */
+function jumpUrlOf(it){
+  return 'pet.html?pet=' + encodeURIComponent(it.name);
+}
+/* 浮层初始化：页面脚本都跑完后绑一次（全局委托，切分类/切语言无需重绑） */
+if(window.pvTipInit) window.pvTipInit();   /* 走window 取（挂在这里，不依赖裸标识符能否解析） */
 </script>
 </body>
 </html>
