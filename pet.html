@@ -15,6 +15,24 @@ body{background:#f0f2f5;padding:12px}
 .type-btn.active[data-cat="large"]{background:#3774AE;border-color:#3774AE;color:#fff}
 .type-btn.active[data-cat="small"]{background:#518B38;border-color:#518B38;color:#fff}
 .type-btn.active{background:#718ACC;color:#fff;border-color:#718ACC}
+/* ===== NAV_CAT_SPLIT：顶部页面标签([data-nav]) 与页内分类按钮 视觉分层 —— 阶段1 顶栏 =====
+   顶栏 = 大号药丸 tab（白底 + 蓝灰边 + 悬停黄），8 个一组、页面级切换。
+   字号仍 16px（与原版一致）；左右 padding 12px（不是 14px，见上方注释①）。
+   margin-bottom:6px：顶栏按钮是 body 裸按钮，换行后上下两行原本 vGap=0 紧贴（注释②）。
+   ⚠ 必须放在 .type-btn.active 那一行之后：[data-nav](0,2,0) 与它同优先级、靠后者胜。 */
+.type-btn{cursor:pointer}
+.type-btn[data-nav]{padding:8px 12px;margin-bottom:6px;border-radius:999px;background:#fff;border-color:#94A6BE;color:#3D4E68;font-weight:500}
+.type-btn[data-nav]:hover{background:#FFE58A;border-color:#E8C33A;color:#22334A}
+.type-btn.active[data-nav]{background:#718ACC;border-color:#3774AE;color:#fff}
+/* ===== NAV_CAT_SPLIT：页内分类按钮（小号方角 chip）—— 阶段2 分类栏 =====
+   :not([data-nav]) = 排除顶部标签；:not(.active) = **active 态一律沿用页面原有规则**
+     （含 pet 的 [data-cat=large] #3774AE / [data-cat=small] #518B38 / 排序按钮青绿 #4E9A8C），
+     本段只改「未选中」的几何与配色。
+   分类栏容器（body 直接子元素）补 margin-top，与顶栏拉开呼吸（10px -> 12px 见注释③）。 */
+.type-btn:not([data-nav]):not(.active):not([id="sortBtn"]){padding:5px 12px;font-size:14px;border-radius:6px;background:#fff;border-color:#C9D4E0;color:#4D5A75}
+.type-btn:not([data-nav]):not(.active):not([id="sortBtn"]):hover{background:#F7FAFD;border-color:#94A6BE}
+body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,body > #zonePanel{margin-top:12px}
+
 /* 排序方向按钮：**只在「预览图」显示**（list 模式隐藏），靠这一排最右边，图标+文字（正序/倒序），开启倒序时高亮 */
 .type-btn.sort-btn{display:inline-flex;align-items:center;gap:4px;margin-left:auto}
 .type-btn.sort-btn svg{display:block;flex:0 0 auto}
