@@ -14,17 +14,24 @@ body{background:#f0f2f5;padding:12px}
 .type-btn.active{background:#718ACC;color:#fff;border-color:#718ACC}
 /* ===== NAV_CAT_SPLIT：顶部页面标签([data-nav]) 与页内分类按钮 视觉分层 —— 阶段1 顶栏 =====
    顶栏 = 大号药丸 tab（白底 + 蓝灰边 + 悬停黄），8 个一组、页面级切换。
-   ⚠ min-width:88px（不是固定 width）：
-     · 中文 4 个标签文字都是 4 字(64px) -> 按钮被 min-width 兜到 88px，
-       420px 视口实测每行 4 个（与页面原版一致）；
-     · 英文/日文/韩文文字更长 -> 按钮按内容自动变宽，每行自然变 3 个，
-       且**文字完整显示**（无 max-width/overflow，不会被省略号截断）。
-     不用固定 width 是因为用户要求「中文 4 个、其它语言 3 个但要显示全文字」，
-     而页面切语言时不写 DOM 语言标记（html lang 恒为 zh-CN），纯 CSS 无法按语言分支。
    margin-bottom:6px：顶栏按钮是 body 裸按钮，换行后上下两行原本 vGap=0 紧贴。
-   ⚠ 必须放在 .type-btn.active 那一行之后：[data-nav](0,2,0) 与它同优先级、靠后者胜。 */
+   ⚠ 必须放在 .type-btn.active 那一行之后：[data-nav](0,2,0) 与它同优先级、靠后者胜。
+
+   ⚠⚠ 尺寸按「387px（iPhone 14/15 的 CSS 宽度）每行能放 4 个」反推：
+     387 - 15(竖滚动条) - 24(body padding 12*2) = 348px 可用宽（最严的 6 页）；
+     index/equip 的 body padding 实为 8px（equip 有两条 body 规则，后者覆盖前者），
+     可用 356px，更宽松。
+     4 个按钮 + 3 个 2px 间距 = 4*82 + 6 = 334px <= 348 -> **余量 14px**，
+     即使遇到竖滚动条宽度差异也不会掉到 3 个。
+     按钮 = min-width:80px + 2px 边框 = 82px；中文 4 个汉字(64px) + 2*8px padding
+     + 2px 边框 = 82px，**正好放下且不溢出**。
+   ⚠ padding 用 8px（不是 12px）：12px 时按钮需 90px，4 个要 372px > 348px 放不下。
+   ⚠ margin-right:2px 制造 2px 间距（inline 流默认无间距，8 个按钮会贴在一起）。
+   ⚠ 非中文语言文字更长 -> 按内容自适应撑宽（min-width 只作下限），
+     每行变 3 个且**文字完整显示**（不加 max-width/overflow:hidden/text-overflow）。
+ */
 .type-btn{cursor:pointer}
-.type-btn[data-nav]{min-width:88px;padding:8px 12px;margin-bottom:6px;box-sizing:border-box;
+.type-btn[data-nav]{min-width:80px;padding:8px 8px;margin:0 2px 6px 0;box-sizing:border-box;
 border-radius:999px;background:#fff;border-color:#94A6BE;color:#3D4E68;font-weight:500;
 white-space:nowrap;text-align:center}
 .type-btn[data-nav]:hover{background:#FFE58A;border-color:#E8C33A;color:#22334A}
