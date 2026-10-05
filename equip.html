@@ -148,7 +148,8 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
 
 .equip-info-row{display:flex;padding:4px;gap:4px;align-items:center}
 .equip-icon-col{ width:30%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px }
-.equip-text-col{width:70%;display:flex;flex-direction:column;gap:4px;padding-left:4px}   /* 标签右移 4px */
+/* 徽章绝对定位在右上角，给标签列留出让位空间（徽章区最大 132px） */
+.equip-text-col{width:70%;padding-right:2px;display:flex;flex-direction:column;gap:4px;padding-left:4px}   /* 标签右移 4px */
 
 .hex-icon{ width:50px;height:50px;display:flex;align-items:center;justify-content:center; clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0% 50%); background:linear-gradient(145deg,#6085ac,#2f4666);position:relative;overflow:hidden; }
 .hex-icon::before{ content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%); }
@@ -161,7 +162,9 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
 .hex-icon img{width:30px;height:30px;object-fit:contain}
 @media(min-width:1024px){ .hex-icon{width:60px;height:60px} .hex-icon img{width:38px;height:38px} }
 
-.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content }
+/* ⚠ 限宽 + 省略号：右上角被强化徽章占着，稀有度文案再长也只能截断，不能溢出压住徽章 */
+.tag-rarity{ padding:3px 6px;border-radius:8px;color:#D6E5DC;font-size:13px;width:fit-content;
+  max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap }
 .item-level{ font-size:17px;font-weight:bold;color:#3D67D4;text-align:center;line-height:1;margin-top:5px }
 @media(min-width:1024px){.item-level{font-size:19px}}
 /* 职业图标：尺寸与排布和时装图鉴一致（20px 图标 + 3px 间距），一行放得下 4 个职业 */
@@ -275,6 +278,300 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
 .lang-dd-item{padding:8px 14px;border-radius:6px;font-size:15px;line-height:1.2;color:#3D4E68;white-space:nowrap;text-align:center;cursor:pointer}
 .lang-dd-item:hover{background:#EAF1F8}
 .lang-dd-item.active{background:#EDF0F4;font-weight:600}
+/* ===== SIM 装备模拟器（强化 + 重置，单弹窗） ===== */
+#simBar{margin-top:10px;margin-bottom:8px;display:flex;justify-content:center}
+.sim-entry{background:#7A6FA8;color:#fff;border:none;border-radius:999px;padding:9px 26px;
+  font-size:15px;font-weight:500;cursor:pointer;font-family:inherit}
+.sim-entry:hover{filter:brightness(1.07)}
+/* ⚠ 模拟器弹窗尺寸（2026-10-06 重做）。
+   旧写法 `width:fit-content; max-width:94%; max-height:84%` 有两个问题：
+     ① fit-content 让宽度随内容跳变 —— PC 上副属性/长装备名会把窗口拉得很宽，
+        标签行与 KPI 网格被拉散，视觉松散；
+     ② PC 上 max-height:84% 对超宽屏没有意义，窗口仍只占屏幕中央一小块。
+   新策略：**手机端贴边铺满（用满纵向），PC/平板固定上限居中**。
+   ⚠ 断点 768px 与站点主栅格一致（MEMORY：标签栏按 387px 反推，平板 2 列）。
+   ⚠ 横向必须 100% 减去外边距，否则 387px 下会因 body padding 产生横向滚动。 */
+.modal-content.sim-modal{width:100%;max-width:none;height:100%;max-height:100%;
+  border-radius:0;padding:12px 12px 10px;
+  display:flex;flex-direction:column;text-align:left}
+.modal-content.sim-modal .modal-close{align-self:center;flex-shrink:0;margin-top:10px}
+@media (min-width:768px){
+  /* ⚠ max-height 从 88vh 提到 **92vh**（用户 2026-10-06 报「选防具后有一点点滑动条」）。
+     实测内容高 490~507px：1440×900/1280×800/1024×768 都不溢出；
+     但矮屏（900×700，88vh=616px）下武器会溢出 23px、防具 6px —— 就是那条多余的滑动条。
+     92vh 在 700 高屏上多给 28px，正好吃掉溢出。
+     ⚠ 别再往上加到 96vh+：贴到屏幕边缘会失去弹窗「浮在页面上」的观感。 */
+  .modal-content.sim-modal{width:680px;max-width:94vw;height:auto;max-height:92vh;
+    border-radius:16px;padding:16px 18px 14px}
+}
+@media (min-width:1200px){
+  /* 超宽屏再放宽一点，但要封顶 —— 再宽就会出现「一行放不下几个 KPI」的稀疏感 */
+  .modal-content.sim-modal{width:760px}
+}
+/* ⚠ 手机端：内容区自己留出底部安全区，关闭按钮不被 iOS home 条压住 */
+@media (max-width:767px){
+  .modal-content.sim-modal{padding-bottom:calc(10px + env(safe-area-inset-bottom, 0px))}
+  .modal-content.sim-modal .modal-close{margin-top:8px;padding:9px 0;width:100%}
+  /* 标签/控件在窄屏更大更好点 */
+  .sim-tab{padding:9px;font-size:15px}
+  .sim-btn{padding:9px 13px}
+}
+.sim-tabs{display:flex;gap:6px;margin-bottom:11px;flex-shrink:0}
+.sim-tab{flex:1;background:#fff;border:1px solid #94A6BE;color:#3D4E68;border-radius:999px;
+  padding:7px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit}
+.sim-tab.active{background:#7A6FA8;border-color:#5B4F8C;color:#fff}
+/* ⚠ padding 不能省（2026-10-06）：`.sim-equip.clickable` 用 `margin:-2px -4px` 让 hover
+   背景向外扩一点，这个**负 margin 会让内容向上溢出 2px**，被 `scrollHeight` 计入 →
+   未选装备时内容只有 54px 而 clientHeight 52px，**凭空多出一条 2px 的滑动条**
+   （用户报「点进模拟器选防具后有一点滑动条」；实测武器/防具都是 ovf=2，只是先注意到防具）。
+   padding:2px 4px 正好抵消负 margin，滑动条消失且 hover 背景仍不外扩。 */
+.sim-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;
+  padding:2px 4px}
+.sim-equip{display:flex;align-items:center;gap:11px;background:#f5f7fa;border-radius:10px;
+  padding:9px 11px;margin-bottom:11px}
+/* ⚠ 副属性栏：装备头**右侧**第三栏（用户 2026-10-06）。
+   布局取舍：`.sim-equip-txt` 是 flex:1（min-width:0 允许压缩），副属性 flex:0 0 auto 保持自身宽度。
+   ⚠ 窄屏**不换行** —— 换行会让「装备右边有副属性」变成「装备下面有副属性」，违背需求。
+     代价是装备名/等级行会被压缩，必要时靠 text-overflow:ellipsis 截断（见 .sim-equip-sub）。 */
+.sim-subattr{flex:0 0 auto;width:100px;padding-left:12px;border-left:1px solid #DCE3EC}
+.sim-subattr-t{font-size:10px;color:#7A8AA0;margin-bottom:2px}
+.sim-subattr-i{display:flex;justify-content:space-between;gap:6px;font-size:11px;line-height:1.65}
+.sim-subattr-k{color:#4D5A75;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sim-subattr-v{color:#22334a;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* ⚠ 官方没公示这件装备的副属性 —— 必须显式说明，否则空白会被读成「没有副属性」 */
+.sim-subattr.empty{color:#A9B6C6;font-size:11px;padding-top:2px}
+@media (min-width:480px){
+  .sim-subattr{width:auto;min-width:104px;max-width:200px}
+  .sim-subattr-t{font-size:11px;margin-bottom:3px}
+  .sim-subattr-i{font-size:12px;line-height:1.6}
+}
+.sim-equip-icon{width:52px;height:52px;flex:0 0 auto;background:#EDF0F4;border:2px solid #94A6BE;
+  border-radius:8px;object-fit:contain}
+.sim-equip-txt{min-width:0;flex:1 1 auto}
+/* ⚠ 副属性占了右侧一栏，装备名/等级行必须能收缩 + 省略号，否则长装备名会把栏挤破 */
+.sim-equip-name{font-size:15px;font-weight:500;color:#22334a;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.sim-equip-sub{font-size:12px;color:#5A6B85;margin-top:2px;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+/* 装备的**原始属性数值**（攻击力 7~35 / 防御力 11 / 精准 8） */
+.sim-equip-stat{margin-top:3px;font-size:13px;font-weight:600;color:#3D5A80;
+  font-variant-numeric:tabular-nums}
+/* 已选装备时整块可点（点图标或名字切换装备） */
+.sim-equip.clickable{cursor:pointer;border-radius:10px;padding:2px 4px;margin:-2px -4px;
+  transition:background .12s}
+.sim-equip.clickable:hover{background:#EEF3FA}
+.sim-swap{margin-left:7px;font-size:11px;font-weight:400;color:#7A8AA0;
+  border:1px solid #C6D0DE;border-radius:7px;padding:0 5px;white-space:nowrap}
+.sim-sec{font-size:13px;font-weight:500;padding-bottom:5px;border-bottom:1px solid #e8edf4;margin-bottom:9px}
+.sim-sec-enh{color:#5B4F8C}
+.sim-sec-rst{color:#8A6412;margin-top:14px}
+.sim-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;font-size:13px;color:#3D4E68}
+/* ⚠ 强化徽章（.enh-slot）绝对定位在卡片右上角，**会压在「稀有度」标签上** ——
+   英文 "Advanced"(73px) + "Enhance"(62px) + 图标(50px) 在 387px 的 2 列卡片里必然超宽。
+   对策：① 徽章文案在 lang.json 里用符号简写（en 用 "+"）；② .tag-rarity 限宽 + 省略号，
+   宁可截断也不许溢出压住徽章。 */
+.equip-info-row{position:relative}
+.ce-sel{font-size:13px;color:#3D4E68;margin-bottom:10px}
+.ce-sel select{min-width:96px}
+/* ⚠ max-width 必须留够徽章（+15 约 40px）+ 数值行（约 52px）的位置，
+   否则数值会盖到稀有度/职业标签上。 */
+.enh-slot{position:absolute;top:3px;right:3px;z-index:2;display:flex;flex-direction:column;
+  align-items:flex-end;gap:2px;max-width:min(56%,118px);pointer-events:auto}
+.tag-enh{position:static;max-width:100%;white-space:nowrap;padding:2px 8px;border:1px solid #C89A3C;
+  border-radius:9px;background:#FFF9E8;color:#8A6412;font-size:11px;font-family:inherit;cursor:pointer}
+.tag-enh.on{background:#C89A3C;border-color:#8A6412;color:#fff;font-weight:500}
+.tag-enh:hover{border-color:#8A6412}
+/* ⚠ 手机端 387px 卡片很窄，数值若 nowrap 会横向溢出压到「稀有度/职业」标签上。
+   改成可换行 + 限宽，超长时自动折行而不是盖住标签。 */
+.enh-val{font-size:11px;color:#2C7267;text-align:right;line-height:1.3;
+  white-space:normal;word-break:break-word;max-width:100%;display:flex;
+  flex-direction:column;align-items:flex-end}
+.enh-val b{font-weight:500;color:#5A7799;font-size:10px}
+.enh-val span{font-weight:500}
+.ce-out2{background:#EEF3FA;border:1px solid #C9D8E8;border-radius:9px;padding:9px 11px;
+  margin-top:6px;font-size:13px;color:#22334A;font-weight:500;line-height:1.7}
+.ce-out2:empty{display:none}
+.ce-out{background:#F5F7FA;border:1px solid #D9E3EC;border-radius:9px;padding:9px 11px;
+  font-size:13px;color:#22334A;line-height:1.7}
+.sim-ctl{padding:5px 8px;border:1px solid #B9C4D4;border-radius:8px;background:#fff;
+  color:#3D4E68;font-size:14px;font-family:inherit;
+  -webkit-appearance:none;appearance:none;-webkit-tap-highlight-color:transparent}
+/* ⚠ 手机端原生 <select> 会弹系统全屏选择器、且在弹窗内选不动。
+   去掉 appearance 后由浏览器画下拉，配合下面 .sim-ctl 的自绘箭头。 */
+.sim-ctl-wrap{position:relative;display:inline-block;min-width:0;max-width:100%}
+.sim-ctl-wrap::after{content:"";position:absolute;right:8px;top:50%;margin-top:-3px;
+  width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;
+  border-top:5px solid #718ACC;pointer-events:none}
+.sim-ctl-wrap>.sim-ctl{width:100%;padding-right:24px;cursor:pointer}
+/* ⚠ 必须用 fixed：.sim-body 是 overflow-y:auto 的滚动容器，
+   absolute 定位的列表会被容器边界裁掉（表现为「点开后看不见/点不动」）。
+   打开时用 JS 按按钮位置设 left/width/top，再靠 fixed 逃出滚动容器。 */
+/* ⚠ max-height（2026-10-06 加长）：手机端模拟器已改为**全屏**，浮层可以放得更开 ——
+   `min(58vh,420px)` 在 387×844 只有 420px，一屏只能看到 ~15 项，91 件武器要滚很久。
+   改成 `min(76vh,620px)` → 844 高屏能到 620px（约 24 项）。
+   ⚠ `placeSelList()` 里有「下方空间不够就翻到按钮上方」的逻辑，会自动处理空间不足，
+     所以这里可以放心加大。 */
+.sim-sel-list{position:fixed;z-index:10050;display:block;
+  max-height:min(76vh,620px);overflow-y:auto;-webkit-overflow-scrolling:touch;
+  background:#fff;border:1px solid #94A6BE;border-radius:9px;
+  box-shadow:0 6px 22px rgba(32,48,72,.22);padding:0 0 4px;text-align:left}
+.sim-sel-list[hidden]{display:none}
+/* 🆕 搜索框：sticky 粘在浮层顶部（用户 2026-10-06）。
+   ⚠ z-index 必须高于 .sim-sel-group（也是 sticky）—— 否则搜索框会被分组标题盖住。 */
+.sim-sel-search{position:sticky;top:0;z-index:2;background:#fff;
+  padding:6px 8px 5px;border-bottom:1px solid #E3E9F0;
+  /* ⚠ 计数与输入框同行右侧（`flex`）—— 之前是块级独占一行，把结果列表挤到很下面。 */
+  display:flex;align-items:center;gap:8px}
+.sim-sel-search input{flex:1 1 auto;min-width:0;width:auto;padding:6px 9px;
+  border:1px solid #B9C4D4;border-radius:8px;
+  background:#F7F9FC;color:#22334a;font-size:14px;font-family:inherit;
+  -webkit-appearance:none;appearance:none}
+.sim-sel-search input:focus{outline:none;border-color:#718ACC;background:#fff}
+.sim-sel-search input::-webkit-search-cancel-button{cursor:pointer}
+/* ⚠ 计数在 flex 行内：必须 flex-shrink:0，否则「20 / 91」会被输入框挤掉 */
+.sim-sel-count{flex:0 0 auto;font-size:11px;color:#7A8AA0;text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap;min-height:0}
+.sim-sel-group{padding:5px 11px 2px;font-size:11px;color:#8A6412;font-weight:500;
+  background:#FFF9E8;position:sticky;top:0;z-index:1}
+.sim-sel-opt{padding:7px 11px;font-size:14px;color:#3D4E68;cursor:pointer;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.sim-sel-opt:hover{background:#EEF3FA}
+.sim-sel-opt.on{background:#E4ECF8;font-weight:500;color:#22334A}
+.sim-sel-none{padding:16px 11px;text-align:center;font-size:13px;color:#94A6BE}
+.sim-sel-none[hidden]{display:none}
+.sim-ctl:focus{outline:none;border-color:#718ACC}
+.sim-num{width:66px}
+.sim-sep{color:#94A6BE;font-weight:500}
+.sim-sw{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.sim-sw input{position:absolute;opacity:0;width:0;height:0}
+.sim-sw i{width:30px;height:16px;border-radius:999px;background:#C9D4E0;position:relative;transition:background .15s}
+.sim-sw i::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:#fff;transition:transform .15s}
+.sim-sw input:checked + i{background:#718ACC}
+.sim-sw input:checked + i::after{transform:translateX(14px)}
+.sim-btns{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.sim-btn{padding:7px 13px;border:1px solid #94A6BE;border-radius:10px;background:#fff;
+  color:#3D4E68;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit}
+.sim-btn.pri{background:#718ACC;border-color:#3774AE;color:#F8EFF3}
+.sim-btn.amber{background:#C89A3C;border-color:#8A6412;color:#fff}
+.sim-btn.ghost{background:#EDF0F4}
+.sim-btn.prot{border-color:#C89A3C;color:#8A6412}
+.sim-btn.prot.on{background:#C89A3C;border-color:#8A6412;color:#fff}
+/* ⚠ 保护卷按钮组：每个可用等级一个「+N 保护卷 ×n」，当前下一级才高亮 */
+.sim-prots{display:inline-flex;gap:5px;flex-wrap:wrap;align-items:center}
+.sim-btn.prot.dis{opacity:.45;cursor:not-allowed;border-color:#C6CFD9;color:#8A97A8}
+/* ⚠ 保护卷可用时整块「亮起」：金色描边 + 浅金底+ 右侧概率 */
+.sim-prot-wrap{display:inline-flex;align-items:center;gap:4px;padding:2px 6px 2px 2px;
+  border:1px solid transparent;border-radius:9px}
+.sim-prot-wrap.on{border-color:#E0BE72;background:#FFF6E2}
+.sim-prot-rate{font-size:12px;font-weight:600;color:#8A6412;min-width:30px;text-align:left;
+  font-variant-numeric:tabular-nums}
+.sim-prot-wrap:not(.on) .sim-prot-rate{color:#A9B6C6;font-weight:400}
+/* 装备列表浮层的挂载点：现在**只剩浮层本体**，触发入口是装备头（.sim-equip.clickable）。
+   ⚠ 2026-10-06 删除了 #simEquipSelBtn 触发按钮 + .sim-selhost 的 picked 状态：
+   装备头在「已选/未选」两种状态下都可点，浮层锚点也统一用它（见 simEquipMenu）。 */
+.sim-selhost{position:relative}
+/* ⚠ 开关行：双倍活动 / 圣水 / **修理**（修理按钮 2026-10-06 挪到这里）。
+   `.sim-row` 自带 `flex-wrap:wrap`，387px 放不下会自动换行，不用手写断点。 */
+.sim-row-sw{gap:14px;margin-bottom:8px}
+/* 修理按钮：损坏时高亮（金色），未损坏时置灰禁用。
+   ⚠ 与 .sim-btn.dis 复用置灰样式；padding 略小于普通按钮，避免挤开关行。 */
+.sim-btn.sim-repair{padding:6px 11px;font-size:12px}
+.sim-btn.sim-repair.dis{opacity:.45;cursor:not-allowed;background:#EDF0F4;
+  border-color:#C6CFD9;color:#8A97A8}
+/* 损坏提示（留在目标表下方，替代原先那个重复的修理按钮） */
+.sim-broken-note{margin-bottom:9px;font-size:12px;color:#C0392B}
+/* 参数行：批量强化目标 / 批量模拟 / 清零 —— 387px 下自动折行且间距一致 */
+.sim-row-params{gap:7px;row-gap:7px}
+.sim-row-params .sim-lb{margin-right:-2px}
+.sim-runs{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#5A6B85;white-space:nowrap}
+/* 参数区行内标签（强化目标等） */
+.sim-lb{font-size:12px;color:#5A6B85}
+/* 保护卷按钮上的「已用张数」小角标 */
+.sim-btn.prot .prot-used{display:inline-block;min-width:15px;padding:0 3px;margin-left:3px;
+  border-radius:7px;background:#8A6412;color:#fff;font-size:10px;font-weight:600;text-align:center}
+/* ⚠ 当前强化等级徽章：一眼看到「我现在是 +几」 */
+.sim-curbar{margin:0 0 9px;padding:8px 12px;border:1px solid #C9D4E4;border-radius:11px;
+  background:linear-gradient(180deg,#F7FAFF,#EDF2FA)}
+/* 上行：当前强化等级（大号） */
+.sim-cur-top{display:flex;align-items:baseline;gap:8px}
+.sim-cur-lb{font-size:12px;color:#5A6B85}
+.sim-cur-v{font-size:22px;font-weight:700;color:#3D5A80;line-height:1.1;
+  font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.sim-cur-sub{margin-left:auto;font-size:11px;color:#7A8AA0}
+/* 下行：紧贴徽章的下一级成功率（不再单独一个 nowbox） */
+.sim-cur-rate{margin-top:5px;padding-top:5px;border-top:1px dashed #C9D4E4;
+  font-size:12px;color:#5A6B85}
+.sim-cur-rate.dim{color:#93A2B4}
+.sim-cur-rate b{color:#3D5A80;font-weight:600}
+.sim-cur-rate b.ok{color:#1E8449}
+.sim-cur-rate i{font-style:normal;color:#8A6412}
+.sim-cur-rate .sim-stk{margin-left:4px}
+.sim-cur-prot{display:inline-block;margin-left:5px;padding:0 5px;border-radius:6px;
+  background:#F6E7C4;color:#8A6412;font-size:10px;font-weight:600}
+.sim-curbar.bad{border-color:#E0B4B0;background:linear-gradient(180deg,#FFF6F5,#FDEAE8)}
+.sim-curbar.bad .sim-cur-v{color:#C0392B}
+/* KPI 里的保护卷格：上下两层分别显示 +N / +M 的消耗件数 */
+.sim-kpi.prot .sim-kpi-v2{display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.25}
+.sim-kpi.prot .sim-kpi-v2 span{white-space:nowrap;font-size:11px;color:#5A7799;font-weight:400}
+.sim-kpi.prot .sim-kpi-v2 b{font-weight:600;color:#8A6412}
+.sim-kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-bottom:10px}
+.sim-kpi{background:#f5f7fa;border-radius:8px;padding:7px 4px;text-align:center}
+.sim-kpi-v{font-size:19px;font-weight:500;color:#22334a;line-height:1.15}
+.sim-kpi-k{font-size:11px;color:#5A6B85;margin-top:2px}
+.sim-kpi.ok .sim-kpi-v{color:#2C7267}
+.sim-kpi.bad .sim-kpi-v{color:#C0392B}
+/* ⚠ 「未达标」：卷轴格标黄（区别于 bad 红=失败、ok 绿=成功） */
+.sim-kpi.warn{background:#FFF6E0}
+.sim-kpi.warn .sim-kpi-v{color:#8A6412}
+/* ⚠ 未达标横幅：说清「实际到几级 / 目标几级 / 是否撞护栏」 */
+.sim-warnbar{background:#FFF6E0;border:1px solid #F0D9A0;border-radius:8px;
+  padding:7px 9px;margin-bottom:9px;font-size:12px;color:#8A6412;line-height:1.5}
+/* ⚠ 日志只渲染最近 60 条，这里告诉玩家总数，别让他以为只有 60 条 */
+.sim-log-more{padding:3px 5px 5px;font-size:11px;color:#7A8AA0;text-align:center;
+  border-bottom:1px solid #EEF2F7;margin-bottom:3px}
+.sim-log{background:#fff;border:1px solid #E3E9F0;border-radius:9px;padding:5px;margin-bottom:9px;
+  max-height:150px;overflow-y:auto}
+.sim-log-i{display:flex;gap:7px;padding:2px 5px;font-size:12px}
+.sim-log-i:nth-child(even){background:#f7f9fc}
+.sim-log-n{color:#94A6BE;min-width:22px}
+.sim-log-t{font-weight:500}
+.sim-log-i.ok .sim-log-t{color:#2C7267}
+.sim-log-i.fail .sim-log-t{color:#C0392B}
+.sim-log-d{color:#4D5A75}
+.sim-table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:9px}
+.sim-table th{background:#e0e7f3;color:#3D4E68;padding:5px 4px;font-weight:500;text-align:center}
+.sim-table td{padding:4px;text-align:center;border-top:1px solid #eef2f7}
+.sim-table tbody tr:nth-child(even) td{background:#f7f9fc}
+.sim-table tr.cur td{background:#FFF1CC!important}
+.sim-now{font-size:12px;color:#5A6B85}
+.sim-nowbox{background:#F4F7FB;border:1px solid #D9E3EC;border-radius:9px;padding:6px 10px;
+  margin-bottom:9px;font-size:12px;color:#5A6B85}
+.sim-nowbox b{color:#22334A;font-weight:500}
+.sim-nowbox b.ok{color:#2C7267}
+.sim-nowbox i{font-style:normal;color:#C08A2E}
+.sim-bv{background:#FFF9E8;border:1px solid #F0DCA8;border-radius:9px;padding:7px 10px;margin-bottom:9px}
+.sim-bv b{display:block;font-size:12px;color:#8A6412;font-weight:500;margin-bottom:4px}
+.sim-bv span{display:block;font-size:13px;color:#22334a;font-weight:500}
+.sim-bv span i{font-style:normal;font-size:11px;color:#A98A3E;margin-left:7px;font-weight:400}
+.sim-stk{display:inline-block;margin-left:4px;padding:0 4px;border-radius:5px;background:#EAF1F8;
+color:#5A7799;font-size:11px;line-height:15px;white-space:nowrap}
+.sim-note{background:#FFF7E6;border:1px solid #F0D999;border-radius:9px;padding:7px 10px;
+  font-size:12px;color:#7A5B12;margin-bottom:9px;line-height:1.6}
+.sim-hint{background:#f5f7fa;border-radius:9px;padding:7px 10px;font-size:12px;color:#5A6B85;margin-bottom:9px}
+.sim-after{background:#f5f7fa;border:1px solid #D9E3EC;border-radius:9px;padding:7px 10px;margin-bottom:9px}
+.sim-after b{display:block;font-size:12px;color:#8A6412;margin-bottom:5px;font-weight:500}
+.sim-after span{display:inline-block;margin:0 10px 3px 0;font-size:12px;color:#3D4E68}
+.sim-after span i{font-style:normal;color:#94A6BE;margin-right:3px}
+.sim-hist{display:flex;align-items:center;gap:6px;padding:2px 0;font-size:11px}
+.sim-hist-k{width:58px;text-align:right;color:#3D4E68;font-weight:500;flex:0 0 auto}
+.sim-hist-w{flex:1;height:12px;background:#EDF1F6;border-radius:6px;overflow:hidden}
+.sim-hist-f{height:100%;background:#C89A3C}
+.sim-hist-v{width:52px;color:#4D5A75;flex:0 0 auto}
+@media(max-width:400px){
+  .sim-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sim-equip-icon{width:44px;height:44px}
+  .sim-btn{padding:6px 11px;font-size:12px}
+}
 </style>
 </head>
 
@@ -312,6 +609,9 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
 <button class="type-btn" data-type="shields">盾牌</button>
 <button class="type-btn" data-type="quivers">箭袋</button>
 <button class="type-btn" data-type="charms">护身符</button>
+</div>
+<div id="simBar">
+  <button class="sim-entry" id="simEntryBtn" onclick="openSim()">装备模拟器</button>
 </div>
 <div class="pagination" id="topPagination">
   <button class="page-btn" id="firstTop">首页</button>
@@ -355,6 +655,28 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
     <div class="modal-title" id="rateModalTitle">获得概率</div>
     <div class="reset-body" id="rateModalBody"></div>
     <button class="modal-close" id="rateModalClose" onclick="closeRateModal()">关闭</button>
+  </div>
+</div>
+<!-- ===== 装备模拟器（强化 + 重置，单弹窗，顶部 武器/防具 页签）===== -->
+<div class="modal-backdrop" id="simModal">
+  <div class="modal-content sim-modal">
+    <div class="sim-tabs">
+      <button class="sim-tab active" id="simTabWeapon" data-cat="weapon" onclick="simSwitchCat('weapon')">武器</button>
+      <button class="sim-tab" id="simTabArmor" data-cat="armor" onclick="simSwitchCat('armor')">防具</button>
+    </div>
+    <div class="sim-body" id="simBody"></div>
+    <button class="modal-close" onclick="closeSim()">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内强化弹窗 -->
+<div class="modal-backdrop" id="cardEnhModal" onclick="if(event.target===this)closeCardEnh()">
+  <div class="modal-content reset-modal" style="max-width:420px">
+    <div class="modal-title" id="cardEnhName">强化</div>
+    <div class="reset-body">
+      <div id="cardEnhBody"></div>
+    </div>
+    <button class="modal-close" id="cardEnhClose" onclick="closeCardEnh()">关闭</button>
   </div>
 </div>
 
@@ -413,9 +735,26 @@ function twomApplyLangData(L){
   langConfig.searchPlaceholder = E.searchPlaceholder || {};
   langConfig.pageText          = E.pageText          || {};
   langConfig.btnText           = E.btnText           || {};
+  /* 卡片内强化的文案（equip.html 专用）。
+     ⚠ lang.json 的 enhText 存成 {lang:{key}}，要拉平成 {key:{lang}} 才能被 tr() 读到。 */
+  langConfig.enhText = {};
+  (function(){
+    var src = E.enhText || {}, k;
+    /* ⚠ enhText 结构是 {lang:{key}}，要显式按四个语言各自拷贝。
+       （原先 for(lg in src) 的写法在 lang.json 里 enhText 不是顶层可枚举时拿不到值） */
+    var LANGS = ["cn","en","ja","kr"];
+    for(k=0;k<LANGS.length;k++){
+      var lg = LANGS[k], m = src[lg];
+      if(!m) continue;
+      for(var kk in m) langConfig.enhText[kk] = langConfig.enhText[kk] || {};
+      for(var kk2 in m) langConfig.enhText[kk2][lg] = m[kk2];
+    }
+  })();
   langConfig.attrName          = E.attrName          || {};
   langConfig.job               = E.jobName           || {};
   langConfig.setValue          = E.setValue          || {};
+  /* equip.html 专用扩展（装备模拟器 simText），其余 7 页无此行，别同步过去 */
+  langConfig.simText           = E.simText           || {};
   langConfig.rarity            = (L&&L.rarity)       || {};
   twomUpdateNav();
 }
@@ -527,6 +866,14 @@ function tr(key, type){
 }
 
 function updateLangText(){
+  /* 徽章与数值都依赖 lang.json -> 语言切换后重渲染卡片 + 恢复数值 */
+  if(typeof renderCards === "function"){
+    try{
+      renderCards();
+      /* 重渲染会清空 .enh-val，按 CARD_ENH 恢复 */
+      if(typeof ceRestoreVals === "function") ceRestoreVals();
+    }catch(e){}
+  }
   document.getElementById('searchBox').placeholder = langConfig.searchPlaceholder[currentLang];
   document.getElementById('prevTop').innerText = document.getElementById('prevBot').innerText = tr('prev','btnText');
   document.getElementById('nextTop').innerText = document.getElementById('nextBot').innerText = tr('next','btnText');
@@ -897,6 +1244,7 @@ function renderCards(){
           <div class="tag-rarity" style="background:${rc.bg}">${rarity}</div>
           <div class="tag-job">${jobIconsHtml}</div>
         </div>
+        ${ceCanEnhance(item) ? `<div class="enh-slot">${cardEnhTag(item)}<div class="enh-val" id="enhVal-${cardEnhKey(nameCnKey)}"></div></div>` : ""}
       </div>
       <div class="equip-stats">${statsHtml}</div>
       <div class="card-actions">
@@ -909,6 +1257,289 @@ function renderCards(){
     grid.appendChild(card);
   });
 }
+
+/* ---------- 卡片内强化（不依赖模拟器，直接算强化后数值） ---------- */
+const CARD_ENH = {};   /* nameCn -> 强化等级 */
+
+/* ⚠ 卡片区统一用这个转义：模拟器里的 ceEsc() 在其 IIFE 闭包内，跨不到这里 */
+function ceTr(key, type, fb){
+  let v = tr(key, type);
+  if(!v || v === key) v = fb || "";
+  return v;
+}
+function ceEsc(x){
+  return String(x == null ? "" : x).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+function enhTypeOf(type){
+  /* 与 enhance_rate.json 的 enhanceableTypes 保持一致 */
+  return (type === "weapon") ? "weapon" : "armor";
+}
+function enhCat(item){
+  return (item.type === "weapon") ? "weapon" : "armor";
+}
+/* ⚠ 可强化部位白名单：**必须与 enhance_rate.json 的 enhanceableTypes 完全一致**。
+   披风 / 项链 / 戒指 / 腰带 游戏里不能用盔甲卷强化 —— 数据侧本来就没列，
+   但卡片渲染是无脑给所有装备画徽章的，所以这里必须按同一份名单过滤，
+   否则会出现「点进去弹窗写『暂无强化数据』」的死按钮。 */
+const CE_ENHANCABLE = ["weapon","armor","hats","gloves","shoes","shields","charms","quivers"];
+/* 挂到 window 便于真机验收脚本核对「页面白名单 == enhance_rate.json 的 enhanceableTypes」 */
+window.CE_ENHANCABLE_LIST = CE_ENHANCABLE;
+function ceCanEnhance(item){
+  return !!(item && CE_ENHANCABLE.indexOf(item.type) >= 0);
+}
+function cardEnhKey(nameCn){
+  /* id 只能用安全字符：中文 + 去掉标点 */
+  return String(nameCn||"").replace(/[^\u4e00-\u9fa5A-Za-z0-9]/g,"");
+}
+/* ⚠ 传 item（不是只传名字）：白名单过滤需要 type，光有 name_cn 判断不了。
+   不可强化的部位返回空串 → 连 .enh-slot 容器一起不渲染，卡片右上角完全干净。 */
+function cardEnhTag(item){
+  const nameCn = item && item.name_cn;
+  if(!nameCn || !ceCanEnhance(item)) return "";
+  const lv = CARD_ENH[nameCn] || 0;
+  /* ceTr：取不到时回退中文，不会显示 key 字面量 */
+  const txt = lv > 0 ? "+" + lv : ceTr("enhance","btnText","强化");
+  return `<button class="tag-enh${lv>0?" on":""}" data-cn="${nameCn.replace(/'/g,"")}" ` +
+         `onclick="openCardEnh(this.dataset.cn)">${ceEsc(txt)}</button>`;
+}
+window.openCardEnh = function(nameCn){
+  var it = null, i;
+  for(i=0;i<allItems.length;i++) if((allItems[i].name_cn||"").trim() === nameCn){ it = allItems[i]; break; }
+  /* 找不到（名字不存在）-> 关掉弹窗，别留上一次的残留内容 */
+  if(!it){ closeCardEnh(); return; }
+  /* ⚠ 兜底：披风/项链/戒指/腰带不可强化。即使按钮已被白名单挡住，
+     也不排除 console 或历史书签直接调 openCardEnh(name)，这里再拦一道。 */
+  if(!ceCanEnhance(it)){ closeCardEnh(); return; }
+  var cur = CARD_ENH[nameCn] || 0;
+  /* ⚠ 一次性拼好再赋值：循环里反复 `innerHTML +=` 会每次重新解析、option 会丢 */
+  var opts = [], mx = 15;
+  for(i=0;i<=mx;i++) opts.push('<option value="' + i + '"' + (i===cur?" selected":"") + '>+' + i + '</option>');
+  document.getElementById("cardEnhBody").innerHTML =
+      '<div class="ce-sel"><label>' + ceEsc(ceTr("enhLevel","btnText","强化等级")) +
+      ' <select class="sim-ctl" id="cardEnhSel" onchange="cardEnhPick(this.dataset.cn,+this.value)" data-cn="' +
+      ceEsc(nameCn) + '">' + opts.join('') + '</select></label>' +
+      '<div class="ce-out" id="cardEnhOut">' + ceEsc(ceLines(it, cur).line1) + '</div>' +
+      '<div class="ce-out2" id="cardEnhOut2">' + ceEsc(ceLines(it, cur).line2) + '</div>';
+  var cb = document.getElementById("cardEnhClose");
+  if(cb) cb.textContent = tr("close","btnText");
+  document.getElementById("cardEnhName").textContent =
+    (currentLang==="cn" ? (it.name_cn||it.name)
+     : currentLang==="ja" ? (it.name_ja||it.name)
+     : currentLang==="kr" ? (it.name_kr||it.name) : it.name);
+  document.getElementById("cardEnhModal").style.display = "flex";
+  if(typeof lockPageScroll === "function") lockPageScroll(true);
+  ceLoadData().then(function(){
+    var o = document.getElementById("cardEnhOut");
+    var sel = document.getElementById("cardEnhSel");
+    if(o && sel){
+      var L2 = ceLines(it, +sel.value);
+      o.innerHTML = ceEsc(L2.line1);
+      var o2 = document.getElementById("cardEnhOut2");
+      if(o2) o2.innerHTML = ceEsc(L2.line2);
+    }
+    /* 同步卡片徽章下方的强化后数值 */
+    var vEl = document.getElementById("enhVal-" + cardEnhKey(nameCn));
+    if(vEl){
+      if((+sel.value) > 0){
+        var L4 = ceLines(it, +sel.value);
+        vEl.innerHTML = '<b>' + ceEsc(L4.statName) + '</b><span>' + ceEsc(L4.fin) + '</span>';
+      } else vEl.textContent = "";
+    }
+  });
+};
+window.cardEnhPick = function(nameCn, lv){
+  CARD_ENH[nameCn] = lv;
+  if(!CE_DATA){ ceLoadData().then(function(){ window.cardEnhPick(nameCn, lv); }); return; }
+  var out = document.getElementById("cardEnhOut");
+  if(!out) return;
+  var it = null, i;
+  for(i=0;i<allItems.length;i++) if((allItems[i].name_cn||"").trim() === nameCn){ it = allItems[i]; break; }
+  if(!it){ closeCardEnh(); return; }
+  if(it){
+    var L1 = ceLines(it, lv);
+    out.innerHTML = ceEsc(L1.line1);
+    var o2b = document.getElementById("cardEnhOut2");
+    if(o2b) o2b.innerHTML = ceEsc(L1.line2);
+  }
+  /* 同步下拉值 + 标题（下次打开直接显示当前等级） */
+  var sel0 = document.getElementById("cardEnhSel");
+  if(sel0) sel0.value = String(lv);
+  /* 卡片徽章下方显示强化后数值 */
+  if(it){
+    var k = cardEnhKey(nameCn);
+    var vEl = document.getElementById("enhVal-" + k);
+    if(vEl){
+      /* 属性名一行、数值一行（用户要求） */
+      if(lv > 0){
+        var L3 = ceLines(it, lv);
+        vEl.innerHTML = '<b>' + ceEsc(L3.statName) + '</b><span>' + ceEsc(L3.fin) + '</span>';
+      } else vEl.textContent = "";
+    }
+  }
+  /* 刷新卡片徽章 */
+  document.querySelectorAll(".tag-enh").forEach(function(b){
+    if(b.dataset.cn !== nameCn) return;
+    b.textContent = lv > 0 ? "+" + lv : tr("enhance","btnText");
+    b.className = "tag-enh" + (lv>0 ? " on" : "");
+  });
+};
+window.closeCardEnh = function(){
+  document.getElementById("cardEnhModal").style.display = "none";
+  if(typeof lockPageScroll === "function") lockPageScroll(false);
+};
+
+/* 纯计算：强化后的主属性。卡片区自己懒加载 enhance_rate.json，
+   不依赖模拟器是否打开（模拟器的 ENH 是打开时才 fetch 的）。 */
+let CE_DATA = null, CE_LOADING = null;
+function ceLoadData(){
+  if(CE_DATA) return Promise.resolve(CE_DATA);
+  if(CE_LOADING) return CE_LOADING;
+  CE_LOADING = fetch("equipment_data/enhance_rate.json")
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      CE_DATA = { staff:(j.bonus&&j.bonus.staffExtra)||{}, byKind:(j.bonus&&j.bonus.byKind)||{},
+                  armorTable:(j.bonus&&j.bonus.armorTable)||{},
+                  staffBonus:(j.bonus&&j.bonus.staffExtraBonus)||{} };
+      return CE_DATA;
+    })
+    .catch(function(){ CE_DATA = {staff:{},byKind:{},armorTable:{},staffBonus:{}}; return CE_DATA; });
+  return CE_LOADING;
+}
+function cardEnhText(it, lv){
+  if(!lv) return ceTr("enhNone","btnText","未强化");
+  var t = CE_DATA;
+  if(!t) return ceTr("enhLoading","btnText","加载中…");
+  var bv = null, kind = "", xb = 0;
+  if(it.type === "weapon" || it.type === "charms" || it.type === "quivers"){
+    /* 法杖有**独立**的额外强化值表（键带等级后缀如「古代法杖（30）」） */
+    if(it.type === "weapon"){ bv = ceStaffExtra(it, lv); xb = ceStaffBonus(it) || 0; }
+    if(bv == null){
+      kind = (it.type === "weapon") ? "melee" : "charmQuiver";
+      if(t.byKind && t.byKind[kind]) bv = t.byKind[kind][lv];
+      xb = 0;
+    }
+    if(bv == null) return ceTr("enhTbd","btnText","暂无强化数据");
+    /* ⚠ 箭袋站点数据里**没有 attack 字段**，主属性是 precision —— 要按字段取，不能写死 attack */
+    var isQuiver = (it.type === "quivers");
+    var a = String((isQuiver ? it.precision : it.attack) == null ? "" : (isQuiver ? it.precision : it.attack)).trim();
+    if(!a) return ceTr("enhTbd","btnText","暂无强化数据");
+    var ab = a.split("~"), lo = parseFloat(ab[0]), hi = ab.length>1 ? parseFloat(ab[1]) : lo;
+    if(isNaN(lo)) return ceTr("enhTbd","btnText","暂无强化数据");
+    /* 强化值 = 百分数；法杖额外值在此之上再叠加（法师装备独立数值） */
+    /* ⚠ xb = 表外额外百分点（古代法杖 +10），要并进百分数一起算 final */
+    var pct = (bv + xb) / 100;
+    /* ⚠ 保留一位小数：Math.round 会把 17.8 变18，损失精度 */
+    var f = function(n){ return (Math.round(n * 10) / 10).toFixed(1); };
+    var fLo = lo*pct + lo, fHi = hi*pct + hi;
+    return {
+      stat: isQuiver ? "precision" : "attack",
+      raw: a,
+      add: "+" + (bv + xb) + "%",
+      extra: xb,                       /* 表外额外百分点（古代法杖 +10），弹窗里要写明 */
+      fin: (f(fLo) === f(fHi)) ? f(fLo) : f(fLo) + " ~ " + f(fHi)
+    };
+  }
+  /* 防御力类（头/衣/手/脚/盾） */
+  var dv = parseInt(it.armor, 10);
+  if(isNaN(dv) || !t.armorTable || !t.armorTable[String(dv)]) return ceTr("enhTbd","btnText","暂无强化数据");
+  var row = t.armorTable[String(dv)];
+  var n2 = row[Math.min(lv, row.length-1)];
+  /* ⚠ 防御力是**整数**，不显示小数点（armorTable 30 行 × 16 级实测全为整数，取整不丢精度）。
+     攻击力/精准才保留一位小数 —— 别把两者混成一个格式化函数。 */
+  return { stat: "armor", raw: String(dv), add: "+" + (n2 - dv), extra: 0,
+           fin: String(Math.round(n2)) };
+}
+/* 法杖额外强化值：表键「古代法杖（30）」-> 站点名「古代法杖」，要剥掉括号等级。
+   站点名可能是简体、表里是繁体 -> 再做一次简繁归一（逐字映射常见的几组）。 */
+const CE_T2S = {"渾":"浑","沌":"沌","純":"纯","真":"真","實":"实","習":"习","樹":"树","樺":"桦",
+  "鐵":"铁","飾":"饰","戰":"战","鬥":"斗","漁":"渔","農":"农","手":"手","藝":"艺","華":"华",
+  "盜":"盗","聖":"圣","騎":"骑","鎧":"铠","鎖":"锁","戒":"戒","項":"项","珠":"珠","寶":"宝"};
+function ceT2S(x){
+  return String(x||"").replace(/[渾沌純實習樹鐵飾戰漁農藝華盜聖騎鎧鎖]/g, function(c){ return CE_T2S[c] || c; });
+}
+function ceStaffExtra(it, lv){
+  var t = CE_DATA;
+  if(!t || !t.staff) return null;
+  var raw = String(it.name_cn || "").trim();
+  if(!raw) return null;
+  var keys = Object.keys(t.staff);
+  for(var i=0;i<keys.length;i++){
+    /* 表键 = 站点名 + 可选「（等级）」 */
+    var base = keys[i].replace(/[（(]\d+[）)]\s*$/, "").trim();
+    if(base === raw || ceT2S(base) === ceT2S(raw)){
+      var arr = t.staff[keys[i]];
+      return arr ? arr[Math.min(lv, arr.length-1)] : null;
+    }
+  }
+  return null;
+}
+/* ⚠ 古代法杖在 staffExtra 表值之外**额外再加 10 个百分点**（用户 2026-10-05 确认）。
+   匹配规则与 ceStaffExtra 相同（键名可带「（等级）」、做简繁归一）。
+   返回 0 = 没有额外加成。注意是**百分点 +10**，不是 ×1.1。 */
+function ceStaffBonus(it){
+  var t = CE_DATA;
+  if(!t || !t.staffBonus) return 0;
+  var raw = String((it&&it.name_cn) || "").trim();
+  if(!raw) return 0;
+  var keys = Object.keys(t.staffBonus);
+  for(var i=0;i<keys.length;i++){
+    var base = keys[i].replace(/[（(]\d+[）)]\s*$/, "").trim();
+    if(base === raw || ceT2S(base) === ceT2S(raw)) return Number(t.staffBonus[keys[i]]) || 0;
+  }
+  return 0;
+}
+/* 强化数值渲染：弹窗两行 / 卡片下方一行 */
+/* ⚠ 属性名必须按**主属性**取，不能一律写「攻击力」：
+     盔甲卷可强化的 7 类里只有头/衣/手/脚/盾是防御力，
+     护身符=攻击力、箭袋=精准（都在防具 tab，但主属性不同）。 */
+const CE_STAT_NAME = { attack:"atkName", precision:"precName", armor:"defName" };
+const CE_STAT_FB   = { attack:"攻击力", precision:"精准", armor:"防御力" };
+function ceLines(it, lv){
+  var v = cardEnhText(it, lv);
+  if(typeof v === "string") return { line1: v, line2: "" };
+  var k = CE_STAT_NAME[v.stat] || "defName";
+  /* ⚠ 古代法杖在表值之外还有额外百分点，必须在弹窗里写明，否则玩家会以为算错 */
+  var l1 = ceTr("atkFrom2","enhText","原") + " " + v.raw + "　" + ceTr("atkAdd","enhText","加成") + " " + v.add;
+  if(v.extra) l1 += "（" + ceTr("enhExtraTip","btnText","额外增加") + " " + v.extra + "%）";
+  /* statName 单独给卡片下方用（属性名一行、数值一行） */
+  return {
+    line1: l1,
+    line2: ceTr(k, "enhText", CE_STAT_FB[v.stat] || "防御力") + " " + v.fin,
+    statName: ceTr(k, "enhText", CE_STAT_FB[v.stat] || "防御力"),
+    fin: v.fin
+  };
+}
+
+/* 挂到 window 便于调试与真机验证（不影响功能） */
+window.CE_DATA_G = function(){ return CE_DATA; };
+window.ceLoadData2 = ceLoadData;
+window.openCardEnh2 = function(cn,lv){ openCardEnh(cn); if(lv!=null) cardEnhPick(cn,lv); };
+/* 卡片重渲染 / 语言切换后恢复「徽章下方数值」 */
+function ceRestoreVals(){
+  if(!CE_DATA) return;
+  for(var cn in CARD_ENH){
+    var lv = CARD_ENH[cn];
+    if(!lv) continue;
+    var it = null, i;
+    for(i=0;i<allItems.length;i++) if((allItems[i].name_cn||"").trim() === cn){ it = allItems[i]; break; }
+    if(!it) continue;
+    var vEl = document.getElementById("enhVal-" + cardEnhKey(cn));
+    if(!vEl) continue;
+    var L = ceLines(it, lv);
+    vEl.innerHTML = '<b>' + ceEsc(L.statName) + '</b><span>' + ceEsc(L.fin) + '</span>';
+  }
+}
+window.ceFindItem = function(cn){ for(var i=0;i<allItems.length;i++) if((allItems[i].name_cn||"").trim()===cn) return allItems[i]; return null; };
+window.ceTextOf = function(cn,lv){ var it=ceFindItem(cn); if(!it) return "没找到装备"; var v=cardEnhText(it,lv); return typeof v==="string"? v : (v.raw+" | +"+v.add+" | "+v.fin); };
+/* 调试/验收用：直接拿强化后数值与主属性名（不经过渲染层，便于逐条断言格式） */
+window.ceStatOf = function(cn,lv){
+  var it=ceFindItem(cn); if(!it) return null;
+  var v=cardEnhText(it,lv); if(typeof v==="string") return {text:v};
+  return {stat:v.stat, raw:v.raw, add:v.add, fin:v.fin, extra:v.extra};
+};
+window.ceTableKeys = function(){ return Object.keys(CE_DATA.armorTable).slice(0,8).join(","); };
 
 // 定位装备（接收参数 equip）
 function jumpToEquipFromUrl(){
@@ -1503,6 +2134,1312 @@ loadMyJson();
     updatePageInfo = function(){ var r = _orig.apply(this, arguments); refresh(); return r; };
   }
   refresh();
+})();
+</script>
+<script>
+/* ===== 装备模拟器（强化 + 重置）单弹窗 · 顶部 武器/防具 页签 ===== */
+(function(){
+  var ENH = null;
+  var S = {
+    cat: "weapon", name: "", item: null,
+    from: 0, to: 10, stack: 0, runs: 1,
+    dbl: false, holy: false,
+    /* ⚠ 保护卷从「全局开关」改为**按强化等级的单次标记**（用户 2026-10-05）。
+       官方数据 protection：武器 +8=10% / +9=1%；防具 +6=10% / +7=1%。
+       旧实现是全局 on/off，开着就一直生效 —— 与实际「只在特定等级用一张」不符。 */
+    protAt: {},          /* { '8': 2 } = 目标 +8 预留 2 张；键=目标等级，值=剩余张数 */
+    enh: null,
+    rWay: "book", rBooks: 0, rStones: 0, rTimes: 0, rCounts: null, rLast: null
+  };
+
+  var T = {
+    cn: {open:"装备模拟器",tabW:"武器",tabA:"防具",secE:"强化模拟",secR:"重置模拟",
+      pick:"请选择装备…",from:"起始",to:"目标",fails:"已失败",
+      swDbl:"双倍活动",swHoly:"圣水",swProt:"保护卷",
+      quick:"一键强化",once:"强化 1 次",batch:"批量模拟",clear:"清零",
+      kScroll:"卷轴",kOk:"成功",kFail:"失败",kStone:"起源石",kHoly:"圣水",kRepair:"维修",
+      cTarget:"目标",cBase:"基础",cBless:"成功率",cCount:"次数",
+      notReach:"未达标",guardHit:"超出计算上限（%s 次）仍未到达目标 +%s",
+      subAttr:"副属性",noSubAttr:"暂无副属性数据",
+      searchEquip:"搜索装备名…",noEquipMatch:"没有匹配的装备",
+      slowConfirm:"目标 +%s 需要的卷轴量极大（失败会归零，每级都要重爬）。实测 +13 约 500 万张需 4 秒，+14 可能超过 3 分钟，页面会暂时无响应。确定要继续吗？",
+      logMore:"共 %s 条，仅显示最近 %s 条",
+      ok:"成功",fail:"失败",
+      bonusAt:"强化后数值",finalAtk:"",atkFinal:"攻击力",atkFrom:"原",atkAdd:"加成",bvOnly:"强化加成",nowRate:"当前成功率",stkN2:"叠%s次",
+      defAt:"防御力 %s → %s (+%s)",precAt:"精准 %s → %s (+%s)",
+      way:"消耗方式",book:"重置的古书",stone:"起源石",used:"累计",
+      rOnce:"重置 1 次",rBatch:"批量",rAfter:"重置后属性",rAvg:"平均",repairBtn:"修理",repairIdle:"装备未损坏，无需修理",repairCost:"−%s石",brokenNote:"装备已损坏，修理后才能继续强化",
+      noReset:"该装备暂无官方重置概率数据",noEquip:"请先在上方选择装备",
+      keepProt:"保护卷维持",holyUsed:"圣水-1",stkN:"(基础%s +额外%s)",broken:"损坏→0",needRepair:"需修理",kBroken:"损坏",
+      repairBack:"维修 −%s石　修回 +%s",reach:"达成目标",
+      theory:"理论",actual:"实测",expect:"期望值",hitRate:"达标率",
+      scrollAuto:"",scrollSuffix:"卷",close:"关闭",tbd:"待补充"},
+    en: {open:"Simulator",tabW:"Weapon",tabA:"Armor",secE:"Enhancement",secR:"Reset",
+      pick:"Select equipment…",from:"From",to:"To",fails:"Fails",
+      swDbl:"Rate boost",swHoly:"Holy water",swProt:"Protection",
+      quick:"Quick",once:"Try once",batch:"Batch",clear:"Clear",
+      kScroll:"Scrolls",kOk:"Success",kFail:"Fails",kStone:"Stones",kHoly:"Holy",kRepair:"Repair",
+      cTarget:"Target",cBase:"Base",cBless:"Rate",cCount:"Count",
+      notReach:"NOT REACHED",guardHit:"Hit the compute cap (%s tries) without reaching +%s",
+      subAttr:"Sub-attributes",noSubAttr:"No sub-attribute data",
+      searchEquip:"Search equipment…",noEquipMatch:"No matching equipment",
+      slowConfirm:"Target +%s needs an enormous number of scrolls (a failure resets you to +0, so every level must be re-climbed). Measured: +13 is about 5M scrolls and takes ~4s; +14 may take over 3 minutes and the page will freeze. Continue anyway?",
+      logMore:"%s records in total, showing the latest %s",
+      ok:"OK",fail:"Fail",
+      bonusAt:"Value after",finalAtk:"",atkFinal:"ATK",atkFrom:"base",atkAdd:"bonus",bvOnly:"Enhance bonus",nowRate:"Current rate",stkN2:"+%s",
+      defAt:"DEF %s → %s (+%s)",precAt:"Precision %s → %s (+%s)",
+      way:"Cost",book:"Reset Book",stone:"Gemstone",used:"Used",
+      rOnce:"Reset once",rBatch:"Batch",rAfter:"Result after reset",rAvg:"Average",repairBtn:"Repair",repairIdle:"Not broken — nothing to repair",repairCost:"−%s stones",brokenNote:"Broken — repair to continue",
+      noReset:"No official reset data for this item",noEquip:"Select an item first",
+      keepProt:"Protected",holyUsed:"Holy -1",stkN:"(base %s +%s)",broken:"Broken→0",needRepair:"needs repair",kBroken:"Broken",
+      repairBack:"Repair −%s stones　back to +%s",reach:"Reached",
+      theory:"Theory",actual:"Actual",expect:"Expected",hitRate:"Hit rate",
+      scrollAuto:"Scroll",scrollSuffix:"",close:"Close",tbd:"TBD"},
+    ja: {open:"シミュレーター",tabW:"武器",tabA:"防具",secE:"強化",secR:"リセット",
+      pick:"装備を選択…",from:"開始",to:"目標",fails:"失敗数",
+      swDbl:"確率UP",swHoly:"聖水",swProt:"保護巻物",
+      quick:"一括強化",once:"1回強化",batch:"一括実行",clear:"クリア",
+      kScroll:"巻物",kOk:"成功",kFail:"失敗",kStone:"起源石",kHoly:"聖水",kRepair:"修理",
+      cTarget:"目標",cBase:"基礎",cBless:"成功率",cCount:"回数",
+      notReach:"未到達",guardHit:"計算上限（%s 回）に達しても目標 +%s に到達せず",
+      subAttr:"サブ属性",noSubAttr:"サブ属性データなし",
+      searchEquip:"装備名を検索…",noEquipMatch:"一致する装備がありません",
+      slowConfirm:"目標 +%s は必要な巻軸量が膨大です（失敗すると +0 に戻るため、等級ごとにやり直しになります）。実測で +13 は約 500 万枚・4 秒、+14 は 3 分を超える可能性があり、ページが一時的に応答しなくなります。続行しますか？",
+      logMore:"全 %s 件、直近 %s 件のみ表示",
+      ok:"成功",fail:"失敗",
+      bonusAt:"強化後の数値",finalAtk:"",atkFinal:"攻撃力",atkFrom:"元",atkAdd:"ボーナス",bvOnly:"強化ボーナス",nowRate:"現在成功率",stkN2:"+%s",
+      defAt:"防御力 %s → %s (+%s)",precAt:"精度 %s → %s (+%s)",
+      way:"消費",book:"リセットの古書",stone:"起源石",used:"累計",
+      rOnce:"1回リセット",rBatch:"一括",rAfter:"リセット後の属性",rAvg:"平均",repairBtn:"修理",repairIdle:"破損していないため修理不要",repairCost:"−%s石",brokenNote:"破損状態。修理が必要",
+      noReset:"公式リセット確率データがありません",noEquip:"先に装備を選択してください",
+      keepProt:"保護維持",holyUsed:"聖水-1",stkN:"(基本%s +追加%s)",broken:"破損→0",needRepair:"修理が必要",kBroken:"破損",
+      repairBack:"修理 −%s石　+%sに戻る",reach:"達成",
+      theory:"理論",actual:"実測",expect:"期待値",hitRate:"達成率",
+      scrollAuto:"巻物",scrollSuffix:"",close:"閉じる",tbd:"未定"},
+    kr: {open:"시뮬레이터",tabW:"무기",tabA:"방어구",secE:"강화",secR:"초기화",
+      pick:"장비를 선택…",from:"시작",to:"목표",fails:"실패",
+      swDbl:"확률 증가",swHoly:"성수",swProt:"보호 두루마리",
+      quick:"일괄 강화",once:"1회 강화",batch:"일괄 실행",clear:"초기화",
+      kScroll:"두루마리",kOk:"성공",kFail:"실패",kStone:"기원석",kHoly:"성수",kRepair:"수리",
+      cTarget:"목표",cBase:"기본",cBless:"성공률",cCount:"횟수",
+      notReach:"미도달",guardHit:"계산 한도(%s회)에 도달했으나 목표 +%s에 도달하지 못함",
+      subAttr:"부속성",noSubAttr:"부속성 데이터 없음",
+      searchEquip:"장비명 검색…",noEquipMatch:"일치하는 장비 없음",
+      slowConfirm:"목표 +%s은(는) 필요한 두루마리 수가 매우 큽니다(실패 시 +0으로 돌아가 등급마다 다시 시도). 실측 +13은 약 500만 장으로 4초, +14는 3분 이상 걸려 페이지가 잠시 멈출 수 있습니다. 계속할까요?",
+      logMore:"전체 %s건 중 최근 %s건만 표시",
+      ok:"성공",fail:"실패",
+      bonusAt:"강화 후 수치",finalAtk:"",atkFinal:"공격력",atkFrom:"기본",atkAdd:"보너스",bvOnly:"강화 보너스",nowRate:"현재 성공률",stkN2:"+%s",
+      defAt:"방어력 %s → %s (+%s)",precAt:"정밀도 %s → %s (+%s)",
+      way:"소비",book:"초기화 고서",stone:"기원석",used:"누적",
+      rOnce:"1회 초기화",rBatch:"일괄",rAfter:"초기화 후 속성",rAvg:"평균",repairBtn:"수리",repairIdle:"파손되지 않아 수리 불필요",repairCost:"−%s석",brokenNote:"파손 상태 — 수리 후 계속 가능",
+      noReset:"공식 초기화 확률 데이터가 없습니다",noEquip:"먼저 장비를 선택하세요",
+      keepProt:"보호 유지",holyUsed:"성수-1",stkN:"(기본 %s +추가 %s)",broken:"파손→0",needRepair:"수리 필요",kBroken:"파손",
+      repairBack:"수리 −%s석　+%s로 복구",reach:"달성",
+      theory:"이론",actual:"실측",expect:"기대값",hitRate:"달성률",
+      scrollAuto:"두루마리",scrollSuffix:"",close:"닫기",tbd:"미정"}
+  };
+  function tx(k){
+    var L = (typeof langConfig !== "undefined" && langConfig.simText) || null;
+    if(L && L[k]){ var v = L[k][currentLang] || L[k].cn; if(v) return v; }
+    var d = T[currentLang] || T.cn;
+    return (d[k] != null) ? d[k] : (T.cn[k] != null ? T.cn[k] : k);
+  }
+  function esc(s){
+    return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+      .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+  function fmt(k){ var a=Array.prototype.slice.call(arguments,1), s=tx(k);
+    for(var i=0;i<a.length;i++) s = s.replace("%s", a[i]); return s; }
+  /* 千分位：卷轴数能到千万级，「50000000」挤爆格子，「50,000,000」才读得出来 */
+  function fmtNum(n){
+    n = Math.round(Number(n) || 0);
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  /* ---------- 数据 ---------- */
+  function ensure(){
+    if(ENH) return Promise.resolve(ENH);
+    return fetch("equipment_data/enhance_rate.json").then(function(r){ return r.json(); })
+      .then(function(j){ ENH = j; return ENH; });
+  }
+  function poolOf(cat){
+    var types = (ENH && ENH.enhanceableTypes[cat]) || [];
+    var src = (typeof allItems !== "undefined") ? allItems : [];
+    return src.filter(function(x){
+      return types.indexOf(x.type) >= 0 && String(x.name_cn || "").trim();
+    });
+  }
+  function dispName(x){
+    var m = {cn:x.name_cn, en:x.name, ja:x.name_ja, kr:x.name_kr};
+    return m[currentLang] || x.name_cn || x.name || "";
+  }
+  function typeLabel(t){
+    var M = (typeof typeLangMap !== "undefined") ? typeLangMap : null;
+    if(M && M[t]) return M[t][currentLang] || M[t].cn || t;
+    return t;
+  }
+  function gradeOf(item){
+    var lv = parseInt(item.level, 10) || 0, gs = ENH.scroll.grades;
+    for(var i=0;i<gs.length;i++) if(lv>=gs[i].levelRange[0] && lv<=gs[i].levelRange[1]) return gs[i].grade;
+    return "?";
+  }
+  function rarityLabel(r){
+    var M = (typeof langConfig !== "undefined" && langConfig.rarity) ? langConfig.rarity : null;
+    var key = r || "一般";
+    if(M && M[key]) return M[key][currentLang] || M[key].cn || key;
+    return key;
+  }
+
+  /* ---------- 概率 ---------- */
+  function baseRate(cat, lv){
+    var b = ENH.base[cat][lv];
+    return (b == null) ? 100 : b;
+  }
+  /* 保护卷的可用等级：武器 +8/+9，防具 +6/+7（来自 enhance_rate.json 的 protection）。
+     返回 {lv, rate} 或 null。 */
+  function protLevel(cat, lv){
+    var P = ENH.protection[cat];
+    if(!P || P.rate[lv] == null) return null;
+    if(lv < P.fromLevel) return null;
+    return {lv:lv, rate:P.rate[lv]};
+  }
+  function protLevels(cat){
+    var P = ENH.protection[cat], out = [];
+    if(!P) return out;
+    for(var k in P.rate){ var lv = Number(k); if(lv >= P.fromLevel) out.push({lv:lv, rate:P.rate[lv]}); }
+    out.sort(function(a,b){ return a.lv - b.lv; });
+    return out;
+  }
+  /* ⚠⚠ 等级口径：**保护卷按「当前强化度」标记**（用户 2026-10-05）。
+     玩家在 +7 时点保护卷 = 冲 +8 时生效（失败维持 +7）；在 +8 时点 = 冲 +9 时生效。
+     而 enhance_rate.json 的 protection.rate 是按**目标等级**索引的
+     （武器 8=10% / 9=1%，防具 6=10% / 7=1%），所以当前等级 = 目标等级 - 1。 */
+  function protCurLevels(cat){
+    return protLevels(cat).map(function(x){
+      return {cur:x.lv - 1, target:x.lv, rate:x.rate};
+    });
+  }
+  /* 该**当前等级**是否已预留保护卷（单次使用，不吃双倍） */
+  function hasProtAt(cat, cur){
+    if(!protLevel(cat, cur + 1)) return false;   /* 下一级不是可用等级 -> 不可用 */
+    return (S.protAt && S.protAt[cur]) > 0;
+  }
+  function effBase(cat, lv, dbl, prot){
+    /* ⚠ 保护卷是「按等级、单次」的：只有该等级被预留了才用它的费率 */
+    if(prot){
+      var P = protLevel(cat, lv);
+      if(P) return P.rate;
+    }
+    var b = baseRate(cat, lv);
+    if(dbl && lv >= ENH.doubleEvent[cat].fromLevel)
+      b = Math.min(ENH.doubleEvent.cap, b * ENH.doubleEvent[cat].factor);
+    return b;
+  }
+  function rateAt(cat, lv, stack, o){
+    var b = effBase(cat, lv, o.dbl, o.prot);
+    return Math.min(100, b * (1 + ENH.blessing.stepRatio * stack));
+  }
+  function repairCost(item, cat){
+    var c = ENH.repair.cost[gradeOf(item)];
+    if(!c) return 0;
+    var key = ENH.repair.rarityMap[item.rarity || ""] || ENH.repair.rarityMap[""];
+    var v = c[cat === "weapon" ? "weapon" : "armor"][key];
+    return v || 0;
+  }
+  function restoreRoll(cat){
+    var rows = ENH.repair.restoreChance[cat] || [[1,100]], tot=0, i;
+    for(i=0;i<rows.length;i++) tot += rows[i][1];
+    var r = Math.random()*tot, s=0;
+    for(i=0;i<rows.length;i++){ s += rows[i][1]; if(r < s) return rows[i][0]; }
+    return rows[rows.length-1][0];
+  }
+
+  /* ---------- 强化数值 ---------- */
+  function matchStaff(cn){
+    var ex = ENH.bonus.staffExtra;
+    if(ex[cn]) return ex[cn];
+    var base = String(cn).replace(/[（(].*?[)）]/g, "").trim();
+    for(var k in ex){
+      if(String(k).replace(/[（(].*?[)）]/g, "").trim() === base) return ex[k];
+    }
+    return null;
+  }
+  /* ⚠ 表外额外百分点（古代法杖 +10）。匹配规则与 matchStaff 一致。
+     是**百分点 +10**，不是 ×1.1 —— 用户 2026-10-05 确认的口径。 */
+  function matchStaffBonus(cn){
+    var ex = ENH.bonus.staffExtraBonus;
+    if(!ex) return 0;
+    if(ex[cn] != null) return Number(ex[cn]) || 0;
+    var base = String(cn).replace(/[（(].*?[)）]/g, "").trim();
+    for(var k in ex){
+      if(String(k).replace(/[（(].*?[)）]/g, "").trim() === base) return Number(ex[k]) || 0;
+    }
+    return 0;
+  }
+  /* ⚠⚠ 不能按 tab 类别（cat）判 —— 护身符/箭袋**也在「防具」tab 里**（都用盔甲卷轴、
+     走防具那套概率表），但主属性是 攻击力/精準，不走防具表。
+     必须按 `mainStatOf` 的主属性分流：
+       "armor"    -> 查 armorTable（防具度 × 强化等级）= 头/衣/手/脚/盾
+       "attack"   -> 查 byKind[kindOf[type]] = 武器(基础) / 护身符(charmQuiver)
+       "precision"-> 查 byKind[charmQuiver] = 箭袋
+     法杖另有「额外强化值」表，命中则优先用它。 */
+  function isDefenseKind(item){
+    return (ENH.mainStatOf[item.type] || "") === "armor";
+  }
+  function bonusValue(item, cat, lv){
+    var li = Math.min(lv, ENH.maxEnhance);
+    if(!isDefenseKind(item)){
+      var st = matchStaff(item.name_cn);
+      if(st) return st[li] + matchStaffBonus(item.name_cn);
+      var kind = ENH.bonus.kindOf[item.type] || "melee";
+      var arr = ENH.bonus.byKind[kind];
+      return arr ? arr[li] : null;
+    }
+    var a = parseInt(item.armor, 10);
+    if(isNaN(a)) return null;
+    var t = ENH.bonus.armorTable[String(a)];
+    return t ? t[Math.min(li, t.length-1)] : null;
+  }
+
+  /* 最终攻击力 = (武器基本攻击力 + 额外强化值) / 100
+     ⚠ all_equip.attack 是**区间字符串**（如 "1~3"），两端都要算，不能只算下限。
+     解析失败返回 null（界面显示「待补充」，不编数字）。 */
+  function finalAtk(item, bv){
+    if(bv == null) return null;
+    var a = String(item.attack == null ? "" : item.attack).trim();
+    if(!a) return null;
+    var lo, hi;
+    if(a.indexOf("~") >= 0){
+      var ab = a.split("~");
+      lo = parseFloat(ab[0]); hi = parseFloat(ab[1]);
+      if(isNaN(lo)) lo = NaN;
+      if(isNaN(hi)) hi = lo;
+    } else {
+      lo = hi = parseFloat(a);
+    }
+    if(isNaN(lo)) return null;
+    /* 强化值表里的数字是**百分数**（+1=11 → 11%、+15=264 → 264%）：
+       加成 = 攻击力 × 强化值%，区间两端各自算 —— lo×bv% + lo / hi×bv% + hi。
+       ⚠ 不要写成 lo + bv（那是把百分数当倍率，会把 7 算成 271）。 */
+    var r = bv / 100;
+    return {lo:lo * r + lo, hi:hi * r + hi, add:bv, rawLo:lo, rawHi:hi};
+  }
+  function fmtAtk(v){
+    if(!v) return "";
+    var r = function(n){ return String(Math.round(n)); };
+    return v.lo === v.hi ? r(v.lo) : r(v.lo) + " ~ " + r(v.hi);
+  }
+
+  /* ---------- 重置 ---------- */
+  function resetData(item){
+    return (typeof resetMap !== "undefined") ? resetMap[String(item.name_cn || "").trim()] : null;
+  }
+  function resetCostBy(item, way){
+    if(typeof resetCostOf !== "function") return 0;
+    var c = resetCostOf(item);
+    if(!c) return 0;
+    return way === "book" ? c[1] : c[0];
+  }
+  function resetRoll(rd){
+    var out = [], i, j;
+    for(j=0;j<rd.stats.length;j++){
+      var st = rd.stats[j], cum=[], s=0;
+      for(i=0;i<st.rows.length;i++){ s += st.rows[i][1]; cum.push(s); }
+      cum[cum.length-1] = 100;
+      var r = Math.random()*100, lo=0, hi=cum.length-1;
+      while(lo<hi){ var m=(lo+hi)>>1; if(cum[m] < r) lo=m+1; else hi=m; }
+      out.push({key:st.key, name:st.name, val:st.rows[lo][0]});
+    }
+    return out;
+  }
+
+  /* ---------- 强化模拟一次 ---------- */
+  function newEnhState(item, cat){
+    /* ⚠ cur 必须从**起始强化度 S.from** 起算，不能硬编码成安全段上限（武器6/防具4）。
+       否则新建 state 后 cur 已经在上限，「一键强化」的循环一次都不跑 ——
+       卷轴/成功数全是 0，玩家看到「按了没反应」。 */
+    var c0 = (typeof S !== "undefined" && S.from != null) ? S.from : 0;
+    c0 = Math.max(0, Math.min(ENH.maxEnhance, c0));
+    /* ⚠ stk = 普通卷的叠加层数；stkP = **保护卷自己的**叠加层数（两套独立） */
+    return {item:item, cat:cat, cur:c0, stk:{}, stkP:{}, tries:0,
+      ok:0, fail:0, scrolls:0, holy:0, prot:0, stone:0, repairs:0,
+      /* ⚠ guardHit = 这一轮**没跑到 target** 就撞上 ENH.guardMax 护栏被截断。
+         UI 用它显示「未达标」—— 绝不能靠 `cur === target` 判断（护栏会骗）。 */
+      guardHit:false,
+      levelN:{}, stkMax:{}, pMax:{}, stkPMax:{}, pPMax:{}, protBy:{}, log:[]};
+  }
+  /* 把界面上的「已失败 n 次」播种到**每一个危险等级**（各等级独立累加） */
+  function seedStk(e){
+    e.stk = {}; e.stkP = {};
+    var n0 = S.stack || 0;
+    if(!n0) return;
+    /* 两套都播种：玩家填的「已失败 n 次」对普通卷和保护卷各自成立 */
+    for(var lv = ENH.safeMax[e.cat] + 1; lv <= ENH.maxEnhance; lv++){ e.stk[lv] = n0; e.stkP[lv] = n0; }
+  }
+  function stepEnhance(st, o){
+    var t = st.cur + 1;
+    /* ⚠ 保护卷按**当前等级 st.cur** 判定（+7 点的卷用在冲 +8 上），且是「单次」：
+       这一等级有预留才算，用掉即扣。不用再读全局开关（已移除 S.prot）。 */
+    var useProt = hasProtAt(st.cat, st.cur);
+    /* ⚠⚠ 叠加层数是**两套独立的**：普通卷记 stk[t]，保护卷记 stkP[t]（用户 2026-10-05）。
+       「保护卷的叠加概率」= 保护卷基础率 × (1 + 10% × 保护卷自己的失败次数)，
+       不能把普通卷攒的层数混进来 —— 否则 30% 的普通卷叠了 5 层会让 10% 的保护卷
+       直接变成 15%，与官方规则不符。 */
+    var sk = useProt ? (st.stkP[t] || 0) : (st.stk[t] || 0);
+    var op = {dbl:o.dbl, holy:o.holy, prot:useProt};
+    var p = rateAt(st.cat, t, sk, op);
+    /* ⚠ 圣水/保护卷只在**危险段**（100% 之外）才消耗 —— 安全段必定成功，用它们没有意义 */
+    var risky = t > ENH.safeMax[st.cat];
+    st.tries++; st.scrolls += ENH.scroll.perTry;
+    if(o.holy && risky) st.holy++;
+    if(useProt && risky){
+      st.prot++;
+      if(!st.protBy) st.protBy = {};
+      /* ⚠ 分桶键 = **当前等级**（与按钮/KPI 标签同一口径） */
+      st.protBy[st.cur] = (st.protBy[st.cur]||0) + 1;
+      S.protAt[st.cur] = (S.protAt[st.cur]||1) - 1;
+    }
+    st.levelN[t] = (st.levelN[t]||0) + 1;
+    /* ⚠ 直接记录**实际用过的最大层数**，不要用概率反推：
+       反推的分母若用「不含双倍的基础值」，开双倍时会成倍高估（+8 叠1层被算成叠12层）。 */
+    if(risky){
+      /* ⚠ 保护卷与普通卷的最大层数/最大率也分开记，目标表要分别显示 */
+      if(useProt){
+        if((st.stkPMax[t]||0) < sk) st.stkPMax[t] = sk;
+        if((st.pPMax[t]||0) < p) st.pPMax[t] = p;
+      } else {
+        if((st.stkMax[t]||0) < sk) st.stkMax[t] = sk;
+        if((st.pMax[t]||0) < p) st.pMax[t] = p;
+      }
+    }
+    var good = Math.random()*100 < p;
+    var rec = {n:st.tries, lv:t, p:p, b:effBase(st.cat, t, o.dbl, useProt),
+               ok:good, note:"", after:st.cur};
+    if(good){
+      /* ⚠ 叠加是**按等级各自独立**的：+8 成功只清 +8 的层数，+7 的层数不动。
+         两套表都清（当前这次走的是哪套就清哪套，另一套留着继续攒）。 */
+      st.cur = t;
+      if(useProt) st.stkP[t] = 0; else st.stk[t] = 0;
+      st.ok++; rec.after = t;
+    } else {
+      if(useProt) st.stkP[t] = sk + 1; else st.stk[t] = sk + 1;
+      st.fail++;
+      if(useProt){
+        /* 保护卷：强化度维持不变（不清零），只消耗一张 */
+        rec.note = tx("keepProt") + " +" + st.cur;
+      } else if(o.holy){
+        /* 圣水失败：归零但免维修，日志只记「圣水-1」 */
+        st.cur = 0; rec.note = tx("holyUsed"); rec.after = 0;
+      } else {
+        /* 损坏 → 归零且**不再自动修理**，本轮模拟到此为止（修理是玩家的单独操作） */
+        st.cur = 0; st.broken = true; st.repairs++;
+        rec.note = tx("broken") + "　" + tx("needRepair");
+        rec.after = 0;
+      }
+    }
+    /* 只记录危险等级（100% 的安全段不进日志） */
+    if(t > ENH.safeMax[st.cat]) st.log.push(rec);
+    return good;
+  }
+  function runEnhance(st, o, autoRepair){
+    var guard = 0;
+    /* ⚠⚠⚠ 护栏从 100000 抬到 **50000000**（用户 2026-10-05）。
+       为什么必须抬：**失败会归零**（st.cur=0），每失败一次都要从 +0 重爬，
+       而武器 +9 起基础率只有 5% —— 需要的卷轴是**指数级**增长的（实测均值）：
+         +7 ≈ 18 张 / +8 ≈ 112 / +9 ≈ 1,159 / +10 ≈ 10,612
+         +11 ≈ 124,011 / +12 ≈ 1,221,027 / +13 ≈ 16,792,250
+       旧的 100000 护栏从 **+11 起就必然被拦**，导致：
+         - KPI「卷轴」恒显 100000（= guard 上限，perTry=1）；
+         - `agg.cur` 被写死成 S.to → 界面假装「已达 +12」，其实那一轮早中断了；
+         - 日志停在断点。
+       抬到 5e7 覆盖到 +13 的量级。
+       ⚠⚠ 护栏仍然必须存在：+14 以上随机游走可能永不收敛，没有护栏 = 页面永久死循环。
+       **护栏触发时必须如实上报 `st.guardHit`，不许假装成功**（见 simBatch / simQuick）。 */
+    st.guardHit = false;
+    while(st.cur < st.target && guard < ENH.guardMax){
+      if(st.broken){
+        if(!autoRepair) break;
+        var c = repairCost(st.item, st.cat);
+        st.stone += c; st.repairs++;
+        st.cur = restoreRoll(st.cat);
+        st.broken = false;
+        st.log.push({n:st.tries, lv:st.cur, p:0, ok:false, isRepair:true,
+                     note:fmt("repairBack", c, st.cur), after:st.cur});
+      }
+      stepEnhance(st, o); guard++;
+    }
+    /* ⚠ 到达护栏 = **没跑到目标**，必须记下来给 UI 如实上报 */
+    if(st.cur < st.target) st.guardHit = true;
+    return st;
+  }
+
+  /* ---------- 渲染 ---------- */
+  function iconHtml(item){
+    var f = item.icon || "";
+    if(!f) return '<div class="sim-equip-icon"></div>';
+    return '<img class="sim-equip-icon" src="' + esc("equip_icons/" + encodeURI(f)) +
+           '" alt="" onerror="this.style.visibility=\'hidden\'">';
+  }
+  /* ⚠ 手机端原生 <select> 会弹系统选择器、在弹窗里划不动 —— 改成自绘下拉：
+     按钮显示当前值，点开一个可滑动的分组列表（.sim-sel-list，max-height 46vh）。 */
+  function optHtml(cat){
+    var pool = poolOf(cat), g = {}, order = [], i, k;
+    for(i=0;i<pool.length;i++){
+      var ty = pool[i].type;
+      if(!g[ty]){ g[ty] = []; order.push(ty); }
+      g[ty].push(pool[i]);
+    }
+    /* ⚠⚠ 触发按钮 `#simEquipSelBtn` **已整块删除**（用户 2026-10-06）。
+       它和装备头（.sim-equip.clickable）功能完全重复 —— 两者都调 `simEquipMenu()`。
+       旧按钮存在的唯一原因是 `placeSelList(btn, L)` 要一个元素算浮层坐标；
+       现在 `simEquipMenu()` 改为**直接用装备头当锚点**，按钮彻底不需要了。
+       ⚠ 保留 `#simEquipSelWrap` 这层 div：它是 `.sim-sel-list` 的父级，
+         删掉会改变浮层的 initial containing block（position:fixed 不受影响，但别冒险）。 */
+    var h = '<div class="sim-sel" id="simEquipSelWrap">';
+    h += '<div class="sim-sel-list" id="simEquipSelList" hidden>';
+    /* 🆕 搜索框（用户 2026-10-06）：**固定在浮层顶部**，随浮层一起滚、不参与过滤。
+       ⚠ 必须用 `position:sticky;top:0` 粘在列表容器里 —— 若放在容器外会被 max-height 裁掉；
+         放在流内则随列表滚动，滚几屏就看不见了（等于没有）。
+       ⚠ 放在 `<div class="sim-sel-group">`（本来就是 sticky）之后，z-index 更高以盖住分组标题。 */
+    h += '<div class="sim-sel-search">' +
+         '<input type="search" id="simEquipSearch" autocomplete="off" spellcheck="false"' +
+         ' placeholder="' + esc(tx("searchEquip")) + '"' +
+         ' oninput="simFilterEquip(this.value)"' +
+         ' onclick="event.stopPropagation()">' +
+         '<div class="sim-sel-count" id="simEquipCount"></div>' +
+         '</div>';
+    /* ⚠ 已去掉「请选择装备」这个占位选项（用户 2026-10-05）：
+       头部已经明确提示未选择，占位项点了等于「清空选择」，反而让人困惑。
+       每项挂 data-s（简体名）供 simFilterEquip 做中文匹配。 */
+    for(k=0;k<order.length;k++){
+      var t = order[k];
+      h += '<div class="sim-sel-group" data-t="' + esc(t) + '">' + esc(typeLabel(t)) + '</div>';
+      for(i=0;i<g[t].length;i++){
+        var x = g[t][i];
+        h += '<div class="sim-sel-opt' + (x.name === S.name ? " on" : "") +
+             '" data-v="' + esc(x.name) + '" data-s="' + esc(x.name_cn || x.name) + '"' +
+             ' data-t="' + esc(t) + '" onclick="simPick(this.dataset.v)">' +
+             esc(dispName(x)) + '</div>';
+      }
+    }
+    /* 无结果占位：由 simFilterEquip 显示/隐藏（默认 hidden，别一开浮层就顶一条） */
+    h += '<div class="sim-sel-none" id="simEquipNone" hidden>' + esc(tx("noEquipMatch")) + '</div>';
+    h += '</div></div>';
+    return h;
+  }
+  /* 过滤装备（用户 2026-10-06）：**只改 class，不重建 DOM** ——
+     重建会让输入框失焦、输入法中断、每次按键都重排 300+ 节点。
+     ⚠ 匹配四语名（当前语言名 + 简中名 + 英文名）任一命中即可，中文输入也能搜。 */
+  function simFilterEquip(q){
+    var L = document.getElementById("simEquipSelList");
+    if(!L) return;
+    q = String(q == null ? "" : q).trim();
+    var lc = q.toLowerCase();
+    var opts = L.querySelectorAll(".sim-sel-opt");
+    var i, o, shown = 0;
+    for(i=0;i<opts.length;i++){
+      o = opts[i];
+      /* ⚠ 匹配三路：简中名（data-s）+ 当前语言显示名（textContent）+ 英文名（data-v）。
+         这样中/英/日/韩任一语言下都能搜到同一件装备。 */
+      var hay = (o.getAttribute("data-s") || "") + " " + o.textContent +
+                " " + (o.getAttribute("data-v") || "");
+      var hit = !lc || hay.toLowerCase().indexOf(lc) >= 0;
+      o.style.display = hit ? "" : "none";
+      if(hit) shown++;
+    }
+    /* 整组都没命中就藏掉分组标题（否则「武器」下面空一块） */
+    var groups = L.querySelectorAll(".sim-sel-group");
+    for(i=0;i<groups.length;i++){
+      var g = groups[i];
+      var t = g.getAttribute("data-t");
+      var inGroup = L.querySelectorAll('.sim-sel-opt[data-t="' + (window.CSS && CSS.escape ? CSS.escape(t) : t) + '"]');
+      var n = 0;
+      for(var j=0;j<inGroup.length;j++) if(inGroup[j].style.display === "") n++;
+      g.style.display = (q && n === 0) ? "none" : "";
+    }
+    var c = document.getElementById("simEquipCount");
+    if(c) c.textContent = q ? (shown + " / " + opts.length) : "";
+    var none = document.getElementById("simEquipNone");
+    if(none) none.hidden = shown !== 0;
+  }
+  /* ⚠⚠ 必须挂到 window —— 搜索框用内联 `oninput="simFilterEquip(this.value)"` 调用。
+     闭包里的 function 声明**不会**成为全局属性，内联属性解析不到（ReferenceError）。
+     参见同文件 window.simPick / window.simSet 的同款做法。 */
+  window.simFilterEquip = simFilterEquip;
+  function lvOptions(cat, sel){
+    var mx = ENH.maxEnhance, h = "", i;
+    for(i=0;i<=mx;i++) h += '<option value="'+i+'"'+(i===sel?" selected":"")+'>+'+i+'</option>';
+    return h;
+  }
+  /* ⚠ stateKey（写进 S 的属性名）与 txtKey（lang.json 文案 key）必须分开，
+     曾经混用导致 simSet('swDbl') 写错字段，开关视觉上"点了没反应"。 */
+  /* 🆕 修理按钮（挪到开关行圣水之后，用户 2026-10-06）。
+     ⚠ 未损坏时 disabled 置灰：位置固定、玩家能预期，但不会误点。
+     ⚠ 费用用 `repairCost()` 实时算（按装备等级档 + 稀有度），文案是「修理 −N石」。 */
+  function repairBtnHtml(cat, broken){
+    var cost = 0;
+    try{ cost = repairCost(S.item, cat) || 0; }catch(e){ cost = 0; }
+    return '<button class="sim-btn amber sim-repair' + (broken ? " on" : " dis") + '"' +
+           (broken ? ' onclick="simRepair()"' : ' disabled') +
+           ' title="' + esc(broken ? tx("repairBtn") : tx("repairIdle")) + '">' +
+           esc(tx("repairBtn")) + ' ' + esc(fmt("repairCost", cost)) + '</button>';
+  }
+  function sw(stateKey, txtKey, on){
+    var id = "sim" + stateKey.charAt(0).toUpperCase() + stateKey.slice(1);
+    return '<label class="sim-sw"><input type="checkbox" id="'+id+'"'+(on?" checked":"")+
+           ' onchange="simSet(\''+stateKey+'\',this.checked)"><i></i><span>'+esc(tx(txtKey))+'</span></label>';
+  }
+  /* 装备头的原始属性文字（未强化值）：攻击力 7~35 / 防御力 11 / 精准 8。
+     ⚠ 属性分流必须按 `ENH.mainStatOf[it.type]`：护身符/箭袋在「防具」tab 但主属性是攻击力/精准。
+        箭袋数据里**没有 attack 字段**，主属性是 precision。 */
+  function equipRawStatTxt(it){
+    var ms = (ENH && ENH.mainStatOf) ? (ENH.mainStatOf[it.type] || "") : "";
+    /* ⚠ 属性名取 lang.json 的 `enhText` 命名空间（simText 里没有），
+       用 ceTr(key, ns, fallback) —— tx() 不支持第二个命名空间参数，会取不到。 */
+    if(ms === "armor"){
+      var a0 = parseInt(it.armor, 10);
+      if(isNaN(a0)) return "";
+      return ceTr("defName", "enhText", "防御力") + " " + a0;
+    }
+    if(ms === "precision"){
+      var p0 = parseInt(it.precision, 10);
+      if(isNaN(p0)) return "";
+      return ceTr("precName", "enhText", "精准") + " " + p0;
+    }
+    var at = String(it.attack == null ? "" : it.attack).trim();
+    if(!at) return "";
+    return ceTr("atkName", "enhText", "攻击力") + " " + at;
+  }
+  /* ---------- 副属性（装备头右侧） ----------
+     ⚠⚠ 数据源 = **装备卡片同一套**：`all_equip.json` 的装备对象自带副属性字段
+       （如 `str:"2~10"` / `hit:"0~12"` / `lightning_Resist:"0~11"`），值**已经是范围字符串**。
+       用户 2026-10-06 明确要求「用装备卡片上写的就行」—— 不要另找数据源。
+       （我先前绕去 option_reset.json 拼 min~max 是多此一举，见下方「为什么不用它」）
+
+     副属性 = `statKeys` 去掉**主属性**（precision/attack/armor）后的其余字段。
+     ⚠ 主属性走 `ENH.mainStatOf[it.type]`（护身符/箭袋的 armor/precision 也在「防具」tab 里，
+       不能靠 type 判断），这里只排除那三个**固定 key**，与卡片逻辑一致。
+
+     ⚠ 为什么不用 option_reset.json（留档，别再犯）：
+       - 覆盖只有 **162/307**，而卡片字段覆盖 **290/307**（多 128 件）。
+       - 精度更差：卡片写 `str:"2~10"`，option_reset 只能给 `0~10` ——
+         因为它把「数值 0」也当成一个可能档位，min 被拉到 0，**和卡片显示的口径不一致**。
+       - 382 个可比对条目里有 70 个数值对不上（都是这个「0 档位」造成的）。
+     ⚠ 17 件（皮衣/皮革盔甲/实习魔法师袍/圆圆帽/库伊帽/面具/圣诞老人帽/老旧帽子…）确实无副属性字段
+       → 显式写「暂无副属性数据」，留空白会被误读成「渲染失败」。 */
+  var SIM_SUBATTR_KEYS = ["speed","block","hp","mana","hp_regen","mana_regen","hit","cri",
+                         "str","dex","int","deadly","ice_resist","fire_resist","magic_resist",
+                         "lightning_Resist","move","set2","set3"];
+  function subAttrList(it){
+    if(!it) return null;
+    var out = [];
+    for(var i=0;i<SIM_SUBATTR_KEYS.length;i++){
+      var k = SIM_SUBATTR_KEYS[i];
+      var v = it[k];
+      /* ⚠ 判定与卡片 `renderCards` 完全一致：null / "" / 0 / "0" 都算「没有」 */
+      if(v == null || v === "" || v === 0 || v === "0") continue;
+      out.push({ key:k, name:ceTr(k, "attrName", k), val:statValueText(k, v) });
+    }
+    return out.length ? out : null;
+  }
+  function subAttrHtml(it){
+    var list = subAttrList(it);
+    if(!list) return '<div class="sim-subattr empty">' + esc(tx("noSubAttr")) + '</div>';
+    var rows = "";
+    for(var i=0;i<list.length;i++){
+      rows += '<div class="sim-subattr-i">' +
+              '<span class="sim-subattr-k">' + esc(list[i].name) + '</span>' +
+              '<span class="sim-subattr-v">' + esc(list[i].val) + '</span>' +
+              '</div>';
+    }
+    return '<div class="sim-subattr"><div class="sim-subattr-t">' + esc(tx("subAttr")) + '</div>' + rows + '</div>';
+  }
+  function render(){
+    var b = document.getElementById("simBody");
+    if(!b) return;
+    /* ⚠⚠ 下拉列表是**浮层**：为躲 overflow 裁剪，`placeSelList` 会把它 appendChild 到 body。
+       它因此**不在 simBody 里**，render() 重建 simBody.innerHTML 时回收不掉它。
+       而 optHtml() 又会在新 HTML 里生成一个同名 #simEquipSelList ——
+       于是页面里累积出多个同 id 元素，getElementById 命中的是最早那个（旧的、还开着）。
+       表现：选完装备框不消失、点按钮也关不掉。
+       修法：render 前先把 body 下的旧浮层**摘除**（不是设 hidden）。 */
+    if(typeof window.simSelDrop === "function") window.simSelDrop();
+    else {
+      /* 兜底：window.simSelDrop 可能尚未赋值（openSim 首次就调render）-> 直接按 class 摘 */
+      var olds = document.querySelectorAll("body > .sim-sel-list");
+      for(var oi=0; oi<olds.length; oi++) olds[oi].parentNode.removeChild(olds[oi]);
+    }
+    var it = S.item, cat = S.cat;
+    var h = "";
+    /* 装备头：**整块可点**打开装备列表（用户 2026-10-05：点旁边的图标切换装备）。
+       下拉列表本身移到头部里（见optHtml），不再单独一行。 */
+    h += '<div class="sim-equip clickable"' +
+         ' onclick="simEquipMenu(this)" title="' + esc(tx("changeEquip")) + '"' +
+         '>' + (it ? iconHtml(it) : '<div class="sim-equip-icon"></div>') +
+         '<div class="sim-equip-txt">' +
+           '<div class="sim-equip-name">' + (it ? esc(dispName(it)) : esc(tx("pick"))) +
+             (it ? '<span class="sim-swap">' + esc(tx("changeEquip")) + '</span>' : '') + '</div>' +
+           (it ? '<div class="sim-equip-sub">Lv' + esc(it.level) + ' · ' + esc(typeLabel(it.type)) +
+                ' · ' + esc(rarityLabel(it.rarity)) + ' · ' + esc(tx("scrollAuto")) + ' ' + esc(gradeOf(it)) + esc(tx("scrollSuffix")) + '</div>' : '') +
+           /* ⚠ 装备名下方直接显示**原始属性数值**（用户 2026-10-05：「要显示装备现在的属性数值」）。
+              用ceStatOf(名字, 0) 拿 lv=0 的 raw 值 —— 那是未强化前的基准攻击力/防御力/精准。 */
+           (it ? (function(){
+              var raw = equipRawStatTxt(it);
+              return raw ? '<div class="sim-equip-stat">' + esc(raw) + '</div>' : '';
+            })() : '') +
+         '</div>' +
+         /* ⚠ 副属性：放在装备头**右侧**（用户 2026-10-06）。
+           `.sim-equip` 是 flex，图标 + 文本 + 副属性三栏；窄屏靠 CSS 换行到下一行。 */
+         (it ? subAttrHtml(it) : '') +
+         '</div>';
+    /* ⚠ 装备列表浮层直接挂在装备头下方（不再有触发按钮，2026-10-06）。
+       未选装备时装备头也可点，所以这里**不需要** picked 状态类。 */
+    h += '<div class="sim-selhost" id="simEquipSelHost">' + optHtml(cat) + '</div>';
+    /* ⚠ 未选装备时**不再显示「请选择装备…」提示**（用户 2026-10-05）：
+       装备头已经是可点入口（带 hover 背景 + 「点击切换装备」提示），再挂一条提示纯属冗余。
+       只渲染装备头 + 选择按钮，其余内容等选了装备再出。 */
+    if(!it){ b.innerHTML = h; return; }
+
+    /* 强化后数值：放在参数区**上方**，随起始强化度实时变化 */
+    /* ⚠ 跟随**当前实际强化度**：跑过模拟/点过强化后用 e.cur（会随每次强化变），
+       还没跑过时用起始值（现固定 0 = 未强化） */
+    var curLv = (S.enh && S.enh.cur != null) ? S.enh.cur : S.from;
+    var bvt = bonusValue(it, cat, curLv);
+    if(bvt != null){
+      h += '<div class="sim-bv"><b>' + esc(tx("bonusAt")) + ' +' + curLv + '</b>';
+      /* 按**主属性**分流（护身符/箭袋也在防具 tab，但主属性不同） */
+      var ms = ENH.mainStatOf[it.type] || "";
+      var a0 = parseInt(it.armor, 10);
+      var fa = finalAtk(it, bvt);
+      if(ms === "armor" && !isNaN(a0)){
+        h += '<span>' + esc(fmt("defAt", a0, bvt, bvt - a0)) + '</span>';
+      } else if(fa){
+        h += '<span>' + esc(tx("atkFinal")) + ' ' + esc(fmtAtk(fa)) +
+             '<i>' + esc(tx("atkFrom")) + ' ' + fa.rawLo +
+             (fa.rawHi !== fa.rawLo ? '~' + fa.rawHi : '') +
+             '　' + esc(tx("atkAdd")) + ' +' + fa.add + '</i></span>';
+      } else if(ms === "precision"){
+        var p0 = parseInt(it.precision, 10);
+        if(!isNaN(p0)) h += '<span>' + esc(fmt("precAt", p0, bvt, bvt - p0)) + '</span>';
+        else h += '<span>' + esc(tx("bvOnly")) + ' +' + bvt + '</span>';
+      } else {
+        h += '<span>' + esc(tx("bvOnly")) + ' +' + bvt + '</span>';
+      }
+      h += '</div>';
+    }
+
+    /* 强化段 */
+    h += '<div class="sim-sec sim-sec-enh">' + esc(tx("secE")) + '</div>';
+    /* ⚠ 当前强化等级做成**显眼徽章**：玩家最关心的就是「我现在是 +几」，
+       保护卷按钮的标签（+7 / +8）也是按它推出来的，之前只藏在日志/表格里很难看。 */
+    var curLv = (S.enh && S.enh.cur != null) ? S.enh.cur : S.from;
+    /* 下一级的实时成功率（把「失败叠加 +10%」显式展示出来）。
+       ⚠ 先算出来，徽章里要显示它 —— 所以这段必须提到 sim-row 之前。 */
+    var nowL = (S.enh && S.enh.cur != null ? Math.min(ENH.maxEnhance, S.enh.cur + 1) : S.to);
+    var showNow = nowL > ENH.safeMax[cat];
+    var pNowOn = showNow ? hasProtAt(cat, nowL - 1) : false;
+    var bNow = showNow ? effBase(cat, nowL, S.dbl, pNowOn) : 0;
+    var skNow = showNow
+      ? (S.enh ? ((pNowOn ? (S.enh.stkP||{})[nowL] : (S.enh.stk||{})[nowL]) || 0) : (S.stack || 0))
+      : 0;
+    var pNow = showNow ? rateAt(cat, nowL, skNow, {dbl:S.dbl, prot:pNowOn}) : 0;
+    /* 徽章 + 成功率合成一块：上面大号等级、下面一行「下一级 +8 成功率 10% → 12%」 */
+    h += '<div class="sim-curbar' + (S.enh && S.enh.broken ? " bad" : "") + '">' +
+         '<div class="sim-cur-top">' +
+           '<span class="sim-cur-lb">' + esc(tx("curLv")) + '</span>' +
+           '<b class="sim-cur-v">+' + curLv + '</b>' +
+           '</div>' +
+         (showNow
+           ? '<div class="sim-cur-rate">' + esc(tx("nowRate")) + ' <b>+' + nowL + '</b>　' +
+             bNow.toFixed(1) + '%' + (skNow ? ' <i>+' + (pNow - bNow).toFixed(1) + '%</i>' : '') +
+             ' → <b class="ok">' + pNow.toFixed(1) + '%</b>' +
+             (skNow ? '<span class="sim-stk">' + esc(fmt("stkN2", skNow)) + '</span>' : '') +
+             (protLevel(cat, nowL)
+               ? '<span class="sim-cur-prot">' + esc(tx("protOn")) +
+                 (function(){var P=protLevel(cat, nowL); var sk=(S.enh&&S.enh.stkP)?(S.enh.stkP[nowL]||0):0;
+                  var pp=Math.min(100, P.rate*(1+ENH.blessing.stepRatio*sk));
+                  return sk? (' '+P.rate+'%→'+(Math.round(pp*10)/10).toFixed(1)+'%') : (' '+P.rate+'%');})() +
+                 '</span>' : '') +
+             '</div>'
+           : '<div class="sim-cur-rate dim">' + esc(fmt("safeZone", ENH.safeMax[cat])) + '</div>') +
+         '</div>';
+    /* ⚠ 双倍活动 / 圣水 两个开关移到**徽章正下方**独立一行（用户 2026-10-05），
+       跟操作按钮分开 —— 开关是「条件」，按钮是「动作」，混在一行容易看错。 */
+    /* ⚠ 开关行：双倍 / 圣水 / **修理**（用户 2026-10-06 把修理挪到圣水后面）。
+       ⚠ 修理按钮**始终渲染**（未损坏时 disabled 置灰）——
+         若只在损坏时出现，开关行会突然多出一个按钮把布局挤一下，玩家找不到它跑哪去了。
+       ⚠ 放不下会自动换行：`.sim-row` 本来就是 `flex-wrap:wrap`。 */
+    var brokenNow = !!(S.enh && S.enh.broken);
+    h += '<div class="sim-row sim-row-sw">' + sw("dbl","swDbl",S.dbl) + sw("holy","swHoly",S.holy) +
+         repairBtnHtml(cat, brokenNow) + '</div>';
+    /* 操作按钮行：一键强化 / 保护卷 / 强化1次（独占一行） */
+    /* ⚠ 按钮顺序：一键强化 / **强化 1 次** / 保护卷（用户 2026-10-05）。
+       保护卷挪到最后 —— 它是「特殊手段」，不该夹在两个常规操作中间。 */
+    h += '<div class="sim-btns">' +
+         '<button class="sim-btn pri" onclick="simQuick()">' + esc(tx("quick")) + ' +' + S.from + '→+' + ENH.safeMax[cat] + '</button>' +
+         '<button class="sim-btn" onclick="simOnce()">' + esc(tx("once")) + '</button>' +
+         protBtnHtml(cat) +
+         '</div>';
+    /* ⚠⚠ 参数行：**批量强化目标 / 批量模拟 / 清零**（用户 2026-10-05）。
+       - 「强化目标」改名为「**批量强化目标**」（它只作用于批量模拟，单次走 S.from）。
+       - ⚠ 「次数」标签+输入框**整块删除**（用户 2026-10-05）—— 批量次数由 `SIM_BATCH_RUNS`
+         常量固定，页面上不再有修改入口。`.sim-runs` CSS 也已随之失效（保留无害）。
+         S.runs 仍保留在内部（默认值 1，供 simResetBatch 批量重置复用），只是没有 UI 入口了。
+       - 双倍/圣水开关已上移到徽章下方，这里不再重复。
+       位置仍在**操作按钮行之后、KPI 统计框之前**（紧贴统计框上方）。 */
+    h += '<div class="sim-row sim-row-params">' +
+         '<span class="sim-lb">' + esc(tx("toLabel")) + '</span>' +
+         '<select class="sim-ctl sim-num" id="simTo" onchange="simSet(\'to\',+this.value)">' +
+         lvOptions(cat, S.to) + '</select>' +
+         '<button class="sim-btn" onclick="simBatch()">' + esc(tx("batch")) + '</button>' +
+         '<button class="sim-btn ghost" onclick="simClear()">' + esc(tx("clear")) + '</button>' +
+         '</div>';
+
+    /* ⚠ KPI 与目标表的数据源：**批量优先**（S.agg 是 N 遍平均值），没有才用单次（S.enh）。
+       两者结构不同：agg 是汇总（无 stk/stkP），所以只用于显示，绝不参与 stepEnhance。 */
+    var e = S.agg || S.enh;
+    if(e){
+      /* ⚠⚠ 「未达标」判定（用户 2026-10-05）。
+         **不许再靠 `cur === target` 判断** —— 旧代码把 `agg.cur` 写死成 S.to，
+         护栏一拦也显示「已达 +12」，玩家以为成功了。数据侧已改为记录真实 cur / guardHit。
+         单次（S.enh）看 `e.guardHit`；批量（S.agg）看 `e.guardHit` 或 `e.cur < e.target`。 */
+      var tgt = (e.target != null) ? e.target : S.to;
+      var notReach = !!e.guardHit || (e.cur != null && tgt != null && e.cur < tgt);
+      /* 「成功」格是**保护卷消耗**：上下两层分别显示 +N 保护卷 / +M 保护卷（各等级用量）。
+         保护卷只能从指定强化度起才用得了（武器 +7/+8 起点、防具 +5/+6 起点），
+         两层正好对应这两个可用等级。件数按等级分桶统计。 */
+      h += '<div class="sim-kpis">' +
+        kpi(tx("kScroll"), e.scrolls, notReach ? "warn" : "") + kpiProt(cat, e) +
+        kpi(tx("kFail"), e.fail, "bad") + kpi(tx("kHoly"), e.holy, "") +
+        kpi(tx("kStone"), e.stone, "") + kpi(tx("kBroken"), e.repairs, "bad") + '</div>';
+      /* ⚠ 未达标横幅：说清「实际到几级 / 目标几级 / 撞了护栏」，
+         免得玩家只看到卷轴数很大却不知道是没跑到还是真的贵。 */
+      if(notReach){
+        var gTxt = e.guardHit
+          ? fmt("guardHit", fmtNum(ENH.guardMax), tgt)
+          : (e.cur != null ? (tx("notReach") + "　+" + e.cur + " / +" + tgt) : tx("notReach"));
+        h += '<div class="sim-warnbar">' + esc(gTxt) + '</div>';
+      }
+      if(e.log.length){
+        var LOG_CAP = 60;
+        h += '<div class="sim-log">';
+        if(e.log.length > LOG_CAP)
+          h += '<div class="sim-log-more">' + esc(fmt("logMore", fmtNum(e.log.length), LOG_CAP)) + '</div>';
+        for(var i=e.log.length-1; i>=Math.max(0,e.log.length-LOG_CAP); i--){
+          var r = e.log[i];
+          h += '<div class="sim-log-i ' + (r.ok?"ok":"fail") + '"><span class="sim-log-n">' + r.n +
+               '</span><span class="sim-log-t">' + esc(r.ok?tx("ok"):tx("fail")) +
+               '</span><span class="sim-log-d">+' + r.lv + '　' +
+               (r.b != null && r.p > r.b ? r.b.toFixed(1) + '% → ' : '') + r.p.toFixed(1) + '%' +
+               (r.note ? '　' + esc(r.note) : '') + '</span></div>';
+        }
+        h += '</div>';
+      }
+      /* ⚠ 只列**危险等级**（武器 +7 起 / 防具 +5 起）—— 安全段必定成功，无参考价值。
+         「成功率」列 = 基础 → 叠加后的实际值，括号里是本级出现过的最大叠加层数。 */
+      var lv, rows = "";
+      for(lv = ENH.safeMax[cat] + 1; lv <= ENH.maxEnhance; lv++){
+        if(!e.levelN[lv]) continue;
+        var b0 = baseRate(cat, lv);
+        /* ⚠ 两套独立记录：普通卷 stkMax/pMax、保护卷 stkPMax/pPMax。
+           本级用过保护卷就显示保护卷那一套（基础率不同，混在一起看不出问题）。 */
+        var mxP = (e.stkPMax && e.stkPMax[lv]) || 0;
+        var mx  = (e.stkMax && e.stkMax[lv]) || 0;
+        var useProtRow = mxP > 0;
+        var hi  = useProtRow ? e.pPMax[lv] : ((e.pMax && e.pMax[lv]) || b0);
+        if(!useProtRow && mx === 0 && mxP === 0) hi = b0;
+        var bN = useProtRow
+               ? (protLevel(cat, lv) ? protLevel(cat, lv).rate : b0)   /* 保护卷基础率 */
+               : effBase(cat, lv, S.dbl, false);                       /* 普通卷基础率（含双倍） */
+        var mxUse = useProtRow ? mxP : mx;
+        var cell = (mxUse > 0 ? bN.toFixed(1) : bN.toFixed(0)) + '%';
+        if(mxUse > 0){
+          /* 最终成功率；括号内拆出 基础 + 额外（额外 = 叠加带来的增量） */
+          cell = hi.toFixed(1) + '%' +
+                 '<span class="sim-stk">' + esc(fmt("stkN", bN.toFixed(1), (hi - bN).toFixed(1))) + '</span>';
+        }
+        rows += '<tr' + (lv === e.cur ? ' class="cur"' : '') + '><td>+' + lv + '</td><td>' +
+                bN.toFixed(0) + '%</td><td>' + cell +
+                '</td><td>' + e.levelN[lv] + '</td></tr>';
+      }
+      if(rows) h += '<table class="sim-table"><thead><tr><th>' + esc(tx("cTarget")) +
+        '</th><th>' + esc(tx("cBase")) + '</th><th>' + esc(tx("cBless")) + '</th><th>' +
+        esc(tx("cCount")) + '</th></tr></thead><tbody>' + rows + '</tbody></table>';
+      /* ⚠ 修理**按钮**已挪到开关行（圣水之后，用户 2026-10-06）；
+         这里只留一条损坏提示，不再重复放按钮 —— 两个按钮会让玩家不知道点哪个。 */
+      if(e.broken){
+        h += '<div class="sim-broken-note">' + esc(tx("brokenNote")) + '</div>';
+      }
+    }
+
+    /* 重置段 */
+    h += '<div class="sim-sec sim-sec-rst">' + esc(tx("secR")) + '</div>';
+    var rd = resetData(it);
+    if(!rd){
+      h += '<div class="sim-hint">' + esc(tx("noReset")) + '</div>';
+    } else {
+      var cb = resetCostBy(it, "book"), cs = resetCostBy(it, "stone");
+      h += '<div class="sim-row"><span>' + esc(tx("way")) + '</span>' +
+        '<label class="sim-sw"><input type="radio" name="simWay" ' + (S.rWay==="book"?"checked":"") +
+        ' onchange="simWay(\'book\')"><i></i><span>' + esc(tx("book")) + ' ×' + cb + '</span></label>' +
+        '<label class="sim-sw"><input type="radio" name="simWay" ' + (S.rWay==="stone"?"checked":"") +
+        ' onchange="simWay(\'stone\')"><i></i><span>' + esc(tx("stone")) + ' ×' + cs + '</span></label></div>';
+      h += '<div class="sim-btns">' +
+        '<button class="sim-btn amber" onclick="simResetOnce()">' + esc(tx("rOnce")) + '</button>' +
+        '<span style="font-size:13px;color:#8A6412;font-weight:500">' + esc(tx("used")) + ' ' +
+        esc(S.rWay==="book"?tx("book"):tx("stone")) + ' ×' + (S.rWay==="book"?S.rBooks:S.rStones) + '</span></div>';
+      /* 重置后属性：单次显示本次结果，批量显示 N 次平均 */
+      var rshow = null, rlab = tx("rAfter");
+      if(S.rLast && S.rLast.length){
+        rshow = S.rLast.map(function(r){ return {name:r.name, val:r.val}; });
+      } else if(S.rTimes && S.rSum){
+        rshow = [];
+        for(var ks in S.rSum){
+          var nm = ks;
+          for(var q9=0;q9<rd.stats.length;q9++) if(rd.stats[q9].key === ks){ nm = rd.stats[q9].name; break; }
+          rshow.push({name:nm, val:(S.rSum[ks] / S.rTimes).toFixed(1)});
+        }
+        rlab = tx("rAvg") + " · " + S.rTimes;
+      }
+      if(rshow && rshow.length){
+        h += '<div class="sim-after"><b>' + esc(rlab) + '</b>' +
+             rshow.map(function(r){ return '<span><i>' + esc(r.name) + '</i>+' + esc(r.val) + '</span>'; }).join('') +
+             '</div>';
+      }
+    }
+    b.innerHTML = h;
+  }
+  function kpi(k, v, cls){
+    /* ⚠ 数值走千分位：卷轴能到千万级，「16792250」在 6 格网格里会挤爆。 */
+    return '<div class="sim-kpi' + (cls ? " " + cls : "") + '"><div class="sim-kpi-v">' + fmtNum(v) +
+           '</div><div class="sim-kpi-k">' + esc(k) + '</div></div>';
+  }
+  /* 保护卷 KPI：上下两层 = +N 保护卷 / +M 保护卷。
+     ⚠ 标签用**当前强化度**（+7 的卷用在冲 +8 上），与按钮一致。
+     用量按当前等级分桶（e.protBy），因为总数分不清用在哪个等级。 */
+  function kpiProt(cat, e){
+    var lv = protCurLevels(cat);
+    var by = (e && e.protBy) || {};
+    var c1 = lv[0] ? lv[0].cur : "", c2 = lv[1] ? lv[1].cur : "";
+    return '<div class="sim-kpi prot">' +
+      '<div class="sim-kpi-v sim-kpi-v2">' +
+        '<span>+' + c1 + ' ' + esc(tx("swProt")) + ' <b>' + (by[c1]||0) + '</b></span>' +
+        '<span>+' + c2 + ' ' + esc(tx("swProt")) + ' <b>' + (by[c2]||0) + '</b></span>' +
+      '</div><div class="sim-kpi-k">' + esc(tx("kProt")) + '</div></div>';
+  }
+
+  /* ---------- 对外接口 ---------- */
+  window.openSim = function(){
+    ensure().then(function(){ simChrome(); render(); });
+    document.getElementById("simModal").style.display = "flex";
+    var b = document.getElementById("simBody"); if(b) b.scrollTop = 0;
+    if(typeof lockPageScroll === "function") lockPageScroll(true);
+  };
+  window.closeSim = function(){
+    document.getElementById("simModal").style.display = "none";
+    if(typeof lockPageScroll === "function") lockPageScroll(false);
+  };
+  window.simSwitchCat = function(cat){
+    S.cat = cat;
+    var it = S.item;
+    if(it && ENH && ENH.categoryOf[it.type] !== cat){ S.item = null; S.name = ""; }
+    if(ENH){ S.from = 0; S.to = ENH.safeMax[cat]; }
+    /* ⚠ 保护卷可用等级随类别变（武器 +8/+9、防具 +6/+7），切类别必须清空预留 */
+    S.protAt = {};
+    S.enh = null; simDropAgg();
+    S.rCounts = null; S.rTimes = 0; S.rBooks = 0; S.rStones = 0;
+    simChrome(); render();
+  };
+  window.simPick = function(name){
+    if(typeof window.simSelClose === "function") window.simSelClose();
+    var pool = poolOf(S.cat), i;
+    S.item = null;
+    for(i=0;i<pool.length;i++) if(pool[i].name === name){ S.item = pool[i]; break; }
+    S.name = name;
+    S.from = 0; S.to = ENH.safeMax[S.cat];
+    /* ⚠ 换装备 -> 保护卷预留清零（那是给上一件装备备的） */
+    S.protAt = {};
+    S.enh = null; simDropAgg();
+    S.rCounts = null; S.rTimes = 0; S.rBooks = 0; S.rStones = 0;
+    render();
+  };
+  /* 移到 body 下并按按钮位置定位（fixed），避免被滚动容器裁剪 */
+  function placeSelList(btn, L){
+    if(L.parentNode !== document.body) document.body.appendChild(L);
+    var q = btn.getBoundingClientRect();
+    var w = Math.max(q.width, 220);
+    var left = Math.min(Math.max(8, q.left), window.innerWidth - w - 8);
+    /* ⚠⚠ 可用高度 = 视口减去锚点下方再留 8px 边距；下方不够就翻到锚点上方（上方空间 = q.top - 8）。
+       ⚠ 旧代码 `h = Math.min(360, window.innerHeight - below - 16)` 是**算错了**：
+          `innerHeight - below` == `q.bottom`，所以那个式子等于「锚点上方高度 - 16」，
+          跟下方可用空间无关 —— 表现为「明明下方还有一大片空白，列表却只有 360px」。
+       ⚠ 上限常量必须**与 CSS `.sim-sel-list` 的 max-height 保持一致**（620），
+          否则 JS 会把 CSS 里调大的值又压回 360（我 2026-10-06 改 CSS 无效就是踩这个）。 */
+    var LIST_MAX = 620;
+    var below = window.innerHeight - q.bottom - 8;
+    var above = q.top - 8;
+    var h, top;
+    if(below >= Math.min(200, above) || below >= above){
+      h = Math.min(LIST_MAX, below); top = q.bottom + 3;
+    } else {
+      h = Math.min(LIST_MAX, above); top = Math.max(8, q.top - h - 3);
+    }
+    L.style.left = left + "px";
+    L.style.width = w + "px";
+    L.style.top = top + "px";
+    L.style.maxHeight = Math.max(140, h) + "px";
+  }
+  window.simEquipMenu = function(btn){
+    var L = document.getElementById("simEquipSelList");
+    if(!L) return;
+    if(!L.hidden && L.getAttribute("data-open") === "1"){ L.hidden = true; L.setAttribute("data-open","0"); return; }
+    /* ⚠⚠ 定位锚点：**一律用装备头 `.sim-equip`**（用户 2026-10-06 删除了触发按钮后改的）。
+       旧逻辑是「装备头宽度 > 4 就用它，否则回退到 #simEquipSelBtn」——
+       那个回退分支现在会拿到 null，已删除。
+       ⚠ 传进来的 btn 只作**兜底**（装备头被 CSS 隐藏的极端情况），不用它做首选。 */
+    var anchor = document.querySelector(".sim-equip");
+    if(!(anchor && anchor.getBoundingClientRect().width > 4)) anchor = btn || anchor;
+    if(!anchor) return;                      /* 实在没锚点就不开，别把浮层扔到 (0,0) */
+    placeSelList(anchor, L);
+    L.hidden = false;
+    L.setAttribute("data-open", "1");
+    /* ⚠ 滚到顶部：先前的过滤态/滚动位置是上一次打开留下的，会让「当前选中项」看不见。
+       必须先 scrollTop=0 再 scrollIntoView，否则中间态会被瞬移跳过。 */
+    L.scrollTop = 0;
+    var on = L.querySelector(".sim-sel-opt.on");
+    if(on && on.scrollIntoView) on.scrollIntoView({block:"nearest"});
+    /* 🆕 自动聚焦搜索框（用户 2026-10-06）。
+       ⚠ 必须 `preventScroll: true` —— 否则浏览器会把浮层滚进视口，
+         在弹窗内会把整个 .sim-body 一起滚走（表现为弹窗内容突然跳动）。
+       ⚠ PC 上不自动聚焦：桌端用户用鼠标，直接抢焦点反而打断操作。 */
+    var box = document.getElementById("simEquipSearch");
+    if(box){
+      box.value = "";                       /* 上次的过滤词别带进来 */
+      simFilterEquip("");
+      if(!matchMedia("(min-width:768px)").matches){
+        try{ box.focus({preventScroll:true}); }catch(e){ try{ box.focus(); }catch(e2){} }
+      }
+    }
+  };
+  /* 点列表外部 / 页面滚动 / Esc 都关闭；**列表自身滚动不关**（见上） */
+  window.simSelClose = function(){
+    var L = document.getElementById("simEquipSelList");
+    if(L && !L.hidden){ L.hidden = true; L.setAttribute("data-open","0"); }
+  };
+  /* ⚠ 从 body 上**摘除**浮层（render 前必调）—— 见 render() 里的说明。
+     只设 hidden 不够：旧的留在 body 里会被 getElementById 优先命中。 */
+  window.simSelDrop = function(){
+    var old = document.getElementById("simEquipSelList");
+    if(old && old.parentNode === document.body && old.parentNode) old.parentNode.removeChild(old);
+  };
+  document.addEventListener("click", function(e){
+    var L = document.getElementById("simEquipSelList");
+    if(!L || L.hidden) return;
+    if(L.contains(e.target)) return;
+    /* ⚠ 装备头是唯一入口：点在它上面 = 切换开合，**不能**在这里就关掉
+       （否则会「先关后开」变成一直关不掉）。锚点判断用 `.sim-equip`。 */
+    if(e.target && e.target.closest && e.target.closest(".sim-equip")) return;
+    window.simSelClose();
+  }, true);
+  /* ⚠⚠ 滚动关闭必须**排除列表自身的滚动**。
+     .sim-sel-list 是 overflow-y:auto 的可滚动列表，它的 scroll 事件同样冒泡到 document；
+     若监听器写成捕获（true），用户在列表里滑动列表就会立刻被关掉 —— 表现为「列表无法滚动」。
+     这里在捕获阶段里判断 target 是否在列表内，是列表自身的滚动就放过。 */
+  document.addEventListener("scroll", function(e){
+    var L = document.getElementById("simEquipSelList");
+    if(!L || L.hidden) return;
+    var t = e.target;
+    if(t && (t === L || (L.contains && L.contains(t)))) return;   /* 列表自身滚动 -> 不关 */
+    window.simSelClose();
+  }, true);
+  /* Esc 关闭下拉：手机上没有 hover，「再点一次按钮」之外的退路 */
+  document.addEventListener("keydown", function(e){
+    if(e && (e.key === "Escape" || e.key === "Esc")) window.simSelClose();
+  });
+  /*⚠ 任何改变模拟参数的操作都要清掉批量聚合结果 —— 否则参数与旧平均值对不上。 */
+  function simDropAgg(){ S.agg = null; }
+  window.simSet = function(k, v){
+    S[k] = v;
+    if(k==="from"||k==="to"){ S.enh = null; simDropAgg(); }
+    if(k==="dbl"||k==="holy"){ S.enh = null; simDropAgg(); }
+    render();
+  };
+  window.simClear = function(){
+    S.enh = null; simDropAgg();
+    S.rCounts = null; S.rTimes = 0; S.rBooks = 0; S.rStones = 0; S.stack = 0; render();
+  };
+  /* 调试/验收钩子：直接读模拟器内部状态（S/ENH 在闭包里，外部拿不到）。
+     ⚠ 真机验收必须用这个读**内部数值**，别去抓渲染后的 DOM —— render() 会整体重建
+     simBody，抓 DOM 容易读到上一帧的残留（曾误判「卷轴=0」）。 */
+  window.simDebugState = function(){
+    var e = S.enh;
+    return { cat:S.cat, from:S.from, to:S.to, stack:S.stack, runs:S.runs,
+             protAt:S.protAt, holy:S.holy, dbl:S.dbl,
+             /* ⚠ 批量聚合结果（各遍平均值），与 enh 分开存放 */
+             agg: S.agg ? {cur:S.agg.cur, target:S.agg.target, guardHit:S.agg.guardHit,
+                            scrolls:S.agg.scrolls, ok:S.agg.ok, fail:S.agg.fail,
+                            logLen:(S.agg.log ? S.agg.log.length : 0),
+                            stone:S.agg.stone, repairs:S.agg.repairs, holy:S.agg.holy,
+                            prot:S.agg.prot, protBy:S.agg.protBy, levelN:S.agg.levelN} : null,
+      enh: e ? { cur:e.cur, target:e.target, guardHit:!!e.guardHit, scrolls:e.scrolls, tries:e.tries,
+                 ok:e.ok, fail:e.fail, holy:e.holy, stone:e.stone, repairs:e.repairs,
+                 broken:!!e.broken, stk:e.stk, stkP:e.stkP, stkMax:e.stkMax, stkPMax:e.stkPMax,
+                 pMax:e.pMax, pPMax:e.pPMax, levelN:e.levelN, protBy:e.protBy, protUsed:e.prot,
+                 logLen:e.log.length } : null,
+      safeMax: ENH ? { weapon:ENH.safeMax.weapon, armor:ENH.safeMax.armor } : null };
+  };
+  /* 保护卷按钮：**只一个，点一下就直接用掉一张卷做一次强化**（用户 2026-10-05）。
+     ⚠ 需求变更：原先是「点按钮备一张 -> 再点强化1次」两步，现在**合并成一步**。
+        不用再手动开/关，玩家点一下就消耗一张并立即判定。
+     官方数据 protection.weapon.rate = {8:10, 9:1} 按**目标等级**索引，换算成玩家视角：
+       - 当前 +7 -> 点一下 = 用一张卷冲 +8（基础 10%），失败仍维持 +7
+       - 当前 +8 -> 点一下 = 用一张卷冲 +9（基础 1%），失败仍维持 +8
+     非可用等级（武器只有 +7 / +8 两个起点）按钮置灰，并提示可用等级。 */
+  function protBtnHtml(cat){
+    var cur = (S.enh && S.enh.cur != null) ? S.enh.cur : S.from;
+    var info = protLevel(cat, cur + 1);       /* 冲下一级时有没有保护卷可用 */
+    var usable = !!info && !(S.enh && S.enh.broken);
+    var used = (S.enh && S.enh.protBy && S.enh.protBy[cur]) || 0;   /* 本级已用张数 */
+    var tip = usable ? fmt("protTip", cur, "+" + (cur + 1), info ? info.rate : 0, cur)
+                     : ((S.enh && S.enh.broken) ? tx("needRepair")
+                        : fmt("protFrom", protCurLevels(cat).map(function(x){ return "+" + x.cur; }).join("/")));
+    /* ⚠ 可用时**高亮**（用户 2026-10-05：「+7 的时候保护卷框亮起」），
+       按钮右侧直接写出基础成功率，省得悬停看 tooltip。 */
+    return '<span class="sim-prot-wrap' + (usable ? " on" : "") + '">' +
+           '<button class="sim-btn prot' + (usable ? "" : " dis") +
+           '" onclick="simUseProt(' + cur + ')" title="' + esc(tip) + '"' +
+           (usable ? '' : ' disabled') + '>' +
+           esc(tx("swProt")) + ' +' + cur + (used ? ' <b class="prot-used">' + used + '</b>' : '') +
+           '</button>' +
+           /* ⚠ 显示**叠加后的实际概率**（基础 ×(1+10%×已叠层数)），不是干巴巴的基础值。
+              层数取保护卷自己那张表 stkP[cur+1]；没跑过时退化为基础率。 */
+           '<span class="sim-prot-rate">' + (usable ? protRateTxt(cat, cur, info) : '—') + '</span>' +
+           '</span>';
+  }
+  /* 保护卷按钮右侧的概率文字：**叠加后的实际成功率**。
+     基础 = protection.rate[cur+1]（如 10%），层数 = 该目标等级的 stkP[cur+1]（保护卷自己的）。
+     例：叠 2 层 -> 10% × (1+10%×2) = 12%。层数 0 时只显示基础率，不加箭头。 */
+  function protRateTxt(cat, cur, info){
+    var t = cur + 1;
+    var sk = (S.enh && S.enh.stkP) ? (S.enh.stkP[t] || 0) : 0;
+    var p = Math.min(100, info.rate * (1 + ENH.blessing.stepRatio * sk));
+    if(!sk) return info.rate + "%";
+    return info.rate + "%→" + (Math.round(p * 10) / 10).toFixed(1) + "%";
+  }
+  /* 点保护卷 = 立刻用一张卷做一次强化（不再需要「先备卷再点强化」两步） */
+  window.simUseProt = function(cur){
+    if(!ENH || !S.item) return;
+    if(!protLevel(S.cat, cur + 1)) return;          /* 该等级不可用 */
+    /* 状态起点：以界面上的当前强化度为准，没有跑过就从 S.from 起 */
+    var isNew = !S.enh;
+    var e = S.enh || newEnhState(S.item, S.cat);
+    if(isNew){
+      e.cur = S.from;
+      if((S.stack || 0) > 0) seedStk(e);
+    }
+    if(e.broken) return;                            /* 损坏后要先修理 */
+    if(e.cur !== cur){ S.enh = e; render(); return; }   /* 等级对不上（并发点击），忽略 */
+    /* 临时把这张卷挂上，stepEnhance 会按等级扣掉并走保护卷费率 */
+    if(!S.protAt) S.protAt = {};
+    S.protAt[cur] = 1;
+    e.target = Math.max(S.to, e.cur + 1);
+    stepEnhance(e, {dbl:S.dbl, holy:S.holy});
+    /* ⚠⚠ 同 simQuick/simOnce：清掉批量聚合，否则 render() 的 `S.agg || S.enh`
+       会继续渲染上一次批量模拟的结果，本次用保护卷的结果看不见。 */
+    simDropAgg();
+    S.enh = e; render();
+  };
+
+  /* 一键强化：把当前等级直接冲到**安全段上限**（必定成功的区间）。
+     ⚠⚠ 三条必须遵守的规则（都是踩过的坑）：
+     1) 从 **e.cur 现状**继续冲，不能写 `e.cur = S.from` —— 那会把已升的级数拉回起点，
+        于是每点一次卷轴/成功数就重新累加一遍（表现为「可以一直点 +0→+6」）。
+     2) **绝不能 `e.stk = {}`** —— 祝福层数是玩家积累的成果，清空等于一键强化把
+        之前所有失败叠加都抹掉，后续点「强化1次」自然「不叠加概率」。
+     3) 已损坏时直接返回：损坏后所有强化操作都该等玩家点「修理」。
+        否则会出现「点强化1次毫无反应」的死状态。 */
+  window.simQuick = function(){
+    if(!S.item) return;
+    var e = S.enh || newEnhState(S.item, S.cat);
+    if(e.broken) return;
+    if(e.cur > ENH.safeMax[S.cat]) return;      /* 已过安全段，没什么可一键的了 */
+    e.cur = Math.max(e.cur, S.from);            /* 起始只做下限，不回退已升的级数 */
+    e.target = ENH.safeMax[S.cat];
+    var guard = 0;
+    /* 只补安全段里「还没点到的那些等级」；已点过的等级不重复计数 */
+    while(e.cur < e.target && !e.broken && guard < 100){
+      e.cur++; e.scrolls++; e.tries++; e.ok++;
+      e.levelN[e.cur] = (e.levelN[e.cur]||0) + 1;
+      e.stk[e.cur] = 0; e.stkP[e.cur] = 0;      /* 该等级成功 -> 两套层数各自清零（不是清空整表） */
+      guard++;
+    }
+    /* ⚠⚠ 必须清掉批量聚合 `S.agg`（用户 2026-10-06 报的 bug）。
+       render() 是 `var e = S.agg || S.enh;` —— **批量结果优先级更高**。
+       点过「批量模拟」后 S.agg 一直挂着，此时再点「一键强化」，
+       S.enh 明明已经更新（cur/scrolls/log 都对），界面却仍渲染旧的批量聚合：
+       卷轴格停在批量值、日志还是批量那一遍的 —— 表现为「结果框不跟新」。
+       ⚠ 只清 S.agg，**不要清 S.enh**（那是本次一键强化的结果，要显示）。 */
+    simDropAgg();
+    S.enh = e; render();
+  };
+  window.simOnce = function(){
+    if(!S.item) return;
+    var isNew = !S.enh;
+    var e = S.enh || newEnhState(S.item, S.cat);
+    if(isNew){
+      /* ⚠ 新建 state 时 cur 必须跟随「起始强化度」，否则用户把 from 调到 +10
+         点一次强化，实际还在从 +6（newEnhState 默认值）往上走，看着像数值不动。 */
+      e.cur = S.from;
+      /* ⚠⚠ 只在「界面已失败次数 > 0」时播种。
+         seedStk() 会把 stk 整表重置成 n0 —— 若界面「已失败」是 0，它就把玩家
+         已经攒下的祝福层数**清空**，表现为「一键强化后再点强化1次不叠加概率」。
+         所以 n0 为 0 时必须保留既有 stk，不能让它当默认值覆盖。 */
+      if((S.stack || 0) > 0) seedStk(e);
+    }
+    e.target = Math.max(S.to, e.cur + 1);
+    if(e.cur >= e.target){ e.target = e.cur + 1; }
+    if(!e.broken) stepEnhance(e, {dbl:S.dbl, holy:S.holy});
+    /* ⚠⚠ 同 simQuick：必须清掉批量聚合，否则 render() 的 `S.agg || S.enh`
+       会继续渲染上一次批量模拟的结果，「强化 1 次」的最新日志看不见。 */
+    simDropAgg();
+    S.enh = e; render();
+  };
+  /* ⚠⚠ 批量强化次数**固定 1 次**（用户 2026-10-05：删掉次数输入框，次数写死 1）。
+     页面已无修改入口；调这个常量即可改次数（S.runs 仍保留供 simResetBatch 批量重置复用）。 */
+  var SIM_BATCH_RUNS = 1;
+  window.simBatch = function(){
+    if(!S.item) return;
+    /* ⚠⚠⚠ 高目标确认（用户 2026-10-05）。
+       失败会归零 -> 每级都要重爬 -> 卷轴需求**指数级**增长，实测单轮耗时：
+         +11 ≈ 19 万张 / 0.2 秒     +12 ≈ 90~260 万张 / 0.4~1 秒
+         +13 ≈ 540 万张 / 4 秒       +14 → 撞 5000 万护栏 / **约 188 秒（页面完全假死）**
+       所以 ≥ +14 必须先确认，否则玩家一点就以为页面崩了。
+       ⚠ 阈值别下调：+13 只需 4 秒还能忍，+14 才是灾难。 */
+    if(S.to >= 14){
+      /* ⚠ 必须用 fmt() 不是 tx() —— tx() **不做 %s 替换**，会直接把「%s」显示给用户。 */
+      if(!confirm(fmt("slowConfirm", S.to))) return;
+    }
+    var e = newEnhState(S.item, S.cat);
+    e.target = S.to; e.cur = S.from; seedStk(e);
+    /* ⚠ 次数不再读 S.runs（UI 已删），固定跑 SIM_BATCH_RUNS 次。
+       ⚠ CPU 耗时随 n 线性增长：改成 1000000 会明显卡住（主线程阻塞、页面无响应）。 */
+    var n = SIM_BATCH_RUNS;
+    /* ⚠ reached / guardHit：**这一轮真的跑到目标了吗**。
+       旧代码 `agg.cur = S.to` 无条件写死 → 护栏一拦也照样显示「已达 +12」，
+       玩家以为成功了，其实那一轮早在 100000 次就中断了（KPI 卷轴恒显 100000 就是这么来的）。 */
+    var agg = {scrolls:0, ok:0, fail:0, stone:0, repairs:0, holy:0, prot:0, levelN:{},
+               stkMax:{}, pMax:{}, stkPMax:{}, pPMax:{}, protBy:{}, log:[],
+               reached:0, guardHit:0, actualCur:0};
+    /* ⚠ 批量每轮是**独立一次模拟**，所以保护卷要「每轮重新备好」——
+       不能共用同一份会被扣减的 S.protAt，否则第一轮用完后面 199 轮都没保护卷。 */
+    var protBase = {};
+    for(var pk in S.protAt){ if(S.protAt[pk] > 0) protBase[pk] = S.protAt[pk]; }
+    for(var i=0;i<n;i++){
+      e = newEnhState(S.item, S.cat);
+      e.target = S.to; e.cur = S.from; seedStk(e);
+      S.protAt = {}; for(var qk in protBase) S.protAt[qk] = protBase[qk];
+      runEnhance(e, {dbl:S.dbl, holy:S.holy}, true);
+      agg.scrolls += e.scrolls; agg.ok += e.ok; agg.fail += e.fail;
+      agg.stone += e.stone; agg.repairs += e.repairs; agg.holy += e.holy; agg.prot += e.prot;
+      for(var lv in e.levelN) agg.levelN[lv] = (agg.levelN[lv]||0) + e.levelN[lv];
+      for(var mk in e.stkMax) agg.stkMax[mk] = Math.max(agg.stkMax[mk]||0, e.stkMax[mk]);
+      for(var pkey in e.pMax) agg.pMax[pkey] = Math.max(agg.pMax[pkey]||0, e.pMax[pkey]);
+      for(var mk2 in e.stkPMax) agg.stkPMax[mk2] = Math.max(agg.stkPMax[mk2]||0, e.stkPMax[mk2]);
+      for(var pk2 in e.pPMax) agg.pPMax[pk2] = Math.max(agg.pPMax[pk2]||0, e.pPMax[pk2]);
+      for(var pb in e.protBy) agg.protBy[pb] = (agg.protBy[pb]||0) + e.protBy[pb];
+      /* ⚠ 如实统计：本轮是否真的到达目标、护栏是否被触发、结束时实际在几级 */
+      if(e.cur >= e.target) agg.reached++;
+      if(e.guardHit) agg.guardHit++;
+      agg.actualCur += e.cur;
+      if(i === n-1) agg.log = e.log;
+    }
+    /* 批量跑完把玩家自己那份保护卷余量还回去（批量是「试算」，不该消耗玩家的卷） */
+    S.protAt = {}; for(var rk in protBase) S.protAt[rk] = protBase[rk];
+    agg.scrolls = Math.round(agg.scrolls / n); agg.ok = Math.round(agg.ok / n);
+    agg.fail = Math.round(agg.fail / n); agg.stone = Math.round(agg.stone / n);
+    agg.repairs = Math.round(agg.repairs / n); agg.holy = Math.round(agg.holy / n);
+    agg.actualCur = Math.round(agg.actualCur / n);
+    for(var lv2 in agg.levelN) agg.levelN[lv2] = Math.round(agg.levelN[lv2] / n);
+    /* ⚠⚠ `agg.cur = S.to` 是**说谎**：护栏触发时那一轮根本没到目标（见上）。
+       现在 cur = 实际到达等级；达标率与「未达标」标记另存，UI 用来如实提示。 */
+    agg.item = S.item; agg.cat = S.cat; agg.cur = agg.actualCur;
+    agg.target = S.to; agg.tries = agg.ok + agg.fail;
+    agg.guardHit = agg.guardHit > 0;
+    /* ⚠⚠ 聚合结果**不能塞进 S.enh**（旧 bug：批量后所有按钮失效）。
+       S.enh 是「单次模拟」的状态，必须保有 stk/stkP/stkMax/... 全部字段；
+       而 agg 是**各遍平均值**的只读汇总，字段结构不同（无 stk/stkP、无 broken/target），
+       塞进去会让 stepEnhance 读 `st.stkP[t]` 抛 TypeError → 强化/保护卷/一键全失效。
+       现在挂到独立的 S.agg，只用于渲染 KPI 与目标表。 */
+    S.agg = agg; render();
+  };
+  window.simRepair = function(){
+    var e = S.enh;
+    if(!e || !e.broken || !S.item) return;
+    var c = repairCost(S.item, S.cat);
+    var rl = restoreRoll(S.cat);
+    e.stone += c; e.repairs++; e.broken = false; e.cur = rl;
+    e.log.push({n:e.tries, lv:rl, p:0, ok:false, isRepair:true,
+                note:fmt("repairBack", c, rl), after:rl});
+    /* ⚠⚠ 同上：清掉批量聚合，否则 render() 的 `S.agg || S.enh` 会继续渲染
+       上一次批量模拟的结果，修理这条新日志看不见。 */
+    simDropAgg();
+    render();
+  };
+  window.simWay = function(w){ S.rWay = w; render(); };
+  window.simResetOnce = function(){
+    if(!S.item) return;
+    var rd = resetData(S.item); if(!rd) return;
+    var roll = resetRoll(rd);
+    S.rTimes = 0; S.rSum = null;
+    S.rCounts = S.rCounts || {};
+    roll.forEach(function(r){
+      S.rCounts[r.key] = S.rCounts[r.key] || {};
+      S.rCounts[r.key][r.val] = (S.rCounts[r.key][r.val]||0) + 1;
+    });
+    /* 二选一：只累计当前选中的那种 */
+    if(S.rWay === "book") S.rBooks += resetCostBy(S.item, "book");
+    else S.rStones += resetCostBy(S.item, "stone");
+    S.rLast = roll; S.rOne = 1; render();
+  };
+  window.simResetBatch = function(){
+    if(!S.item) return;
+    var rd = resetData(S.item); if(!rd) return;
+    var n = Math.min(2000, Math.max(1, S.runs || 1));
+    S.rCounts = {}; S.rSum = {}; S.rLast = null;
+    for(var i=0;i<n;i++){
+      resetRoll(rd).forEach(function(r){
+        S.rCounts[r.key] = S.rCounts[r.key] || {};
+        S.rCounts[r.key][r.val] = (S.rCounts[r.key][r.val]||0) + 1;
+        S.rSum[r.key] = (S.rSum[r.key]||0) + (+r.val || 0);
+      });
+    }
+    S.rTimes = n;
+    /* 二选一：只累计当前选中的那种 */
+    if(S.rWay === "book") S.rBooks += resetCostBy(S.item, "book") * n;
+    else S.rStones += resetCostBy(S.item, "stone") * n;
+    render();
+  };
+
+  /* 切语言时重渲染 */
+  function simChrome(){
+    var e = document.getElementById("simEntryBtn");
+    if(e) e.textContent = tx("open");
+    var w = document.getElementById("simTabWeapon"), a = document.getElementById("simTabArmor");
+    if(w){ w.textContent = tx("tabW"); w.className = "sim-tab" + (S.cat==="weapon" ? " active" : ""); }
+    if(a){ a.textContent = tx("tabA"); a.className = "sim-tab" + (S.cat==="armor" ? " active" : ""); }
+    var c = document.querySelector("#simModal .modal-close");
+    if(c) c.textContent = tx("close");
+  }
+  window.simChrome = simChrome;
+  if(typeof updateLangText === "function"){
+    var _o = updateLangText;
+    updateLangText = function(){
+      var r = _o.apply(this, arguments);
+      simChrome();
+      if(document.getElementById("simModal").style.display === "flex") render();
+      return r;
+    };
+  }
 })();
 </script>
 </body>

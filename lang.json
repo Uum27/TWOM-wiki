@@ -20237,6 +20237,42 @@
                 "en": "Book of Reset",
                 "ja": "リセットの古書",
                 "kr": "리셋고서"
+            },
+            "enhance": {
+                "cn": "强化",
+                "en": "+",
+                "ja": "強化",
+                "kr": "강화"
+            },
+            "enhLevel": {
+                "cn": "强化等级",
+                "en": "Level",
+                "ja": "強化Lv",
+                "kr": "강화레벨"
+            },
+            "enhNone": {
+                "cn": "未强化",
+                "en": "Not enhanced",
+                "ja": "未強化",
+                "kr": "미강화"
+            },
+            "enhTbd": {
+                "cn": "暂无强化数据",
+                "en": "No enhance data",
+                "ja": "強化データなし",
+                "kr": "강화 데이터 없음"
+            },
+            "enhLoading": {
+                "cn": "加载中…",
+                "en": "Loading…",
+                "ja": "読込中…",
+                "kr": "불러오는 중…"
+            },
+            "enhExtraTip": {
+                "cn": "额外增加",
+                "en": "extra +",
+                "ja": "追加",
+                "kr": "추가"
             }
         },
         "attrName": {
@@ -20551,6 +20587,502 @@
                 "en": "40HP",
                 "ja": "40HP",
                 "kr": "40HP"
+            }
+        },
+        "simText": {
+            "open": {
+                "cn": "装备模拟器",
+                "en": "Simulator",
+                "ja": "シミュレーター",
+                "kr": "시뮬레이터"
+            },
+            "tabW": {
+                "cn": "武器",
+                "en": "Weapon",
+                "ja": "武器",
+                "kr": "무기"
+            },
+            "tabA": {
+                "cn": "防具",
+                "en": "Armor",
+                "ja": "防具",
+                "kr": "방어구"
+            },
+            "secE": {
+                "cn": "强化模拟",
+                "en": "Enhancement",
+                "ja": "強化",
+                "kr": "강화"
+            },
+            "secR": {
+                "cn": "重置（洗属性）",
+                "en": "Reset (reroll stats)",
+                "ja": "リセット（属性洗い）",
+                "kr": "초기화 (속성 재설정)"
+            },
+            "pick": {
+                "cn": "请选择装备…",
+                "en": "Select equipment…",
+                "ja": "装備を選択…",
+                "kr": "장비를 선택…"
+            },
+            "from": {
+                "cn": "起始",
+                "en": "From",
+                "ja": "開始",
+                "kr": "시작"
+            },
+            "to": {
+                "cn": "目标",
+                "en": "To",
+                "ja": "目標",
+                "kr": "목표"
+            },
+            "swDbl": {
+                "cn": "双倍活动",
+                "en": "Rate boost",
+                "ja": "確率UP",
+                "kr": "확률 증가"
+            },
+            "swHoly": {
+                "cn": "圣水",
+                "en": "Holy water",
+                "ja": "聖水",
+                "kr": "성수"
+            },
+            "swProt": {
+                "cn": "保护卷",
+                "en": "Protection",
+                "ja": "保護巻物",
+                "kr": "보호 두루마리"
+            },
+            "protAt": {
+                "cn": "用保护卷",
+                "en": "Use protection",
+                "ja": "保護巻物を使う",
+                "kr": "보호 두루마리 사용"
+            },
+            "protOnly": {
+                "cn": "保护卷只能用于指定强化度",
+                "en": "Protection only works on its listed levels",
+                "ja": "保護巻物は指定した強化度のみ_USE",
+                "kr": "보호 두루마리는 지정된 강화도에서만 사용"
+            },
+            "protTip": {
+                "cn": "+%s 保护卷：点一下用一张冲 %s（基础 %s%），失败仍维持 +%s",
+                "en": "+%s Protection: click to use one for %s (base %s%), fail keeps +%s",
+                "ja": "+%s 保護巻物：クリックで 1 枚使い %s へ（基本 %s%）、失敗時は +%s を維持",
+                "kr": "+%s 보호 두루마리: 클릭하면 1장 사용 %s (기본 %s%), 실패 시 +%s 유지"
+            },
+            "protOn": {
+                "cn": "保护卷可用",
+                "en": "Protection ready",
+                "ja": "保護巻物 使用可",
+                "kr": "보호 두루마리 사용 가능"
+            },
+            "safeZone": {
+                "cn": "安全段必定成功（+1 ~ +%s）",
+                "en": "Safe zone: always succeeds (+1 ~ +%s)",
+                "ja": "安全帯は必ず成功（+1 ~ +%s）",
+                "kr": "안전 구간은 반드시 성공 (+1 ~ +%s)"
+            },
+            "toLabel": {
+                "cn": "批量强化目标",
+                "en": "Batch target",
+                "ja": "一括強化目標",
+                "kr": "일괄 강화 목표"
+            },
+            "curLv": {
+                "cn": "当前强化等级",
+                "en": "Current level",
+                "ja": "現在の強化Lv",
+                "kr": "현재 강화 레벨"
+            },
+            "quick": {
+                "cn": "一键强化",
+                "en": "Quick",
+                "ja": "一括強化",
+                "kr": "일괄 강화"
+            },
+            "once": {
+                "cn": "强化 1 次",
+                "en": "Try once",
+                "ja": "1回強化",
+                "kr": "1회 강화"
+            },
+            "batch": {
+                "cn": "批量模拟",
+                "en": "Batch",
+                "ja": "一括実行",
+                "kr": "일괄 실행"
+            },
+            "clear": {
+                "cn": "清零",
+                "en": "Clear",
+                "ja": "クリア",
+                "kr": "초기화"
+            },
+            "kScroll": {
+                "cn": "卷轴",
+                "en": "Scrolls",
+                "ja": "巻物",
+                "kr": "두루마리"
+            },
+            "kOk": {
+                "cn": "成功",
+                "en": "Success",
+                "ja": "成功",
+                "kr": "성공"
+            },
+            "kFail": {
+                "cn": "失败",
+                "en": "Fails",
+                "ja": "失敗",
+                "kr": "실패"
+            },
+            "kStone": {
+                "cn": "起源石",
+                "en": "Stones",
+                "ja": "起源石",
+                "kr": "기원석"
+            },
+            "kHoly": {
+                "cn": "圣水",
+                "en": "Holy",
+                "ja": "聖水",
+                "kr": "성수"
+            },
+            "kRepair": {
+                "cn": "维修",
+                "en": "Repair",
+                "ja": "修理",
+                "kr": "수리"
+            },
+            "cTarget": {
+                "cn": "目标",
+                "en": "Target",
+                "ja": "目標",
+                "kr": "목표"
+            },
+            "cBase": {
+                "cn": "基础",
+                "en": "Base",
+                "ja": "基礎",
+                "kr": "기본"
+            },
+            "cBless": {
+                "cn": "最大成功率",
+                "en": "Max rate",
+                "ja": "最大成功率",
+                "kr": "최대 성공률"
+            },
+            "cCount": {
+                "cn": "次数",
+                "en": "Count",
+                "ja": "回数",
+                "kr": "횟수"
+            },
+            "ok": {
+                "cn": "成功",
+                "en": "OK",
+                "ja": "成功",
+                "kr": "성공"
+            },
+            "fail": {
+                "cn": "失败",
+                "en": "Fail",
+                "ja": "失敗",
+                "kr": "실패"
+            },
+            "bonusAt": {
+                "cn": "强化后数值",
+                "en": "Value after",
+                "ja": "強化後の数値",
+                "kr": "강화 후 수치"
+            },
+            "finalAtk": {
+                "cn": "",
+                "en": "",
+                "ja": "",
+                "kr": ""
+            },
+            "atkFinal": {
+                "cn": "攻击力",
+                "en": "ATK",
+                "ja": "攻撃力",
+                "kr": "공격력"
+            },
+            "atkFrom": {
+                "cn": "原",
+                "en": "base",
+                "ja": "元",
+                "kr": "기본"
+            },
+            "atkAdd": {
+                "cn": "加成",
+                "en": "bonus",
+                "ja": "ボーナス",
+                "kr": "보너스"
+            },
+            "bvOnly": {
+                "cn": "强化加成",
+                "en": "Enhance bonus",
+                "ja": "強化ボーナス",
+                "kr": "강화 보너스"
+            },
+            "nowRate": {
+                "cn": "当前成功率",
+                "en": "Current rate",
+                "ja": "現在成功率",
+                "kr": "현재 성공률"
+            },
+            "defAt": {
+                "cn": "防御力 %s → %s (+%s)",
+                "en": "DEF %s → %s (+%s)",
+                "ja": "防御力 %s → %s (+%s)",
+                "kr": "방어력 %s → %s (+%s)"
+            },
+            "precAt": {
+                "cn": "精准 %s → %s (+%s)",
+                "en": "Precision %s → %s (+%s)",
+                "ja": "精度 %s → %s (+%s)",
+                "kr": "정밀도 %s → %s (+%s)"
+            },
+            "way": {
+                "cn": "消耗方式",
+                "en": "Cost",
+                "ja": "消費",
+                "kr": "소비"
+            },
+            "book": {
+                "cn": "重置的古书",
+                "en": "Reset Book",
+                "ja": "リセットの古書",
+                "kr": "초기화 고서"
+            },
+            "stone": {
+                "cn": "起源石",
+                "en": "Gemstone",
+                "ja": "起源石",
+                "kr": "기원석"
+            },
+            "used": {
+                "cn": "已消耗",
+                "en": "Used",
+                "ja": "消費済み",
+                "kr": "사용함"
+            },
+            "rOnce": {
+                "cn": "洗一次属性",
+                "en": "Reroll once",
+                "ja": "属性を1回洗い",
+                "kr": "속성 1회 재설정"
+            },
+            "rBatch": {
+                "cn": "批量洗属性",
+                "en": "Reroll batch",
+                "ja": "属性をまとめて洗い",
+                "kr": "속성 일괄 재설정"
+            },
+            "rAfter": {
+                "cn": "洗出的新属性",
+                "en": "New stats after reroll",
+                "ja": "洗い直し後の属性",
+                "kr": "재설정 후 속성"
+            },
+            "rAvg": {
+                "cn": "平均",
+                "en": "Average",
+                "ja": "平均",
+                "kr": "평균"
+            },
+            "repairBtn": {
+                "cn": "修理",
+                "en": "Repair",
+                "ja": "修理",
+                "kr": "수리"
+            },
+            "repairCost": {
+                "cn": "−%s石",
+                "en": "−%s stones",
+                "ja": "−%s石",
+                "kr": "−%s석"
+            },
+            "brokenNote": {
+                "cn": "装备已损坏，修理后才能继续强化",
+                "en": "Broken — repair to continue",
+                "ja": "破損状態。修理が必要",
+                "kr": "파손 상태 — 수리 후 계속 가능"
+            },
+            "noReset": {
+                "cn": "该装备暂无官方洗属性概率数据",
+                "en": "No official reroll data for this item",
+                "ja": "この装備に属性洗いの公式データがありません",
+                "kr": "이 장비는 속성 재설정 공식 데이터가 없습니다"
+            },
+            "keepProt": {
+                "cn": "保护卷维持",
+                "en": "Protected",
+                "ja": "保護維持",
+                "kr": "보호 유지"
+            },
+            "holyUsed": {
+                "cn": "圣水-1",
+                "en": "Holy -1",
+                "ja": "聖水-1",
+                "kr": "성수-1"
+            },
+            "stkN": {
+                "cn": "(基础%s +额外%s)",
+                "en": "(base %s +%s)",
+                "ja": "(基本%s +追加%s)",
+                "kr": "(기본 %s +추가 %s)"
+            },
+            "broken": {
+                "cn": "损坏→0",
+                "en": "Broken→0",
+                "ja": "破損→0",
+                "kr": "파손→0"
+            },
+            "needRepair": {
+                "cn": "需修理",
+                "en": "needs repair",
+                "ja": "修理が必要",
+                "kr": "수리 필요"
+            },
+            "kBroken": {
+                "cn": "损坏",
+                "en": "Broken",
+                "ja": "破損",
+                "kr": "파손"
+            },
+            "kProt": {
+                "cn": "保护卷",
+                "en": "Protection",
+                "ja": "保護巻物",
+                "kr": "보호 두루마리"
+            },
+            "protFrom": {
+                "cn": "保护卷只能从 %s 起使用",
+                "en": "Protection only works from %s",
+                "ja": "保護巻物は %s から使用できます",
+                "kr": "보호 두루마리는 %s부터 사용 가능"
+            },
+            "repairBack": {
+                "cn": "维修 −%s石　修回 +%s",
+                "en": "Repair −%s stones　back to +%s",
+                "ja": "修理 −%s石　+%sに戻る",
+                "kr": "수리 −%s석　+%s로 복구"
+            },
+            "reach": {
+                "cn": "达成目标",
+                "en": "Reached",
+                "ja": "達成",
+                "kr": "달성"
+            },
+            "theory": {
+                "cn": "理论",
+                "en": "Theory",
+                "ja": "理論",
+                "kr": "이론"
+            },
+            "actual": {
+                "cn": "实测",
+                "en": "Actual",
+                "ja": "実測",
+                "kr": "실측"
+            },
+            "expect": {
+                "cn": "期望值",
+                "en": "Expected",
+                "ja": "期待値",
+                "kr": "기대값"
+            },
+            "hitRate": {
+                "cn": "达标率",
+                "en": "Hit rate",
+                "ja": "達成率",
+                "kr": "달성률"
+            },
+            "scrollAuto": {
+                "cn": "",
+                "en": "Scroll",
+                "ja": "巻物",
+                "kr": "두루마리"
+            },
+            "scrollSuffix": {
+                "cn": "卷",
+                "en": "",
+                "ja": "",
+                "kr": ""
+            },
+            "close": {
+                "cn": "关闭",
+                "en": "Close",
+                "ja": "閉じる",
+                "kr": "닫기"
+            },
+            "tbd": {
+                "cn": "待补充",
+                "en": "TBD",
+                "ja": "未定",
+                "kr": "미정"
+            },
+            "changeEquip": {
+                "cn": "点击切换装备",
+                "en": "Click to switch",
+                "ja": "タップで装備変更",
+                "kr": "클릭하여 장비 변경"
+            },
+            "runs": {
+                "cn": "次数",
+                "en": "Runs",
+                "ja": "回数",
+                "kr": "횟수"
+            },
+            "runsHint": {
+                "cn": "次数 = 批量模拟重复跑几遍强化（1~1000000 遍），下方结果取各遍平均值。",
+                "en": "Runs = how many times the enhance simulation repeats (1-1000000); results are averaged.",
+                "ja": "回数 = 強化シミュレーションを繰り返す回数（1〜1000000）。結果は各回の平均値。",
+                "kr": "횟수 = 강화 시뮬레이션 반복 횟수(1~1000000). 결과는 각 회차의 평균값."
+            }
+        },
+        "enhText": {
+            "cn": {
+                "atkFinal": "攻击力",
+                "atkFrom": "原",
+                "atkAdd": "加成",
+                "defName": "防御力",
+                "atkFrom2": "原",
+                "atkName": "攻击力",
+                "precName": "精准"
+            },
+            "en": {
+                "atkFinal": "ATK",
+                "atkFrom": "base",
+                "atkAdd": "bonus",
+                "defName": "DEF",
+                "atkFrom2": "base",
+                "atkName": "ATK",
+                "precName": "Precision"
+            },
+            "ja": {
+                "atkFinal": "攻撃力",
+                "atkFrom": "元",
+                "atkAdd": "ボーナス",
+                "defName": "防御力",
+                "atkFrom2": "元",
+                "atkName": "攻撃力",
+                "precName": "精度"
+            },
+            "kr": {
+                "atkFinal": "공격력",
+                "atkFrom": "기본",
+                "atkAdd": "보너스",
+                "defName": "방어력",
+                "atkFrom2": "기본",
+                "atkName": "공격력",
+                "precName": "정밀도"
             }
         }
     },
