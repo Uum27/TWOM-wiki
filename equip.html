@@ -480,10 +480,20 @@ body > #catBar,body > #classBar,body > #jobBar,body > #typeBar,body > #bookBar,b
   border-color:#C6CFD9;color:#8A97A8}
 /* 损坏提示（留在目标表下方，替代原先那个重复的修理按钮） */
 .sim-broken-note{margin-bottom:9px;font-size:12px;color:#C0392B}
-/* 参数行：批量强化目标 / 批量模拟 / 清零 —— 387px 下自动折行且间距一致 */
-.sim-row-params{gap:7px;row-gap:7px}
-.sim-row-params .sim-lb{margin-right:-2px}
-.sim-runs{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:#5A6B85;white-space:nowrap}
+/* 参数行：模拟强化目标 / 强化模拟 / 次数 / 清零 —— 387px 一排不换行（用户 2026-10-06 收窄） */
+.sim-row-params{gap:5px;row-gap:5px}
+.sim-row-params .sim-lb{margin-right:-2px;font-size:10px;white-space:nowrap}
+/* ⚠ 目标选择框（#simTo）收窄，给 387px 一排腾地方 */
+.sim-row-params select.sim-num{width:48px;padding:5px 4px}
+/* ⚠ 次数框收窄；placeholder 用更小字号让「最大5000」完整显示，留空时即按 1 次算 */
+.sim-runs{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#5A6B85;white-space:nowrap}
+.sim-runs input{width:58px;box-sizing:border-box;padding:3px 4px;font-size:13px}
+.sim-runs input::placeholder{font-size:8px;color:#9AA7B8}
+.sim-runs input::-webkit-inner-spin-button,
+.sim-runs input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.sim-runs input[type=number]{-moz-appearance:textfield}
+/* ⚠ 参数行按钮（强化模拟/清零）收窄，保证 387px 一排不换行 */
+.sim-row-params .sim-btn{font-size:11px;padding:5px 7px}
 /* 参数区行内标签（强化目标等） */
 .sim-lb{font-size:12px;color:#5A6B85}
 /* 保护卷按钮上的「已用张数」小角标 */
@@ -2142,7 +2152,7 @@ loadMyJson();
   var ENH = null;
   var S = {
     cat: "weapon", name: "", item: null,
-    from: 0, to: 10, stack: 0, runs: 1,
+    from: 0, to: 10, stack: 0, runs: 1, runsRaw: "",
     dbl: false, holy: false,
     /* ⚠ 保护卷从「全局开关」改为**按强化等级的单次标记**（用户 2026-10-05）。
        官方数据 protection：武器 +8=10% / +9=1%；防具 +6=10% / +7=1%。
@@ -2156,7 +2166,7 @@ loadMyJson();
     cn: {open:"装备模拟器",tabW:"武器",tabA:"防具",secE:"强化模拟",secR:"重置模拟",
       pick:"请选择装备…",from:"起始",to:"目标",fails:"已失败",
       swDbl:"双倍活动",swHoly:"圣水",swProt:"保护卷",
-      quick:"一键强化",once:"强化 1 次",batch:"强化模拟",clear:"清零",
+      quick:"一键强化",once:"强化 1 次",batch:"强化模拟",clear:"清零",runs:"次数",runsHint:"次数 = 强化模拟重复跑几遍强化（1~10000 遍），下方结果取各遍平均值。",
       kScroll:"卷轴",kOk:"成功",kFail:"失败",kStone:"起源石",kHoly:"圣水",kRepair:"维修",
       cTarget:"目标",cBase:"基础",cBless:"成功率",cCount:"次数",
       notReach:"未达标",guardHit:"超出计算上限（%s 次）仍未到达目标 +%s",
@@ -2177,7 +2187,7 @@ loadMyJson();
     en: {open:"Simulator",tabW:"Weapon",tabA:"Armor",secE:"Enhancement",secR:"Reset",
       pick:"Select equipment…",from:"From",to:"To",fails:"Fails",
       swDbl:"Rate boost",swHoly:"Holy water",swProt:"Protection",
-      quick:"Quick",once:"Try once",batch:"Enhance sim",clear:"Clear",
+      quick:"Quick",once:"Try once",batch:"Enhance sim",clear:"Clear",runs:"Runs",runsHint:"Runs = how many times the enhance simulation repeats (1-10000); results are averaged.",
       kScroll:"Scrolls",kOk:"Success",kFail:"Fails",kStone:"Stones",kHoly:"Holy",kRepair:"Repair",
       cTarget:"Target",cBase:"Base",cBless:"Rate",cCount:"Count",
       notReach:"NOT REACHED",guardHit:"Hit the compute cap (%s tries) without reaching +%s",
@@ -2198,7 +2208,7 @@ loadMyJson();
     ja: {open:"シミュレーター",tabW:"武器",tabA:"防具",secE:"強化",secR:"リセット",
       pick:"装備を選択…",from:"開始",to:"目標",fails:"失敗数",
       swDbl:"確率UP",swHoly:"聖水",swProt:"保護巻物",
-      quick:"一括強化",once:"1回強化",batch:"強化シミュ",clear:"クリア",
+      quick:"一括強化",once:"1回強化",batch:"強化シミュ",clear:"クリア",runs:"回数",runsHint:"回数 = 強化シミュレーションを繰り返す回数（1〜10000）。結果は各回の平均値。",
       kScroll:"巻物",kOk:"成功",kFail:"失敗",kStone:"起源石",kHoly:"聖水",kRepair:"修理",
       cTarget:"目標",cBase:"基礎",cBless:"成功率",cCount:"回数",
       notReach:"未到達",guardHit:"計算上限（%s 回）に達しても目標 +%s に到達せず",
@@ -2219,7 +2229,7 @@ loadMyJson();
     kr: {open:"시뮬레이터",tabW:"무기",tabA:"방어구",secE:"강화",secR:"초기화",
       pick:"장비를 선택…",from:"시작",to:"목표",fails:"실패",
       swDbl:"확률 증가",swHoly:"성수",swProt:"보호 두루마리",
-      quick:"일괄 강화",once:"1회 강화",batch:"강화 시뮬",clear:"초기화",
+      quick:"일괄 강화",once:"1회 강화",batch:"강화 시뮬",clear:"초기화",runs:"횟수",runsHint:"횟수 = 강화 시뮬레이션 반복 횟수(1~10000). 결과는 각 회차의 평균값.",
       kScroll:"두루마리",kOk:"성공",kFail:"실패",kStone:"기원석",kHoly:"성수",kRepair:"수리",
       cTarget:"목표",cBase:"기본",cBless:"성공률",cCount:"횟수",
       notReach:"미도달",guardHit:"계산 한도(%s회)에 도달했으나 목표 +%s에 도달하지 못함",
@@ -2880,11 +2890,12 @@ loadMyJson();
          '<button class="sim-btn" onclick="simOnce()">' + esc(tx("once")) + '</button>' +
          protBtnHtml(cat) +
          '</div>';
-    /* ⚠⚠ 参数行：**批量强化目标 / 批量模拟 / 清零**（用户 2026-10-05）。
-       - 「强化目标」改名为「**批量强化目标**」（它只作用于批量模拟，单次走 S.from）。
-       - ⚠ 「次数」标签+输入框**整块删除**（用户 2026-10-05）—— 批量次数由 `SIM_BATCH_RUNS`
-         常量固定，页面上不再有修改入口。`.sim-runs` CSS 也已随之失效（保留无害）。
-         S.runs 仍保留在内部（默认值 1，供 simResetBatch 批量重置复用），只是没有 UI 入口了。
+    /* ⚠⚠ 参数行：**模拟强化目标 / 强化模拟 / 次数 / 清零**（2026-10-06 把「次数」框加回，
+       置于「强化模拟」与「清零」之间；同日 label 由「批量强化目标」改「模拟强化目标」）。
+       - 「模拟强化目标」label（同行走 S.from）。
+       - 「次数」框 = `S.runs`（1~5000，留空按 1 次算），驱动 `simBatch` 重复跑 N 遍取平均；
+         2026-10-05 曾整块删除，2026-10-06 恢复，`.sim-runs` CSS 重新生效。
+         simResetBatch 也读 S.runs（上限 2000）。
        - 双倍/圣水开关已上移到徽章下方，这里不再重复。
        位置仍在**操作按钮行之后、KPI 统计框之前**（紧贴统计框上方）。 */
     h += '<div class="sim-row sim-row-params">' +
@@ -2892,6 +2903,7 @@ loadMyJson();
          '<select class="sim-ctl sim-num" id="simTo" onchange="simSet(\'to\',+this.value)">' +
          lvOptions(cat, S.to) + '</select>' +
          '<button class="sim-btn" onclick="simBatch()">' + esc(tx("batch")) + '</button>' +
+         '<span class="sim-runs">' + esc(tx("runs")) + '<input class="sim-ctl sim-num" id="simRuns" type="number" min="1" max="5000" placeholder="' + esc(tx("runsPh")) + '" value="' + (S.runsRaw!=null?S.runsRaw:'') + '" onchange="simSet(\'runs\',this.value)" title="' + esc(tx("runsHint")) + '"></span>' +
          '<button class="sim-btn ghost" onclick="simClear()">' + esc(tx("clear")) + '</button>' +
          '</div>';
 
@@ -3161,7 +3173,15 @@ loadMyJson();
   window.simSet = function(k, v){
     S[k] = v;
     if(k==="from"||k==="to"){ S.enh = null; simDropAgg(); }
-    if(k==="dbl"||k==="holy"){ S.enh = null; simDropAgg(); }
+    else if(k==="dbl"||k==="holy"){ S.enh = null; simDropAgg(); }
+    else if(k==="runs"){
+      /* ⚠ 次数框：留空或非数字 → 按 1 次算（用户 2026-10-06）；1~5000 钳制。
+         runsRaw 保留原始输入串，render 重建后输入框仍回显用户输入（placeholder 仅在真正为空时显示）。 */
+      S.runsRaw = (v==null) ? "" : ("" + v);
+      if(S.runsRaw === "" || isNaN(+S.runsRaw)) S.runs = 1;
+      else S.runs = Math.min(5000, Math.max(1, +S.runsRaw));
+      simDropAgg();
+    }
     render();
   };
   window.simClear = function(){
@@ -3176,7 +3196,7 @@ loadMyJson();
     return { cat:S.cat, from:S.from, to:S.to, stack:S.stack, runs:S.runs,
              protAt:S.protAt, holy:S.holy, dbl:S.dbl,
              /* ⚠ 批量聚合结果（各遍平均值），与 enh 分开存放 */
-             agg: S.agg ? {cur:S.agg.cur, target:S.agg.target, guardHit:S.agg.guardHit,
+             agg: S.agg ? {cur:S.agg.cur, target:S.agg.target, reached:S.agg.reached, guardHit:S.agg.guardHit,
                             scrolls:S.agg.scrolls, ok:S.agg.ok, fail:S.agg.fail,
                             logLen:(S.agg.log ? S.agg.log.length : 0),
                             stone:S.agg.stone, repairs:S.agg.repairs, holy:S.agg.holy,
@@ -3304,9 +3324,8 @@ loadMyJson();
     simDropAgg();
     S.enh = e; render();
   };
-  /* ⚠⚠ 批量强化次数**固定 1 次**（用户 2026-10-05：删掉次数输入框，次数写死 1）。
-     页面已无修改入口；调这个常量即可改次数（S.runs 仍保留供 simResetBatch 批量重置复用）。 */
-  var SIM_BATCH_RUNS = 1;
+  /* ⚠⚠ 批量强化次数 = `S.runs`（2026-10-06 恢复次数输入框，玩家自填，默认 1，上限 10000）。
+     下方取各遍平均值；上限 10000，避免极端情况下把主线程卡死。 */
   window.simBatch = function(){
     if(!S.item) return;
     /* ⚠⚠⚠ 高目标确认（用户 2026-10-05）。
@@ -3321,9 +3340,9 @@ loadMyJson();
     }
     var e = newEnhState(S.item, S.cat);
     e.target = S.to; e.cur = S.from; seedStk(e);
-    /* ⚠ 次数不再读 S.runs（UI 已删），固定跑 SIM_BATCH_RUNS 次。
-       ⚠ CPU 耗时随 n 线性增长：改成 1000000 会明显卡住（主线程阻塞、页面无响应）。 */
-    var n = SIM_BATCH_RUNS;
+    /* ⚠ 次数读 S.runs（次数输入框已恢复，2026-10-06）：玩家填 1~5000，每遍独立模拟一次，下方取平均值。
+       ⚠ CPU 耗时随 n 线性增长；n 过大会明显卡住（主线程阻塞、页面无响应），故 Math.min 上限 5000。 */
+    var n = Math.min(5000, Math.max(1, S.runs || 1));
     /* ⚠ reached / guardHit：**这一轮真的跑到目标了吗**。
        旧代码 `agg.cur = S.to` 无条件写死 → 护栏一拦也照样显示「已达 +12」，
        玩家以为成功了，其实那一轮早在 100000 次就中断了（KPI 卷轴恒显 100000 就是这么来的）。 */
