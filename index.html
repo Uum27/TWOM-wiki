@@ -1714,7 +1714,13 @@ function mcBuildCard(m){
   var dropHtml = (drops[m.name]?.掉落物||[]).map(function(raw){ return dropRowHtml(raw); }).join('');
   var reviveText = "";
   if(m.revive?.trim()){ reviveText = translateReviveTime(m.revive); }
-  var img = `monsters_images/${m.name}.png`;
+  /* 图片以数据里权威的「image local」文件名为准（取末段文件名），不再用怪物 name 拼路径。
+     例如 Crystal 的 name 是 "Crystal" 但图片实际叫 "Crystal Stone.png"，用 name 拼会找不到退回 default。
+     image local 字段里的前缀（"monsters images/" 带空格）直接丢弃，只取文件名，拼到 monsters_images/ 下。 */
+  var imgLocalBase = (m["image local"]||"").split("/").pop();
+  var img = (imgLocalBase && imgLocalBase.toLowerCase().indexOf(".png") >= 0)
+    ? "monsters_images/" + imgLocalBase
+    : "monsters_images/" + m.name + ".png";
   var badge = "";
   var isBossType = false;
   var note = (m.notes||"").trim();
